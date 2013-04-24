@@ -14,7 +14,9 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="http://fonts.googleapis.com/css?family=Abril Fatface" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+
     <link rel="stylesheet" href="{{ ASSET_PATH }}/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="{{ ASSET_PATH }}/bootstrap/css/bootstrap-responsive.css">
     <link rel="stylesheet" href="{{ ASSET_PATH }}/bootstrap/css/prettyPhoto.css">
@@ -116,7 +118,7 @@
 
     </header><!-- End Header -->
 
-    <div class="container">
+    <div class="container main-container">
       <div class="content">
         {{ content }}
       </div>
@@ -125,7 +127,7 @@
     <!-- Footer Area
            ================================================== -->
 
-    <div class="footer-container"><!-- Begin Footer -->
+    <footer class="footer-container"><!-- Begin Footer -->
       <div class="container">
         <div class="row footer-row">
           <div class="span3 footer-col">
@@ -195,9 +197,10 @@
         </div><!-- End Sub Footer -->
 
       </div>
-    </div><!-- End Footer -->
+    </footer><!-- End Footer -->
 
     {% include JB/analytics %}
+    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
   </body>
 </html>
 

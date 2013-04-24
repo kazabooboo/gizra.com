@@ -13,23 +13,31 @@
 
 header {
   background: white;
+  border-bottom: 2px solid #ccdce1;
+}
+header .header-row {
+  margin-bottom: 10px;
 }
 header .logo {
   font-family: Abril Fatface;
   font-style: normal;
   font-weight: 400;
-  font-size: 70px;
-  line-height: 70px;
+  font-size: 74px;
+  line-height: 74px;
   margin-top: 15px;
   color: #ef4f1d;
 }
-header .navbar .nav > li > a {
-  color: #ef4f1d;
-  font-size: 20px;
+header .navigation {
+  margin-top: 53px;
 }
 header .navigation .navbar {
   background: transparent;
   border: none;
+  margin-bottom: 8px;
+}
+header .navigation .navbar .nav > li > a {
+  color: #ef4f1d;
+  font-size: 18px;
 }
 
 @media (min-width: 768px) {
@@ -43,6 +51,46 @@ header .navigation .navbar {
     margin-top: 200px;
   }
 }
+.main-container .content {
+  padding-top: 35px;
+}
+.main-container h1 {
+  color: #046596;
+  text-align: center;
+  font-weight: 600;
+  text-transform: none;
+}
+.main-container h1 .bigger {
+  font-size: 31px;
+  line-height: 31px;
+  letter-spacing: 2px;
+}
+.main-container h1 .smaller {
+  font-size: 28px;
+  line-height: 28px;
+  letter-spacing: 1px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.main-container {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+}
+h1 .content,
+h2 .content,
+h3 .content,
+h4 .content,
+h5 .content,
+h6 .content,
+.main-container .content {
+  margin-top: 110px;
+}
+
 h4.title-bg {
   background: transparent;
   text-align: center;

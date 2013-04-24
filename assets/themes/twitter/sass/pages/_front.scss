@@ -1,0 +1,28 @@
+@import "variables";
+
+.main-container {
+
+  .content {
+    padding-top: 35px;
+  }
+
+  h1 {
+    color: $blue;
+    text-align: center;
+    font-weight: 600;
+    text-transform: none;
+
+    .bigger {
+      font-size: 31px;
+      line-height: 31px;
+      letter-spacing: 2px;
+    }
+
+    .smaller {
+      font-size: 28px;
+      line-height: 28px;
+      letter-spacing: 1px;
+    }
+  }
+}
+

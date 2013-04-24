@@ -1,36 +1,44 @@
 ---
 layout: page
-title: Hello World!
-tagline: Supporting tagline
+title:
+tagline: <span class="bigger">We build tailored web sites and advanced</span> <br /> <span class="smaller">web applications using Drupal</span>
 ---
 {% include JB/setup %}
 
-Read [Jekyll Quick Start](http://jekyllbootstrap.com/usage/jekyll-quick-start.html)
+<div class="row gallery-row"><!-- Begin Work Row -->
 
-Complete usage and documentation available at: [Jekyll Bootstrap](http://jekyllbootstrap.com)
+  <div class="span12">
+      <h5 class="title-bg">Work
+          <a class="hidden-phone">See our whole portfolio</a>
+      </h5>
 
-## Update Author Attributes
+  <!-- Work Thumbnails
+  ================================================== -->
+      <div class="row clearfix no-margin">
 
-In `_config.yml` remember to specify your own data:
+      <ul class="gallery-post-grid holder">
 
-    title : My Blog =)
 
-    author :
-      name : Name Lastname
-      email : blah@email.test
-      github : username
-      twitter : username
+      {% for page in site.pages %}
+        {% if page.category contains 'work' %}
+          <li  class="span3 gallery-item" data-id="id-1" data-type="illustration">
+            <span class="gallery-hover-4col hidden-phone hidden-tablet">
+              <span class="gallery-icons">
+                <a href="img/gallery/gallery-img-full.jpg" title="{{ page.title }}" data-rel="prettyPhoto"></a>
+                <a href="gallery-single.htm" class="item-details-link"></a>
+              </span>
+            </span>
+            <a href="gallery-single.htm"><img src="img/gallery/gallery-img-1-4col.jpg" alt="Gallery"></a>
+            <span class="project-details"><a href="gallery-single.htm">{{ page.title }}</a>{{ page.description }}</span>
+          </li>
+        {% endif %}
+      {% endfor %}
 
-The theme should reference these variables whenever needed.
+      </ul>
+    </div>
+  </div>
 
-## Sample Posts
-
-This blog contains sample posts which help stage pages and blog data.
-When you don't need the samples anymore just delete the `_posts/core-samples` folder.
-
-    $ rm -rf _posts/core-samples
-
-Here's a sample "posts list".
+</div><!-- End Gallery Row -->
 
 <ul class="posts">
   {% for post in site.posts %}

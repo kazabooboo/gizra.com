@@ -2,25 +2,35 @@
 
 header {
   background: white;
+  border-bottom: 2px solid $lightBlue;
+
+  .header-row {
+    margin-bottom: 10px;
+  }
 
   .logo {
     font-family: Abril Fatface;
     font-style: normal;
     font-weight: 400;
-    font-size: 70px;
-    line-height: 70px;
+    font-size: 74px;
+    line-height: 74px;
     margin-top: 15px;
     color: $orange;
   }
 
-  .navbar .nav > li > a {
-    color: $orange;
-    font-size: 20px;
-  }
+  .navigation {
+    margin-top: 53px;
 
-  .navigation .navbar {
-    background: transparent;
-    border: none;
+    .navbar {
+      background: transparent;
+      border: none;
+      margin-bottom: 8px;
+
+      .nav > li > a {
+        color: $orange;
+        font-size: 18px;
+      }
+    }
   }
 }
 

@@ -4,12 +4,27 @@
 @import "header";
 @import "variables";
 
-// @import "pages";
+@import "pages/front";
 // @import "menu";
 // @import "navbar";
 // @import "form";
 // @import "sidebar";
 // @import "teaser";
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.main-container {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+
+  .content {
+    margin-top: 110px;
+  }
+}
 
 h4.title-bg {
   background: transparent;
