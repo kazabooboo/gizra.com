@@ -1,0 +1,39 @@
+@import "variables";
+
+header {
+  background: white;
+
+  .logo {
+    font-family: Abril Fatface;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 70px;
+    line-height: 70px;
+    margin-top: 15px;
+    color: $orange;
+  }
+
+  .navbar .nav > li > a {
+    color: $orange;
+    font-size: 20px;
+  }
+
+  .navigation .navbar {
+    background: transparent;
+    border: none;
+  }
+}
+
+@media (min-width: 768px) {
+
+  header {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  .main-container > section {
+    // Push content below the fixed header.
+    margin-top: 200px;
+  }
+}

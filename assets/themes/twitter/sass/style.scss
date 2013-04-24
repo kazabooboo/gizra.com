@@ -1,0 +1,30 @@
+@import "mixins";
+
+@import "footer";
+@import "header";
+@import "variables";
+
+// @import "pages";
+// @import "menu";
+// @import "navbar";
+// @import "form";
+// @import "sidebar";
+// @import "teaser";
+
+h4.title-bg {
+  background: transparent;
+  text-align: center;
+  border-top: none;
+  border-bottom: 1px solid #000;
+  line-height: 0.1em;
+  margin:10px 0 20px;
+  width:100%;
+  padding: 0;
+
+  a {
+    background:#fff;
+    padding:0 10px;
+  }
+}
+
+

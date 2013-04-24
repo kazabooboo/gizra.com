@@ -1,0 +1,21 @@
+@import "variables";
+
+.footer-container {
+  background: transparent;
+
+  .footer-col {
+    color: black;
+
+    h5 {
+      color: $orange;
+    }
+
+  }
+
+  .contact-form {
+
+    .grippie {
+      display: none;
+    }
+  }
+}
