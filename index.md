@@ -5,37 +5,38 @@ tagline: <span class="bigger">We build tailored web sites and advanced</span> <b
 ---
 {% include JB/setup %}
 
-<div class="row gallery-row"><!-- Begin Work Row -->
+<div class="row gallery-row"><!-- Begin Websites Row -->
 
   <div class="span12">
     <h5 class="title-bg"><a class="primary" href="#work">Work</a><a class="secondary hidden-phone" href="portfolio">See our whole portfolio</a></h5>
 
-  <!-- Work Thumbnails
-  ================================================== -->
-      <div class="row clearfix no-margin">
+    <!-- Website  Thumbnails
+    ================================================== -->
+    <div class="row clearfix no-margin">
 
       <ul class="gallery-post-grid holder">
 
-      {% for page in site.pages %}
+        {% for page in site.pages %}
         {% if page.category contains 'website' %}
-          <li  class="span3 gallery-item" data-id="id-1" data-type="illustration">
-            <span class="gallery-hover-4col hidden-phone hidden-tablet">
-              <span class="gallery-icons">
-                <a href="img/gallery/gallery-img-full.jpg" title="{{ page.title }}" data-rel="prettyPhoto"></a>
-                <a href="gallery-single.htm" class="item-details-link"></a>
+        {{ page[0] }}
+        {{ page[1] }}
+        <li  class="span3 gallery-item" data-id="id-1" data-type="illustration">
+              <span class="gallery-hover-4col hidden-phone hidden-tablet">
+                <span class="gallery-icons">
+                  <a href="{{ page.url }}" class="item-details-link"></a>
+                </span>
               </span>
-            </span>
-            <a href="gallery-single.htm"><img src="{{ page.url }}/thumb.png"></a>
-            <span class="project-details"><a href="gallery-single.htm">{{ page.title }}</a>{{ page.description }}</span>
-          </li>
+          <a href="{{ page.url }}"><img src="{{ page.url }}/thumb.png"></a>
+          <span class="project-details"><a href="{{ page.url }}">{{ page.title }}</a>{{ page.description }}</span>
+        </li>
         {% endif %}
-      {% endfor %}
+        {% endfor %}
 
       </ul>
     </div>
   </div>
 
-  </div><!-- End Gallery Row -->
+</div><!-- End Websites Row -->
 
 <ul class="posts">
   {% for post in site.posts %}
