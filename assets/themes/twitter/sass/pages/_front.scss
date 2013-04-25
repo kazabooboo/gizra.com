@@ -6,6 +6,10 @@
     padding-top: 35px;
   }
 
+  .page-header {
+    border: none;
+  }
+
   h1 {
     color: $blue;
     text-align: center;
@@ -22,6 +26,32 @@
       font-size: 28px;
       line-height: 28px;
       letter-spacing: 1px;
+    }
+  }
+
+  h5.title-bg {
+    position: relative;
+    background: transparent;
+    text-align: center;
+    border-top: none;
+    border-bottom: 1px solid $orange;
+    line-height: 0.1em;
+    margin:10px 0 20px;
+    width:100%;
+    padding: 0;
+
+    a {
+      background:#fff;
+      padding:0 10px;
+    }
+
+    a.secondary {
+      position: absolute;
+      right: 0;
+      background: white;
+      line-height: 11px;
+      top: -7px;
+      text-align: right;
     }
   }
 }

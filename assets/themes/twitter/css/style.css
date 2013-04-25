@@ -54,6 +54,9 @@ header .navigation .navbar .nav > li > a {
 .main-container .content {
   padding-top: 35px;
 }
+.main-container .page-header {
+  border: none;
+}
 .main-container h1 {
   color: #046596;
   text-align: center;
@@ -69,6 +72,29 @@ header .navigation .navbar .nav > li > a {
   font-size: 28px;
   line-height: 28px;
   letter-spacing: 1px;
+}
+.main-container h5.title-bg {
+  position: relative;
+  background: transparent;
+  text-align: center;
+  border-top: none;
+  border-bottom: 1px solid #ef4f1d;
+  line-height: 0.1em;
+  margin: 10px 0 20px;
+  width: 100%;
+  padding: 0;
+}
+.main-container h5.title-bg a {
+  background: #fff;
+  padding: 0 10px;
+}
+.main-container h5.title-bg a.secondary {
+  position: absolute;
+  right: 0;
+  background: white;
+  line-height: 11px;
+  top: -7px;
+  text-align: right;
 }
 
 h1,

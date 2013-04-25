@@ -8,9 +8,7 @@ tagline: <span class="bigger">We build tailored web sites and advanced</span> <b
 <div class="row gallery-row"><!-- Begin Work Row -->
 
   <div class="span12">
-      <h5 class="title-bg">Work
-          <a class="hidden-phone">See our whole portfolio</a>
-      </h5>
+    <h5 class="title-bg"><a class="primary" href="#work">Work</a><a class="secondary hidden-phone" href="portfolio">See our whole portfolio</a></h5>
 
   <!-- Work Thumbnails
   ================================================== -->
