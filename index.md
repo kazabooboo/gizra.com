@@ -18,9 +18,7 @@ tagline: <span class="bigger">We build tailored web sites and advanced</span> <b
 
         {% for page in site.pages %}
         {% if page.category contains 'website' %}
-        {{ page[0] }}
-        {{ page[1] }}
-        <li  class="span3 gallery-item" data-id="id-1" data-type="illustration">
+        <li  class="span3 gallery-item">
               <span class="gallery-hover-4col hidden-phone hidden-tablet">
                 <span class="gallery-icons">
                   <a href="{{ page.url }}" class="item-details-link"></a>
