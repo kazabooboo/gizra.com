@@ -16,7 +16,6 @@ tagline: <span class="bigger">We build tailored web sites and advanced</span> <b
 
       <ul class="gallery-post-grid holder">
 
-
       {% for page in site.pages %}
         {% if page.category contains 'work' %}
           <li  class="span3 gallery-item" data-id="id-1" data-type="illustration">

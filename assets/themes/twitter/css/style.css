@@ -27,6 +27,9 @@ header .logo {
   margin-top: 15px;
   color: #ef4f1d;
 }
+header .logo a {
+  text-decoration: none;
+}
 header .navigation {
   margin-top: 53px;
 }
@@ -73,7 +76,10 @@ header .navigation .navbar .nav > li > a {
   line-height: 28px;
   letter-spacing: 1px;
 }
-.main-container h5.title-bg {
+.main-container .gallery-row {
+  margin-top: 40px;
+}
+.main-container .gallery-row h5.title-bg {
   position: relative;
   background: transparent;
   text-align: center;
@@ -83,18 +89,29 @@ header .navigation .navbar .nav > li > a {
   margin: 10px 0 20px;
   width: 100%;
   padding: 0;
+  font-size: 40px;
 }
-.main-container h5.title-bg a {
-  background: #fff;
+.main-container .gallery-row h5.title-bg a {
+  background: url(../images/background.png);
   padding: 0 10px;
+  text-decoration: none;
 }
-.main-container h5.title-bg a.secondary {
+.main-container .gallery-row h5.title-bg a.primary {
+  font-family: Abril Fatface;
+  font-style: normal;
+  font-weight: 400;
+}
+.main-container .gallery-row h5.title-bg a.secondary {
   position: absolute;
   right: 0;
-  background: white;
-  line-height: 11px;
   top: -7px;
   text-align: right;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: none;
+}
+.main-container .gallery-row h5.title-bg a.secondary:after {
+  content: " \00BB";
 }
 
 h1,
@@ -115,6 +132,10 @@ h5 .content,
 h6 .content,
 .main-container .content {
   margin-top: 110px;
+}
+
+body {
+  background: url(../images/background.png);
 }
 
 h4.title-bg {

@@ -16,6 +16,10 @@ header {
     line-height: 74px;
     margin-top: 15px;
     color: $orange;
+
+    a {
+      text-decoration: none;
+    }
   }
 
   .navigation {
