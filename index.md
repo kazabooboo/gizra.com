@@ -17,7 +17,7 @@ tagline: <span class="bigger">We build tailored web sites and advanced</span> <b
       <ul class="gallery-post-grid holder">
 
       {% for page in site.pages %}
-        {% if page.category contains 'work' %}
+        {% if page.category contains 'website' %}
           <li  class="span3 gallery-item" data-id="id-1" data-type="illustration">
             <span class="gallery-hover-4col hidden-phone hidden-tablet">
               <span class="gallery-icons">
@@ -25,7 +25,7 @@ tagline: <span class="bigger">We build tailored web sites and advanced</span> <b
                 <a href="gallery-single.htm" class="item-details-link"></a>
               </span>
             </span>
-            <a href="gallery-single.htm"><img src="img/gallery/gallery-img-1-4col.jpg" alt="Gallery"></a>
+            <a href="gallery-single.htm"><img src="{{ page.url }}/thumb.png"></a>
             <span class="project-details"><a href="gallery-single.htm">{{ page.title }}</a>{{ page.description }}</span>
           </li>
         {% endif %}
