@@ -35,7 +35,7 @@ tagline: <span class="bigger">We build tailored web sites and advanced</span> <b
     </div>
   </div>
 
-</div><!-- End Gallery Row -->
+  </div><!-- End Gallery Row -->
 
 <ul class="posts">
   {% for post in site.posts %}
