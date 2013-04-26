@@ -1,5 +1,13 @@
 @import "variables";
 
+body.home {
+
+  a {
+    color: $orange;
+  }
+}
+
+
 .main-container {
 
   .content {
@@ -54,6 +62,7 @@
         font-family: Abril Fatface;
         font-style: normal;
         font-weight: 400;
+        @include single-text-shadow;
       }
 
       a.secondary {

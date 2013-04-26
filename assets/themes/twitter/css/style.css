@@ -5,7 +5,7 @@
   color: black;
 }
 .footer-container .footer-col h5 {
-  color: #ef4f1d;
+  color: #e06e5c;
 }
 .footer-container .contact-form .grippie {
   display: none;
@@ -25,10 +25,12 @@ header .logo {
   font-size: 74px;
   line-height: 74px;
   margin-top: 15px;
-  color: #ef4f1d;
+  color: #e06e5c;
 }
 header .logo a {
   text-decoration: none;
+  color: #e06e5c;
+  text-shadow: 0px 0px 1px #aaaaaa;
 }
 header .navigation {
   margin-top: 53px;
@@ -39,7 +41,7 @@ header .navigation .navbar {
   margin-bottom: 8px;
 }
 header .navigation .navbar .nav > li > a {
-  color: #ef4f1d;
+  color: #e06e5c;
   font-size: 18px;
 }
 
@@ -54,6 +56,10 @@ header .navigation .navbar .nav > li > a {
     margin-top: 200px;
   }
 }
+body.home a {
+  color: #e06e5c;
+}
+
 .main-container .content {
   padding-top: 35px;
 }
@@ -84,7 +90,7 @@ header .navigation .navbar .nav > li > a {
   background: transparent;
   text-align: center;
   border-top: none;
-  border-bottom: 1px solid #ef4f1d;
+  border-bottom: 1px solid #e06e5c;
   line-height: 0.1em;
   margin: 10px 0 20px;
   width: 100%;
@@ -100,6 +106,7 @@ header .navigation .navbar .nav > li > a {
   font-family: Abril Fatface;
   font-style: normal;
   font-weight: 400;
+  text-shadow: 0px 0px 1px #aaaaaa;
 }
 .main-container .gallery-row h5.title-bg a.secondary {
   position: absolute;

@@ -8,7 +8,7 @@ tagline: <span class="bigger">We build tailored web sites and advanced</span> <b
 <div class="row gallery-row"><!-- Begin Websites Row -->
 
   <div class="span12">
-    <h5 class="title-bg"><a class="primary" href="#work">Work</a><a class="secondary hidden-phone" href="portfolio">See our whole portfolio</a></h5>
+    <h5 class="title-bg"><a class="primary" href="#work">Work</a><a class="secondary hidden-phone" href="/portfolio">See our whole portfolio</a></h5>
 
     <!-- Website  Thumbnails
     ================================================== -->
@@ -19,11 +19,6 @@ tagline: <span class="bigger">We build tailored web sites and advanced</span> <b
         {% for page in site.pages %}
         {% if page.category contains 'website' %}
         <li  class="span3 gallery-item">
-              <span class="gallery-hover-4col hidden-phone hidden-tablet">
-                <span class="gallery-icons">
-                  <a href="{{ page.url }}" class="item-details-link"></a>
-                </span>
-              </span>
           <a href="{{ page.url }}"><img src="{{ page.url }}/thumb.png"></a>
           <span class="project-details"><a href="{{ page.url }}">{{ page.title }}</a>{{ page.description }}</span>
         </li>
@@ -34,7 +29,34 @@ tagline: <span class="bigger">We build tailored web sites and advanced</span> <b
     </div>
   </div>
 
-</div><!-- End Websites Row -->
+</div><!-- End Contributions Row -->
+
+<div class="row gallery-row"><!-- Begin Websites Row -->
+
+  <div class="span12">
+    <h5 class="title-bg"><a class="primary" href="#contributions">Contributions</a></h5>
+    <a class="secondary hidden-phone" href="/contributions">Modules and other stuff we contribute, that make Drupal awesome</a>
+
+    <!-- Contributions  Thumbnails
+    ================================================== -->
+    <div class="row clearfix no-margin">
+
+      <ul class="gallery-post-grid holder">
+
+        {% for page in site.pages %}
+        {% if page.category contains 'contribution' %}
+        <li  class="span3 gallery-item">
+          <a href="{{ page.url }}">{{ page.initials }}</a>
+          <span class="project-details"><a href="{{ page.url }}">{{ page.title }}</a>{{ page.description }}</span>
+        </li>
+        {% endif %}
+        {% endfor %}
+
+      </ul>
+    </div>
+  </div>
+
+</div><!-- End Contributions Row -->
 
 <ul class="posts">
   {% for post in site.posts %}
