@@ -92,8 +92,7 @@ body.home {
       .short-name-wrapper {
         width: 270px;
         height: 218px;
-        @include text-shadow(rgba(255,255,255,0.9) 0 1px 1px);
-        @include striped-bg;
+        @include background-image(linear-gradient(#128ba1, darken(#128ba1, 15%)));
 
         .short-name {
           text-align: center;

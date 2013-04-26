@@ -1,12 +1,3 @@
-.striped {
-  font-family: sans-serif;
-  font-weight: bold;
-  color: #222;
-  text-align: center;
-  margin: 2em 1em;
-  padding: 0.5em;
-}
-
 .footer-container {
   background: transparent;
 }
@@ -136,13 +127,11 @@ body.home a {
 .main-container .contributions-row li.gallery-item .short-name-wrapper {
   width: 270px;
   height: 218px;
-  text-shadow: rgba(255, 255, 255, 0.9) 0 1px 1px;
-  background-color: #cccccc;
-  background-image: -webkit-linear-gradient(-45deg, #bfbfbf 25%, transparent 25%, transparent 50%, #bfbfbf 50%, #bfbfbf 75%, transparent 75%, transparent);
-  background-image: -moz-linear-gradient(-45deg, #bfbfbf 25%, transparent 25%, transparent 50%, #bfbfbf 50%, #bfbfbf 75%, transparent 75%, transparent);
-  background-image: -o-linear-gradient(-45deg, #bfbfbf 25%, transparent 25%, transparent 50%, #bfbfbf 50%, #bfbfbf 75%, transparent 75%, transparent);
-  background-image: linear-gradient(-45deg, #bfbfbf 25%, transparent 25%, transparent 50%, #bfbfbf 50%, #bfbfbf 75%, transparent 75%, transparent);
-  background-size: 40px 40px;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #128ba1), color-stop(100%, #0a505c));
+  background-image: -webkit-linear-gradient(#128ba1, #0a505c);
+  background-image: -moz-linear-gradient(#128ba1, #0a505c);
+  background-image: -o-linear-gradient(#128ba1, #0a505c);
+  background-image: linear-gradient(#128ba1, #0a505c);
 }
 .main-container .contributions-row li.gallery-item .short-name-wrapper .short-name {
   text-align: center;
