@@ -5,7 +5,7 @@ tagline: <span class="bigger">We build tailored web sites and advanced</span> <b
 ---
 {% include JB/setup %}
 
-<div class="row gallery-row"><!-- Begin Websites Row -->
+<div class="row gallery-row websites-row"><!-- Begin Websites Row -->
 
   <div class="span12">
     <h5 class="title-bg"><a class="primary" href="#work">Work</a><a class="secondary hidden-phone" href="/portfolio">See our whole portfolio</a></h5>
@@ -29,13 +29,13 @@ tagline: <span class="bigger">We build tailored web sites and advanced</span> <b
     </div>
   </div>
 
-</div><!-- End Contributions Row -->
+</div><!-- End Websites Row -->
 
-<div class="row gallery-row"><!-- Begin Websites Row -->
+<div class="row gallery-row contributions-row"><!-- Begin Contributions Row -->
 
   <div class="span12">
     <h5 class="title-bg"><a class="primary" href="#contributions">Contributions</a></h5>
-    <a class="secondary hidden-phone" href="/contributions">Modules and other stuff we contribute, that make Drupal awesome</a>
+    <div class="secondary hidden-phone"><a href="/contributions">Modules and other stuff we contribute, that make Drupal awesome</a></div>
 
     <!-- Contributions  Thumbnails
     ================================================== -->
@@ -46,7 +46,9 @@ tagline: <span class="bigger">We build tailored web sites and advanced</span> <b
         {% for page in site.pages %}
         {% if page.category contains 'contribution' %}
         <li  class="span3 gallery-item">
-          <a href="{{ page.url }}">{{ page.initials }}</a>
+          <div class="short-name-wrapper">
+            <div class="short-name"><a href="{{ page.url }}">{{ page.short }}</a></div>
+          </div>
           <span class="project-details"><a href="{{ page.url }}">{{ page.title }}</a>{{ page.description }}</span>
         </li>
         {% endif %}

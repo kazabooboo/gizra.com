@@ -7,7 +7,6 @@ body.home {
   }
 }
 
-
 .main-container {
 
   .content {
@@ -16,6 +15,7 @@ body.home {
 
   .page-header {
     border: none;
+    margin-bottom: 35px;
   }
 
   h1 {
@@ -38,14 +38,14 @@ body.home {
   }
 
   .gallery-row {
-    margin-top: 40px;
+    margin-bottom: 60px;
 
     h5.title-bg {
       position: relative;
       background: transparent;
       text-align: center;
       border-top: none;
-      border-bottom: 1px solid $orange;
+      border-bottom: 1px dotted $orange;
       line-height: 0.1em;
       margin:10px 0 20px;
       width:100%;
@@ -79,8 +79,40 @@ body.home {
         }
       }
     }
+
+    .secondary {
+      text-align: center;
+    }
   }
 
+  .contributions-row {
 
+    li.gallery-item {
+
+      .short-name-wrapper {
+        width: 270px;
+        height: 218px;
+        @include text-shadow(rgba(255,255,255,0.9) 0 1px 1px);
+        @include striped-bg;
+
+        .short-name {
+          text-align: center;
+          padding: 20px;
+
+          a {
+            font-family: Abril Fatface;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 130px;
+            line-height: 130px;
+            text-transform: lowercase;
+            color: white;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+  }
 }
 
