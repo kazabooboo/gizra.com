@@ -132,6 +132,11 @@ body.home a {
   background-image: -moz-linear-gradient(#128ba1, #0a505c);
   background-image: -o-linear-gradient(#128ba1, #0a505c);
   background-image: linear-gradient(#128ba1, #0a505c);
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #10a067), color-stop(100%, #095a3a));
+  background-image: -webkit-linear-gradient(#10a067, #095a3a);
+  background-image: -moz-linear-gradient(#10a067, #095a3a);
+  background-image: -o-linear-gradient(#10a067, #095a3a);
+  background-image: linear-gradient(#10a067, #095a3a);
 }
 .main-container .contributions-row li.gallery-item .short-name-wrapper .short-name {
   text-align: center;

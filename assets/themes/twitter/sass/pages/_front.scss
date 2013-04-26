@@ -93,6 +93,8 @@ body.home {
         width: 270px;
         height: 218px;
         @include background-image(linear-gradient(#128ba1, darken(#128ba1, 15%)));
+        @include background-image(linear-gradient(#10a067, darken(#10a067, 15%)));
+
 
         .short-name {
           text-align: center;

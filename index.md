@@ -43,9 +43,13 @@ tagline: <span class="bigger">We build tailored web sites and advanced</span> <b
 
       <ul class="gallery-post-grid holder">
 
+        {% assign count = 0 %}
         {% for page in site.pages %}
-        {% if page.category contains 'contribution' %}
-        <li  class="span3 gallery-item">
+        {% if page.category contains 'contribution' and count <= 4 %}
+
+        {% assign count=count | plus:1 %}
+
+        <li  class="span3 gallery-item" data-id="{{ count }}">
           <div class="short-name-wrapper">
             <div class="short-name"><a href="{{ page.url }}">{{ page.short }}</a></div>
           </div>
