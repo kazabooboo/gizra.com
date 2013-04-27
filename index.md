@@ -7,7 +7,7 @@ quotes:
     by: "Jon Snow"
   - quote: "Gizra inspired me to keep up with PHP"
     by: "Rasmus Lerdorf"
-  - quote: "hey are great"
+  - quote: "They are great"
     by: "Bill Gates"
 
 ---
@@ -106,15 +106,19 @@ quotes:
         {% endfor %}
       </div>
 
-      <ul class="span4">
+      <div class="span4 quotes">
         <h3>Fictious CLient Quotes</h3>
-        {% for quote in page.quotes %}
-        <li>
-          <div class="quote">{{ quote.quote }}</div>
-          <div class="source">{{ quote.by }}</div>
-        </li>
-        {% endfor %}
-      </ul>
+        <div class="flexslider">
+          <ul class="slides">
+            {% for quote in page.quotes %}
+            <li>
+              <div class="quote">{{ quote.quote }}</div>
+              <div class="source">{{ quote.by }}<div class="triangle"></div></div>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 

@@ -149,7 +149,56 @@ body.home {
         }
 
         .title {
-          color: #646464;
+          color: $gray;
+        }
+      }
+    }
+
+    .quotes {
+
+      .flexslider {
+        background: transparent;
+      }
+
+      .quote {
+        background: white;
+        color: $blue;
+        font-style: italic;
+        font-size: 40px;
+        line-height: 40px;
+        border-bottom: 1px solid $lightGray;
+        padding: 20px;
+
+        &:before {
+          content: "\"";
+        }
+
+        &:after {
+          content: "\"";
+        }
+      }
+
+      .source {
+        color: $gray;
+        text-align: right;
+        float: right;
+        padding-right: 20px;
+        padding-top: 25px;
+        position: relative;
+        margin-top: -1px;
+
+        .triangle:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 20px;
+          border: 0;
+          border-left-width: 20px;
+          border-bottom-width: 20px;
+          border-style: solid;
+          border-color: transparent white;
+          display: block;
+          width: 0;
         }
       }
     }

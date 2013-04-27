@@ -193,6 +193,46 @@ body.home a {
 .main-container .info-row .person .text-wrapper .title {
   color: #646464;
 }
+.main-container .info-row .quotes .flexslider {
+  background: transparent;
+}
+.main-container .info-row .quotes .quote {
+  background: white;
+  color: #046596;
+  font-style: italic;
+  font-size: 40px;
+  line-height: 40px;
+  border-bottom: 1px solid #e3e3e3;
+  padding: 20px;
+}
+.main-container .info-row .quotes .quote:before {
+  content: "\"";
+}
+.main-container .info-row .quotes .quote:after {
+  content: "\"";
+}
+.main-container .info-row .quotes .source {
+  color: #646464;
+  text-align: right;
+  float: right;
+  padding-right: 20px;
+  padding-top: 25px;
+  position: relative;
+  margin-top: -1px;
+}
+.main-container .info-row .quotes .source .triangle:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 20px;
+  border: 0;
+  border-left-width: 20px;
+  border-bottom-width: 20px;
+  border-style: solid;
+  border-color: transparent white;
+  display: block;
+  width: 0;
+}
 .main-container h3 {
   color: #e06e5c;
   text-transform: none;
