@@ -9,6 +9,11 @@ quotes:
     by: "Rasmus Lerdorf"
   - quote: "They are great"
     by: "Bill Gates"
+clients:
+  - name: whitehouse
+    alt: "The whitehouse uses Organic groups for it's forum"
+  - name: medico
+    alt: "Site built by Gizra"
 
 ---
 {% include JB/setup %}
@@ -133,6 +138,15 @@ quotes:
     <!-- Clients Thumbnails
     ================================================== -->
     <div class="row clearfix no-margin">
+      <ul class="gallery-post-grid holder">
+
+        {% for client in page.clients %}
+        <li  class="span2 gallery-item">
+          <img src="/assets/images/clients/{{ client.name}}.png" title="{{ client.alt }}" />
+        </li>
+        {% endfor %}
+
+      </ul>
     </div>
   </div>
 

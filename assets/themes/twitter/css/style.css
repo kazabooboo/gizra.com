@@ -207,10 +207,10 @@ body.home a {
   padding: 20px;
 }
 .main-container .info-row .quotes .quote:before {
-  content: "\"";
+  content: "“";
 }
 .main-container .info-row .quotes .quote:after {
-  content: "\"";
+  content: "”";
 }
 .main-container .info-row .quotes .source {
   color: #646464;
