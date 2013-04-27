@@ -1,0 +1,3 @@
+@mixin contribution-linear-gradient($color) {
+ @include background-image(linear-gradient($color, darken($color, 15%)));
+}

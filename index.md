@@ -8,7 +8,7 @@ tagline: <span class="bigger">We build tailored web sites and advanced</span> <b
 <div class="row gallery-row websites-row"><!-- Begin Websites Row -->
 
   <div class="span12">
-    <h5 class="title-bg"><a class="primary" href="#work">Work</a><a class="secondary hidden-phone" href="/portfolio">See our whole portfolio</a></h5>
+    <h5 class="title-bg"><a class="primary" href="#work">work</a><a class="secondary hidden-phone" href="/portfolio">See our whole portfolio</a></h5>
 
     <!-- Website  Thumbnails
     ================================================== -->
@@ -34,7 +34,7 @@ tagline: <span class="bigger">We build tailored web sites and advanced</span> <b
 <div class="row gallery-row contributions-row"><!-- Begin Contributions Row -->
 
   <div class="span12">
-    <h5 class="title-bg"><a class="primary" href="#contributions">Contributions</a></h5>
+    <h5 class="title-bg"><a class="primary" href="#contributions">contributions</a></h5>
     <div class="secondary hidden-phone"><a href="/contributions">Modules and other stuff we contribute, that make Drupal awesome</a></div>
 
     <!-- Contributions  Thumbnails
@@ -49,8 +49,8 @@ tagline: <span class="bigger">We build tailored web sites and advanced</span> <b
 
         {% assign count=count | plus:1 %}
 
-        <li  class="span3 gallery-item" data-id="{{ count }}">
-          <div class="short-name-wrapper">
+        <li  class="span3 gallery-item">
+          <div class="short-name-wrapper box-{{ count }}">
             <div class="short-name"><a href="{{ page.url }}">{{ page.short }}</a></div>
           </div>
           <span class="project-details"><a href="{{ page.url }}">{{ page.title }}</a>{{ page.description }}</span>
@@ -63,6 +63,42 @@ tagline: <span class="bigger">We build tailored web sites and advanced</span> <b
   </div>
 
 </div><!-- End Contributions Row -->
+
+<div class="row gallery-row info-row"><!-- Begin Info Row -->
+
+  <div class="span12">
+    <h5 class="title-bg"><a class="primary" href="#info">info</a></h5>
+    <div class="secondary hidden-phone"><a href="/contributions">A little about us</a></div>
+
+    <!-- Authors  Thumbnails
+    ================================================== -->
+    <div class="row clearfix no-margin">
+      <div class="span4">
+
+        <h6>About</h6>
+        We build tailored web sites and advanced web applications using Drupal CMS, Drupal is one of the most successful open source content management system.
+        We are not the only one using Drupal, but the difference is that we do it the right way.
+        Drupal is also free and therefore reduces the cost of any new web site.
+        Since the beginning of 2011 we are working only with Drupal 7, being early bird with this new version of Drupal has forced us to fix many of the alpha and beta version modules, submitting dozens of fixes (patches) back to the community, today we are considered by many as Drupal 7 experts with experience with a wide range of technology
+      </div>
+      <ul class="span4">
+        {% for author in site.authors %}
+        <li>
+          {{ author[1].name }} ({{ author[0] }})
+        </li>
+        {% endfor %}
+      </ul>
+
+      <ul class="span4">
+        <h6>Fictious CLient Quotes</h6>
+        <li>
+          Some quote
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</div><!-- End Info Row -->
 
 <ul class="posts">
   {% for post in site.posts %}

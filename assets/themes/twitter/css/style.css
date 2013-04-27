@@ -102,11 +102,13 @@ body.home a {
   background: url(../images/background.png);
   padding: 0 10px;
   text-decoration: none;
+  text-transform: none;
 }
 .main-container .gallery-row h5.title-bg a.primary {
   font-family: Abril Fatface;
   font-style: normal;
   font-weight: 400;
+  font-size: 50px;
   text-shadow: 0px 0px 1px #aaaaaa;
 }
 .main-container .gallery-row h5.title-bg a.secondary {
@@ -116,7 +118,6 @@ body.home a {
   text-align: right;
   font-size: 16px;
   line-height: 16px;
-  text-transform: none;
 }
 .main-container .gallery-row h5.title-bg a.secondary:after {
   content: " \00BB";
@@ -127,16 +128,34 @@ body.home a {
 .main-container .contributions-row li.gallery-item .short-name-wrapper {
   width: 270px;
   height: 218px;
+}
+.main-container .contributions-row li.gallery-item .short-name-wrapper.box-1 {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #128ba1), color-stop(100%, #0a505c));
   background-image: -webkit-linear-gradient(#128ba1, #0a505c);
   background-image: -moz-linear-gradient(#128ba1, #0a505c);
   background-image: -o-linear-gradient(#128ba1, #0a505c);
   background-image: linear-gradient(#128ba1, #0a505c);
+}
+.main-container .contributions-row li.gallery-item .short-name-wrapper.box-2 {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #10a067), color-stop(100%, #095a3a));
   background-image: -webkit-linear-gradient(#10a067, #095a3a);
   background-image: -moz-linear-gradient(#10a067, #095a3a);
   background-image: -o-linear-gradient(#10a067, #095a3a);
   background-image: linear-gradient(#10a067, #095a3a);
+}
+.main-container .contributions-row li.gallery-item .short-name-wrapper.box-3 {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #9d550a), color-stop(100%, #552e05));
+  background-image: -webkit-linear-gradient(#9d550a, #552e05);
+  background-image: -moz-linear-gradient(#9d550a, #552e05);
+  background-image: -o-linear-gradient(#9d550a, #552e05);
+  background-image: linear-gradient(#9d550a, #552e05);
+}
+.main-container .contributions-row li.gallery-item .short-name-wrapper.box-4 {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #a03912), color-stop(100%, #5b210a));
+  background-image: -webkit-linear-gradient(#a03912, #5b210a);
+  background-image: -moz-linear-gradient(#a03912, #5b210a);
+  background-image: -o-linear-gradient(#a03912, #5b210a);
+  background-image: linear-gradient(#a03912, #5b210a);
 }
 .main-container .contributions-row li.gallery-item .short-name-wrapper .short-name {
   text-align: center;
