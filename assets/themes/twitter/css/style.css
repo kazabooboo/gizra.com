@@ -55,6 +55,10 @@ header .navigation .navbar .nav > li > a {
   .main-container > section {
     margin-top: 200px;
   }
+
+  .main-container .content {
+    margin-top: 110px;
+  }
 }
 body.home a {
   color: #e06e5c;
@@ -84,9 +88,9 @@ body.home a {
   letter-spacing: 1px;
 }
 .main-container .gallery-row {
-  margin-bottom: 60px;
+  margin-bottom: 50px;
 }
-.main-container .gallery-row h5.title-bg {
+.main-container .gallery-row h2.title-bg {
   position: relative;
   background: transparent;
   text-align: center;
@@ -98,32 +102,34 @@ body.home a {
   padding: 0;
   font-size: 40px;
 }
-.main-container .gallery-row h5.title-bg a {
+.main-container .gallery-row h2.title-bg a {
   background: url(../images/background.png);
-  padding: 0 10px;
+  padding: 0 25px;
   text-decoration: none;
   text-transform: none;
 }
-.main-container .gallery-row h5.title-bg a.primary {
+.main-container .gallery-row h2.title-bg a.primary {
   font-family: Abril Fatface;
   font-style: normal;
   font-weight: 400;
   font-size: 50px;
   text-shadow: 0px 0px 1px #aaaaaa;
 }
-.main-container .gallery-row h5.title-bg a.secondary {
+.main-container .gallery-row h2.title-bg a.secondary {
   position: absolute;
   right: 0;
-  top: -7px;
   text-align: right;
   font-size: 16px;
   line-height: 16px;
 }
-.main-container .gallery-row h5.title-bg a.secondary:after {
+.main-container .gallery-row h2.title-bg a.secondary:after {
   content: " \00BB";
 }
-.main-container .gallery-row .secondary {
+.main-container .gallery-row .secondary-title {
   text-align: center;
+  color: #e06e5c;
+  font-size: 16px;
+  line-height: 30px;
 }
 .main-container .contributions-row li.gallery-item .short-name-wrapper {
   width: 270px;
@@ -171,6 +177,26 @@ body.home a {
   color: white;
   text-decoration: none;
 }
+.main-container .info-row .person {
+  margin-bottom: 35px;
+}
+.main-container .info-row .person .image-wrapper {
+  float: left;
+  margin-right: 15px;
+}
+.main-container .info-row .person .text-wrapper {
+  margin-left: 95px;
+}
+.main-container .info-row .person .text-wrapper .name {
+  font-weight: bold;
+}
+.main-container .info-row .person .text-wrapper .title {
+  color: #646464;
+}
+.main-container h3 {
+  color: #e06e5c;
+  text-transform: none;
+}
 
 h1,
 h2,
@@ -181,15 +207,6 @@ h6,
 .main-container {
   font-family: "Source Sans Pro";
   font-style: normal;
-}
-h1 .content,
-h2 .content,
-h3 .content,
-h4 .content,
-h5 .content,
-h6 .content,
-.main-container .content {
-  margin-top: 110px;
 }
 
 body {

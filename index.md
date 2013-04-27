@@ -8,7 +8,7 @@ tagline: <span class="bigger">We build tailored web sites and advanced</span> <b
 <div class="row gallery-row websites-row"><!-- Begin Websites Row -->
 
   <div class="span12">
-    <h5 class="title-bg"><a class="primary" href="#work">work</a><a class="secondary hidden-phone" href="/portfolio">See our whole portfolio</a></h5>
+    <h2 class="title-bg"><a class="primary" href="#work">work</a><a class="secondary hidden-phone" href="/portfolio">See our whole portfolio</a></h2>
 
     <!-- Website  Thumbnails
     ================================================== -->
@@ -34,8 +34,8 @@ tagline: <span class="bigger">We build tailored web sites and advanced</span> <b
 <div class="row gallery-row contributions-row"><!-- Begin Contributions Row -->
 
   <div class="span12">
-    <h5 class="title-bg"><a class="primary" href="#contributions">contributions</a></h5>
-    <div class="secondary hidden-phone"><a href="/contributions">Modules and other stuff we contribute, that make Drupal awesome</a></div>
+    <h2 class="title-bg"><a class="primary" href="#contributions">contributions</a></h2>
+    <div class="secondary-title hidden-phone">Modules and other stuff we contribute, that make Drupal awesome</div>
 
     <!-- Contributions  Thumbnails
     ================================================== -->
@@ -67,32 +67,41 @@ tagline: <span class="bigger">We build tailored web sites and advanced</span> <b
 <div class="row gallery-row info-row"><!-- Begin Info Row -->
 
   <div class="span12">
-    <h5 class="title-bg"><a class="primary" href="#info">info</a></h5>
-    <div class="secondary hidden-phone"><a href="/contributions">A little about us</a></div>
+    <h2 class="title-bg"><a class="primary" href="#info">info</a></h2>
+    <div class="secondary-title hidden-phone">A little about us</div>
 
     <!-- Authors  Thumbnails
     ================================================== -->
     <div class="row clearfix no-margin">
       <div class="span4">
 
-        <h6>About</h6>
+        <h3>About</h3>
         We build tailored web sites and advanced web applications using Drupal CMS, Drupal is one of the most successful open source content management system.
         We are not the only one using Drupal, but the difference is that we do it the right way.
         Drupal is also free and therefore reduces the cost of any new web site.
         Since the beginning of 2011 we are working only with Drupal 7, being early bird with this new version of Drupal has forced us to fix many of the alpha and beta version modules, submitting dozens of fixes (patches) back to the community, today we are considered by many as Drupal 7 experts with experience with a wide range of technology
       </div>
-      <ul class="span4">
+      <div class="span4">
+        <h3>Whois</h3>
         {% for author in site.authors %}
-        <li>
-          {{ author[1].name }} ({{ author[0] }})
-        </li>
+        <div class="person clearfix">
+          <div class="image-wrapper">
+            <img src="/assets/images/team/{{ author[0] }}.png" />
+          </div>
+          <div class="text-wrapper">
+            <span class="name">{{ author[1].name }}</span> <span class="nickname">({{ author[0] }})</span>
+            <div class="title">{{ author[1].title }}</div>
+            <div class="bio">{{ author[1].bio }}</div>
+          </div>
+
+        </div>
         {% endfor %}
-      </ul>
+      </div>
 
       <ul class="span4">
-        <h6>Fictious CLient Quotes</h6>
+        <h3>Fictious CLient Quotes</h3>
         <li>
-          Some quote
+          Some quotepos
         </li>
       </ul>
     </div>

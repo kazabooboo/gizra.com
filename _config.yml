@@ -21,16 +21,18 @@ author :
 authors:
   amitaibu:
     name: Amitai Burstein
-    display_name: amitaibu
+    title: CTO
+    nickname: amitaibu
     gravatar: c66919cb194f96c696c1da0c47354a6a
     twitter: amitaibu
-    github: amitaibu
+    bio: Something about Amitaibu
   bricel:
     name: Brice Lenfant
-    display_name: bricel
+    title: CEO
+    nickname: bricel
     gravatar: 12e480a364a5c19214f99b4dfe9a11d5
     twitter: bricel
-    github: bricel
+    bio: Something about Bricel
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt
