@@ -2,6 +2,14 @@
 layout: page
 title:
 tagline: <span class="bigger">We build tailored web sites and advanced</span> <br /> <span class="smaller">web applications using Drupal</span>
+quotes:
+  - quote: "Winter is coming"
+    by: "Jon Snow"
+  - quote: "Gizra inspired me to keep up with PHP"
+    by: "Rasmus Lerdorf"
+  - quote: "hey are great"
+    by: "Bill Gates"
+
 ---
 {% include JB/setup %}
 
@@ -70,7 +78,7 @@ tagline: <span class="bigger">We build tailored web sites and advanced</span> <b
     <h2 class="title-bg"><a class="primary" href="#info">info</a></h2>
     <div class="secondary-title hidden-phone">A little about us</div>
 
-    <!-- Authors  Thumbnails
+    <!-- People  Thumbnails
     ================================================== -->
     <div class="row clearfix no-margin">
       <div class="span4">
@@ -100,14 +108,31 @@ tagline: <span class="bigger">We build tailored web sites and advanced</span> <b
 
       <ul class="span4">
         <h3>Fictious CLient Quotes</h3>
+        {% for quote in page.quotes %}
         <li>
-          Some quotepos
+          <div class="quote">{{ quote.quote }}</div>
+          <div class="source">{{ quote.by }}</div>
         </li>
+        {% endfor %}
       </ul>
     </div>
   </div>
 
 </div><!-- End Info Row -->
+
+<div class="row gallery-row info-row"><!-- Begin Clients Row -->
+
+  <div class="span12">
+    <h2 class="title-bg"><a class="primary" href="#clients">clients</a></h2>
+    <div class="secondary-title hidden-phone">clients and organizations using our Drupal code</div>
+
+    <!-- Clients Thumbnails
+    ================================================== -->
+    <div class="row clearfix no-margin">
+    </div>
+  </div>
+
+</div><!-- End Clients Row -->
 
 <ul class="posts">
   {% for post in site.posts %}
