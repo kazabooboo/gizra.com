@@ -205,6 +205,24 @@ body.home {
     }
   }
 
+  .blog-row {
+
+    .date {
+      color: $gray;
+    }
+
+    .title {
+      color: $blue;
+      font-size: 30px;
+      line-height: 30px;
+    }
+
+    .teaser {
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+
   h3 {
     color: $orange;
     text-transform: none;

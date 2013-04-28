@@ -160,8 +160,10 @@ clients:
     ================================================== -->
     <div class="row clearfix no-margin">
       {% for post in site.posts limit:4 %}
-      <div class="span4">
+      <div class="span12">
         <div class="date">{{ post.date | date_to_string }}</div>
+      </div>
+      <div class="span4">
         <a  class="title" href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
       </div>
 
@@ -174,5 +176,6 @@ clients:
       </div>
       {% endfor %}
     </div>
+    <a class="secondary hidden-phone" href="/blog">See previous posts</a>
   </div>
 </div><!-- End Blog Row -->

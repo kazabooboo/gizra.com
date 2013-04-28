@@ -234,6 +234,18 @@ body.home a {
   display: block;
   width: 0;
 }
+.main-container .blog-row .date {
+  color: #646464;
+}
+.main-container .blog-row .title {
+  color: #046596;
+  font-size: 30px;
+  line-height: 30px;
+}
+.main-container .blog-row .teaser {
+  font-size: 20px;
+  line-height: 20px;
+}
 .main-container h3 {
   color: #e06e5c;
   text-transform: none;
