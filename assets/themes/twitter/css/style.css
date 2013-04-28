@@ -74,12 +74,12 @@ body.home a {
 .main-container h1 {
   color: #046596;
   text-align: center;
-  font-weight: 600;
+  font-weight: 400;
   text-transform: none;
 }
 .main-container h1 .bigger {
-  font-size: 31px;
-  line-height: 31px;
+  font-size: 33px;
+  line-height: 33px;
   letter-spacing: 2px;
 }
 .main-container h1 .smaller {
@@ -88,7 +88,7 @@ body.home a {
   letter-spacing: 1px;
 }
 .main-container .gallery-row {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 .main-container .gallery-row h2.title-bg {
   position: relative;
