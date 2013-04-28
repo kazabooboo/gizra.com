@@ -155,19 +155,24 @@ clients:
 <div class="row gallery-row blog-row"><!-- Begin Blog Row -->
   <div class="span12">
     <h2 class="title-bg"><a class="primary" href="#blog">blog</a><a class="secondary hidden-phone" href="/blog">See previous posts</a></h2>
-    {% for post in site.posts limit:4 %}
-    <div class="span4">
-      <div class="date">{{ post.date | date_to_string }}</div>
-      <a  class="title" href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
-    </div>
 
-    <div class="span8 teaser">
-      {% if post.teaser %}
-      {{ post.teaser }}
-      {% else %}
-      {{ post.content | strip_html | truncatewords: 25 }}
-      {% endif %}
+    <!-- Blog teasers
+    ================================================== -->
+    <div class="row clearfix no-margin">
+      {% for post in site.posts limit:4 %}
+      <div class="span4">
+        <div class="date">{{ post.date | date_to_string }}</div>
+        <a  class="title" href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
+      </div>
+
+      <div class="span8 teaser">
+        {% if post.teaser %}
+        {{ post.teaser }}
+        {% else %}
+        {{ post.content | strip_html | truncatewords: 25 }}
+        {% endif %}
+      </div>
+      {% endfor %}
     </div>
-    {% endfor %}
   </div>
 </div><!-- End Blog Row -->
