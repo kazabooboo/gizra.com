@@ -3,19 +3,12 @@
 .footer-container {
   background: transparent;
 
-  .footer-col {
-    color: black;
-
-    h5 {
-      color: $orange;
-    }
-
+  h4.title-bg {
+    @include title-bg;
   }
 
-  .contact-form {
-
-    .grippie {
-      display: none;
-    }
+  h5 {
+    color: $orange;
   }
+
 }

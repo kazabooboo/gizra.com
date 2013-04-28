@@ -2,3 +2,42 @@
  @include background-image(linear-gradient($color, darken($color, 15%)));
 }
 
+@mixin title-bg {
+  position: relative;
+  background: transparent;
+  text-align: center;
+  border-top: none;
+  border-bottom: 1px dotted $orange;
+  line-height: 0.1em;
+  margin:10px 0 20px;
+  width:100%;
+  padding: 0;
+  font-size: 40px;
+
+  a {
+    background: url(../images/background.png);
+    padding:0 25px;
+    text-decoration: none;
+    text-transform: none;
+  }
+
+  a.primary {
+    font-family: Abril Fatface;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    @include single-text-shadow;
+  }
+
+  a.secondary {
+    position: absolute;
+    right: 0;
+    text-align: right;
+    font-size: 16px;
+    line-height: 16px;
+
+    &:after {
+      content: " \00BB";
+    }
+  }
+}
