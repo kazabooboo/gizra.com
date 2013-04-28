@@ -158,7 +158,7 @@ clients:
 
     <!-- Blog teasers
     ================================================== -->
-    <div class="row clearfix no-margin">
+    <div class="row clearfix no-margin list-wrapper">
       {% for post in site.posts limit:4 %}
       <div class="span12">
         <div class="date">{{ post.date | date_to_string }}</div>
@@ -169,9 +169,9 @@ clients:
 
       <div class="span8 teaser">
         {% if post.teaser %}
-        {{ post.teaser }}
+          {{ post.teaser }}
         {% else %}
-        {{ post.content | strip_html | truncatewords: 25 }}
+          {{ post.content | strip_html | truncatewords: 25 }}
         {% endif %}
       </div>
       {% endfor %}

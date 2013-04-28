@@ -234,17 +234,23 @@ body.home a {
   display: block;
   width: 0;
 }
+.main-container .blog-row .list-wrapper {
+  padding-top: 50px;
+}
 .main-container .blog-row .date {
   color: #646464;
+  font-size: 16px;
+  line-height: 16px;
 }
 .main-container .blog-row .title {
   color: #046596;
-  font-size: 30px;
-  line-height: 30px;
+  font-size: 26px;
+  line-height: 26px;
 }
 .main-container .blog-row .teaser {
-  font-size: 20px;
-  line-height: 20px;
+  font-size: 18px;
+  line-height: 18px;
+  color: #282828;
 }
 .main-container h3 {
   color: #e06e5c;
