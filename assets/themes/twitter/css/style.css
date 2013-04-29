@@ -15,11 +15,11 @@
 }
 .footer-container h4.title-bg a {
   background: url(../images/background.png);
-  padding: 0 25px;
   text-decoration: none;
   text-transform: none;
 }
 .footer-container h4.title-bg a.primary {
+  padding: 0 25px;
   font-family: Abril Fatface;
   font-style: normal;
   font-weight: 400;
@@ -93,13 +93,10 @@ header .navigation .navbar .nav > li > a:last {
     margin-top: 110px;
   }
 
-  .title-bg a.primary:before {
-    content: "";
-    display: block;
-    height: 150px;
-    /* fixed header height*/
-    margin: -150px 0 0;
-    /* negative fixed header height */
+  .title-bg a.primary {
+    border-top: 120px solid transparent;
+    margin-top: -120px;
+    background-clip: padding-box;
   }
 }
 body.home a {
@@ -146,11 +143,11 @@ body.home a {
 }
 .main-container .gallery-row h2.title-bg a {
   background: url(../images/background.png);
-  padding: 0 25px;
   text-decoration: none;
   text-transform: none;
 }
 .main-container .gallery-row h2.title-bg a.primary {
+  padding: 0 25px;
   font-family: Abril Fatface;
   font-style: normal;
   font-weight: 400;
