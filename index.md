@@ -32,7 +32,7 @@ clients:
         {% for page in site.pages %}
         {% if page.category contains 'website' %}
         <li  class="span3 gallery-item">
-          <a href="{{ page.url }}"><img src="{{ page.url }}/thumb.png"></a>
+          <a href="{{ page.url }}"><img src="{{ page.url }}/thumb.jpg"></a>
           <span class="project-details"><a href="{{ page.url }}">{{ page.title }}</a>{{ page.description }}</span>
         </li>
         {% endif %}
@@ -99,7 +99,7 @@ clients:
         {% for author in site.authors %}
         <div class="person clearfix">
           <div class="image-wrapper">
-            <img src="/assets/images/team/{{ author[0] }}.png" />
+            <img src="/assets/images/team/{{ author[0] }}.jpg" />
           </div>
           <div class="text-wrapper">
             <span class="name">{{ author[1].name }}</span> <span class="nickname">({{ author[0] }})</span>
