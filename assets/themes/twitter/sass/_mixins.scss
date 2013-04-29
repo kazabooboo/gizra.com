@@ -21,7 +21,6 @@
   }
 
   a.primary {
-    padding:0 25px;
     font-family: Abril Fatface;
     font-style: normal;
     font-weight: 400;
@@ -35,6 +34,7 @@
     text-align: right;
     font-size: 16px;
     line-height: 16px;
+    padding-left: 10px;
 
     &:after {
       content: " \00BB";
