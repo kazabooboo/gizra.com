@@ -129,7 +129,7 @@ clients:
 
 </div><!-- End Info Row -->
 
-<div class="row gallery-row info-row"><!-- Begin Clients Row -->
+<div class="row gallery-row clients-row"><!-- Begin Clients Row -->
 
   <div class="span12">
     <h2 class="title-bg"><a class="primary" href="#clients">clients</a></h2>
@@ -139,13 +139,11 @@ clients:
     ================================================== -->
     <div class="row clearfix no-margin">
       <ul class="gallery-post-grid holder">
-
         {% for client in page.clients %}
         <li  class="span2 gallery-item">
           <img src="/assets/images/clients/{{ client.name}}.png" title="{{ client.alt }}" />
         </li>
         {% endfor %}
-
       </ul>
     </div>
   </div>

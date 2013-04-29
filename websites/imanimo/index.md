@@ -1,10 +1,10 @@
 ---
 layout: page
-title: "Telem"
-description: "National chain of Psychotherapists"
+title: "Imanimo"
+description: "Fashion catalogue for pregnant women"
 category: website
 permalink: /
 ---
 {% include JB/setup %}
 
-Info about Telem
+Info about Imanimo

@@ -170,6 +170,17 @@ body.home {
     }
   }
 
+  .clients-row {
+
+    li.gallery-item {
+      line-height: 95px;
+
+      img {
+        vertical-align: middle;
+      }
+    }
+  }
+
   .blog-row {
 
     .list-wrapper {

@@ -263,6 +263,12 @@ body.home a {
   display: block;
   width: 0;
 }
+.main-container .clients-row li.gallery-item {
+  line-height: 95px;
+}
+.main-container .clients-row li.gallery-item img {
+  vertical-align: middle;
+}
 .main-container .blog-row .list-wrapper {
   padding-top: 50px;
 }
