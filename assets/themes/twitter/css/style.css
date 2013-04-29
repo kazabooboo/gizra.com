@@ -36,7 +36,7 @@
 .footer-container h4.title-bg a.secondary:after {
   content: " \00BB";
 }
-.footer-container h5 {
+.footer-container h5.title-bg {
   color: #e06e5c;
 }
 
@@ -87,6 +87,15 @@ header .navigation .navbar .nav > li > a {
 
   .main-container .content {
     margin-top: 110px;
+  }
+
+  .title-bg a.primary:before {
+    content: "";
+    display: block;
+    height: 150px;
+    /* fixed header height*/
+    margin: -150px 0 0;
+    /* negative fixed header height */
   }
 }
 body.home a {

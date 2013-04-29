@@ -1,6 +1,7 @@
 ---
 layout: page
 title:
+homepage: true
 tagline: <span class="bigger">We build tailored web sites and advanced</span> <br /> <span class="smaller">web applications using Drupal</span>
 quotes:
   - quote: "Winter is coming"
