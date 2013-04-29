@@ -94,9 +94,8 @@
             <div class="navbar hidden-phone">
 
               <ul class="nav">
-                {% assign pages_list = site.pages %}
-                {% assign group = 'navigation' %}
-                {% include JB/pages_list %}
+                <li><a href="/#work">Work</a></li>
+                <li><a href="/#contributions">Contributions</a></li>
               </ul>
             </div>
 
@@ -129,7 +128,7 @@
 
     <footer class="footer-container"><!-- Begin Footer -->
       <div class="container">
-        <h4 class="title-bg"><a class="primary" href="#contact">contact</a></h4>
+        <h4 class="title-bg"><a class="primary" name="contact">contact</a></h4>
         <div class="row footer-row">
           <div class="span8 footer-col">
             <h5>Contact Us</h5>

@@ -265,6 +265,7 @@ body.home a {
 }
 .main-container .clients-row li.gallery-item {
   line-height: 95px;
+  text-align: center;
 }
 .main-container .clients-row li.gallery-item img {
   vertical-align: middle;

@@ -12,16 +12,21 @@ quotes:
 clients:
   - name: whitehouse
     alt: "The whitehouse uses Organic groups for it's forum"
+  - name: openscholar
+    alt: "Site built by Gizra"
+  - name: drupal-groups
+    alt: "Site built by Gizra"
+  - name: imanimo
+    alt: "Site built by Gizra"
   - name: medico
     alt: "Site built by Gizra"
-
 ---
 {% include JB/setup %}
 
 <div class="row gallery-row websites-row"><!-- Begin Websites Row -->
 
   <div class="span12">
-    <h2 class="title-bg"><a class="primary" href="#work">work</a><a class="secondary hidden-phone" href="/portfolio">See our whole portfolio</a></h2>
+    <h2 class="title-bg"><a class="primary" name="work">work</a><a class="secondary hidden-phone" href="/portfolio">See our whole portfolio</a></h2>
 
     <!-- Website  Thumbnails
     ================================================== -->
@@ -47,7 +52,7 @@ clients:
 <div class="row gallery-row contributions-row"><!-- Begin Contributions Row -->
 
   <div class="span12">
-    <h2 class="title-bg"><a class="primary" href="#contributions">contributions</a></h2>
+    <h2 class="title-bg"><a class="primary" name="contributions">contributions</a></h2>
     <div class="secondary-title hidden-phone">Modules and other stuff we contribute, that make Drupal awesome</div>
 
     <!-- Contributions  Thumbnails
@@ -80,7 +85,7 @@ clients:
 <div class="row gallery-row info-row"><!-- Begin Info Row -->
 
   <div class="span12">
-    <h2 class="title-bg"><a class="primary" href="#info">info</a></h2>
+    <h2 class="title-bg"><a class="primary" name="info">info</a></h2>
     <div class="secondary-title hidden-phone">A little about us</div>
 
     <!-- People  Thumbnails
@@ -132,7 +137,7 @@ clients:
 <div class="row gallery-row clients-row"><!-- Begin Clients Row -->
 
   <div class="span12">
-    <h2 class="title-bg"><a class="primary" href="#clients">clients</a></h2>
+    <h2 class="title-bg"><a class="primary" name="clients">clients</a></h2>
     <div class="secondary-title hidden-phone">clients and organizations using our Drupal code</div>
 
     <!-- Clients Thumbnails
@@ -152,7 +157,7 @@ clients:
 
 <div class="row gallery-row blog-row"><!-- Begin Blog Row -->
   <div class="span12">
-    <h2 class="title-bg"><a class="primary" href="#blog">blog</a><a class="secondary hidden-phone" href="/blog">See previous posts</a></h2>
+    <h2 class="title-bg"><a class="primary" name="blog">blog</a><a class="secondary hidden-phone" href="/blog">See previous posts</a></h2>
 
     <!-- Blog teasers
     ================================================== -->
