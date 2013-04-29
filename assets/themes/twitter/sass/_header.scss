@@ -2,7 +2,7 @@
 
 header {
   background: white;
-  border-bottom: 2px solid $lightBlue;
+  border-bottom: 3px solid $lightBlue;
 
   .header-row {
     margin-bottom: 10px;
@@ -35,6 +35,11 @@ header {
       .nav > li > a {
         color: $orange;
         font-size: 18px;
+        padding-right: 7px;
+
+        &:last {
+          padding-right: 0;
+        }
       }
     }
   }

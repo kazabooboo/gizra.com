@@ -42,7 +42,7 @@
 
 header {
   background: white;
-  border-bottom: 2px solid #ccdce1;
+  border-bottom: 3px solid #ccdce1;
 }
 header .header-row {
   margin-bottom: 10px;
@@ -72,6 +72,10 @@ header .navigation .navbar {
 header .navigation .navbar .nav > li > a {
   color: #e06e5c;
   font-size: 18px;
+  padding-right: 7px;
+}
+header .navigation .navbar .nav > li > a:last {
+  padding-right: 0;
 }
 
 @media (min-width: 768px) {
