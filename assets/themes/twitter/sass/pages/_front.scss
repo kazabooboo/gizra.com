@@ -183,13 +183,16 @@ body.home {
 
     .blog-row {
 
+      .teasers {
+        margin-top: 70px 0 30px 0;
+      }
+
       .list-wrapper {
-        padding-top: 50px;
 
         .date {
           color: $gray;
-          font-size: 16px;
-          line-height: 16px;
+          font-size: 15px;
+          line-height: 15px;
         }
 
         .title {
@@ -202,6 +205,7 @@ body.home {
           font-size: 18px;
           line-height: 18px;
           color: $darkGray;
+          margin-bottom: 70px;
         }
       }
     }

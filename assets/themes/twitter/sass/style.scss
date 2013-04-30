@@ -28,6 +28,15 @@ body {
   background: url(../images/background.png);
 }
 
+a.secondary {
+  font-size: 16px;
+  line-height: 16px;
+
+  &:after {
+    content: " \00BB";
+  }
+}
+
 // Pygmentize
 .hll { background-color: #ffffcc }
 .c { color: #408080; font-style: italic } /* Comment */

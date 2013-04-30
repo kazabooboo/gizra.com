@@ -30,11 +30,6 @@
   position: absolute;
   right: 0;
   text-align: right;
-  font-size: 16px;
-  line-height: 16px;
-}
-.footer-container h4.title-bg a.secondary:after {
-  content: " \00BB";
 }
 .footer-container h5.title-bg {
   color: #e06e5c;
@@ -151,11 +146,6 @@ body.home .main-container .gallery-row h2.title-bg a.secondary {
   position: absolute;
   right: 0;
   text-align: right;
-  font-size: 16px;
-  line-height: 16px;
-}
-body.home .main-container .gallery-row h2.title-bg a.secondary:after {
-  content: " \00BB";
 }
 body.home .main-container .gallery-row .secondary-title {
   text-align: center;
@@ -273,13 +263,13 @@ body.home .main-container .clients-row li.gallery-item {
 body.home .main-container .clients-row li.gallery-item img {
   vertical-align: middle;
 }
-body.home .main-container .blog-row .list-wrapper {
-  padding-top: 50px;
+body.home .main-container .blog-row .teasers {
+  margin-top: 70px 0 30px 0;
 }
 body.home .main-container .blog-row .list-wrapper .date {
   color: #646464;
-  font-size: 16px;
-  line-height: 16px;
+  font-size: 15px;
+  line-height: 15px;
 }
 body.home .main-container .blog-row .list-wrapper .title {
   color: #046596;
@@ -290,6 +280,7 @@ body.home .main-container .blog-row .list-wrapper .teaser {
   font-size: 18px;
   line-height: 18px;
   color: #282828;
+  margin-bottom: 70px;
 }
 body.home .main-container h3 {
   color: #e06e5c;
@@ -309,6 +300,14 @@ h6,
 
 body {
   background: url(../images/background.png);
+}
+
+a.secondary {
+  font-size: 16px;
+  line-height: 16px;
+}
+a.secondary:after {
+  content: " \00BB";
 }
 
 .hll {

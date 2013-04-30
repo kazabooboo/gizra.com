@@ -162,7 +162,7 @@ clients:
 
     <!-- Blog teasers
     ================================================== -->
-    <div class="row clearfix no-margin">
+    <div class="row clearfix no-margin teasers">
       {% for post in site.posts limit:4 %}
       <div class="list-wrapper">
         <div class="span12">
@@ -179,8 +179,8 @@ clients:
             {{ post.content | strip_html | truncatewords: 25 }}
           {% endif %}
         </div>
-        {% endfor %}
       </div>
+      {% endfor %}
     </div>
     <a class="secondary hidden-phone" href="/blog">See previous posts</a>
   </div>
