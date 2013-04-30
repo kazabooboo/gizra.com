@@ -1,5 +1,5 @@
---- 
-tags: 
+---
+tags:
 - Drupal-planet
 - Migrate
 permalink: /content/migrate-and-baking-content/
@@ -7,19 +7,19 @@ title: Migrate, and baking content
 created: 1356611190
 layout: post
 ---
-A small problem in Drupal occurs when developing new modules, or installation profiles. Content. 
+A small problem in Drupal occurs when developing new modules, or installation profiles. Content.
 It goes missing, and without it developing can go wrong very quickly. Also, starting up a site’s install profile that reveals a site without content gives a feel of walking into an empty bakery shop. There’s ovens, flour, and bakers, and that great bakery smell all around, but no bread. And possible clients go to other bakeries if you run out of bread. So to solve this issue, <a href="http://drupal.org/project/migrate">Migrate</a>  module helps us fill up the shop with bread.
-Oh, and you can also migrate data from other (older) sites. 
+Oh, and you can also migrate data from other (older) sites.
 
 <h3>What is it good for?</h3>
-Migrate fills up your Drupal installation profile, or just fresh new module, with appropriate content that helps the user or developer experiment with it, so the new module’s learning curve is easier. When developing, if you mess something up - say, drop the user table - it won’t be as bad as it could’ve been, since you kept around a backup in a CSV file. Some company want their site upgraded? No problem. Migrate can import from CSV, SQL databases, XML and much more.	 
+Migrate fills up your Drupal installation profile, or just fresh new module, with appropriate content that helps the user or developer experiment with it, so the new module’s learning curve is easier. When developing, if you mess something up - say, drop the user table - it won’t be as bad as it could’ve been, since you kept around a backup in a CSV file. Some company want their site upgraded? No problem. Migrate can import from CSV, SQL databases, XML and much more.
 
 <em>For the less technical:</em> if you think I'm just naming random letters, relax: if you have Microsoft Excel, or even OpenOffice (it's free!), you can start creating content before you even have a site. Just open up a new table in either software, and save it as a CSV file. Your developer should be able to guide you through in a few minutes. If he can’t, well, you might want to consider a different one.
 
 Migrate provides a strong advantage when developing installation profiles. When you rebuild a profile, the existing database is thrown away and replaced with a new one. But most of the time, you will need content to work with, test your logic, and see the resulting displayed page. With Migrate, when you install a profile, you can automatically import content to work with.
 
 Also, Migrate is great for it’s obvious main purpose - to migrate sites’ content to a drupal installation. This is great if you’re building a site for a client that already has a working site but is looking for an upgrade and is afraid of losing all of the site’s content.
-	 	 	
+
 However, the best use of Migrate is during the initial development of a new site. Think of it like that: the bakery is still being built, but the baker can't wait to start baking. He has all those little recipes he's anxious to try, so in the meantime he prepares dough and keeps it in his household refrigerator.
 The same principle occurs with Migrate: while Dave, the developer, is building on the structure of the database, content types and whatnots, Sam, the site's manager, can start creating content, and customize it's structure according to his needs. All Sam needs to do is create a table and save it in some Migrate-able format (like a CSV file) . This saves time for Sam till he can launch the site, since he can start preparing the content – and put the dough straight in the oven from the refrigerator, without hassling around with flour and eggs. The site will have a quicker 'cool down' time between the development is finished until the site is actually launched, since the content is already stored and ready to be used.
 
@@ -29,11 +29,11 @@ Not only time is saved. Dave receives less stress from Sam while developing, sin
 
 Data storage (a.k.a - Sam’s side of the story)
 The migrate module reads information stored in .csv files. An example of one of these is shown below:
-<img src="http://www.gizra.com/sites/default/files/s025.png" />
+<img src="/assets/images/legacy/s025.png" />
 
 Notice that ‘company’ and ‘status’ columns are filled with references to other entities’ IDs.
 
-That’s it for site developers. Create a table, make sure everything sits the way you want it, and send it to the developer. 
+That’s it for site developers. Create a table, make sure everything sits the way you want it, and send it to the developer.
 
 <h4>The Drupal side: (a.k.a - Dave’s side of the story)</h4>
 
@@ -47,29 +47,29 @@ If you’re reading this, I’m assuming you are a Drupal developer (it’s quit
  * Use garmentboxMigration class to import taxonomy terms.
  */
 class garmentboxMeasurementUnitTerms extends garmentboxMigration {
-  
+
   // Define entity type and bundle, used in garmentboxMigration.
   public $entityType = 'taxonomy_term';
   public $bundle = 'measurement_units';
-  
-  // Map columns to import. garmentboxMigration already mapped "id" and 
+
+  // Map columns to import. garmentboxMigration already mapped "id" and
   // "name".
   public $csvColumns = array(
     'field_unit_type',
     'field_conversion_ratio',
   );
-  
+
   public function __construct() {
     parent::__construct();
     // Map the mapped columns to fields.
     $this->addFieldMapping('field_unit_type', 'field_unit_type');
     $this->addFieldMapping('field_conversion_ratio', 'field_conversion_ratio');
-  }  
+  }
 }
 ?>
- And that’s it. <code>garmentboxMigration</code> takes care of stitching everything together, and putting the data in the content’s fields. You can obviously extend this abstract class to fit your own business logic. 
+ And that’s it. <code>garmentboxMigration</code> takes care of stitching everything together, and putting the data in the content’s fields. You can obviously extend this abstract class to fit your own business logic.
 Importing files and images is also easy:
-<img src="http://www.gizra.com/sites/default/files/s029.png" />
+<img src="/assets/images/legacy/s029.png" />
 
 <?php
 $this->addFieldMapping('field_image', 'field_image');
@@ -82,7 +82,7 @@ $this
 ?>
 
 For multiple values in one field, use the separator('|') function when defining field mapping:
-<img src="http://www.gizra.com/sites/default/files/s028.png" />
+<img src="/assets/images/legacy/s028.png" />
 <?php
 $this
   ->addFieldMapping('field_inventory_line_inline', 'field_inventory_line_inline')

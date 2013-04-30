@@ -1,5 +1,5 @@
---- 
-tags: 
+---
+tags:
 - Drupal-planet
 - Migrate
 permalink: /content/data-migration-part-2/
@@ -17,10 +17,10 @@ Migrate extra module enables import of file field.
 The following  example demonstrate how to import the old cars table.
 
 Here is the table structures of old cars , 'cars':
-<img src="http://www.gizra.com/sites/default/files/blog2_tab1.jpg" alt=""/>
+<img src="/assets/images/legacy/blog2_tab1.jpg" alt=""/>
 
 Here is Drupal’s car content type fields structure (The machine name  is: car).
-<img src="http://www.gizra.com/sites/default/files/blog2_tab2.jpg" alt=""/>
+<img src="/assets/images/legacy/blog2_tab2.jpg" alt=""/>
 
 
 Create a new extended class to import the cars :
@@ -107,7 +107,7 @@ field_failures :
 Now we will import the image files, thanks to Migrate module all we need to do is the following :
 
 <?php
-$arguments = MigrateFileFieldHandler::arguments('<the path to the old image>', 'file_copy', FILE_EXISTS_RENAME);  
+$arguments = MigrateFileFieldHandler::arguments('<the path to the old image>', 'file_copy', FILE_EXISTS_RENAME);
 // Mapping of old field (picture) to new CCK field (field_image)
 $this->addFieldMapping('field_image', 'picture')
   ->arguments($arguments);
@@ -126,9 +126,9 @@ $this->addFieldMapping('nid')
 An other very useful function in the <i>prepare</i> function, the function allows us to manipulate the mapping result just before the node save function, a bit like a hook.
 In this example I use this function to convert a string value to lower case.
 
-The function signature is: 
+The function signature is:
 <code>
- public function prepare(stdClass $account, stdClass $row) 
+ public function prepare(stdClass $account, stdClass $row)
 </code>
 
 

@@ -1,5 +1,5 @@
---- 
-tags: 
+---
+tags:
 - Drupal-planet
 - OG
 - Drupalcamp
@@ -14,7 +14,7 @@ Since my Greek sucks, and since they understood that their presentations can hav
 
 Although my stay was very short I still had the chance to see the Acropolis a la <a href="http://acquia.com/blog/drupal-greece">Robert Douglass</a> style. This means storming out of the hotel - because my presentation starts in less than two hours - jumping inside a taxi, checking out every spot really quickly, taking a photo or two, back in the taxi, and we're back. It was much fun!
 
-<img src="http://www.gizra.com/sites/default/files/PICT5254.JPG" />
+<img src="/assets/images/legacy/PICT5254.JPG" />
 
 Here is my own presentation about Organic groups for Drupal 7. I think it is a good introduction for those who still try to understand the concept of Entity and Fields and how it changes the way we approach a task in Drupal 7.
 

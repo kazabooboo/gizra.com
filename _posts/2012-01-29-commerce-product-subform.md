@@ -1,5 +1,5 @@
---- 
-tags: 
+---
+tags:
 - Commerce
 - Subform
 - CTools
@@ -13,9 +13,9 @@ layout: post
 
 This post will go over an example (yet fully functionally) module that shows how we can embed a commerce product form inside a node form, and have the node reference the commerce product - without horrible hacks.
 
-<img src="http://www.gizra.com/sites/default/files/Product-1.jpg" />
-<img src="http://www.gizra.com/sites/default/files/Create-Product-2.jpg" />
-<img src="http://www.gizra.com/sites/default/files/Product-3-Site-Install.jpg" />
+<img src="/assets/images/legacy/Product-1.jpg" />
+<img src="/assets/images/legacy/Create-Product-2.jpg" />
+<img src="/assets/images/legacy/Product-3-Site-Install.jpg" />
 
 <a href="https://github.com/amitaibu/commerce_product_subform">Here is the code</a>
 

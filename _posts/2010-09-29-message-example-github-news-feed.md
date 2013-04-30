@@ -1,5 +1,5 @@
---- 
-tags: 
+---
+tags:
 - Drupal-planet
 - Message
 permalink: /content/message-example-github-news-feed/
@@ -34,11 +34,11 @@ Navigate to /messages or click on the "News feed" on the navigation menu, and yo
 
 As you can see, at the beginning there are no records in the "News feed", because you still don't follow anyone. Go to the "All feeds" tab, click on one of the user's and flag the user or flag a specific node. Back in the "News feed" you will now see all the activity of the users and nodes you follow.
 
-<img src="http://gizra.com/sites/default/files/snap1.jpg"/>
-<img src="http://gizra.com/sites/default/files/snap2.jpg"/>
-<img src="http://gizra.com/sites/default/files/snap3.jpg"/>
-<img src="http://gizra.com/sites/default/files/snap4.jpg"/>
-<img src="http://gizra.com/sites/default/files/snap5.jpg"/>
+<img src="/assets/images/legacy/snap1.jpg"/>
+<img src="/assets/images/legacy/snap2.jpg"/>
+<img src="/assets/images/legacy/snap3.jpg"/>
+<img src="/assets/images/legacy/snap4.jpg"/>
+<img src="/assets/images/legacy/snap5.jpg"/>
 
 If you are not a developer worry not (although if you are a bit familiar with code, the message_example.module has lots of documentation), you can still use the Message module, thanks to its Rules module integration.
 

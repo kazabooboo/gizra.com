@@ -1,5 +1,5 @@
---- 
-tags: 
+---
+tags:
 - Migrate
 - Drupal-planet
 permalink: /content/data-migration-part-1/
@@ -36,7 +36,7 @@ In this example we will import Users from the old site , take a look at the old 
 
 car_users:
 
-<img src="http://www.gizra.com/sites/default/files/blog1_tab1_0.jpg" alt=""/>
+<img src="/assets/images/legacy/blog1_tab1_0.jpg" alt=""/>
 
 For the migrate module to recognize classes defined by your module, you must define hook_migrate_api() in your .module file:
 <?php
@@ -52,10 +52,10 @@ function example_migrate_api() {
 Define the migration class, each migration class should end with the suffix Migration .
 
 <?php
-class OldUsersMigration extends Migration 
+class OldUsersMigration extends Migration
 
   public function __construct() {
-    parent::__construct(); 
+    parent::__construct();
     $this->description = t('Migrate users from the source database');
 ?>
 
@@ -138,7 +138,7 @@ Druring the mapping you can use the 'migrate ui' to see your migration map statu
 
 open the page /basepath/admin/content/migrate
 
-<img src="http://www.gizra.com/sites/default/files/blog1_tab2_0.png" alt=""/>
+<img src="/assets/images/legacy/blog1_tab2_0.png" alt=""/>
 
 Now we can executing the migration using  Drush, the excute functions allows us a process of trial and error using the command, <i>drush migrate-import</i> and <i>drush migrate-rollback</i> repeadly.
 

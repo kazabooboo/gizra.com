@@ -1,5 +1,5 @@
---- 
-tags: 
+---
+tags:
 - Drupal-planet
 - Message
 - Drush
@@ -95,11 +95,11 @@ if (function_exists('drush_log') && drush_get_option('verbose')) {
 }
 ?>
 
-After that, all you need to do is create a new Jenkins job. 
-<img src="http://www.gizra.com/sites/default/files/digest_dev%20Config%20[Jenkins].jpg" />
+After that, all you need to do is create a new Jenkins job.
+<img src="/assets/images/legacy/digest_dev%20Config%20[Jenkins].jpg" />
 
 
 <a href="http://getpantheon.com">Pantheon</a> gives us this flexibility, here's the console log:
-<img src="http://www.gizra.com/sites/default/files/digest-console.jpg" />
+<img src="/assets/images/legacy/digest-console.jpg" />
 
 Don't forget to use <a href="http://drupal.org/project/reroute_email">Reroute email</a> so your users don’t get dummy emails form your Dev and Test environments.

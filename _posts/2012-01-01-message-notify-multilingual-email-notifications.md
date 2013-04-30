@@ -1,5 +1,5 @@
---- 
-tags: 
+---
+tags:
 - Drupal-planet
 - Message
 permalink: /content/message-notify-multilingual-email-notifications/
@@ -28,7 +28,7 @@ Lets see it in action:
 Again, as different users with different language, post comments, and see how the message is language aware!</li>
 </ul>
 
-<img src="http://www.gizra.com/sites/default/files/Edit%20Comment%20insert%20%7C%20Site-Install.jpg" />
+<img src="/assets/images/legacy/Edit%20Comment%20insert%20%7C%20Site-Install.jpg" />
 
 
 As you can see Message notify, doesn’t try to implement a subscription system. You can do that yourself according to your custom logic, and Flag module will probably play a big part in it.
@@ -37,4 +37,4 @@ Non-developers will need to wait a little longer for a Rules integration with Me
 
 I would also like to point that we implemented for out client in <a href="http://www.medico.com/">Medico.com</a> a really nice digest-email feature, that sends you all the recent activity. Remember, since tokens can be replaced by callbacks, nothing stops us from calling <code>views_embed_view()</code> and sending this nice email.
 
-<img src="http://www.gizra.com/sites/default/files/digest-Medico.jpg" />
+<img src="/assets/images/legacy/digest-Medico.jpg" />

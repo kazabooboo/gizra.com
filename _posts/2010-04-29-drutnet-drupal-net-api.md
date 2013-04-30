@@ -1,5 +1,5 @@
---- 
-tags: 
+---
+tags:
 - Drupal-planet
 - .NET
 - DrutNet
@@ -46,13 +46,13 @@ drush dl cck views features filefield services
 </li>
 <li>Compile the sample project Or use the already compiled program in <code>/Dlls/DrutNETSample.exe</code></li>
 <li>Insert your username password to Drupal and the Drupal site URL
-<img src="http://www.gizra.com/sites/default/files/Drutnet1.png" /><br/>
+<img src="/assets/images/legacy/Drutnet1.png" /><br/>
 </li>
 <li>Click on "Login to services", and then click "Login to cURL".
-<img src="http://www.gizra.com/sites/default/files/Drutnet2.png" /><br/>
+<img src="/assets/images/legacy/Drutnet2.png" /><br/>
 </li>
 <li>Update an existing node by indicating the node ID, loading it, changing the text and "Save" it.
-<img src="http://www.gizra.com/sites/default/files/Drutnet3.png" /><br/>
+<img src="/assets/images/legacy/Drutnet3.png" /><br/>
 </li>
 <li>To test file upload, switch to the Upload tab, choose a file and fill the node ID, CCK field name to attach the file to (in our example we use <code>field_file</code>), and hit the Upload Button</li>
 </ol>

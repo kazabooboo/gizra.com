@@ -1,5 +1,5 @@
---- 
-tags: 
+---
+tags:
 - Message
 - Drupal-planet
 permalink: /content/what-message-module-and-its-new-features/
@@ -11,8 +11,8 @@ layout: post
 Message can help with many tasks from simple logs to complicated activity streams and even, with the use of  Message Notify module, multilingual digest emails.
 
 <h3>What is a message</h3>
-Messages are entities belonging to a specific “Message type”, defining the purpose of its messages. Think of the relation of a Message to a Message type the same as what a node is to a node type. A good resource for understating Message is the Message-Example module that ships with Message, and is well documented. Even Organic groups’ example module has integration with Message to show how it can be used for group notification. 
-<img src="http://www.gizra.com/sites/default/files/message-1.jpg" />
+Messages are entities belonging to a specific “Message type”, defining the purpose of its messages. Think of the relation of a Message to a Message type the same as what a node is to a node type. A good resource for understating Message is the Message-Example module that ships with Message, and is well documented. Even Organic groups’ example module has integration with Message to show how it can be used for group notification.
+<img src="/assets/images/legacy/message-1.jpg" />
 
 <h3>Tokens</h3>
 As it is possible to attach fields to messages, we can leverage the token system. In fact we have 3 different powerful ways for text “replacements”:
@@ -23,12 +23,12 @@ As it is possible to attach fields to messages, we can leverage the token system
 </ul>
 
 <h3>Partials</h3>
-The message text is of multiple cardinality (or combined of multiple “partials”), in order to allow presenting the message in a complex layout without adding too much markup to the message text. 
-<img src="http://www.gizra.com/sites/default/files/message-2.jpg" />
+The message text is of multiple cardinality (or combined of multiple “partials”), in order to allow presenting the message in a complex layout without adding too much markup to the message text.
+<img src="/assets/images/legacy/message-2.jpg" />
 
-Below is  a View using “Panel fields” settings (part of Panels) allowing to set which partial goes on which region of the message template. 
+Below is  a View using “Panel fields” settings (part of Panels) allowing to set which partial goes on which region of the message template.
 Not only we didn’t have to add complicated HTML to the message itself, in fact in different Views we can have different layouts!
-<img src="http://www.gizra.com/sites/default/files/message-3.jpg" />
+<img src="/assets/images/legacy/message-3.jpg" />
 
 <h3>Auto delete & Purge</h3>
 Two new features include purging of messages (e.g. delete all messages older than 30 days, or if reached a maximum of 1000), and deletion of Messages when the referenced entities are deleted - to keep your database nice and slim.

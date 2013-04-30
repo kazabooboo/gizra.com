@@ -1,5 +1,5 @@
---- 
-tags: 
+---
+tags:
 - Drupal-planet
 - tutorial
 - Panels
@@ -8,11 +8,11 @@ title: Dynamic landing pages
 created: 1271233088
 layout: post
 ---
-The following post will cover how to create dynamic landing pages. First lets define our mission: 
+The following post will cover how to create dynamic landing pages. First lets define our mission:
 
 Allow easily creating landing pages, with different content. The layout should be a header and footer which are always the same, and the main-content should be three columns layout, with dynamic content.
 
-<img src="http://www.gizra.com/sites/default/files/Snap1_0.png">
+<img src="/assets/images/legacy/Snap1_0.png">
 
 Before we go too technical, let's translate the task into plain English in order to solve our task.
 
@@ -47,13 +47,13 @@ drush en optionwidgets text views_ui ctools _panels page_manager views_content
 <li>Create a View that shows the full nodes, filtered by node type, that gets two arguments - the "Location" and the "Page ID"</li>
 <li>Add a new display of "Content pane" type. This display type is what ties Views to Panels in a way that allows us to define how the View is going to get its arguments</li>
 <li>Set the Page ID argument to be taken from the panel argument - or in other words, if the url will be landing-page/foo then foo is our page ID. The Location argument, on the other hand, shouldn't be taken from the URL - it should be set in the Pane configuration
-<img src="http://www.gizra.com/sites/default/files/Snap3_0.png">
-<img src="http://www.gizra.com/sites/default/files/Snap4.png">
+<img src="/assets/images/legacy/Snap3_0.png">
+<img src="/assets/images/legacy/Snap4.png">
 </li>
 <li>Create a panel page in the path <code>landing-page</code> with a three column layout, and in the content add our view to each of the columns. Every time the "Location" argument will change according to the column the View is added to
-<img src="http://www.gizra.com/sites/default/files/Snap5_0.png">
-<img src="http://www.gizra.com/sites/default/files/Snap6_0.png">
-<img src="http://www.gizra.com/sites/default/files/Snap7_0.png">
+<img src="/assets/images/legacy/Snap5_0.png">
+<img src="/assets/images/legacy/Snap6_0.png">
+<img src="/assets/images/legacy/Snap7_0.png">
 </li>
 <li>Next, in our theme to copy page.tpl.php to page-landing-page.tpl.php, and the printing of the sidebars</li>
 <li>Optional; copy node.tpl.php to node-view-landing_page.tpl.php and delete the printing of the node title</li>
