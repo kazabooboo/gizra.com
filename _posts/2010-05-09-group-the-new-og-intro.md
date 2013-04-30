@@ -1,10 +1,12 @@
 --- 
-tags: []
-
-title: Group (the new OG) intro
-permalink: content/group-intro
-layout: post
 created: 1273414312
+layout: post
+tags: 
+- Drupal-planet
+- Group
+- OG
+permalink: content/group-intro
+title: Group (the new OG) intro
 ---
  In the past few month, since Drupalcon Paris, I was busy upgrading Organic groups (a.k.a OG) to Drupal7. I'd like to give a quick overview of what has been done, what needs to be done, and the changes that came with the upgrade.
 

@@ -1,10 +1,11 @@
 --- 
-tags: []
-
-title: How to deal with colliding aliases
-permalink: content/how-deal-colliding-aliases
-layout: post
 created: 1330604300
+layout: post
+tags: 
+- Hacks
+- Drupal-planet
+permalink: content/how-deal-colliding-aliases
+title: How to deal with colliding aliases
 ---
 Here's a common problem with aliases:
 

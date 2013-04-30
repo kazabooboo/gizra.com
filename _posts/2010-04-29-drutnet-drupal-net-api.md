@@ -1,10 +1,12 @@
 --- 
-tags: []
-
-title: "DrutNet -  Drupal .NET API "
-permalink: content/drutnet-drupal-net-api
-layout: post
 created: 1272550961
+layout: post
+tags: 
+- Drupal-planet
+- .NET
+- DrutNet
+permalink: content/drutnet-drupal-net-api
+title: "DrutNet -  Drupal .NET API "
 ---
 DrutNet is a .NET API to create client applications that connects to a Drupal site, and allow file upload, node save/load, view get and more.
 

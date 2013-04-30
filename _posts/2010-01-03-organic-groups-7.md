@@ -1,10 +1,10 @@
 --- 
-tags: []
-
-title: Organic groups 7!
-permalink: content/organic-groups-7
-layout: post
 created: 1262533656
+layout: post
+tags: 
+- Drupal-planet
+permalink: content/organic-groups-7
+title: Organic groups 7!
 ---
 You might have already heard, that <a href="http://cyrve.com/maintainership">Moshe Weitzman</a> has handed over Organic groups to me. It's fun and scary at the same time.
 

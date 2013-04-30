@@ -1,10 +1,11 @@
 --- 
-tags: []
-
-title: OG7 and Entity reference - Sponsor me
-permalink: content/og7-and-entity-reference-sponsor-me
-layout: post
 created: 1321788268
+layout: post
+tags: 
+- Drupal-planet
+- OG7
+permalink: content/og7-and-entity-reference-sponsor-me
+title: OG7 and Entity reference - Sponsor me
 ---
 <ul>
 <li>Update 3: <a href="http://treehouseagency.com/">Treehouse Agency</a> are sponsoring and providing developer help</li>

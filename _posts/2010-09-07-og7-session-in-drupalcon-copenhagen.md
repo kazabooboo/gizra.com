@@ -1,10 +1,12 @@
 --- 
-tags: []
-
-title: OG7 session in Drupalcon Copenhagen
-permalink: content/og7-session-drupalcon-copenhagen
-layout: post
 created: 1283894417
+layout: post
+tags: 
+- Drupal-planet
+- OG
+- Drupalcon
+permalink: content/og7-session-drupalcon-copenhagen
+title: OG7 session in Drupalcon Copenhagen
 ---
 Finally, we've been able to collect all the movies and edit them together. Unfortunately the quality isn't great in the first few minutes, but it's getting better and I hope you'll enjoy watching it.
 

@@ -51,8 +51,8 @@ module Jekyll
         name = time.strftime("%Y-%m-%d-") + slug + '.md'
 
         tag_query = "SELECT td.name \
-                     FROM field_data_taxonomy_vocabulary_1 f INNER JOIN taxonomy_term_data td \
-                          ON (f.taxonomy_vocabulary_1_tid = td.tid) \
+                     FROM field_data_taxonomyextra f INNER JOIN taxonomy_term_data td \
+                          ON (f.taxonomyextra_tid = td.tid) \
                      WHERE f.entity_id = #{node_id}"
         tags = []
         db[tag_query].each do |tag|

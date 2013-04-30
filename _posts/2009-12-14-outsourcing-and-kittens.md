@@ -1,10 +1,10 @@
 --- 
-tags: []
-
-title: Outsourcing & Kittens
-permalink: content/outsourcing-kittens
-layout: post
 created: 1260779798
+layout: post
+tags: 
+- Drupal-planet
+permalink: content/outsourcing-kittens
+title: Outsourcing & Kittens
 ---
 Few years back there was a real hype about outsourcing development projects. I was working and living in New-Delhi, India at that time, and you could almost see the buzz of "outsourcing" in the air - people were so excited.
 

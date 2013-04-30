@@ -1,10 +1,13 @@
 --- 
-tags: []
-
-title: Drupalcamp Spain - Sevilla
-permalink: content/drupalcamp-spain-sevilla
-layout: post
 created: 1317544122
+layout: post
+tags: 
+- Drupal-planet
+- movie
+- Drupalcamp
+- OG7
+permalink: content/drupalcamp-spain-sevilla
+title: Drupalcamp Spain - Sevilla
 ---
 Here's my presentation held in Drupalcamp Spain. I'm going over a new feature in OG7, that allows having multiple group audience fields and having a membership type assigned to each field -- in English it means that you can have some users join a group with "Default" membership and others with "Expire" membership.
 

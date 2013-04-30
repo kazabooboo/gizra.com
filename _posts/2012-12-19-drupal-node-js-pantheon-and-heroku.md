@@ -1,10 +1,13 @@
 --- 
-tags: []
-
-title: Drupal, Node.js, Pantheon, and Heroku
-permalink: content/drupal-nodejs-pantheon-and-heroku
-layout: post
 created: 1355946372
+layout: post
+tags: 
+- Node.js
+- Pantheoen
+- tutorial
+- Drupal-planet
+permalink: content/drupal-nodejs-pantheon-and-heroku
+title: Drupal, Node.js, Pantheon, and Heroku
 ---
 Some title, right?
 

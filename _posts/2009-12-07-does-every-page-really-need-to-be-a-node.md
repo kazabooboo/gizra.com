@@ -1,10 +1,10 @@
 --- 
-tags: []
-
-title: Does every page really need to be a node?
-permalink: content/does-every-page-really-need-be-node
-layout: post
 created: 1260218791
+layout: post
+tags: 
+- Drupal-planet
+permalink: content/does-every-page-really-need-be-node
+title: Does every page really need to be a node?
 ---
 No.
 Let's take the "usual" home page as an example:

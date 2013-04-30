@@ -1,10 +1,11 @@
 --- 
-tags: []
-
-title: Data Migration - part 2
-permalink: content/data-migration-part-2
-layout: post
 created: 1295877669
+layout: post
+tags: 
+- Drupal-planet
+- Migrate
+permalink: content/data-migration-part-2
+title: Data Migration - part 2
 ---
 This is the 2nd part of the tutorial. You can see the 1st part <a href="/content/data-migration-part-1">here</a>.
 

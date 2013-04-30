@@ -1,10 +1,11 @@
 --- 
-tags: []
-
-title: About that walk bojanz, Damz and I had in London
-permalink: content/about-walk-bojanz-damz-and-i-had-london
-layout: post
 created: 1320442252
+layout: post
+tags: 
+- Drupal-planet
+- Drupalcon
+permalink: content/about-walk-bojanz-damz-and-i-had-london
+title: About that walk bojanz, Damz and I had in London
 ---
 Another Drupalcon is getting closer, and the sessions are open for votes. Let’s clear the technical stuff first - please vote for my <a href="http://denver2012.drupal.org/program/sessions/og7-pride-and-prejudice">OG7 session</a>.
 

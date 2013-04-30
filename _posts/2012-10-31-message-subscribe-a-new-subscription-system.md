@@ -1,10 +1,11 @@
 --- 
-tags: []
-
-title: "Message-subscribe \xE2\x80\x94 A New Subscription System"
-permalink: content/message-subscribe-new-subscription-system
-layout: post
 created: 1351684522
+layout: post
+tags: 
+- Drupal-planet
+- Message
+permalink: content/message-subscribe-new-subscription-system
+title: "Message-subscribe \xE2\x80\x94 A New Subscription System"
 ---
 <blockquote >
 Drupal 6 had Messaging & Notification

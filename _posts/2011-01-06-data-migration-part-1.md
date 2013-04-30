@@ -1,10 +1,11 @@
 --- 
-tags: []
-
-title: Data Migration - part 1
-permalink: content/data-migration-part-1
-layout: post
 created: 1294317693
+layout: post
+tags: 
+- Migrate
+- Drupal-planet
+permalink: content/data-migration-part-1
+title: Data Migration - part 1
 ---
 Moving an old site to Drupal?
 

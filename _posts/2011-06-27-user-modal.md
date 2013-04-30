@@ -1,10 +1,13 @@
 --- 
-tags: []
-
-title: User modal
-permalink: content/user-modal
-layout: post
 created: 1309155924
+layout: post
+tags: 
+- Drupal-planet
+- CTools
+- Overlay
+- Subform
+permalink: content/user-modal
+title: User modal
 ---
 The <a href="http://drupal.org/project/user_modal">user modal</a> is an interesting module we’ve been working lately in gizra for <a href="http://medico.com">Medico.com</a>, and I’d like to share our experience. 
 

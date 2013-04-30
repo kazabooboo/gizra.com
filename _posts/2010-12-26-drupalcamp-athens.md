@@ -1,10 +1,12 @@
 --- 
-tags: []
-
-title: Drupalcamp Athens
-permalink: content/drupalcamp-athens
-layout: post
 created: 1293365482
+layout: post
+tags: 
+- Drupal-planet
+- OG
+- Drupalcamp
+permalink: content/drupalcamp-athens
+title: Drupalcamp Athens
 ---
 I'm back from <a href="http://drupalcamp.gr/">Drupalcamp Athens</a>. When I met Nektarios Sylligardakis and George Papadongonas in Copenhagen they told me Greece was a Joomla country and Drupal wasn't well known, so my expectations were not very high. That's why I was so surprised. Not only did I find a large and warm community, but I found myself waiting for the presentations to start so I could learn new things.
 

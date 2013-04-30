@@ -1,10 +1,10 @@
 --- 
-tags: []
-
-title: About strong partnership and winning a game of bowling
-permalink: content/about-strong-partnership-and-winning-game-bowling
-layout: post
 created: 1341856051
+layout: post
+tags: 
+- Drupal-planet
+permalink: content/about-strong-partnership-and-winning-game-bowling
+title: About strong partnership and winning a game of bowling
 ---
 We are too old - or so we thought - to still be naïve.
 You might be familiar with the feeling – you and reps of some other company are sitting and talking and talking about possible cooperation, and you are so hoping that this time it's for real. You actually force yourself to believe that it's the real thing this time, when suddenly the other party says something along the lines of quality not being quite so important to them, or that they don't believe in contributing to the community.  Heck, at some point, we were even told by the other side that it was their belief that we should work for free, damn it.

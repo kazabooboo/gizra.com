@@ -1,10 +1,11 @@
 --- 
-tags: []
-
-title: CTools, Context and Message
-permalink: content/ctools-context-and-message
-layout: post
 created: 1270492688
+layout: post
+tags: 
+- Drupal-planet
+- CTools
+permalink: content/ctools-context-and-message
+title: CTools, Context and Message
 ---
 When I decided I'll use CTools for the <a href="http://drupal.org/project/message">Message</a> module, I knew it will save me some time. I mean, everybody knows the "let's re-use the same API" concept. I started copying from Context module the parts that I needed, and added my own logic.
 

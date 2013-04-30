@@ -1,10 +1,12 @@
 --- 
-tags: []
-
-title: CTools context tutorial
-permalink: content/ctools-context-tutorial
-layout: post
 created: 1305097489
+layout: post
+tags: 
+- Drupal-planet
+- tutorial
+- CTools
+permalink: content/ctools-context-tutorial
+title: CTools context tutorial
 ---
 Why should you use panels node-preview-example module? You shouldn't, it's just an example ;)
 

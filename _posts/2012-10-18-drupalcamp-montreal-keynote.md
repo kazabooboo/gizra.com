@@ -1,10 +1,12 @@
 --- 
-tags: []
-
-title: DrupalCamp Montreal Keynote
-permalink: content/drupalcamp-montreal-keynote
-layout: post
 created: 1350587175
+layout: post
+tags: 
+- OG7
+- Drupal-planet
+- Drupalcamp
+permalink: content/drupalcamp-montreal-keynote
+title: DrupalCamp Montreal Keynote
 ---
 Checkout my presentation - it has been a long time since I did a funny one.
 If your not a total geek the first 15 minutes will be enough. Unless you are interested in hearing about OG (in that case you <em>are</em> a geek).

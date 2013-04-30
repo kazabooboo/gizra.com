@@ -1,10 +1,12 @@
 --- 
-tags: []
-
-title: Message module and CTools $plugin
-permalink: content/message-module-and-ctools-plugin
-layout: post
 created: 1276169995
+layout: post
+tags: 
+- Drupal-planet
+- CTools
+- Message
+permalink: content/message-module-and-ctools-plugin
+title: Message module and CTools $plugin
 ---
 If I may quote myself:
  <blockquote>I'm thinking, <em>which is easier than actually sitting down and writing a patch</em>, that it would be neat if CTools exportables plugin had a uniform UI that modules such as Context, Message and others to come, could use. </blockquote>

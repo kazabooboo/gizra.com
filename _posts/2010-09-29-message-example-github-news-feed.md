@@ -1,10 +1,11 @@
 --- 
-tags: []
-
-title: Message example = Github news feed
-permalink: content/message-example-github-news-feed
-layout: post
 created: 1285758302
+layout: post
+tags: 
+- Drupal-planet
+- Message
+permalink: content/message-example-github-news-feed
+title: Message example = Github news feed
 ---
 It's time for some P.R. (Public relations) on the <a href="http://drupal.org/project/message">Message<a/> module, and the best way is a Message example module that loosely imitates Github's news feed feature.
 
