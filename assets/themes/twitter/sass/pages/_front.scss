@@ -185,24 +185,24 @@ body.home {
 
       .list-wrapper {
         padding-top: 50px;
-      }
 
-      .date {
-        color: $gray;
-        font-size: 16px;
-        line-height: 16px;
-      }
+        .date {
+          color: $gray;
+          font-size: 16px;
+          line-height: 16px;
+        }
 
-      .title {
-        color: $blue;
-        font-size: 26px;
-        line-height: 26px;
-      }
+        .title {
+          color: $blue;
+          font-size: 26px;
+          line-height: 26px;
+        }
 
-      .teaser {
-        font-size: 18px;
-        line-height: 18px;
-        color: $darkGray;
+        .teaser {
+          font-size: 18px;
+          line-height: 18px;
+          color: $darkGray;
+        }
       }
     }
 
