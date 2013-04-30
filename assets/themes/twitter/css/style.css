@@ -31,6 +31,7 @@
   position: absolute;
   right: 0;
   text-align: right;
+  padding-left: 5px;
 }
 .footer-container h5.title-bg {
   color: #e06e5c;
@@ -147,6 +148,7 @@ body.home .main-container .gallery-row h2.title-bg a.secondary {
   position: absolute;
   right: 0;
   text-align: right;
+  padding-left: 5px;
 }
 body.home .main-container .gallery-row .secondary-title {
   text-align: center;
@@ -266,19 +268,22 @@ body.home .main-container .clients-row li.gallery-item img {
 }
 body.home .main-container .blog-row .teasers {
   margin-top: 70px;
-  margin-bottom: 35px;
 }
-body.home .main-container .blog-row .list-wrapper .date {
+body.home .main-container .blog-row ul.list-wrapper {
+  margin: 0;
+  list-style: none;
+}
+body.home .main-container .blog-row ul.list-wrapper .date {
   color: #646464;
   font-size: 15px;
   line-height: 15px;
 }
-body.home .main-container .blog-row .list-wrapper .title {
+body.home .main-container .blog-row ul.list-wrapper .title {
   color: #046596;
   font-size: 26px;
   line-height: 26px;
 }
-body.home .main-container .blog-row .list-wrapper .teaser {
+body.home .main-container .blog-row ul.list-wrapper .teaser {
   font-size: 18px;
   line-height: 18px;
   color: #282828;

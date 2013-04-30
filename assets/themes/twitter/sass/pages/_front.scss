@@ -185,10 +185,11 @@ body.home {
 
       .teasers {
         margin-top: 70px;
-        margin-bottom: 35px;
       }
 
-      .list-wrapper {
+      ul.list-wrapper {
+        margin: 0;
+        list-style: none;
 
         .date {
           color: $gray;
