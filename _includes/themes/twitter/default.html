@@ -81,7 +81,11 @@
 
   </head>
 
+  {% if page.homepage %}
   <body class="home">
+  {% else if %}
+  <body>
+  {% endif %}
 
     <header><!-- Begin Header -->
       <div class="container">

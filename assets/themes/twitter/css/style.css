@@ -89,41 +89,40 @@ header .navigation .navbar .nav > li > a:last {
     margin-top: 200px;
   }
 
-  .main-container .content {
+  .main-container > .content {
     margin-top: 110px;
   }
 }
 body.home a {
   color: #e06e5c;
 }
-
-.main-container .content {
+body.home .main-container .content {
   padding-top: 35px;
 }
-.main-container .page-header {
+body.home .main-container .page-header {
   border: none;
   margin-bottom: 35px;
 }
-.main-container h1 {
+body.home .main-container h1 {
   color: #046596;
   text-align: center;
   font-weight: 400;
   text-transform: none;
 }
-.main-container h1 .bigger {
+body.home .main-container h1 .bigger {
   font-size: 33px;
   line-height: 33px;
   letter-spacing: 2px;
 }
-.main-container h1 .smaller {
+body.home .main-container h1 .smaller {
   font-size: 28px;
   line-height: 28px;
   letter-spacing: 1px;
 }
-.main-container .gallery-row {
+body.home .main-container .gallery-row {
   margin-bottom: 40px;
 }
-.main-container .gallery-row h2.title-bg {
+body.home .main-container .gallery-row h2.title-bg {
   position: relative;
   background: transparent;
   text-align: center;
@@ -135,12 +134,12 @@ body.home a {
   padding: 0;
   font-size: 40px;
 }
-.main-container .gallery-row h2.title-bg a {
+body.home .main-container .gallery-row h2.title-bg a {
   background: url(../images/background.png);
   text-decoration: none;
   text-transform: none;
 }
-.main-container .gallery-row h2.title-bg a.primary {
+body.home .main-container .gallery-row h2.title-bg a.primary {
   padding: 0 25px;
   font-family: Abril Fatface;
   font-style: normal;
@@ -148,59 +147,59 @@ body.home a {
   font-size: 50px;
   text-shadow: 0px 0px 1px #aaaaaa;
 }
-.main-container .gallery-row h2.title-bg a.secondary {
+body.home .main-container .gallery-row h2.title-bg a.secondary {
   position: absolute;
   right: 0;
   text-align: right;
   font-size: 16px;
   line-height: 16px;
 }
-.main-container .gallery-row h2.title-bg a.secondary:after {
+body.home .main-container .gallery-row h2.title-bg a.secondary:after {
   content: " \00BB";
 }
-.main-container .gallery-row .secondary-title {
+body.home .main-container .gallery-row .secondary-title {
   text-align: center;
   color: #e06e5c;
   font-size: 16px;
   line-height: 30px;
 }
-.main-container .contributions-row li.gallery-item .short-name-wrapper {
+body.home .main-container .contributions-row li.gallery-item .short-name-wrapper {
   width: 270px;
   height: 218px;
 }
-.main-container .contributions-row li.gallery-item .short-name-wrapper.box-1 {
+body.home .main-container .contributions-row li.gallery-item .short-name-wrapper.box-1 {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #128ba1), color-stop(100%, #0a505c));
   background-image: -webkit-linear-gradient(#128ba1, #0a505c);
   background-image: -moz-linear-gradient(#128ba1, #0a505c);
   background-image: -o-linear-gradient(#128ba1, #0a505c);
   background-image: linear-gradient(#128ba1, #0a505c);
 }
-.main-container .contributions-row li.gallery-item .short-name-wrapper.box-2 {
+body.home .main-container .contributions-row li.gallery-item .short-name-wrapper.box-2 {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #10a067), color-stop(100%, #095a3a));
   background-image: -webkit-linear-gradient(#10a067, #095a3a);
   background-image: -moz-linear-gradient(#10a067, #095a3a);
   background-image: -o-linear-gradient(#10a067, #095a3a);
   background-image: linear-gradient(#10a067, #095a3a);
 }
-.main-container .contributions-row li.gallery-item .short-name-wrapper.box-3 {
+body.home .main-container .contributions-row li.gallery-item .short-name-wrapper.box-3 {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #9d550a), color-stop(100%, #552e05));
   background-image: -webkit-linear-gradient(#9d550a, #552e05);
   background-image: -moz-linear-gradient(#9d550a, #552e05);
   background-image: -o-linear-gradient(#9d550a, #552e05);
   background-image: linear-gradient(#9d550a, #552e05);
 }
-.main-container .contributions-row li.gallery-item .short-name-wrapper.box-4 {
+body.home .main-container .contributions-row li.gallery-item .short-name-wrapper.box-4 {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #a03912), color-stop(100%, #5b210a));
   background-image: -webkit-linear-gradient(#a03912, #5b210a);
   background-image: -moz-linear-gradient(#a03912, #5b210a);
   background-image: -o-linear-gradient(#a03912, #5b210a);
   background-image: linear-gradient(#a03912, #5b210a);
 }
-.main-container .contributions-row li.gallery-item .short-name-wrapper .short-name {
+body.home .main-container .contributions-row li.gallery-item .short-name-wrapper .short-name {
   text-align: center;
   padding: 20px;
 }
-.main-container .contributions-row li.gallery-item .short-name-wrapper .short-name a {
+body.home .main-container .contributions-row li.gallery-item .short-name-wrapper .short-name a {
   font-family: Abril Fatface;
   font-style: normal;
   font-weight: 400;
@@ -210,26 +209,26 @@ body.home a {
   color: white;
   text-decoration: none;
 }
-.main-container .info-row .person {
+body.home .main-container .info-row .person {
   margin-bottom: 35px;
 }
-.main-container .info-row .person .image-wrapper {
+body.home .main-container .info-row .person .image-wrapper {
   float: left;
   margin-right: 15px;
 }
-.main-container .info-row .person .text-wrapper {
+body.home .main-container .info-row .person .text-wrapper {
   margin-left: 95px;
 }
-.main-container .info-row .person .text-wrapper .name {
+body.home .main-container .info-row .person .text-wrapper .name {
   font-weight: bold;
 }
-.main-container .info-row .person .text-wrapper .title {
+body.home .main-container .info-row .person .text-wrapper .title {
   color: #646464;
 }
-.main-container .info-row .quotes .flexslider {
+body.home .main-container .info-row .quotes .flexslider {
   background: transparent;
 }
-.main-container .info-row .quotes .quote {
+body.home .main-container .info-row .quotes .quote {
   background: white;
   color: #046596;
   font-style: italic;
@@ -239,13 +238,13 @@ body.home a {
   border-bottom: 1px solid #e3e3e3;
   padding: 20px;
 }
-.main-container .info-row .quotes .quote:before {
+body.home .main-container .info-row .quotes .quote:before {
   content: "“";
 }
-.main-container .info-row .quotes .quote:after {
+body.home .main-container .info-row .quotes .quote:after {
   content: "”";
 }
-.main-container .info-row .quotes .source {
+body.home .main-container .info-row .quotes .source {
   color: #646464;
   text-align: right;
   float: right;
@@ -254,7 +253,7 @@ body.home a {
   position: relative;
   margin-top: -1px;
 }
-.main-container .info-row .quotes .source .triangle:before {
+body.home .main-container .info-row .quotes .source .triangle:before {
   content: "";
   position: absolute;
   top: 0;
@@ -267,32 +266,32 @@ body.home a {
   display: block;
   width: 0;
 }
-.main-container .clients-row li.gallery-item {
+body.home .main-container .clients-row li.gallery-item {
   line-height: 95px;
   text-align: center;
 }
-.main-container .clients-row li.gallery-item img {
+body.home .main-container .clients-row li.gallery-item img {
   vertical-align: middle;
 }
-.main-container .blog-row .list-wrapper {
+body.home .main-container .blog-row .list-wrapper {
   padding-top: 50px;
 }
-.main-container .blog-row .date {
+body.home .main-container .blog-row .date {
   color: #646464;
   font-size: 16px;
   line-height: 16px;
 }
-.main-container .blog-row .title {
+body.home .main-container .blog-row .title {
   color: #046596;
   font-size: 26px;
   line-height: 26px;
 }
-.main-container .blog-row .teaser {
+body.home .main-container .blog-row .teaser {
   font-size: 18px;
   line-height: 18px;
   color: #282828;
 }
-.main-container h3 {
+body.home .main-container h3 {
   color: #e06e5c;
   text-transform: none;
 }

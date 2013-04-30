@@ -58,10 +58,7 @@ header {
     margin-top: 200px;
   }
 
-  .main-container {
-
-    .content {
-      margin-top: 110px;
-    }
+  .main-container > .content {
+    margin-top: 110px;
   }
 }
