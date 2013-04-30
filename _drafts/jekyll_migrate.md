@@ -13,3 +13,9 @@ USE gizra;
 SOURCE /mysql/dump.dql
 # Confirm tables were imported
 show tables
+
+
+sudo gem install redcarpet
+
+# Change _config.yml
+markdown: redcarpet

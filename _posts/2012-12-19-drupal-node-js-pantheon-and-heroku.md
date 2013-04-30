@@ -11,13 +11,11 @@ layout: post
 ---
 Some title, right?
 
-<a href="http://drupal.org/project/nodejs">Node.js<a/> module for Drupal is so great and a time saver, I’ve got spare time to blog about how to set it up. Future me, we’ll thank me for doing so.
+[Node.js](http://drupal.org/project/nodejs) module for Drupal is so great and a time saver, I’ve got spare time to blog about how to set it up. Future me, we’ll thank me for doing so.
 
 First, let’s define the goals for this blog post
-<ul>
-<li>Learn how to setup the Node.js module and server on a <em>local</em> server</li>
-<li>Setup on  a remote server using Heroku and Pantheon</li>
-</ul>
+* Learn how to setup the Node.js module and server on a _local_ server
+* Setup on  a remote server using Heroku and Pantheon
 
 <h3>Install node</h3>
 Node.js module's README.txt explains how to do it. I’m using Mac so for me it was a simple <code>brew install node</code>.
@@ -29,7 +27,7 @@ Ok, On to the interesting parts.
 Node.js module requires a simple configuration file that will tell it where the node.js server is running, and where the "backend" is (i.e. Drupal). Ignore the example in README.txt, eyes over here please. 
 Assuming my Drupal site is on http://localhost/d7_dev here’s <code>nodejs.config.js</code>:
 
-<code>
+```javascript
 settings = {
   scheme: 'http',
   port: 5000,
@@ -45,7 +43,8 @@ settings = {
   },
   debug: true
 };
-</code>
+```
+
 The first part tells Node.js module where the node.js server will live. In the above example its. will be <code>http://localhost:5000</code>. Same host different ports.
 The "backend" part tells the node.js server where our Drupal site is. 
 The <code>serviceKey</code> is the secret code used by Drupal to communicate with the node.js server. In my example it’s also used as a special thank you for <strong>beejeebus</strong>, the module maintainer.
@@ -88,7 +87,7 @@ I've Copied <code>server.js</code> from the Node.js module.
 I've changed a bit the <code>package.json</code> so Heroku will be able to build it.
 I've added a default <code>nodejs.config.js</code> you <strong>will need to edit</strong> and add your own <code>serviceKey</code> and <code>backend.host</code>. Here is how my file looked
 
-<code>
+```javascript
 settings = {
   scheme: 'http',
   port: process.env.PORT || 5000,
@@ -104,7 +103,7 @@ settings = {
   transports: ['xhr-polling'],
   debug: true
 };
-</code>
+```
 
 Notice several changes:
 <ul>
