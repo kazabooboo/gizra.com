@@ -27,8 +27,8 @@ module Jekyll
              FROM node n, \
                   field_data_body b, \
                   url_alias a \
-             WHERE n.type = 'blog' \
-             AND b.entity_type = 'node' AND b.bundle='blog' AND b.entity_id = n.nid \
+             WHERE n.type = 'news' \
+             AND b.entity_type = 'node' AND b.bundle='news' AND b.entity_id = n.nid \
              AND a.source = concat('node/', n.nid)"
 
     def self.process(dbname, user, pass, host = 'localhost')

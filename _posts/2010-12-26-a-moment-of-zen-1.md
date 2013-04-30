@@ -1,0 +1,13 @@
+--- 
+tags: []
+
+title: "A moment of Zen #1"
+permalink: content/moment-zen-1
+layout: post
+created: 1293377393
+---
+Organic groups for Drupal 7 has an alpha release. Sure there are bugs, but I try not to let it ruin the warm and fuzzy feeling of seeing all the tests pass.
+
+<img src="http://www.gizra.com/sites/default/files/og-alpha.jpg" alt="Organic groups for Drupal 7 has an alpha release"/>
+
+<img src="http://www.gizra.com/sites/default/files/og-test.jpg" alt="Organic groups test suite passes without errors"/>
