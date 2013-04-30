@@ -6,7 +6,7 @@ jQuery(document).ready(function($) {
     target = target[1];
 
     // Get the top offset of the target anchor
-    var $targetTop = $('a[name=' + target + ']').offset().top;
+    var $targetTop = $('a[name=' + target + ']').offset().top - 120;
 
     event.preventDefault();
 
@@ -18,6 +18,6 @@ jQuery(document).ready(function($) {
   if (window.location.hash) {
     var target = window.location.hash.split("#");
     target = target[1];
-    // $('header a[href$="'+ target + '"]').trigger('click');
+    $('header a[href$="'+ target + '"]').trigger('click');
   }
 });
