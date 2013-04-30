@@ -63,7 +63,6 @@ Before we talk about sending notifications, note that I never wrote the word “
 So, Message-subscribe iterates over all the users, and all over the notifiers, as in fact a user can get the same Message as email _and as a Text-message. I say same _Message as in same Message entity, not same message as message text -- In Message-notify you can have different text for different notifiers thanks to the module’s integration with view-modes.
 
 ###Bonus
-*There’s a UI! We are showing tabs for every valid flag, and the content of that tab is a View. You can easily change the used View via admin settings
-<img src="http://drupal.org/files/project-images/message-subscribe.jpg" width="640" height ="214" />
-*It’s a Message entity, right? So it means that the email you’ve just sent, can be saved and be used for an activity stream. 2 for the price of 1
-*For a scalable solution, we are currently working - with a great help from fubhy - on implementing some sort of DrupalQueue to be able to process lots of Messages
+* There’s a UI! We are showing tabs for every valid flag, and the content of that tab is a View. You can easily change the used View via admin settings <img src="http://drupal.org/files/project-images/message-subscribe.jpg" width="640" height ="214" />
+* It’s a Message entity, right? So it means that the email you’ve just sent, can be saved and be used for an activity stream. 2 for the price of 1
+* For a scalable solution, we are currently working - with a great help from fubhy - on implementing some sort of DrupalQueue to be able to process lots of Messages
