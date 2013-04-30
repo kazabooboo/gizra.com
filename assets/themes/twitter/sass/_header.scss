@@ -65,15 +65,9 @@ header {
     }
   }
 
-  .title-bg a.primary:before {
-    // Make sure fixed header doesn't hide the anchor.
-    content: " ";
-    display: block;
-    height: 150px; /* fixed header height*/
-    margin-top: -150px; /* negative fixed header height */
-  }
-
-  .title-bg a.primary:after {
-    content: " ";
+  .title-bg a.primary {
+    border-top: 120px solid transparent;
+    margin-top: -120px;
+    background-clip:padding-box;
   }
 }
