@@ -2,6 +2,7 @@
 
 .footer-container {
   background: transparent;
+  margin-top: 35px;
 
   h4.title-bg {
     @include title-bg;
@@ -10,5 +11,4 @@
   h5.title-bg {
     color: $orange;
   }
-
 }
