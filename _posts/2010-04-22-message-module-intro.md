@@ -1,13 +1,13 @@
 --- 
-created: 1271961965
-layout: post
 tags: 
 - Message
 - CTools
 - tutorial
 - Drupal-planet
-permalink: content/message-module-intro
+permalink: /content/message-module-intro/
 title: Message module intro
+created: 1271961965
+layout: post
 ---
 Here's a quick overview of the <a href="http://drupal.org/project/message">Message</a> module.
 

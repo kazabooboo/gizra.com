@@ -1,12 +1,12 @@
 --- 
-created: 1329390514
-layout: post
 tags: 
 - Views
 - tutorial
 - Drupal-planet
-permalink: content/banner-rotator
+permalink: /content/banner-rotator/
 title: Banner rotator
+created: 1329390514
+layout: post
 ---
 A common design element we see lately in a lot of sites is a banner rotator - image slideshow with some text and links on the side.
 

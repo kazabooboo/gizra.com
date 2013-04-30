@@ -1,11 +1,11 @@
 --- 
-created: 1325427492
-layout: post
 tags: 
 - Drupal-planet
 - Message
-permalink: content/message-notify-multilingual-email-notifications
+permalink: /content/message-notify-multilingual-email-notifications/
 title: Message notify - Multilingual email notifications
+created: 1325427492
+layout: post
 ---
 Email notification is a convenient way to be updated about new content or comments. There are several modules in Drupal that already deal with this issue, and I would like to propose another solution, and highlight the advantages of using it. The new system relies on <a href="http://drupal.org/project/message_notify">Message-notify</a> module, which depends on the Message module -  a general logging system (think activity stream, but without a fancy query builder).
 

@@ -1,12 +1,12 @@
 --- 
-created: 1271233088
-layout: post
 tags: 
 - Drupal-planet
 - tutorial
 - Panels
-permalink: content/dynamic-landing-pages
+permalink: /content/dynamic-landing-pages/
 title: Dynamic landing pages
+created: 1271233088
+layout: post
 ---
 The following post will cover how to create dynamic landing pages. First lets define our mission: 
 

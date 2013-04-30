@@ -1,12 +1,12 @@
 --- 
-created: 1327404852
-layout: post
 tags: 
 - Drupal-planet
 - Message
 - Drush
-permalink: content/sending-lots-emails-hint-drush
+permalink: /content/sending-lots-emails-hint-drush/
 title: "Sending LOTS of emails (Hint: with Drush)"
+created: 1327404852
+layout: post
 ---
 On my <a href="http://www.gizra.com/content/message-notify-multilingual-email-notifications">last blog</a> post I talked about Message notify module, and mentioned we were using it to send digest emails. While Message notify really eases the pain of creating personalized emails, and sending them, we still needed to find a scalable solutions for sending lots of emails. LOTS of emails!
 

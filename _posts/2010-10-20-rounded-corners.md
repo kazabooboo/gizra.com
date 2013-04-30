@@ -1,12 +1,12 @@
 --- 
-created: 1287603226
-layout: post
 tags: 
 - Drupal-planet
 - jQuery
 - CSS
-permalink: content/rounded-corners
+permalink: /content/rounded-corners/
 title: Rounded corners
+created: 1287603226
+layout: post
 ---
 <strong>[Edit: I have found a better solution that allows using CSS3 on IE as-well -- <a href="http://css3pie.com/">CSS3PIE</a>]</strong>
 

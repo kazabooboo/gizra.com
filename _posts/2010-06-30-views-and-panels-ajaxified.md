@@ -1,12 +1,12 @@
 --- 
-created: 1277919045
-layout: post
 tags: 
 - Panels
 - CTools
 - Drupal-planet
-permalink: content/views-and-panels-ajaxified
+permalink: /content/views-and-panels-ajaxified/
 title: Views and Panels Ajaxified
+created: 1277919045
+layout: post
 ---
 If you haven't read Roger Lopez <a href="http://zroger.com/node/30">Ajax without Javascript</a> take a 5 minutes break and do it. If you are not a developer and all this code makes you frightened then you are excused. This post will also have a little code, but take a big breath and you'll see how easy it is to Ajaxify your Panels!
 

@@ -1,11 +1,11 @@
 --- 
-created: 1323296892
-layout: post
 tags: 
 - Drupal-planet
 - OG7
-permalink: content/og7-and-entity-reference-part-2
+permalink: /content/og7-and-entity-reference-part-2/
 title: OG7 and Entity reference - Part 2
+created: 1323296892
+layout: post
 ---
 Following my <a href="http://www.gizra.com/content/og7-and-entity-reference-sponsor-me">previous</a> post, and after getting some great reaction from the community via IRC and in Drupalcamp Toulouse, I’d like to share both my thoughts about the sponsoring and about the technical stuff.
 

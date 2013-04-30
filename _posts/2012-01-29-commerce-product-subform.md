@@ -1,13 +1,13 @@
 --- 
-created: 1327831820
-layout: post
 tags: 
 - Commerce
 - Subform
 - CTools
 - Drupal-planet
-permalink: content/commerce-product-subform
+permalink: /content/commerce-product-subform/
 title: Commerce product + Subform
+created: 1327831820
+layout: post
 ---
 <strong>Edit: Use the <a href="http://drupal.org/project/inline_entity_form">Inline entity form</a> module that was created after this post was published.</strong>
 

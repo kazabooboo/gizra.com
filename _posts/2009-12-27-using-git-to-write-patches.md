@@ -1,10 +1,10 @@
 --- 
-created: 1261904474
-layout: post
 tags: 
 - Drupal-planet
-permalink: content/using-git-write-patches
+permalink: /content/using-git-write-patches/
 title: Using git to write patches
+created: 1261904474
+layout: post
 ---
 Drupal is using CVS for version controlling core and contrib modules. CVS has diffing options, but it becomes annoying when you try adding or deleting new files. Here's an example of how to use git to patch a contrib module - Organic groups.
 

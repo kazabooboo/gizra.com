@@ -1,11 +1,11 @@
 --- 
-created: 1278181343
-layout: post
 tags: 
 - Drupal-planet
 - OG
-permalink: content/let-sleeping-dogs-lie
+permalink: /content/let-sleeping-dogs-lie/
 title: Let sleeping dogs lie
+created: 1278181343
+layout: post
 ---
 Here's the story in one (code) line:
 

@@ -66,7 +66,7 @@ module Jekyll
            'layout' => 'post',
            'title' => title.to_s,
            'created' => created,
-           'permalink' => permalink,
+           'permalink' => '/' + permalink + '/',
            'tags' => tags
          }.delete_if { |k,v| v.nil? || v == ''}.to_yaml
 

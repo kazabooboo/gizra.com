@@ -1,10 +1,10 @@
 --- 
-created: 1263465898
-layout: post
 tags: 
 - Drupal-planet
-permalink: content/user-points-rules-style
+permalink: /content/user-points-rules-style/
 title: User points - Rules style
+created: 1263465898
+layout: post
 ---
 <a href="http://www.nicklewis.org/40-essential-drupal-6-modules">Nick Lewis</a> wrote about his 40+ essential modules, and I really missed two modules there - Rules and Flag.
 I commented that

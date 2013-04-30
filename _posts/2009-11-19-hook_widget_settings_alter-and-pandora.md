@@ -1,10 +1,10 @@
 --- 
-created: 1258635803
-layout: post
 tags: 
 - Drupal-planet
-permalink: content/hookwidgetsettingsalter-and-pandora
+permalink: /content/hookwidgetsettingsalter-and-pandora/
 title: hook_widget_settings_alter() and Pandora
+created: 1258635803
+layout: post
 ---
 As <a href="http://drupal.org/user/39593">markus_petrux</a> wrote:
 <blockquote>

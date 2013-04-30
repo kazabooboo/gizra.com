@@ -1,11 +1,11 @@
 --- 
-created: 1342126619
-layout: post
 tags: 
 - Message
 - Drupal-planet
-permalink: content/what-message-module-and-its-new-features
+permalink: /content/what-message-module-and-its-new-features/
 title: What is Message module, and its new features
+created: 1342126619
+layout: post
 ---
 <a href="http://drupal.org/project/message">Message</a> module’s inclusion in the upcoming version of Commerce Kickstart, and it’s very likely inclusion in Drupal Commons 7 turns this not very known module into an important module to know about.
 Message can help with many tasks from simple logs to complicated activity streams and even, with the use of  Message Notify module, multilingual digest emails.

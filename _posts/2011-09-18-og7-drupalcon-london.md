@@ -1,13 +1,13 @@
 --- 
-created: 1316367573
-layout: post
 tags: 
 - OG7
 - Drupalcon
 - movie
 - Drupal-planet
-permalink: content/og7-drupalcon-london
+permalink: /content/og7-drupalcon-london/
 title: OG7 Drupalcon London
+created: 1316367573
+layout: post
 ---
 <iframe src="http://player.vimeo.com/video/29311588?title=0&amp;byline=0&amp;portrait=0" width="600" height="450" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>
 <div class="description">The sound quality in the first minute is poor, but it gets better</div>

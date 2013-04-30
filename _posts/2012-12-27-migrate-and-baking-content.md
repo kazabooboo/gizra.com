@@ -1,11 +1,11 @@
 --- 
-created: 1356611190
-layout: post
 tags: 
 - Drupal-planet
 - Migrate
-permalink: content/migrate-and-baking-content
+permalink: /content/migrate-and-baking-content/
 title: Migrate, and baking content
+created: 1356611190
+layout: post
 ---
 A small problem in Drupal occurs when developing new modules, or installation profiles. Content. 
 It goes missing, and without it developing can go wrong very quickly. Also, starting up a site’s install profile that reveals a site without content gives a feel of walking into an empty bakery shop. There’s ovens, flour, and bakers, and that great bakery smell all around, but no bread. And possible clients go to other bakeries if you run out of bread. So to solve this issue, <a href="http://drupal.org/project/migrate">Migrate</a>  module helps us fill up the shop with bread.
