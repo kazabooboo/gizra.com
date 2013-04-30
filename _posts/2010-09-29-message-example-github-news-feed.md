@@ -11,7 +11,7 @@ It's time for some P.R. (Public relations) on the <a href="http://drupal.org/pro
 
 I won't get into too much explanation here, just look at the screenshots, or try it yourself - since everything in Message is exportable, you don't need to do anything to make it work! (Apart of generating nodes and "making friends" by flagging other users).
 
-<code>
+```
 # Download necessary modules, in case you still don't have them.
 drush dl ctools message flag views
 
@@ -27,7 +27,7 @@ drush genu 10
 
 # Generate 25 story nodes with 5 comments in each node.
 drush genc 25 5 --types=story
-</code>
+```
 
 
 Navigate to /messages or click on the "News feed" on the navigation menu, and you will be presented with the different tabs - all created with Views and a bit of CSS.

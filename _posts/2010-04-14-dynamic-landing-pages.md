@@ -38,10 +38,10 @@ Ok, now we know how we want to implement it, let's get our hands dirty (or downl
 
 <ol>
 <li>Download and enable necessary modules:
-<code>
+```
 drush dl cck views ctools panels
 drush en optionwidgets text views_ui ctools _panels page_manager views_content
-</code>
+```
 </li>
 <li>Starting from the lowest level, we'll create a new content type called "Landing page element" with CCK fields - select list for the "Location" and a textfield for the "Page ID"</li>
 <li>Create a View that shows the full nodes, filtered by node type, that gets two arguments - the "Location" and the "Page ID"</li>
@@ -50,7 +50,7 @@ drush en optionwidgets text views_ui ctools _panels page_manager views_content
 <img src="/assets/images/legacy/Snap3_0.png">
 <img src="/assets/images/legacy/Snap4.png">
 </li>
-<li>Create a panel page in the path <code>landing-page</code> with a three column layout, and in the content add our view to each of the columns. Every time the "Location" argument will change according to the column the View is added to
+<li>Create a panel page in the path ```landing-page``` with a three column layout, and in the content add our view to each of the columns. Every time the "Location" argument will change according to the column the View is added to
 <img src="/assets/images/legacy/Snap5_0.png">
 <img src="/assets/images/legacy/Snap6_0.png">
 <img src="/assets/images/legacy/Snap7_0.png">
@@ -58,7 +58,7 @@ drush en optionwidgets text views_ui ctools _panels page_manager views_content
 <li>Next, in our theme to copy page.tpl.php to page-landing-page.tpl.php, and the printing of the sidebars</li>
 <li>Optional; copy node.tpl.php to node-view-landing_page.tpl.php and delete the printing of the node title</li>
 <li>Optional; In admin/build/themes/settings uncheck "Display post information" from our new content type</li>
-<li>Now, all that is left to do, is to add three Landing page elements content, with the same page ID (e.g. <code>gizra</code>), and with different locations</li>
+<li>Now, all that is left to do, is to add three Landing page elements content, with the same page ID (e.g. ```gizra```), and with different locations</li>
 <li>Navigate to landing-pages/gizra and see your landing page!</li>
 </ol>
 

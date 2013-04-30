@@ -14,7 +14,7 @@ Oh, and you can also migrate data from other (older) sites.
 <h3>What is it good for?</h3>
 Migrate fills up your Drupal installation profile, or just fresh new module, with appropriate content that helps the user or developer experiment with it, so the new module’s learning curve is easier. When developing, if you mess something up - say, drop the user table - it won’t be as bad as it could’ve been, since you kept around a backup in a CSV file. Some company want their site upgraded? No problem. Migrate can import from CSV, SQL databases, XML and much more.
 
-<em>For the less technical:</em> if you think I'm just naming random letters, relax: if you have Microsoft Excel, or even OpenOffice (it's free!), you can start creating content before you even have a site. Just open up a new table in either software, and save it as a CSV file. Your developer should be able to guide you through in a few minutes. If he can’t, well, you might want to consider a different one.
+_For the less technical: if you think I'm just naming random letters, relax: if you have Microsoft Excel, or even OpenOffice (it's free!), you can start creating content before you even have a site. Just open up a new table in either software, and save it as a CSV file. Your developer should be able to guide you through in a few minutes. If he can’t, well, you might want to consider a different one.
 
 Migrate provides a strong advantage when developing installation profiles. When you rebuild a profile, the existing database is thrown away and replaced with a new one. But most of the time, you will need content to work with, test your logic, and see the resulting displayed page. With Migrate, when you install a profile, you can automatically import content to work with.
 
@@ -37,9 +37,10 @@ That’s it for site developers. Create a table, make sure everything sits the w
 
 <h4>The Drupal side: (a.k.a - Dave’s side of the story)</h4>
 
-If you’re reading this, I’m assuming you are a Drupal developer (it’s quite technical from now on). I’ve written a simplified example, divided into parts. In this example, I’ve shown how to migrate content from CSV files. A complete, working example of an abstract migration class can be found <a href="https://github.com/Gizra/Garment-Box/blob/7.x-1.x/garmentbox/modules/custom/garmentbox_migrate/includes/garmentbox_migrate.migrate.entity.inc">here</a> - and in the same git repository there is a complete implementation of a custom Migrate module. All the CSV files under under a csv direcrory using a naming convention <code>csv/entity_type/bundle.csv</code>. Example of using this abstract class to import taxonomy terms is shown below:
+If you’re reading this, I’m assuming you are a Drupal developer (it’s quite technical from now on). I’ve written a simplified example, divided into parts. In this example, I’ve shown how to migrate content from CSV files. A complete, working example of an abstract migration class can be found <a href="https://github.com/Gizra/Garment-Box/blob/7.x-1.x/garmentbox/modules/custom/garmentbox_migrate/includes/garmentbox_migrate.migrate.entity.inc">here</a> - and in the same git repository there is a complete implementation of a custom Migrate module. All the CSV files under under a csv direcrory using a naming convention ```csv/entity_type/bundle.csv```. Example of using this abstract class to import taxonomy terms is shown below:
 < img src="http://www.gizra.com/sites/default/files/s033.png" />
 
+```php
 <?php
 /**
  * Migrate measurement unit terms.
@@ -67,10 +68,13 @@ class garmentboxMeasurementUnitTerms extends garmentboxMigration {
   }
 }
 ?>
- And that’s it. <code>garmentboxMigration</code> takes care of stitching everything together, and putting the data in the content’s fields. You can obviously extend this abstract class to fit your own business logic.
+```
+
+ And that’s it. ```garmentboxMigration``` takes care of stitching everything together, and putting the data in the content’s fields. You can obviously extend this abstract class to fit your own business logic.
 Importing files and images is also easy:
 <img src="/assets/images/legacy/s029.png" />
 
+```php
 <?php
 $this->addFieldMapping('field_image', 'field_image');
 $this
@@ -80,21 +84,28 @@ $this
   ->addFieldMapping('field_image:source_dir')
   ->defaultValue(drupal_get_path('module', 'example_migrate') . '/images');
 ?>
+```
 
 For multiple values in one field, use the separator('|') function when defining field mapping:
 <img src="/assets/images/legacy/s028.png" />
+
+```php
 <?php
 $this
   ->addFieldMapping('field_inventory_line_inline', 'field_inventory_line_inline')
   ->sourceMigration('exampleInventoryLines')
   ->separator('|');
 ?>
+```
 
-For additional data tweaking, we can use the <code>prepare()</code>, <code>prepareRow()</code>, and <code>complete()</code> functions.
+For additional data tweaking, we can use the ```prepare()```, ```prepareRow()```, and ```complete()``` functions.
+
+```php
 <?php
 public function complete($entity, $row) {
   // Do something, e.g. flag a flag on the node.
 }
 ?>
+```
 
 After everything is built, we stroll over to the UI (admin/content/migrate) and select what we want to import, and import away. Alternatively, Migrate can run through drush, which you'll probably want to use when using an installation profile.

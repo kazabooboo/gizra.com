@@ -15,13 +15,13 @@ What makes message so great is:
 <ol>
 <li> You can replace tokens either by hard-coding it, or by having a callback function. So if you want to have a message like “Good day @name” -- you can either replace the @name with the user’s name, and save it to the database, or you can have a callback function that will make sure we get the most up to date user name, in case it was changed.</li>
 <li>Message module is using the "translatable" feature of Field API, which means we can translate the messages. Yap, you’ve heard me right, you can easily send messages in different languages!</li>
-<li>Unlike other modules that only notify you via watchdog if there was an error, and the email is lost - since we are using an Entity, we can easily save those messages, and view the message <em>as it was sent to the user</em>, and if needed re-send them!</li>
+<li>Unlike other modules that only notify you via watchdog if there was an error, and the email is lost - since we are using an Entity, we can easily save those messages, and view the message _as it was sent to the user, and if needed re-send them!</li>
 </ol>
 
 Lets see it in action:
 <ul>
 <li>Get the -dev version of Message and Message-notify, and enable Message-notify example module</li>
-<li>See the message type that was added in <code>admin/structure/messages</code></li>
+<li>See the message type that was added in ```admin/structure/messages```</li>
 <li>Create a few nodes, and as a different user, add comments</li>
 <li>If your SMTP works, you will get an email, otherwise, you can view the sent messages using Views -- click on the “Message notify example” link on the navigation block</li>
 <li>And now for the fancy stuff, enable Locale module, and add “French” language.
@@ -35,6 +35,6 @@ As you can see Message notify, doesn’t try to implement a subscription system.
 
 Non-developers will need to wait a little longer for a Rules integration with Message notify (there is one already for Message itself), but developers can dive in, and start building a slim an efficient notifications system using Message.
 
-I would also like to point that we implemented for out client in <a href="http://www.medico.com/">Medico.com</a> a really nice digest-email feature, that sends you all the recent activity. Remember, since tokens can be replaced by callbacks, nothing stops us from calling <code>views_embed_view()</code> and sending this nice email.
+I would also like to point that we implemented for out client in <a href="http://www.medico.com/">Medico.com</a> a really nice digest-email feature, that sends you all the recent activity. Remember, since tokens can be replaced by callbacks, nothing stops us from calling ```views_embed_view()``` and sending this nice email.
 
 <img src="/assets/images/legacy/digest-Medico.jpg" />

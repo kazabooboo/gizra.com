@@ -1,5 +1,5 @@
---- 
-tags: 
+---
+tags:
 - Drupal-planet
 - .NET
 - DrutNet
@@ -18,48 +18,48 @@ Since last post I've added a new method that allow file upload with Services, us
 <li>Now we need to have a Drupal site with the <a href="http://drupal.org/project/Services" target= "_blank">Services module</a> installed  and the following modules enabled :
 <ul>
 <li>Services</li>
-<li>XMLRPC Server </li> 
-<li>File Service</li> 
+<li>XMLRPC Server </li>
+<li>File Service</li>
 <li>Node Service</li></ul>
 </li>
 <li>After adding the libraries and enabling the modules we can start working, first we need to create an instance of the ServicesSettings class and then of the Sevices class  :
-<code>
+```
  DrutNET.ServicesSettings services_settings= new DrutNET.ServicesSettings();
- services_settings.DrupalURL = @"http://localhost/drupal-6.16/"; 
+ services_settings.DrupalURL = @"http://localhost/drupal-6.16/";
  services_settings.UseSessionID = false;
  services_settings.CleanURL = true;
-</code>Here we define the connection settings, which include the path to your Drupal site, the type of security you have enabled in the services settings (only session ID is supported at this point) and clean URL settings.
-<code>
+```Here we define the connection settings, which include the path to your Drupal site, the type of security you have enabled in the services settings (only session ID is supported at this point) and clean URL settings.
+```
 DrutNET.Services service_connection = new DrutNET.Services(service_settings);
-</code>Here we create an instance of the services class using the settings class instance created before.
+```Here we create an instance of the services class using the settings class instance created before.
 </li><br>
 <li>Now we can login to Drupal :
-<code>
+```
 If (service_connection.Login("username", "password"))
-  Console.Write("Login successfull"); 
+  Console.Write("Login successfull");
 else
-  Console.Write("Login failed"); 
-</code>* Make sure that the user has permission for all the services functions that you intend to use.
+  Console.Write("Login failed");
+```* Make sure that the user has permission for all the services functions that you intend to use.
 </li><br>
 <li>Load and save a node :
-<code>
+```
 int nideID = 1;
 CookComputing.XmlRpc.XmlRpcStruct node = service_connection.NodeGet(nodeID);
 node["body"] = "My new text";
 service_connection.NodeSave(node);
-</code>Here we use NodeGet method to load a node and then NodeSave method to save it back after making a change to the body field.
+```Here we use NodeGet method to load a node and then NodeSave method to save it back after making a change to the body field.
 </li><br>
 <li>Save a file to a node :
-<code>
+```
  string filePath = @"c:\test.txt";
  int fileIndex = 0; // In case of multiple file field the index of the file.
  int nodeID = 1; // The node to attach the file to.
  string fieldName = "field_file" ; // CCK field name as defined in the content.
  service_connection.FileUpload(filePath , fileIndex , nodeID , fieldName);
-</code>FileUpload method takes care of converting the file to base64 and also used both services FileSave and NodeSave.
+```FileUpload method takes care of converting the file to base64 and also used both services FileSave and NodeSave.
 </li></ol>
 
- 
+
 
 
 

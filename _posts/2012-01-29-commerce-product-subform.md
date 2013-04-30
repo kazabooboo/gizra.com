@@ -21,10 +21,11 @@ This post will go over an example (yet fully functionally) module that shows how
 
 The problem is obviously the fact that we don’t have commerce product ID nor a node ID, as none of those objects is saved. A second problem is how to actually embed the commerce product form inside the node form. <a href="http://drupal.org/project/subform">Subform</a> module solves both issues (with a little custom code help).
 
-I won’t go over each line of code here, as the module is well documented, however I will explain the <em>important steps</em>.
+I won’t go over each line of code here, as the module is well documented, however I will explain the _important steps.
 
 In the node's form alter, we embed the commerce product, using Subform’s form element.
 
+```php
 <?php
 module_load_include('inc', 'commerce_product', 'includes/commerce_product.forms');
 $form['commerce_product_subform'] = array(
@@ -35,10 +36,12 @@ $form['commerce_product_subform'] = array(
   '#weight' => 10,
 );
 ?>
+```
 
 In the code above we embed the form, pass it a $product object, and say it is required - meaning Subform should do validation on the embedded form.
 Next step, is adding submit handlers <strong>in the right order</strong>
 
+```php
 <?php
 // Set the first submit handler to be "subform_submit_all", so the
 // commerce product will be created, before handing the submitted node
@@ -55,9 +58,10 @@ else {
   array_unshift($form['actions']['submit']['#submit'], 'subform_submit_all');
 }
 ?>
+```
 
-Noticed the emphasize on the “right order” above? That’s because we want Subform to first submit the commerce product form (thus the commerce product will be saved and have an ID), next we want our own submit handler to set the field reference from the node to the commerce product, and last we want the original <code>node_form_submit()</code> to save the node.
+Noticed the emphasize on the “right order” above? That’s because we want Subform to first submit the commerce product form (thus the commerce product will be saved and have an ID), next we want our own submit handler to set the field reference from the node to the commerce product, and last we want the original ```node_form_submit()``` to save the node.
 
-In the example module, you will notice that we also hide the commerce product title. The reason is that we can easily populate the title from the node's title (see <code>commerce_product_subform_form_commerce_product_ui_validate()</code>).
+In the example module, you will notice that we also hide the commerce product title. The reason is that we can easily populate the title from the node's title (see ```commerce_product_subform_form_commerce_product_ui_validate()```).
 
 As bonus, the example module also has a CTools plugin, that allows you to add the subform to an node add/ edit page that was overriden by Page manager.

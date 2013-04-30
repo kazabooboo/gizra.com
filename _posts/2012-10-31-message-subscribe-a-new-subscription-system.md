@@ -52,7 +52,7 @@ As seen in the above code, our module created the Message it wanted and passed i
 
 ### Getting “context”
 Drupal abuses the word context with so many meanings. Admittedly Message-subscribe is now also guilty. ``message_subscribe_get_basic_context()`` gets the entity type, in our case the comment, and extracts the related context -- the comment author, the node its related to, the taxonomy terms related to the node, the OG groups related to those nodes (you can add our own context as-well).
-This context will help us in finding all the users that are subscribed directly or <em>indirectly</em> to our node.
+This context will help us in finding all the users that are subscribed directly or _indirectly to our node.
 
 ###Getting the subscribers
 Next, Message-subscribe queries the valid flags, iterating over the results to get all the users that are subscribed. An alter hook allows you to change the list, or the values in that list. The values are which flags are responsible for the subscription and the “Message notifiers” (about that in the next section).
@@ -60,7 +60,7 @@ Next, Message-subscribe queries the valid flags, iterating over the results to g
 ###Sending notifications
 Before we talk about sending notifications, note that I never wrote the word “email”. Message-notify is a pluggable module, that allows you to add “Message-notifiers”. There’s a default implementation for email, but you are also able to add Text-messages, IRC, Fax or Postal-pigeons.
 
-So, Message-subscribe iterates over all the users, and all over the notifiers, as in fact a user can get the same Message as email <em>and</em> as a Text-message. I say same <em>Message</em> as in same Message entity, not same message as message text -- In Message-notify you can have different text for different notifiers thanks to the module’s integration with view-modes.
+So, Message-subscribe iterates over all the users, and all over the notifiers, as in fact a user can get the same Message as email _and as a Text-message. I say same _Message as in same Message entity, not same message as message text -- In Message-notify you can have different text for different notifiers thanks to the module’s integration with view-modes.
 
 ###Bonus
 *There’s a UI! We are showing tabs for every valid flag, and the content of that tab is a View. You can easily change the used View via admin settings

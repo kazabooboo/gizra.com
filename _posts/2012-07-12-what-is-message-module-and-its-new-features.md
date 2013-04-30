@@ -17,9 +17,9 @@ Messages are entities belonging to a specific “Message type”, defining the p
 <h3>Tokens</h3>
 As it is possible to attach fields to messages, we can leverage the token system. In fact we have 3 different powerful ways for text “replacements”:
 <ul>
-<li>Regular tokens: <code>[message:user:name]</code>, will be replaced on the fly when presenting the message, with the most updated data</li>
-<li>One-use tokens: <code>@{message:user:name}</code>, similar to the previous example the user’s name will be shown, but instead of calculating it <em>every</em> time the message is shown, we calculate it once when the Message is saved, so next time we can get the saved value faster</li>
-<li>Callbacks: sometimes we can’t use the token system, for example if we need to show different results based on the value of <em>two</em> different fields. This is an advanced feature, which is meant for developers, and is documented in the module</li>
+<li>Regular tokens: ```[message:user:name]```, will be replaced on the fly when presenting the message, with the most updated data</li>
+<li>One-use tokens: ```@{message:user:name}```, similar to the previous example the user’s name will be shown, but instead of calculating it _every time the message is shown, we calculate it once when the Message is saved, so next time we can get the saved value faster</li>
+<li>Callbacks: sometimes we can’t use the token system, for example if we need to show different results based on the value of _two different fields. This is an advanced feature, which is meant for developers, and is documented in the module</li>
 </ul>
 
 <h3>Partials</h3>
