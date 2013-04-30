@@ -118,7 +118,7 @@ clients:
       </div>
 
       <div class="span4 quotes">
-        <h3>Fictious CLient Quotes</h3>
+        <h3>Fictious Client Quotes</h3>
         <div class="flexslider">
           <ul class="slides">
             {% for quote in page.quotes %}
