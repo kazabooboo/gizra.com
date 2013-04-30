@@ -37,6 +37,15 @@
   color: #e06e5c;
 }
 
+.bottom {
+  background: white;
+  border-top: 3px solid #ccdce1;
+}
+.bottom .copyright {
+  margin-top: 35px;
+  color: #e3e3e3;
+}
+
 header {
   background: white;
   border-bottom: 3px solid #ccdce1;

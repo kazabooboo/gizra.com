@@ -12,3 +12,13 @@
     color: $orange;
   }
 }
+
+.bottom {
+  background: white;
+  border-top: 3px solid $lightBlue;
+
+  .copyright {
+    margin-top: 35px;
+    color: $lightGray;
+  }
+}
