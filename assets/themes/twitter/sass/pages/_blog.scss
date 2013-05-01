@@ -1,4 +1,43 @@
+@import "variables";
+
 .post-full {
+
+  .date {
+    color: $gray;
+    font-size: 15px;
+    line-height: 15px;
+    margin-top: 3px;
+  }
+
+  .author {
+    font-size: 16px;
+    line-height: 16px;
+    margin-top: 6px;
+  }
+
+  .tag_box {
+    border-top: 1px dotted $gray;
+    padding-top: 10px;
+    margin-top: 10px;
+  }
+
+  .content-wrapper {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: $blue;
+    }
+
+    h1 {
+      font-size: 26px;
+      line-height: 26px;
+      margin-top: 0;
+    }
+  }
 
   .title-bg {
     margin-top: 75px;
