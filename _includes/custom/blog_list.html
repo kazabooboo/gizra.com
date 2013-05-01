@@ -37,14 +37,16 @@ Usage:
 {% endfor %}
 {% assign blog_list = nil %}
 
+{% assign blog_list_page=page.blog_list_page | plus:1 %}
+
 <div id="post-pagination" class="pagination">
 
-  {% if page.blog_list_page > 1 %}
+  {% if blog_list_page > 1 %}
   <p class="previous">
-    {% if paginator.previous_page == 1 %}
-    <a href="/">Previous</a>
+    {% if blog_list_page == 2 %}
+    <a href="/blog">Previous</a>
     {% else %}
-    <a href="/page{{paginator.previous_page}}">Previous</a>
+    <a href="/blog/page{{blog_list_page | minus:1}}">Previous</a>
     {% endif %}
   </p>
   {% else %}
@@ -55,7 +57,7 @@ Usage:
 
   <ul class="pages">
     <li class="page">
-      {% if page.blog_list_page == 1 %}
+      {% if blog_list_page == 1 %}
       <span class="current-page">1</span>
       {% else %}
       <a href="/blog">1</a>
@@ -64,7 +66,7 @@ Usage:
 
     {% for count in (2..total_pages) %}
     <li class="page">
-      {% if count == page.blog_list_page %}
+      {% if count == blog_list_page | plus:1 %}
       <span class="current-page">{{count}}</span>
       {% else %}
       <a href="/blog/page{{count}}">{{count}}</a>
@@ -73,9 +75,9 @@ Usage:
     {% endfor %}
   </ul>
 
-  {% if page.blog_list_page < total_pages %}
+  {% if blog_list_page < total_pages %}
   <p class="next">
-    <a href="/blog/page{{paginator.next_page}}">Next</a>
+    <a href="/blog/page{{blog_list_page | plus:1}}">Next</a>
   </p>
   {% else %}
   <p class="next disabled">
