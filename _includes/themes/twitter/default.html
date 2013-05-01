@@ -43,9 +43,7 @@
     <script src="{{ ASSET_PATH }}/bootstrap/js/jquery.flexslider.js" type="text/javascript"></script>
     <script src="{{ ASSET_PATH }}/bootstrap/js/jquery.custom.js" type="text/javascript"></script>
 
-    {% if page.homepage %}
-    <script src="{{ ASSET_PATH }}/js/frontpage.js" type="text/javascript"></script>
-    {% endif %}
+    <script src="{{ ASSET_PATH }}/js/gizra.custom.js" type="text/javascript"></script>
 
     <script type="text/javascript">
       $(document).ready(function () {
@@ -139,42 +137,19 @@
     <!-- Footer Area
         ================================================== -->
 
-    <footer class="footer-container"><!-- Begin Footer -->
+    <footer><!-- Begin Footer -->
       <div class="container">
-        <h4 class="title-bg"><a class="primary" name="contact">contact</a></h4>
-        <div class="row footer-row">
-          <div class="span8 footer-col">
-            <h5>Contact Us</h5>
-
-            <ul class="social-icons">
-              <li><a href="#" class="social-icon twitter"></a></li>
-              <li><a href="#" class="social-icon rss"></a></li>
-            </ul>
+        <div class="row">
+          <div class="span12">
+            <div class="copyright">Copyright 2013 Gizra. All rights reserved.</div>
           </div>
-          <div class="span4 footer-col">
-            <h5>Location</h5>
-            <address>
-              <strong>Gizra</strong><br />
-              Brener 5, Tel-Aviv, Israel<br />
-              +972-3-3731222<br />
-              info@gizra.com<br />
-            </address>
-          </div>
+          <!-- Scroll to Top -->
+          <div id="toTop" class="hidden-phone hidden-tablet">Back to Top</div>
         </div>
-
-        <div class="row"><!-- Begin Sub Footer -->
-          <div class="span12 footer-col footer-sub">
-            <div class="row no-margin">
-              <div class="span6"><span class="left">Copyright 2013 Gizra. All rights reserved.</span></div>
-            </div>
-          </div>
-        </div><!-- End Sub Footer -->
-
       </div>
-    </footer><!-- End Footer -->
+    </footer> <!-- End Footer -->
 
-    <!-- Scroll to Top -->
-    <div id="toTop" class="hidden-phone hidden-tablet">Back to Top</div>
+
 
     {% include JB/analytics %}
     <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>

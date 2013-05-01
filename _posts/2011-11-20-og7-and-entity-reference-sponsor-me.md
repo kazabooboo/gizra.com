@@ -1,5 +1,5 @@
---- 
-tags: 
+---
+tags:
 - Drupal-planet
 - OG7
 permalink: /content/og7-and-entity-reference-sponsor-me/
@@ -22,7 +22,7 @@ I've opened a new <a href="http://drupal.org/node/1342632">issue</a>, with one t
 The idea is to rely on the new kid on the block - Entity Reference, which means your reference field will know how to reference a group of a single entity type. That change will result with changing the signature of a lot of function in OG (i.e. instead of passing the group ID, one will have to pass the entity type of the group, and the entity ID of the group), but it will also result with better UX and DX.
 
 The idea is to create a 2.x branch, to allow people to migrate from 1.x. I honestly don’t think it will be very painful, as I’ll provide automatic migration of data. So it will be just a matter of updating the Views, Panels and custom code.
-In the above issue there are already comments from known community members giving it a big +1, and saying "Let’s see this sooner than later". I also want to see this happening <em>fast</em>, but my time resources are not enough.
+In the above issue there are already comments from known community members giving it a big +1, and saying "Let’s see this sooner than later". I also want to see this happening _fast, but my time resources are not enough.
 
 I’m looking for someone to sponsor this huge and non-trivial feature, which will cost US$7,500
 Please do <a href="http://www.gizra.com/contact">contact</a> me if you are interested. I will credit you on the OG module page, in the README file, and on this blog. The community will thank you greatly.

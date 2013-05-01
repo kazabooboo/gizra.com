@@ -1,5 +1,5 @@
---- 
-tags: 
+---
+tags:
 - Drupal-planet
 permalink: /content/does-every-page-really-need-be-node/
 title: Does every page really need to be a node?
@@ -26,9 +26,9 @@ So we can use <a href="http://drupal.org/project/panels">Panels</a> for that. It
 Ok, one may argue that the client might need to change the home page - "If it was a node my client could easily edit it. What then?"
 But we argue back:
 <ol>
-<li>Meh. How often does your client <em>really</em> change the home page?</li>
+<li>Meh. How often does your client _really change the home page?</li>
 <li>If they do need to change it frequently, you can have the Panels page show an existing node - so the client will be able to change that node without changing the Panels itself</li>
-<li>Like Views, that should live in code - if there's some crisis and they <em>must</em> change the Panels, they can do it manually, and the next day you can deploy a new fixed version, and revert the Panels so it will be served back from code</li>
+<li>Like Views, that should live in code - if there's some crisis and they _must change the Panels, they can do it manually, and the next day you can deploy a new fixed version, and revert the Panels so it will be served back from code</li>
 </ol>
 
 Thanks <a href="http://drupal.org/user/26979">merlinofchaos</a> for yet another great module!

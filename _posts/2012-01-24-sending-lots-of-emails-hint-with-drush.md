@@ -1,5 +1,5 @@
---- 
-tags: 
+---
+tags:
 - Drupal-planet
 - Message
 - Drush
@@ -14,8 +14,9 @@ Doing it on hook_cron() is nice if you need to send few emails, but when you nee
 
 A nice and simple solution we came up with, was to write a Drush command that will process a small batch of users, and use Jenkins to fire up this command every two minutes.
 
-This post will demonstrate the code, that can be used by others - however you will need to copy and change the command to fit your business logic. Assuming our module’s name is foo, you will need to place your code in <code>foo.drush.inc</code>:
+This post will demonstrate the code, that can be used by others - however you will need to copy and change the command to fit your business logic. Assuming our module’s name is foo, you will need to place your code in ```foo.drush.inc```:
 
+```php
 <?php
 
 /**
@@ -86,20 +87,23 @@ function drush_foo_digest() {
   drush_log(dt('Users IDs that got email: @uids.', $params), 'ok');
 }
 ?>
+```
 
 Note the code comments - you are expected to replace foo_get_digest_users() and foo_process_digest(). Btw, in those functions, I’ve added debug messages like this.
 
+```php
 <?php
-if (function_exists('drush_log') && drush_get_option('verbose')) {
-  drush_log(dt('Digest email to user @uid could not be sent', array('@uid' => $account->uid)), 'ok');
-}
+  if (function_exists('drush_log') && drush_get_option('verbose')) {
+    drush_log(dt('Digest email to user @uid could not be sent', array('@uid' => $account->uid)), 'ok');
+  }
 ?>
+```
 
-After that, all you need to do is create a new Jenkins job. 
-<img src="http://www.gizra.com/sites/default/files/digest_dev%20Config%20[Jenkins].jpg" />
+After that, all you need to do is create a new Jenkins job.
+<img src="/assets/images/legacy/digest_dev%20Config%20[Jenkins].jpg" />
 
 
 <a href="http://getpantheon.com">Pantheon</a> gives us this flexibility, here's the console log:
-<img src="http://www.gizra.com/sites/default/files/digest-console.jpg" />
+<img src="/assets/images/legacy/digest-console.jpg" />
 
 Don't forget to use <a href="http://drupal.org/project/reroute_email">Reroute email</a> so your users don’t get dummy emails form your Dev and Test environments.

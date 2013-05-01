@@ -323,46 +323,13 @@
 }
 
 /* Literal.Number.Integer.Long */
-.footer-container {
-  background: transparent;
+footer {
+  background: white;
+  border-top: 3px solid #ccdce1;
 }
-.footer-container h4.title-bg {
-  position: relative;
-  background: transparent;
-  text-align: center;
-  border-top: none;
-  border-bottom: 1px dotted #e06e5c;
-  line-height: 0.1em;
-  margin: 10px 0 20px;
-  width: 100%;
-  padding: 0;
-  font-size: 40px;
-}
-.footer-container h4.title-bg a {
-  background: url(../images/background.png);
-  text-decoration: none;
-  text-transform: none;
-}
-.footer-container h4.title-bg a.primary {
-  padding: 0 25px;
-  font-family: Abril Fatface;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 50px;
-  text-shadow: 0px 0px 1px #aaaaaa;
-}
-.footer-container h4.title-bg a.secondary {
-  position: absolute;
-  right: 0;
-  text-align: right;
-  font-size: 16px;
-  line-height: 16px;
-}
-.footer-container h4.title-bg a.secondary:after {
-  content: " \00BB";
-}
-.footer-container h5.title-bg {
-  color: #e06e5c;
+footer .copyright {
+  margin-top: 35px;
+  color: #e3e3e3;
 }
 
 header {
@@ -496,11 +463,7 @@ body.home .main-container .gallery-row h2.title-bg a.secondary {
   position: absolute;
   right: 0;
   text-align: right;
-  font-size: 16px;
-  line-height: 16px;
-}
-body.home .main-container .gallery-row h2.title-bg a.secondary:after {
-  content: " \00BB";
+  padding-left: 5px;
 }
 body.home .main-container .gallery-row .secondary-title {
   text-align: center;
@@ -618,6 +581,33 @@ body.home .main-container .clients-row li.gallery-item {
 body.home .main-container .clients-row li.gallery-item img {
   vertical-align: middle;
 }
+body.home .main-container .blog-row .teasers {
+  margin-top: 70px;
+}
+body.home .main-container .blog-row ul.list-wrapper {
+  margin: 0;
+  list-style: none;
+}
+body.home .main-container .blog-row ul.list-wrapper .date {
+  color: #646464;
+  font-size: 15px;
+  line-height: 15px;
+}
+body.home .main-container .blog-row ul.list-wrapper .title {
+  color: #046596;
+  font-size: 26px;
+  line-height: 26px;
+}
+body.home .main-container .blog-row ul.list-wrapper .teaser {
+  font-size: 18px;
+  line-height: 18px;
+  color: #282828;
+  margin-bottom: 70px;
+}
+body.home .main-container .contact-row {
+  background: transparent;
+  margin-top: 35px;
+}
 body.home .main-container h3 {
   color: #e06e5c;
   text-transform: none;
@@ -638,21 +628,10 @@ body {
   background: url(../images/background.png);
 }
 
-.blog-row .list-wrapper, .post-full .list-wrapper {
-  padding-top: 50px;
-}
-.blog-row .date, .post-full .date {
-  color: #646464;
+a.secondary {
   font-size: 16px;
   line-height: 16px;
 }
-.blog-row .title, .post-full .title {
-  color: #046596;
-  font-size: 26px;
-  line-height: 26px;
-}
-.blog-row .teaser, .post-full .teaser {
-  font-size: 18px;
-  line-height: 18px;
-  color: #282828;
+a.secondary:after {
+  content: " \00BB";
 }

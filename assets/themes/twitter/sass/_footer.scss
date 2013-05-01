@@ -1,14 +1,11 @@
 @import "variables";
 
-.footer-container {
-  background: transparent;
+footer {
+  background: white;
+  border-top: 3px solid $lightBlue;
 
-  h4.title-bg {
-    @include title-bg;
+  .copyright {
+    margin-top: 35px;
+    color: $lightGray;
   }
-
-  h5.title-bg {
-    color: $orange;
-  }
-
 }

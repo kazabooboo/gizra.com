@@ -29,31 +29,11 @@ body {
   background: url(../images/background.png);
 }
 
+a.secondary {
+  font-size: 16px;
+  line-height: 16px;
 
-.blog-row, .post-full {
-
-  .list-wrapper {
-    padding-top: 50px;
-  }
-
-  .date {
-    color: $gray;
-    font-size: 16px;
-    line-height: 16px;
-  }
-
-  .title {
-    color: $blue;
-    font-size: 26px;
-    line-height: 26px;
-  }
-
-  .teaser {
-    font-size: 18px;
-    line-height: 18px;
-    color: $darkGray;
+  &:after {
+    content: " \00BB";
   }
 }
-
-
-

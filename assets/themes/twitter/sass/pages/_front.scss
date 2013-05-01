@@ -181,6 +181,42 @@ body.home {
       }
     }
 
+    .blog-row {
+
+      .teasers {
+        margin-top: 70px;
+      }
+
+      ul.list-wrapper {
+        margin: 0;
+        list-style: none;
+
+        .date {
+          color: $gray;
+          font-size: 15px;
+          line-height: 15px;
+        }
+
+        .title {
+          color: $blue;
+          font-size: 26px;
+          line-height: 26px;
+        }
+
+        .teaser {
+          font-size: 18px;
+          line-height: 18px;
+          color: $darkGray;
+          margin-bottom: 70px;
+        }
+      }
+    }
+
+    .contact-row {
+      background: transparent;
+      margin-top: 35px;
+    }
+
     h3 {
       color: $orange;
       text-transform: none;

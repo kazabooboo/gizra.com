@@ -1,5 +1,5 @@
---- 
-tags: 
+---
+tags:
 - Migrate
 - Drupal-planet
 permalink: /content/data-migration-part-1/
@@ -27,18 +27,19 @@ Install the following modules :
 <li> activate Migrate ,Migrate UI</li>
 </ol>
 
-<code>
+```
 drush dl migrate
 drush en migrate migrate_ui
-</code>
+```
 
 In this example we will import Users from the old site , take a look at the old Users table:
 
 car_users:
 
-<img src="http://www.gizra.com/sites/default/files/blog1_tab1_0.jpg" alt=""/>
+<img src="/assets/images/legacy/blog1_tab1_0.jpg" alt=""/>
 
 For the migrate module to recognize classes defined by your module, you must define hook_migrate_api() in your .module file:
+```php
 <?php
 function example_migrate_api() {
   $api = array(
@@ -47,73 +48,82 @@ function example_migrate_api() {
   return $api;
 }
 ?>
-
+```
 
 Define the migration class, each migration class should end with the suffix Migration .
 
+```php
 <?php
-class OldUsersMigration extends Migration 
+class OldUsersMigration extends Migration
 
   public function __construct() {
-    parent::__construct(); 
+    parent::__construct();
     $this->description = t('Migrate users from the source database');
 ?>
+```
 
 define the source (the old data object) :
 
 This part is used in order to map the primary key of the old USERS table. We ll also use this mapping when we want to import objects that were references to users (in our case , users).
 This mean that Migrate will take care of coordinating the old UID to the new one.
 
+```php
 <?php
-    $this->map = new MigrateSQLMap($this->machineName,
-    array('user_id'  => array(
-              'type' => 'int',
-              'not null' => TRUE
-    ),
+  $this->map = new MigrateSQLMap($this->machineName,
+    array(
+      'user_id'  => array(
+        'type' => 'int',
+        'not null' => TRUE,
+      ),
     ),
     MigrateDestinationTerm::getKeySchema()
-    );
+  );
 ?>
+```
 
 Now, we want to set a query to bring our source records (from the old DB), we use the db_select function as described bellow:
+```php
 <?php
-     $query = db_select('car_users', 'old_users')
-      ->fields('old_users' ,array(
-        'email' ,
-        'user_id' ,
-        'password',
-        'date_of_birth' ,
-        'last_login_date' ,
-        'username',
-
-      ));
-    $this->source = new MigrateSourceSQL($query);
+   $query = db_select('car_users', 'old_users')
+     ->fields('old_users' ,array(
+      'email' ,
+      'user_id' ,
+      'password',
+      'date_of_birth' ,
+      'last_login_date' ,
+      'username',
+    ));
+  $this->source = new MigrateSourceSQL($query);
 ?>
+```
 
 Define the destination , for example : user , taxonomy , node.
 
+```php
 <?php
-    $this->destination = new MigrateDestinationUser(); // Drupal user
+  $this->destination = new MigrateDestinationUser(); // Drupal user
 ?>
-
+```
 Its time to start the field mapping , here we will map all the fileds that we want to import from the old DB to the new field name in drupal for example :
 
 password : the old site password field.
 pass: the Drupal password field.
 
-
+```php
 <?php
-    $this->addFieldMapping('pass', 'password');
-    $this->addFieldMapping('mail', 'email');
-    $this->addFieldMapping('name', 'username');
-    $this->addFieldMapping('login', 'last_login_date');
-    $this->addFieldMapping('created', 'date_added');
-    $this->addFieldMapping('signature', 'moto');
-    $this->addFieldMapping('access', 'last_login_date');
+  $this->addFieldMapping('pass', 'password');
+  $this->addFieldMapping('mail', 'email');
+  $this->addFieldMapping('name', 'username');
+  $this->addFieldMapping('login', 'last_login_date');
+  $this->addFieldMapping('created', 'date_added');
+  $this->addFieldMapping('signature', 'moto');
+  $this->addFieldMapping('access', 'last_login_date');
 ?>
+```
 
 In order to complete the mapping process, we need to mark all the destination fields that are NOT mapped as DNM (do not map)  :
 
+```php
 <?php
     //all the fields we don’t wanna map in the destination!!!
     $this->addFieldMapping('init')
@@ -133,31 +143,32 @@ In order to complete the mapping process, we need to mark all the destination fi
     $this->addFieldMapping('status')
       ->issueGroup(t('DNM'));
 ?>
+```
 
 Druring the mapping you can use the 'migrate ui' to see your migration map status:
 
 open the page /basepath/admin/content/migrate
 
-<img src="http://www.gizra.com/sites/default/files/blog1_tab2_0.png" alt=""/>
+<img src="/assets/images/legacy/blog1_tab2_0.png" alt=""/>
 
 Now we can executing the migration using  Drush, the excute functions allows us a process of trial and error using the command, <i>drush migrate-import</i> and <i>drush migrate-rollback</i> repeadly.
 
 To import the first 10 users :
 
-<code>
+```
 drush mi oldUsers –-itemlimit=10
-</code>
+```
 
 To roll back to the previous state :
 
-<code>
+```
 drush mr oldUsers –-itemlimit=10
-</code>
+```
 
 To see your data migration status use:
 
-<code>
+```
 drush ms oldUsers
-</code>
+```
 
 In the next chapter we will discuss importing cars of the users with an emphasis on the transfer relationships between tables, files, etc. ..

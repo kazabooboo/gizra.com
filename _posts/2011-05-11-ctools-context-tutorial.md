@@ -1,5 +1,5 @@
---- 
-tags: 
+---
+tags:
 - Drupal-planet
 - tutorial
 - CTools
@@ -14,19 +14,19 @@ This post covers how to build a CTools content-type plugin that has context. CTo
 
 I have created an example module called node-preview-example, that you can simply download and enable, create an Article page, and see how Panels is now showing the body field on the left and on the right a (silly) "Summary" of the node -- this is our plugin.
 
-<code>
+```
 drush dl ctools panels features
 drush en ctools page_manager panels features
-</code>
+```
 
 And the example module is in my <a href="http://drupal.org/sandbox/noam.hrz/1148086">sandbox</a>:
-<code>
+```
 git clone http://git.drupal.org/sandbox/noam.hrz/1148086.git node_preview_example
-</code>
+```
 
 Let's go over the important parts in the code.
 
-
+```php
 <?php
 
 /**
@@ -42,11 +42,13 @@ $plugin = array(
   ...
 );
 ?>
+```
 
 The plugin definition  is where we let the system know we need a user object and a node object to operate on.
 
 Next the render callback can use those context, after making sure they are valid.
 
+```php
 <?php
 /**
  * Render callback.
@@ -70,12 +72,13 @@ function node_preview_example_summary_content_type_render($subtype, $conf, $args
   ...
 }
 ?>
+```
 
 As you can see, it didn't take much to get the context working, but it gives a lot of power:
 
 <ul>
 <li>Plugins without satisfied context will not appear in the plugins list, so a user can't add them by mistake</li>
-<li>There is one single way for plugins to get a context, unlike "dumb" blocks that each one needs to find out where they are (e.g. <code>menu_get_item()</code> over and over again).</li>
+<li>There is one single way for plugins to get a context, unlike "dumb" blocks that each one needs to find out where they are (e.g. ```menu_get_item()``` over and over again).</li>
 </ul>
 
 If you listen to talks about Butler module, and having a plugin and context system in D8 - it will probably very similar or at least learn a lot from CTools plugins and context system, so you know you are on the right path.

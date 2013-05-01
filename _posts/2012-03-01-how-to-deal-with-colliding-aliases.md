@@ -1,5 +1,5 @@
---- 
-tags: 
+---
+tags:
 - Hacks
 - Drupal-planet
 permalink: /content/how-deal-colliding-aliases/
@@ -10,12 +10,13 @@ layout: post
 Here's a common problem with aliases:
 
 <ul>
-<li><code>users/[user:name]/blog</code> -- This is a page defined by Panels. It shows a list of latest blog posts</li>
-<li><code>users/[user:name]/blog/[node:title]</code> -- This is the alias of the node that is a blog post. But if you will try to use it, Drupal thinks you refer to the Panels page, and shows you the lastest blog posts, instead of the node</li>
+<li>```users/[user:name]/blog``` -- This is a page defined by Panels. It shows a list of latest blog posts</li>
+<li>```users/[user:name]/blog/[node:title]``` -- This is the alias of the node that is a blog post. But if you will try to use it, Drupal thinks you refer to the Panels page, and shows you the lastest blog posts, instead of the node</li>
 </ul>
 
 Here’s a short snippet, we use to easily overcome this issue.
-
+
+```php
 <?php
 /**
  * Implements hook_init().
@@ -32,5 +33,6 @@ function my_module_init() {
   }
 }
 ?>
+```
 
-In <code>hook_init()</code> we check the URL and count the arguments to see if we are in a node context -- in our case the node has 4 arguments, while the blog post list has on 3). The function <code>drupal_get_normal_path()</code> will give us a node/nid that have a alias with the pattern we checked. Using <code>menu_set_active_item()</code> we  force Drupal to show us the node. 
+In ```hook_init()``` we check the URL and count the arguments to see if we are in a node context -- in our case the node has 4 arguments, while the blog post list has on 3). The function ```drupal_get_normal_path()``` will give us a node/nid that have a alias with the pattern we checked. Using ```menu_set_active_item()``` we  force Drupal to show us the node.

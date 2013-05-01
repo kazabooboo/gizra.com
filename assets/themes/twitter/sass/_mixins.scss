@@ -33,11 +33,6 @@
     position: absolute;
     right: 0;
     text-align: right;
-    font-size: 16px;
-    line-height: 16px;
-
-    &:after {
-      content: " \00BB";
-    }
+    padding-left: 5px;
   }
 }

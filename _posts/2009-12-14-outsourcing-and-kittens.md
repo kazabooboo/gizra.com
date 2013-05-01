@@ -1,5 +1,5 @@
---- 
-tags: 
+---
+tags:
 - Drupal-planet
 permalink: /content/outsourcing-kittens/
 title: Outsourcing & Kittens
@@ -18,7 +18,7 @@ To know almost for sure send the following email:
 <blockquote>
 Hi,
 
-Can you please hook_update_6000() my site. I'll need some basic fago to go with the user registration, and later allow quicksketching nodes. Oh, and we really want to have some chaos going all over the site, and can you take out that function Crell <em>really</em> hates?
+Can you please hook_update_6000() my site. I'll need some basic fago to go with the user registration, and later allow quicksketching nodes. Oh, and we really want to have some chaos going all over the site, and can you take out that function Crell _really hates?
 
 btw, Do you think kittens will die in the process?
 </blockquote>
@@ -38,4 +38,4 @@ Meh, no kittens should die.
 p.s. About Crell - don't worry, we know better than to use arg().
 </blockquote>
 
-Ok. I'm not 100% serious about sending such an email - my point is this - If they are involved in the community, know the people and speak the lingo, they are probably aware of which modules are good and have a future; they probably know the best practices for deployment; they probably know how to write <em>secure code</em>. So even if they charge more than another company, but that company answered "WTF"? - go with the more expensive company, as in the end it will cost you less.
+Ok. I'm not 100% serious about sending such an email - my point is this - If they are involved in the community, know the people and speak the lingo, they are probably aware of which modules are good and have a future; they probably know the best practices for deployment; they probably know how to write _secure code. So even if they charge more than another company, but that company answered "WTF"? - go with the more expensive company, as in the end it will cost you less.
