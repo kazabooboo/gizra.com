@@ -15,10 +15,32 @@
     margin-top: 6px;
   }
 
-  .tag_box {
+  .comment-count {
     border-top: 1px dotted $gray;
     padding-top: 10px;
     margin-top: 10px;
+  }
+
+  .tag_box {
+
+    li {
+      margin: 0;
+      padding-right: 2px;
+      padding-left: 0;
+
+      a:after {
+        content: ", ";
+      }
+
+
+      &:last-child {
+
+        a:after {
+          content: "";
+        }
+
+      }
+    }
   }
 
   .content-wrapper {

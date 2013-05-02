@@ -9,7 +9,7 @@
 
 /* Comment */
 .err {
-  border: 1px solid red;
+  border: 1px solid #FF0000;
 }
 
 /* Error */
@@ -31,7 +31,7 @@
 
 /* Comment.Multiline */
 .cp {
-  color: #bc7a00;
+  color: #BC7A00;
 }
 
 /* Comment.Preproc */
@@ -48,7 +48,7 @@
 
 /* Comment.Special */
 .gd {
-  color: #a00000;
+  color: #A00000;
 }
 
 /* Generic.Deleted */
@@ -58,7 +58,7 @@
 
 /* Generic.Emph */
 .gr {
-  color: red;
+  color: #FF0000;
 }
 
 /* Generic.Error */
@@ -69,7 +69,7 @@
 
 /* Generic.Heading */
 .gi {
-  color: #00a000;
+  color: #00A000;
 }
 
 /* Generic.Inserted */
@@ -96,7 +96,7 @@
 
 /* Generic.Subheading */
 .gt {
-  color: #0044dd;
+  color: #0044DD;
 }
 
 /* Generic.Traceback */
@@ -119,7 +119,7 @@
 
 /* Keyword.Namespace */
 .kp {
-  color: green;
+  color: #008000;
 }
 
 /* Keyword.Pseudo */
@@ -130,7 +130,7 @@
 
 /* Keyword.Reserved */
 .kt {
-  color: #b00040;
+  color: #B00040;
 }
 
 /* Keyword.Type */
@@ -140,17 +140,17 @@
 
 /* Literal.Number */
 .s {
-  color: #ba2121;
+  color: #BA2121;
 }
 
 /* Literal.String */
 .na {
-  color: #7d9029;
+  color: #7D9029;
 }
 
 /* Name.Attribute */
 .nb {
-  color: green;
+  color: #008000;
 }
 
 /* Name.Builtin */
@@ -166,7 +166,7 @@
 
 /* Name.Constant */
 .nd {
-  color: #aa22ff;
+  color: #AA22FF;
 }
 
 /* Name.Decorator */
@@ -183,12 +183,12 @@
 
 /* Name.Exception */
 .nf {
-  color: blue;
+  color: #0000FF;
 }
 
 /* Name.Function */
 .nl {
-  color: #a0a000;
+  color: #A0A000;
 }
 
 /* Name.Label */
@@ -205,7 +205,7 @@
 
 /* Name.Tag */
 .nv {
-  color: #19177c;
+  color: #19177C;
 }
 
 /* Name.Variable */
@@ -241,12 +241,12 @@
 
 /* Literal.Number.Oct */
 .sb {
-  color: #ba2121;
+  color: #BA2121;
 }
 
 /* Literal.String.Backtick */
 .sc {
-  color: #ba2121;
+  color: #BA2121;
 }
 
 /* Literal.String.Char */
@@ -257,7 +257,7 @@
 
 /* Literal.String.Doc */
 .s2 {
-  color: #ba2121;
+  color: #BA2121;
 }
 
 /* Literal.String.Double */
@@ -268,7 +268,7 @@
 
 /* Literal.String.Escape */
 .sh {
-  color: #ba2121;
+  color: #BA2121;
 }
 
 /* Literal.String.Heredoc */
@@ -279,42 +279,42 @@
 
 /* Literal.String.Interpol */
 .sx {
-  color: green;
+  color: #008000;
 }
 
 /* Literal.String.Other */
 .sr {
-  color: #bb6688;
+  color: #BB6688;
 }
 
 /* Literal.String.Regex */
 .s1 {
-  color: #ba2121;
+  color: #BA2121;
 }
 
 /* Literal.String.Single */
 .ss {
-  color: #19177c;
+  color: #19177C;
 }
 
 /* Literal.String.Symbol */
 .bp {
-  color: green;
+  color: #008000;
 }
 
 /* Name.Builtin.Pseudo */
 .vc {
-  color: #19177c;
+  color: #19177C;
 }
 
 /* Name.Variable.Class */
 .vg {
-  color: #19177c;
+  color: #19177C;
 }
 
 /* Name.Variable.Global */
 .vi {
-  color: #19177c;
+  color: #19177C;
 }
 
 /* Name.Variable.Instance */
@@ -396,10 +396,21 @@ header .navigation .navbar .nav > li > a:last {
   line-height: 16px;
   margin-top: 6px;
 }
-.post-full .tag_box {
+.post-full .comment-count {
   border-top: 1px dotted #646464;
   padding-top: 10px;
   margin-top: 10px;
+}
+.post-full .tag_box li {
+  margin: 0;
+  padding-right: 2px;
+  padding-left: 0;
+}
+.post-full .tag_box li a:after {
+  content: ", ";
+}
+.post-full .tag_box li:last-child a:after {
+  content: "";
 }
 .post-full .content-wrapper h1,
 .post-full .content-wrapper h2,

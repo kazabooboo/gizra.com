@@ -6,15 +6,19 @@
 
       <div class="span2">
         <div class="date">{{ page.date | date_to_long_string }}</div>
-        <div class="author">By {{ page.author }}</div>
 
-        {% unless page.categories == empty %}
-        <ul class="tag_box inline">
-          <li><i class="icon-folder-open"></i></li>
-          {% assign categories_list = page.categories %}
-          {% include JB/categories_list %}
-        </ul>
-        {% endunless %}
+
+        {% if page.author == null %}
+          {% assign author = "Amitaibu" %}
+        {% else %}
+          {% assign author = page.author %}
+        {% endif %}
+
+        <div class="author">By {{site.authors[author].name}}</div>
+
+        <div class="comment-count">
+          <a href="{{page.url}}#disqus_thread"></a>
+        </div>
 
         {% unless page.tags == empty %}
         <ul class="tag_box inline">

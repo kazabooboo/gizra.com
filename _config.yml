@@ -20,20 +20,39 @@ author :
   feedburner : feedname
 
 authors:
-  amitaibu:
+  Amitaibu:
     name: Amitai Burstein
     title: CTO
-    nickname: amitaibu
     gravatar: c66919cb194f96c696c1da0c47354a6a
     twitter: amitaibu
     bio: Something about Amitaibu
   bricel:
     name: Brice Lenfant
     title: CEO
-    nickname: bricel
     gravatar: 12e480a364a5c19214f99b4dfe9a11d5
     twitter: bricel
     bio: Something about Bricel
+  niryariv:
+    name: Brice Lenfant
+    title: CEO
+    gravatar: 12e480a364a5c19214f99b4dfe9a11d5
+    twitter: bricel
+    bio: Something about Bricel
+  itamar:
+    name: Itamar Bar-Lev
+    title: Developer
+    gravatar: 12e480a364a5c19214f99b4dfe9a11d5
+    bio: Something about Itamar
+  RoySegall:
+    name: Roy Segall
+    title: Developer
+    gravatar: 12e480a364a5c19214f99b4dfe9a11d5
+    bio: Something about Roy
+  NofarG:
+    name: Nofar Gilor
+    title: Developer
+    gravatar: 12e480a364a5c19214f99b4dfe9a11d5
+    bio: Something about Roy
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt
@@ -142,4 +161,7 @@ JB :
   # and include your custom code. Your custom file must be defined at:
   #   ./_includes/custom/[HELPER]
   # where [HELPER] is the name of the helper you are overriding.
+
+  tags_list:
+    provider : "custom"
 
