@@ -38,9 +38,18 @@
           {{ content }}
 
           <div class="pagination">
+            <div class="border"></div>
+            <div class="previous">
             {% if page.previous %}
-            Previous post: <a href="{{ BASE_PATH }}{{ page.previous.url }}" >{{ page.previous.title }}</a>
+            <strong>Previous post:</strong> <a href="{{ BASE_PATH }}{{ page.previous.url }}" >{{ page.previous.title }}</a>
             {% endif %}
+            </div>
+
+            <div class="next">
+            {% if page.next %}
+              <strong>Next post:</strong> <a href="{{ BASE_PATH }}{{ page.next.url }}" >{{ page.next.title }}</a>
+            {% endif %}
+            </div>
           </div>
 
 

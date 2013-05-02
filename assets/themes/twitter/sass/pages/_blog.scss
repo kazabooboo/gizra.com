@@ -93,6 +93,25 @@
       color: $blue;
       text-decoration: underline;
     }
+
+    .pagination {
+      margin-top: 13px;
+      font-size: 16px;
+
+      .border {
+        border-top: 1px dotted $gray;
+        max-width: 140px;
+        margin-bottom: 14px;
+      }
+
+      .next {
+        margin-top: 5px;
+      }
+
+      a {
+        color: $orange;
+      }
+    }
   }
 
   .title-bg {

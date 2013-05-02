@@ -454,6 +454,21 @@ header .navigation .navbar .nav > li > a:last {
   color: #046596;
   text-decoration: underline;
 }
+.post-full .content-wrapper .pagination {
+  margin-top: 13px;
+  font-size: 16px;
+}
+.post-full .content-wrapper .pagination .border {
+  border-top: 1px dotted #646464;
+  max-width: 140px;
+  margin-bottom: 14px;
+}
+.post-full .content-wrapper .pagination .next {
+  margin-top: 5px;
+}
+.post-full .content-wrapper .pagination a {
+  color: #e06e5c;
+}
 .post-full .title-bg {
   margin-top: 75px;
   margin-bottom: 45px;
