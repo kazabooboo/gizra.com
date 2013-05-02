@@ -433,7 +433,7 @@ header .navigation .navbar .nav > li > a:last {
   font-size: 26px;
   line-height: 26px;
   margin-top: 3px;
-  margin-bottom: 23px;
+  margin-bottom: 20px;
 }
 .post-full .content-wrapper h2,
 .post-full .content-wrapper h3,
@@ -441,12 +441,18 @@ header .navigation .navbar .nav > li > a:last {
   color: black;
   font-weight: bold;
   font-size: 18px;
-  margin-top: 30px;
-  margin-bottom: 23px;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 35px;
 }
 .post-full .content-wrapper p {
   font-size: 18px;
-  line-height: 20px;
+  line-height: 27px;
+  margin-bottom: 10px;
+}
+.post-full .content-wrapper a {
+  color: #046596;
+  text-decoration: underline;
 }
 .post-full .title-bg {
   margin-top: 75px;
