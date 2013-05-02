@@ -401,10 +401,18 @@ header .navigation .navbar .nav > li > a:last {
   padding-top: 10px;
   margin-top: 10px;
 }
+.post-full .comment-count a {
+  color: #646464;
+  text-decoration: none;
+}
 .post-full .tag_box li {
   margin: 0;
   padding-right: 2px;
   padding-left: 0;
+}
+.post-full .tag_box li a {
+  font-size: 14px;
+  line-height: 14px;
 }
 .post-full .tag_box li a:after {
   content: ", ";
@@ -419,11 +427,26 @@ header .navigation .navbar .nav > li > a:last {
 .post-full .content-wrapper h5,
 .post-full .content-wrapper h6 {
   color: #046596;
+  text-transform: none;
 }
 .post-full .content-wrapper h1 {
   font-size: 26px;
   line-height: 26px;
-  margin-top: 0;
+  margin-top: 3px;
+  margin-bottom: 23px;
+}
+.post-full .content-wrapper h2,
+.post-full .content-wrapper h3,
+.post-full .content-wrapper h4 {
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 30px;
+  margin-bottom: 23px;
+}
+.post-full .content-wrapper p {
+  font-size: 18px;
+  line-height: 20px;
 }
 .post-full .title-bg {
   margin-top: 75px;

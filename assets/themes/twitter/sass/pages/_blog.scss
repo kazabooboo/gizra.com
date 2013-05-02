@@ -19,6 +19,11 @@
     border-top: 1px dotted $gray;
     padding-top: 10px;
     margin-top: 10px;
+
+    a {
+      color: $gray;
+      text-decoration: none;
+    }
   }
 
   .tag_box {
@@ -27,6 +32,11 @@
       margin: 0;
       padding-right: 2px;
       padding-left: 0;
+
+      a {
+        font-size: 14px;
+        line-height: 14px;
+      }
 
       a:after {
         content: ", ";
@@ -52,12 +62,29 @@
     h5,
     h6 {
       color: $blue;
+      text-transform: none;
     }
 
     h1 {
       font-size: 26px;
       line-height: 26px;
-      margin-top: 0;
+      margin-top: 3px;
+      margin-bottom: 23px;
+    }
+
+    h2,
+    h3,
+    h4 {
+      color: black;
+      font-weight: bold;
+      font-size: 18px;
+      margin-top: 30px;
+      margin-bottom: 23px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 20px;
     }
   }
 
