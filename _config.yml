@@ -26,12 +26,14 @@ authors:
     gravatar: c66919cb194f96c696c1da0c47354a6a
     twitter: amitaibu
     bio: Something about Amitaibu
+    homepage: true
   bricel:
     name: Brice Lenfant
     title: CEO
     gravatar: 12e480a364a5c19214f99b4dfe9a11d5
     twitter: bricel
     bio: Something about Bricel
+    homepage: true
   niryariv:
     name: Brice Lenfant
     title: CEO

@@ -52,6 +52,8 @@
             </div>
           </div>
 
+          {% assign author = site.authors[author] %}
+          {% include custom/author.html %}
 
           {% include JB/comments %}
           {% include custom/comments_count %}
