@@ -102,8 +102,9 @@ clients:
       </div>
       <div class="span4">
         <h3>Whois</h3>
-        {% for author in site.authors %}
-          {% if author[1].homepage == true %}
+        {% for authors in site.authors %}
+          {% if authors[1].homepage == true %}
+            {% assign author = authors[1] %}
             {% include custom/author.html %}
           {% endif %}
         {% endfor %}
