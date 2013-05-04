@@ -103,7 +103,6 @@ clients:
       <div class="span4">
         <h3>Whois</h3>
         {% for author in site.authors %}
-          {{ author | debug }}
           {% if author[1].homepage == true %}
             {% include custom/author.html %}
           {% endif %}
