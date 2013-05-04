@@ -601,22 +601,6 @@ body.home .main-container .contributions-row li.gallery-item .short-name-wrapper
   color: white;
   text-decoration: none;
 }
-body.home .main-container .info-row .person {
-  margin-bottom: 35px;
-}
-body.home .main-container .info-row .person .image-wrapper {
-  float: left;
-  margin-right: 15px;
-}
-body.home .main-container .info-row .person .text-wrapper {
-  margin-left: 95px;
-}
-body.home .main-container .info-row .person .text-wrapper .name {
-  font-weight: bold;
-}
-body.home .main-container .info-row .person .text-wrapper .title {
-  color: #646464;
-}
 body.home .main-container .info-row .quotes .flexslider {
   background: transparent;
 }
@@ -718,4 +702,21 @@ a.secondary {
 }
 a.secondary:after {
   content: " \00BB";
+}
+
+.person {
+  margin-bottom: 35px;
+}
+.person .image-wrapper {
+  float: left;
+  margin-right: 15px;
+}
+.person .text-wrapper {
+  margin-left: 95px;
+}
+.person .text-wrapper .name {
+  font-weight: bold;
+}
+.person .text-wrapper .title {
+  color: #646464;
 }
