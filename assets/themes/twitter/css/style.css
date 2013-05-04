@@ -1,3 +1,7 @@
+code {
+  color: #333333;
+}
+
 .hll {
   background-color: #ffffcc;
 }
@@ -371,17 +375,15 @@ header .navigation .navbar .nav > li > a:last {
 }
 
 @media (min-width: 768px) {
-  header {
+  body.home header {
     position: fixed;
     width: 100%;
     z-index: 1000;
   }
-
-  .main-container > section {
+  body.home .main-container > section {
     margin-top: 200px;
   }
-
-  .main-container > .content {
+  body.home .main-container > .content {
     margin-top: 110px;
   }
 }

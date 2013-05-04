@@ -47,18 +47,22 @@ header {
 
 @media (min-width: 768px) {
 
-  header {
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
-  }
+  body.home {
 
-  .main-container > section {
-    // Push content below the fixed header.
-    margin-top: 200px;
-  }
+    // Header should be fixed only on the homeopage.
+    header {
+      position: fixed;
+      width: 100%;
+      z-index: 1000;
+    }
 
-  .main-container > .content {
-    margin-top: 110px;
+    .main-container > section {
+      // Push content below the fixed header.
+      margin-top: 200px;
+    }
+
+    .main-container > .content {
+      margin-top: 110px;
+    }
   }
 }
