@@ -5,28 +5,8 @@
     <div class="row clearfix no-margin">
 
       <div class="span2">
-        <div class="date">{{ page.date | date_to_long_string }}</div>
-
-
-        {% if page.author == null %}
-          {% assign author = "Amitaibu" %}
-        {% else %}
-          {% assign author = page.author %}
-        {% endif %}
-
-        <div class="author">By {{site.authors[author].name}}</div>
-
-        <div class="comment-count">
-          <i class="icon-comment"></i><a href="{{page.url}}#disqus_thread"></a>
-        </div>
-
-        {% unless page.tags == empty %}
-        <ul class="tag_box inline">
-          <li><i class="icon-tags"></i></li>
-          {% assign tags_list = page.tags %}
-          {% include JB/tags_list %}
-        </ul>
-        {% endunless %}
+        {% assign post = page %}
+        {% include custom/post_sidebar.html %}
       </div>
 
       <div class="span10 content-wrapper">

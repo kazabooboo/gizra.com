@@ -494,6 +494,20 @@ header .navigation .navbar .nav > li > a:last {
   text-shadow: 0px 0px 1px #aaaaaa;
 }
 
+.post-teaser h2 a {
+  font-size: 26px;
+  line-height: 26px;
+  margin-top: 3px;
+  margin-bottom: 20px;
+  color: #046596;
+  text-transform: none;
+}
+.post-teaser p {
+  font-size: 18px;
+  line-height: 27px;
+  margin-bottom: 10px;
+}
+
 body.home a {
   color: #e06e5c;
 }

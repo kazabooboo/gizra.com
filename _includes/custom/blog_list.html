@@ -28,11 +28,25 @@ Usage:
 {% assign blog_list_offset = page.blog_list_page | times:posts_per_page %}
 {% for node in blog_list limit:4 offset:blog_list_offset %}
 {% if node.title != null %}
-  {% if page.url == node.url %}
-  <li class="active"><a href="{{ BASE_PATH }}{{node.url}}" class="active">{{node.title}}</a></li>
-  {% else %}
-  <li><a href="{{ BASE_PATH }}{{node.url}}">{{node.title}}</a></li>
-  {% endif %}
+
+<div class="row clearfix no-margin post-teaser">
+  <div class="span2">
+    {% assign post = node %}
+    {% include custom/post_sidebar.html %}
+  </div>
+
+  <div class="span10">
+    <h2><a href="{{ BASE_PATH }}{{node.url}}">{{node.title}}</a></h2>
+    <p>
+      {% if post.teaser %}
+      {{ post.teaser }}
+      {% else %}
+      {{ post.content | strip_html | truncatewords: 50 }}
+      {% endif %}
+    </p>
+  </div>
+</div>
+
 {% endif %}
 {% endfor %}
 {% assign blog_list = nil %}

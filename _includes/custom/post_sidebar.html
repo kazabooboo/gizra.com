@@ -1,0 +1,22 @@
+<div class="date">{{ post.date | date_to_long_string }}</div>
+
+
+{% if post.author == null %}
+{% assign author = "Amitaibu" %}
+{% else %}
+{% assign author = post.author %}
+{% endif %}
+
+<div class="author">By {{site.authors[author].name}}</div>
+
+<div class="comment-count">
+  <i class="icon-comment"></i><a href="{{post.url}}#disqus_thread"></a>
+</div>
+
+{% unless post.tags == empty %}
+<ul class="tag_box inline">
+  <li><i class="icon-tags"></i></li>
+  {% assign tags_list = post.tags %}
+  {% include JB/tags_list %}
+</ul>
+{% endunless %}
