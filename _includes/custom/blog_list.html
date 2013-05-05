@@ -55,21 +55,21 @@ Usage:
 
 <div id="post-pagination" class="pagination">
 
-  {% if blog_list_page > 1 %}
-  <p class="previous">
-    {% if blog_list_page == 2 %}
-    <a href="/blog">Previous</a>
-    {% else %}
-    <a href="/blog/page{{blog_list_page | minus:1}}">Previous</a>
-    {% endif %}
-  </p>
-  {% else %}
-  <p class="previous disabled">
-    <span>Previous</span>
-  </p>
-  {% endif %}
-
   <ul class="pages">
+    {% if blog_list_page > 1 %}
+    <li class="previous page">
+      {% if blog_list_page == 2 %}
+      <a href="/blog">Previous</a>
+      {% else %}
+      <a href="/blog/page{{blog_list_page | minus:1}}">Previous</a>
+      {% endif %}
+    </li>
+    {% else %}
+    <li class="previous page disabled">
+      <span>Previous</span>
+    </li>
+    {% endif %}
+
     <li class="page">
       {% if blog_list_page == 1 %}
       <span class="current-page">1</span>
@@ -87,17 +87,17 @@ Usage:
       {% endif %}
     </li>
     {% endfor %}
-  </ul>
 
-  {% if blog_list_page < total_pages %}
-  <p class="next">
-    <a href="/blog/page{{blog_list_page | plus:1}}">Next</a>
-  </p>
-  {% else %}
-  <p class="next disabled">
-    <span>Next</span>
-  </p>
-  {% endif %}
+    {% if blog_list_page < total_pages %}
+    <li class="page next">
+      <a href="/blog/page{{blog_list_page | plus:1}}">Next</a>
+    </li>
+    {% else %}
+    <li class="next page disabled">
+      <span>Next</span>
+    </li>
+    {% endif %}
+  </ul>
 
 </div>
 
