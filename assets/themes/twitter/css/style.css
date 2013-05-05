@@ -387,42 +387,6 @@ header .navigation .navbar .nav > li > a:last {
     margin-top: 110px;
   }
 }
-.post-full .date {
-  color: #646464;
-  font-size: 15px;
-  line-height: 15px;
-  margin-top: 3px;
-}
-.post-full .author {
-  font-size: 16px;
-  line-height: 16px;
-  margin-top: 6px;
-}
-.post-full .comment-count {
-  border-top: 1px dotted #646464;
-  padding-top: 10px;
-  margin-top: 10px;
-}
-.post-full .comment-count a {
-  font-size: 14px;
-  line-height: 14px;
-  margin-left: 5px;
-}
-.post-full .tag_box li {
-  margin: 0;
-  padding-right: 2px;
-  padding-left: 0;
-}
-.post-full .tag_box li a {
-  font-size: 14px;
-  line-height: 14px;
-}
-.post-full .tag_box li a:after {
-  content: ", ";
-}
-.post-full .tag_box li:last-child a:after {
-  content: "";
-}
 .post-full .content-wrapper h1,
 .post-full .content-wrapper h2,
 .post-full .content-wrapper h3,
@@ -494,11 +458,17 @@ header .navigation .navbar .nav > li > a:last {
   text-shadow: 0px 0px 1px #aaaaaa;
 }
 
-.post-teaser h2 a {
+.post-teaser {
+  margin-bottom: 50px;
+}
+.post-teaser h2 {
+  margin-top: 0;
   font-size: 26px;
   line-height: 26px;
   margin-top: 3px;
   margin-bottom: 20px;
+}
+.post-teaser h2 a {
   color: #046596;
   text-transform: none;
 }
@@ -506,6 +476,51 @@ header .navigation .navbar .nav > li > a:last {
   font-size: 18px;
   line-height: 27px;
   margin-bottom: 10px;
+}
+
+.post-full .date,
+.post-teaser .date {
+  color: #646464;
+  font-size: 15px;
+  line-height: 15px;
+  margin-top: 3px;
+}
+.post-full .author,
+.post-teaser .author {
+  font-size: 16px;
+  line-height: 16px;
+  margin-top: 6px;
+}
+.post-full .comment-count,
+.post-teaser .comment-count {
+  border-top: 1px dotted #646464;
+  padding-top: 10px;
+  margin-top: 10px;
+}
+.post-full .comment-count a,
+.post-teaser .comment-count a {
+  font-size: 14px;
+  line-height: 14px;
+  margin-left: 5px;
+}
+.post-full .tag_box li,
+.post-teaser .tag_box li {
+  margin: 0;
+  padding-right: 2px;
+  padding-left: 0;
+}
+.post-full .tag_box li a,
+.post-teaser .tag_box li a {
+  font-size: 14px;
+  line-height: 14px;
+}
+.post-full .tag_box li a:after,
+.post-teaser .tag_box li a:after {
+  content: ", ";
+}
+.post-full .tag_box li:last-child a:after,
+.post-teaser .tag_box li:last-child a:after {
+  content: "";
 }
 
 body.home a {

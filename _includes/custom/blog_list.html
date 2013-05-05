@@ -29,7 +29,7 @@ Usage:
 {% for node in blog_list limit:4 offset:blog_list_offset %}
 {% if node.title != null %}
 
-<div class="row clearfix no-margin post-teaser">
+<div class="row clearfix post-teaser">
   <div class="span2">
     {% assign post = node %}
     {% include custom/post_sidebar.html %}
@@ -100,8 +100,5 @@ Usage:
   {% endif %}
 
 </div>
-
-
-<a href="http://gizra.com/content/message-subscribe-new-subscription-system#disqus_thread">Second article</a>
 
 {% include custom/comments_count %}
