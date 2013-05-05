@@ -403,6 +403,11 @@ header .navigation .navbar .nav > li > a:last {
   padding-top: 10px;
   margin-top: 10px;
 }
+.post-full .comment-count a {
+  font-size: 14px;
+  line-height: 14px;
+  margin-left: 5px;
+}
 .post-full .tag_box li {
   margin: 0;
   padding-right: 2px;
