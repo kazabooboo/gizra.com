@@ -523,6 +523,27 @@ header .navigation .navbar .nav > li > a:last {
   content: "";
 }
 
+.body.blog-teaser .page-header {
+  margin-top: 75px;
+  margin-bottom: 45px;
+  color: #e06e5c;
+  border-bottom: 1px dotted #e06e5c;
+  padding: 0;
+}
+.body.blog-teaser .page-header h1 {
+  background: url(../images/background.png);
+  padding-right: 7px;
+  font-family: Abril Fatface;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 18px;
+  text-decoration: none;
+  color: #e06e5c;
+  text-shadow: 0px 0px 1px #aaaaaa;
+  text-transform: lowercase;
+}
+
 body.home a {
   color: #e06e5c;
 }
