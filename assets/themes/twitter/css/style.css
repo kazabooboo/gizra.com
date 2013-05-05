@@ -482,13 +482,15 @@ header .navigation .navbar .nav > li > a:last {
   padding: 0;
   line-height: 10px;
 }
-.post-full .title-bg span {
+.post-full .title-bg a {
   background: url(../images/background.png);
   padding-right: 7px;
   font-family: Abril Fatface;
   font-style: normal;
   font-weight: 400;
   font-size: 50px;
+  text-decoration: none;
+  color: #e06e5c;
   text-shadow: 0px 0px 1px #aaaaaa;
 }
 
