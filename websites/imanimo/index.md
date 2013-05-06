@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: website
 title: "Imanimo"
 description: "Fashion catalogue for pregnant women"
 category: website

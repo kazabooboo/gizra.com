@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: website
 title: "Telem"
 description: "National chain of Psychotherapists"
 category: website

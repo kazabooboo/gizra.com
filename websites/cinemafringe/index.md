@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: website
 title: "Cinema Fringe"
 description: "Collaboration platform for filmmakers"
 category: website
