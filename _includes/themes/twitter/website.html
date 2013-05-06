@@ -11,7 +11,7 @@
           <ul class="slides">
             {% assign count = 1 %}
             {% for image in page.images %}
-              <li><img src="{{ page.url }}/{{ count }}.jpg" /></li>
+              <li><img src="{{ BASE_PATH }}/{{ page.url }}/{{ count }}.jpg" /></li>
             {% assign count=count | plus:1 %}
             </li>
             {% endfor %}
