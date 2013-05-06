@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: website
 title: "Medico"
 description: "High quality health reference information"
 category: website

@@ -436,27 +436,6 @@ header .navigation .navbar .nav > li > a:last {
 .post-full .content-wrapper .pagination a {
   color: #e06e5c;
 }
-.post-full .title-bg {
-  margin-top: 75px;
-  margin-bottom: 45px;
-  color: #e06e5c;
-  background: transparent;
-  text-align: left;
-  border-bottom: 1px dotted #e06e5c;
-  padding: 0;
-  line-height: 10px;
-}
-.post-full .title-bg a {
-  background: url(../images/background.png);
-  padding-right: 7px;
-  font-family: Abril Fatface;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 50px;
-  text-decoration: none;
-  color: #e06e5c;
-  text-shadow: 0px 0px 1px #aaaaaa;
-}
 
 .post-teaser {
   margin-bottom: 50px;
@@ -795,4 +774,26 @@ a.secondary:after {
 }
 .person .text-wrapper .title {
   color: #646464;
+}
+
+.page-title-bg {
+  margin-top: 75px;
+  margin-bottom: 45px;
+  color: #e06e5c;
+  background: transparent;
+  text-align: left;
+  border-bottom: 1px dotted #e06e5c;
+  padding: 0;
+  line-height: 10px;
+}
+.page-title-bg a {
+  background: url(../images/background.png);
+  padding-right: 7px;
+  font-family: Abril Fatface;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 50px;
+  text-decoration: none;
+  color: #e06e5c;
+  text-shadow: 0px 0px 1px #aaaaaa;
 }
