@@ -13,7 +13,7 @@ code {
 
 /* Comment */
 .err {
-  border: 1px solid red;
+  border: 1px solid #FF0000;
 }
 
 /* Error */
@@ -35,7 +35,7 @@ code {
 
 /* Comment.Multiline */
 .cp {
-  color: #bc7a00;
+  color: #BC7A00;
 }
 
 /* Comment.Preproc */
@@ -52,7 +52,7 @@ code {
 
 /* Comment.Special */
 .gd {
-  color: #a00000;
+  color: #A00000;
 }
 
 /* Generic.Deleted */
@@ -62,7 +62,7 @@ code {
 
 /* Generic.Emph */
 .gr {
-  color: red;
+  color: #FF0000;
 }
 
 /* Generic.Error */
@@ -73,7 +73,7 @@ code {
 
 /* Generic.Heading */
 .gi {
-  color: #00a000;
+  color: #00A000;
 }
 
 /* Generic.Inserted */
@@ -100,7 +100,7 @@ code {
 
 /* Generic.Subheading */
 .gt {
-  color: #0044dd;
+  color: #0044DD;
 }
 
 /* Generic.Traceback */
@@ -123,7 +123,7 @@ code {
 
 /* Keyword.Namespace */
 .kp {
-  color: green;
+  color: #008000;
 }
 
 /* Keyword.Pseudo */
@@ -134,7 +134,7 @@ code {
 
 /* Keyword.Reserved */
 .kt {
-  color: #b00040;
+  color: #B00040;
 }
 
 /* Keyword.Type */
@@ -144,17 +144,17 @@ code {
 
 /* Literal.Number */
 .s {
-  color: #ba2121;
+  color: #BA2121;
 }
 
 /* Literal.String */
 .na {
-  color: #7d9029;
+  color: #7D9029;
 }
 
 /* Name.Attribute */
 .nb {
-  color: green;
+  color: #008000;
 }
 
 /* Name.Builtin */
@@ -170,7 +170,7 @@ code {
 
 /* Name.Constant */
 .nd {
-  color: #aa22ff;
+  color: #AA22FF;
 }
 
 /* Name.Decorator */
@@ -187,12 +187,12 @@ code {
 
 /* Name.Exception */
 .nf {
-  color: blue;
+  color: #0000FF;
 }
 
 /* Name.Function */
 .nl {
-  color: #a0a000;
+  color: #A0A000;
 }
 
 /* Name.Label */
@@ -209,7 +209,7 @@ code {
 
 /* Name.Tag */
 .nv {
-  color: #19177c;
+  color: #19177C;
 }
 
 /* Name.Variable */
@@ -245,12 +245,12 @@ code {
 
 /* Literal.Number.Oct */
 .sb {
-  color: #ba2121;
+  color: #BA2121;
 }
 
 /* Literal.String.Backtick */
 .sc {
-  color: #ba2121;
+  color: #BA2121;
 }
 
 /* Literal.String.Char */
@@ -261,7 +261,7 @@ code {
 
 /* Literal.String.Doc */
 .s2 {
-  color: #ba2121;
+  color: #BA2121;
 }
 
 /* Literal.String.Double */
@@ -272,7 +272,7 @@ code {
 
 /* Literal.String.Escape */
 .sh {
-  color: #ba2121;
+  color: #BA2121;
 }
 
 /* Literal.String.Heredoc */
@@ -283,42 +283,42 @@ code {
 
 /* Literal.String.Interpol */
 .sx {
-  color: green;
+  color: #008000;
 }
 
 /* Literal.String.Other */
 .sr {
-  color: #bb6688;
+  color: #BB6688;
 }
 
 /* Literal.String.Regex */
 .s1 {
-  color: #ba2121;
+  color: #BA2121;
 }
 
 /* Literal.String.Single */
 .ss {
-  color: #19177c;
+  color: #19177C;
 }
 
 /* Literal.String.Symbol */
 .bp {
-  color: green;
+  color: #008000;
 }
 
 /* Name.Builtin.Pseudo */
 .vc {
-  color: #19177c;
+  color: #19177C;
 }
 
 /* Name.Variable.Class */
 .vg {
-  color: #19177c;
+  color: #19177C;
 }
 
 /* Name.Variable.Global */
 .vi {
-  color: #19177c;
+  color: #19177C;
 }
 
 /* Name.Variable.Instance */
@@ -574,23 +574,32 @@ body.home .main-container .gallery-row {
 }
 body.home .main-container .gallery-row h2.title-bg {
   position: relative;
-  background: transparent;
+  margin-top: 20px;
   text-align: center;
-  border-top: none;
-  border-bottom: 1px dotted #e06e5c;
-  line-height: 0.1em;
-  margin: 10px 0 20px;
-  width: 100%;
-  padding: 0;
-  font-size: 40px;
+  background: transparent;
+  border: none;
+}
+body.home .main-container .gallery-row h2.title-bg:before {
+  content: "";
+  display: block;
+  border-top: 1px dotted #e06e5c;
+  width: 99%;
+  height: 1px;
+  position: absolute;
+  top: 50%;
+  z-index: 1;
 }
 body.home .main-container .gallery-row h2.title-bg a {
+  background: transparent;
+  padding: 0 20px;
+  position: relative;
+  z-index: 5;
   background: url(../images/background.png);
   text-decoration: none;
   text-transform: none;
+  line-height: 50px;
 }
 body.home .main-container .gallery-row h2.title-bg a.primary {
-  padding: 0 25px;
   font-family: Abril Fatface;
   font-style: normal;
   font-weight: 400;
@@ -602,6 +611,7 @@ body.home .main-container .gallery-row h2.title-bg a.secondary {
   right: 0;
   text-align: right;
   padding-left: 5px;
+  padding-right: 0;
 }
 body.home .main-container .gallery-row .secondary-title {
   text-align: center;
