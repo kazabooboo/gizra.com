@@ -5,9 +5,21 @@
     <div class="row clearfix no-margin">
 
       <div class="span6">
+
+
+        <div class="flexslider">
+          <ul class="slides">
+            {% assign count = 1 %}
+            {% for image in page.images %}
+              <li><img src="{{ page.url }}/{{ count }}.jpg" /></li>
+            {% assign count=count | plus:1 %}
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
       </div>
 
-      <div class="span6 content-wrapper">
+      <div class="span6">
         <div class="page-header">
           <h1>{{ page.title }} {% if page.tagline %}<small>{{page.tagline}}</small>{% endif %}</h1>
         </div>
