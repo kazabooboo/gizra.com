@@ -12,8 +12,7 @@ jQuery(document).ready(function($) {
 
     // Get the top offset of the target anchor
     var $targetTop = $('#' + target).offset().top - 120;
-
-    event.preventDefault();
+    console.log($targetTop);
 
     // Make sure the fragment is updated in the URL.
     history.pushState(null, '', '#' + target);
@@ -22,6 +21,7 @@ jQuery(document).ready(function($) {
 
   $(".scroll").click(function(event){
     gizra.scrollTop(this);
+    event.preventDefault();
   });
 
   gizra.scrollTop(window.location);
