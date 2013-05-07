@@ -82,3 +82,30 @@ a.secondary {
     @include single-text-shadow;
   }
 }
+
+body.list-page {
+
+  .page-header {
+    margin-top: 100px;
+    margin-bottom: 45px;
+    color: $orange;
+    border-bottom: 1px dotted $orange;
+    padding: 0;
+
+    h1 {
+      // This makes sure the <h1> covers the border.
+      float: left;
+      margin-top: -45px;
+      background: url(../images/background.png);
+      padding-right :7px;
+      font-family: Abril Fatface;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 50px;
+      line-height: 50px;
+      color: $orange;
+      @include single-text-shadow;
+      text-transform: lowercase;
+    }
+  }
+}

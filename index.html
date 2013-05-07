@@ -36,8 +36,10 @@ clients:
 
       <ul class="gallery-post-grid holder">
 
+        {% assign count = 1 %}
         {% for page in site.pages %}
-        {% if page.category contains 'website' %}
+        {% if page.category contains 'website' and count <= 4 %}
+        {% assign count=count | plus:1 %}
         <li  class="span3 gallery-item">
           <a href="{{ page.url }}"><img src="{{ page.url }}/thumb.jpg"></a>
           <span class="project-details"><a href="{{ page.url }}">{{ page.title }}</a>{{ page.description }}</span>
