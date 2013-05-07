@@ -12,6 +12,7 @@ It goes missing, and without it developing can go wrong very quickly. Also, star
 Oh, and you can also migrate data from other (older) sites.
 
 <h3>What is it good for?</h3>
+
 Migrate fills up your Drupal installation profile, or just fresh new module, with appropriate content that helps the user or developer experiment with it, so the new module’s learning curve is easier. When developing, if you mess something up - say, drop the user table - it won’t be as bad as it could’ve been, since you kept around a backup in a CSV file. Some company want their site upgraded? No problem. Migrate can import from CSV, SQL databases, XML and much more.
 
 _For the less technical: if you think I'm just naming random letters, relax: if you have Microsoft Excel, or even OpenOffice (it's free!), you can start creating content before you even have a site. Just open up a new table in either software, and save it as a CSV file. Your developer should be able to guide you through in a few minutes. If he can’t, well, you might want to consider a different one.
@@ -29,6 +30,7 @@ Not only time is saved. Dave receives less stress from Sam while developing, sin
 
 Data storage (a.k.a - Sam’s side of the story)
 The migrate module reads information stored in .csv files. An example of one of these is shown below:
+
 <img src="/assets/images/legacy/s025.png" />
 
 Notice that ‘company’ and ‘status’ columns are filled with references to other entities’ IDs.
@@ -72,6 +74,7 @@ class garmentboxMeasurementUnitTerms extends garmentboxMigration {
 
  And that’s it. ```garmentboxMigration``` takes care of stitching everything together, and putting the data in the content’s fields. You can obviously extend this abstract class to fit your own business logic.
 Importing files and images is also easy:
+
 <img src="/assets/images/legacy/s029.png" />
 
 ```php
