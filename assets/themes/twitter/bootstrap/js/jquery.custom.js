@@ -6,19 +6,19 @@ var $holder = $('ul.holder');
 var $data = $holder.clone();
 
 $('#filterOptions li a').click(function(e) {
-	
+
 	$('#filterOptions li').removeClass('active');
-	
+
 	var $filterType = $(this).attr('class');
 	$(this).parent().addClass('active');
-	
+
 	if ($filterType == 'all') {
 		var $filteredData = $data.find('li');
-	} 
+	}
 	else {
 		var $filteredData = $data.find('li[data-type~=' + $filterType + ']');
 	}
-	
+
 	// call quicksand
 	$holder.quicksand($filteredData, {
 		duration: 800,
@@ -39,8 +39,8 @@ $("[rel=popover]").hover(function(){
 
 ////////// Function for gallery rollovers //////////
 galleryHover();
-function galleryHover() {		
-	$('.gallery-item').hover(function(){		
+function galleryHover() {
+	$('.gallery-item').hover(function(){
 			$(this).find('.gallery-hover-3col, .gallery-hover-4col, .gallery-hover-6col').stop('true','true').fadeTo("normal",1);
 	},
 		function(){
@@ -50,8 +50,8 @@ function galleryHover() {
 
 ////////// Function for blog post rollovers //////////
 postHover();
-function postHover() {		
-	$('.blog-post-item').hover(function(){		
+function postHover() {
+	$('.blog-post-item').hover(function(){
 			$(this).find('.blog-post-hover').stop('true','true').fadeTo("normal",1);
 	},
 		function(){
@@ -62,14 +62,14 @@ function postHover() {
 
 ////////// Function for footer image feed rollovers //////////
 imgfeedHover();
-function imgfeedHover() {		
-	$('.img-feed a').hover(function(){		
+function imgfeedHover() {
+	$('.img-feed a').hover(function(){
 			$(this).stop('true','true').fadeTo("normal",.6);
 	},
 		function(){
 			$(this).stop('true','true').fadeTo("normal",1);
 	});
-} 
+}
 
 ////////// CSS Fix //////////
  $(".post-list li:first-child").css("padding-top", "0px");
@@ -85,22 +85,22 @@ function imgfeedHover() {
 	});
 
 	$("a[rel^='prettyPhoto']").prettyPhoto({social_tools:false, deeplinking: false });
-} 
+}
 
 
 ////////// Back to Top //////////
 	$(function() {
 	$(window).scroll(function() {
 		if($(this).scrollTop() != 0) {
-			$('#toTop').fadeIn();	
+			$('#toTop').fadeIn();
 		} else {
 			$('#toTop').fadeOut();
 		}
 	});
- 
+
 	$('#toTop').click(function() {
 		$('body,html').animate({scrollTop:0},800);
-	});	
+	});
 });
 
 }); // End document.ready
