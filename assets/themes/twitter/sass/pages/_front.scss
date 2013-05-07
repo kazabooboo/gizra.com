@@ -37,14 +37,6 @@ body.home {
 
     .gallery-row {
       margin-bottom: 0;
-
-      .secondary-title {
-        text-align: center;
-        color: $orange;
-        font-size: 16px;
-        line-height: 30px;
-        margin-top: -8px;
-      }
     }
 
     .contributions-row {
@@ -212,15 +204,42 @@ body.home {
     .contact-row {
       background: transparent;
       margin-top: 35px;
+
+      address {
+        margin-top: 25px;
+        text-align: center;
+        font-size: 18px;
+        line-height: 30px;
+
+        a {
+          text-decoration: none;
+
+          &.telephone {
+            color: $darkGray;
+          }
+
+          &.email {
+            color: $blue;
+          }
+        }
+      }
+    }
+
+    h2.title-bg {
+      @include title-bg;
+    }
+
+    .secondary-title {
+      text-align: center;
+      color: $orange;
+      font-size: 16px;
+      line-height: 30px;
+      margin-top: -8px;
     }
 
     h3 {
       color: $orange;
       text-transform: none;
-    }
-
-    h2.title-bg {
-      @include title-bg;
     }
   }
 }
