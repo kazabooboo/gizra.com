@@ -38,11 +38,6 @@ body.home {
     .gallery-row {
       margin-bottom: 0;
 
-      h2.title-bg {
-        @include title-bg;
-
-      }
-
       .secondary-title {
         text-align: center;
         color: $orange;
@@ -222,6 +217,10 @@ body.home {
     h3 {
       color: $orange;
       text-transform: none;
+    }
+
+    h2.title-bg {
+      @include title-bg;
     }
   }
 }

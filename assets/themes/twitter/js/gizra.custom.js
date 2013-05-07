@@ -26,7 +26,7 @@ jQuery(document).ready(function($) {
   gizra.scrollTop(window.location);
 
 
-////////// Back to Top //////////
+  ////////// Back to Top //////////
   $(window).scroll(function() {
     if($(this).scrollTop() != 0) {
       $('#toTop').fadeIn();
@@ -37,5 +37,18 @@ jQuery(document).ready(function($) {
 
   $('#toTop').click(function() {
     $('body,html').animate({scrollTop:0},800);
+  });
+
+
+  // Flexslider.
+  $(window).load(function(){
+
+    $('.flexslider').flexslider({
+      animation: "slide",
+      slideshow: true,
+      start: function(slider){
+        $('body').removeClass('loading');
+      }
+    });
   });
 });
