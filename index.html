@@ -28,7 +28,7 @@ clients:
 <div class="row gallery-row websites-row"><!-- Begin Websites Row -->
 
   <div class="span12">
-    <h2 class="title-bg"><a class="primary" id="work">work</a><a class="secondary hidden-phone" href="{{ BASE_PATH }}//portfolio">See our whole portfolio</a></h2>
+    <h2 class="title-bg"><a class="primary" id="work">work</a><a class="secondary hidden-phone" href="/portfolio">See our whole portfolio</a></h2>
 
     <!-- Website  Thumbnails
     ================================================== -->
@@ -39,8 +39,8 @@ clients:
         {% for page in site.pages %}
         {% if page.category contains 'website' %}
         <li  class="span3 gallery-item">
-          <a href="{{ BASE_PATH }}/{{ page.url }}"><img src="{{ BASE_PATH }}/{{ page.url }}/thumb.jpg"></a>
-          <span class="project-details"><a href="{{ BASE_PATH }}/{{ page.url }}">{{ page.title }}</a>{{ page.description }}</span>
+          <a href="{{ page.url }}"><img src="{{ page.url }}/thumb.jpg"></a>
+          <span class="project-details"><a href="{{ page.url }}">{{ page.title }}</a>{{ page.description }}</span>
         </li>
         {% endif %}
         {% endfor %}
@@ -71,9 +71,9 @@ clients:
 
         <li  class="span3 gallery-item">
           <div class="short-name-wrapper box-{{ count }}">
-            <div class="short-name"><a href="{{ BASE_PATH }}/{{ page.url }}">{{ page.short }}</a></div>
+            <div class="short-name"><a href="{{ page.url }}">{{ page.short }}</a></div>
           </div>
-          <span class="project-details"><a href="{{ BASE_PATH }}/{{ page.url }}">{{ page.title }}</a>{{ page.description }}</span>
+          <span class="project-details"><a href="{{ page.url }}">{{ page.title }}</a>{{ page.description }}</span>
         </li>
         {% endif %}
         {% endfor %}
@@ -193,7 +193,7 @@ clients:
 
         <ul class="social-icons">
           <li><a href="#" class="social-icon twitter"></a></li>
-          <li><a href="{{ BASE_PATH }}/taxonomy/term/1/all/feed/" class="social-icon rss"></a></li>
+          <li><a href="/taxonomy/term/1/all/feed/" class="social-icon rss"></a></li>
         </ul>
       </div>
       <div class="span4 footer-col">
