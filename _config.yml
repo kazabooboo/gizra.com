@@ -13,41 +13,36 @@ markdown: redcarpet
 title : Gizra.com
 
 authors:
-  Amitaibu:
-    name: Amitai Burstein
-    title: CTO
-    gravatar: c66919cb194f96c696c1da0c47354a6a
-    twitter: amitaibu
-    bio: Something about Amitaibu
-    homepage: true
   bricel:
     name: Brice Lenfant
     title: CEO
-    gravatar: 12e480a364a5c19214f99b4dfe9a11d5
     twitter: bricel
     bio: Something about Bricel
     homepage: true
-  niryariv:
-    name: Brice Lenfant
-    title: CEO
-    gravatar: 12e480a364a5c19214f99b4dfe9a11d5
-    twitter: bricel
-    bio: Something about Bricel
   itamar:
     name: Itamar Bar-Lev
     title: Developer
-    gravatar: 12e480a364a5c19214f99b4dfe9a11d5
     bio: Something about Itamar
   RoySegall:
     name: Roy Segall
     title: Developer
-    gravatar: 12e480a364a5c19214f99b4dfe9a11d5
     bio: Something about Roy
   NofarG:
     name: Nofar Gilor
     title: Developer
-    gravatar: 12e480a364a5c19214f99b4dfe9a11d5
-    bio: Something about Roy
+    bio: Something about Nofar
+  niryariv:
+    name: Nir Yariv
+    title: BizDev
+    twitter: niryariv
+    bio: Something about Nir
+    homepage: true
+  Amitaibu:
+    name: Amitai Burstein
+    title: CTO
+    twitter: amitaibu
+    bio: Something about Amitaibu
+    homepage: true
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt
