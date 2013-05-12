@@ -31,9 +31,10 @@ Rounded corners is no longer a "dumb" wrapper for the jQuery plugin, but rather 
   rounded_corners_add_corners($commands);
 ?>
 ```
+
 As a bonus feature you can also add rounded corners on images! Here's a summary from the README.txt:
 
-Round corners can be used on images, by selecting the wrapping div (*not* the ```<img>``` itself), and by settings the "image wrapper" property to TRUE. for example, consider the following HTML:
+Round corners can be used on images, by selecting the wrapping div (*not* the ``<img>`` itself), and by settings the "image wrapper" property to TRUE. for example, consider the following HTML:
 
 ```
 <div class="image-wrapper">
@@ -42,6 +43,7 @@ Round corners can be used on images, by selecting the wrapping div (*not* the ``
 ```
 
 And the PHP code:
+
 ```php
 <?php
   $commands = array();
