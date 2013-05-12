@@ -24,6 +24,7 @@ Next, create a content type called “Banner rotator” with 4 fields:
 </ul>
 
 Next add a View, as in the image.
+
 <img src="/assets/images/legacy/Selection_002.png" />
 
 I wanted that only the picture will be “rotated” therefore I exposed every field except for the image field.
