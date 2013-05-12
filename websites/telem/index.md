@@ -1,7 +1,7 @@
 ---
 layout: website
 title: "Telem"
-description: "National chain of Psychotherapists"
+description: "National chain of psychotherapists"
 category: website
 permalink: /
 ---
