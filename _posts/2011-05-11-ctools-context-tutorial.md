@@ -78,7 +78,7 @@ As you can see, it didn't take much to get the context working, but it gives a l
 
 <ul>
 <li>Plugins without satisfied context will not appear in the plugins list, so a user can't add them by mistake</li>
-<li>There is one single way for plugins to get a context, unlike "dumb" blocks that each one needs to find out where they are (e.g. ```menu_get_item()``` over and over again).</li>
+<li>There is one single way for plugins to get a context, unlike "dumb" blocks that each one needs to find out where they are (e.g. ``menu_get_item()`` over and over again).</li>
 </ul>
 
 If you listen to talks about Butler module, and having a plugin and context system in D8 - it will probably very similar or at least learn a lot from CTools plugins and context system, so you know you are on the right path.
