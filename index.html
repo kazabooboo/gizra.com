@@ -133,10 +133,12 @@ clients:
       <div class="span4 whois">
         <h3>Whois</h3>
         {% for authors in site.authors %}
-          {% if authors[1].homepage == true %}
-            {% assign author = authors[1] %}
-            {% include custom/author.html %}
-          {% endif %}
+          {% for author_info in authors %}
+            {% if author_info[1].homepage == true %}
+              {% assign author = author_info[1] %}
+              {% include custom/author.html %}
+            {% endif %}
+          {% endfor %}
         {% endfor %}
       </div>
 

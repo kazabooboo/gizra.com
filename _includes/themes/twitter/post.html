@@ -32,8 +32,14 @@
             </div>
           </div>
 
-          {% assign author = site.authors[author]} %}
-          {% include custom/author.html %}
+          {% for authors in site.authors %}
+            {% for author_info in authors %}
+              {% if author_info[0] == author %}
+                {% assign author = author_info[1] %}
+              {% include custom/author.html %}
+            {% endif %}
+            {% endfor %}
+          {% endfor %}
 
           {% include JB/comments %}
           {% include custom/comments_count %}

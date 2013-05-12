@@ -13,36 +13,38 @@ markdown: redcarpet
 title : Gizra.com
 
 authors:
-  bricel:
-    name: Brice Lenfant
-    title: CEO
-    twitter: bricel
-    bio: brice@gizra.com
-    homepage: true
-  itamar:
-    name: Itamar Bar-Lev
-    title: Developer
-    bio: Something about Itamar
-  RoySegall:
-    name: Roy Segall
-    title: Developer
-    bio: Something about Roy
-  NofarG:
-    name: Nofar Gilor
-    title: Developer
-    bio: Something about Nofar
-  niryariv:
-    name: Nir Yariv
-    title: Projects Lead
-    twitter: niryariv
-    bio: nir@gizra.com
-    homepage: true
-  Amitaibu:
-    name: Amitai Burstein
-    title: CTO
-    twitter: amitaibu
-    bio: amitai@gizra.com
-    homepage: true
+  - Amitaibu:
+      name: Amitai Burstein
+      title: CTO, Co-Owner
+      twitter: amitaibu
+      bio: Maintainer of Organic groups, the Message stack, and co-maintainer of Drupal 8's Entity reference. Also likes climbing boulders.
+      homepage: true
+  - bricel:
+      name: Brice Lenfant
+      title: CEO, Co-Owner
+      twitter: bricel
+      bio: Web services, migrations, feeds and Squash are his passion.
+      homepage: true
+  - niryariv:
+      name: Nir Yariv
+      title: Projects Lead
+      twitter: niryariv
+      bio: nir@gizra.com
+      homepage: true
+  - NofarG:
+      name: Nofar Gilor
+      title: Developer
+      bio: Something about Nofar
+  - itamar:
+      name: Itamar Bar-Lev
+      title: Developer
+      bio: Something about Itamar
+  - RoySegall:
+      name: Roy Segall
+      title: Developer
+      bio: Something about Roy
+
+
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt
