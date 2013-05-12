@@ -32,9 +32,12 @@
       line-height: 35px;
     }
 
-    p {
+    p, li {
       font-size: 18px;
       line-height: 27px;
+    }
+
+    p {
       margin-bottom: 10px;
     }
 
@@ -80,9 +83,12 @@
     }
   }
 
-  p {
+  p, li {
     font-size: 18px;
     line-height: 27px;
+  }
+
+  p {
     margin-bottom: 10px;
   }
 }
