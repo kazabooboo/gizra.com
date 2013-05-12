@@ -172,7 +172,7 @@ clients:
       <ul class="gallery-post-grid holder">
         {% for client in page.clients %}
         <li  class="span2 gallery-item">
-          <img src="/assets/images/clients/{{ client.name}}.png" title="{{ client.alt }}" />
+          <a href="{{ client.url }}"><img src="/assets/images/clients/{{ client.name}}.png" title="{{ client.alt }}" /></a>
         </li>
         {% endfor %}
       </ul>
