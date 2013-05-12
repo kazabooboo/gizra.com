@@ -1,7 +1,7 @@
 ---
 layout: website
 title: "Medico"
-description: "Multi-lingual health related social network"
+description: Multi-lingual health information site and social network
 category: website
 permalink: /
 site_url: "http://medico.com"
