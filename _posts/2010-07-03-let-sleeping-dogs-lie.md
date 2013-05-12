@@ -11,7 +11,7 @@ Here's the story in one (code) line:
 
 ```
 find ./ -name *.* -type f -exec s -i "s/group/og/g" '{}' \;
-```<br/>
+```
 
 For the humans amongst us, I'll explain. As part of the rewrite of Organic groups to Drupal 7, I thought that the name also deserves a rename -- to follow Drupal's naming standards. Since there weren't enough votes in the <a href="http://groups.drupal.org/node/75988/">poll</a> in g.d.o I've decided _not to go with the change. OG module will keep its name - although in the UI we will use "Group" (the same way as node is refereed to as content).
 
