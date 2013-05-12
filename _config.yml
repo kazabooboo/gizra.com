@@ -17,7 +17,7 @@ authors:
     name: Brice Lenfant
     title: CEO
     twitter: bricel
-    bio: Something about Bricel
+    bio: brice@gizra.com
     homepage: true
   itamar:
     name: Itamar Bar-Lev
@@ -33,15 +33,15 @@ authors:
     bio: Something about Nofar
   niryariv:
     name: Nir Yariv
-    title: BizDev
+    title: Projects Lead
     twitter: niryariv
-    bio: Something about Nir
+    bio: nir@gizra.com
     homepage: true
   Amitaibu:
     name: Amitai Burstein
     title: CTO
     twitter: amitaibu
-    bio: Something about Amitaibu
+    bio: amitai@gizra.com
     homepage: true
 
 # The production_url is only used when full-domain names are needed
