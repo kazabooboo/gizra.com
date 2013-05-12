@@ -1,7 +1,7 @@
 ---
 layout: website
 title: "Cinema Fringe"
-description: "Collaboration platform for filmmakers"
+description: "Collaboration platform for film makers"
 category: website
 permalink: /
 ---

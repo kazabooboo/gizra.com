@@ -1,7 +1,7 @@
 ---
 layout: website
 title: "Imanimo"
-description: "Fashion catalogue for pregnant women"
+description: "Maternity fashion house"
 category: website
 permalink: /
 ---

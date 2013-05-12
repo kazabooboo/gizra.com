@@ -1,7 +1,7 @@
 ---
 layout: website
 title: "Medico"
-description: "High quality health reference information"
+description: "Multi-lingual health related social network"
 category: website
 permalink: /
 images:
