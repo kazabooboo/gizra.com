@@ -3,6 +3,8 @@ layout: website
 title: "Imanimo"
 description: "Maternity fashion house"
 category: website
+site_url: http://imanimo.com
+homepage: true
 permalink: /
 ---
 {% include JB/setup %}
