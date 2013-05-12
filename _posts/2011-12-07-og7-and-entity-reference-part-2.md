@@ -69,4 +69,5 @@ Getting the OG membership from a field
 <img src="/assets/images/legacy/9.jpg" />
 
 The last image isn't related to Entity reference, but since we are about the overhaul stuff, well... We now have global roles and permissions per bundle. This means that if you have a content type called Clubs which is a group, it can have different default OG roles and OG permissions from a group called Restaurants. And we can Copy from the "super" global roles and permissions to the per bundle. Handy!
+
 <img src="/assets/images/legacy/10.jpg" />
