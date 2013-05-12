@@ -24,15 +24,16 @@ As it is possible to attach fields to messages, we can leverage the token system
 
 <h3>Partials</h3>
 The message text is of multiple cardinality (or combined of multiple “partials”), in order to allow presenting the message in a complex layout without adding too much markup to the message text.
+
 <img src="/assets/images/legacy/message-2.jpg" />
 
 Below is  a View using “Panel fields” settings (part of Panels) allowing to set which partial goes on which region of the message template.
 Not only we didn’t have to add complicated HTML to the message itself, in fact in different Views we can have different layouts!
+
 <img src="/assets/images/legacy/message-3.jpg" />
 
 <h3>Auto delete & Purge</h3>
 Two new features include purging of messages (e.g. delete all messages older than 30 days, or if reached a maximum of 1000), and deletion of Messages when the referenced entities are deleted - to keep your database nice and slim.
 Don’t worry, Message has lots of tests to make sure we don’t accidentally delete wrong data...
-
 
 Also, keep an eye on Message notify - Sanjay Rohila (<a href=”http://drupal.org/user/1274328”>crazyrohila</a>) a GSOC student, is wokring on making it pluggable, so you can send a message not only as email, but also as SMS, IM, etc’.
