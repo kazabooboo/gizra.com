@@ -2,7 +2,7 @@
 layout: page
 title: "Message Module"
 short: "msg"
-description: "Facebook like activity streams, and robust notifications"
+description: "Enable activity streams, messaging and notifications"
 category: contribution
 permalink: /
 ---

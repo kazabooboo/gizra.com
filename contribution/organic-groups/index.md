@@ -2,7 +2,7 @@
 layout: page
 title: "Organic Groups Module"
 short: "og"
-description: "Group functionality, Intranet and social networks"
+description: "Enables creating and managing groups within Drupal, powers communities from WhiteHouse.gov to leading universities"
 category: contribution
 permalink: /
 ---
