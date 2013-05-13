@@ -63,8 +63,8 @@ clients:
         {% if page.category contains 'website' and count <= 4 and page.homepage == true %}
         {% assign count=count | plus:1 %}
         <li  class="span3 gallery-item">
-          <a href="{{ page.site_url }}"><img src="{{ page.url }}/thumb.jpg"></a>
-          <span class="project-details"><a href="{{ page.site_url }}">{{ page.title }}</a>{{ page.description }}</span>
+          <a href="{{ page.site_url }}" target="_blank"><img src="{{ page.url }}/thumb.jpg"></a>
+          <span class="project-details"><a href="{{ page.site_url }}" target="_blank">{{ page.title }}</a>{{ page.description }}</span>
         </li>
         {% endif %}
         {% endfor %}
@@ -95,9 +95,9 @@ clients:
 
         <li  class="span3 gallery-item">
           <div class="short-name-wrapper box-{{ count }}">
-            <div class="short-name"><a href="http://drupal.org/project/{{ page.project_url }}">{{ page.short }}</a></div>
+            <div class="short-name"><a href="http://drupal.org/project/{{ page.project_url }}" target="_blank">{{ page.short }}</a></div>
           </div>
-          <span class="project-details"><a href="http://drupal.org/project/{{ page.project_url }}">{{ page.title }}</a>{{ page.description }}</span>
+          <span class="project-details"><a href="http://drupal.org/project/{{ page.project_url }}" target="_blank">{{ page.title }}</a>{{ page.description }}</span>
         </li>
         {% endif %}
         {% endfor %}
@@ -172,7 +172,7 @@ clients:
       <ul class="gallery-post-grid holder">
         {% for client in page.clients %}
         <li  class="span2 gallery-item">
-          <a href="{{ client.url }}"><img src="/assets/images/clients/{{ client.name}}.png" title="{{ client.alt }}" /></a>
+          <a href="{{ client.url }}" target="_blank"><img src="/assets/images/clients/{{ client.name}}.png" title="{{ client.alt }}" /></a>
         </li>
         {% endfor %}
       </ul>
