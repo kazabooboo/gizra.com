@@ -95,9 +95,9 @@ clients:
 
         <li  class="span3 gallery-item">
           <div class="short-name-wrapper box-{{ count }}">
-            <div class="short-name"><a href="{{ page.url }}">{{ page.short }}</a></div>
+            <div class="short-name"><a href="http://drupal.org/project/{{ page.project_url }}">{{ page.short }}</a></div>
           </div>
-          <span class="project-details"><a href="{{ page.url }}">{{ page.title }}</a>{{ page.description }}</span>
+          <span class="project-details"><a href="http://drupal.org/project/{{ page.project_url }}">{{ page.title }}</a>{{ page.description }}</span>
         </li>
         {% endif %}
         {% endfor %}
