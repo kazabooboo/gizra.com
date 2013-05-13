@@ -7,7 +7,14 @@
 {% assign author = post.author %}
 {% endif %}
 
-<div class="author">By {{site.authors[author].name}}</div>
+{% for authors in site.authors %}
+  {% for author_info in authors %}
+    {% if author_info[0] == author %}
+      <div class="author">By {{ author_info[1].name }}</div>
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+
 
 <div class="comment-count">
   <i class="icon-comment"></i><a href="http://www.gizra.com/{{post.url}}#disqus_thread"></a>
