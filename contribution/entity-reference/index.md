@@ -2,7 +2,7 @@
 layout: page
 title: "Entity Reference Module"
 short: "er"
-description: "Facebook like activity streams, and robust notifications"
+description: "Enable cross entity reference, integrated into Drupal 8 core"
 category: contribution
 permalink: /
 ---

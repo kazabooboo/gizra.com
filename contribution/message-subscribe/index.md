@@ -2,7 +2,7 @@
 layout: page
 title: "Message Subscribe Module"
 short: "sub"
-description: "Facebook like activity streams, and robust notifications"
+description: "Highly scalable notification publishing & subscription infrastructure"
 category: contribution
 permalink: /
 ---
