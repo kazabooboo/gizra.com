@@ -4,7 +4,7 @@ tags:
 - .NET
 - DrutNet
 permalink: /content/code-sample-drutnet/
-title: "Code sample for DrutNet API - connect, load node, save node and upload file "
+title: "Code sample for DrutNet API - connect, load node, save node and upload file"
 created: 1274085839
 layout: post
 ---
