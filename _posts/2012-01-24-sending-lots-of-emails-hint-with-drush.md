@@ -100,7 +100,7 @@ Note the code comments - you are expected to replace foo_get_digest_users() and 
 ```
 
 After that, all you need to do is create a new Jenkins job.
-<img src="/assets/images/legacy/digest_dev%20Config%20[Jenkins].jpg" />
+<img src="/assets/images/legacy/digest_dev_Config_Jenkins.jpg" />
 
 
 <a href="http://getpantheon.com">Pantheon</a> gives us this flexibility, here's the console log:
