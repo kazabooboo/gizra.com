@@ -1,3 +1,6 @@
+---
+layout: default
+---
 sudo apt-get install make
 sudo apt-get install mysql-server
 
