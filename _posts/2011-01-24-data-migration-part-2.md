@@ -16,6 +16,8 @@ Migrate extra module enables import of file field.
 
 The following  example demonstrate how to import the old cars table.
 
+<!-- more -->
+
 Here is the table structures of old cars , 'cars':
 <img src="/assets/images/legacy/blog2_tab1.jpg" alt=""/>
 

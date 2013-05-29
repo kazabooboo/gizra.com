@@ -7,30 +7,25 @@ title : RSS Feed
 <rss version="2.0">
   <channel>
     <title>{{ site.title }}</title>
-    <link>{{ site.production_url }}{{ site.rss_path }}</link>
-    <link>{{ site.production_url }}</link>
-    <lastBuildDate>{{ site.time | date_to_xmlschema }}</lastBuildDate>
-    <pubDate>{{ site.time | date_to_xmlschema }}</pubDate>
+    <link>http://{{ site.production_url }}</link>
+    <lastBuildDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</lastBuildDate>
+    <pubDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
     <ttl>1800</ttl>
 
     {% for post in site.posts %}
-    {% for t in post.tags %}
-      {% if t == 'Drupal-planet' %}
-      {% assign planet = true %}
-      {% endif %}
-    {% endfor %}
+      {% for t in post.tags %}
+        {% if t == 'Drupal-planet' %}
+          {% assign planet = true %}
+        {% endif %}
+      {% endfor %}
 
       {% if planet == true %}
       <item>
         <title>{{ post.title }}</title>
-        {% if post.teaser %}
-        <description>{{ post.teaser | xml_escape}}</description>
-        {% else %}
-          <description>{{ post.content | xml_escape | truncatewords: 200 }}</description>
-        {% endif %}
-        <link>{{ site.production_url }}{{ post.url }}</link>
-        <guid>{{ site.production_url }}{{ post.id }}</guid>
-        <pubDate>{{ post.date | date_to_xmlschema }}</pubDate>
+        <description>{{ post.excerpt | xml_escape }}</description>
+        <link>http://{{ site.production_url }}{{ post.url }}</link>
+        <guid>http://{{ site.production_url }}{{ post.id }}</guid>
+        <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
       </item>
       {% endif %}
     {% endfor %}

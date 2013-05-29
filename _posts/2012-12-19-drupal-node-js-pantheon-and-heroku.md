@@ -17,6 +17,8 @@ First, let’s define the goals for this blog post
 * Learn how to setup the Node.js module and server on a _local_ server
 * Setup on  a remote server using Heroku and Pantheon
 
+<!-- more -->
+
 <h3>Install node</h3>
 Node.js module's README.txt explains how to do it. I’m using Mac so for me it was a simple ```brew install node```.
 Get the dev version or 7.x-1.1 (doesn’t exist yet) of the Node.js module, and enable it

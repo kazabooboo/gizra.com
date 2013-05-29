@@ -10,6 +10,9 @@ layout: post
 ---
 In the previous <a href="/content/drutnet-drupal-net-api">post</a> I've introduced DrutNet API with an already compiled example, today I will show some code examples.
 Since last post I've added a new method that allow file upload with Services, using the base-64 conversion, I will show you how this method works.
+
+<!-- more -->
+
 <ol>
 <li>Create a project in your preferred  .Net IDE, I use VS 2008 but those who prefer to work in the open source world can use the <a href= "http://www.mono-project.com" target="_blank">Mono IDE</a> instead.
 </li><br></ul>

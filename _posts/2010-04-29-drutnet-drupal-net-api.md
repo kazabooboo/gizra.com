@@ -22,6 +22,8 @@ DrutNet API has a ```Services``` class:
 <li>Services.NodeSave - Save a node</li>
 </ul>
 
+<!-- more -->
+
 To upload files using the API use the ```CURL``` class:
 <ul>
 <li>Curl.Login - Login to Drupal with cURL, which is required in order to uplaod a file. This login is _not the same as the Services login</li>

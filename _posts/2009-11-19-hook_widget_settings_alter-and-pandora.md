@@ -17,6 +17,8 @@ In CCK 2.5, ```hook_widget_settings_alter()``` got in, which allows your module 
 
 But that's not all - as the settings are becoming part of the CCK field defention it means that when you'll export the CCK to code - your module settings will be there. Your module now actually has import/ export functionality without you even having to bother about.
 
+<!-- more -->
+
 All you need is to pack your CCK code export in <a href="http://drupal.org/project/features">Features</a>.
 Here's an example that will add some data to number fields:
 

@@ -10,6 +10,8 @@ layout: post
 <a href="http://drupal.org/project/message">Message</a> module’s inclusion in the upcoming version of Commerce Kickstart, and it’s very likely inclusion in Drupal Commons 7 turns this not very known module into an important module to know about.
 Message can help with many tasks from simple logs to complicated activity streams and even, with the use of  Message Notify module, multilingual digest emails.
 
+<!-- more -->
+
 <h3>What is a message</h3>
 Messages are entities belonging to a specific “Message type”, defining the purpose of its messages. Think of the relation of a Message to a Message type the same as what a node is to a node type. A good resource for understating Message is the Message-Example module that ships with Message, and is well documented. Even Organic groups’ example module has integration with Message to show how it can be used for group notification.
 <img src="/assets/images/legacy/message-1.jpg" />

@@ -2,7 +2,7 @@
 tags:
 - Drupal-planet
 permalink: /content/outsourcing-kittens/
-title: Outsourcing & Kittens
+title: Outsourcing and Kittens
 created: 1260779798
 layout: post
 ---

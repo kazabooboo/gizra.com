@@ -14,6 +14,9 @@ My top 5 are: Views, CCK, Flag, Rules, Panels. I think that the Flag & Rules com
 
 I think there's no better way to show my point, than a tutorial. Lazy people can even download the feature from <a href="http://www.gizra.com/sites/default/files/user_points_rules.tar_.gz">here</a>. This tutorial will be about having "User points" functionality without using the user points module. I'm not saying that module is bad, but sometimes I need multiple user points per user. Also, re-using existing modules always feels me with great joy. GREAT joy! Also, thinking about Drupal 7 with fields API, suddenly _user points can become _any-fieldable-entity points...
 The tutorial will cover the "Rule sets" concept in Rules module, which is also considered by many as a great mystery. Let's define our mission:
+
+<!-- more -->
+
 <ol>
 <li>Every time a user creates a story content type, one point is deducted</li>
 <li>When no points are left, user should not be able to create more stories</li>

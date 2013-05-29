@@ -13,6 +13,8 @@ layout: post
 
 This post will go over an example (yet fully functionally) module that shows how we can embed a commerce product form inside a node form, and have the node reference the commerce product - without horrible hacks.
 
+<!-- more -->
+
 <img src="/assets/images/legacy/Product-1.jpg" />
 
 <img src="/assets/images/legacy/Create-Product-2.jpg" />

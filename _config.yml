@@ -12,6 +12,8 @@ markdown: redcarpet
 #
 title : Gizra.com
 
+excerpt_separator: "<!-- more -->"
+
 authors:
   - Amitaibu:
       name: Amitai Burstein

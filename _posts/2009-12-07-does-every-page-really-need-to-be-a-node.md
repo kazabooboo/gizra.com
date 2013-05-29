@@ -17,6 +17,8 @@ Let's take the "usual" home page as an example:
 
 So we can use <a href="http://drupal.org/project/panels">Panels</a> for that. It also makes deployment easier:
 
+<!-- more -->
+
 <ul>
 <li>since the Panels are in code (same as having exported Views), it means we can prepare the Panels page on a development server and easily deploy it on a production server, without copying/ pasting nodes or do some db merge weirdness</li>
 <li>Different layout and content for different roles or languages - checkout our own home page <a href="http://www.gizra.com/">English</a> Vs. <a href="http://www.gizra.com/he">Hebrew</a>. You can see we flip the image and change the text layout - those are just different Panels variants.</li>

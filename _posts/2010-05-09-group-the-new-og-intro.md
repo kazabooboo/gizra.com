@@ -21,6 +21,8 @@ Here are the Group's main concepts, by importance:
 
 Writing those concepts down made it easier to determine what should be in the core of Group and what should be a contrib module. The UI was separated to another module as-well, leaving us with a Group API module, that has as little assumptions as possible about how it will be used.
 
+<!-- more -->
+
 Time for the quick demo:
 <object width="640" height="385"><param name="movie" value="http://www.youtube.com/v/vDtFJyfGEaE&hl=en_US&fs=1&rel=0"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/vDtFJyfGEaE&hl=en_US&fs=1&rel=0" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="640" height="385"></embed></object>
 (As always -- <a href="http://docs.google.com/Doc?docid=0Ad43t2AqZZxCZGNwM3QzbXNfMjAwYzhrc3QyZDY&hl=en">The screencast script</a>)

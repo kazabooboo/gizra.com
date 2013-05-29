@@ -20,6 +20,8 @@ Here is a list of the main challenges I have faced during the process :
 	<li> Moving the references between the old objects into Drupal.</li>
 </ol>
 
+<!-- more -->
+
 Install the following modules :
 <ol>
 <li> <a href ="http://drupal.org/project/drush">drush</a></li>

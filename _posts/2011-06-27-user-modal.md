@@ -22,6 +22,8 @@ Furthermore, the user modal form can be used by other implementing modules, and
 for example allow a user to submit a node and register in the same time.
 </blockquote>
 
+<!-- more -->
+
 The idea is that we want to lower the barrier for a new user to participate in the site -- and the barrier is assumed to be too many clicks to just create a node or write a comment.
 
 The final implementation is different from where we started:

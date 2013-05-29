@@ -17,6 +17,8 @@ If you know Message you already know that some development skills, or knowing Ru
 
 Message-subscribe, just like Message module has zero knowledge about your business logic - it is up to you to implement the Message creation. What Message subscribe gives you, though, is one simple function your implementing module will call -- and that’s it. It will take care of it from there.
 
+<!-- more -->
+
 For example imagine an existing node, that people in the site want to subscribe to, and get notified about new comments.
 
 ### Subscribing to content

@@ -8,6 +8,8 @@ layout: post
 ---
 Drupal is using CVS for version controlling core and contrib modules. CVS has diffing options, but it becomes annoying when you try adding or deleting new files. Here's an example of how to use git to patch a contrib module - Organic groups.
 
+<!-- more -->
+
 <ol>
 <li>In OG's project page click on the <a href="http://drupal.org/project/og/cvs-instructions">CVS instructions</a> and select the version you want to patch.
 ```

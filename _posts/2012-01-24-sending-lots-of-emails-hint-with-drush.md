@@ -14,7 +14,11 @@ Doing it on hook_cron() is nice if you need to send few emails, but when you nee
 
 A nice and simple solution we came up with, was to write a Drush command that will process a small batch of users, and use Jenkins to fire up this command every two minutes.
 
-This post will demonstrate the code, that can be used by others - however you will need to copy and change the command to fit your business logic. Assuming our module’s name is foo, you will need to place your code in ```foo.drush.inc```:
+This post will demonstrate the code, that can be used by others - however you will need to copy and change the command to fit your business logic.
+
+<!-- more -->
+
+Assuming our module’s name is foo, you will need to place your code in ```foo.drush.inc```:
 
 ```php
 <?php

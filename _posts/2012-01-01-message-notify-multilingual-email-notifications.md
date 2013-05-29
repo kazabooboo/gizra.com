@@ -11,6 +11,8 @@ Email notification is a convenient way to be updated about new content or commen
 
 Message module itself is pretty simple. You can have different message types, and when you want to create a message, you actually create a new entity called Message.
 
+<!-- more -->
+
 What makes message so great is:
 <ol>
 <li> You can replace tokens either by hard-coding it, or by having a callback function. So if you want to have a message like “Good day @name” -- you can either replace the @name with the user’s name, and save it to the database, or you can have a callback function that will make sure we get the most up to date user name, in case it was changed.</li>

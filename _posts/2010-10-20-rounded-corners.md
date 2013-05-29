@@ -14,6 +14,8 @@ CSS is annoying and I'd like to deal with it as little as possible. For that I'm
 
 Rounded corners is no longer a "dumb" wrapper for the jQuery plugin, but rather an API that lets you do what you want with as little code possible.
 
+<!-- more -->
+
 ```php
 <?php
   $commands = array();

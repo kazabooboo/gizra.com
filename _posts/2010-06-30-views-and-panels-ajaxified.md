@@ -17,6 +17,8 @@ If you haven't read Roger Lopez <a href="http://zroger.com/node/30">Ajax without
 <li>Click on any of the titles and notice how the body text changes, without any page load. Hooray!</li>
 </ol>
 
+<!-- more -->
+
 <img src="/assets/images/legacy/snap1.png"/>
 
 Lets go over the things we did to achieve this behavior:

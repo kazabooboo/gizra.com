@@ -26,6 +26,8 @@ Now here’s a quick overview of the planned changes. First the conceptual chang
 Sneak preview time...
 As usual we can make a content type (Clubs in this example) a group, through the content type edit.
 
+<!-- more -->
+
 <img src="/assets/images/legacy/1.jpg" />
 
 In the new version, when you want to make a content type (Post in this example) a group content, you immediately select to which group entity type, and optionally bundle the field should point. Making the reference to only a single entity type, allows us to have really simple integration with other modules (e.g. Views, Tokens, Rules) that expect the field value to be of the same entity type.

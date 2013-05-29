@@ -17,6 +17,8 @@ When I started writing <a href="http://drupal.org/project/message">Message</a> I
 
 Message was a inspired by Context module. Context uses some object oriented, so I've copied that too. That's where I got it wrong - because my use case was a bit different. OOP is powerful _when it's needed but sometimes it might be an overkiller. Ok, so no OOP, but I still needed a pluggable system. CTools has the $plugin concept. Its almost the same as having an info hook, only it's without a hook - you place it directly on an ```inc``` file that CTools will include for you when its needed. But the "trick" that I've learned - and there shouldn't be any drum rolls cause it might be obvious - is to use a "process" function that populates the $plugin with defaults. The defaults can be for example the callbacks that will be used, the Views handlers that will be automatically declared, the text strings, the allowed operations, etc'. Basically, when you use the $plugin, you should be thinking how an extending module can alter the module's behavior by simple changes.
 
+<!-- more -->
+
 For example here's all the code needed to define an Organic groups realm, which means you can make messages accessible only to users that are subscribed to a group:
 
 ```php

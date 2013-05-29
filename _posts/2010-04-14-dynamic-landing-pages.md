@@ -12,6 +12,8 @@ The following post will cover how to create dynamic landing pages. First lets de
 
 Allow easily creating landing pages, with different content. The layout should be a header and footer which are always the same, and the main-content should be three columns layout, with dynamic content.
 
+<!-- more -->
+
 <img src="/assets/images/legacy/Snap1_0.png">
 
 Before we go too technical, let's translate the task into plain English in order to solve our task.

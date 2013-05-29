@@ -14,6 +14,8 @@ Before people start diving into the code, you should realize that OG has changed
 OG brings roles and permissions to the _group level.
 </blockquote>
 
+<!-- more -->
+
 While porting to Drupal 7 I tried to bring OG to be up to date with all the new standards. Old timers in OG might be a bit disoriented at first, but remember OG is just trying to copy Drupal in the look and feel.
 
 Development has been done on <a href="http://github.com/amitaibu/OG---Drupal7">github</a>, and I have created a new CVS release. If you find any issue please report them on OG's issue queue.

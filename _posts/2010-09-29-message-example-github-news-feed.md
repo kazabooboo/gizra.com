@@ -11,6 +11,8 @@ It's time for some P.R. (Public relations) on the <a href="http://drupal.org/pro
 
 I won't get into too much explanation here, just look at the screenshots, or try it yourself - since everything in Message is exportable, you don't need to do anything to make it work! (Apart of generating nodes and "making friends" by flagging other users).
 
+<!-- more -->
+
 ```
 # Download necessary modules, in case you still don't have them.
 drush dl ctools message flag views

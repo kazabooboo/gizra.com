@@ -11,7 +11,9 @@ layout: post
 ---
 Here's my presentation held in Drupalcamp Spain. I'm going over a new feature in OG7, that allows having multiple group audience fields and having a membership type assigned to each field -- in English it means that you can have some users join a group with "Default" membership and others with "Expire" membership.
 
-Aslo checkout Pedro's (pcambra) new suit! 
+Also checkout Pedro's (pcambra) new suit!
+
+<!-- more -->
 
 <object width="480" height="386" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000">
   <param name="flashvars" value="vid=17612232&amp;autoplay=false"/>

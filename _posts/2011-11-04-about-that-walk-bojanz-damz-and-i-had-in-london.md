@@ -18,6 +18,8 @@ After that ,there was a minute of silence before I asked Damien how did the peop
 
 The next day I had my own presentation. It’s no secret some parts of it were completely non-linear. If I may, I would use Damien’s answer to describe my own presentation.
 
+<!-- more -->
+
 Here is a random list of guidelines that I think can help in achieving a good presentation:
 <ul>
   <li>While there’s a slight odor of corporate in Drupalcons, we are still Drupal, and I’d like to encourage presenters to act like it</li>

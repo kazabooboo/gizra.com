@@ -11,6 +11,8 @@ A small problem in Drupal occurs when developing new modules, or installation pr
 It goes missing, and without it developing can go wrong very quickly. Also, starting up a site’s install profile that reveals a site without content gives a feel of walking into an empty bakery shop. There’s ovens, flour, and bakers, and that great bakery smell all around, but no bread. And possible clients go to other bakeries if you run out of bread. So to solve this issue, <a href="http://drupal.org/project/migrate">Migrate</a>  module helps us fill up the shop with bread.
 Oh, and you can also migrate data from other (older) sites.
 
+<!-- more -->
+
 <h3>What is it good for?</h3>
 
 Migrate fills up your Drupal installation profile, or just fresh new module, with appropriate content that helps the user or developer experiment with it, so the new module’s learning curve is easier. When developing, if you mess something up - say, drop the user table - it won’t be as bad as it could’ve been, since you kept around a backup in a CSV file. Some company want their site upgraded? No problem. Migrate can import from CSV, SQL databases, XML and much more.

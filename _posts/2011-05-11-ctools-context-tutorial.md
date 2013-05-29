@@ -14,6 +14,8 @@ This post covers how to build a CTools content-type plugin that has context. CTo
 
 I have created an example module called node-preview-example, that you can simply download and enable, create an Article page, and see how Panels is now showing the body field on the left and on the right a (silly) "Summary" of the node -- this is our plugin.
 
+<!-- more -->
+
 ```
 drush dl ctools panels features
 drush en ctools page_manager panels features
