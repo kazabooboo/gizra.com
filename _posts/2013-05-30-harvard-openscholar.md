@@ -3,7 +3,7 @@ layout: post
 title: "Harvard's OpenScholar"
 description: ""
 category: 
-tags: [Biblio, OG, Drupal-planet]
+tags: [Biblio, OG7, Drupal-planet]
 ---
 {% include JB/setup %}
 
