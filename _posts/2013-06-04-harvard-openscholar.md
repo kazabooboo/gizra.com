@@ -25,7 +25,7 @@ I think I see a few people getting excited. You should. Oh, and in case you don'
 
 OpenScholar has been around for a while, and has a large userbase whose needs have to be taken into account. For example, when we started developing along their team, it was hard for me to understand why we don't use Panelizer for the layout management. A year later I know why: Because the professors need a layout system. And they need it now. And they need it in a very specific way.
 
-Sometimes, the project leaders, Ferdi and Richard, are forced to put aside the purist developer hat, and make hard calls like developing a custom system, until contrib modules mature (Panelizer *is* now mature, by the way, the above example is from many moons ago).
+Sometimes, the project leaders, Ferdinand Alimadhi and Richard Brandon, are forced to put aside the purist developer hat, and make hard calls like developing a custom system, until contrib modules mature (Panelizer *is* now mature, by the way, the above example is from many moons ago).
 
 So, theory aside, when they wanted to upgrade from Drupal 6 to 7, they used migrate module, and treated the Drupal 6 database as an external database. A purist might argue that ``hook_update_N()`` is the "right" way, but after seeing how they did it, I can't think of a better way to get the work done. Fast, efficient, testable, and yeah - admittedly not the standard way.
 
