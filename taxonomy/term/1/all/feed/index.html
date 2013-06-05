@@ -22,7 +22,10 @@ title : RSS Feed
       {% if planet == true %}
       <item>
         <title>{{ post.title }}</title>
-        <description>{{ post.excerpt | xml_escape }}</description>
+        <description>
+          {{ post.excerpt | xml_escape }}
+          &lt;p&gt;&lt;a href=&quot;http://{{ site.production_url }}{{ post.url }}/&quot;&gt;Read more…&lt;/a&gt;&lt;/p&gt;
+        </description>
         <link>http://{{ site.production_url }}{{ post.url }}</link>
         <guid>http://{{ site.production_url }}{{ post.id }}</guid>
         <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
