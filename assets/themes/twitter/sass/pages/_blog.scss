@@ -41,11 +41,6 @@
       margin-bottom: 10px;
     }
 
-    a {
-      color: $blue;
-      text-decoration: underline;
-    }
-
     .pagination {
       margin-top: 13px;
       font-size: 16px;
@@ -70,7 +65,7 @@
 .post-teaser {
   margin-bottom: 50px;
 
-  h2 {
+  .content-wrapper h2 {
     margin-top: 0;
     font-size: 26px;
     line-height: 26px;
@@ -80,10 +75,16 @@
     a {
       color :$blue;
       text-transform: none;
+      text-decoration: none;
+    }
+
+    :hover {
+      text-decoration: underline;
     }
   }
 
-  p, li {
+  p,
+  .content-wrapper li {
     font-size: 18px;
     line-height: 27px;
   }
@@ -145,6 +146,14 @@
         }
 
       }
+    }
+  }
+
+  .content-wrapper {
+
+    a {
+      color: $blue;
+      text-decoration: underline;
     }
   }
 }

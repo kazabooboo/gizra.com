@@ -35,14 +35,10 @@ Usage:
     {% include custom/post_sidebar.html %}
   </div>
 
-  <div class="span10">
+  <div class="span10 content-wrapper">
     <h2><a href="{{node.url}}">{{node.title}}</a></h2>
     <p>
-      {% if post.teaser %}
-      {{ post.teaser }}
-      {% else %}
-      {{ post.content | strip_html | truncatewords: 50 }}
-      {% endif %}
+      {{ post.excerpt }}
     </p>
   </div>
 </div>
