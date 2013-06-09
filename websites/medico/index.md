@@ -5,7 +5,7 @@ description: Multi-lingual health information site and social network
 category: website
 permalink: /
 site_url: "http://medico.com"
-homepage: true
+homepage: false
 images:
   - "Medico homepage"
   - "Some more"
