@@ -6,6 +6,7 @@ permalink: /content/how-deal-colliding-aliases/
 title: How to deal with colliding aliases
 created: 1330604300
 layout: post
+author: RoySegall
 ---
 Here's a common problem with aliases:
 
@@ -35,5 +36,5 @@ function my_module_init() {
 ?>
 ```
 
-In ``hook_init()`` we check the URL and count the arguments to see if we are in a node context -- in our case the node has 4 arguments, while the blog post list has on 3). The function ```drupal_get_normal_path()``` will give us a node/nid that have a alias with the pattern we checked. 
+In ``hook_init()`` we check the URL and count the arguments to see if we are in a node context -- in our case the node has 4 arguments, while the blog post list has on 3). The function ```drupal_get_normal_path()``` will give us a node/nid that have a alias with the pattern we checked.
 Using ``menu_set_active_item()`` we  force Drupal to show us the node.

@@ -7,6 +7,7 @@ permalink: /content/banner-rotator/
 title: Banner rotator
 created: 1329390514
 layout: post
+author: RoySegall
 ---
 A common design element we see lately in a lot of sites is a banner rotator - image slideshow with some text and links on the side.
 
