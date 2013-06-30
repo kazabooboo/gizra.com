@@ -15,7 +15,7 @@ So we had this idea, of combining Drupal and Jekyll. It was a result of building
 
 I was pleasantly surprised to see more than 20 people in the BoF (Birds of Feather) session. I had a vision of what I wanted but I still didn't have the elevator pitch for it. The discussion we had helped sharpen the way I can explain that vision. To quote Steve Persch (@stevector)
 
-> When I heared your idea I thought it's crazy. After the BoF I still thought it's crazy... but!
+> When I heard your idea I thought it's crazy. After the BoF I still thought it's crazy... but!
 
 Before diving into Dekyll, let's understand what are the problems that it tries to solve.
 
@@ -25,7 +25,7 @@ Before diving into Dekyll, let's understand what are the problems that it tries 
 
 **Q**: Why?
 
-**A**: Drupal is slow. Probably every CMS that needs to do so much calcuation to spit out your HTML takes time. And Drupal is slow. I mean, get the best Drupal developers in the same room and let them work on tuning your site, we're still looking at around 700ms per page (don't catch me on the number, I'm trying to make a point here). But that's the thing - you _don't_ have the best Drupal developers in the room with you, so in reality every page load takes more than that.
+**A**: Drupal is slow. Probably every CMS that needs to do so much calculations to spit out your HTML takes time. And Drupal is slow. I mean, get the best Drupal developers in the same room and let them work on tuning your site, we're still looking at around 700ms per page (don't catch me on the number, I'm trying to make a point here). But that's the thing - you _don't_ have the best Drupal developers in the room with you, so in reality every page load takes more than that.
 
 
 **Q**: What's wrong with Varnish?
@@ -50,11 +50,11 @@ Before diving into Dekyll, let's understand what are the problems that it tries 
 
 **Q**: Ok, then why not use [Boost](https://drupal.org/project/boost) module. Why Jekyll?
 
-**A**: We love Drupal, but it doesn't mean we have to use _only_ Drupal. In Drupal, whenever you want to theme your output, you are mostly _overriding_ Drupal's default output. Drupal theme layer is extremely powerful, but many times we just don't need it. By using Jekyll we lower the barrier, and we can use our HTML almost as is. No theme overrides, no deceleration of TPL's, no Devel-themer to try to figure out "who the hack is rendering this block?" on a complex page. Since Jekyll is so popular, and being supported bu GitHub, we felt that's the right choice.
+**A**: We love Drupal, but it doesn't mean we have to use _only_ Drupal. In Drupal, whenever you want to theme your output, you are mostly _overriding_ Drupal's default output. Drupal theme layer is extremely powerful, but many times we just don't need it. By using Jekyll we lower the barrier, and we can use our HTML almost as is. No theme overrides, no deceleration of TPL's, no Devel-themer to try to figure out "who the heck is rendering this block?" on a complex page. Since Jekyll is so popular, and being supported by GitHub, we felt that's the right choice.
 
 ### Alright, Tell me more
 
-[Jekyll](http://jekyllrb.com/) is a static site generator, and it's is also blog aware. Basically, think about your blog site deployed using git, no database no nothing. A nice side benefit is that GitHub allows you to deploy your site free of charge, enjoying their CDN (this site for example is running on GitHub Pages).
+[Jekyll](http://jekyllrb.com/) is a static site generator, and it's is also blog-aware. Basically, think about your blog site deployed using git, no database no nothing. A nice side benefit is that GitHub allows you to deploy your site free of charge, enjoying their CDN (this site for example is running on GitHub Pages).
 
 Here's how this post looks in Jekyll.
 
@@ -84,7 +84,7 @@ Here are some ingredients of what we use to build Dekyll. Some are technical som
   <img src="/assets/images/legacy/dekyll-file-configuration.jpg" />
 </div>
 * Keep rewriting. Dekyll relatively short existence has already seen three or four rewrites. We are moving fast, and we try our best to avoid technical debts.
-* The enemy of good is excellent. This one is the opposite of the above statement, but is required for some balance. We are not writing a theoretical concpet, rather we are building a tool that can help us build websites _fast_ yet in a  _reliable_ manner.
+* The enemy of good is excellent. This one is the opposite of the above statement, but is required for some balance. We are not writing a theoretical concept, rather we are building a tool that can help us build websites _fast_ yet in a  _reliable_ manner.
 * Have real life use cases. When we started Dekyll we just had the vision. Once we knew which sites we want to use it on, then the need dictated the solution.
 
 ### Disposable Vs Canonical
