@@ -15,7 +15,7 @@ So we had this idea, of combining Drupal and Jekyll. It was a result of building
 
 I was pleasantly surprised to see more than 20 people in the BoF (Birds of Feather) session. I had a vision of what I wanted but I still didn't have the elevator pitch for it. The discussion we had helped sharpen the way I can explain that vision. To quote Steve Persch (@stevector)
 
-> When I heared your idea I though it's crazy. After the BoF I still thought it's crazy... but!
+> When I heared your idea I thought it's crazy. After the BoF I still thought it's crazy... but!
 
 Before diving into Dekyll, let's understand what are the problems that it tries to solve.
 
