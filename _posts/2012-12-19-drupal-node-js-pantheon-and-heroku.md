@@ -14,20 +14,23 @@ Some title, right?
 [Node.js](http://drupal.org/project/nodejs) module for Drupal is so great and a time saver, I’ve got spare time to blog about how to set it up. Future me, we’ll thank me for doing so.
 
 First, let’s define the goals for this blog post
+
 * Learn how to setup the Node.js module and server on a _local_ server
 * Setup on  a remote server using Heroku and Pantheon
 
 <!-- more -->
 
-<h3>Install node</h3>
-Node.js module's README.txt explains how to do it. I’m using Mac so for me it was a simple ```brew install node```.
+###Install node
+
+Node.js module's README.txt explains how to do it. I’m using Mac so for me it was a simple ``brew install node``.
 Get the dev version or 7.x-1.1 (doesn’t exist yet) of the Node.js module, and enable it
-Download the node libraries needed by executing ```npm install``` from the Node.js module directory. That command will look at ```package.json``` and install all the dependencies.
+Download the node libraries needed by executing ``npm install`` from the Node.js module directory. That command will look at ```package.json``` and install all the dependencies.
 Ok, On to the interesting parts.
 
-<h3>Local Server</h3>
+###Local Server
+
 Node.js module requires a simple configuration file that will tell it where the node.js server is running, and where the "backend" is (i.e. Drupal). Ignore the example in README.txt, eyes over here please.
-Assuming my Drupal site is on http://localhost/d7_dev here’s ```nodejs.config.js```:
+Assuming my Drupal site is on http://localhost/d7_dev here’s ``nodejs.config.js``:
 
 ```javascript
 settings = {
@@ -47,11 +50,12 @@ settings = {
 };
 ```
 
-The first part tells Node.js module where the node.js server will live. In the above example its. will be ```http://localhost:5000```. Same host different ports.
-The "backend" part tells the node.js server where our Drupal site is.
-The ```serviceKey``` is the secret code used by Drupal to communicate with the node.js server. In my example it’s also used as a special thank you for <strong>beejeebus</strong>, the module maintainer.
+The first part tells Node.js module where the node.js server will live. In the above example it will be ``http://localhost:5000``. Same host different ports.
 
+The "backend" part tells the node.js server where our Drupal site is.
+The ``serviceKey`` is the secret code used by Drupal to communicate with the node.js server. In my example it’s also used as a special thank you for <strong>beejeebus</strong>, the module maintainer.
 Next, from the command line execute ```node server.js```. If you defined the URL and port correctly (pay extra attention to all those leading and trailing slashes!) you should see
+
 ```
 Started http server.
    info  - socket.io started
@@ -115,7 +119,8 @@ Notice several changes:
 </ul>
 
 Next, we can deploy it to Heroku.
-```
+
+```bash
 $ heroku create
 $ git push heroku master
 ```
@@ -124,7 +129,7 @@ $ git push heroku master
 Notice how not only the files are pushed to git, but Heroku now builds the dependencies and launches the server. In the end of the output you will see the URL of your new site. That's the node.js server URL, Drupal will POST data to. You can also open it with ```heroku open```
 
 <h4>Back to Drupal</h4>
-Visit ```admin/config/nodejs/config``` and fill out the form. _My configuration looked like this:
+Visit ``admin/config/nodejs/config`` and fill out the form. _My_ configuration looked like this:
 Node.js server host = nameless-brook-555.herokuapp.com
 port = 80
 
