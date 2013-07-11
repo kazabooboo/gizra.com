@@ -23,7 +23,7 @@ First, let’s define the goals for this blog post
 ###Install node
 
 Node.js module's README.txt explains how to do it. I’m using Mac so for me it was a simple ``brew install node``.
-Get the dev version or 7.x-1.1 (doesn’t exist yet) of the Node.js module, and enable it
+Get the latest release of the Node.js module, and enable it.
 Download the node libraries needed by executing ``npm install`` from the Node.js module directory. That command will look at ```package.json``` and install all the dependencies.
 Ok, On to the interesting parts.
 
