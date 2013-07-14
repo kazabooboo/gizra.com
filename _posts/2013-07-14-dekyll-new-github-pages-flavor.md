@@ -16,6 +16,8 @@ permalink: /content/dekyll-new-github-pages-flavor/
 
 We are working hard in Gizra to make this process as smooth as possible, with the goal of letting non-developers the ability to serve their content using Jekyll, on Github Pages - without them having to bother with knowing what Jekyll, Git or Github Pages are. A worthy goal indeed, but not trivial.
 
+<!-- more -->
+
 The default installation has very few assumptions:
 
 1. You have LAMP/ MAMP and [Drush](https://drupal.org/project/drush) (I know it's trivial if you are a Drupal developer, but luckily we have also Jekyll people visiting these posts)
