@@ -44,7 +44,7 @@ function foo_example_comment_insert($comment) {
   $wrapper->field_comment_ref->set($comment);
 
   // Let Message-subscribe save and send notifications.
-  message_subscribe_process_message('comment', $comment, $message);
+  message_subscribe_send_message('comment', $comment, $message);
 }
 
 ?>
