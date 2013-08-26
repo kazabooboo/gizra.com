@@ -9,11 +9,6 @@
 @import "pages/about";
 @import "pages/blog";
 @import "pages/front";
-// @import "menu";
-// @import "navbar";
-// @import "form";
-// @import "sidebar";
-// @import "teaser";
 
 h1,
 h2,
@@ -114,6 +109,7 @@ body.blog-list {
 // @todo: Move to portfolio
 .project-details {
   height: 55px;
+  margin: 0 auto;
 
   a {
     color: $darkGray !important;

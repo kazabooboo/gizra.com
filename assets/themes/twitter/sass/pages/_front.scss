@@ -39,12 +39,22 @@ body.home {
       margin-bottom: 0;
     }
 
+    .websites-row {
+
+      li.gallery-item {
+        text-align: center;
+
+        .project-details {
+          max-width: 250px;
+        }
+      }
+    }
+
     .contributions-row {
 
       li.gallery-item {
 
         .short-name-wrapper {
-          width: 270px;
           height: 218px;
 
           &.box-1 {
@@ -234,5 +244,6 @@ body.home {
     }
   }
 }
+
 
 
