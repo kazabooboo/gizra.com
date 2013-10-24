@@ -2,8 +2,8 @@
 layout: post
 title: "Harvard's OpenScholar"
 description: ""
-category: 
-tags: [Biblio, OG7, Drupal-planet]
+category:
+tags: [OpenScholar, Biblio, OG7, Drupal-planet]
 ---
 
 When people ask you about big projects done with Drupal, what's the _second_ item on your list? I know the first one is [WhiteHouse.gov](http://www.whitehouse.gov/) - that's not Drupal's foot in the door, it's the foot that broke the door.
