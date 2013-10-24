@@ -11,7 +11,7 @@ Yes. Continue to the next paragraph.
 I won't go over all the features, trust me, there's a lot of costumization that can be done there. What I do want to talk about it, after being approached by several universities, is the subject of deciding if OpenScholar is the right choice for you, based on the _right_ reasons.
 
 ## The common (wrong) reasons people decide not to use OpenScholar
-Lets talk about the typical flow of how the decision not to use OpenScholar is being done.
+Lets talk about the typical flow (with a pinch of humor) of how the decision _not_ to use OpenScholar is being made.
 
 1. Managment and decisions makers are sold pertty fast on OpenScholar - for all the right reasons. It's a system being built for years with many scenarios in mind.
 1. Managment asks it's developers to give it a try.
@@ -25,7 +25,6 @@ Lets talk about the typical flow of how the decision not to use OpenScholar is b
 1. Managment have board to report to. "We've decided to go with our solution. It will have Panel!"
 
 <small>If you have seen this happen, I'd be happy to hear your story in the comments</small>
-
 
 ## The right way of installing OpenScholar
 
