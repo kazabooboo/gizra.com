@@ -27,7 +27,7 @@ Lets talk about the typical flow (with a pinch of humor) of how the decision _no
 
 Right here, is usually where there's an image of [facepalm](http://en.wikipedia.org/wiki/Facepalm). But I prefer to rapdily jump to the next section.
 
-<small>btw, If you have seen this happen, I'd be happy to hear your story in the comments</small>
+<small>btw, If you have seen this happen, I'd be happy to hear your story in the comments.</small>
 
 ## The right way of forking and installing OpenScholar
 
