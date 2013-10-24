@@ -1,10 +1,14 @@
 ---
 layout: post
-title: "Why OpenScholar Is the Right Choice"
+title: Why OpenScholar Is the Right Choice
 description: ""
-category:
-tags: [OpenScholar, Drupal-planet]
+category: null
+tags: 
+  - OpenScholar
+  - "Drupal-planet"
+published: true
 ---
+
 ## Is this Blog post for me?
 
 * Are you running a university site?
