@@ -24,8 +24,14 @@ Lets talk about the typical flow (with a pinch of humor) of how the decision _no
 1. Developers report to managment that after much investigation OpenScholar is not perfect. Admittedly, and don't tell anyone, when it comes to their own code, they follow the "fail fast, fail cheap" and want incremental progress, but when it comes to OpenScholar they prefer to wait until it's perfect (read as never).
 1. Managment have board to report to. "We've decided to go with our solution. It will have Panel!"
 
-<small>If you have seen this happen, I'd be happy to hear your story in the comments</small>
+Right here, is usually where there's an image of [facepalm](http://en.wikipedia.org/wiki/Facepalm). But I prefer to rapdily jump to the next section.
 
-## The right way of installing OpenScholar
+<small>btw, If you have seen this happen, I'd be happy to hear your story in the comments</small>
 
+## The right way of forking and installing OpenScholar
 
+As soon as we'll get OpenScholar into Panthoen you would have a [one-click](https://github.com/openscholar/openscholar/issues/4135) install. I don't expect you to necessarily keep it hosted there, but do take advatnage of it to get a first impression.
+
+The next step, after you gave your managment a taste of the capabilites, is installing it locally, so you can add your custom code.
+
+We're using open source right. So there's probably no reason to make your project private. Click the "Fork" button on OpenScholar's [Github](https://github.com/openscholar/openscholar) page and create your universities _public_ repository
