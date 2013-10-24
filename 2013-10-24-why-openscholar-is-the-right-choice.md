@@ -34,4 +34,4 @@ As soon as we'll get OpenScholar into Panthoen you would have a [one-click](http
 
 The next step, after you gave your managment a taste of the capabilites, is installing it locally, so you can add your custom code.
 
-We're using open source right. So there's probably no reason to make your project private. Click the "Fork" button on OpenScholar's [Github](https://github.com/openscholar/openscholar) page and create your universities _public_ repository
+We're using open source right. So there's probably no reason to make your project private. Click the "Fork" button on OpenScholar's [Github](https://github.com/openscholar/openscholar) page and create your universities _public_ repository. OpenScholar is now your upstream taking care of the entire platform, letting you to concentrate on your custom code, and since it's public you can brage about it - not a thing to be underestimated.
