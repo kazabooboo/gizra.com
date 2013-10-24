@@ -35,11 +35,14 @@ As soon as we'll get OpenScholar into Panthoen you would have a [one-click](http
 
 The next step, after you gave your managment a taste of the capabilites, is installing it locally, so you can add your custom code.
 
-We're using open source right. So there's probably no reason to make your project private. Click the "Fork" button on OpenScholar's [Github](https://github.com/openscholar/openscholar) page and create your universities _public_ repository. OpenScholar is now your upstream taking care of the entire platform, letting you to concentrate on your custom code, and since it's public you can brage about it - not a thing to be underestimated.
+We're using open source - so there's probably no real reason to make your project private. Click the "Fork" button on OpenScholar's [Github](https://github.com/openscholar/openscholar) page and create your universities' _public_ repository. OpenScholar is now your upstream taking care of the entire platform, letting you to concentrate on your custom code, and since it's public you can brage about it - not a thing to be underestimated.
 
 Make sure you keep working with the Installation profile. Ever since OpenScholar has done the move to work with a make file, and have [Travis-CI](https://travis-ci.org/openscholar/openscholar/builds/12942900) execute a huge Behat test suite on every commit, releases have become much smoother.
 
-Pro tips:
+## Pro tips
 * Use Drush to [build](https://github.com/openscholar/openscholar/wiki/Building-using-Make-file) the installation profile
-* Remember you are wokring in an openSource enviorement - Ferdi Almhadi and Richard Brandon, the project leads are more then happy to assist. Your custom changes, if generic enough, can be pushed upstream
-* 
+* Remember you are wokring in an openSource enviorement - Ferdi Almhadi and Richard Brandon, the project leads are more than happy to assist. Your custom changes, if generic enough, can be pushed upstream
+* Migrate existing content from the current data source. ``OS dummy migrate`` which is used to preopulate the site when doing tests on it, can be actually used to migrate your _real_ data
+* Still decided to not use OpenScholar? Fine, you have your reasons, and they are probably good and valid. But you can still keep looknig and poking OpenScholar. I don't believe there's any other Drupal distribution out there being worked on 24 hours a day 6.5 days a week (the outcome of the time difference between the Israeli team in Gizra, and the Harvard team in the US) with so many featuers and such a big test coverage - go ahead, take advatnage of it
+
+
