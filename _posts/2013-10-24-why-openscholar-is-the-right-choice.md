@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Why OpenScholar Is the Right Choice
+title: "Why Harvard's OpenScholar Is the Right Choice"
 description: ""
 category: null
 tags: 
