@@ -24,6 +24,8 @@ Lets talk about the typical flow of how the decision not to use OpenScholar is b
 1. Developers report to managment that after much investigation OpenScholar is not perfect. Admittedly, and don't tell anyone, when it comes to their own code, they follow the "fail fast, fail cheap" and want incremental progress, but when it comes to OpenScholar they prefer to wait until it's perfect (read as never).
 1. Managment have board to report to. "We've decided to go with our solution. It will have Panel!"
 
+<small>If you have seen this happen, I'd be happy to hear your story in the comments</small>
+
 
 ## The right way of installing OpenScholar
 
