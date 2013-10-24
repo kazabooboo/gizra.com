@@ -21,10 +21,8 @@ Lets talk about the typical flow of how the decision not to use OpenScholar is b
 1. Managment is frequently checking out with the developers on the progress. Their not happy.
 1. Devolpers are annoyed. Why won't the managment let them just build it from scrtach. Heck _they_ will use Panels. How hard can it be doing that type of a site.
 1. Managment is starting to believe that indeed OpenScholar isn't the right solution.  It's hard to install, or so their developers are saying, and there's a thing called "Panel" or "Panels" or something like that, which is apparently really really missing. Also, the developers are confident they can deliver something else faster.
-
-
-
-
+1. Developers report to managment that after much investigation OpenScholar is not perfect. Admittedly, and don't tell anyone, when it comes to their own code, they follow the "fail fast, fail cheap" and want incremental progress, but when it comes to OpenScholar they prefer to wait until it's perfect (read as never).
+1. Managment have board to report to. "We've decided to go with our solution. It will have Panel!"
 
 
 ## The right way of installing OpenScholar
