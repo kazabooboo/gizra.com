@@ -2,6 +2,7 @@
 
 * Are you running a university site?
 * Are you using any kind distribution?
+* Have you reached this far?
 
 Yes. Continue to the next paragraph.
 
