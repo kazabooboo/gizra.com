@@ -165,3 +165,10 @@ JB :
   tags_list:
     provider : "custom"
 
+# Prose.io
+
+prose:
+  media: 'assets'
+  rooturl: "_posts"
+  siteurl: "http://gizra.com/"
+
