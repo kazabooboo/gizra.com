@@ -3,7 +3,7 @@ tags:
 - Drupal-planet
 - Message
 permalink: /content/message-subscribe-new-subscription-system/
-title: "Message-subscribe \xE2\x80\x94 A New Subscription System"
+title: "Message-subscribe - A New Subscription System"
 created: 1351684522
 layout: post
 ---
