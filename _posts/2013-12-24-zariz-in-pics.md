@@ -13,34 +13,34 @@ title: Zariz in Pics
 Here are 10 images that will make the whole idea clear.
 
 This is the ``live`` branch  
-![](/assets/images/posts/zariz2/0.jpg)
+![]({{BASE_PATH}}/assets/images/posts/zariz2/0.jpg)
 
 We branch out of it  
-![](/assets/images/posts/zariz2/1.jpg)
+![]({{BASE_PATH}}/assets/images/posts/zariz2/1.jpg)
 
-![](/assets/images/posts/zariz2/2.jpg)
+![]({{BASE_PATH}}/assets/images/posts/zariz2/2.jpg)
 
 <!-- more -->
 
 The new branch is empty. Lets add new content to it  
-![](/assets/images/posts/zariz2/3.jpg)
+![]({{BASE_PATH}}/assets/images/posts/zariz2/3.jpg)
 
 Now that there's new content, the toolbar allows us to merge it back to the ``live`` branch  
-![](/assets/images/posts/zariz2/4.jpg)
+![]({{BASE_PATH}}/assets/images/posts/zariz2/4.jpg)
 
 Zariz supports multiple branching  
-![](/assets/images/posts/zariz2/5.jpg)
+![]({{BASE_PATH}}/assets/images/posts/zariz2/5.jpg)
 
 In the new branch we can see the content that was added in the parent branch  
-![](/assets/images/posts/zariz2/6.jpg)
+![]({{BASE_PATH}}/assets/images/posts/zariz2/6.jpg)
 
-![](/assets/images/posts/zariz2/7.jpg)
+![]({{BASE_PATH}}/assets/images/posts/zariz2/7.jpg)
 
 The debug block shows us the origin of each content  
-![](/assets/images/posts/zariz2/8.jpg)
+![]({{BASE_PATH}}/assets/images/posts/zariz2/8.jpg)
 
 Once we merge the branch, it is locked and cannot be changed  
-![](/assets/images/posts/zariz2/9.jpg)
+![]({{BASE_PATH}}/assets/images/posts/zariz2/9.jpg)
 
 That's the ``live`` branch after the merge  
-![](/assets/images/posts/zariz2/10.jpg)
+![]({{BASE_PATH}}/assets/images/posts/zariz2/10.jpg)

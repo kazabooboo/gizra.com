@@ -14,7 +14,7 @@ Parents of children under the age of 9 were asked to bring them to the nearest T
 The Ministry of Health decided to create a mobile application to help parents find the nearest clinic. It commissioned one of the country’s largest development shops to create it. They decided to create a native app. [This is the Android version](https://play.google.com/store/apps/details?id=com.matrix.tipathalav):
 
 <div class="thumbnail">
-  <img src="/assets/images/posts/tipa/image1.jpg" />
+  <img src="{{BASE_PATH}}/assets/images/posts/tipa/image1.jpg" />
   <div class="caption">It’s in Hebrew, but you get the idea</div>
 </div>
 
@@ -28,7 +28,7 @@ We discussed the app during lunch at Gizra. We’re no doctors, but we thought w
 Lunch concluded with a particularly good Malabi. It’s one of the few deserts I ever bother with, so I’m pretty sure the extra sugar is the reason I shot off a message to the [Public Knowledge Workshop](http://www.hasadna.org.il/en/) mailing list as I got back to my laptop, asking who’s with me – help me scrape the clinic data and I’ll take care of the front end.
 
 <div class="thumbnail">
-  <img src="/assets/images/posts/tipa/image2.jpg" />
+  <img src="{{BASE_PATH}}/assets/images/posts/tipa/image2.jpg" />
   <div class="caption">Malabi, by <a href="http://www.flickr.com/photos/7826272@N06/4818656579/in/photolist-8kNSHR-6c2Z8H-rzrQQ-5AsnHV-rzrTY-Dv5gr-avrhAk-5Zu4Hp">naamanus</a>. This is good.</div>
 </div>
 
@@ -41,7 +41,7 @@ With the data in Alon, Udi and Erez’s capable hands, I focused on the front en
 The final app is extremely simple. When opening [tipa.li](http://tipa.li/) (Hebrew wordplay meaning “My drop” or “Tiny drop”) the user is presented with a map, zoomed to the city level and centered on her current location, showing nearby stations. Touching a marker (design donated by [Ilan Dray](http://www.inkod-hypera.com/), who I’ve also yet to meet) reveals its street address, opening hours and a phone number.
 
 <div class="thumbnail">
-  <img src="/assets/images/posts/tipa/image3.jpg" />
+  <img src="{{BASE_PATH}}/assets/images/posts/tipa/image3.jpg" />
   <div class="caption">Tipa.li UI. This is all of it.</div>
 </div>
 

@@ -43,7 +43,7 @@ We want to ``git push`` our _content_ as well as our code. Jekyll taught us the 
 
 To make it easier to setup Grunt, we've created a Yeoman generator. A simple ``yo zariz`` should get you to the point where the system is operational, and you can add your customization.
 
-![](/assets/images/posts/zariz/generator-zariz.jpg)
+![]({{BASE_PATH}}/assets/images/posts/zariz/generator-zariz.jpg)
 
 It's all still very early. The code is far from production. But if you like the concept of bringing Git best practices to the content world, here's what we got so far:
 
