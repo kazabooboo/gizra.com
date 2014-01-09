@@ -1,13 +1,10 @@
 ---
-"0": 
-  title: Zariz Static
-"1": 
-  layout: post
-published: true
-tags: 
+title: Zariz Static
+layout: post
+tags:
   - Zariz
   - "Drupal-planet"
-permalink: "/content/zariz-in-pics"
+permalink: "/content/drupal-x5-faster"
 layout: post
 title: "Drupal, only x5 faster"
 ---
