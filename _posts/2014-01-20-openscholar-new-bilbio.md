@@ -13,7 +13,7 @@ OpenScholar is the de facto go to solution for academic sites. Over the past yea
 
 ![]({{BASE_PATH}}/assets/images/posts/os-biblio/6.jpg)
 
-I'm proud that our work is not just based on open source, but also contributes to it - big time. Case in point, the Biblio module which is responsible for bibliographies and citations since back in Drupal 4.6, and has provided a great solution. It was becoming clear the 4.6 architecture is showing its age, and could use an overhaul.
+I'm proud that our work is not just based on open source, but also contributes to it - big time. Case in point, the [Biblio](https://github.com/Gizra/biblio) module which is responsible for bibliographies and citations since back in Drupal 4.6, and has provided a great solution. It was becoming clear the 4.6 architecture is showing its age, and could use an overhaul.
 
 <!-- more -->
 
