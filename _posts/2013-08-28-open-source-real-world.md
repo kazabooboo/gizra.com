@@ -6,6 +6,8 @@ author: itamarbu
 tags:
     - Drupal-planet
 ---
+{% include JB/setup %}
+
 __In this guest post, [Itamar Burstein](http://www.itamarburstein.com/) shares his thoughts about "Open source" - the culture that Drupal belongs to - as seen through the eyes of an Industrial designer.__
 
 Amitai, my brother asked me to write a little something about, and I quote, "Open source or Drupal or whatever" - to give some examples and to show some pictures. He was very particular about the pictures.

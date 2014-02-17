@@ -6,6 +6,7 @@ tags:
   - "Open source"
   - "Drupal-planet"
 ---
+{% include JB/setup %}
 
 No one is sure what caused the Polio virus, eradicated from Israel since the 1990s, to reappear. The virus was detected in sewage samples in the south of the country in early summer and began spreading northwards, prompting Ministry of Health to start a [massive vaccination drive](http://www.npr.org/blogs/health/2013/09/02/217194998/to-keep-polio-at-bay-israel-revaccinates-a-million-kids).
 

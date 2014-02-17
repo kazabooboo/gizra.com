@@ -8,6 +8,7 @@ permalink: "/content/drupal-x5-faster"
 layout: post
 title: "Drupal, only x5 faster"
 ---
+{% include JB/setup %}
 
 This is the ``live`` branch on the Drupal site  
 ![]({{BASE_PATH}}/assets/images/posts/zariz-static/1.jpg)

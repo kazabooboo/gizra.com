@@ -9,6 +9,7 @@ title: Zariz Means Agile
 layout: post
 published: true
 ---
+{% include JB/setup %}
 
 [Zariz](https://github.com/Gizra/zariz) is a new project we're working on. The word means "quick", or "agile" in Hebrew. We've began working on it when we hit some bumps working on Dekyll.
 

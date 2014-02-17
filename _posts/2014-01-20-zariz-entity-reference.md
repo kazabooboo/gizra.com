@@ -7,6 +7,7 @@ permalink: "/content/zariz-entity-reference"
 layout: post
 published: true
 ---
+{% include JB/setup %}
 
 Zariz is now integrated with entity reference and is "branch" aware. This means
 that the reference will change on the fly. For example:

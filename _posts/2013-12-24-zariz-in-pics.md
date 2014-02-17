@@ -7,6 +7,7 @@ permalink: "/content/zariz-in-pics"
 layout: post
 title: Zariz in Pics
 ---
+{% include JB/setup %}
 
 [Zariz ](https://github.com/Gizra/zariz) isn't just about static sites. In fact the Zariz module itself isn't aware of any static generation. It's about modeling the content creation around Git, which is a new approach to content staging.
 
