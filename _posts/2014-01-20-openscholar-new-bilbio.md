@@ -1,14 +1,13 @@
 ---
 title: OpenScholar and the new Biblio
 layout: post
-tags:
+tags: 
   - OpenScholar
   - Biblio
   - "Drupal-planet"
 permalink: "/content/openscholar-new-bilbio"
 published: true
 ---
-{% include JB/setup %}
 
 OpenScholar is the de facto go to solution for academic sites. Over the past year we saw it being adopted in many Harvard departments and higher ed institutions worldwide.
 
