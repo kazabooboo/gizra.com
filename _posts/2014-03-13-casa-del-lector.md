@@ -10,8 +10,6 @@ layout: post
 published: true
 ---
 
-## Case del Lector
-
 Last week saw the launch of a pretty unique [project](http://gizra.github.io/CDL/) for us. It's not every day a product we've worked on gets a [write up on El Pais](http://cultura.elpais.com/cultura/2014/03/05/actualidad/1394047004_090821.html), or has this kind of launch event:
 
 ![]({{BASE_PATH}}/assets/images/posts/casa-del-lector/IMG_8388-2.JPG)
