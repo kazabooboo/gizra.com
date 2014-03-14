@@ -8,7 +8,9 @@ tags:
 permalink: "/content/casa-del-lector"
 layout: post
 published: true
+author: niryariv
 ---
+{% include JB/setup %}
 
 Last week saw the launch of a pretty unique [project](http://gizra.github.io/CDL/) for us. It's not every day a product we've worked on gets a [write up on El Pais](http://cultura.elpais.com/cultura/2014/03/05/actualidad/1394047004_090821.html), or has this kind of launch event:
 
@@ -21,6 +23,8 @@ The target audience is a bit unusual as well. While it can be accessed like any 
 We took great care to stay within the touch UI conventions. When entering the site, the user is presented with a network of connections between items. As she zooms, details are revealed - subitems, their connections and finally their titles:
 
 ![]({{BASE_PATH}}/assets/images/posts/casa-del-lector/cdl-map-1.gif)
+
+<!-- more -->
 
 Tapping a node highlights its connections within the network, and a second tap takes the user to the node content, which contains various media:
 
