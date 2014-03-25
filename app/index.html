@@ -1,0 +1,19 @@
+---
+layout: default
+title: Your New Jekyll Site
+---
+
+<ul id="scene">
+  <li class="layer" data-depth="0.00"><img src="/images/layer3.png"></li>
+  <li class="layer" data-depth="0.40"><img src="/images/layer2.png"></li>
+  <li class="layer" data-depth="1.00"><img src="/images/layer1.png"></li>
+</ul>
+
+<div id="home">
+  <h1>Blog Posts</h1>
+  <ul class="posts">
+    {% for post in site.posts %}
+      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
