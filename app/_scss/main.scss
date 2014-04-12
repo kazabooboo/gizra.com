@@ -17,4 +17,9 @@
 
 .slideshow {
   margin-top: -220px;
+
+  .carousel-caption {
+    top: 20px;
+    bottom: 0;
+  }
 }
