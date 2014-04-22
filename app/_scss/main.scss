@@ -41,17 +41,20 @@ header {
 }
 
 
-.triangle {
-  width: 0;
-  height: 0;
-  border: 200px solid transparent;
-  border-left: 960px solid white;
-  border-bottom: 0 solid white;
-  background: black;
-}
-
 .slideshow {
-  margin-top: -220px;
+  background: black;
+  position: relative;
+  overflow: hidden;
+
+  .triangle {
+    position: absolute;
+    overflow-x: hidden;
+    top: 100px;
+    border: 200px solid transparent;
+    border-left: 1170px solid white;
+    border-bottom: 0 solid white;
+    background: black;
+  }
 
   .carousel-caption {
     top: 20px;
