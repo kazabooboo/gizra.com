@@ -1,9 +1,45 @@
 @import 'bootstrap-sass-official/vendor/assets/stylesheets/bootstrap';
 
-.navbar {
+$gizra-orange: #e07253;
+
+header {
+  background-color: black;
   text-align: center;
-  background: black;
+
+  .container {
+    border-bottom: 2px solid white;
+  }
+
+  .logo {
+    margin-top: -22px;
+
+    a {
+      font-family: Abril Fatface;
+      font-size: 70px;
+      text-decoration: none;
+      color: $gizra-orange;
+    }
+  }
+
+  .navbar {
+    background: transparent;
+    border: none;
+    display: inline-block;
+    min-height: initial;
+    margin-bottom: -17px;
+
+    ul.navbar-nav {
+
+      a {
+        color: orange;
+        padding-top: 0;
+        text-transform: uppercase;
+        font-size: 12px;
+      }
+    }
+  }
 }
+
 
 .triangle {
   width: 0;
