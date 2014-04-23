@@ -171,6 +171,15 @@ header {
 #products {
   min-height: 180px;
 
+  .container {
+    margin-bottom: -180px;
+
+    .product-academy {}
+
+    .product-dashbaord {}
+    .product-publishing{}
+  }
+
   .first-wrapper,
   .last-wrapper {
     width: 50%;
@@ -182,6 +191,7 @@ header {
     width: 100%;
   }
 
+  .inner-first-wrapper,
   .first-wrapper {
 
     .top {
@@ -195,6 +205,7 @@ header {
     }
   }
 
+  .inner-last-wrapper,
   .last-wrapper {
 
     .top {
@@ -207,6 +218,4 @@ header {
       background-color: red;
     }
   }
-
-
 }
