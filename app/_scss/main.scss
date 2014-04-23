@@ -84,30 +84,45 @@ header {
 
   .background {
     text-align: center;
+    margin-top: 125px;
+    // Pull the slides on top of the background.
+    margin-bottom: -477px;
   }
 
   .carousel-inner {
     min-height: 500px;
 
-    .scene,
-    .layer {
-      display: block;
-      height: 100%;
-      width: 100%;
-      padding: 0;
-      margin: 0;
-    }
-
     .scene {
       position: relative;
-      overflow: hidden;
-    }
+      min-height: 500px;
 
-    .layer {
-      position: absolute;
+      .layer {
+        position: absolute;
+      }
 
-      .gramophone {
-        left: 13%;
+      // Grammy
+      &.grammy {
+
+        .gramophone-1 {
+          right: 36%;
+          bottom: 70px;
+        }
+
+        .gramophone-2 {
+          left: 33%;
+          bottom: 85px;
+        }
+
+
+        .diamond-1 {
+          right: 32%;
+          bottom: 80px;
+        }
+
+        .diamond-2 {
+          left: 31%;
+          bottom: 100px;
+        }
       }
     }
 
