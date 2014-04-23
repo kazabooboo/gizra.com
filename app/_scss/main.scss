@@ -89,6 +89,22 @@ header {
     margin-bottom: -468px;
   }
 
+  .carousel-indicators {
+    bottom: 88px;
+
+    li {
+      height: 8px;
+      width: 8px;
+
+      &.active {
+        height: 9px;
+        width: 9px;
+        background-color: orange;
+        border-color: orange;
+      }
+    }
+  }
+
   .carousel-inner {
     min-height: 500px;
 
