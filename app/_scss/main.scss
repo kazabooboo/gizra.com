@@ -86,7 +86,7 @@ header {
     text-align: center;
     margin-top: 125px;
     // Pull the slides on top of the background.
-    margin-bottom: -477px;
+    margin-bottom: -468px;
   }
 
   .carousel-inner {
@@ -96,7 +96,9 @@ header {
       position: relative;
       min-height: 500px;
 
-      .layer {
+      img {
+        // Each image should be positioned absolute in order for parallax to
+        // work.
         position: absolute;
       }
 
@@ -112,7 +114,6 @@ header {
           left: 33%;
           bottom: 85px;
         }
-
 
         .diamond-1 {
           right: 32%;
