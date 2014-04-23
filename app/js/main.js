@@ -1,3 +1,3 @@
 $(function() {
-  $('#scene').parallax();
+  // $('#scene').parallax();
 });
