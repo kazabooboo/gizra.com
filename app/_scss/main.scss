@@ -82,15 +82,19 @@ header {
     background: black;
   }
 
-  .background {
+  .background-wrapper {
     text-align: center;
     margin-top: 125px;
     // Pull the slides on top of the background.
-    margin-bottom: -468px;
+    margin-bottom: -485px;
+
+    .background {
+      padding-top: 85px;
+    }
   }
 
   .carousel-indicators {
-    bottom: 88px;
+    bottom: 61px;
 
     li {
       height: 8px;
@@ -124,33 +128,33 @@ header {
       &.harvard {
 
         .flower {
-          left: 10%;
-          bottom: 90px;
+          left: 23%;
+          bottom: 95px;
         }
 
         .computer {
-          left: 20%;
-          bottom: 90px;
+          left: 27%;
+          bottom: 80px;
         }
 
         .tablet {
-          right: 10%;
-          bottom: 90px;
+          right: 27%;
+          bottom: 80px;
         }
 
         .mobile {
-          right: 5%;
-          bottom: 90px;
+          right: 40%;
+          bottom: 75px;
         }
 
         .logo {
-          right: 3%;
-          bottom: 90px;
+          right: 22%;
+          bottom: 66px;
         }
 
         .paper {
-          left: 3%;
-          bottom: 90px;
+          left: 21%;
+          bottom: 73px;
         }
       }
 
