@@ -120,6 +120,40 @@ header {
         position: absolute;
       }
 
+      // Harvard
+      &.harvard {
+
+        .flower {
+          left: 10%;
+          bottom: 90px;
+        }
+
+        .computer {
+          left: 20%;
+          bottom: 90px;
+        }
+
+        .tablet {
+          right: 10%;
+          bottom: 90px;
+        }
+
+        .mobile {
+          right: 5%;
+          bottom: 90px;
+        }
+
+        .logo {
+          right: 3%;
+          bottom: 90px;
+        }
+
+        .paper {
+          left: 3%;
+          bottom: 90px;
+        }
+      }
+
       // Grammy
       &.grammy {
 
