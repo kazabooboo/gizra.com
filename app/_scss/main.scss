@@ -111,7 +111,7 @@ header {
     .scene {
       position: relative;
       min-height: 500px;
-      width: 838px;
+      width: 860px;
       margin: 0 auto;
 
       img {
@@ -140,6 +140,11 @@ header {
 
         .diamond-2 {
           left: 18%;
+          bottom: 110px;
+        }
+
+        .stand {
+          left: 16%;
           bottom: 110px;
         }
       }
