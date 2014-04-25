@@ -124,6 +124,35 @@ header {
         position: absolute;
       }
 
+      &.whitehouse {
+
+        .capital {
+          right: 36%;
+          bottom: 100px;
+        }
+
+        .three-baloons {
+          left: 37%;
+          bottom: 208px;
+        }
+
+        .baloon-blue {
+          left: 14%;
+          bottom: 129px;
+        }
+
+        .staff {
+          left: 24%;
+          bottom: 75px;
+        }
+
+        .baloon-red {
+          left: 15%;
+          bottom: 171px;
+        }
+
+      }
+
       // Harvard
       &.harvard {
 
