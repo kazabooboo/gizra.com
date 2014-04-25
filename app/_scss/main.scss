@@ -59,7 +59,7 @@ header {
         color: orange;
         padding-top: 0;
         text-transform: uppercase;
-        font-size: 12px;
+        font-size: 16px;
         font-family: OstrichSansBlack;
       }
     }
@@ -161,29 +161,29 @@ header {
       // Grammy
       &.grammy {
 
-        .gramophone-1 {
-          right: 37%;
-          bottom: 80px;
-        }
-
-        .gramophone-2 {
-          left: 21%;
-          bottom: 97px;
-        }
-
-        .diamond-1 {
-          right: 32%;
-          bottom: 80px;
+        .stand {
+          left: 18%;
+          bottom: 98px;
         }
 
         .diamond-2 {
-          left: 18%;
-          bottom: 110px;
+          left: 25%;
+          bottom: 95px;
         }
 
-        .stand {
-          left: 16%;
-          bottom: 110px;
+        .gramophone-2 {
+          left: 28%;
+          bottom: 86px;
+        }
+
+        .diamond-1 {
+          right: 25%;
+          bottom: 70px;
+        }
+
+        .gramophone-1 {
+          right: 31%;
+          bottom: 63px;
         }
       }
     }
