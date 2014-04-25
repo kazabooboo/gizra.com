@@ -150,8 +150,31 @@ header {
           left: 15%;
           bottom: 171px;
         }
-
       }
+
+      // IBLI
+     &.ibli {
+
+       .globe {
+        left: 39%;
+        bottom: 84px;
+       }
+
+       .ufo {
+         left: 18%;
+         top: 204px;
+       }
+
+       .shuttle {
+         right: 14%;
+         top: 137px;
+       }
+
+       .satellite {
+         left: 21%;
+         bottom: 125px;
+       }
+     }
 
       // Harvard
       &.harvard {
