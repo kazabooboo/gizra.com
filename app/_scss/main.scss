@@ -267,6 +267,7 @@ header {
 }
 
 #product {
+  position: relative;
 
   .col-md-4,
   .half-strip {
@@ -285,18 +286,25 @@ header {
     background-color: lightyellow;
   }
 
-  .half-strip {
-    width: 50%;
-    float: left;
+  .half-strip-wrapper {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -5;
 
-    &.first {
-      background-color: orange;
-      border-top: 20px solid green;
-    }
+    .half-strip {
+      width: 50%;
+      float: left;
 
-    &.last {
-      background-color: red;
-      border-top: 10px solid orange;
+      &.first {
+        background-color: orange;
+        border-top: 20px solid green;
+      }
+
+      &.last {
+        background-color: red;
+        border-top: 10px solid orange;
+      }
     }
   }
 
@@ -330,14 +338,13 @@ header {
 
   @media (max-width: 990px) {
 
-    .half-strip {
-      display: none;
-    }
-
     .container {
       margin-bottom: -540px;
     }
-  }
 
+    .half-strip {
+      display: none;
+    }
+  }
 
 }
