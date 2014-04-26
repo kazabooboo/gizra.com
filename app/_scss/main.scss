@@ -266,54 +266,53 @@ header {
   }
 }
 
-#products {
-  min-height: 180px;
+#product {
 
-  .container {
-    margin-bottom: -180px;
-
-    .product-academy {}
-
-    .product-dashbaord {}
-    .product-publishing{}
+  .col-md-4 {
+    min-height: 180px;
   }
 
-  .first-wrapper,
-  .last-wrapper {
-    width: 50%;
-    float: left;
+  .academy {
+    background-color: orange;
   }
 
-  .top,
-  .bottom {
-    width: 100%;
+  .dashbaord {
+    background-color: lightblue;
   }
 
-  .inner-first-wrapper,
-  .first-wrapper {
-
-    .top {
-      height: 16px;
-      background-color: green;
-    }
-
-    .bottom {
-      height: 164px;
-      background-color: orange;
-    }
+  .publishing {
+    background-color: lightyellow;
   }
 
-  .inner-last-wrapper,
-  .last-wrapper {
+  .strip {
+    min-height: 180px;
 
-    .top {
-      height: 8px;
-      background-color: orangered;
-    }
-
-    .bottom {
-      height: 172px;
+    &.academy {
       background-color: red;
     }
+
+    &.dashbaord {
+      background-color: blue;
+    }
+
+    &.publishing {
+      background-color: yellow;
+    }
   }
+
+  @media (min-width: 990px) {
+
+    .strip {
+      display: none;
+    }
+  }
+
+  @media (max-width: 990px) {
+
+    .container {
+      margin-bottom: -540px;
+    }
+  }
+
+
 }
