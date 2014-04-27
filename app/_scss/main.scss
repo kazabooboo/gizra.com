@@ -348,18 +348,6 @@ header {
 
   .strip {
     min-height: 180px;
-
-    &.academy {
-      background-color: coral;
-    }
-
-    &.dashbaord {
-      background-color: blue;
-    }
-
-    &.publishing {
-      background-color: yellow;
-    }
   }
 
   @media (min-width: 990px) {
