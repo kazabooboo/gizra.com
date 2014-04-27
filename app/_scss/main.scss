@@ -111,7 +111,7 @@ header {
   }
 
   .carousel-inner {
-    min-height: 500px;
+    max-height: 483px;
 
     .scene {
       position: relative;
@@ -268,22 +268,40 @@ header {
 
 #product {
   position: relative;
+  border-top: 22px solid white;
 
   .col-md-4,
   .half-strip {
     min-height: 180px;
   }
 
+  .academy,
+  .dashbaord,
+  .publishing {
+    font-family: OstrichSansBlack;
+    font-size: 80px;
+    text-align: center;
+  }
+
+
   .academy {
-    background-color: orange;
+    background-color: coral;
+    border-top: 20px solid palegreen;
+    color: burlywood;
+    padding-top: 25px;
   }
 
   .dashbaord {
-    background-color: lightblue;
+    background-color: orangered;
+    border-top: 40px solid orange;
+    color: coral;
   }
 
   .publishing {
-    background-color: lightyellow;
+    background-color: red;
+    border-top: 10px solid orangered;
+    color: coral;
+    padding-top: 30px;
   }
 
   .half-strip-wrapper {
@@ -297,13 +315,13 @@ header {
       float: left;
 
       &.first {
-        background-color: orange;
-        border-top: 20px solid green;
+        background-color: coral;
+        border-top: 20px solid palegreen;
       }
 
       &.last {
         background-color: red;
-        border-top: 10px solid orange;
+        border-top: 10px solid orangered;
       }
     }
   }
@@ -312,7 +330,7 @@ header {
     min-height: 180px;
 
     &.academy {
-      background-color: red;
+      background-color: coral;
     }
 
     &.dashbaord {
