@@ -286,7 +286,7 @@ header {
   .dashbaord,
   .publishing {
     font-family: OstrichSansBlack;
-    font-size: 80px;
+    font-size: 500%;
     text-align: center;
 
     a {
@@ -352,11 +352,6 @@ header {
 
   @media (min-width: 990px) {
 
-    .container {
-      margin-bottom: -180px;
-    }
-
-
     .strip {
       display: none;
     }
@@ -372,5 +367,11 @@ header {
       display: none;
     }
   }
+}
 
+#about {
+
+  .background-wrapper {
+    background-color: black;
+  }
 }
