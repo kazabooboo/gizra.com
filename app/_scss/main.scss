@@ -1,4 +1,5 @@
 @import 'bootstrap-sass-official/vendor/assets/stylesheets/bootstrap';
+@import "compass/css3/transform";
 
 $gizra-orange: #e07253;
 
@@ -370,8 +371,16 @@ header {
 }
 
 #about {
+  background-color: black;
 
-  .background-wrapper {
-    background-color: black;
+  h2 {
+    text-align: center;
+    color: white;
+    font-family: OstrichSansMedium;
   }
+
+  .see-all {
+    text-align: center;
+  }
+
 }
