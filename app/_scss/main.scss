@@ -288,26 +288,39 @@ header {
     font-family: OstrichSansBlack;
     font-size: 80px;
     text-align: center;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .dashbaord,
+  .publishing {
+
+    a {
+      color: coral;
+    }
   }
 
 
   .academy {
     background-color: coral;
     border-top: 20px solid palegreen;
-    color: burlywood;
     padding-top: 25px;
+
+    a {
+      color: burlywood;
+    }
   }
 
   .dashbaord {
     background-color: orangered;
     border-top: 40px solid orange;
-    color: coral;
   }
 
   .publishing {
     background-color: red;
     border-top: 10px solid orangered;
-    color: coral;
     padding-top: 30px;
   }
 
