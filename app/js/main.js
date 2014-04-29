@@ -4,49 +4,65 @@ $(function() {
 
 var about = {}
 about.animation = function() {
-  var w = 960,
-    h = 500,
-    nodes = [],
-    node;
+  var width = 960,
+    height = 500;
 
-  var vis = d3.select("#about .background").append("svg")
-    .attr("width", '100%')
-    .attr("height", '100%');
+  var fill = d3.scale.category10();
+
+  var nodes = d3.range(100).map(function(i) {
+    return {index: i};
+  });
 
   var force = d3.layout.force()
     .nodes(nodes)
-    .links([])
-    .size([w, h]);
+    .size([width, height])
+    .on("tick", tick)
+    .start();
 
-  force.on("tick", function(e) {
-    vis.selectAll("path")
-      .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
-  });
+  var svg = d3.select("#about .background").append("svg")
+    .attr("width", width)
+    .attr("height", height);
 
-  setInterval(function(){
+  var node = svg.selectAll(".node")
+    .data(nodes)
+    .enter().append("circle")
+    .attr("class", "node")
+    .attr("cx", function(d) { return d.x; })
+    .attr("cy", function(d) { return d.y; })
+    .attr("r", 8)
+    .style("fill", function(d, i) { return fill(i & 3); })
+    .style("stroke", function(d, i) { return d3.rgb(fill(i & 3)).darker(2); })
+    .call(force.drag)
+    .on("mousedown", function() { d3.event.stopPropagation(); });
 
-    // Add a new random shape.
-    nodes.push({
-      type: d3.svg.symbolTypes[~~(Math.random() * d3.svg.symbolTypes.length)],
-      size: Math.random() * 300 + 100
+  svg.style("opacity", 1e-6)
+    .transition()
+    .duration(1000)
+    .style("opacity", 1);
+
+  d3.select("#about .background")
+    .on("mouseover", mouseover);
+
+  function tick(e) {
+
+    // Push different nodes in different directions for clustering.
+    var k = 6 * e.alpha;
+    nodes.forEach(function(o, i) {
+      o.y += i & 1 ? k : -k;
+      o.x += i & 2 ? k : -k;
     });
 
-    // Restart the layout.
-    force.start();
+    node.attr("cx", function(d) { return d.x; })
+      .attr("cy", function(d) { return d.y; });
+  }
 
-    vis.selectAll("path")
-      .data(nodes)
-      .enter().append("path")
-      .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; })
-      .attr("d", d3.svg.symbol()
-        .size(function(d) { return d.size; })
-        .type(function(d) { return d.type; }))
-      .style("fill", "steelblue")
-      .style("stroke", "white")
-      .style("stroke-width", "1.5px")
-      .call(force.drag);
-
-  }, 1000);
+  function mouseover() {
+    nodes.forEach(function(o, i) {
+      o.x += (Math.random() - .5) * 140;
+      o.y += (Math.random() - .5) * 140;
+    });
+    force.resume();
+  }
 };
 
 about.animation();

@@ -375,33 +375,29 @@ header {
   background-color: black;
   position: relative;
 
-  .background {
+  .node {
+    stroke-width: 1.5px;
   }
 
   .text-wrapper {
-    background-color: white;
     position: absolute;
     top: 100px;
-    opacity: 0.5;
-    @include transition-property(opacity);
-    @include transition-duration(0.3s);
-    @include transition-timing-function(ease-in);
-
-
-    &:hover {
-      opacity: 1;
-    }
+    padding: 10px 0;
 
     h2,
     p {
-      text-align: center;
+      color: white;
     }
 
     h2 {
       font-family: OstrichSansMedium;
-      color: black;
       font-size: 80px;
       line-height: 120px;
+      text-align: center;
+    }
+
+    p {
+      font-size: 16px;
     }
   }
 
