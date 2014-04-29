@@ -64,6 +64,9 @@ authors:
 #
 production_url : www.gizra.com
 
+gems:
+  - jekyll-sitemap
+
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
 JB :
