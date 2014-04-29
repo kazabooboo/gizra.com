@@ -1,5 +1,6 @@
 @import 'bootstrap-sass-official/vendor/assets/stylesheets/bootstrap';
 @import "compass/css3/transform";
+@import "compass/css3/transition";
 
 $gizra-orange: #e07253;
 
@@ -381,6 +382,15 @@ header {
     background-color: white;
     position: absolute;
     top: 100px;
+    opacity: 0.5;
+    @include transition-property(opacity);
+    @include transition-duration(0.3s);
+    @include transition-timing-function(ease-in);
+
+
+    &:hover {
+      opacity: 1;
+    }
 
     h2,
     p {
