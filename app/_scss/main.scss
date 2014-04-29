@@ -372,15 +372,27 @@ header {
 
 #about {
   background-color: black;
-  color: white;
+  position: relative;
 
-  h2,
-  p {
-    text-align: center;
+  .background {
   }
 
-  h2 {
-    font-family: OstrichSansMedium;
+  .text-wrapper {
+    background-color: white;
+    position: absolute;
+    top: 100px;
+
+    h2,
+    p {
+      text-align: center;
+    }
+
+    h2 {
+      font-family: OstrichSansMedium;
+      color: black;
+      font-size: 80px;
+      line-height: 120px;
+    }
   }
 
   .see-all {
