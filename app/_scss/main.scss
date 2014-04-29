@@ -382,6 +382,7 @@ header {
   .text-wrapper {
     position: absolute;
     top: 50px;
+    pointer-events: none;
 
     h2,
     p {

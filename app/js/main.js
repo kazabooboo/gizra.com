@@ -4,10 +4,23 @@ $(function() {
 
 var about = {}
 about.animation = function() {
-  var width = 960,
+  var width = 1170,
     height = 500;
 
-  var fill = d3.scale.category10();
+  var fill = function(i) {
+    if (i === 0) {
+      return 'palegreen';
+    }
+    if (i === 1) {
+      return 'coral';
+    }
+    if (i === 2) {
+      return 'orangered';
+    }
+    if (i === 3) {
+      return 'orange';
+    }
+  };
 
   var nodes = d3.range(100).map(function(i) {
     return {index: i};
@@ -41,7 +54,8 @@ about.animation = function() {
     .style("opacity", 1);
 
   d3.select("#about .background")
-    .on("mouseover", mouseover);
+    .on("mouseover", mousedown)
+    .on("mousedown", mousedown);
 
   function tick(e) {
 
@@ -56,7 +70,7 @@ about.animation = function() {
       .attr("cy", function(d) { return d.y; });
   }
 
-  function mouseover() {
+  function mousedown() {
     nodes.forEach(function(o, i) {
       o.x += (Math.random() - .5) * 140;
       o.y += (Math.random() - .5) * 140;
