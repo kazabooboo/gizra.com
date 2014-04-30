@@ -374,6 +374,11 @@ header {
 #about {
   position: relative;
   background: url('/images/hompage/about/background.jpg') black;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: transparent;
+  background-attachment: fixed;
+  background-size: cover;
   height: 500px;
 
   svg {
