@@ -54,7 +54,8 @@ about.animation = function() {
     .style("opacity", 1);
 
   d3.select("#about")
-    .on("mousedown", mousedown);
+    .on("mousedown", mousedown)
+    .on("mouseover", mousedown);
 
   function tick(e) {
 

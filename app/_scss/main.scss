@@ -373,7 +373,7 @@ header {
 
 #about {
   position: relative;
-  background: url('/images/hompage/about/background.jpg');
+  background: url('/images/hompage/about/background.jpg') black;
   height: 500px;
 
   svg,
@@ -382,8 +382,11 @@ header {
     top: 50px;
   }
 
-  .text-wrapper {
+  svg {
     pointer-events: none;
+  }
+
+  .text-wrapper {
     text-align: center;
 
     h2,
