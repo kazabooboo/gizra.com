@@ -9,20 +9,20 @@ about.animation = function() {
 
   var fill = function(i) {
     if (i === 0) {
-      return 'white';
+      return 'palegreen';
     }
     if (i === 1) {
       return 'coral';
     }
     if (i === 2) {
-      return 'orangered';
+      return 'white';
     }
     if (i === 3) {
-      return 'orange';
+      return 'red';
     }
   };
 
-  var nodes = d3.range(100).map(function(i) {
+  var nodes = d3.range(50).map(function(i) {
     return {index: i};
   });
 
@@ -32,7 +32,7 @@ about.animation = function() {
     .on("tick", tick)
     .start();
 
-  var svg = d3.select("#about .background").append("svg")
+  var svg = d3.select("#about").append("svg")
     .attr("width", width)
     .attr("height", height);
 
@@ -42,7 +42,7 @@ about.animation = function() {
     .attr("class", "node")
     .attr("cx", function(d) { return d.x; })
     .attr("cy", function(d) { return d.y; })
-    .attr("r", 2)
+    .attr("r", 1)
     .style("fill", function(d, i) { return fill(i & 3); })
     .style("stroke", function(d, i) { return d3.rgb(fill(i & 3)).darker(2); })
     .call(force.drag)
@@ -53,16 +53,18 @@ about.animation = function() {
     .duration(1000)
     .style("opacity", 1);
 
-  d3.select("#about .background")
+  d3.select("#about")
     .on("mousedown", mousedown);
 
   function tick(e) {
 
     // Push different nodes in different directions for clustering.
-    var k = 6 * e.alpha;
+    var ky = 15 * e.alpha;
+    var kx = 10 * e.alpha;
+
     nodes.forEach(function(o, i) {
-      o.y += i & 1 ? k : -k;
-      o.x += i & 2 ? k : -k;
+      o.y += ky;
+      o.x += -kx;
     });
 
     node.attr("cx", function(d) { return d.x; })
