@@ -4,7 +4,7 @@ $(function() {
 
 var about = {}
 about.animation = function() {
-  var width = 1170,
+  var width = 768,
     height = 500;
 
   var fill = function(i) {

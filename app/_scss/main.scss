@@ -385,6 +385,10 @@ header {
     position: absolute;
     top: 50px;
     pointer-events: none;
+
+    @media (max-width: 768px) {
+     display: none;
+    }
   }
 
   .text-wrapper {
