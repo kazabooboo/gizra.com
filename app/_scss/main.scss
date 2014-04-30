@@ -296,34 +296,34 @@ header {
     }
   }
 
-  .smart-city,
-  .publishing {
-
-    a {
-      color: coral;
-    }
-  }
-
 
   .academy {
-    background-color: coral;
-    border-top: 20px solid palegreen;
+    background-color: #FF763F;
+    border-top: 20px solid #A2E4B0;
     padding-top: 25px;
 
     a {
-      color: burlywood;
+      color: #F8BB88;
     }
   }
 
   .smart-city {
-    background-color: orangered;
-    border-top: 40px solid orange;
+    background-color: #FF2A0F;
+    border-top: 40px solid #FF9E00;
+
+    a {
+      color: #ff7849;
+    }
   }
 
   .publishing {
-    background-color: red;
-    border-top: 10px solid orangered;
+    background-color: #D50000;
+    border-top: 10px solid #F44000;
     padding-top: 30px;
+
+    a {
+      color: #FF2A08;
+    }
   }
 
   .half-strip-wrapper {
@@ -337,13 +337,13 @@ header {
       float: left;
 
       &.first {
-        background-color: coral;
-        border-top: 20px solid palegreen;
+        background-color: #FF763F;
+        border-top: 20px solid #A2E4B0;
       }
 
       &.last {
-        background-color: red;
-        border-top: 10px solid orangered;
+        background-color: #D50000;
+        border-top: 10px solid #F44000;
       }
     }
   }
