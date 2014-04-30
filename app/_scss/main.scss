@@ -375,8 +375,16 @@ header {
   background-color: black;
   position: relative;
 
-  .node {
-    stroke-width: 1.5px;
+  .background {
+
+    img {
+      width: 100%;
+    }
+  }
+
+
+  svg {
+    margin-top: -500px;
   }
 
   .text-wrapper {

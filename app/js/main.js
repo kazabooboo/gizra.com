@@ -9,7 +9,7 @@ about.animation = function() {
 
   var fill = function(i) {
     if (i === 0) {
-      return 'palegreen';
+      return 'white';
     }
     if (i === 1) {
       return 'coral';
@@ -42,7 +42,7 @@ about.animation = function() {
     .attr("class", "node")
     .attr("cx", function(d) { return d.x; })
     .attr("cy", function(d) { return d.y; })
-    .attr("r", 8)
+    .attr("r", 2)
     .style("fill", function(d, i) { return fill(i & 3); })
     .style("stroke", function(d, i) { return d3.rgb(fill(i & 3)).darker(2); })
     .call(force.drag)
