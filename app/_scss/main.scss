@@ -376,18 +376,15 @@ header {
   background: url('/images/hompage/about/background.jpg') black;
   height: 500px;
 
-  svg,
-  .text-wrapper {
+  svg {
     position: absolute;
     top: 50px;
-  }
-
-  svg {
     pointer-events: none;
   }
 
   .text-wrapper {
     text-align: center;
+    margin-top: 100px;
 
     h2,
     p {
@@ -408,12 +405,22 @@ header {
 
   .see-all {
     text-align: center;
+    margin-top: 100px;
+
+    a {
+      text-decoration: none;
+      color: black;
+      text-transform: uppercase;
+      font-family: OstrichSansMedium;
+      font-size: 20px;
+    }
   }
 }
 
 #work {
   background-color: white;
   color: black;
+  padding-top: 100px;
 
   h2,
   p {
