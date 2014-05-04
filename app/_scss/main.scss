@@ -508,7 +508,11 @@ header {
     text-align: center;
     margin-top: 24px;
     color: white;
-    font-family: OstrichSansMedium;
+
+    h2,
+    .at-work {
+      font-family: OstrichSansMedium;
+    }
 
     h2 {
       font-size: 80px;
@@ -519,6 +523,11 @@ header {
 
     .at-work {
       font-size: 50px;
+    }
+
+    p {
+      font-size: 12px;
+      margin-top: -13px;
     }
   }
 
@@ -531,7 +540,6 @@ header {
       }
 
       img {
-        max-height: 148px;
       }
     }
 
