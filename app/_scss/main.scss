@@ -432,6 +432,7 @@ header {
   background-color: white;
   color: black;
   padding-top: 103px;
+  margin-bottom: 175px;
 
   .background,
   h2,
@@ -488,5 +489,51 @@ header {
       border: 10px solid white;
     }
   }
+}
 
+#code {
+  background: #54898C;
+  position: relative;
+
+  .triangle {
+    position: absolute;
+    overflow-x: hidden;
+    top: 0;
+    border: 200px solid transparent;
+    border-left: 1170px solid white;
+    border-top: 0 solid white;
+  }
+
+  .background {
+    text-align: center;
+    margin-top: 24px;
+    color: white;
+    font-family: OstrichSansMedium;
+
+    h2 {
+      font-size: 80px;
+      margin-top: 27px;
+      margin-bottom: 0;
+      line-height: 26px;
+    }
+
+    .at-work {
+      font-size: 50px;
+    }
+  }
+
+  .container {
+
+    .logo {
+
+      &:hover {
+        background: #53888B;
+      }
+
+      img {
+        max-height: 148px;
+      }
+    }
+
+  }
 }
