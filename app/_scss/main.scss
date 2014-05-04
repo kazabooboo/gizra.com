@@ -542,6 +542,18 @@ header {
       img {
       }
     }
+  }
+}
 
+#blog {
+  background: white;
+
+  .background {
+    text-align: center;
+
+    img {
+      max-height: 300px;
+      width: 100%;
+    }
   }
 }
