@@ -494,6 +494,7 @@ header {
 #code {
   background: #54898C;
   position: relative;
+  overflow-x: hidden;
 
   .triangle {
     position: absolute;
@@ -548,6 +549,7 @@ header {
 #blog {
   background: white;
   position: relative;
+  overflow-x: hidden;
 
   .background {
 
