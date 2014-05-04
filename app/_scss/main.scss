@@ -1,6 +1,8 @@
 @import 'bootstrap-sass-official/vendor/assets/stylesheets/bootstrap';
+@import "compass/css3/border-radius";
 @import "compass/css3/transform";
 @import "compass/css3/transition";
+
 
 $gizra-orange: #e07253;
 
@@ -429,8 +431,9 @@ header {
 #work {
   background-color: white;
   color: black;
-  padding-top: 100px;
+  padding-top: 103px;
 
+  .background,
   h2,
   p {
     text-align: center;
@@ -438,6 +441,52 @@ header {
 
   h2 {
     font-family: OstrichSansMedium;
+    font-size: 80px;
+    margin-top: 0;
+    line-height: 61px;
+  }
+
+  .work-wrapper {
+    height: 497px;
+    padding-top: 100px;
+    padding-left: 100px;
+
+    &:hover {
+
+      .description {
+        background: black;
+        color: white;
+        border: 10px solid black;
+      }
+    }
+
+    &.commerce {
+      background: url('/images/hompage/work/example1.jpg') no-repeat;
+    }
+
+    &.imanimo {
+      background: url('/images/hompage/work/example2.jpg') no-repeat;
+    }
+
+    &.commons {
+      background: url('/images/hompage/work/example3.jpg') no-repeat;
+    }
+
+    &.openscholar {
+      background: url('/images/hompage/work/example4.jpg') no-repeat;
+    }
+
+    .description {
+      height: 250px;
+      width: 250px;
+      display: table-cell;
+      text-align: center;
+      vertical-align: middle;
+      @include border-radius(250px);
+      background: white;
+      color: black;
+      border: 10px solid white;
+    }
   }
 
 }
