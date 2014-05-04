@@ -547,13 +547,26 @@ header {
 
 #blog {
   background: white;
+  position: relative;
 
   .background {
-    text-align: center;
 
     img {
       max-height: 300px;
       width: 100%;
     }
+  }
+
+  .title {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -300px;
+    text-align: center;
+    background: url('/images/hompage/blog/ballons.png') no-repeat 42% 100px;
+    height: 350px;
+    width: 400px;
+    padding-top: 210px;
+    overflow: hidden;
   }
 }
