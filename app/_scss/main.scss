@@ -502,7 +502,7 @@ header {
     overflow-x: hidden;
     top: 0;
     border: 200px solid transparent;
-    border-left: 1170px solid white;
+    border-left: 1500px solid white;
     border-top: 0 solid white;
   }
 
@@ -530,6 +530,7 @@ header {
     p {
       font-size: 12px;
       margin-top: -13px;
+      margin-bottom: 130px;
     }
   }
 
@@ -555,7 +556,7 @@ header {
   overflow-x: hidden;
 
   .background {
-    margin-bottom: 140px;
+    margin-bottom: 121px;
 
     img {
       max-height: 300px;
@@ -581,6 +582,60 @@ header {
       line-height: 57px;
       margin-left: 30px;
 
+    }
+  }
+
+  .post {
+    margin-bottom: 50px;
+
+    .date,
+    .post-label {
+      font-family: OstrichSansMedium;
+    }
+
+    .date {
+      color: orange;
+      font-size: 38px;
+    }
+
+    .teaser,
+    .post-label a {
+      color: #515151;
+    }
+
+    .post-label {
+
+      a {
+        font-size: 83px;
+        line-height: 50px;
+
+        &:hover {
+          color: blue;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .all-posts {
+    background: orange;
+    text-align: center;
+    width: 135px;
+
+    a {
+      color: white;
+      font-family: OstrichSansMedium;
+      font-size: 32px;
+
+      &:hover {
+        text-decoration: none;
+      }
+
+    }
+
+
+    &:hover {
+      background: orangered;
     }
   }
 }
