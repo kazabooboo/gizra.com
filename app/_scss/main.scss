@@ -535,9 +535,11 @@ header {
   .container {
 
     .logo {
+      text-align: center;
+      height: 248px;
 
       &:hover {
-        background: #53888B;
+        background: #396F74;
       }
 
       img {
