@@ -495,6 +495,7 @@ header {
   background: #54898C;
   position: relative;
   overflow-x: hidden;
+  padding-bottom: 186px;
 
   .triangle {
     position: absolute;
@@ -563,14 +564,22 @@ header {
 
   .title {
     position: absolute;
-    top: 0;
+    top: 38px;
     left: 50%;
-    margin-left: -300px;
+    margin-left: -12%;
     text-align: center;
-    background: url('/images/hompage/blog/ballons.png') no-repeat 42% 100px;
+    background: url('/images/hompage/blog/ballons.png') no-repeat 0 100px;
     height: 350px;
     width: 400px;
     padding-top: 210px;
     overflow: hidden;
+
+    h2 {
+      font-family: OstrichSansMedium;
+      font-size: 81px;
+      line-height: 57px;
+      margin-left: 30px;
+
+    }
   }
 }
