@@ -4,7 +4,9 @@
 @import "compass/css3/transition";
 
 
-$gizra-orange: #e07253;
+$gizra-orange: #e27058;
+$gizra-orange-dark: #bb5641;
+$gizra-blue: #2a5691;
 
 
 @font-face {
@@ -46,7 +48,7 @@ header {
       font-family: Abril Fatface;
       font-size: 70px;
       text-decoration: none;
-      color: $gizra-orange;
+      color: #e07253;
     }
   }
 
@@ -611,7 +613,7 @@ header {
         line-height: 50px;
 
         &:hover {
-          color: blue;
+          color: $gizra-blue;
           text-decoration: none;
         }
       }
@@ -619,7 +621,7 @@ header {
   }
 
   .all-posts {
-    background: orange;
+    background: $gizra-orange;
     text-align: center;
     width: 135px;
 
@@ -636,15 +638,21 @@ header {
 
 
     &:hover {
-      background: orangered;
+      background: $gizra-orange-dark;
     }
   }
 }
 
 #contact {
 
-  .background {
-    background: url('/images/hompage/blog/background.png') no-repeat;
-    width: 100%;
+  form {
+
+    .text-field,
+    .text-area {
+      width: 100%;
+      display: block;
+      border: none;
+      border-bottom: 1px solid black;
+    }
   }
 }
