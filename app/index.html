@@ -340,33 +340,30 @@ title: Your Project. The Gizra Way
 </section>
 
 <section id="contact">
-  <div class="background">
-    <img src="{{BASE_PATH}}/images/hompage/contact/map.jpg">
-  </div>
+  <div class="contact-wrapper">
+    <h2>Contact Us</h2>
+    <address>
+      5 Brenner St., Tel-Aviv, Israel<br>
+      <a href="tel:+97233731222" class="telephone">+972-3-3731222</a><br>
+      <a href="mailto:info@gizra.com" class="email">info@gizra.com</a><br>
+    </address>
 
-  <div class="container">
-    <div class="row">
-      <div class="col-md-offset-3 col-md-6">
-        <h2>Contact Us</h2>
-        <address></address>
-        <form class="contact-form" method="POST" action="http://api.formspree.com/info+gizra@gizra.com">
 
-          <div class="form-group">
-            <input required="required" name="name" type="name" class="text-field" placeholder="Your name">
-          </div>
+    <form class="contact-form" method="POST" action="http://api.formspree.com/info+gizra@gizra.com">
 
-          <div class="form-group">
-            <input required="required" name="_replyto" type="email" class="text-field" placeholder="Your email">
-          </div>
+      <div class="form-group">
+        <input required="required" name="name" type="name" class="text-field" placeholder="Name">
+      </div>
 
-          <div class="form-group">
-            <textarea required="required" name="message" class="text-area" placeholder="Enter message" rows="3"></textarea>
-          </div>
+      <div class="form-group">
+        <input required="required" name="_replyto" type="email" class="text-field" placeholder="Email">
+      </div>
 
-          <button type="submit" class="btn btn-primary">Send</button>
+      <div class="form-group">
+        <textarea required="required" name="message" class="text-area" placeholder="Message" rows="3"></textarea>
+      </div>
 
-        </form>
-        </div>
-    </div>
+      <button type="submit" class="btn btn-primary">Send</button>
+    </form>
   </div>
 </section>

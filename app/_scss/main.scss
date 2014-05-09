@@ -7,6 +7,7 @@
 $gizra-orange: #e27058;
 $gizra-orange-dark: #bb5641;
 $gizra-blue: #2a5691;
+$gizra-black: #515151;
 
 
 @font-face {
@@ -603,7 +604,7 @@ header {
 
     .teaser,
     .post-label a {
-      color: #515151;
+      color: $gizra-black;
     }
 
     .post-label {
@@ -644,6 +645,30 @@ header {
 }
 
 #contact {
+  background: url('/images/hompage/contact/map.jpg') no-repeat;
+  height: 521px;
+
+  .contact-wrapper {
+    margin: 0 auto;
+    padding-top: 118px;
+    width: 40%;
+  }
+
+  h2 {
+    font-family: OstrichSansMedium;
+    font-size: 80px;
+    margin-top: 0;
+    line-height: 61px;
+    text-align: center;
+  }
+
+  address {
+    text-align: center;
+
+    a {
+      color: $gizra-black;
+    }
+  }
 
   form {
 
@@ -653,6 +678,44 @@ header {
       display: block;
       border: none;
       border-bottom: 1px solid black;
+      background-color: transparent;
+      color: $gizra-black;
+
+      &::-webkit-input-placeholder {
+        color: $gizra-black;
+        font-style: italic;
+      }
+
+      &:-moz-placeholder { /* Firefox 18- */
+        color: $gizra-black;
+        font-style: italic;
+      }
+
+      &::-moz-placeholder {  /* Firefox 19+ */
+        color: $gizra-black;
+        font-style: italic;
+      }
+
+      &:-ms-input-placeholder {
+        color: $gizra-black;
+        font-style: italic;
+      }
+    }
+
+    .text-area {
+      resize: none;
+    }
+
+    .btn-primary {
+      border-radius: 0;
+      float: right;
+      background-color: $gizra-black;
+      color: white;
+      border: none;
+      font-family: OstrichSansMedium;
+      font-size: 32px;
+      line-height: 32px;
+      padding: 5px 25px;
     }
   }
 }
