@@ -664,6 +664,7 @@ header {
 
   address {
     text-align: center;
+    color: $gizra-black;
 
     a {
       color: $gizra-black;
@@ -677,9 +678,9 @@ header {
       width: 100%;
       display: block;
       border: none;
-      border-bottom: 1px solid black;
+      border-bottom: 1px solid $gizra-black;
       background-color: transparent;
-      color: $gizra-black;
+      color: black;
 
       &::-webkit-input-placeholder {
         color: $gizra-black;
@@ -710,7 +711,7 @@ header {
       border-radius: 0;
       float: right;
       background-color: $gizra-black;
-      color: white;
+      color: #DBB68A;
       border: none;
       font-family: OstrichSansMedium;
       font-size: 32px;
