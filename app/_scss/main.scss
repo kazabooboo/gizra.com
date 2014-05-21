@@ -665,11 +665,21 @@ header {
   background: url('/images/hompage/contact/map.jpg') no-repeat;
   background-position: center top;
   height: 521px;
+  background-size: cover;
+  position: relative;
+
+  .background,
+  .contact-wrapper {
+    position: absolute;
+    left: 50%;
+    margin-left: -317px;
+    bottom: 0;
+
+  }
 
   .contact-wrapper {
-    margin: 0 auto;
-    padding-top: 118px;
-    width: 40%;
+    width: 600px;
+    padding: 30px;
   }
 
   h2 {
