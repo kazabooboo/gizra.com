@@ -502,13 +502,16 @@ header {
   overflow-x: hidden;
   padding-bottom: 186px;
 
-  .triangle {
+  &:before {
+    content: ' ';
+    display: block;
+    background-color: white;
+    height: 200px;
+    top: -100px;
+    left: -100px;
+    right: -100px;
     position: absolute;
-    overflow-x: hidden;
-    top: 0;
-    border: 200px solid transparent;
-    border-left: 1500px solid white;
-    border-top: 0 solid white;
+    @include rotate(-6deg);
   }
 
   .background {
