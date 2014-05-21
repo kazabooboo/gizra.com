@@ -674,13 +674,17 @@ header {
     position: absolute;
     left: 50%;
     margin-left: -317px;
-    bottom: 0;
-
   }
+
+  .background {
+    bottom: 0;
+  };
 
   .contact-wrapper {
     width: 635px;
-    padding: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    top: 121px;
   }
 
   h2 {
