@@ -564,6 +564,18 @@ header {
   overflow-x: hidden;
   margin-bottom: 112px;
 
+  &:before {
+    content: ' ';
+    display: block;
+    background-color: #54898C;
+    height: 200px;
+    top: -100px;
+    left: -100px;
+    right: -100px;
+    position: absolute;
+    @include rotate(3deg);
+  }
+
   .background {
     margin-bottom: 121px;
 
