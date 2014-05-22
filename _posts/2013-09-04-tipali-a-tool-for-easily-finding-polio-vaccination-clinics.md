@@ -19,7 +19,6 @@ The Ministry of Health decided to create a mobile application to help parents fi
   <div class="caption">It’s in Hebrew, but you get the idea</div>
 </div>
 
-
 I assume the iOS version is still undergoing the App Store approval process.
 
 We discussed the app during lunch at Gizra. We’re no doctors, but we thought we could do something about the software. Going with a native app didn’t seem ideal for a single-use application which needs to be deployed on as many platforms ASAP. As for the UI, I’ll leave the image above as an exercise to the reader.
