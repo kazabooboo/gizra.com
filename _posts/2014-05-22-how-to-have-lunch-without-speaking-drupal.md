@@ -35,7 +35,7 @@ I have never developed any module in my life, didn't contribute anything to OG n
 
 But wait! Why on earth would you want to change yourself?!  
 I have known my self for almost 34 years now, I am too stubborn for that. There’s a "The The" song that kinda became my motto ever since I was a teenager - "If you can't change the world, change yourself. And if you can't change yourself then... change the world"  
-Since a developer I will most probably not be in this lifetime, I decided to roll up my sleeves and therefore We’re moving to Plan B!
+Since I will probably never be a developer, I decided to roll up my sleeves and therefore We’re moving to Plan B!
 
 ### How to teach your Drupal geeks to do human stuff, and not just talk about stuff no body cares. 101.
 
