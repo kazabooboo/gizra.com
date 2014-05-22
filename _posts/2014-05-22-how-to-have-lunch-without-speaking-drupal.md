@@ -21,6 +21,7 @@ Don’t get me wrong - I love my job and I love my co-workers as well. It’s ju
 <strong>My name is Orit and I am not a Drupal geek!</strong>
 
 I have never developed any module in my life, didn't contribute anything to OG nor have I never requested Brice or Amitai to give me a scrutinizing code review. So here are some tips:
+
 <!-- more -->
 
 ### How to work with Drupal geeks when you don't have a CLUE what they are talking about  (and even make it through lunch time) 101
