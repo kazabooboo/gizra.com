@@ -8,7 +8,7 @@ published: true
 author: OritiMG
 ---
 
-Oh no, It’s lunch time!
+Oh no, It’s lunch time!  
 I wonder if I’ll have anything to contribute to the conversation today. Will lunch today - like yesterday or the day before that - revolve around pull requests, Organic groups, migrate, scrum, code reviews, modules. Boring.  
 If you share the same feeling reading the above lines, this blog post if for you.
 
