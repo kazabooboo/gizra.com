@@ -89,7 +89,7 @@ header {
     left: -100px;
     right: -100px;
     position: absolute;
-    @include rotate(6deg);
+    @include rotate(4deg);
   }
 
   .background-wrapper {
@@ -253,7 +253,7 @@ header {
 
         .gramophone-1 {
           right: 31%;
-          bottom: 63px;
+          bottom: 75px;
         }
       }
     }
@@ -512,7 +512,7 @@ header {
     left: -100px;
     right: -100px;
     position: absolute;
-    @include rotate(-6deg);
+    @include rotate(-4deg);
   }
 
   .background {
@@ -574,7 +574,7 @@ header {
     left: -100px;
     right: -100px;
     position: absolute;
-    @include rotate(3deg);
+    @include rotate(1deg);
   }
 
   .background {
