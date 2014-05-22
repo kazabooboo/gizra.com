@@ -2,6 +2,7 @@
 title: How to have lunch without speaking Drupal
 tags:
   - Office culture
+  - "Drupal-planet"
 permalink: "/content/how-to-have-lunch-without-speaking-drupal"
 layout: post
 published: true
