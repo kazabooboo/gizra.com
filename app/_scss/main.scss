@@ -310,6 +310,10 @@ header {
     border-top: 20px solid #A2E4B0;
     padding-top: 25px;
 
+    .icon {
+      background: url('/images/hompage/products/academy.png') transparent no-repeat;
+    }
+
     a {
       color: #F8BB88;
     }
@@ -318,6 +322,10 @@ header {
   .smart-city {
     background-color: #FF2A0F;
     border-top: 40px solid #FF9E00;
+
+    .icon {
+      background: url('/images/hompage/products/electricity.png') transparent no-repeat;
+    }
 
     a {
       color: #ff7849;
@@ -328,6 +336,10 @@ header {
     background-color: #D50000;
     border-top: 10px solid #F44000;
     padding-top: 30px;
+
+    .icon {
+      background: url('/images/hompage/products/publishing.png') transparent no-repeat;
+    }
 
     a {
       color: #FF2A08;
