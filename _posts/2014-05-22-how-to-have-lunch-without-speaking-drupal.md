@@ -9,15 +9,15 @@ author: OritiMG
 ---
 
 Oh no, It’s lunch time!
-I wonder if I’ll have anything to contribute to the conversation today. Will lunch today - like yesterday or the day before that - revolve around pull requests, Organic groups, migrate, scrum, code reviews, modules. Boring.
+I wonder if I’ll have anything to contribute to the conversation today. Will lunch today - like yesterday or the day before that - revolve around pull requests, Organic groups, migrate, scrum, code reviews, modules. Boring.  
 If you share the same feeling reading the above lines, this blog post if for you.
 
 <div class="thumbnail">
   <img src="{{BASE_PATH}}/assets/images/posts/lunch/photo1.jpg" />
-  <div class="caption">Spontaneous reaction to a new version of a Drupal module. I love those guys!</div>
+  <div class="caption">Geeks having a spontaneous reaction to a new version of a Drupal module. I love those guys!</div>
 </div>
 
-Don’t get me wrong - I love my job and I love my co-workers as well. It’s just that every time they talk about these things it makes me wanna stand up on our designer kitchen chair and shout:
+Don’t get me wrong - I love my job and I love my co-workers as well. It’s just that every time they talk about these things it makes me wanna stand up on our designer kitchen chair and shout:  
 <strong>My name is Orit and I am not a Drupal geek!</strong>
 
 I have never developed any module in my life, didn't contribute anything to OG nor have I never requested Brice or Amitai to give me a scrutinizing code review. So here are some tips:
@@ -50,7 +50,7 @@ Since a developer I will most probably not be in this lifetime, I decided to rol
 5. Organize an event - Help arrange their annual Drupal Camp. As the old saying goes: If you can’t beat them, Join them.
 
 ### About balance
-Obviously to reach an office nirvana you should probably find some balance between the two lists. Let me know if you have more ideas.
+Obviously to reach an office nirvana you should probably find some balance between the two lists. Let me know if you have more ideas.  
 Anyway, I've gotta go, it's almost lunch time here, I'm starving, and I have <em>lots</em> to contribute to the conversation today.
 
 Bon Appétit!
