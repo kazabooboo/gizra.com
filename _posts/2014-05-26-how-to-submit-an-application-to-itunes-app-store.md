@@ -37,7 +37,7 @@ Afters struggling with it a few times, we thought it might be useful to create a
 * Press [+] "Add" button to create a new App ID. [add image]
 * Fill the registration form:
 
-![2_identifier_register.jpg]({{BASE_PATH}}/assets/images/posts/how-to-submit-an-application-to-itunes-app-store/1_identifier_register.jpg)
+![2_identifier_register.jpg]({{BASE_PATH}}/assets/images/posts/how-to-submit-an-application-to-itunes-app-store/2_identifier_register.jpg)
 
 * Open the XCode project and select Target.
 * Enter the Bundle Identifier.
