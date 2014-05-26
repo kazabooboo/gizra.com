@@ -56,6 +56,11 @@ authors:
       title: HR manager
       bio: I speak fluent geek, and can translate to human speaking
       twitter: OritiMG
+  - ceoaliongroo:
+      name: Carlos Mantilla
+      title: Full stack developer
+      bio: AngularJs, d3js, nodejs. Everythis JS!
+      twitter: cmantillacode
 
 
 # The production_url is only used when full-domain names are needed
