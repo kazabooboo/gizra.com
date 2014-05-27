@@ -81,7 +81,7 @@ header {
   overflow: hidden;
 
   @media (max-width: 600px) {
-    //max-height: 300px;
+    max-height: 300px;
   }
 
   &:before {
@@ -191,28 +191,28 @@ header {
       }
 
       // IBLI
-      &.ibli {
+     &.ibli {
 
-        .globe {
-          left: 39%;
-          bottom: 84px;
-        }
+       .globe {
+        left: 39%;
+        bottom: 84px;
+       }
 
-        .ufo {
-          left: 18%;
-          top: 204px;
-        }
+       .ufo {
+         left: 18%;
+         top: 204px;
+       }
 
-        .shuttle {
-          right: 14%;
-          top: 137px;
-        }
+       .shuttle {
+         right: 14%;
+         top: 137px;
+       }
 
-        .satellite {
-          left: 21%;
-          bottom: 125px;
-        }
-      }
+       .satellite {
+         left: 21%;
+         bottom: 125px;
+       }
+     }
 
       // Harvard
       &.harvard {
@@ -413,7 +413,7 @@ header {
     min-height: 180px;
 
     @media (min-width: 991px) {
-      display: none;
+        display: none;
     }
   }
 
@@ -445,7 +445,7 @@ header {
     pointer-events: none;
 
     @media (max-width: 768px) {
-      display: none;
+     display: none;
     }
   }
 
