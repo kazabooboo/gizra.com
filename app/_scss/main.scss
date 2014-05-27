@@ -6,6 +6,7 @@
 
 $gizra-orange: #e27058;
 $gizra-orange-dark: #bb5641;
+$gizra-orange-light: #fba200;
 $gizra-blue: #2a5691;
 $gizra-black: #515151;
 
@@ -45,11 +46,21 @@ header {
   .logo {
     margin-top: -22px;
 
+    @media (max-width: 767px) {
+      margin: 15px 0 34px;
+      text-align: left;
+    }
+
     a {
       font-family: Abril Fatface;
       font-size: 70px;
       text-decoration: none;
-      color: #e07253;
+      color: $gizra-orange;
+
+      @media (max-width: 767px) {
+        font-size: 45px;
+        padding: 0 20px;
+      }
     }
   }
 
@@ -59,6 +70,38 @@ header {
     display: inline-block;
     min-height: initial;
     margin-bottom: -17px;
+    position: relative;
+
+    @media (max-width: 767px) {
+      position: absolute;
+      top: 25px;
+      right: -2px;
+    }
+
+    .navbar-toggle {
+      border: 0 none;
+
+      &:hover, &:focus {
+        border: 0 none;
+        background: none;
+      }
+
+      .icon-bar {
+        background: $gizra-orange-light;
+        height: 3px;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .navbar-collapse {
+        position: absolute;
+        right: 0;
+        top: 45px;
+        z-index: 1000;
+        border-top: 0 none;
+        background: #ffffff;
+      }
+    }
 
     ul.navbar-nav {
 
@@ -79,10 +122,6 @@ header {
   background: black;
   position: relative;
   overflow: hidden;
-
-  @media (max-width: 600px) {
-    max-height: 300px;
-  }
 
   &:before {
     content: ' ';
@@ -105,7 +144,7 @@ header {
     .background {
       padding-top: 85px;
 
-      @media (max-width: 600px) {
+      @media (max-width: 767px) {
         visibility: hidden;
       }
     }
@@ -121,7 +160,7 @@ header {
         margin-left: 65px;
       }
 
-      @media (max-width: 600px) {
+      @media (max-width: 767px) {
         display: none;
       }
     }
@@ -151,10 +190,6 @@ header {
       min-height: 500px;
       width: 860px;
       margin: 0 auto;
-
-      @media (max-width: 600px) {
-        visibility: hidden;
-      }
 
       img {
         // Each image should be positioned absolute in order for parallax to
@@ -302,6 +337,10 @@ header {
         @media (min-width: 550px) and (max-width: 768px) {
           font-size: 250%;
         }
+        @media (max-width: 550px) {
+          font-size: 160%;
+          letter-spacing: 2px;
+        }
       }
 
       .small {
@@ -313,6 +352,9 @@ header {
         }
         @media (min-width: 550px) and (max-width: 768px) {
           font-size: 160%;
+        }
+        @media (max-width: 550px) {
+          font-size: 100%;
         }
       }
     }
