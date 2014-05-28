@@ -668,6 +668,15 @@ header {
       background: #467D83;
       border: 2px solid #54898C;
 
+      @media (min-width: 550px) and (max-width: 767px) {
+        max-width: 282px;
+        margin-left: 10px;
+      }
+      @media (max-width: 549px) {
+        max-width: 282px;
+        margin-left: 15px;
+      }
+
       &:hover {
         background: #396F74;
       }
