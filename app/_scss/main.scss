@@ -9,7 +9,6 @@ $gizra-orange-dark: #bb5641;
 $gizra-orange-light: #fba200;
 $gizra-blue: #2a5691;
 $gizra-black: #515151;
-$gizra-red: #EC6C5B;
 
 
 @font-face {
@@ -34,6 +33,12 @@ $gizra-red: #EC6C5B;
   font-weight: normal;
   font-style: normal;
 
+}
+
+// This will make the images fill the frame in all thumbed images
+// The problem is that it will stretch small images in big resolutions.
+.thumbnail > img, .thumbnail a > img {
+  width: 100%;
 }
 
 header {
@@ -950,6 +955,13 @@ header {
   overflow-x: hidden;
   background: white;
 
+  a {
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
   &:before {
     content: ' ';
     display: block;
@@ -960,6 +972,10 @@ header {
     right: -100px;
     position: absolute;
     @include rotate(2deg);
+
+    @media (max-width: 767px) {
+      display: none;
+    }
   }
 
   .background {
@@ -1139,6 +1155,10 @@ header {
     .previous,
     .next {
 
+      &:hover {
+        background-color: $gizra-orange-dark;
+      }
+
       a {
         color: #ffffff;
         font-size: 35px;
@@ -1151,7 +1171,7 @@ header {
 
     .previous {
       float: left;
-      background:  url("/images/post/prev.png") 5px 18px no-repeat $gizra-red;
+      background:  url("/images/post/prev.png") 5px 18px no-repeat $gizra-orange;
 
       a {
         padding: 6px 10px 6px 30px;
@@ -1160,7 +1180,7 @@ header {
 
     .next {
       float: right;
-      background:  url("/images/post/next.png") 95% 18px no-repeat $gizra-red;
+      background:  url("/images/post/next.png") 95% 18px no-repeat $gizra-orange;
 
       a {
         padding: 6px 30px 6px 10px;
@@ -1169,7 +1189,7 @@ header {
 
     .prev-text,
     .next-text {
-      color: $gizra-red;
+      color: $gizra-orange;
       width: 100%;
       float: left;
       font-weight: bold;
