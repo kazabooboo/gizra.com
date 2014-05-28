@@ -35,9 +35,34 @@ $gizra-black: #515151;
 
 }
 
+// This will make the images fill the frame in all thumbed images
+// The problem is that it will stretch small images in big resolutions.
+.thumbnail > img, .thumbnail a > img {
+  width: 100%;
+}
+
 header {
   background-color: black;
   text-align: center;
+
+  &.white {
+    background: white;
+
+    .navbar {
+
+      ul.navbar-nav {
+
+        a {
+          color: #000000;
+
+          &:hover,
+          &.active {
+            color: #FF9E2F;
+          }
+        }
+      }
+    }
+  }
 
   .container {
     border-bottom: 2px solid white;
@@ -113,8 +138,9 @@ header {
         letter-spacing: 2px;
         font-family: OstrichSansBlack;
 
-        &:hover {
-          color: #F8BB88;
+        &:hover,
+        &.active {
+          color: #FF9E2F;
         }
 
         @media (max-width: 767px) {
@@ -919,6 +945,276 @@ header {
       font-size: 32px;
       line-height: 32px;
       padding: 5px 25px;
+    }
+  }
+}
+
+// Post Page
+#post-page {
+  position: relative;
+  overflow-x: hidden;
+  background: white;
+
+  a {
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &:before {
+    content: ' ';
+    display: block;
+    background-color: white;
+    height: 200px;
+    top: -165px;
+    left: -100px;
+    right: -100px;
+    position: absolute;
+    @include rotate(2deg);
+
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+
+  .background {
+    margin-bottom: 121px;
+
+    @media (max-width: 550px) {
+      margin-bottom: 45px;
+    }
+
+    img {
+      max-height: 300px;
+      width: 100%;
+    }
+  }
+
+  .baloons {
+    position: absolute;
+    top: 38px;
+    left: 50%;
+    margin-left: -12%;
+    text-align: center;
+    background: url('/images/hompage/blog/ballons.png') no-repeat 0 100px;
+    height: 350px;
+    width: 400px;
+    padding-top: 210px;
+    overflow: hidden;
+
+    @media (min-width: 769px) and (max-width: 1240px) {
+      left: 60%;
+      height: 215px;
+      background-position: 0 0;
+    }
+
+    @media (min-width: 550px) and (max-width: 768px) {
+      left: 60%;
+      height: 215px;
+      background-position: 0 0;
+    }
+
+    @media (max-width: 550px) {
+      display: none;
+    }
+  }
+
+  .post-back {
+    position: absolute;
+    top: 250px;
+    left: 20%;
+    text-align: center;
+
+    @media (min-width: 769px) and (max-width: 1240px) {
+      top: 140px;
+      left: 10%;
+    }
+
+    @media (min-width: 550px) and (max-width: 768px) {
+      top: 105px;
+      left: 10%;
+    }
+
+    @media (max-width: 550px) {
+      top: 45px;
+      left: 5%;
+    }
+  }
+
+  .content {
+
+    .date,
+    .post-label,
+    .author,
+    .seprator,
+    .previous,
+    .next {
+      font-family: OstrichSansMedium;
+    }
+
+    .post-label {
+
+      a {
+        font-size: 83px;
+        line-height: 50px;
+        color: #9A2B2C;
+
+        @media (min-width: 991px) and (max-width: 1240px) {
+          font-size: 560%;
+        }
+        @media (min-width: 769px) and (max-width: 990px) {
+          font-size: 480%;
+        }
+        @media (min-width: 550px) and (max-width: 768px) {
+          font-size: 360%;
+        }
+        @media (max-width: 550px) {
+          font-size: 290%;
+        }
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+
+    .small-row {
+      width: 60%;
+
+      @media (min-width: 991px) and (max-width: 1240px) {
+        width: 75%;
+      }
+      @media (min-width: 769px) and (max-width: 990px) {
+        width: 80%;
+      }
+      @media (min-width: 550px) and (max-width: 768px) {
+        width: 85%;
+      }
+      @media (max-width: 550px) {
+        width: 100%;
+      }
+
+      .date,
+      .author,
+      .seprator {
+        color: #9D9D9D;
+        font-size: 38px;
+        float: left;
+
+        @media (min-width: 769px) and (max-width: 990px) {
+          font-size: 30px;
+        }
+        @media (min-width: 550px) and (max-width: 768px) {
+          font-size: 25px;
+        }
+        @media (max-width: 550px) {
+          font-size: 20px;
+        }
+
+        a {
+          color: #9D9D9D;
+        }
+      }
+
+      .comments-count, .tags {
+        margin: 20px 0;
+        color: #4883B4;
+        font-weight: bold;
+        padding-left: 35px;
+        padding-top: 2px;
+      }
+
+      .comments-count {
+        background: url("/images/post/small-comment.jpg") 15px 0 no-repeat;
+      }
+
+      .tags {
+        background: url("/images/post/small-tags.jpg") 12px 0 no-repeat;
+      }
+    }
+  }
+
+  .post-content {
+    color: #5D5D5D;
+  }
+
+  .bottom-dash {
+    border-bottom: 4px dashed #5D5D5D;
+    margin: 30px 0;
+  }
+
+  .bottom-dash-small {
+    border-bottom: 2px dashed #838383;
+    margin: 30px 0;
+  }
+
+  .post-nav {
+    margin-bottom: 30px;
+
+    .previous,
+    .next {
+
+      &:hover {
+        background-color: $gizra-orange-dark;
+      }
+
+      a {
+        color: #ffffff;
+        font-size: 35px;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+
+    .previous {
+      float: left;
+      background:  url("/images/post/prev.png") 5px 18px no-repeat $gizra-orange;
+
+      a {
+        padding: 6px 10px 6px 30px;
+      }
+    }
+
+    .next {
+      float: right;
+      background:  url("/images/post/next.png") 95% 18px no-repeat $gizra-orange;
+
+      a {
+        padding: 6px 30px 6px 10px;
+      }
+    }
+
+    .prev-text,
+    .next-text {
+      color: $gizra-orange;
+      width: 100%;
+      float: left;
+      font-weight: bold;
+    }
+
+    .next-text {
+      text-align: right;
+      float: right;
+    }
+  }
+
+  .author-details {
+    margin-bottom: 30px;
+
+    .image-wrapper {
+      max-width: 80px;
+      padding: 0;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .text-wrapper {
+      color: #5D5D5D;
     }
   }
 }
