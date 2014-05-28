@@ -9,6 +9,7 @@ $gizra-orange-dark: #bb5641;
 $gizra-orange-light: #fba200;
 $gizra-blue: #2a5691;
 $gizra-black: #515151;
+$gizra-red: #EC6C5B;
 
 
 @font-face {
@@ -49,7 +50,8 @@ header {
         a {
           color: #000000;
 
-          &:hover {
+          &:hover,
+          &.active {
             color: #FF9E2F;
           }
         }
@@ -131,7 +133,8 @@ header {
         letter-spacing: 2px;
         font-family: OstrichSansBlack;
 
-        &:hover {
+        &:hover,
+        &.active {
           color: #FF9E2F;
         }
 
@@ -962,6 +965,10 @@ header {
   .background {
     margin-bottom: 121px;
 
+    @media (max-width: 550px) {
+      margin-bottom: 45px;
+    }
+
     img {
       max-height: 300px;
       width: 100%;
@@ -980,13 +987,20 @@ header {
     padding-top: 210px;
     overflow: hidden;
 
-    @media (max-width: 768px) {
-      left: 40%;
+    @media (min-width: 769px) and (max-width: 1240px) {
+      left: 60%;
+      height: 215px;
+      background-position: 0 0;
+    }
+
+    @media (min-width: 550px) and (max-width: 768px) {
+      left: 60%;
+      height: 215px;
+      background-position: 0 0;
     }
 
     @media (max-width: 550px) {
-      top: -70px;
-      left: 15%;
+      display: none;
     }
   }
 
@@ -995,6 +1009,21 @@ header {
     top: 250px;
     left: 20%;
     text-align: center;
+
+    @media (min-width: 769px) and (max-width: 1240px) {
+      top: 140px;
+      left: 10%;
+    }
+
+    @media (min-width: 550px) and (max-width: 768px) {
+      top: 105px;
+      left: 10%;
+    }
+
+    @media (max-width: 550px) {
+      top: 45px;
+      left: 5%;
+    }
   }
 
   .content {
@@ -1002,7 +1031,9 @@ header {
     .date,
     .post-label,
     .author,
-    .seprator {
+    .seprator,
+    .previous,
+    .next {
       font-family: OstrichSansMedium;
     }
 
@@ -1014,16 +1045,16 @@ header {
         color: #9A2B2C;
 
         @media (min-width: 991px) and (max-width: 1240px) {
-          font-size: 490%;
+          font-size: 560%;
         }
         @media (min-width: 769px) and (max-width: 990px) {
-          font-size: 364%;
+          font-size: 480%;
         }
         @media (min-width: 550px) and (max-width: 768px) {
-          font-size: 290%;
+          font-size: 360%;
         }
         @media (max-width: 550px) {
-          font-size: 190%;
+          font-size: 290%;
         }
 
         &:hover {
@@ -1034,6 +1065,19 @@ header {
 
     .small-row {
       width: 60%;
+
+      @media (min-width: 991px) and (max-width: 1240px) {
+        width: 75%;
+      }
+      @media (min-width: 769px) and (max-width: 990px) {
+        width: 80%;
+      }
+      @media (min-width: 550px) and (max-width: 768px) {
+        width: 85%;
+      }
+      @media (max-width: 550px) {
+        width: 100%;
+      }
 
       .date,
       .author,
@@ -1082,5 +1126,75 @@ header {
   .bottom-dash {
     border-bottom: 4px dashed #5D5D5D;
     margin: 30px 0;
+  }
+
+  .bottom-dash-small {
+    border-bottom: 2px dashed #838383;
+    margin: 30px 0;
+  }
+
+  .post-nav {
+    margin-bottom: 30px;
+
+    .previous,
+    .next {
+
+      a {
+        color: #ffffff;
+        font-size: 35px;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+
+    .previous {
+      float: left;
+      background:  url("/images/post/prev.png") 5px 18px no-repeat $gizra-red;
+
+      a {
+        padding: 6px 10px 6px 30px;
+      }
+    }
+
+    .next {
+      float: right;
+      background:  url("/images/post/next.png") 95% 18px no-repeat $gizra-red;
+
+      a {
+        padding: 6px 30px 6px 10px;
+      }
+    }
+
+    .prev-text,
+    .next-text {
+      color: $gizra-red;
+      width: 100%;
+      float: left;
+      font-weight: bold;
+    }
+
+    .next-text {
+      text-align: right;
+      float: right;
+    }
+  }
+
+  .author-details {
+    margin-bottom: 30px;
+
+    .image-wrapper {
+      max-width: 80px;
+      padding: 0;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .text-wrapper {
+      color: #5D5D5D;
+    }
   }
 }

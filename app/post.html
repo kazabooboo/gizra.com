@@ -22,7 +22,7 @@ title: Your Project. The Gizra Way
           <li><a href="#about">About</a></li>
           <li><a href="#work">Work</a></li>
           <li><a href="#code">Showcase</a></li>
-          <li><a href="#blog">Blog</a></li>
+          <li><a href="#blog" class="active">Blog</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
@@ -49,40 +49,40 @@ title: Your Project. The Gizra Way
 
           <div class="row">
             <div class="post-label col-xs-12">
-              <a href="#">Zariz Loves Entity Reference</a>
+              <a href="#">Casa del Lector</a>
             </div>
           </div>
 
           <div class="row small-row">
-            <div class="date col-md-3">20 Jan 2014</div>
-            <div class="seprator col-md-1">|</div>
-            <div class="author col-md-8">By <a href="#author">Nir Yaniv</a></div>
+            <div class="date col-md-3 col-sm-4 col-xs-4">20 Jan 2014</div>
+            <div class="seprator col-md-1 col-sm-1 col-xs-1">|</div>
+            <div class="author col-md-8 col-sm-7 col-xs-6">By <a href="#author">Nir Yaniv</a></div>
           </div>
 
           <div class="row small-row">
-            <div class="comments-count col-md-3">11 Comments</div>
-            <div class="tags col-md-9">Project management, Drupal-planet</div>
+            <div class="comments-count col-sm-3">11 Comments</div>
+            <div class="tags col-sm-9">Project management, Drupal-planet</div>
           </div>
 
           <div class="row">
             <div class="col-xs-12 post-content">
                 <p>Last week saw the launch of a pretty unique <a href="http://gizra.github.io/CDL/">project</a> for us. It's not every day a product we've worked on gets a <a href="http://cultura.elpais.com/cultura/2014/03/05/actualidad/1394047004_090821.html">write up on El Pais</a>, or has this kind of launch event:</p>
 
-                <p><img src="http://www.gizra.com/assets/images/posts/casa-del-lector/IMG_8388-2.JPG" alt=""></p>
+                <p><img src="http://www.gizra.com/assets/images/posts/casa-del-lector/IMG_8388-2.JPG" class="img-responsive" alt=""></p>
 
                 <p>The target audience is a bit unusual as well. While it can be accessed like any other site, it's targeted to be used inside a specific exhibition in the <a href="http://casalector.fundaciongsr.com/">Casa del Lector</a> museum in Madrid, on tablets handed out to the museum visitors:</p>
 
-                <p><img src="http://www.gizra.com/assets/images/posts/casa-del-lector/IMG_8259%20-%202.JPG" alt=""></p>
+                <p><img src="http://www.gizra.com/assets/images/posts/casa-del-lector/IMG_8259%20-%202.JPG" class="img-responsive alt=""></p>
 
                 <p>We took great care to stay within the touch UI conventions. When entering the site, the user is presented with a network of connections between items. As she zooms, details are revealed - subitems, their connections and finally their titles:</p>
 
-                <p><img src="http://www.gizra.com/assets/images/posts/casa-del-lector/cdl-map-1.gif" alt=""></p>
+                <p><img src="http://www.gizra.com/assets/images/posts/casa-del-lector/cdl-map-1.gif" class="img-responsive alt=""></p>
 
                 <!-- more -->
 
                 <p>Tapping a node highlights its connections within the network, and a second tap takes the user to the node content, which contains various media:</p>
 
-                <p><img src="http://www.gizra.com/assets/images/posts/casa-del-lector/cdl-item.gif" alt=""></p>
+                <p><img src="http://www.gizra.com/assets/images/posts/casa-del-lector/cdl-item.gif" class="img-responsive alt=""></p>
 
                 <p>But the greatest difference is probably under the hood. There's no server-side as such. The data is entered via a 3rd party desktop app and exported into XML, based on which <a href="https://github.com/Gizra/CDL/">our code</a> creates Jekyll files served from Github Pages, with the fantastic <a href="http://d3js.org/">d3.js</a> powering the network UI. </p>
 
@@ -93,9 +93,45 @@ title: Your Project. The Gizra Way
           </div>
 
           <div class="row">
-            <div class="col-xs-12 bottom-dash">
+            <div class="col-xs-12 bottom-dash"></div>
+          </div>
 
+          <div class="row post-nav">
+            <div class="col-xs-6">
+              <div class="previous">
+                <a href="#prev">
+                  Previous
+                </a>
+              </div>
+              <a href="#" class="prev-text">
+                Amitai's DrupalCon Portland Presentation
+              </a>
             </div>
+            <div class="col-xs-6">
+              <div class="next">
+                <a href="#next">
+                 Next
+                </a>
+              </div>
+              <a href="#" class="next-text">
+                Dekyll's new "GitHub Pages" flavor
+              </a>
+            </div>
+          </div>
+
+          <div class="row author-details">
+              <div class="col-xs-2 image-wrapper">
+                <img src="http://www.gizra.com/assets/images/team/niryariv.jpg" class="img-responsive">
+              </div>
+              <div class="col-xs-10 text-wrapper">
+                <span class="name">Nir Yariv</span> <span class="nickname">(@niryariv)</span>
+                <div class="title">Projects Lead</div>
+                <div class="bio">Messed with PHP since before it was cool, and for some time after. Now mostly herds cats.</div>
+              </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-12 bottom-dash-small"></div>
           </div>
         </div>
       </div>
