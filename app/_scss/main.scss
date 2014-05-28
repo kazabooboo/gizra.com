@@ -106,12 +106,16 @@ header {
     ul.navbar-nav {
 
       a {
-        color: orange;
+        color: #9c5f1b;
         padding-top: 0;
         text-transform: uppercase;
         font-size: 15px;
         letter-spacing: 2px;
         font-family: OstrichSansBlack;
+
+        &:hover {
+          color: #F8BB88;
+        }
 
         @media (max-width: 767px) {
           font-size: 35px;
