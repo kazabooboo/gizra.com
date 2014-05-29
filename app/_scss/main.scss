@@ -10,6 +10,7 @@ $gizra-orange-light: #fba200;
 $gizra-blue: #2a5691;
 $gizra-black: #515151;
 $gizra-orange-hover: #E75E08;
+$gizra-text: #5D5D5D;
 
 
 @font-face {
@@ -52,14 +53,24 @@ header {
     .navbar {
       z-index: 1000;
 
-      ul.navbar-nav {
+      .navbar-collapse {
+        @media (max-width: 767px) {
+          background: #000000;
+        }
 
-        a {
-          color: #000000;
+        ul.navbar-nav {
 
-          &:hover,
-          &.active {
-            color: #FF9E2F;
+          a {
+            color: #000000;
+
+            @media (max-width: 767px) {
+              color: #ffffff;
+            }
+
+            &:hover,
+            &.active {
+              color: #FF9E2F;
+            }
           }
         }
       }
@@ -149,6 +160,8 @@ header {
         @media (max-width: 767px) {
           font-size: 35px;
           line-height: 45px;
+          padding-left: 50px;
+          padding-right: 50px;
         }
       }
     }
@@ -551,7 +564,20 @@ header {
 
   .text-wrapper {
     text-align: center;
-    margin-top: 100px;
+    margin-top: 50px;
+
+    @media (min-width: 991px) and (max-width: 1240px) {
+      margin-top: 30px;
+    }
+    @media (min-width: 769px) and (max-width: 990px) {
+      margin-top: 20px;
+    }
+    @media (min-width: 550px) and (max-width: 768px) {
+      margin-top: 10px;
+    }
+    @media (max-width: 550px) {
+      margin-top: -7px;
+    }
 
     h2,
     p {
@@ -563,16 +589,41 @@ header {
       font-size: 80px;
       line-height: 120px;
       text-align: center;
+
+      @media (min-width: 320px) and (max-width: 550px) {
+        font-size: 55px;
+      }
+      @media (max-width: 320px) {
+        font-size: 45px;
+        line-height: 22px;
+      }
     }
 
     p {
       font-size: 14px;
+
+      @media (min-width: 320px) and (max-width: 600px) {
+        line-height: 16px;
+      }
+      @media (max-width: 320px) {
+        line-height: 14px;
+      }
     }
   }
 
   .see-all {
     text-align: center;
-    margin-top: 100px;
+    margin-top: 65px;
+
+    @media (min-width: 700px) and (max-width: 990px) {
+      margin-top: 95px;
+    }
+    @media (min-width: 600px) and (max-width: 700px) {
+      margin-top: 45px;
+    }
+    @media (max-width: 599px) {
+      margin-top: 35px;
+    }
 
     a {
       text-decoration: none;
@@ -608,6 +659,23 @@ header {
     padding-top: 100px;
     padding-left: 100px;
 
+    @media (min-width: 991px) and (max-width: 1240px) {
+      padding-top: 100px;
+      padding-left: 50px;
+    }
+    @media (min-width: 769px) and (max-width: 990px) {
+      padding-top: 100px;
+      padding-left: 225px;
+    }
+    @media (min-width: 550px) and (max-width: 768px) {
+      padding-top: 100px;
+      padding-left: 155px;
+    }
+    @media (max-width: 550px) {
+      padding-top: 100px;
+      padding-left: 18px;
+    }
+
     &:hover {
 
       .description {
@@ -634,8 +702,8 @@ header {
     }
 
     .description {
-      height: 250px;
-      width: 250px;
+      height: 285px;
+      width: 285px;
       display: table-cell;
       text-align: center;
       vertical-align: middle;
@@ -953,7 +1021,8 @@ header {
 }
 
 // Post Page
-#post-page {
+#post-page,
+#blog-page {
   position: relative;
   overflow-x: hidden;
   background: white;
@@ -1140,11 +1209,11 @@ header {
   }
 
   .post-content {
-    color: #5D5D5D;
+    color: $gizra-text;
   }
 
   .bottom-dash {
-    border-bottom: 4px dashed #5D5D5D;
+    border-bottom: 4px dashed $gizra-text;
     margin: 30px 0;
   }
 
@@ -1218,7 +1287,145 @@ header {
     }
 
     .text-wrapper {
-      color: #5D5D5D;
+      color: $gizra-text;
+    }
+  }
+}
+
+// Blog Page
+#blog-page {
+
+  .blog-title {
+    position: absolute;
+    top: 38px;
+    left: 50%;
+    margin-left: -12%;
+    text-align: center;
+    background: url('/images/hompage/blog/ballons.png') no-repeat 0 100px;
+    height: 350px;
+    width: 400px;
+    padding-top: 210px;
+    overflow: hidden;
+
+    @media (min-width: 769px) and (max-width: 1240px) {
+      left: 38%;
+      height: 215px;
+      background-position: 0 0;
+      padding-top: 110px;
+    }
+
+    @media (min-width: 550px) and (max-width: 768px) {
+      left: 25%;
+      height: 215px;
+      padding-top: 110px;
+      background-position: 0 0;
+    }
+
+    @media (max-width: 550px) {
+      left: -23%;
+      height: 215px;
+      padding-top: 0px;
+      background: none;
+    }
+
+    h2 {
+      font-family: OstrichSansMedium;
+      font-size: 81px;
+      line-height: 57px;
+      margin-left: 30px;
+
+      @media (max-width: 550px) {
+        font-size: 45px;
+        line-height: 25px;
+        margin-left: 0px;
+      }
+    }
+  }
+
+  .content {
+    .post-label {
+
+      a {
+        @media (min-width: 991px) and (max-width: 1240px) {
+          font-size: 560%;
+        }
+        @media (min-width: 769px) and (max-width: 990px) {
+          font-size: 480%;
+        }
+        @media (min-width: 550px) and (max-width: 768px) {
+          font-size: 360%;
+        }
+        @media (max-width: 550px) {
+          font-size: 220%;
+        }
+      }
+    }
+  }
+
+  .bottom-dash {
+    border-bottom: 4px dashed $gizra-text;
+    margin: 30px 0 150px;
+  }
+
+  .pager-wrapper {
+    width: auto;
+    background-color: $gizra-orange;
+    color: $gizra-text;
+    padding: 10px 20px 6px;
+    min-height: 45px;
+    margin-bottom: 100px;
+    float: left;
+
+    #pager {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      float: left;
+
+      li.page {
+        float: left;
+        padding: 0 28px;
+        font-family: OstrichSansMedium;
+        font-size: 50px;
+        line-height: 35px;
+        border-right: 1px solid white;
+
+        @media (min-width: 550px) and (max-width: 768px) {
+          padding: 0 20px;
+        }
+        @media (max-width: 550px) {
+          padding: 0 14px;
+        }
+
+        &.last {
+          border-right: 0 none;
+        }
+
+        a {
+          color: white;
+
+          &:hover,
+          &:active {
+            color: white;
+          }
+        }
+      }
+
+      .prev,
+      .next {
+        float: left;
+
+        a {
+          float: left;
+          width: 15px;
+          height: 40px;
+          background: url("/images/post/next.png") 0 10px no-repeat transparent;
+        }
+      }
+
+      .prev a{
+        background-image: url("/images/post/prev.png");
+      }
     }
   }
 }
@@ -1331,7 +1538,7 @@ header {
         }
 
         &.openscholar {
-          background:  url("/images/products/openscholar-icon.jpg") 0 0 no-repeat;
+          background:  url("/images/products/openscholar-icon.png") 0 0 no-repeat;
         }
 
         &.garment {
