@@ -10,6 +10,7 @@ $gizra-orange-light: #fba200;
 $gizra-blue: #2a5691;
 $gizra-black: #515151;
 $gizra-orange-hover: #E75E08;
+$gizra-text: #5D5D5D;
 
 
 @font-face {
@@ -1020,7 +1021,8 @@ header {
 }
 
 // Post Page
-#post-page {
+#post-page,
+#blog-page {
   position: relative;
   overflow-x: hidden;
   background: white;
@@ -1207,11 +1209,11 @@ header {
   }
 
   .post-content {
-    color: #5D5D5D;
+    color: $gizra-text;
   }
 
   .bottom-dash {
-    border-bottom: 4px dashed #5D5D5D;
+    border-bottom: 4px dashed $gizra-text;
     margin: 30px 0;
   }
 
@@ -1285,7 +1287,145 @@ header {
     }
 
     .text-wrapper {
-      color: #5D5D5D;
+      color: $gizra-text;
+    }
+  }
+}
+
+// Blog Page
+#blog-page {
+
+  .blog-title {
+    position: absolute;
+    top: 38px;
+    left: 50%;
+    margin-left: -12%;
+    text-align: center;
+    background: url('/images/hompage/blog/ballons.png') no-repeat 0 100px;
+    height: 350px;
+    width: 400px;
+    padding-top: 210px;
+    overflow: hidden;
+
+    @media (min-width: 769px) and (max-width: 1240px) {
+      left: 38%;
+      height: 215px;
+      background-position: 0 0;
+      padding-top: 110px;
+    }
+
+    @media (min-width: 550px) and (max-width: 768px) {
+      left: 25%;
+      height: 215px;
+      padding-top: 110px;
+      background-position: 0 0;
+    }
+
+    @media (max-width: 550px) {
+      left: -23%;
+      height: 215px;
+      padding-top: 0px;
+      background: none;
+    }
+
+    h2 {
+      font-family: OstrichSansMedium;
+      font-size: 81px;
+      line-height: 57px;
+      margin-left: 30px;
+
+      @media (max-width: 550px) {
+        font-size: 45px;
+        line-height: 25px;
+        margin-left: 0px;
+      }
+    }
+  }
+
+  .content {
+    .post-label {
+
+      a {
+        @media (min-width: 991px) and (max-width: 1240px) {
+          font-size: 560%;
+        }
+        @media (min-width: 769px) and (max-width: 990px) {
+          font-size: 480%;
+        }
+        @media (min-width: 550px) and (max-width: 768px) {
+          font-size: 360%;
+        }
+        @media (max-width: 550px) {
+          font-size: 220%;
+        }
+      }
+    }
+  }
+
+  .bottom-dash {
+    border-bottom: 4px dashed $gizra-text;
+    margin: 30px 0 150px;
+  }
+
+  .pager-wrapper {
+    width: auto;
+    background-color: $gizra-orange;
+    color: $gizra-text;
+    padding: 10px 20px 6px;
+    min-height: 45px;
+    margin-bottom: 100px;
+    float: left;
+
+    #pager {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      float: left;
+
+      li.page {
+        float: left;
+        padding: 0 28px;
+        font-family: OstrichSansMedium;
+        font-size: 50px;
+        line-height: 35px;
+        border-right: 1px solid white;
+
+        @media (min-width: 550px) and (max-width: 768px) {
+          padding: 0 20px;
+        }
+        @media (max-width: 550px) {
+          padding: 0 14px;
+        }
+
+        &.last {
+          border-right: 0 none;
+        }
+
+        a {
+          color: white;
+
+          &:hover,
+          &:active {
+            color: white;
+          }
+        }
+      }
+
+      .prev,
+      .next {
+        float: left;
+
+        a {
+          float: left;
+          width: 15px;
+          height: 40px;
+          background: url("/images/post/next.png") 0 10px no-repeat transparent;
+        }
+      }
+
+      .prev a{
+        background-image: url("/images/post/prev.png");
+      }
     }
   }
 }
