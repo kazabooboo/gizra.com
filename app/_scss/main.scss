@@ -552,6 +552,11 @@ header {
   background-size: cover;
   height: 500px;
 
+
+  @media (max-width: 600px) {
+    height: 550px;
+  }
+
   svg {
     position: absolute;
     top: 50px;
@@ -566,17 +571,8 @@ header {
     text-align: center;
     margin-top: 50px;
 
-    @media (min-width: 991px) and (max-width: 1240px) {
-      margin-top: 30px;
-    }
-    @media (min-width: 769px) and (max-width: 990px) {
-      margin-top: 20px;
-    }
-    @media (min-width: 550px) and (max-width: 768px) {
-      margin-top: 10px;
-    }
     @media (max-width: 550px) {
-      margin-top: -7px;
+      margin-top: -30px;
     }
 
     h2,
@@ -601,13 +597,7 @@ header {
 
     p {
       font-size: 14px;
-
-      @media (min-width: 320px) and (max-width: 600px) {
-        line-height: 16px;
-      }
-      @media (max-width: 320px) {
-        line-height: 14px;
-      }
+      line-height: 16px;
     }
   }
 
