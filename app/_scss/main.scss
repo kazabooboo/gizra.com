@@ -1667,9 +1667,44 @@ header {
     margin-bottom: 50px;
 
     .row {
+
       div {
         padding: 0;
         position: relative;
+      }
+    }
+
+    .member-details {
+      margin: 10px -15px 30px -15px;
+
+      .member-name-big {
+        font-family: OstrichSansMedium;
+        font-size: 65px;
+        line-height: 50px;
+        color: #426C46;
+        margin-bottom: 10px;
+      }
+
+      .role {
+        font-family: OstrichSansMedium;
+        font-size: 35px;
+        line-height: 30px;
+        color: black;
+      }
+
+      .social {
+        width: 100%;
+        margin-bottom: 10px;
+        float: left;
+
+        a {
+          float: left;
+          margin-right: 20px;
+        }
+      }
+
+      .details {
+
       }
     }
 
