@@ -220,6 +220,12 @@ header {
   .carousel-indicators {
     bottom: 61px;
 
+    @media (max-width: 767px) {
+      display: none;
+    }
+
+
+
     li {
       height: 8px;
       width: 8px;
@@ -254,8 +260,8 @@ header {
           right: 36%;
           bottom: 100px;
 
-          @media (max-width: 320px) {
-            right: 69%;
+          @media (max-width: 767px) {
+            right: 54%;
           }
         }
 
@@ -263,8 +269,8 @@ header {
           left: 37%;
           bottom: 208px;
 
-          @media (max-width: 320px) {
-            left: 1%;
+          @media (max-width: 767px) {
+            left: 20%;
           }
         }
 
@@ -272,8 +278,9 @@ header {
           left: 14%;
           bottom: 129px;
 
-          @media (max-width: 320px) {
-            left: 1%;
+          @media (max-width: 767px) {
+            left: 2%;
+            bottom: 220px;
           }
         }
 
@@ -281,8 +288,8 @@ header {
           left: 24%;
           bottom: 75px;
 
-          @media (max-width: 320px) {
-            left: 1%;
+          @media (max-width: 767px) {
+            left: 5%;
           }
         }
 
@@ -290,8 +297,8 @@ header {
           left: 15%;
           bottom: 171px;
 
-          @media (max-width: 320px) {
-            left: -15%;
+          @media (max-width: 767px) {
+            display: none;
           }
         }
       }
@@ -418,14 +425,11 @@ header {
         font-size: 265%;
         letter-spacing: 1px;
 
-        @media (min-width: 768px) and (max-width: 1240px) {
+        @media (min-width: 550px) {
           font-size: 160%;
         }
-        @media (min-width: 550px) and (max-width: 768px) {
-          font-size: 130%;
-        }
         @media (max-width: 550px) {
-          font-size: 90%;
+          font-size: 130%;
         }
       }
     }
@@ -553,8 +557,12 @@ header {
   height: 500px;
 
 
-  @media (max-width: 600px) {
-    height: 550px;
+  @media (min-width: 320px) and (max-width: 600px) {
+    height: 600px;
+  }
+
+  @media (max-width: 320px){
+    height: 880px;
   }
 
   svg {
@@ -569,11 +577,6 @@ header {
 
   .text-wrapper {
     text-align: center;
-    margin-top: 50px;
-
-    @media (max-width: 550px) {
-      margin-top: -30px;
-    }
 
     h2,
     p {
@@ -588,16 +591,18 @@ header {
 
       @media (min-width: 320px) and (max-width: 550px) {
         font-size: 55px;
+        line-height: 70px;
       }
+
       @media (max-width: 320px) {
         font-size: 45px;
-        line-height: 22px;
+        line-height: 60px;
       }
     }
 
     p {
       font-size: 14px;
-      line-height: 16px;
+      line-height: 24px;
     }
   }
 
@@ -920,6 +925,10 @@ header {
   background-size: cover;
   position: relative;
 
+  @media (max-width: 550px) {
+    background: transparent;
+  }
+
   .background,
   .contact-wrapper {
     position: absolute;
@@ -929,6 +938,10 @@ header {
 
   .background {
     bottom: 0;
+
+    @media (max-width: 550px) {
+      width: 100%;
+    }
   };
 
   .contact-wrapper {
