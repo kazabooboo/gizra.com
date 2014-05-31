@@ -1,9 +1,90 @@
 ---
 layout: default
 ---
-<h2>{{ page.title }}</h2>
-<p class="meta">{{ page.date | date_to_string }}</p>
 
-<div class="post">
-{{ content }}
-</div>
+<section id="post-page">
+  <div class="background">
+    <img src="/images/post/background.png">
+  </div>
+
+  <div class="baloons"></div>
+  <div class="post-back">
+    <a href="#back">
+      <img src="/images/post/post-back.png">
+    </a>
+  </div>
+
+  <div class="content">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 post">
+
+          <div class="row">
+            <div class="post-label col-xs-12">
+              <a href="{{ page.url }}">{{ page.title }}</a>
+            </div>
+          </div>
+
+          <div class="row small-row">
+            <div class="date col-md-3 col-sm-3 col-xs-4">{{ page.date | date_to_string }}</div>
+            <div class="seprator col-md-1 col-sm-1 col-xs-1">|</div>
+            <div class="author col-md-8 col-sm-7 col-xs-6">By Nir Yaniv</div>
+          </div>
+
+          <div class="row small-row">
+            <div class="comments-count col-sm-3">11 Comments</div>
+            <div class="tags col-sm-9">Project management, Drupal-planet</div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-12 post-content">
+              {{ content }}
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-12 bottom-dash"></div>
+          </div>
+
+          <div class="row post-nav">
+            <div class="col-xs-6">
+              <div class="previous">
+                <a href="#prev">
+                  Previous
+                </a>
+              </div>
+              <a href="#" class="prev-text">
+                Amitai's DrupalCon Portland Presentation
+              </a>
+            </div>
+            <div class="col-xs-6">
+              <div class="next">
+                <a href="#next">
+                  Next
+                </a>
+              </div>
+              <a href="#" class="next-text">
+                Dekyll's new "GitHub Pages" flavor
+              </a>
+            </div>
+          </div>
+
+          <div class="row author-details">
+            <div class="col-xs-2 image-wrapper">
+              <img src="http://www.gizra.com/assets/images/team/niryariv.jpg" class="img-responsive">
+            </div>
+            <div class="col-xs-10 text-wrapper">
+              <span class="name">Nir Yariv</span> <span class="nickname">(@niryariv)</span>
+              <div class="title">Projects Lead</div>
+              <div class="bio">Messed with PHP since before it was cool, and for some time after. Now mostly herds cats.</div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-12 bottom-dash-small"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
