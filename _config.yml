@@ -4,7 +4,7 @@
 # 3. config.yml
 
 name: yo-jekyllrb
-description: 
+description:
 author:
   name: Amitai Burstein
   email: amitai@gizra.com
@@ -24,3 +24,6 @@ markdown: redcarpet
 #   extensions: ['fenced_code_blocks', 'smart']
 
 pygments: true
+
+disqus :
+  short_name : gizra

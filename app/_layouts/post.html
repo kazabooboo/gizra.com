@@ -32,7 +32,7 @@ layout: default
           </div>
 
           <div class="row small-row">
-            <div class="comments-count col-sm-3">11 Comments</div>
+            <div class="comments-count col-sm-3"><a href="http://www.gizra.com{{page.url}}#disqus_thread"></a></div>
             <div class="tags col-sm-9">Project management, Drupal-planet</div>
           </div>
 
@@ -88,3 +88,6 @@ layout: default
     </div>
   </div>
 </section>
+
+{% include disqus.html %}
+{% include comments_count.html %}
