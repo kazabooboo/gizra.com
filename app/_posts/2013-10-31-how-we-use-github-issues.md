@@ -1,5 +1,5 @@
 ---
-tags: 
+tags:
   - "Project management"
   - "Drupal-planet"
   - "GitHub"
@@ -8,7 +8,7 @@ title: How We Achieve Faster Development and Happier Clients by Opening Our GitH
 layout: post
 author: niryariv
 ---
-{% include JB/setup %}
+
 
 As we [mentioned](http://www.gizra.com/content/the-gizra-way/) before, in Gizra each project's GitHub repository - code, issues etc - is completely open & transparent to the client from the day we start working together. We've discovered this provides us with some unexpected benefits.
 
@@ -20,7 +20,7 @@ While I generally enjoy the process, it requires time investment which can becom
 
 This need for reducing communication time led us to try and get our clients to participate in task tracking process with us. We found that while there is some learning curve, it's not too steep, and the benefits are easily worth it.
 
-Initially, I'd break down the tasks into GitHub Issues tickets, which the lead developer for the project will then assign to developers as we go. As the project gets into gear, the client gradually joins the process, opening issues, adding comments and so on. When a developer has a question regarding a task, they'd ask the client directly on the Issue thread. 
+Initially, I'd break down the tasks into GitHub Issues tickets, which the lead developer for the project will then assign to developers as we go. As the project gets into gear, the client gradually joins the process, opening issues, adding comments and so on. When a developer has a question regarding a task, they'd ask the client directly on the Issue thread.
 
 Each issue has a related Git branch, and once the task is done, a pull request is created. If it affects the front end a screenshot is attached, so the client can see what the new feature looks like and, if needed, correct us before we move on. Otherwise, following a code review the code is merged to master and pushed to the site.
 

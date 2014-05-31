@@ -1,6 +1,6 @@
 ---
 title: Casa del Lector
-tags: 
+tags:
   - "casa del lector"
   - d3js
   - server-free
@@ -10,7 +10,7 @@ layout: post
 published: true
 author: niryariv
 ---
-{% include JB/setup %}
+
 
 Last week saw the launch of a pretty unique [project](http://gizra.github.io/CDL/) for us. It's not every day a product we've worked on gets a [write up on El Pais](http://cultura.elpais.com/cultura/2014/03/05/actualidad/1394047004_090821.html), or has this kind of launch event:
 
@@ -30,7 +30,7 @@ Tapping a node highlights its connections within the network, and a second tap t
 
 ![]({{BASE_PATH}}/assets/images/posts/casa-del-lector/cdl-item.gif)
 
-But the greatest difference is probably under the hood. There's no server-side as such. The data is entered via a 3rd party desktop app and exported into XML, based on which [our code](https://github.com/Gizra/CDL/) creates Jekyll files served from Github Pages, with the fantastic [d3.js](http://d3js.org/) powering the network UI. 
+But the greatest difference is probably under the hood. There's no server-side as such. The data is entered via a 3rd party desktop app and exported into XML, based on which [our code](https://github.com/Gizra/CDL/) creates Jekyll files served from Github Pages, with the fantastic [d3.js](http://d3js.org/) powering the network UI.
 
 I think our first exposure to this approach was via Development Seed's [blog post](http://developmentseed.org/blog/2012/07/27/build-cms-free-websites/). Since then we've built a bunch of sites this way, including the one you're reading this on, and have come to think of it as "server-free" - there's huge weight off our backs when we don't have to worry about scaling at all, especially in scenarios which are prone to traffic spikes. Having no database or server side code to worry about is a nice bonus too.
 

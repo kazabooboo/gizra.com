@@ -9,7 +9,7 @@ title: Amitai's DrupalCon Portland Presentation
 layout: post
 author: niryariv
 ---
-{% include JB/setup %}
+
 
 Amitai returned from DrupalCon Portland reporting it was raining all the time, the flights were very long (apparently the "Gizra Platinum Executive Traveller" card we gave him in the office failed to deliver the expected First Class upgrade) and he still doesn't really get Portlandia.
 

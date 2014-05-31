@@ -11,7 +11,7 @@ layout: post
 title: 'Dekyll''s new "Github Pages" flavor'
 permalink: /content/dekyll-new-github-pages-flavor/
 ---
-{% include JB/setup %}
+
 
 [Dekyll](http://www.gizra.com/content/dekyll-drupal-on-jekyll/) (Drupal on Jekyll) comes now in two flavors. The first one is "normal", which is more advanced and allows you to build more complex websites, the second is called "Github Pages" and it lets you quickly serve a new site using Github.
 

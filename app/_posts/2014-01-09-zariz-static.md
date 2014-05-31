@@ -8,12 +8,12 @@ permalink: "/content/drupal-x5-faster"
 layout: post
 title: "Drupal, only x5 faster"
 ---
-{% include JB/setup %}
 
-This is the ``live`` branch on the Drupal site  
+
+This is the ``live`` branch on the Drupal site
 ![]({{BASE_PATH}}/assets/images/posts/zariz-static/1.jpg)
 
-This is the static site created out of the live site. It looks the same, but loads x5 faster.  
+This is the static site created out of the live site. It looks the same, but loads x5 faster.
 ![]({{BASE_PATH}}/assets/images/posts/zariz-static/2.jpg)
 
 <!-- more -->
@@ -34,10 +34,10 @@ For scalability reasons, the grunt task asks from the Drupal site only for the i
 }
 ```
 
-We create a new branch and add new content ...  
+We create a new branch and add new content ...
 ![]({{BASE_PATH}}/assets/images/posts/zariz-static/3.jpg)
 
-... and merge it back to the live branch.  
+... and merge it back to the live branch.
 ![]({{BASE_PATH}}/assets/images/posts/zariz-static/4.jpg)
 
 The output of ``/zariz-pages`` reflects the changes

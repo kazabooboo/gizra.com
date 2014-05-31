@@ -288,61 +288,29 @@ title: Your Project. The Gizra Way
   </div>
 
   <div class="container">
+
+    {% for post in site.posts limit:4 %}
     <div class="row">
       <div class="col-md-offset-2 col-md-8 post">
         <div class="date">
-          20 Jan 2014
+          {{ post.date | date_to_string }}
         </div>
 
         <div class="post-label">
-          <a href="{{BASE_PATH}}/post.html">Zariz Loves Entity Reference</a>
+          <a href="{{ post.url }}">{{ post.title }}</a>
         </div>
 
         <div class="teaser">
-          Last week saw the launch of a pretty unique project for us. It's not every day a product we've worked on gets a write up on El Pais, or has this kind of launch event
+        {% if post.teaser %}
+          {{ post.teaser }}
+        {% else %}
+          {{ post.content | strip_html | truncatewords: 50 }}
+        {% endif %}
         </div>
       </div>
     </div>
+    {% endfor %}
 
-    <div class="row">
-      <div class="col-md-offset-2 col-md-8 post">
-        <div class="date">
-          20 Jan 2014
-        </div>
-
-        <div class="post-label">
-          <a href="#">Zariz Loves Entity Reference</a>
-        </div>
-
-        <div class="teaser">
-          Last week saw the launch of a pretty unique project for us. It's not every day a product we've worked on gets a write up on El Pais, or has this kind of launch event
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-offset-2 col-md-8 post">
-        <div class="date">
-          20 Jan 2014
-        </div>
-
-        <div class="post-label">
-          <a href="#">Zariz Loves Entity Reference</a>
-        </div>
-
-        <div class="teaser">
-          Last week saw the launch of a pretty unique project for us. It's not every day a product we've worked on gets a write up on El Pais, or has this kind of launch event
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-offset-2 col-md-2">
-        <div class="all-posts">
-          <a href="{{BASE_PATH}}/blog.html">All Posts</a>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 

@@ -1,6 +1,6 @@
 ---
 title: How to submit an application to iTunes App Store
-tags: 
+tags:
   - AngularJs
   - iTunes
   - iOS
@@ -12,7 +12,7 @@ published: true
 author: ceoaliongroo
 ---
 
-{% include JB/setup %}
+
 
 Submitting an app to the iTunes App Store is, to put it mildly, not as simple as one might think.
 
@@ -42,7 +42,7 @@ Afters struggling with it a few times, we thought it might be useful to create a
 * Open the XCode project and select Target.
 * Enter the Bundle Identifier.
 
-**Note**: Bundle Identifier = App ID + App ID suffix. 
+**Note**: Bundle Identifier = App ID + App ID suffix.
 
 example: com.gizra.publiceducation.newAppIdSuffix.
 
@@ -196,6 +196,6 @@ _Configuration Target - Build Settings:_
 * You can now check the submission status [iTunes Connect](http://itunesconnect.apple.com/).
 
 ## Woohoo!!
-You should good to go now. Wasn't that fun? 
+You should good to go now. Wasn't that fun?
 
 If you're still having issues, unfortunately you'll have to turn to Apple's [own documentation](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/Troubleshooting/Troubleshooting.html#//apple_ref/doc/uid/TP40012582-CH5-SW2). Enjoy :)

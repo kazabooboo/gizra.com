@@ -7,7 +7,7 @@ tags:
     - Dekyll
     - Drupal-planet
 ---
-{% include JB/setup %}
+
 
 Drupal is no doubt one of the best CMS out there; Jekyll is no doubt one of the best static site generators out there. See where I'm going? And it's no longer just a concept, it is a complete installation profile called [Dekyll](https://github.com/Gizra/dekyll).
 

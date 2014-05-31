@@ -9,7 +9,7 @@ title: Zariz Means Agile
 layout: post
 published: true
 ---
-{% include JB/setup %}
+
 
 [Zariz](https://github.com/Gizra/zariz) is a new project we're working on. The word means "quick", or "agile" in Hebrew. We've began working on it when we hit some bumps working on Dekyll.
 
@@ -33,13 +33,13 @@ And of course, it should be fast. Super fast.
 
 Here are the key concepts of Zariz:
 
-1) __Keep Drupal as Backend__  
+1) __Keep Drupal as Backend__
 We want to let users stay in the environment they know, with the tools and capabilites they're used to.
 
-2) __Model the content creation around Git__  
+2) __Model the content creation around Git__
 We have a "live" branch (the equivalent of "master" in git repositories), which is in fact just a an OG group. Nodes cannot be created in that branch, only on "development" branches. Thus every content change can be seen in context of the entire site, on its branch.
 
-3) __Use Git for deployment__  
+3) __Use Git for deployment__
 We want to ``git push`` our _content_ as well as our code. Jekyll taught us the importance of using a proper build tool. We have a [Grunt](http://gruntjs.com/) task that grabs the HTML from Drupal, as well as all the assets, and pushes them to GitHub Pages, while making use of Grunt's existing deployment tasks for image minification, JS and CSS concatenating etc.
 
 To make it easier to setup Grunt, we've created a Yeoman generator. A simple ``yo zariz`` should get you to the point where the system is operational, and you can add your customization.
