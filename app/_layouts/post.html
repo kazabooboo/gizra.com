@@ -2,6 +2,20 @@
 layout: default
 ---
 
+{% if page.author == null %}
+  {% assign author = "Amitaibu" %}
+{% else %}
+  {% assign author = page.author %}
+{% endif %}
+
+{% for authors in site.authors %}
+  {% for author_info in authors %}
+    {% if author_info[0] == author %}
+      {% assign author = author_info[1] %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+
 <section id="post-page">
   <div class="background">
     <img src="/images/post/background.png">
@@ -17,8 +31,8 @@ layout: default
   <div class="content">
     <div class="container">
       <div class="row">
-        <div class="col-md-12 post">
 
+        <div class="col-md-12 post">
           <div class="row">
             <div class="post-label col-xs-12">
               <a href="{{ page.url }}">{{ page.title }}</a>
@@ -28,7 +42,7 @@ layout: default
           <div class="row small-row">
             <div class="date col-md-3 col-sm-3 col-xs-4">{{ page.date | date_to_string }}</div>
             <div class="seprator col-md-1 col-sm-1 col-xs-1">|</div>
-            <div class="author col-md-8 col-sm-7 col-xs-6">By Nir Yaniv</div>
+            <div class="author col-md-8 col-sm-7 col-xs-6">By {{ author.name }}</div>
           </div>
 
           <div class="row small-row">
@@ -53,9 +67,11 @@ layout: default
                   Previous
                 </a>
               </div>
-              <a href="#" class="prev-text">
-                Amitai's DrupalCon Portland Presentation
+              {% if page.previous %}
+              <a href="{{ page.previous.url }}" class="prev-text">
+                {{ page.previous.title }}
               </a>
+              {% endif %}
             </div>
             <div class="col-xs-6">
               <div class="next">
@@ -63,9 +79,11 @@ layout: default
                   Next
                 </a>
               </div>
-              <a href="#" class="next-text">
-                Dekyll's new "GitHub Pages" flavor
+              {% if page.next %}
+              <a href="{{ page.next.url }}" class="next-text">
+                {{ page.next.title }}
               </a>
+              {% endif %}
             </div>
           </div>
 
