@@ -301,11 +301,7 @@ title: Your Project. The Gizra Way
         </div>
 
         <div class="teaser">
-        {% if post.teaser %}
-          {{ post.teaser }}
-        {% else %}
-          {{ post.content | strip_html | truncatewords: 50 }}
-        {% endif %}
+          {{ post.excerpt }}
         </div>
       </div>
     </div>
