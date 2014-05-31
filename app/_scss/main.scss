@@ -296,10 +296,6 @@ header {
         .baloon-red {
           left: 15%;
           bottom: 171px;
-
-          @media (max-width: 767px) {
-            display: none;
-          }
         }
       }
 
