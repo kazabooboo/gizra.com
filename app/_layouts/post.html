@@ -89,12 +89,12 @@ layout: default
 
           <div class="row author-details">
             <div class="col-xs-2 image-wrapper">
-              <img src="http://www.gizra.com/assets/images/team/niryariv.jpg" class="img-responsive">
+              <img src="/images/team/{{ author.twitter }}.jpg" class="img-responsive">
             </div>
             <div class="col-xs-10 text-wrapper">
-              <span class="name">Nir Yariv</span> <span class="nickname">(@niryariv)</span>
-              <div class="title">Projects Lead</div>
-              <div class="bio">Messed with PHP since before it was cool, and for some time after. Now mostly herds cats.</div>
+              <span class="name">{{ author.name }}</span> <span class="twitter">(@{{ author.twitter }})</span>
+              <div class="title">{{ author.title }}</div>
+              <div class="bio">{{ author.bio }}</div>
             </div>
           </div>
 
