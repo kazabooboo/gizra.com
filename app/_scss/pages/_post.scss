@@ -160,6 +160,27 @@
 
       .tags {
         background: url("/images/post/small-tags.jpg") 12px 0 no-repeat;
+
+        ul {
+          display: inline;
+
+          li {
+            list-style: none;
+            float: left;
+            margin-left: 5px;
+
+            &:after {
+              content: ',';
+            }
+
+            &:last-child {
+
+              &:after {
+                content: '';
+              }
+            }
+          }
+        }
       }
     }
   }
