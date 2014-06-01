@@ -86,7 +86,7 @@ title: Your Project. The Gizra Way
                 {% if page == paginator.page %}
                   <span>{{ page }}</span>
                 {% elsif page == 1 %}
-                  <a href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+                  <a href="/blog">{{ page }}</a>
                 {% else %}
                   <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
                 {% endif %}
