@@ -45,7 +45,7 @@
     overflow: hidden;
     color: white;
 
-    @media (min-width: 769px) and (max-width: 1240px) {
+    @media (min-width: 769px) {
 
     }
 
@@ -133,13 +133,14 @@
 
         .member-name {
           font-family: OstrichSansMedium;
-          font-size: 65px;
+          font-size: 55px;
           line-height: 55px;
           color: white;
           width: 40%;
           position: absolute;
           bottom: 10px;
           left: 10px;
+          text-shadow: 1px 1px 1px $gizra-black;
         }
       }
     }
@@ -151,13 +152,14 @@
 
         .member-name {
           font-family: OstrichSansMedium;
-          font-size: 55px;
-          line-height: 45px;
+          font-size: 35px;
+          line-height: 35px;
           color: white;
           width: 40%;
           position: absolute;
           bottom: 10px;
           left: 10px;
+          text-shadow: 1px 1px 1px $gizra-black;
         }
       }
     }
