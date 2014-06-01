@@ -3,32 +3,6 @@ layout: default
 title: Your Project. The Gizra Way
 ---
 
-{% if paginator.total_pages > 1 %}
-<div class="pagination">
-  {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
-  {% else %}
-    <span>&laquo; Prev</span>
-  {% endif %}
-
-  {% for page in (1..paginator.total_pages) %}
-    {% if page == paginator.page %}
-      <em>{{ page }}</em>
-    {% elsif page == 1 %}
-      <a href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
-    {% else %}
-      <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-    {% endif %}
-  {% endfor %}
-
-  {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
-  {% else %}
-    <span>Next &raquo;</span>
-  {% endif %}
-</div>
-{% endif %}
-
 <section id="blog-page">
   <div class="background">
     <img src="/images/post/background.png">
@@ -40,32 +14,47 @@ title: Your Project. The Gizra Way
 
   <div class="content">
     <div class="container">
+
+      {% for post in paginator.posts %}
+
+      {% if page.author == null %}
+        {% assign author = "Amitaibu" %}
+      {% else %}
+        {% assign author = page.author %}
+      {% endif %}
+
+      {% for authors in site.authors %}
+        {% for author_info in authors %}
+          {% if author_info[0] == author %}
+            {% assign author = author_info[1] %}
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
+
       <!--Post begin-->
       <div class="row">
         <div class="col-md-12 post">
 
           <div class="row">
             <div class="post-label col-xs-12">
-              <a href="#">Zariz loves entity reference</a>
+              <a href="{{ post.url }}">{{ post.title }}</a>
             </div>
           </div>
 
           <div class="row small-row">
-            <div class="date col-md-3 col-sm-3 col-xs-4">20 Jan 2014</div>
+            <div class="date col-md-3 col-sm-3 col-xs-4">{{ post.date | date_to_string }}</div>
             <div class="seprator col-md-1 col-sm-1 col-xs-1">|</div>
-            <div class="author col-md-8 col-sm-7 col-xs-6">By <a href="#author">Nir Yaniv</a></div>
+            <div class="author col-md-8 col-sm-7 col-xs-6">By <a href="#author">{{ author.name }}</a></div>
           </div>
 
           <div class="row small-row">
-            <div class="comments-count col-sm-3">11 Comments</div>
+            <div class="comments-count col-sm-3"><a href="http://www.gizra.com{{page.url}}#disqus_thread"></a></div>
             <div class="tags col-sm-9">Project management, Drupal-planet</div>
           </div>
 
           <div class="row">
             <div class="col-xs-12 post-teaser">
-              <p>Last week saw the launch of a pretty unique <a href="http://gizra.github.io/CDL/">project</a> for us. It's not every day a product we've worked on gets a <a href="http://cultura.elpais.com/cultura/2014/03/05/actualidad/1394047004_090821.html">write up on El Pais</a>, or has this kind of launch event:</p>
-              <p>The target audience is a bit unusual as well. While it can be accessed like any other site, it's targeted to be used inside a specific exhibition in the <a href="http://casalector.fundaciongsr.com/">Casa del Lector</a> museum in Madrid, on tablets handed out to the museum visitors:</p>
-              <p>We took great care to stay within the touch UI conventions. When entering the site, the user is presented with a network of connections between items. As she zooms, details are revealed - subitems, their connections and finally their titles:</p>
+              {{ post.excerpt }}
             </div>
           </div>
 
@@ -75,126 +64,42 @@ title: Your Project. The Gizra Way
         </div>
       </div>
       <!--Post End-->
+      {% endfor %}
 
-      <!--Post begin-->
-      <div class="row">
-        <div class="col-md-12 post">
-
-          <div class="row">
-            <div class="post-label col-xs-12">
-              <a href="#">Zariz loves entity reference</a>
-            </div>
-          </div>
-
-          <div class="row small-row">
-            <div class="date col-md-3 col-sm-4 col-xs-4">20 Jan 2014</div>
-            <div class="seprator col-md-1 col-sm-1 col-xs-1">|</div>
-            <div class="author col-md-8 col-sm-7 col-xs-6">By <a href="#author">Nir Yaniv</a></div>
-          </div>
-
-          <div class="row small-row">
-            <div class="comments-count col-sm-3">11 Comments</div>
-            <div class="tags col-sm-9">Project management, Drupal-planet</div>
-          </div>
-
-          <div class="row">
-            <div class="col-xs-12 post-teaser">
-              <p>Last week saw the launch of a pretty unique <a href="http://gizra.github.io/CDL/">project</a> for us. It's not every day a product we've worked on gets a <a href="http://cultura.elpais.com/cultura/2014/03/05/actualidad/1394047004_090821.html">write up on El Pais</a>, or has this kind of launch event:</p>
-              <p>The target audience is a bit unusual as well. While it can be accessed like any other site, it's targeted to be used inside a specific exhibition in the <a href="http://casalector.fundaciongsr.com/">Casa del Lector</a> museum in Madrid, on tablets handed out to the museum visitors:</p>
-              <p>We took great care to stay within the touch UI conventions. When entering the site, the user is presented with a network of connections between items. As she zooms, details are revealed - subitems, their connections and finally their titles:</p>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-xs-12 bottom-dash"></div>
-          </div>
-        </div>
-      </div>
-      <!--Post End-->
-
-      <!--Post begin-->
-      <div class="row">
-        <div class="col-md-12 post">
-
-          <div class="row">
-            <div class="post-label col-xs-12">
-              <a href="#">Zariz loves entity reference</a>
-            </div>
-          </div>
-
-          <div class="row small-row">
-            <div class="date col-md-3 col-sm-4 col-xs-4">20 Jan 2014</div>
-            <div class="seprator col-md-1 col-sm-1 col-xs-1">|</div>
-            <div class="author col-md-8 col-sm-7 col-xs-6">By <a href="#author">Nir Yaniv</a></div>
-          </div>
-
-          <div class="row small-row">
-            <div class="comments-count col-sm-3">11 Comments</div>
-            <div class="tags col-sm-9">Project management, Drupal-planet</div>
-          </div>
-
-          <div class="row">
-            <div class="col-xs-12 post-teaser">
-              <p>Last week saw the launch of a pretty unique <a href="http://gizra.github.io/CDL/">project</a> for us. It's not every day a product we've worked on gets a <a href="http://cultura.elpais.com/cultura/2014/03/05/actualidad/1394047004_090821.html">write up on El Pais</a>, or has this kind of launch event:</p>
-              <p>The target audience is a bit unusual as well. While it can be accessed like any other site, it's targeted to be used inside a specific exhibition in the <a href="http://casalector.fundaciongsr.com/">Casa del Lector</a> museum in Madrid, on tablets handed out to the museum visitors:</p>
-              <p>We took great care to stay within the touch UI conventions. When entering the site, the user is presented with a network of connections between items. As she zooms, details are revealed - subitems, their connections and finally their titles:</p>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-xs-12 bottom-dash"></div>
-          </div>
-        </div>
-      </div>
-      <!--Post End-->
-
-      <!--Post begin-->
-      <div class="row">
-        <div class="col-md-12 post">
-
-          <div class="row">
-            <div class="post-label col-xs-12">
-              <a href="#">Zariz loves entity reference</a>
-            </div>
-          </div>
-
-          <div class="row small-row">
-            <div class="date col-md-3 col-sm-4 col-xs-4">20 Jan 2014</div>
-            <div class="seprator col-md-1 col-sm-1 col-xs-1">|</div>
-            <div class="author col-md-8 col-sm-7 col-xs-6">By <a href="#author">Nir Yaniv</a></div>
-          </div>
-
-          <div class="row small-row">
-            <div class="comments-count col-sm-3">11 Comments</div>
-            <div class="tags col-sm-9">Project management, Drupal-planet</div>
-          </div>
-
-          <div class="row">
-            <div class="col-xs-12 post-teaser">
-              <p>Last week saw the launch of a pretty unique <a href="http://gizra.github.io/CDL/">project</a> for us. It's not every day a product we've worked on gets a <a href="http://cultura.elpais.com/cultura/2014/03/05/actualidad/1394047004_090821.html">write up on El Pais</a>, or has this kind of launch event:</p>
-              <p>The target audience is a bit unusual as well. While it can be accessed like any other site, it's targeted to be used inside a specific exhibition in the <a href="http://casalector.fundaciongsr.com/">Casa del Lector</a> museum in Madrid, on tablets handed out to the museum visitors:</p>
-              <p>We took great care to stay within the touch UI conventions. When entering the site, the user is presented with a network of connections between items. As she zooms, details are revealed - subitems, their connections and finally their titles:</p>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-xs-12 bottom-dash"></div>
-          </div>
-        </div>
-      </div>
-      <!--Post End-->
       <!--Pager Begin-->
+
       <div class="row">
         <div class="col-xs-12">
           <div class="pager-wrapper">
             <ul id="pager">
-              <li class="prev"><a href="#prev"></a></li>
-              <li class="page"><a href="#1">1</a></li>
-              <li class="page"><span>2</span></li>
-              <li class="page"><a href="#3">3</a></li>
-              <li class="page"><a href="#4">4</a></li>
-              <li class="page last"><a href="#5">5</a></li>
-              <li class="next"><a href="#next"></a></li>
+
+              <li class="prev">
+              {% if paginator.previous_page %}
+                <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"></a>
+              {% else %}
+                <span></span>
+              {% endif %}
+              </li>
+
+              {% for page in (1..paginator.total_pages) %}
+              <li class="page">
+                {% if page == paginator.page %}
+                  <span>{{ page }}</span>
+                {% elsif page == 1 %}
+                  <a href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+                {% else %}
+                  <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+                {% endif %}
+              </li>
+              {% endfor %}
+
+              <li class="next">
+              {% if paginator.next_page %}
+                <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"></a>
+              {% else %}
+                <span></span>
+              {% endif %}
+              </li>
             </ul>
           </div>
         </div>
