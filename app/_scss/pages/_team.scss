@@ -119,10 +119,6 @@
           margin-right: 20px;
         }
       }
-
-      .details {
-
-      }
     }
 
     .team-head {
@@ -160,6 +156,18 @@
           bottom: 10px;
           left: 10px;
           text-shadow: 1px 1px 1px $gizra-black;
+
+          @media (min-width: 769px) {
+
+          }
+
+          @media (min-width: 550px) and (max-width: 768px) {
+
+          }
+
+          @media (max-width: 550px) {
+
+          }
         }
       }
     }
