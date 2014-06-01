@@ -17,10 +17,10 @@ title: Your Project. The Gizra Way
 
       {% for post in paginator.posts %}
 
-      {% if page.author == null %}
+      {% if post.author == null %}
         {% assign author = "Amitaibu" %}
       {% else %}
-        {% assign author = page.author %}
+        {% assign author = post.author %}
       {% endif %}
 
       {% for authors in site.authors %}
