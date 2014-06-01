@@ -557,6 +557,9 @@ header {
   background-size: cover;
   height: 500px;
 
+  @media (min-width: 600px) and (max-width: 1200px) {
+    height: 600px;
+  }
 
   @media (min-width: 320px) and (max-width: 600px) {
     height: 600px;
@@ -606,28 +609,18 @@ header {
       line-height: 24px;
     }
   }
+}
 
-  .see-all {
-    text-align: center;
-    margin-top: 65px;
+.see-all {
+  text-align: center;
+  margin-top: 65px;
 
-    @media (min-width: 700px) and (max-width: 990px) {
-      margin-top: 95px;
-    }
-    @media (min-width: 600px) and (max-width: 700px) {
-      margin-top: 45px;
-    }
-    @media (max-width: 599px) {
-      margin-top: 35px;
-    }
-
-    a {
-      text-decoration: none;
-      color: black;
-      text-transform: uppercase;
-      font-family: OstrichSansMedium;
-      font-size: 20px;
-    }
+  a {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-family: OstrichSansMedium;
+    font-size: 20px;
   }
 }
 
