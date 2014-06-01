@@ -3,9 +3,9 @@
   a {
     font-size: 70px;
     line-height: 70px;
-    color: $gizra-black;
+    color: #9A2B2C;
 
-    @media (min-width: 991px) and (max-width: 1240px) {
+    @media (min-width: 991px) {
       font-size: 560%;
     }
     @media (min-width: 769px) and (max-width: 990px) {
@@ -19,6 +19,7 @@
     }
 
     &:hover {
+      color: $gizra-blue;
       text-decoration: none;
     }
   }
