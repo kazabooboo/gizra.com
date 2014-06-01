@@ -265,7 +265,11 @@ header {
           right: 36%;
           bottom: 100px;
 
-          @media (max-width: 767px) {
+          @media (min-width: 550px) and (max-width: 767px) {
+            right: 44%;
+          }
+
+          @media (max-width: 550px) {
             right: 54%;
           }
         }
@@ -274,16 +278,25 @@ header {
           left: 37%;
           bottom: 208px;
 
-          @media (max-width: 767px) {
+          @media (min-width: 550px) and (max-width: 767px) {
+            left: 30%;
+          }
+
+          @media (max-width: 550px) {
             left: 20%;
           }
         }
 
-        .baloon-blue {
+        .ballon-blue {
           left: 14%;
           bottom: 129px;
 
-          @media (max-width: 767px) {
+          @media (min-width: 550px) and (max-width: 767px) {
+            left: 7%;
+            bottom: 180px;
+          }
+
+          @media (max-width: 550px) {
             left: 2%;
             bottom: 220px;
           }
@@ -293,12 +306,16 @@ header {
           left: 24%;
           bottom: 75px;
 
-          @media (max-width: 767px) {
+          @media (min-width: 550px) and (max-width: 767px) {
+            left: 20%;
+          }
+
+          @media (max-width: 550px) {
             left: 5%;
           }
         }
 
-        .baloon-red {
+        .ballon-red {
           left: 15%;
           bottom: 171px;
         }
