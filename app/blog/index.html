@@ -81,8 +81,10 @@ title: Your Project. The Gizra Way
               {% endif %}
               </li>
 
+
               {% for page in (1..paginator.total_pages) %}
-              <li class="page">
+
+              <li class="page {% if page == paginator.total_pages %}last{% endif %}">
                 {% if page == paginator.page %}
                   <span>{{ page }}</span>
                 {% elsif page == 1 %}
