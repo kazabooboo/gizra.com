@@ -81,4 +81,3 @@ about.animation = function() {
   }
 };
 
-about.animation();
