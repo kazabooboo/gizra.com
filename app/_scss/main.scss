@@ -42,10 +42,10 @@ $gizra-text: #5D5D5D;
   font-style: normal;
 }
 
-// This will make the images fill the frame in all thumbed images
-// The problem is that it will stretch small images in big resolutions.
-.thumbnail > img, .thumbnail a > img {
-  width: 100%;
+
+.thumbnail {
+  display: inline-block;
+  text-align: center;
 }
 
 header {
@@ -757,9 +757,6 @@ header {
 
       &:hover {
         background: #396F74;
-      }
-
-      img {
       }
     }
   }
