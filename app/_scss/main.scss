@@ -555,19 +555,6 @@ header {
   background-color: transparent;
   background-attachment: fixed;
   background-size: cover;
-  height: 500px;
-
-  @media (min-width: 600px) and (max-width: 1200px) {
-    height: 600px;
-  }
-
-  @media (min-width: 320px) and (max-width: 600px) {
-    height: 600px;
-  }
-
-  @media (max-width: 320px){
-    height: 880px;
-  }
 
   svg {
     position: absolute;
@@ -581,6 +568,7 @@ header {
 
   .text-wrapper {
     text-align: center;
+    padding-bottom: 60px;
 
     h2,
     p {
@@ -627,7 +615,7 @@ header {
 #work {
   background-color: white;
   color: black;
-  margin-top: 103px;
+  margin-top: 70px;
   margin-bottom: 175px;
 
   .background,
