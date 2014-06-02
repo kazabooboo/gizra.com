@@ -37,7 +37,7 @@
 
   .title {
     position: absolute;
-    top: 60px;
+    top: 30px;
     left: 20%;
     text-align: center;
     height: 235px;
@@ -45,8 +45,8 @@
     overflow: hidden;
     color: white;
 
-    @media (min-width: 769px) {
-      top: 30px;
+    @media (max-width: 769px) {
+      top: 20px;
     }
 
     @media (min-width: 550px) and (max-width: 768px) {

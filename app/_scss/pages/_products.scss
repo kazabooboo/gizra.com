@@ -68,7 +68,41 @@
     }
   }
 
-  .container {
+  .title {
+    position: absolute;
+    top: 30px;
+    left: 20%;
+    text-align: center;
+    height: 235px;
+    width: 60%;
+    overflow: hidden;
+    color: white;
+
+    @media (max-width: 769px) {
+      top: 20px;
+    }
+
+    @media (min-width: 550px) and (max-width: 768px) {
+      top: 15px;
+    }
+
+    @media (max-width: 550px) {
+      top: 0;
+    }
+
+    h2 {
+      font-family: OstrichSansMedium;
+      font-size: 81px;
+      line-height: 57px;
+
+      @media (max-width: 769px) {
+        font-size: 45px;
+        margin-top: 0;
+      }
+    }
+  }
+
+    .container {
 
     .product-name,
     .view-wrapper a {
