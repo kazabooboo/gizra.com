@@ -1,0 +1,84 @@
+# Jekyll configuration precedence:
+# 1. Gruntfile task
+# 2. config.build.yml
+# 3. config.yml
+
+name: yo-jekyllrb
+description:
+author:
+  name: Amitai Burstein
+  email: amitai@gizra.com
+
+# Grunt handles images and assets.
+exclude: ['images', 'css', 'js', 'fonts',
+          '**.png', '**.jpg', '**.jpeg', '**.gif', '**.webp', '**.svg', '**.ico']
+
+include: ['.htaccess']
+
+# _config.build.yml sets future and show_drafts to false on `grunt build`
+future: true
+show_drafts: true
+
+# Markdown library
+markdown: redcarpet
+#   extensions: ['fenced_code_blocks', 'smart']
+
+pygments: true
+
+disqus :
+  short_name : gizra
+
+excerpt_separator: "<!-- more -->"
+
+paginate: 5
+paginate_path: "blog/page:num"
+google:
+  tracking_id: 'UA-6558346-3'
+
+authors:
+  - Amitaibu:
+      name: Amitai Burstein
+      title: CTO, Co-Owner
+      twitter: amitaibu
+      bio: Maintainer of Organic groups, the Message stack, and co-maintainer of Drupal 8's Entity reference. Also likes climbing boulders.
+      homepage: true
+  - bricel:
+      name: Brice Lenfant
+      title: CEO, Co-Owner
+      twitter: bricel
+      bio: Brice leads strategy, and helps run projects at Gizra. He works closely with both the team and customers to strategize and develop the project end-to-end and coordinate project needs and delivery.
+      homepage: true
+  - niryariv:
+      name: Nir Yariv
+      title: Projects Lead
+      twitter: niryariv
+      bio: Messed with PHP since before it was cool, and for some time after. Now mostly herds cats.
+      homepage: true
+  - NofarG:
+      name: Nofar Gilor
+      title: Developer
+      bio: Something about Nofar
+  - itamar:
+      name: Itamar Bar-Lev
+      title: Developer
+      bio: Something about Itamar
+  - itamarbu:
+      name: Itamar Burstein
+      title: Industrial Designer
+      bio: My designs have been endorsed by companies such as VIA France, Roche Bobois, Metalarte, Ligne Roset & Jofebar. That's pretty awesome.
+      twitter: itamarbu
+  - RoySegall:
+      name: Roy Segall
+      title: Developer
+      bio: Not afraid of patching Organic groups, Entity reference or the Message stack. Knows how to make tasty Pizza.
+      twitter: roysegall
+  - OritiMG:
+      name: Orit Geron
+      title: HR manager
+      bio: I speak fluent geek, and can translate to human speaking
+      twitter: OritiMG
+  - ceoaliongroo:
+      name: Carlos Mantilla
+      title: Full stack developer
+      bio: AngularJs, d3js, nodejs. Everythis JS!
+      twitter: cmantillacode
