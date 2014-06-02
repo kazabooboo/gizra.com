@@ -1,0 +1,37 @@
+<!DOCTYPE html><html><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1"><title>Message example = Github news feed</title><meta name=viewport content="width=device-width"><link rel=stylesheet href=/css/main.ff28.css><link href="http://fonts.googleapis.com/css?family=Abril+Fatface" rel=stylesheet type=text/css></head><body><header class=white><div class=container><div class=logo><a href="/">gizra</a></div><nav id=nav role=navigation class="navbar navbar-default nav-fixed"><div class=navbar-header><button data-target=.navbar-collapse data-toggle=collapse class=navbar-toggle type=button><span class=sr-only>Toggle navigation</span> <span class=icon-bar></span> <span class=icon-bar></span> <span class=icon-bar></span></button></div><div class="navbar-collapse collapse"><ul class="nav navbar-nav"><li><a href=/products>Products</a></li><li><a href=/#about>About</a></li><li><a href=/#work>Work</a></li><li><a href=/#code>Showcase</a></li><li><a href=/blog class=active>Blog</a></li><li><a href=/#contact>Contact</a></li></ul></div></nav></div><!-- End of container --></header><section id=post-page><div class=background><img src=/images/post/background.2707.png></div><div class=ballons></div><div class=post-back><a href=/blog><img src=/images/post/post-back.fca6.png></a></div><div class=content><div class=container><div class=row><div class="col-md-12 post"><div class=row><div class="post-label col-xs-12"><a href="/content/message-example-github-news-feed/">Message example = Github news feed</a></div></div><div class="row small-row"><div class="date col-md-3 col-sm-3 col-xs-4">29 Sep 2010</div><div class="seprator col-md-1 col-sm-1 col-xs-1">|</div><div class="author col-md-8 col-sm-7 col-xs-6">By Amitai Burstein</div></div><div class="row small-row"><div class="tags col-sm-9"><ul class=inline><li><a href=/tags.html#Drupal-planet-ref>Drupal-planet</a></li><li><a href=/tags.html#Message-ref>Message</a></li></ul></div><div class="comments-count col-sm-3"><a href=http://www.gizra.com/content/message-example-github-news-feed/#disqus_thread></a></div></div><div class=row><div class="col-xs-12 post-content"><p>It&#39;s time for some P.R. (Public relations) on the <a href=http://drupal.org/project/message>Message</a> module, and the best way is a Message example module that loosely imitates Github&#39;s news feed feature.</p><p>I won&#39;t get into too much explanation here, just look at the screenshots, or try it yourself - since everything in Message is exportable, you don&#39;t need to do anything to make it work! (Apart of generating nodes and &quot;making friends&quot; by flagging other users).</p><!-- more --><div class=highlight><pre><code class="text language-text" data-lang=text># Download necessary modules, in case you still don&#39;t have them.
+drush dl ctools message flag views
+
+# Enable the message example module.
+drush en message_example -y
+
+# Use Devel module to generate users and content.
+drush dl devel
+drush en devel_generate -y
+
+# Generate  10 users.
+drush genu 10
+
+# Generate 25 story nodes with 5 comments in each node.
+drush genc 25 5 --types=story
+</code></pre></div><p>Navigate to /messages or click on the &quot;News feed&quot; on the navigation menu, and you will be presented with the different tabs - all created with Views and a bit of CSS.</p><p>As you can see, at the beginning there are no records in the &quot;News feed&quot;, because you still don&#39;t follow anyone. Go to the &quot;All feeds&quot; tab, click on one of the user&#39;s and flag the user or flag a specific node. Back in the &quot;News feed&quot; you will now see all the activity of the users and nodes you follow.</p><p><img src=/assets/images/legacy/snap1.jpg></p><p><img src=/assets/images/legacy/snap2.jpg></p><p><img src=/assets/images/legacy/snap3.jpg></p><p><img src=/assets/images/legacy/snap4.jpg></p><p><img src=/assets/images/legacy/snap5.jpg></p><p>If you are not a developer worry not (although if you are a bit familiar with code, the message_example.module has lots of documentation), you can still use the Message module, thanks to its Rules module integration.</p><p>So, what do you think about this P.R. ?</p></div></div><div class=row><div class="col-xs-12 bottom-dash"></div></div><div class="row post-nav"><div class=col-xs-6><div class=previous><a href="/content/og7-session-drupalcon-copenhagen/">Previous</a></div><a href="/content/og7-session-drupalcon-copenhagen/" class=prev-text>OG7 session in Drupalcon Copenhagen</a></div><div class=col-xs-6><div class=next><a href="/content/rounded-corners/">Next</a></div><a href="/content/rounded-corners/" class=next-text>Rounded corners</a></div></div><div class="row author-details"><div class="col-md-1 image-wrapper"><img src=/images/team/amitaibu.4179.jpg class=img-responsive></div><div class="col-md-11 text-wrapper"><span class=name>Amitai Burstein</span> <span class=twitter>(@amitaibu)</span><div class=title>CTO, Co-Owner</div><div class=bio>Maintainer of Organic groups, the Message stack, and co-maintainer of Drupal 8's Entity reference. Also likes climbing boulders.</div></div></div><div class=row><div class="col-xs-12 bottom-dash-small"></div></div></div></div></div></div></section><div id=disqus_thread></div><script type=text/javascript>var disqus_developer = 1;
+    var disqus_shortname = 'gizra';
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();</script><noscript>Please enable JavaScript to view the <a href=http://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><script type=text/javascript>var disqus_shortname = 'gizra';
+
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function () {
+var s = document.createElement('script'); s.async = true;
+s.type = 'text/javascript';
+s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());</script><script src=/_bower_components/jquery/jquery.js></script><script src=scripts/plugins.js></script><script src=/js/scripts.fb35.js></script><!-- Google Analytics --><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', '', 'auto');  // Replace with your property ID.
+  ga('send', 'pageview');</script><!-- End Google Analytics --></body></html>
