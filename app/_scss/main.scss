@@ -472,26 +472,66 @@ header {
         .stand {
           left: 18%;
           bottom: 98px;
+
+          @media (min-width: 550px) and (max-width: 767px) {
+            left: 8%;
+          }
+
+          @media (max-width: 550px) {
+            display: none;
+          }
         }
 
         .diamond-2 {
           left: 25%;
           bottom: 95px;
+
+          @media (min-width: 550px) and (max-width: 767px) {
+            left: 13%;
+          }
+
+          @media (max-width: 550px) {
+            left: 2%;
+          }
         }
 
         .gramophone-2 {
           left: 28%;
           bottom: 86px;
+
+          @media (min-width: 550px) and (max-width: 767px) {
+            left: 16%;
+          }
+
+          @media (max-width: 550px) {
+            left: 4%;
+          }
         }
 
         .diamond-1 {
           right: 25%;
           bottom: 70px;
+
+          @media (min-width: 550px) and (max-width: 767px) {
+            right: 35%;
+          }
+
+          @media (max-width: 550px) {
+            display: none;
+          }
         }
 
         .gramophone-1 {
           right: 31%;
           bottom: 75px;
+
+          @media (min-width: 550px) and (max-width: 767px) {
+            right: 40%;
+          }
+
+          @media (max-width: 550px) {
+            right: 50%;
+          }
         }
       }
     }
