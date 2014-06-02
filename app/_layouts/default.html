@@ -16,6 +16,8 @@
     </head>
     <body>
 
+    {% if page.homepage == nil %}
+
     <header class="white">
       <div class="container">
         <div class="logo"><a href="/">gizra</a></div>
@@ -42,13 +44,14 @@
       </div> <!-- End of container -->
     </header>
 
+    {% endif %}
+
 
     {{ content }}
 
 
+    <!-- build:js(app) /js/plugins.js -->
     <script src="/_bower_components/jquery/jquery.js"></script>
-
-    <!-- build:js scripts/plugins.js -->
     <script src="/_bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/carousel.js"></script>
     <script src="/_bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/transition.js"></script>
     <script src="/_bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/collapse.js"></script>
