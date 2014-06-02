@@ -248,6 +248,7 @@ module.exports = function (grunt) {
             // Jekyll processes and moves HTML and text files.
             // Usemin moves CSS and javascript inside of Usemin blocks.
             // Copy moves asset files and directories.
+            'CNAME',
             'assets/**/*',
             'images/**/*',
             'fonts/**/*',
@@ -290,7 +291,7 @@ module.exports = function (grunt) {
     buildcontrol: {
       dist: {
         options: {
-          remote: '../',
+          remote: 'git@github.com:Gizra/Gizra.git',
           branch: 'gh-pages',
           commit: true,
           push: true
@@ -362,9 +363,9 @@ module.exports = function (grunt) {
   grunt.registerTask('check', [
     'clean:server',
     'jekyll:check',
-    'compass:server',
-    'jshint:all',
-    'csslint:check'
+    'compass:server'
+    // 'jshint:all',
+    // 'csslint:check'
   ]);
 
   grunt.registerTask('build', [
