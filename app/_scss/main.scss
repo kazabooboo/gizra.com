@@ -1030,31 +1030,21 @@ header {
     background: transparent;
   }
 
-  .background,
-  .contact-wrapper {
-    position: absolute;
-    left: 50%;
-    margin-left: -317px;
-  }
 
   .background {
-    bottom: 0;
-
-    @media (max-width: 550px) {
-      width: 100%;
-    }
-  };
+    background: url('/images/hompage/contact/envelope.png') no-repeat center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    margin: 0 auto;
+  }
 
   .contact-wrapper {
-    width: 635px;
+    max-width: 580px;
     padding-left: 30px;
     padding-right: 30px;
-    top: 121px;
-
-    @media (max-width: 550px) {
-      width: 500px;
-      padding-left: 170px;
-    }
+    padding-top: 94px;
+    margin: 0 auto;
   }
 
   h2 {
