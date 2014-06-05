@@ -40,20 +40,17 @@ authors:
       name: Amitai Burstein
       title: CTO, Co-Owner
       twitter: amitaibu
-      bio: Maintainer of Organic groups, the Message stack, and co-maintainer of Drupal 8's Entity reference. Also likes climbing boulders.
-      homepage: true
+      bio: Maintainer of Organic groups, the Message stack, and co-maintainer of Drupal 8's Entity reference. <a href="/content/the-about-story/">The about story</a>.
   - bricel:
       name: Brice Lenfant
       title: CEO, Co-Owner
       twitter: bricel
       bio: Brice leads strategy, and helps run projects at Gizra. He works closely with both the team and customers to strategize and develop the project end-to-end and coordinate project needs and delivery.
-      homepage: true
   - niryariv:
       name: Nir Yariv
       title: Projects Lead
       twitter: niryariv
       bio: Messed with PHP since before it was cool, and for some time after. Now mostly herds cats.
-      homepage: true
   - NofarG:
       name: Nofar Gilor
       title: Developer
