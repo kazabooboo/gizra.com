@@ -5,3 +5,5 @@
 
 future: false
 show_drafts: false
+custom:
+  BASE_PATH: http://www.gizra.com
