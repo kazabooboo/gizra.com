@@ -25,6 +25,8 @@ markdown: redcarpet
 
 pygments: true
 
+title : Gizra.com
+production_url : www.gizra.com
 disqus :
   short_name : gizra
 
