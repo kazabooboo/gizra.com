@@ -1,11 +1,273 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><title>Zariz Means Agile</title><meta name="viewport" content="width=device-width"><link rel="stylesheet" href="/css/main.2676.css"><link href="http://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet" type="text/css"></head><body><header class="white"><div class="container"><div class="logo"><a href="/">gizra</a></div><nav id="nav" role="navigation" class="navbar navbar-default nav-fixed"><div class="navbar-header"><button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button"><span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button></div><div class="navbar-collapse collapse"><ul class="nav navbar-nav"><li><a href="/products">Products</a></li><li><a href="/#about">About</a></li><li><a href="/#work">Work</a></li><li><a href="/#code">Showcase</a></li><li><a href="/blog" class="active">Blog</a></li><li><a href="/#contact">Contact</a></li></ul></div></nav></div><!-- End of container --></header><section id="post-page"><div class="background"><img src="/images/post/background.2707.png"></div><div class="ballons"></div><div class="post-back"><a href="/blog"><img src="/images/post/post-back.fca6.png"></a></div><div class="content"><div class="container"><div class="row"><div class="col-md-12 post"><div class="row"><div class="post-label col-xs-12"><a href="/content/zariz-means-agile">Zariz Means Agile</a></div></div><div class="row small-row"><div class="date col-md-3 col-sm-3 col-xs-4">11 Dec 2013</div><div class="seprator col-md-1 col-sm-1 col-xs-1">|</div><div class="author col-md-8 col-sm-7 col-xs-6">By Amitai Burstein</div></div><div class="row small-row"><div class="tags col-sm-9"><ul class="inline"><li><a href="/tags.html#Zariz-ref">Zariz</a></li><li><a href="/tags.html#Dekyll-ref">Dekyll</a></li><li><a href="/tags.html#CMS-ref">CMS</a></li><li><a href="/tags.html#Drupal-planet-ref">Drupal-planet</a></li></ul></div><div class="comments-count col-sm-3"><a href="http://www.gizra.com/content/zariz-means-agile#disqus_thread"></a></div></div><div class="row"><div class="col-xs-12 post-content"><p><a href="https://github.com/Gizra/zariz">Zariz</a> is a new project we&#39;re working on. The word means &quot;quick&quot;, or &quot;agile&quot; in Hebrew. We&#39;ve began working on it when we hit some bumps working on Dekyll.</p><h3>Dekyll Frustrations</h3><p>Dekyll was Jekyll based. We love Jekyll - it powers our own site, and in fact I&#39;m writing this blog post with the excellent Prose.io. But for Dekyll we wanted to stay close to Drupal, keeping the various abilities it developed over the years like fine grained access control, workflows etc and allowing users to stay within an environment they already know.</p><p>Relying on Jekyll added another component to the system. A very good one, but still with its own requirements and needs. We wanted to simplify, and minimize the number of moving parts.</p><h3>A New Beginning</h3><p>So we were back at the drawing board. Around that time I saw Clay Shirky&#39;s <a href="http://www.ted.com/talks/clay_shirky_how_the_internet_will_one_day_transform_government.html">Ted talk</a>. When he gave that funny yet precise explanation about why lawyers don&#39;t use Git, I realized something.</p><!-- more --><p>As developers, we make a point of working with a version control system. We write branches for new features so we can see how they work before launching them. We can rollback. We can see diffs between different versions. And we never work directly on the production site. It seemed to me these best practices could be used not just in code, but in content as well.</p><p>I&#39;m not thinking about a single article page, but the whole site - say I change a story title, I want to see it reflected in the story page, home page, category page etc - before I release it to production.</p><p>And of course, it should be fast. Super fast.</p><p>Here are the key concepts of Zariz:</p><p>1) <strong>Keep Drupal as Backend</strong> We want to let users stay in the environment they know, with the tools and capabilites they&#39;re used to.</p><p>2) <strong>Model the content creation around Git</strong> We have a &quot;live&quot; branch (the equivalent of &quot;master&quot; in git repositories), which is in fact just a an OG group. Nodes cannot be created in that branch, only on &quot;development&quot; branches. Thus every content change can be seen in context of the entire site, on its branch.</p><p>3) <strong>Use Git for deployment</strong> We want to <code>git push</code> our <em>content</em> as well as our code. Jekyll taught us the importance of using a proper build tool. We have a <a href="http://gruntjs.com/">Grunt</a> task that grabs the HTML from Drupal, as well as all the assets, and pushes them to GitHub Pages, while making use of Grunt&#39;s existing deployment tasks for image minification, JS and CSS concatenating etc.</p><p>To make it easier to setup Grunt, we&#39;ve created a Yeoman generator. A simple <code>yo zariz</code> should get you to the point where the system is operational, and you can add your customization.</p><p><img src="/assets/images/posts/zariz/generator-zariz.jpg" alt=""></p><p>It&#39;s all still very early. The code is far from production. But if you like the concept of bringing Git best practices to the content world, here&#39;s what we got so far:</p><ul><li><a href="https://github.com/Gizra/zariz">zariz</a> - A Drupal module that provides API on top of Organic groups, to manage branches and &quot;snapshots&quot; of content.</li><li><a href="https://npmjs.org/package/generator-zariz">generator-zariz</a> - A Yeoman generator used for scaffolding.</li><li><a href="https://github.com/Gizra/zrizi">zrizi</a> - A Drupal theme that is mostly used for example purposes, with the idea that the CSS and JS used should be whitelisted, so it is in sync with the CSS and JS on the Grunt side.</li></ul></div></div><div class="row"><div class="col-xs-12 bottom-dash"></div></div><div class="row post-nav"><div class="col-xs-6"><div class="previous"><a href="/content/the-about-story">Previous</a></div><a href="/content/the-about-story" class="prev-text">The "About" Story</a></div><div class="col-xs-6"><div class="next"><a href="/content/zariz-in-pics">Next</a></div><a href="/content/zariz-in-pics" class="next-text">Zariz in Pics</a></div></div><div class="row author-details"><div class="col-md-1 image-wrapper"><img src="/images/team/amitaibu.4179.jpg" class="img-responsive"></div><div class="col-md-11 text-wrapper"><span class="name">Amitai Burstein</span> <span class="twitter">(@amitaibu)</span><div class="title">CTO, Co-Owner</div><div class="bio">Maintainer of Organic groups, the Message stack, and co-maintainer of Drupal 8's Entity reference. <a href="/content/the-about-story/">The about story</a>.</div></div></div><div class="row"><div class="col-xs-12 bottom-dash-small"></div></div><div class="row"><div id="disqus_thread"></div><script type="text/javascript">var disqus_developer = 1;
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Zariz Means Agile</title>
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="/css/main.2676.css"/>
+
+        <link href='http://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
+
+
+    </head>
+    <body>
+
+    
+
+    <header class="white">
+      <div class="container">
+        <div class="logo"><a href="/">gizra</a></div>
+        <nav id="nav" role="navigation" class="navbar navbar-default nav-fixed">
+          <div class="navbar-header">
+            <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="/products">Products</a></li>
+              <li><a href="/#about">About</a></li>
+              <li><a href="/#work">Work</a></li>
+              <li><a href="/#code">Showcase</a></li>
+              <li><a href="/blog" class="active">Blog</a></li>
+              <li><a href="/#contact">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div> <!-- End of container -->
+    </header>
+
+    
+
+
+    
+  
+
+
+
+  
+    
+      
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+
+<section id="post-page">
+  <div class="background">
+    <img src="/images/post/background.2707.png">
+  </div>
+
+  <div class="ballons"></div>
+  <div class="post-back">
+    <a href="/blog">
+      <img src="/images/post/post-back.fca6.png">
+    </a>
+  </div>
+
+  <div class="content">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-12 post">
+          <div class="row">
+            <div class="post-label col-xs-12">
+              <a href="/content/zariz-means-agile">Zariz Means Agile</a>
+            </div>
+          </div>
+
+          <div class="row small-row">
+            <div class="date col-md-3 col-sm-3 col-xs-4">11 Dec 2013</div>
+            <div class="seprator col-md-1 col-sm-1 col-xs-1">|</div>
+            <div class="author col-md-8 col-sm-7 col-xs-6">By Amitai Burstein</div>
+          </div>
+
+          <div class="row small-row">
+            <div class="tags col-sm-9">
+
+              
+              <ul class="inline">
+                
+                
+
+  
+    
+      <li><a href="/tags.html#Zariz-ref">Zariz</a></li>
+    
+      <li><a href="/tags.html#Dekyll-ref">Dekyll</a></li>
+    
+      <li><a href="/tags.html#CMS-ref">CMS</a></li>
+    
+      <li><a href="/tags.html#Drupal-planet-ref">Drupal-planet</a></li>
+    
+  
+
+
+              </ul>
+              
+            </div>
+
+            <div class="comments-count col-sm-3"><a href="http://www.gizra.com/content/zariz-means-agile#disqus_thread"></a></div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-12 post-content">
+              <p><a href="https://github.com/Gizra/zariz">Zariz</a> is a new project we&#39;re working on. The word means &quot;quick&quot;, or &quot;agile&quot; in Hebrew. We&#39;ve began working on it when we hit some bumps working on Dekyll.</p>
+
+<h3>Dekyll Frustrations</h3>
+
+<p>Dekyll was Jekyll based. We love Jekyll - it powers our own site, and in fact I&#39;m writing this blog post with the excellent Prose.io. But for Dekyll we wanted to stay close to Drupal, keeping the various abilities it developed over the years like fine grained access control, workflows etc and allowing users to stay within an environment they already know.</p>
+
+<p>Relying on Jekyll added another component to the system. A very good one, but still with its own requirements and needs. We wanted to simplify, and minimize the number of moving parts.</p>
+
+<h3>A New Beginning</h3>
+
+<p>So we were back at the drawing board. Around that time I saw Clay Shirky&#39;s <a href="http://www.ted.com/talks/clay_shirky_how_the_internet_will_one_day_transform_government.html">Ted talk</a>. When he gave that funny yet precise explanation about why lawyers don&#39;t use Git, I realized something.</p>
+
+<!-- more -->
+
+<p>As developers, we make a point of working with a version control system. We write branches for new features so we can see how they work before launching them. We can rollback. We can see diffs between different versions. And we never work directly on the production site. It seemed to me these best practices could be used not just in code, but in content as well.</p>
+
+<p>I&#39;m not thinking about a single article page, but the whole site - say I change a story title, I want to see it reflected in the story page, home page, category page etc - before I release it to production.</p>
+
+<p>And of course, it should be fast. Super fast.</p>
+
+<p>Here are the key concepts of Zariz:</p>
+
+<p>1) <strong>Keep Drupal as Backend</strong>
+We want to let users stay in the environment they know, with the tools and capabilites they&#39;re used to.</p>
+
+<p>2) <strong>Model the content creation around Git</strong>
+We have a &quot;live&quot; branch (the equivalent of &quot;master&quot; in git repositories), which is in fact just a an OG group. Nodes cannot be created in that branch, only on &quot;development&quot; branches. Thus every content change can be seen in context of the entire site, on its branch.</p>
+
+<p>3) <strong>Use Git for deployment</strong>
+We want to <code>git push</code> our <em>content</em> as well as our code. Jekyll taught us the importance of using a proper build tool. We have a <a href="http://gruntjs.com/">Grunt</a> task that grabs the HTML from Drupal, as well as all the assets, and pushes them to GitHub Pages, while making use of Grunt&#39;s existing deployment tasks for image minification, JS and CSS concatenating etc.</p>
+
+<p>To make it easier to setup Grunt, we&#39;ve created a Yeoman generator. A simple <code>yo zariz</code> should get you to the point where the system is operational, and you can add your customization.</p>
+
+<p><img src="/assets/images/posts/zariz/generator-zariz.jpg" alt=""></p>
+
+<p>It&#39;s all still very early. The code is far from production. But if you like the concept of bringing Git best practices to the content world, here&#39;s what we got so far:</p>
+
+<ul>
+<li><a href="https://github.com/Gizra/zariz">zariz</a> - A Drupal module that provides API on top of Organic groups, to manage branches and &quot;snapshots&quot; of content.</li>
+<li><a href="https://npmjs.org/package/generator-zariz">generator-zariz</a> - A Yeoman generator used for scaffolding.</li>
+<li><a href="https://github.com/Gizra/zrizi">zrizi</a> - A Drupal theme that is mostly used for example purposes, with the idea that the CSS and JS used should be whitelisted, so it is in sync with the CSS and JS on the Grunt side.</li>
+</ul>
+
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-12 bottom-dash"></div>
+          </div>
+
+          <div class="row post-nav">
+            <div class="col-xs-6">
+              <div class="previous">
+                <a href="/content/the-about-story">
+                  Previous
+                </a>
+              </div>
+              
+              <a href="/content/the-about-story" class="prev-text">
+                The "About" Story
+              </a>
+              
+            </div>
+            <div class="col-xs-6">
+              <div class="next">
+                <a href="/content/zariz-in-pics">
+                  Next
+                </a>
+              </div>
+              
+              <a href="/content/zariz-in-pics" class="next-text">
+                Zariz in Pics
+              </a>
+              
+            </div>
+          </div>
+
+          <div class="row author-details">
+            <div class="col-md-1 image-wrapper">
+              <img src="/images/team/amitaibu.4179.jpg" class="img-responsive">
+            </div>
+            <div class="col-md-11 text-wrapper">
+              <span class="name">Amitai Burstein</span> <span class="twitter">(@amitaibu)</span>
+              <div class="title">CTO, Co-Owner</div>
+              <div class="bio">Maintainer of Organic groups, the Message stack, and co-maintainer of Drupal 8's Entity reference. <a href="/content/the-about-story/">The about story</a>.</div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-12 bottom-dash-small"></div>
+          </div>
+
+          <div class="row">
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
     var disqus_shortname = 'gizra';
     /* * * DON'T EDIT BELOW THIS LINE * * */
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
         dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();</script><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div></div></div></div></div></section><script type="text/javascript">var disqus_shortname = 'gizra';
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="text/javascript">
+var disqus_shortname = 'gizra';
 
 /* * * DON'T EDIT BELOW THIS LINE * * */
 (function () {
@@ -13,10 +275,31 @@ var s = document.createElement('script'); s.async = true;
 s.type = 'text/javascript';
 s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
 (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-}());</script><script src="/js/plugins.5250.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script><script src="/js/scripts.ccb8.js"></script><!-- Google Analytics --><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+}());
+</script>
+
+
+
+
+    <script src="/js/plugins.5250.js"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+
+    <script src="/js/scripts.ccb8.js"></script>
+
+    <!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
   ga('create', 'UA-6558346-3', 'auto');  // Replace with your property ID.
-  ga('send', 'pageview');</script><!-- End Google Analytics --></body></html>
+  ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+    </body>
+</html>

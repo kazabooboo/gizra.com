@@ -1,14 +1,283 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><title>Harvard's OpenScholar</title><meta name="viewport" content="width=device-width"><link rel="stylesheet" href="/css/main.2676.css"><link href="http://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet" type="text/css"></head><body><header class="white"><div class="container"><div class="logo"><a href="/">gizra</a></div><nav id="nav" role="navigation" class="navbar navbar-default nav-fixed"><div class="navbar-header"><button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button"><span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button></div><div class="navbar-collapse collapse"><ul class="nav navbar-nav"><li><a href="/products">Products</a></li><li><a href="/#about">About</a></li><li><a href="/#work">Work</a></li><li><a href="/#code">Showcase</a></li><li><a href="/blog" class="active">Blog</a></li><li><a href="/#contact">Contact</a></li></ul></div></nav></div><!-- End of container --></header><section id="post-page"><div class="background"><img src="/images/post/background.2707.png"></div><div class="ballons"></div><div class="post-back"><a href="/blog"><img src="/images/post/post-back.fca6.png"></a></div><div class="content"><div class="container"><div class="row"><div class="col-md-12 post"><div class="row"><div class="post-label col-xs-12"><a href="/2013/06/04/harvard-openscholar.html">Harvard's OpenScholar</a></div></div><div class="row small-row"><div class="date col-md-3 col-sm-3 col-xs-4">04 Jun 2013</div><div class="seprator col-md-1 col-sm-1 col-xs-1">|</div><div class="author col-md-8 col-sm-7 col-xs-6">By Amitai Burstein</div></div><div class="row small-row"><div class="tags col-sm-9"><ul class="inline"><li><a href="/tags.html#Biblio-ref">Biblio</a></li><li><a href="/tags.html#OG7-ref">OG7</a></li><li><a href="/tags.html#Drupal-planet-ref">Drupal-planet</a></li></ul></div><div class="comments-count col-sm-3"><a href="http://www.gizra.com/2013/06/04/harvard-openscholar.html#disqus_thread"></a></div></div><div class="row"><div class="col-xs-12 post-content"><p>When people ask you about big projects done with Drupal, what&#39;s the <em>second</em> item on your list? I know the first one is <a href="http://www.whitehouse.gov/">WhiteHouse.gov</a> - that&#39;s not Drupal&#39;s foot in the door, it&#39;s the foot that broke the door.</p><p>I&#39;d like to share with you the second item on our list. Harvard. Seriously. If it&#39;s the first time you hear that Harvard is using Drupal, or that they have an amazing distribution they work on called <a href="http://openscholar.harvard.edu/">Harvard OpenScholar</a>, or that they have a team of five developers along with two developers from Gizra and a many <a href="http://hwp.harvard.edu/people">others</a> working on it <em>full time</em>, or you are not aware to the amount of contributions given back to the community... You do now.</p><!-- more --><h3>Should I use it?</h3><ul><li>Do you run a university site, where each department or professor can have their own &quot;mini-site&quot;?</li><li>Would you like the Harvard team to help you out with your installation?</li><li>Do you trust a distribution where every commit is automatically tested by Behat, <em>and</em> a dedicated QA team?</li></ul><p>I think I see a few people getting excited. You should. Oh, and in case you don&#39;t want the whole distribution, it still makes <em>a lot</em> of sense for you to use it as reference for things you want to do in your own distribution. Cross pollination and all that.</p><h3>Theory aside</h3><p>OpenScholar has been around for a while, and has a large userbase whose needs have to be taken into account. For example, when we started developing along their team, it was hard for me to understand why we don&#39;t use Panelizer for the layout management. A year later I know why: Because the professors need a layout system. And they need it now. And they need it in a very specific way.</p><p>Sometimes, the project leaders, Ferdinand Alimadhi and Richard Brandon, are forced to put aside the purist developer hat, and make hard calls like developing a custom system, until contrib modules mature (Panelizer <em>is</em> now mature, by the way, the above example is from many moons ago).</p><p>So, theory aside, when they wanted to upgrade from Drupal 6 to 7, they used migrate module, and treated the Drupal 6 database as an external database. A purist might argue that <code>hook_update_N()</code> is the &quot;right&quot; way, but after seeing how they did it, I can&#39;t think of a better way to get the work done. Fast, efficient, testable, and yeah - admittedly not the standard way.</p><h3>Automatic Testing</h3><p>Since OpenScholar is hosted in GitHub it was possible to set it up so that each and every single commit is being tested by <a href="https://travis-ci.org/">Travis-CI</a> with our Behat test suite. Not a lot of Drupal 7 distros come with a functional test suite. OpenScholar does!</p><h3>Organic Groups</h3><p>Obviously the use of OG in OpenScholar is massive.</p><p>Being used in OpenScholar, Acquia Commons and OpenAtrium, each for a different use case, demonstrates OG&#39;s maturity and flexibility. It got there largely thanks to OpenScholar&#39;s continued sponsorship of Gizra&#39;s work, which enabled us to contribute to the community in turn. If you use OG-Vocab in particular, you should buy Ferdi or Richard a beer next time you see them.</p><p>OpenScholar provides a lot of customization options to the group owner. Using Boxes module, they expose custom &quot;widgets&quot; that allow one to restructure their page as they wish. A feature I often hear users ask for already exists in OpenScholar in the form of &quot;Apps&quot;. You can enable, disable or set a &quot;feature&quot; (e.g. blog), and have different settings for your app. We use the Spaces module to implement this.</p><p>This lets OpenScholar fulfill the specific needs of different departments, which has made it the basis for Harvard&#39;s <a href="http://economics.harvard.edu/">Department of Economics</a> and <a href="http://chemistry.harvard.edu/">Department of Chemistry &amp; Chemical Biology</a> sites, along with many others.</p><h3>Citations, Plugins and Biblio</h3><p>Another big module in OpenScholar is Biblio, which is in charge of showing publications and citations. This is surprisingly complicated. There isn&#39;t <em>one</em> right citation format. The CiteProc standard alone includes more than 2,000 different styles. Basically, each organization invents their own citation style, and they are extremely pedantic about each semicolon&#39;s position.</p><p>Obviously, this means the module handling the citations should be very flexible. The current development branch of Biblio module is taking some good steps in that direction, and after spending a year working with citations we have some <a href="https://drupal.org/node/1973706">ideas</a> for new features, which we&#39;re working on <a href="https://github.com/amitaibu/biblio">here</a>.</p><p>Basically we want Biblio to be fieldable entity, and It should allow code like:</p><div class="highlight"><pre><code class="php language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Harvard's OpenScholar</title>
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="/css/main.2676.css"/>
+
+        <link href='http://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
+
+
+    </head>
+    <body>
+
+    
+
+    <header class="white">
+      <div class="container">
+        <div class="logo"><a href="/">gizra</a></div>
+        <nav id="nav" role="navigation" class="navbar navbar-default nav-fixed">
+          <div class="navbar-header">
+            <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="/products">Products</a></li>
+              <li><a href="/#about">About</a></li>
+              <li><a href="/#work">Work</a></li>
+              <li><a href="/#code">Showcase</a></li>
+              <li><a href="/blog" class="active">Blog</a></li>
+              <li><a href="/#contact">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div> <!-- End of container -->
+    </header>
+
+    
+
+
+    
+  
+
+
+
+  
+    
+      
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+
+<section id="post-page">
+  <div class="background">
+    <img src="/images/post/background.2707.png">
+  </div>
+
+  <div class="ballons"></div>
+  <div class="post-back">
+    <a href="/blog">
+      <img src="/images/post/post-back.fca6.png">
+    </a>
+  </div>
+
+  <div class="content">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-12 post">
+          <div class="row">
+            <div class="post-label col-xs-12">
+              <a href="/2013/06/04/harvard-openscholar.html">Harvard's OpenScholar</a>
+            </div>
+          </div>
+
+          <div class="row small-row">
+            <div class="date col-md-3 col-sm-3 col-xs-4">04 Jun 2013</div>
+            <div class="seprator col-md-1 col-sm-1 col-xs-1">|</div>
+            <div class="author col-md-8 col-sm-7 col-xs-6">By Amitai Burstein</div>
+          </div>
+
+          <div class="row small-row">
+            <div class="tags col-sm-9">
+
+              
+              <ul class="inline">
+                
+                
+
+  
+    
+      <li><a href="/tags.html#Biblio-ref">Biblio</a></li>
+    
+      <li><a href="/tags.html#OG7-ref">OG7</a></li>
+    
+      <li><a href="/tags.html#Drupal-planet-ref">Drupal-planet</a></li>
+    
+  
+
+
+              </ul>
+              
+            </div>
+
+            <div class="comments-count col-sm-3"><a href="http://www.gizra.com/2013/06/04/harvard-openscholar.html#disqus_thread"></a></div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-12 post-content">
+              <p>When people ask you about big projects done with Drupal, what&#39;s the <em>second</em> item on your list? I know the first one is <a href="http://www.whitehouse.gov/">WhiteHouse.gov</a> - that&#39;s not Drupal&#39;s foot in the door, it&#39;s the foot that broke the door.</p>
+
+<p>I&#39;d like to share with you the second item on our list. Harvard. Seriously. If it&#39;s the first time you hear that Harvard is using Drupal, or that they have an amazing distribution they work on called <a href="http://openscholar.harvard.edu/">Harvard OpenScholar</a>, or that they have a team of five developers along with two developers from Gizra and a many <a href="http://hwp.harvard.edu/people">others</a> working on it <em>full time</em>, or you are not aware to the amount of contributions given back to the community... You do now.</p>
+
+<!-- more -->
+
+<h3>Should I use it?</h3>
+
+<ul>
+<li>Do you run a university site, where each department or professor can have their own &quot;mini-site&quot;?</li>
+<li>Would you like the Harvard team to help you out with your installation?</li>
+<li>Do you trust a distribution where every commit is automatically tested by Behat, <em>and</em> a dedicated QA team?</li>
+</ul>
+
+<p>I think I see a few people getting excited. You should. Oh, and in case you don&#39;t want the whole distribution, it still makes <em>a lot</em> of sense for you to use it as reference for things you want to do in your own distribution. Cross pollination and all that.</p>
+
+<h3>Theory aside</h3>
+
+<p>OpenScholar has been around for a while, and has a large userbase whose needs have to be taken into account. For example, when we started developing along their team, it was hard for me to understand why we don&#39;t use Panelizer for the layout management. A year later I know why: Because the professors need a layout system. And they need it now. And they need it in a very specific way.</p>
+
+<p>Sometimes, the project leaders, Ferdinand Alimadhi and Richard Brandon, are forced to put aside the purist developer hat, and make hard calls like developing a custom system, until contrib modules mature (Panelizer <em>is</em> now mature, by the way, the above example is from many moons ago).</p>
+
+<p>So, theory aside, when they wanted to upgrade from Drupal 6 to 7, they used migrate module, and treated the Drupal 6 database as an external database. A purist might argue that <code>hook_update_N()</code> is the &quot;right&quot; way, but after seeing how they did it, I can&#39;t think of a better way to get the work done. Fast, efficient, testable, and yeah - admittedly not the standard way.</p>
+
+<h3>Automatic Testing</h3>
+
+<p>Since OpenScholar is hosted in GitHub it was possible to set it up so that each and every single commit is being tested by <a href="https://travis-ci.org/">Travis-CI</a> with our Behat test suite. Not a lot of Drupal 7 distros come with a functional test suite. OpenScholar does!</p>
+
+<h3>Organic Groups</h3>
+
+<p>Obviously the use of OG in OpenScholar is massive.</p>
+
+<p>Being used in OpenScholar, Acquia Commons and OpenAtrium, each for a different use case, demonstrates OG&#39;s maturity and flexibility. It got there largely thanks to OpenScholar&#39;s continued sponsorship of Gizra&#39;s work, which enabled us to contribute to the community in turn. If you use OG-Vocab in particular, you should buy Ferdi or Richard a beer next time you see them.</p>
+
+<p>OpenScholar provides a lot of customization options to the group owner. Using Boxes module, they expose custom &quot;widgets&quot; that allow one to restructure their page as they wish. A feature I often hear users ask for already exists in OpenScholar in the form of &quot;Apps&quot;. You can enable, disable or set a &quot;feature&quot; (e.g. blog), and have different settings for your app. We use the Spaces module to implement this.</p>
+
+<p>This lets OpenScholar fulfill the specific needs of different departments, which has made it the basis for Harvard&#39;s <a href="http://economics.harvard.edu/">Department of Economics</a> and <a href="http://chemistry.harvard.edu/">Department of Chemistry &amp; Chemical Biology</a> sites, along with many others.</p>
+
+<h3>Citations, Plugins and Biblio</h3>
+
+<p>Another big module in OpenScholar is Biblio, which is in charge of showing publications and citations. This is surprisingly complicated. There isn&#39;t <em>one</em> right citation format. The CiteProc standard alone includes more than 2,000 different styles. Basically, each organization invents their own citation style, and they are extremely pedantic about each semicolon&#39;s position.</p>
+
+<p>Obviously, this means the module handling the citations should be very flexible. The current development branch of Biblio module is taking some good steps in that direction, and after spending a year working with citations we have some <a href="https://drupal.org/node/1973706">ideas</a> for new features, which we&#39;re working on <a href="https://github.com/amitaibu/biblio">here</a>.</p>
+
+<p>Basically we want Biblio to be fieldable entity, and It should allow code like:</p>
+<div class="highlight"><pre><code class="php language-php" data-lang="php"><span class="cp">&lt;?php</span>
 
 <span class="nv">$biblio</span><span class="o">-&gt;</span><span class="na">getText</span><span class="p">(</span><span class="s1">&#39;citeproc&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;style_name&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;chicago-author-date&#39;</span><span class="p">));</span>
-</code></pre></div><p>So, the same entity &quot;knows&quot; how to render <em>itself</em> using different styles. This is done thanks to the use of Plugins, which we prefered to alter hooks in this case, since it lets us add some encapsulated code pieces, each dealing with its own little scenario.</p><p>Since so many universities and libraries are using this module, I&#39;d like to encourage the community to join in. Enable the Biblio example module, and see it in action. We&#39;re also working on Migrate from the 1.x branch to the new branch - as I wrote above, we are not just dealing with theory, we need to make it work!</p><p>There a tons of other features in OpenScholar, I&#39;ll let you dig in yourself. Perhaps by now the question I started this post with will change to &quot;What&#39;s the <em>third</em> big project you tell to your clients?&quot;</p></div></div><div class="row"><div class="col-xs-12 bottom-dash"></div></div><div class="row post-nav"><div class="col-xs-6"><div class="previous"><a href="/content/migrate-and-baking-content/">Previous</a></div><a href="/content/migrate-and-baking-content/" class="prev-text">Migrate, and baking content</a></div><div class="col-xs-6"><div class="next"><a href="/content/the-gizra-way/">Next</a></div><a href="/content/the-gizra-way/" class="next-text">The Gizra Way - How We Roll (and Rollback)</a></div></div><div class="row author-details"><div class="col-md-1 image-wrapper"><img src="/images/team/amitaibu.4179.jpg" class="img-responsive"></div><div class="col-md-11 text-wrapper"><span class="name">Amitai Burstein</span> <span class="twitter">(@amitaibu)</span><div class="title">CTO, Co-Owner</div><div class="bio">Maintainer of Organic groups, the Message stack, and co-maintainer of Drupal 8's Entity reference. <a href="/content/the-about-story/">The about story</a>.</div></div></div><div class="row"><div class="col-xs-12 bottom-dash-small"></div></div><div class="row"><div id="disqus_thread"></div><script type="text/javascript">var disqus_developer = 1;
+</code></pre></div>
+<p>So, the same entity &quot;knows&quot; how to render <em>itself</em> using different styles. This is done thanks to the use of Plugins, which we prefered to alter hooks in this case, since it lets us add some encapsulated code pieces, each dealing with its own little scenario.</p>
+
+<p>Since so many universities and libraries are using this module, I&#39;d like to encourage the community to join in. Enable the Biblio example module, and see it in action. We&#39;re also working on Migrate from the 1.x branch to the new branch - as I wrote above, we are not just dealing with theory, we need to make it work!</p>
+
+<p>There a tons of other features in OpenScholar, I&#39;ll let you dig in yourself. Perhaps by now the question I started this post with will change to &quot;What&#39;s the <em>third</em> big project you tell to your clients?&quot;</p>
+
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-12 bottom-dash"></div>
+          </div>
+
+          <div class="row post-nav">
+            <div class="col-xs-6">
+              <div class="previous">
+                <a href="/content/migrate-and-baking-content/">
+                  Previous
+                </a>
+              </div>
+              
+              <a href="/content/migrate-and-baking-content/" class="prev-text">
+                Migrate, and baking content
+              </a>
+              
+            </div>
+            <div class="col-xs-6">
+              <div class="next">
+                <a href="/content/the-gizra-way/">
+                  Next
+                </a>
+              </div>
+              
+              <a href="/content/the-gizra-way/" class="next-text">
+                The Gizra Way - How We Roll (and Rollback)
+              </a>
+              
+            </div>
+          </div>
+
+          <div class="row author-details">
+            <div class="col-md-1 image-wrapper">
+              <img src="/images/team/amitaibu.4179.jpg" class="img-responsive">
+            </div>
+            <div class="col-md-11 text-wrapper">
+              <span class="name">Amitai Burstein</span> <span class="twitter">(@amitaibu)</span>
+              <div class="title">CTO, Co-Owner</div>
+              <div class="bio">Maintainer of Organic groups, the Message stack, and co-maintainer of Drupal 8's Entity reference. <a href="/content/the-about-story/">The about story</a>.</div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-12 bottom-dash-small"></div>
+          </div>
+
+          <div class="row">
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
     var disqus_shortname = 'gizra';
     /* * * DON'T EDIT BELOW THIS LINE * * */
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
         dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();</script><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div></div></div></div></div></section><script type="text/javascript">var disqus_shortname = 'gizra';
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="text/javascript">
+var disqus_shortname = 'gizra';
 
 /* * * DON'T EDIT BELOW THIS LINE * * */
 (function () {
@@ -16,10 +285,31 @@ var s = document.createElement('script'); s.async = true;
 s.type = 'text/javascript';
 s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
 (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-}());</script><script src="/js/plugins.5250.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script><script src="/js/scripts.ccb8.js"></script><!-- Google Analytics --><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+}());
+</script>
+
+
+
+
+    <script src="/js/plugins.5250.js"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+
+    <script src="/js/scripts.ccb8.js"></script>
+
+    <!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
   ga('create', 'UA-6558346-3', 'auto');  // Replace with your property ID.
-  ga('send', 'pageview');</script><!-- End Google Analytics --></body></html>
+  ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+    </body>
+</html>

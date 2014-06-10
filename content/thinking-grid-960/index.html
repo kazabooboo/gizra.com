@@ -1,4 +1,203 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><title>Thinking 960</title><meta name="viewport" content="width=device-width"><link rel="stylesheet" href="/css/main.2676.css"><link href="http://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet" type="text/css"></head><body><header class="white"><div class="container"><div class="logo"><a href="/">gizra</a></div><nav id="nav" role="navigation" class="navbar navbar-default nav-fixed"><div class="navbar-header"><button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button"><span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button></div><div class="navbar-collapse collapse"><ul class="nav navbar-nav"><li><a href="/products">Products</a></li><li><a href="/#about">About</a></li><li><a href="/#work">Work</a></li><li><a href="/#code">Showcase</a></li><li><a href="/blog" class="active">Blog</a></li><li><a href="/#contact">Contact</a></li></ul></div></nav></div><!-- End of container --></header><section id="post-page"><div class="background"><img src="/images/post/background.2707.png"></div><div class="ballons"></div><div class="post-back"><a href="/blog"><img src="/images/post/post-back.fca6.png"></a></div><div class="content"><div class="container"><div class="row"><div class="col-md-12 post"><div class="row"><div class="post-label col-xs-12"><a href="/content/thinking-grid-960/">Thinking 960</a></div></div><div class="row small-row"><div class="date col-md-3 col-sm-3 col-xs-4">21 Jan 2010</div><div class="seprator col-md-1 col-sm-1 col-xs-1">|</div><div class="author col-md-8 col-sm-7 col-xs-6">By Amitai Burstein</div></div><div class="row small-row"><div class="tags col-sm-9"><ul class="inline"><li><a href="/tags.html#Drupal-planet-ref">Drupal-planet</a></li><li><a href="/tags.html#theme-ref">theme</a></li><li><a href="/tags.html#960-ref">960</a></li><li><a href="/tags.html#tutorial-ref">tutorial</a></li></ul></div><div class="comments-count col-sm-3"><a href="http://www.gizra.com/content/thinking-grid-960/#disqus_thread"></a></div></div><div class="row"><div class="col-xs-12 post-content"><p>If you are not familiar with the concept of <a href="http://960.gs/">960 grid system</a> you should be. In one sentence, 960 is a CSS framework that divides a page to 12 or 16 columns with a total of 960 pixels.</p><p>960 is a framework. As so, it doesn&#39;t only give us tools, it also encourages us to use them the _right way. I think it&#39;s a bit like forms API in Drupal that helps us build our forms correctly. In 960 you have CSS classes that can be used to set elements width and position.</p><!-- more --><p>For example, working with 16 columns and the following pseudo-code: <code>&lt;div class=&quot;grid-4&quot;&gt; print $left-sidebar &lt;/div&gt; &lt;div class=&quot;grid-12&quot;&gt; print $main-content &lt;/div&gt;</code> Will give us something like this: <img src="/assets/images/legacy/960_1.png" alt="960 grid system"></p><p>The left sidebar is taking 4 columns, and the main is taking a total of 12. As you see in the above example we make sure to &quot;fill up columns&quot;, so even if wanted the main to be in 11 columns, we would add a suffix (e.g. _suffix-1) or a prefix - so the total of the line will be 16 columns. This will assure all elements are in place, and nothing pops up. Oh, and it&#39;s cross browser compatible. Oh, and it&#39;s already RTLed.</p><p>Before we start with the examples set up your system:<ol><li>Download zen and zen<em>ninesixty themes</em></li><li>Download the &lt;a href=&quot;http://www.gizra.com/sites/default/files/gizraninesixty.zip&quot;&gt;gizra<em>ninesixty theme used for this tutorial here (A clean gizra</em>ninesixty can be found in <a href="http://github.com/amitaibu/gizra_ninesixty">github</a>)</li><li>Enable the above themes and make gizra<em>ninesixty the default</em></li><li>In the gizraninesixty configuration page, enable the &quot;Active 960 grid system image&quot;</li><li>Download the <a href="http://www.gizra.com/sites/default/files/gizra_960.zip">example module</a> with the tutorial&#39;s Views and Panels, and enable it</li><li>In all the examples I assume we are working with 16 columns grid, and that we have blocks on the left sidebar, but not on the right (so the main content area is 12 columns wide)</li></ol></p><p>Our first example will be showing in a node view the submitted by and tags on the left, and the node links on it&#39;s right.</p><p><img src="/assets/images/legacy/960_2.png" alt="node.tpl.php with 960"></p><p>Open <em>node.tpl.php in gizra</em>ninesixty and compare it to the one in zen_ninesixty. You will notice we added grid-* classes. For example <code>&lt;div class=&quot;meta&quot;&gt;</code> was replaced with <code>&lt;div class=&quot;meta grid-2 alpha&quot;&gt;</code>. We use 960&#39;s _alpha and _omega. Since we are nesting the elements inside an existing grid-12 (the main content area), we want to make sure the first and last elements are aligned with the parent element (just remove the alpha and omega to visually see the difference). We also gave the title class a grid-12 to make sure everything is aligned properly. Try removing the grid-12 definition and check your frontpage, to see why it is needed.</p><p>Next example will be using 960 with Views themes. Say you need to show a table with three columns with different width for every table column. You can use the &#39;table&#39; style, and CSS the <code>td</code> CSS element, but I find it even easier with 960. Add a few story nodes, and click on the _Views 960 menu item to see our Views page in action.</p><p><img src="/assets/images/legacy/960_3.png" alt="Views with 960"></p><p>Let&#39;s see what we have done here: The view shows three fields of published story content types - node ID, node title and body. Using Views&#39; theme suggestions we decided to override the row theme by placing <em>views-view-fields--story-simple-view--page.tpl.php in the gizra</em>ninesixty theme directory. This allows us to add our grid definitions. You might notice that the style of the view is unformatted list. Web-semantically speaking it might have been better to choose another style, but for simplicity sake we used it. In the top of the file we added the following code:</p><div class="highlight"><pre><code class="php language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Thinking 960</title>
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="/css/main.2676.css"/>
+
+        <link href='http://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
+
+
+    </head>
+    <body>
+
+    
+
+    <header class="white">
+      <div class="container">
+        <div class="logo"><a href="/">gizra</a></div>
+        <nav id="nav" role="navigation" class="navbar navbar-default nav-fixed">
+          <div class="navbar-header">
+            <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="/products">Products</a></li>
+              <li><a href="/#about">About</a></li>
+              <li><a href="/#work">Work</a></li>
+              <li><a href="/#code">Showcase</a></li>
+              <li><a href="/blog" class="active">Blog</a></li>
+              <li><a href="/#contact">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div> <!-- End of container -->
+    </header>
+
+    
+
+
+    
+  
+
+
+
+  
+    
+      
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+
+<section id="post-page">
+  <div class="background">
+    <img src="/images/post/background.2707.png">
+  </div>
+
+  <div class="ballons"></div>
+  <div class="post-back">
+    <a href="/blog">
+      <img src="/images/post/post-back.fca6.png">
+    </a>
+  </div>
+
+  <div class="content">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-12 post">
+          <div class="row">
+            <div class="post-label col-xs-12">
+              <a href="/content/thinking-grid-960/">Thinking 960</a>
+            </div>
+          </div>
+
+          <div class="row small-row">
+            <div class="date col-md-3 col-sm-3 col-xs-4">21 Jan 2010</div>
+            <div class="seprator col-md-1 col-sm-1 col-xs-1">|</div>
+            <div class="author col-md-8 col-sm-7 col-xs-6">By Amitai Burstein</div>
+          </div>
+
+          <div class="row small-row">
+            <div class="tags col-sm-9">
+
+              
+              <ul class="inline">
+                
+                
+
+  
+    
+      <li><a href="/tags.html#Drupal-planet-ref">Drupal-planet</a></li>
+    
+      <li><a href="/tags.html#theme-ref">theme</a></li>
+    
+      <li><a href="/tags.html#960-ref">960</a></li>
+    
+      <li><a href="/tags.html#tutorial-ref">tutorial</a></li>
+    
+  
+
+
+              </ul>
+              
+            </div>
+
+            <div class="comments-count col-sm-3"><a href="http://www.gizra.com/content/thinking-grid-960/#disqus_thread"></a></div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-12 post-content">
+              <p>If you are not familiar with the concept of <a href="http://960.gs/">960 grid system</a> you should be. In one sentence, 960 is a CSS framework that divides a page to 12 or 16 columns with a total of 960 pixels.</p>
+
+<p>960 is a framework. As so, it doesn&#39;t only give us tools, it also encourages us to use them the _right way. I think it&#39;s a bit like forms API in Drupal that helps us build our forms correctly.
+In 960 you have CSS classes that can be used to set elements width and position.</p>
+
+<!-- more -->
+
+<p>For example, working with 16 columns and the following pseudo-code:
+<code>
+&lt;div class=&quot;grid-4&quot;&gt;
+  print $left-sidebar
+&lt;/div&gt;
+&lt;div class=&quot;grid-12&quot;&gt;
+  print $main-content
+&lt;/div&gt;
+</code>
+Will give us something like this:
+<img src="/assets/images/legacy/960_1.png" alt="960 grid system"/></p>
+
+<p>The left sidebar is taking 4 columns, and the main is taking a total of 12. As you see in the above example we make sure to &quot;fill up columns&quot;, so even if wanted the main to be in 11 columns, we would add a suffix (e.g. _suffix-1) or a prefix - so the total of the line will be 16 columns. This will assure all elements are in place, and nothing pops up. Oh, and it&#39;s cross browser compatible. Oh, and it&#39;s already RTLed.</p>
+
+<p>Before we start with the examples set up your system:
+<ol>
+<li>Download zen and zen<em>ninesixty themes</li>
+<li>Download the &lt;a href=&quot;http://www.gizra.com/sites/default/files/gizra</em>ninesixty.zip&quot;&gt;gizra<em>ninesixty</a> theme used for this tutorial here (A clean gizra</em>ninesixty can be found in <a href="http://github.com/amitaibu/gizra_ninesixty">github</a>)</li>
+<li>Enable the above themes and make gizra<em>ninesixty the default</li>
+<li>In the gizra</em>ninesixty configuration page, enable the &quot;Active 960 grid system image&quot;</li>
+<li>Download the <a href="http://www.gizra.com/sites/default/files/gizra_960.zip">example module</a> with the tutorial&#39;s Views and Panels, and enable it</li>
+<li>In all the examples I assume we are working with 16 columns grid, and that we have blocks on the left sidebar, but not on the right (so the main content area is 12 columns wide)</li>
+</ol></p>
+
+<p>Our first example will be showing in a node view the submitted by and tags on the left, and the node links on it&#39;s right.</p>
+
+<p><img src="/assets/images/legacy/960_2.png" alt="node.tpl.php with 960" /></p>
+
+<p>Open <em>node.tpl.php in gizra</em>ninesixty and compare it to the one in zen_ninesixty. You will notice we added grid-* classes. For example <code>&lt;div class=&quot;meta&quot;&gt;</code> was replaced with <code>&lt;div class=&quot;meta grid-2 alpha&quot;&gt;</code>.
+We use 960&#39;s _alpha and _omega. Since we are nesting the elements inside an existing grid-12 (the main content area), we want to make sure the first and last elements are aligned with the parent element (just remove the alpha and omega to visually see the difference).
+We also gave the title class a grid-12 to make sure everything is aligned properly. Try removing the grid-12 definition and check your frontpage, to see why it is needed.</p>
+
+<p>Next example will be using 960 with Views themes. Say you need to show a table with three columns with different width for every table column. You can use the &#39;table&#39; style, and CSS the <code>td</code> CSS element, but I find it even easier with 960. Add a few story nodes, and click on the _Views 960 menu item to see our Views page in action.</p>
+
+<p><img src="/assets/images/legacy/960_3.png" alt="Views with 960" /></p>
+
+<p>Let&#39;s see what we have done here:
+The view shows three fields of published story content types - node ID, node title and body. Using Views&#39; theme suggestions we decided to override the row theme by placing <em>views-view-fields--story-simple-view--page.tpl.php in the gizra</em>ninesixty theme directory. This allows us to add our grid definitions. You might notice that the style of the view is unformatted list. Web-semantically speaking it might have been better to choose another style, but for simplicity sake we used it. In the top of the file we added the following code:</p>
+<div class="highlight"><pre><code class="php language-php" data-lang="php"><span class="cp">&lt;?php</span>
   <span class="c1">// Set the grid of each column. We can key the array with nid, title, body,</span>
   <span class="c1">// but by using numeric keys, we allow changing the fields in the Views without</span>
   <span class="c1">// harming the theme override.</span>
@@ -10,14 +209,100 @@
   <span class="c1">// Get the ID keys.</span>
   <span class="nv">$ids_keys</span> <span class="o">=</span> <span class="nb">array_flip</span><span class="p">(</span><span class="nb">array_keys</span><span class="p">(</span><span class="nv">$fields</span><span class="p">));</span>
 <span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div><p>and in the same file we print <code>$ids[$ids_keys[$id]];</code> before each field in the row - like this, each field gets the 960&#39;s classes we want, and we get the &quot;table&quot; effect, without tables.</p><p>Our last example is creating a new Panels layout (You already know how much we <a href="http://www.gizra.com/content/does-every-page-really-need-be-node">love Panels</a>).</p><p><img src="/assets/images/legacy/960_4.png" alt="Views with 960"></p><p>I will not cover every step, but point you to the important concept. In <em>gizra</em>ninesixty/layouts/badic/basic.inc we removed the CSS included file as the positioning is managed by 960. in basic.page.tpl.php we simply added the grid definitions we know from previous examples. As easy as that. Click on _Panels 960 menu item to see it in action.</p><p>Here are a few tips on how you would know you are thinking - and acting - the 960 way:<ul><li>You hardly/ never use <code>float</code>, <code>margin-left/ right</code> and <code>width</code> to position elements</li><li>Your css-rtl file is tiny or non existent, as 960 is taking a good care in your RTL</li><li>When you define elements one the same line, you make sure it fills all 16 columns, by adding prefix or suffix</li><li>When you hover over the elements the red border that shows the grid size appears correctly, and without an offset - if it does, this is a good sign that some definition is wrong. Track back the error and fix it before you continue</li></ul></p><ul><li>We patch zen_ninesixty with <a href="http://drupal.org/node/648064">this patch</a> to fix the RTL support.</li></ul></div></div><div class="row"><div class="col-xs-12 bottom-dash"></div></div><div class="row post-nav"><div class="col-xs-6"><div class="previous"><a href="/content/user-points-rules-style/">Previous</a></div><a href="/content/user-points-rules-style/" class="prev-text">User points - Rules style</a></div><div class="col-xs-6"><div class="next"><a href="/content/ctools-context-and-message/">Next</a></div><a href="/content/ctools-context-and-message/" class="next-text">CTools, Context and Message</a></div></div><div class="row author-details"><div class="col-md-1 image-wrapper"><img src="/images/team/amitaibu.4179.jpg" class="img-responsive"></div><div class="col-md-11 text-wrapper"><span class="name">Amitai Burstein</span> <span class="twitter">(@amitaibu)</span><div class="title">CTO, Co-Owner</div><div class="bio">Maintainer of Organic groups, the Message stack, and co-maintainer of Drupal 8's Entity reference. <a href="/content/the-about-story/">The about story</a>.</div></div></div><div class="row"><div class="col-xs-12 bottom-dash-small"></div></div><div class="row"><div id="disqus_thread"></div><script type="text/javascript">var disqus_developer = 1;
+</code></pre></div>
+<p>and in the same file we print <code>$ids[$ids_keys[$id]];</code> before each field in the row - like this, each field gets the 960&#39;s classes we want, and we get the &quot;table&quot; effect, without tables.</p>
+
+<p>Our last example is creating a new Panels layout (You already know how much we <a href="http://www.gizra.com/content/does-every-page-really-need-be-node">love Panels</a>).</p>
+
+<p><img src="/assets/images/legacy/960_4.png" alt="Views with 960" /></p>
+
+<p>I will not cover every step, but point you to the important concept. In <em>gizra</em>ninesixty/layouts/badic/basic.inc we removed the CSS included file as the positioning is managed by 960. in basic.page.tpl.php we simply added the grid definitions we know from previous examples. As easy as that. Click on _Panels 960 menu item to see it in action.</p>
+
+<p>Here are a few tips on how you would know you are thinking - and acting - the 960 way:
+<ul>
+<li>You hardly/ never use <code>float</code>, <code>margin-left/ right</code> and <code>width</code> to position elements</li>
+<li>Your css-rtl file is tiny or non existent, as 960 is taking a good care in your RTL</li>
+<li>When you define elements one the same line, you make sure it fills all 16 columns, by adding prefix or suffix</li>
+<li>When you hover over the elements the red border that shows the grid size appears correctly, and without an offset - if it does, this is a good sign that some definition is wrong. Track back the error and fix it before you continue</li>
+</ul></p>
+
+<ul>
+<li>We patch zen_ninesixty with <a href="http://drupal.org/node/648064">this patch</a> to fix the RTL support.</li>
+</ul>
+
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-12 bottom-dash"></div>
+          </div>
+
+          <div class="row post-nav">
+            <div class="col-xs-6">
+              <div class="previous">
+                <a href="/content/user-points-rules-style/">
+                  Previous
+                </a>
+              </div>
+              
+              <a href="/content/user-points-rules-style/" class="prev-text">
+                User points - Rules style
+              </a>
+              
+            </div>
+            <div class="col-xs-6">
+              <div class="next">
+                <a href="/content/ctools-context-and-message/">
+                  Next
+                </a>
+              </div>
+              
+              <a href="/content/ctools-context-and-message/" class="next-text">
+                CTools, Context and Message
+              </a>
+              
+            </div>
+          </div>
+
+          <div class="row author-details">
+            <div class="col-md-1 image-wrapper">
+              <img src="/images/team/amitaibu.4179.jpg" class="img-responsive">
+            </div>
+            <div class="col-md-11 text-wrapper">
+              <span class="name">Amitai Burstein</span> <span class="twitter">(@amitaibu)</span>
+              <div class="title">CTO, Co-Owner</div>
+              <div class="bio">Maintainer of Organic groups, the Message stack, and co-maintainer of Drupal 8's Entity reference. <a href="/content/the-about-story/">The about story</a>.</div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-12 bottom-dash-small"></div>
+          </div>
+
+          <div class="row">
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
     var disqus_shortname = 'gizra';
     /* * * DON'T EDIT BELOW THIS LINE * * */
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
         dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();</script><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div></div></div></div></div></section><script type="text/javascript">var disqus_shortname = 'gizra';
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="text/javascript">
+var disqus_shortname = 'gizra';
 
 /* * * DON'T EDIT BELOW THIS LINE * * */
 (function () {
@@ -25,10 +310,31 @@ var s = document.createElement('script'); s.async = true;
 s.type = 'text/javascript';
 s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
 (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-}());</script><script src="/js/plugins.5250.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script><script src="/js/scripts.ccb8.js"></script><!-- Google Analytics --><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+}());
+</script>
+
+
+
+
+    <script src="/js/plugins.5250.js"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+
+    <script src="/js/scripts.ccb8.js"></script>
+
+    <!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
   ga('create', 'UA-6558346-3', 'auto');  // Replace with your property ID.
-  ga('send', 'pageview');</script><!-- End Google Analytics --></body></html>
+  ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+    </body>
+</html>
