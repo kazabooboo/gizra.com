@@ -10,8 +10,9 @@ permalink: /content/emmet-tutorial/
 layout: post
 author: YaronMiro
 ---
+{% include setup %}
 
-## Instant html and css
+## Instant HTML and CSS
 
 ![]({{BASE_PATH}}/assets/images/posts/emmet-tutorial/emmet-demo.gif)
 

@@ -27,6 +27,8 @@ pygments: true
 
 title : Gizra.com
 production_url : www.gizra.com
+custom:
+  BASE_PATH: http://www.gizra.com
 disqus :
   short_name : gizra
 
