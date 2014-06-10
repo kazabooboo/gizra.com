@@ -381,8 +381,9 @@ module.exports = function (grunt) {
     // 'imagemin',
     'svgmin',
     'filerev',
-    'usemin',
-    'htmlmin'
+    'usemin'
+    // @todo: Add HTMLmin after caseSensitive is working, for RSS to function.
+    // 'htmlmin'
     ]);
 
   grunt.registerTask('deploy', [
