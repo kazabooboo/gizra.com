@@ -4,8 +4,8 @@ $(function() {
 
   // About-story images.
   if (navigator.userAgent.match(/(iPod|iPhone|iPad)/)) {
-    $('.section2').backstretch("/assets/themes/twitter/images/about-background.jpg");
-    $('.section4').backstretch("/assets/themes/twitter/images/about2-background.jpg");
+    $('.section2').backstretch("/assets/images/about-story/lamp.jpg");
+    $('.section4').backstretch("/assets/images/about-story/fish.jpg");
   }
 });
 
