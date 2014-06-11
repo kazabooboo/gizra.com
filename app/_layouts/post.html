@@ -71,24 +71,24 @@ layout: default
 
           <div class="row post-nav">
             <div class="col-xs-6">
+              {% if page.previous %}
               <div class="previous">
                 <a href="{{ page.previous.url }}">
                   Previous
                 </a>
               </div>
-              {% if page.previous %}
               <a href="{{ page.previous.url }}" class="prev-text">
                 {{ page.previous.title }}
               </a>
               {% endif %}
             </div>
             <div class="col-xs-6">
+              {% if page.next %}
               <div class="next">
                 <a href="{{ page.next.url }}">
                   Next
                 </a>
               </div>
-              {% if page.next %}
               <a href="{{ page.next.url }}" class="next-text">
                 {{ page.next.title }}
               </a>
