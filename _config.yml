@@ -26,16 +26,11 @@ markdown: redcarpet
 pygments: true
 
 title : Gizra.com
-production_url : www.gizra.com
-disqus :
-  short_name : gizra
-
 excerpt_separator: "<!-- more -->"
 
 paginate: 5
 paginate_path: "blog/page:num"
-google:
-  tracking_id: 'UA-6558346-3'
+
 
 authors:
   - Amitaibu:
