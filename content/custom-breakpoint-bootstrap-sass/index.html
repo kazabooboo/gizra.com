@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Zariz in Pics</title>
+        <title>Creating a Custom Breakpoint in Bootstrap-Sass</title>
         <meta name="viewport" content="width=device-width">
 
         <link rel="stylesheet" href="/css/main.2676.css"/>
@@ -52,47 +52,47 @@
 
   
     
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
       
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
     
   
 
@@ -116,14 +116,14 @@
         <div class="col-md-12 post">
           <div class="row">
             <div class="post-label col-xs-12">
-              <a href="/content/zariz-in-pics">Zariz in Pics</a>
+              <a href="/content/custom-breakpoint-bootstrap-sass">Creating a Custom Breakpoint in Bootstrap-Sass</a>
             </div>
           </div>
 
           <div class="row small-row">
-            <div class="date col-md-3 col-sm-3 col-xs-4">24 Dec 2013</div>
+            <div class="date col-md-3 col-sm-3 col-xs-4">25 Jun 2014</div>
             <div class="seprator col-md-1 col-sm-1 col-xs-1">|</div>
-            <div class="author col-md-8 col-sm-7 col-xs-6">By Amitai Burstein</div>
+            <div class="author col-md-8 col-sm-7 col-xs-6">By Nader Safadi</div>
           </div>
 
           <div class="row small-row">
@@ -136,9 +136,9 @@
 
   
     
-      <li><a href="/tags.html#Zariz-ref">Zariz</a></li>
+      <li><a href="/tags.html#Bootstrap-ref">Bootstrap</a></li>
     
-      <li><a href="/tags.html#Git-ref">Git</a></li>
+      <li><a href="/tags.html#CSS-ref">CSS</a></li>
     
       <li><a href="/tags.html#Drupal-planet-ref">Drupal-planet</a></li>
     
@@ -149,47 +149,30 @@
               
             </div>
 
-            <div class="comments-count col-sm-3"><a href="http://www.gizra.com/content/zariz-in-pics#disqus_thread"></a></div>
+            <div class="comments-count col-sm-3"><a href="http://www.gizra.com/content/custom-breakpoint-bootstrap-sass#disqus_thread"></a></div>
           </div>
 
           <div class="row">
             <div class="col-xs-12 post-content">
-              <p><a href="https://github.com/Gizra/zariz">Zariz </a> isn&#39;t just about static sites. In fact the Zariz module itself isn&#39;t aware of any static generation. It&#39;s about modeling the content creation around Git, which is a new approach to content staging.</p>
-
-<p>Here are 10 images that will make the whole idea clear.</p>
-
-<p>This is the <code>live</code> branch<br>
-<img src="/assets/images/posts/zariz2/0.jpg" alt=""></p>
-
-<p>We branch out of it<br>
-<img src="/assets/images/posts/zariz2/1.jpg" alt=""></p>
-
-<p><img src="/assets/images/posts/zariz2/2.jpg" alt=""></p>
+              <p>Bootstrap is our go to base theme, but what happens when the grid the client asks for has different width, or more break points?
+Using Bootstrap-Sass creating a custom grid is possible in a manner that can be copied and adjusted from one project to another. As example for this post, and for your future reference you may follow the <a href="http://gizra.github.io/custom-breakpoint-example/">live demo</a> and <a href="https://github.com/Gizra/custom-breakpoint-example">repository</a> that changes Bootstrap to work with five breakpoints (tip: use <a href="http://lab.maltewassermann.com/viewport-resizer/">Resizer</a> for easy viewport resize).<br>
+Note that example is using Jekyll for simplicity, however the same technique can be used on Drupal.</p>
 
 <!-- more -->
 
-<p>The new branch is empty. Lets add new content to it<br>
-<img src="/assets/images/posts/zariz2/3.jpg" alt=""></p>
+<div class="thumbnail">
+  <img src="http://www.gizra.com/assets/images/posts/creating-a-custom-grid-in-sass-bootstrap/customgrid-gizra.gif">
+  <div class="caption">Notice the responsiveness of the site. The part with the white background marks our custom breakpoint.</div>
+</div>
 
-<p>Now that there&#39;s new content, the toolbar allows us to merge it back to the <code>live</code> branch<br>
-<img src="/assets/images/posts/zariz2/4.jpg" alt=""></p>
-
-<p>Zariz supports multiple branching<br>
-<img src="/assets/images/posts/zariz2/5.jpg" alt=""></p>
-
-<p>In the new branch we can see the content that was added in the parent branch<br>
-<img src="/assets/images/posts/zariz2/6.jpg" alt=""></p>
-
-<p><img src="/assets/images/posts/zariz2/7.jpg" alt=""></p>
-
-<p>The debug block shows us the origin of each content<br>
-<img src="/assets/images/posts/zariz2/8.jpg" alt=""></p>
-
-<p>Once we merge the branch, it is locked and cannot be changed<br>
-<img src="/assets/images/posts/zariz2/9.jpg" alt=""></p>
-
-<p>That&#39;s the <code>live</code> branch after the merge<br>
-<img src="/assets/images/posts/zariz2/10.jpg" alt=""></p>
+<ol>
+<li><a href="https://github.com/Gizra/custom-breakpoint-example/blob/master/app/_scss/main.scss#L1-L14">Set</a> the custom breakpoint. In this example arbitrarily called <code>is</code> (Intermediate small - because it&#39;s between the extra small <code>xs</code> and small <code>sm</code> breakpoints), which means we can set the cols writing <code>col-is-4</code>.</li>
+<li>Create a custom <code>_grids.scss</code> file next to your main <code>styles.scss</code> and <a href="https://github.com/Gizra/custom-breakpoint-example/blob/master/app/_scss/main.scss#L16-L19">include</a> it. Be sure to include it after the <code>bootstrap.scss</code> file.</li>
+<li>Next we need to <a href="https://github.com/Gizra/custom-breakpoint-example/blob/master/app/_scss/_grids.scss#L1-L3">declare</a> our new breakpoint, which means that if the breakpoint is between two existing breakpoints, we have to set a maximum width to the smaller breakpoint and set a minimum width for the bigger breakpoint. We had to set the maximum width in the our main css file, before calling the bootstrap (Otherwise the hidden class function won&#39;t work), So we only have to set the minimum width of the bigger grid.</li>
+<li>As we need a fixed container rather than a fluid one, we <a href="https://github.com/Gizra/custom-breakpoint-example/blob/master/app/_scss/_grids.scss#L4-L11">set</a> the container to the width determined in step 1, otherwise it will have a fluid container.</li>
+<li>Next we <a href="https://github.com/Gizra/custom-grid/blob/master/app/_scss/_grids.scss#L13-L17">call</a> the <code>make-grid()</code> Sass function.</li>
+<li>An optional step, yet recommended, is to add <a href="https://github.com/Gizra/custom-grid/blob/master/app/_scss/_grids.scss#L19-L36">visible and hidden</a> classes to the custom breakpoint. In our example adding a <code>visible-is</code> or <code>hidden-is</code> will have the desired effect when the new breakpoint will be used.</li>
+</ol>
 
             </div>
           </div>
@@ -202,37 +185,28 @@
             <div class="col-xs-6">
               
               <div class="previous">
-                <a href="/content/zariz-means-agile">
+                <a href="/content/emmet-tutorial/">
                   Previous
                 </a>
               </div>
-              <a href="/content/zariz-means-agile" class="prev-text">
-                Zariz Means Agile
+              <a href="/content/emmet-tutorial/" class="prev-text">
+                Introducing Emmet!
               </a>
               
             </div>
             <div class="col-xs-6">
-              
-              <div class="next">
-                <a href="/content/drupal-x5-faster">
-                  Next
-                </a>
-              </div>
-              <a href="/content/drupal-x5-faster" class="next-text">
-                Drupal, only x5 faster
-              </a>
               
             </div>
           </div>
 
           <div class="row author-details">
             <div class="col-md-1 image-wrapper">
-              <img src="/images/team/amitaibu.4179.jpg" class="img-responsive">
+              <img src="/images/team/nedSaf.4ab8.jpg" class="img-responsive">
             </div>
             <div class="col-md-11 text-wrapper">
-              <span class="name">Amitai Burstein</span> <span class="twitter">(@amitaibu)</span>
-              <div class="title">CTO, Co-Owner</div>
-              <div class="bio">Maintainer of Organic groups, the Message stack, and co-maintainer of Drupal 8's Entity reference. <a href="/content/the-about-story/">The about story</a>.</div>
+              <span class="name">Nader Safadi</span> <span class="twitter">(@nedSaf)</span>
+              <div class="title">Developer</div>
+              <div class="bio">Show me the source code and I'll be happy!</div>
             </div>
           </div>
 
