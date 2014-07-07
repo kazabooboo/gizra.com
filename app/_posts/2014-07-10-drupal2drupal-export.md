@@ -6,6 +6,7 @@ tags:
   - Drupal-planet
 layout: post
 permalink: "/content/drupal2drupal-migrate-made-easy"
+author: NofarG
 ---
 {% include setup %}
 
