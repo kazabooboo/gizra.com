@@ -117,6 +117,114 @@
 
           <div class="row">
             <div class="post-label">
+              <a href="/content/let-sleeping-dogs-lie/">Let sleeping dogs lie</a>
+            </div>
+          </div>
+
+          <div class="row small-row">
+            <div class="date">03 Jul 2010</div>
+            <div class="seprator">|</div>
+            <div class="author">By <a href="#author">Amitai Burstein</a></div>
+          </div>
+
+          <div class="row small-row">
+            <div class="tags">
+              
+              <ul class="inline">
+                
+                
+
+  
+    
+      <li><a href="/tags.html#Drupal-planet-ref">Drupal-planet</a></li>
+    
+      <li><a href="/tags.html#OG-ref">OG</a></li>
+    
+  
+
+
+              </ul>
+              
+            </div>
+            <div class="comments-count"><a href="http://www.gizra.com/blog/page11/index.html#disqus_thread"></a></div>
+          </div>
+
+          <div class="row">
+            <div class="post-content">
+              <p>Here&#39;s the story in one (code) line:</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">find ./ -name *.* -type f -exec s -i &quot;s/group/og/g&quot; &#39;{}&#39; \;
+</code></pre></div>
+<p>For the humans amongst us, I&#39;ll explain. As part of the rewrite of Organic groups to Drupal 7, I thought that the name also deserves a rename -- to follow Drupal&#39;s naming standards. Since there weren&#39;t enough votes in the <a href="http://groups.drupal.org/node/75988/">poll</a> in g.d.o I&#39;ve decided _not to go with the change. OG module will keep its name - although in the UI we will use &quot;Group&quot; (the same way as node is refereed to as content).</p>
+
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="bottom-dash"></div>
+          </div>
+        </div>
+      </div>
+      <!--Post End-->
+      
+
+      
+        
+      
+
+      
+        
+          
+            
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+
+      <!--Post begin-->
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2 post">
+
+          <div class="row">
+            <div class="post-label">
               <a href="/content/views-and-panels-ajaxified/">Views and Panels Ajaxified</a>
             </div>
           </div>
@@ -501,125 +609,6 @@ Since last post I&#39;ve added a new method that allow file upload with Services
 </ol></p>
 
 <p>Writing those concepts down made it easier to determine what should be in the core of Group and what should be a contrib module. The UI was separated to another module as-well, leaving us with a Group API module, that has as little assumptions as possible about how it will be used.</p>
-
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="bottom-dash"></div>
-          </div>
-        </div>
-      </div>
-      <!--Post End-->
-      
-
-      
-        
-      
-
-      
-        
-          
-            
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-
-      <!--Post begin-->
-      <div class="row">
-        <div class="col-md-8 col-md-offset-2 post">
-
-          <div class="row">
-            <div class="post-label">
-              <a href="/content/drutnet-drupal-net-api/">DrutNet -  Drupal .NET API </a>
-            </div>
-          </div>
-
-          <div class="row small-row">
-            <div class="date">29 Apr 2010</div>
-            <div class="seprator">|</div>
-            <div class="author">By <a href="#author">Amitai Burstein</a></div>
-          </div>
-
-          <div class="row small-row">
-            <div class="tags">
-              
-              <ul class="inline">
-                
-                
-
-  
-    
-      <li><a href="/tags.html#Drupal-planet-ref">Drupal-planet</a></li>
-    
-      <li><a href="/tags.html#.NET-ref">.NET</a></li>
-    
-      <li><a href="/tags.html#DrutNet-ref">DrutNet</a></li>
-    
-  
-
-
-              </ul>
-              
-            </div>
-            <div class="comments-count"><a href="http://www.gizra.com/blog/page11/index.html#disqus_thread"></a></div>
-          </div>
-
-          <div class="row">
-            <div class="post-content">
-              <p>DrutNet is a .NET API to create client applications that connects to a Drupal site, and allow file upload, node save/load, view get and more.</p>
-
-<p><strong>Introduction</strong>
-I&#39;ve created this simple API to connect Drupal with .NET applications easily and quickly, this API was based on an API that I wrote for one of our projects, for this project we had to create a few client application to upload files, connect to desktop application and update the content. I used two different interfaces to cover all my needs, cURL - to upload files; and Services module - to create/ update nodes.</p>
-
-<p><strong>Features Snapshot</strong>
-DrutNet API has a <code>Services</code> class:
-<ul>
-<li>Services.Login - Login to Drupal</li>
-<li>Services.NodeGet - Load a node</li>
-<li>Services.UserGet - Load a user</li>
-<li>Services.NodeSave - Save a node</li>
-</ul></p>
 
             </div>
           </div>

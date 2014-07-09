@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>No more CSS in your Drupal Theme!</title>
+        <title>Headless Drupal, One form at a time</title>
         <meta name="viewport" content="width=device-width">
 
         <link rel="stylesheet" href="/css/main.c107.css"/>
@@ -116,12 +116,12 @@
         <div class="col-md-8 col-md-offset-2 post">
           <div class="row">
             <div class="post-label">
-              <a href="/content/custom-css-as-contrib-with-jekyll">No more CSS in your Drupal Theme!</a>
+              <a href="/content/restful-angular-forms">Headless Drupal, One form at a time</a>
             </div>
           </div>
 
           <div class="row small-row">
-            <div class="date">01 Jul 2014</div>
+            <div class="date">09 Jul 2014</div>
             <div class="seprator">|</div>
             <div class="author">By Amitai Burstein</div>
           </div>
@@ -136,9 +136,9 @@
 
   
     
-      <li><a href="/tags.html#CSS-ref">CSS</a></li>
+      <li><a href="/tags.html#Headless Drupal-ref">Headless Drupal</a></li>
     
-      <li><a href="/tags.html#Jekyll-ref">Jekyll</a></li>
+      <li><a href="/tags.html#RESTful-ref">RESTful</a></li>
     
       <li><a href="/tags.html#The Gizra Way-ref">The Gizra Way</a></li>
     
@@ -151,44 +151,48 @@
               
             </div>
 
-            <div class="comments-count"><a href="http://www.gizra.com/content/custom-css-as-contrib-with-jekyll#disqus_thread"></a></div>
+            <div class="comments-count"><a href="http://www.gizra.com/content/restful-angular-forms#disqus_thread"></a></div>
           </div>
 
           <div class="row">
             <div class="post-content">
-              <h2>Treat your custom CSS as contrib</h2>
-
-<p>Getting your Drupal to be pixel perfect is hard. In fact, it&#39;s probably four times faster to write the logic
-of a page, in comparison to the time it takes to get it&#39;s markup right. Not to talk about making it responsive.</p>
-
-<p>If you&#39;ve seen my presentation about <a href="http://goo.gl/hJhZb8">The Gizra Way</a> you noticed we take pixel perfect very seriously.</p>
-
-<p>One of the tools that helps us getting the markup fast, correct and in a way that would allow us to communicate with the client is Jekyll - the static site generator. Here&#39;s the idea in a nutshell:</p>
-
-<ul>
-<li>Using Jekyll we can concentrate on a clean markup</li>
-<li>Using Grunt we compile the SASS, and are able to push the the HTML into Github pages - where the client can easily see and interact with the final markup</li>
-<li>The CSS produced by Jekyll is treated by our Drupal application as contrib. This means we have zero custom CSS in our theme. Seriously, <strong>absolutely no custom CSS in your Drupal theme!</strong></li>
-<li>Any change to the CSS can be done only in a <em>single</em> place, which is Jekyll</li>
+              <ul>
+<li>Form API is great, but Form API is hard when you try to do fancier stuff - like wizards and other things that clients often want.</li>
+<li>Angular forms are great, but Angular forms are hard too - you need to write your own custom endpoints and server side validation.</li>
 </ul>
+
+<p>But now that <a href="https://github.com/Gizra/restful">RESTful</a> integrates with Entity Validator, I would change the equation and simply say something rarely heard in the Drupal community: Forms are Fun!</p>
+
+<div class="thumbnail">
+  <img src="http://www.gizra.com/assets/images/posts/restful-angular-forms/angular-form.gif" />
+  <div class="caption">This form is not Form API, it's angular!</div>
+</div>
+
+<p>Go ahead, <a href="https://github.com/Gizra/restful/blob/7.x-1.x/modules/restful_angular_example/README.md#test-on-simplytestme-recommended">try it</a> yourself on simplyTest.me</p>
 
 <!-- more -->
 
-<h2>Implementation details</h2>
+<p>The <a href="https://github.com/Gizra/restful/tree/7.x-1.x/modules/restful_angular_example">example</a> module shows how all the HTML, CSS, and JS are bundled together in an Angular App, and Drupal simply ng-includes it.</p>
 
-<p>We use a great <a href="https://github.com/robwierzbowski/generator-jekyllrb">yo generator</a> to build a Jekyll directory in our installation profile (obviously each project in Gizra is built as an installation profile).
-Here&#39;s an example of our <a href="https://gist.github.com/amitaibu/fed622186b4e5c4a9036#file-gruntfile-js">Gruntfile.js</a>. Note that if you are gonig to use Bootstrap, it still does&#39;t come out of the box, so you&#39;ll need to do some <a href="https://github.com/robwierzbowski/generator-jekyllrb/issues/85#issuecomment-45706173">manual</a> work to set it up.</p>
+<p>The tricky part is the server side validation, which is now handled by Entity Validator module. And of course the endpoint itself is handled by RESTful which does a lot of the heavy lifting by taking care of authentication, permissions, CSRF tokens, exposing the RESTful resource etc.</p>
 
-<p>Our team can now work on the markup. Once the markup changes we can <code>grunt deploy</code> -- and the markup will be pushed to Github pages, to facilitate  all the stake holders to validate the design and responsiveness of the site.</p>
+<p>Developers would appreciate the very little code needed to declare the <a href="https://github.com/Gizra/entity_validator/blob/7.x-1.x/modules/entity_validator_example/plugins/validator/node/article/EntityValidatorExampleArticleValidator.class.php">validation</a> and the RESTful <a href="https://github.com/Gizra/restful/blob/7.x-1.x/modules/restful_example/plugins/restful/node/articles/1.5/RestfulExampleArticlesResource__1_5.class.php">resource</a>.</p>
 
-<p>Next, when the team will work on the Drupal site, instead of coping the CSS into the Drupal theme itself, we copy
-it into <code>libraries/custom</code> (where &quot;custom&quot; could be your site&#39;s name). This means your CSS is edited only in a single place, which is the Jekyll app. Since this is a repetitive task we have automated it with a simple <a href="https://gist.github.com/amitaibu/fed622186b4e5c4a9036#file-buildcss-sh">bash</a> script.</p>
+<p>As a benefit, since RESTful spits out structured error messages, displaying error messages inline is really simple.</p>
 
-<p>Last step - given our custom theme is under <code>profiles/[profile-name]/themes/custom/subtheme</code> - is to load the &quot;contrib&quot; CSS via the theme&#39;s info file:</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">stylesheets[all][] = &#39;../../../libraries/custom/css/main.css&#39;
-</code></pre></div>
-<p>Finally, the developers can now enjoy working on a pixel perfect template where they only need to yank out the static parts and replace it with the
-dynamic content, so visually the site never looks broken, and logic is added to it incrementally.</p>
+<div class="thumbnail">
+  <img src="http://www.gizra.com/assets/images/posts/restful-angular-forms/image1.jpg" />
+  <div class="caption">Detailed errors are part of the JSON response</div>
+</div>
+
+<div class="thumbnail">
+  <img src="http://www.gizra.com/assets/images/posts/restful-angular-forms/image2.jpg" />
+  <div class="caption">Inline errors, provide a better UX</div>
+</div>
+
+<p>In Gizra we already have projects where we don&#39;t use any node form to create or edit content. Everything is implemented in a slick Angular based UI - one that users <em>enjoy</em> using.</p>
+
+<p>Headless Drupal isn&#39;t in the future. It&#39;s here, and you can start using it with test-covered and OOP modules like RESTful and <a href="https://github.com/Gizra/zariz">Zariz</a>.</p>
 
             </div>
           </div>
@@ -201,25 +205,16 @@ dynamic content, so visually the site never looks broken, and logic is added to 
             <div class="first">
               
               <div class="previous">
-                <a href="/content/custom-breakpoint-bootstrap-sass">
+                <a href="/content/custom-css-as-contrib-with-jekyll">
                   Previous
                 </a>
               </div>
-              <a href="/content/custom-breakpoint-bootstrap-sass" class="prev-text">
-                Creating a Custom Breakpoint in Bootstrap-Sass
+              <a href="/content/custom-css-as-contrib-with-jekyll" class="prev-text">
+                No more CSS in your Drupal Theme!
               </a>
               
             </div>
             <div class="last">
-              
-              <div class="next">
-                <a href="/content/restful-angular-forms">
-                  Next
-                </a>
-              </div>
-              <a href="/content/restful-angular-forms" class="next-text">
-                Headless Drupal, One form at a time
-              </a>
               
             </div>
           </div>
