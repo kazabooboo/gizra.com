@@ -4,7 +4,6 @@ tags:
   - Grunt
   - Jekyll
   - d3js
-  - "Drupal-planet"
 permalink: "/content/backend-free-apps-grunt-jekyll-d3js"
 layout: post
 author: ceoaliongroo
