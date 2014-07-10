@@ -177,10 +177,10 @@
 <p>Here are some notable Grunt plugins we have used:</p>
 
 <ul>
-<li><a href="https://github.com/yoniholmes/grunt-text-replace">grunt-text-replace</a>: Sanitizing text, removing tags, and many text manipulation can be achieved using this great plugin.</li>
+<li><a href="https://github.com/yoniholmes/grunt-text-replace">grunt-text-replace</a>: Sanitizing text, removing tags, and many text manipulation can be achieved using this great plugin</li>
 <li><a href="https://github.com/mathiasbynens/he">he</a>: This one you would use to deal with HTML encoding and decoding. Useful for non-english websites (CDL has a version in <a href="http://gizra.github.io/CDL-ES/">Spanish</a>) </li>
 <li><a href="https://github.com/jashkenas/underscore">underscore</a>: Manipulating complex JSON objects and array made easy. </li>
-<li><a href="https://github.com/assemble/grunt-convert">grunt-convert</a>: Converting to/ from JSON, YAML and XML is very handy when consuming data from 3rd party source.</li>
+<li><a href="https://github.com/assemble/grunt-convert">grunt-convert</a>: Converting to/ from JSON, YAML and XML is very handy when consuming data from 3rd party source</li>
 </ul>
 
 <p>You can see the configuration in the <a href="https://github.com/Gizra/CDL/blob/master/Gruntfile.js">Gruntfile.js</a></p>
@@ -195,9 +195,9 @@ Jekyll was used to create the actual HTML. Nothing too fancy here, but it served
 <p><a href="http://d3js.org/">D3.js</a> is an excellent library with great documentation and examples. However to improve mobile performance, we had to look beyond the common examples and API recommendations. Some tips:</p>
 
 <ul>
-<li>Emulators are nice, but the in the end the HTML, CSS and JS should be tested on actual devices. Luckily for us the devices in the exhibition were known, so it was easier to target them. We used <a href="https://developer.chrome.com/devtools/docs/remote-debugging">Chrome</a> and <a href="https://developer.apple.com/safari/tools/">Safari</a> remote developer tools to get internal insight of the application</li>
+<li>Emulators are nice, but in the end the HTML, CSS and JS should be tested on actual devices. Luckily for us the devices in the exhibition were known, so it was easier to target them. We used <a href="https://developer.chrome.com/devtools/docs/remote-debugging">Chrome</a> and <a href="https://developer.apple.com/safari/tools/">Safari</a> remote developer tools to get internal insight of the application</li>
 <li>Removing the <a href="http://updates.html5rocks.com/2013/12/300ms-tap-delay-gone-away">300ms</a> delay of double-tap zoom was a good start but of course not enough. In fact, the most difficult issues were in relation to events handling and animations. Try to apply throttle or <a href="http://drupalmotion.com/article/debounce-and-throttle-visual-explanation">debounce</a> when handling Zoom or Drag, so they animations don&#39;t choke the app and overload the <a href="https://github.com/mbostock/d3/wiki/Behaviors">d3js behaviors</a>.</li>
-<li>I also highly recommend a fabulous talk of <a href="http://www.youtube.com/watch?v=90NsjKvz9Ns&amp;list=PL37ZVnwpeshFXOP2lqCUykYPXYNsK_fgN&amp;feature=share">Mark DiMarco</a> from JSConf 2014, who present a creative alternatives to handle the user interaction and animation in d3js, this helped us do further optimizations and make project like this one a success</li>
+<li>I also highly recommend the fabulous talk of <a href="http://www.youtube.com/watch?v=90NsjKvz9Ns&amp;list=PL37ZVnwpeshFXOP2lqCUykYPXYNsK_fgN&amp;feature=share">Mark DiMarco</a> from JSConf 2014, who presented alternatives to handling the user interaction and animation in d3js. This helped us do further optimizations and make pthis project a success</li>
 </ul>
 
             </div>
