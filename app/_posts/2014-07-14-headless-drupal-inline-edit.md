@@ -13,7 +13,7 @@ layout: post
 In our [last example]({{BASE_PATH}}/content/restful-angular-forms/) we showed how to create node using an angular form served from Drupal itself. This time we are taking one big step further and create the node from a completely decoupled [web app](https://github.com/Gizra/angular-drupal-forms-example).  
 And if that's not enough for the readers excited by the idea of a decoupled Drupal, we've also added inline editing to the example!
 
-Enjoy the [online demo](http://gizra.github.io/angular-drupal-forms-example/#/)
+Enjoy the [live demo](http://gizra.github.io/angular-drupal-forms-example/#/)
 
 <div class="thumbnail">
   <img src="{{BASE_PATH}}/assets/images/posts/headless-drupal-inline-edit/image1.gif" />
