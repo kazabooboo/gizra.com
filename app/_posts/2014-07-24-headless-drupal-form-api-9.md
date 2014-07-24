@@ -1,5 +1,5 @@
 ---
-title: "Headless Drupal - Form API in Drupal 9"
+title: "Headless Drupal - Form API, Drupal 9"
 tags: 
   - Headless Drupal
   - The Gizra Way
@@ -67,4 +67,4 @@ The Select2 library provides us with a nice UI, which allows selecting existing 
 
 An interesting part of the example is that the creation of the multiple entities (i.e. the node and the taxonomy terms) is done in a *single* HTTP request. The sub resources (in our example the taxonomy terms), are POSTed or PATCHed / PUT as needed.
 
-As always, you can play with the [live demo].
+As always, you can play with the [live demo](http://test-gizra-headless-drupal-inline-edit.gotpantheon.com/restful-example/form).
