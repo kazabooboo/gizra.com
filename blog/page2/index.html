@@ -102,6 +102,115 @@
       
         
           
+        
+      
+        
+          
+            
+          
+        
+      
+
+      <!--Post begin-->
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2 post">
+
+          <div class="row">
+            <div class="post-label">
+              <a href="/content/custom-breakpoint-bootstrap-sass">Creating a Custom Breakpoint in Bootstrap-Sass</a>
+            </div>
+          </div>
+
+          <div class="row small-row">
+            <div class="date">25 Jun 2014</div>
+            <div class="seprator">|</div>
+            <div class="author">By <a href="#author">Nader Safadi</a></div>
+          </div>
+
+          <div class="row small-row">
+            <div class="tags">
+              
+              <ul class="inline">
+                
+                
+
+  
+    
+      <li><a href="/tags.html#Bootstrap-ref">Bootstrap</a></li>
+    
+      <li><a href="/tags.html#CSS-ref">CSS</a></li>
+    
+      <li><a href="/tags.html#Drupal-planet-ref">Drupal-planet</a></li>
+    
+  
+
+
+              </ul>
+              
+            </div>
+            <div class="comments-count"><a href="http://www.gizra.com/blog/page2/index.html#disqus_thread"></a></div>
+          </div>
+
+          <div class="row">
+            <div class="post-content">
+              <p>Bootstrap is our go to base theme, but what happens when the grid the client asks for has different width, or more break points?
+Using Bootstrap-Sass creating a custom grid is possible in a manner that can be copied and adjusted from one project to another. As example for this post, and for your future reference you may follow the <a href="http://gizra.github.io/custom-breakpoint-example/">live demo</a> and <a href="https://github.com/Gizra/custom-breakpoint-example">repository</a> that changes Bootstrap to work with five breakpoints (tip: use <a href="http://lab.maltewassermann.com/viewport-resizer/">Resizer</a> for easy viewport resize).<br>
+Note that example is using Jekyll for simplicity, however the same technique can be used on Drupal.</p>
+
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="bottom-dash"></div>
+          </div>
+        </div>
+      </div>
+      <!--Post End-->
+      
+
+      
+        
+      
+
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
             
           
         
@@ -512,142 +621,6 @@ If you share the same feeling reading the above lines, this blog post if for you
 <strong>My name is Orit and I am not a Drupal geek!</strong></p>
 
 <p>I have never developed any module in my life, didn&#39;t contribute anything to OG nor have I never requested Brice or Amitai to give me a scrutinizing code review. So here are some tips:</p>
-
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="bottom-dash"></div>
-          </div>
-        </div>
-      </div>
-      <!--Post End-->
-      
-
-      
-        
-      
-
-      
-        
-          
-            
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-
-      <!--Post begin-->
-      <div class="row">
-        <div class="col-md-8 col-md-offset-2 post">
-
-          <div class="row">
-            <div class="post-label">
-              <a href="/content/restful-server">RESTful module</a>
-            </div>
-          </div>
-
-          <div class="row small-row">
-            <div class="date">06 May 2014</div>
-            <div class="seprator">|</div>
-            <div class="author">By <a href="#author">Amitai Burstein</a></div>
-          </div>
-
-          <div class="row small-row">
-            <div class="tags">
-              
-              <ul class="inline">
-                
-                
-
-  
-    
-      <li><a href="/tags.html#RESTful-ref">RESTful</a></li>
-    
-      <li><a href="/tags.html#AngularJs-ref">AngularJs</a></li>
-    
-      <li><a href="/tags.html#Drupal-planet-ref">Drupal-planet</a></li>
-    
-  
-
-
-              </ul>
-              
-            </div>
-            <div class="comments-count"><a href="http://www.gizra.com/blog/page2/index.html#disqus_thread"></a></div>
-          </div>
-
-          <div class="row">
-            <div class="post-content">
-              <p><a href="https://github.com/Gizra/restful#restful-best-practices-for-drupal">RESTful module</a> is a new approach to providing a REST server in Drupal. Its concepts and philosophy appears in the module&#39;s README so I won&#39;t repeat it, but I&#39;d like to go over some of the key points.</p>
-<div class="highlight"><pre><code class="php language-php" data-lang="php"><span class="cp">&lt;?php</span>
-<span class="c1">// Handler v1.0</span>
-<span class="nv">$handler</span> <span class="o">=</span> <span class="nx">restful_get_restful_handler</span><span class="p">(</span><span class="s1">&#39;articles&#39;</span><span class="p">);</span>
-<span class="c1">// GET method.</span>
-<span class="nv">$result</span> <span class="o">=</span> <span class="nv">$handler</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
-
-<span class="c1">// Output:</span>
-<span class="k">array</span><span class="p">(</span>
-  <span class="s1">&#39;id&#39;</span> <span class="o">=&gt;</span> <span class="mi">1</span><span class="p">,</span>
-  <span class="s1">&#39;label&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;example title&#39;</span><span class="p">,</span>
-  <span class="s1">&#39;self&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;https://example.com/node/1&#39;</span><span class="p">,</span>
-<span class="p">);</span>
-
-<span class="c1">// Handler v1.1 extends v1.0, and removes the &quot;self&quot; property from the</span>
-<span class="c1">// exposed properties.</span>
-<span class="nv">$handler</span> <span class="o">=</span> <span class="nx">restful_get_restful_handler</span><span class="p">(</span><span class="s1">&#39;articles&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
-<span class="nv">$result</span> <span class="o">=</span> <span class="nv">$handler</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
-
-<span class="c1">// Output:</span>
-<span class="k">array</span><span class="p">(</span>
-  <span class="s1">&#39;id&#39;</span> <span class="o">=&gt;</span> <span class="mi">1</span><span class="p">,</span>
-  <span class="s1">&#39;label&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;example title&#39;</span><span class="p">,</span>
-<span class="p">);</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
-<p>In the past year almost every site we have is either completely decoupled from the server side where AngularJs serves the webapp, or AngularJS plays a smaller part, and we just embed web components inside a Drupal page to provide a slick UI.</p>
-
-<p>Up until now our go to module was RestWs by the wonderful Klausi, which wraps around Entity API module&#39;s metadata wrapper. Basically, it hands over to the metadata wrapper the responsibility for the access and for the actual value it spits out.
-It works fine, however the JSON it exposes has too much information.</p>
 
             </div>
           </div>
