@@ -51,7 +51,7 @@ That's without neglecting the future, of course - we plan to upgrade RESTful to 
 
 ## Less Theory, More Code
 
-Ok, so back to the fun geeky stuff, as the headless series continues ({{BASE_PATH}}/content/headless-drupal-inline-edit/).
+Ok, so back to the fun geeky stuff, as the headless series [continues]({{BASE_PATH}}/content/headless-drupal-inline-edit/).
 
 This time we'll see how RESTful deals with a common scenario - a node referencing taxonomy terms.
 
