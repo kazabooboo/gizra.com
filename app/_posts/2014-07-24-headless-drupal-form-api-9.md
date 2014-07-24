@@ -53,9 +53,7 @@ That's without neglecting the future, of course - we plan to upgrade RESTful to 
 
 Ok, so back to the fun geeky stuff, as the headless series [continues]({{BASE_PATH}}/content/headless-drupal-inline-edit/).
 
-This time we'll see how RESTful deals with a common scenario - a node referencing taxonomy terms.
-
-The Select2 library provides us with a nice UI, which allows selecting existing terms as well as creating new ones: 
+This time we'll see how RESTful deals with a common scenario - a node referencing taxonomy terms. The Select2 library provides us with a nice UI, which allows selecting existing terms as well as creating new ones: 
 
 <div class="thumbnail">
   <img src="{{BASE_PATH}}/assets/images/posts/headless-drupal-form-api-9/image1.gif" />
