@@ -45,7 +45,7 @@ Set version via HTTP headers: ``curl https://example.com/api/articles/1 -H "X-AP
 
 In fact, you can omit the version altogether, use ``https://example.com/api/articles``  and the latest resource would be used. RESTful is kind enough to return the version used in the response header, so you will still know exactly which resource responded.
 
-Next on our agenda is making RESTful truly [HAL](https://www.drupal.org/documentation/modules/hal). There's an interesting conversation in RESTful about whether HAL the right choice. I'd like to highlight two points I find important in the conversation:
+Next on our agenda is making RESTful truly [HAL](http://stateless.co/hal_specification.html). There's an interesting conversation in RESTful about whether HAL the right choice. I'd like to highlight two points I find important in the conversation:
 
 1. Since RESTful is challenging quite a few "this is how its always been done", it was no surprise we were asking if HAL is the right choice
 1. A great answer to why HAL _is_ the right choice was given by Michal Minecki (@mirzu). I'd like to quote the part that has sealed the deal for me:
