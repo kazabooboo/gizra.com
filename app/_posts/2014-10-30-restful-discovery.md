@@ -30,7 +30,7 @@ So all the effort we put into our internal API, trying our best to make it reada
 
 <img src="/assets/images/posts/restful-discovery/image2.jpg" />
 
-Clicking on one of the resources will lead you to the resource itself. To get some insight into the resource you can call it with the ``OPTIONS`` HTTP method and get all the allowed endpoints along with the schema of the properties.
+Clicking on one of the resources will lead you to the resource itself. To get some insight into the resource you can call it with the ``OPTIONS`` HTTP method and get all the allowed HTTP operations along with the schema of the properties.
 
 It's now possible to start imagining an Angular client that will be able to "crawl" your API and create CRUD pages for you.
 
