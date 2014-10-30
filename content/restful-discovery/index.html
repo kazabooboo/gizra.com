@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Gizra - We've Got Your Headless Covered</title>
+        <title>RESTful Discovery - Who knows about your API?</title>
         <meta name="viewport" content="width=device-width">
 
         <link rel="stylesheet" href="/css/main.c107.css"/>
@@ -116,12 +116,12 @@
         <div class="col-md-8 col-md-offset-2 post">
           <div class="row">
             <div class="post-label">
-              <a href="/content/gizra-we-have-got-your-headless-covered">Gizra - We've Got Your Headless Covered</a>
+              <a href="/content/restful-discovery">RESTful Discovery - Who knows about your API?</a>
             </div>
           </div>
 
           <div class="row small-row">
-            <div class="date">19 Oct 2014</div>
+            <div class="date">30 Oct 2014</div>
             <div class="seprator">|</div>
             <div class="author">By Amitai Burstein</div>
           </div>
@@ -138,8 +138,6 @@
     
       <li><a href="/tags.html#Headless Drupal-ref">Headless Drupal</a></li>
     
-      <li><a href="/tags.html#AngularJs-ref">AngularJs</a></li>
-    
       <li><a href="/tags.html#RESTful-ref">RESTful</a></li>
     
       <li><a href="/tags.html#Drupal-planet-ref">Drupal-planet</a></li>
@@ -151,35 +149,57 @@
               
             </div>
 
-            <div class="comments-count"><a href="http://www.gizra.com/content/gizra-we-have-got-your-headless-covered#disqus_thread"></a></div>
+            <div class="comments-count"><a href="http://www.gizra.com/content/restful-discovery#disqus_thread"></a></div>
           </div>
 
           <div class="row">
             <div class="post-content">
-              <h2>What&#39;s the name of the Angular component for login?</h2>
+              <p>As extremely pedantic developers we take documenting our APIs very seriously. It&#39;s not rare to see a good patch rejected in code review just because the PHPdocs weren&#39;t clear enough, or a <code>@param</code> wasn&#39;t declared properly.</p>
 
-<p>The difficulties in creating a semi or fully decoupled site isn&#39;t in the RESTful part. Spitting out JSON is now covered by several modules, including <a href="https://github.com/Gizra/restful">RESTful</a> which aims for a &quot;best practices&quot; solution.</p>
+<p>In fact, I often explain to junior devs that the most important part of a function is its signature, and the PHPdocs. The body of the function is just &quot;implementation details&quot;. How it communicates its meaning to the person reading it is the vital part.</p>
 
-<p>One of the real problems, though, is how to prevent us, the community, from re-inventing the wheel over and over again. Basically, how do we package our frontend code similarly to how we package our generic backend code - AKA &quot;modules&quot;. I discussed these problems, and offered some solutions in my &quot;BoF&quot; persentation:</p>
-
-<iframe width="560" height="315" src="//www.youtube.com/embed/wh6ZQOEzOgs?rel=0" frameborder="0" allowfullscreen></iframe>
+<p>But where does this whole pedantic mindset got when we open up our web-services?<br>
+I would argue that at least 95% of the developers who expose their web-service simply enable RESTws without any modifications. And here&#39;s what a developer implementing your web-service will see when visiting <code>/node.json</code>:</p>
 
 <!-- more -->
 
-<h2>What&#39;s next, and why you should care</h2>
+<p><img src="/assets/images/posts/restful-discovery/image1.jpg" /></p>
 
-<p>RESTful is constanly being improved, with solving <em>real use cases</em> always on our mind. <a href="https://github.com/mateu-aguilo-bosch">Mateu Aguiló Bosch</a> has recently worked and polished the &quot;data provider&quot; functionality.<br>
-RESTful now allows you to easily expose different data providers, be it your entities using EFQ, your variables table using a simple DB query, or your Solr instance using a Search API data provider. Exposing your <em>access controlled</em> Solr search to your web app, has just become significantly easier - stay tuned for new updates in this space.</p>
+<p>Even if the reader knows that nodes are in <code>node.json</code> (and what &quot;node&quot; means in Drupal-world in general) they are ultimately presented with some resource they have very little knowledge about, nor necessarily know where to learn more.</p>
 
-<p>Also, wouldn&#39;t it be cool if your fully decoupled Angular app also supported Angular-based content administration? It&#39;s called <a href="http://ng-admin.marmelab.com/#/dashboard">ng-admin</a> and it&#39;s doing some serious heavy lifting so we don&#39;t have to.</p>
+<p>So all the effort we put into our internal API, trying our best to make it readable to outside developers, is completely missing from the public REST API.</p>
 
-<p>You know what would be even better? If one wouldn&#39;t even need to configure ng-admin at all, and it would use the <code>OPTIONS</code> method to discover allowed methods and get info about fields (e.g. required, type, allowed value, etc&#39;). Jump into the issue queue, of RESTful or ng-admin, and help make this a reality - in a standarized way that everybody can enjoy!</p>
+<p><a href="https://github.com/Gizra/restful">RESTful</a> has recently taken some important steps towards improving. When you visit <code>/api</code> all the resources accessible to you would be listed:</p>
 
-<p>Even if you don&#39;t care about RESTful for some reason (hard to imagine), it&#39;s worth looking at - not many modules follow such a strict TDD (Test Driven Development).</p>
+<p><img src="/assets/images/posts/restful-discovery/image2.jpg" /></p>
 
-<blockquote class="twitter-tweet" data-partner="tweetdeck"><p>TDD in Drupal7 may be slow, but it is possible. We are doing it in the <a href="https://twitter.com/hashtag/RESTful?src=hash">#RESTful</a> module. <a href="http://t.co/g5ZEgBv97n">http://t.co/g5ZEgBv97n</a> <a href="http://t.co/vqznWF8NGw">pic.twitter.com/vqznWF8NGw</a></p>&mdash; Mateu Aguiló (@e0ipso) <a href="https://twitter.com/e0ipso/status/522744279387893762">October 16, 2014</a></blockquote>
+<p>Clicking on one of the resources will lead you to the resource itself. To get some insight into the resource you can call it with the <code>OPTIONS</code> HTTP method and get all the allowed endpoints along with the schema of the properties.</p>
 
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>It&#39;s now possible to start imagining an Angular client that will be able to &quot;crawl&quot; your API and create CRUD pages for you.</p>
+
+<p><img src="/assets/images/posts/restful-discovery/image3.jpg" /></p>
+
+<p>The neat part about this discovery functionality is that it&#39;s actually a regular RESTful resource in itself! By creating a CTools plugins data provider, we are now able to list all our plugins (and as a bonus get to do some stuff like query all the RESTful plugins with minor version above 5).</p>
+
+<p>Another change in RESTful is that you have multiple options to call a <em>versioned</em> resource.</p>
+
+<p>Set version via URL: <code>https://example.com/api/v1.1/articles</code><br>
+Set version via HTTP headers: <code>curl https://example.com/api/articles/1 -H &quot;X-API-Version: v1.1&quot;</code>  </p>
+
+<p>In fact, you can omit the version altogether, use <code>https://example.com/api/articles</code>  and the latest resource would be used. RESTful is kind enough to return the version used in the response header, so you will still know exactly which resource responded.</p>
+
+<p>Next on our agenda is making RESTful truly <a href="https://www.drupal.org/documentation/modules/hal">HAL</a>. There&#39;s an interesting conversation in RESTful about whether HAL the right choice. I&#39;d like to highlight two points I find important in the conversation:</p>
+
+<ol>
+<li>Since RESTful is challenging quite a few &quot;this is how its always been done&quot;, it was no surprise we were asking if HAL is the right choice</li>
+<li>A great answer to why HAL <em>is</em> the right choice was given by Michal Minecki (@mirzu). I&#39;d like to quote the part that has sealed the deal for me:</li>
+</ol>
+
+<blockquote>
+<p>My biggest reason for pushing for HAL is that it&#39;s somewhat popular and is going to be the basis for D8, not because it&#39;s beautiful. It&#39;s not. It&#39;s just good enough, and popular. If it sucked and was popular I&#39;d say ditch it.</p>
+</blockquote>
+
+<p>As always, I&#39;d like to encourage you to give <a href="https://github.com/Gizra/restful">RESTful</a> a go, and share your findings with us, so we can all learn from each other&#39;s experience.</p>
 
             </div>
           </div>
@@ -192,25 +212,16 @@ RESTful now allows you to easily expose different data providers, be it your ent
             <div class="first">
               
               <div class="previous">
-                <a href="/content/headless-drupal-form-api-drupal9">
+                <a href="/content/gizra-we-have-got-your-headless-covered">
                   Previous
                 </a>
               </div>
-              <a href="/content/headless-drupal-form-api-drupal9" class="prev-text">
-                Headless Drupal - Form API, Drupal 9
+              <a href="/content/gizra-we-have-got-your-headless-covered" class="prev-text">
+                Gizra - We've Got Your Headless Covered
               </a>
               
             </div>
             <div class="last">
-              
-              <div class="next">
-                <a href="/content/restful-discovery">
-                  Next
-                </a>
-              </div>
-              <a href="/content/restful-discovery" class="next-text">
-                RESTful Discovery - Who knows about your API?
-              </a>
               
             </div>
           </div>
