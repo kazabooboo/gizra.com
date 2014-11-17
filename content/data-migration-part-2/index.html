@@ -190,7 +190,7 @@ Migrate extra module enables import of file field.</p>
     <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">description</span> <span class="o">=</span> <span class="nx">t</span><span class="p">(</span><span class="s1">&#39;Migrate cars from the source database&#39;</span><span class="p">);</span>
 <span class="cp">?&gt;</span><span class="x"></span>
 </code></pre></div>
-<p>Now we ll set the cars table primary key,  see <a href=”/content/data-migration-part-1”>Migrate Part 1 for more information </a>:</p>
+<p>Now we ll set the cars table primary key, see <a href="/content/data-migration-part-1">Migrate Part 1 for more information </a>:</p>
 <div class="highlight"><pre><code class="php language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">map</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">MigrateSQLMap</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">machineName</span><span class="p">,</span>
   <span class="k">array</span><span class="p">(</span><span class="s1">&#39;car_id&#39;</span>  <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
@@ -280,18 +280,18 @@ In this example I use this function to convert a string value to lower case.</p>
 <p>$node argument represent the destination node, just before it’s saved into the database.
 $row argument represent the source object returned by your query, it can be used as reference to make changes to your node.</p>
 <div class="highlight"><pre><code class="php language-php" data-lang="php"><span class="cp">&lt;?php</span>
-  <span class="k">public</span> <span class="k">function</span> <span class="nf">prepare</span><span class="p">(</span><span class="k">stdClass</span> <span class="nv">$account</span><span class="p">,</span> <span class="k">stdClass</span> <span class="nv">$row</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nv">$account</span><span class="o">-&gt;</span><span class="na">field_car_model</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;value&#39;</span><span class="p">]</span> <span class="o">=</span>  <span class="nx">strtolower</span><span class="p">(</span><span class="nv">$account</span><span class="o">-&gt;</span><span class="na">field_car_model</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;value&#39;</span><span class="p">])</span> <span class="p">;</span>
-  <span class="p">}</span>
+
+<span class="k">public</span> <span class="k">function</span> <span class="nf">prepare</span><span class="p">(</span><span class="k">stdClass</span> <span class="nv">$account</span><span class="p">,</span> <span class="k">stdClass</span> <span class="nv">$row</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nv">$account</span><span class="o">-&gt;</span><span class="na">field_car_model</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;value&#39;</span><span class="p">]</span> <span class="o">=</span>  <span class="nx">strtolower</span><span class="p">(</span><span class="nv">$account</span><span class="o">-&gt;</span><span class="na">field_car_model</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;value&#39;</span><span class="p">])</span> <span class="p">;</span>
+<span class="p">}</span>
 <span class="cp">?&gt;</span><span class="x"></span>
 </code></pre></div>
-<p>Here is an other example where I used the $row argument to modify the node.
-<code>php
-&lt;?php
-  $account-&gt;field_car_model[0][&#39;value&#39;] = strtolower($row-&gt;field_car_model) ;
-?&gt;
-</code></p>
+<p>Here is an other example where I used the $row argument to modify the node.</p>
+<div class="highlight"><pre><code class="php language-php" data-lang="php"><span class="cp">&lt;?php</span>
 
+<span class="nv">$account</span><span class="o">-&gt;</span><span class="na">field_car_model</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;value&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nx">strtolower</span><span class="p">(</span><span class="nv">$row</span><span class="o">-&gt;</span><span class="na">field_car_model</span><span class="p">)</span> <span class="p">;</span>
+<span class="cp">?&gt;</span><span class="x"></span>
+</code></pre></div>
             </div>
           </div>
 
