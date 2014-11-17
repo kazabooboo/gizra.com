@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Behat - The Right Way</title>
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="/css/main.c107.css"/>
+
+        <link href='http://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
+
+
+    </head>
+    <body>
+
+    
+
+    <header class="white">
+      <div class="container">
+        <div class="logo"><a href="/">gizra</a></div>
+        <nav id="nav" role="navigation" class="navbar navbar-default nav-fixed">
+          <div class="navbar-header">
+            <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="/products">Products</a></li>
+              <li><a href="/#about">About</a></li>
+              <li><a href="/#work">Work</a></li>
+              <li><a href="/#code">Showcase</a></li>
+              <li><a href="/blog" class="active">Blog</a></li>
+              <li><a href="/#contact">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div> <!-- End of container -->
+    </header>
+
+    
+
+
+    
+  
+
+
+
+  
+    
+      
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+
+<section id="post-page">
+  <div class="background">
+    <img src="/images/post/background.2707.png">
+  </div>
+
+  <div class="ballons"></div>
+  <div class="post-back">
+    <a href="/blog">
+      <img src="/images/post/post-back.fca6.png">
+    </a>
+  </div>
+
+  <div class="content">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-8 col-md-offset-2 post">
+          <div class="row">
+            <div class="post-label">
+              <a href="/content/behat-the-right-way">Behat - The Right Way</a>
+            </div>
+          </div>
+
+          <div class="row small-row">
+            <div class="date">17 Nov 2014</div>
+            <div class="seprator">|</div>
+            <div class="author">By Amitai Burstein</div>
+          </div>
+
+          <div class="row small-row">
+            <div class="tags">
+
+              
+              <ul class="inline">
+                
+                
+
+  
+    
+      <li><a href="/tags.html#Headless Drupal-ref">Headless Drupal</a></li>
+    
+      <li><a href="/tags.html#Behat-ref">Behat</a></li>
+    
+      <li><a href="/tags.html#Drupal-planet-ref">Drupal-planet</a></li>
+    
+  
+
+
+              </ul>
+              
+            </div>
+
+            <div class="comments-count"><a href="http://www.gizra.com/content/behat-the-right-way#disqus_thread"></a></div>
+          </div>
+
+          <div class="row">
+            <div class="post-content">
+              <p><a href="http://behat.org">Behat</a> is a wonderful tool for automatic testing. It allows you to write your user stories and scenarios in proper English, which is then parsed by Behat and transformed to a set of clicks or other operations that mimic a real user.</p>
+
+<p>If you don&#39;t have automated tests on your project, I would argue that you&#39;re doing it wrong (I explain why on <a href="https://www.getpantheon.com/blog/drupal-development-gizra-way">The Gizra Way</a> presentation). Even having a <em>single</em> test is much better than none.</p>
+
+<p>With that said, it&#39;s super easy to abuse Behat. We are developers and we think sort of like machines (not really, but you get my point). If you would like to test login to your site you could easily do</p>
+<div class="highlight"><pre><code class="cucumber language-cucumber" data-lang="cucumber"><span class="k">Given </span><span class="nf">I visit &quot;</span><span class="s">/user/login</span><span class="nf">&quot;</span>
+<span class="nf"> </span><span class="c"># fill the username and password input fields, and click submit</span><span class="nf"></span>
+<span class="nf"> </span><span class="k">When </span><span class="nf">I fill &quot;</span><span class="s">username</span><span class="nf">&quot; with &quot;</span><span class="s">foo</span><span class="nf">&quot;</span>
+<span class="nf">  </span><span class="k">And </span><span class="nf">I fill &quot;</span><span class="s">password</span><span class="nf">&quot; with &quot;</span><span class="s">bar</span><span class="nf">&quot;</span>
+<span class="nf">  </span><span class="k">And </span><span class="nf">I press &quot;</span><span class="s">Login</span><span class="nf">&quot;</span>
+<span class="nf"> </span><span class="k">Then </span><span class="nf">I should get a &quot;</span><span class="s">200</span><span class="nf">&quot; HTTP response</span>
+</code></pre></div>
+<p>Your test will return green, but it could be improved:</p>
+
+<!-- more -->
+<div class="highlight"><pre><code class="cucumber language-cucumber" data-lang="cucumber"><span class="k">Given </span><span class="nf">I login with an &quot;</span><span class="s">authenticated</span><span class="nf">&quot; user</span>
+<span class="nf"> </span><span class="k">When </span><span class="nf">I go to the homepage</span>
+<span class="nf"> </span><span class="k">Then </span><span class="nf">I should have access</span>
+</code></pre></div>
+<p>As you see we are avoiding writing <em>scripted</em> tests, and try to describe what should happen -- not the clicks that got us there.</p>
+
+<p>Meta steps are a great way to help you write your step definition (i.e. each line that is translated to code) with reusable code. So for example</p>
+<div class="highlight"><pre><code class="cucumber language-cucumber" data-lang="cucumber"><span class="k">Given </span><span class="nf">a group &quot;</span><span class="s">Public Group 1</span><span class="nf">&quot; with &quot;</span><span class="s">Public</span><span class="nf">&quot; access is created with group manager &quot;</span><span class="s">group1-admin</span><span class="nf">&quot;</span>
+</code></pre></div>
+<p>Would be defined as:</p>
+<div class="highlight"><pre><code class="php language-php" data-lang="php"><span class="cp">&lt;?php</span>
+
+<span class="sd">/**</span>
+<span class="sd"> * @Given /^a group &quot;([^&quot;]*)&quot; with &quot;([^&quot;]*)&quot; access is created with group manager &quot;([^&quot;]*)&quot;$/</span>
+<span class="sd"> */</span>
+<span class="k">public</span> <span class="k">function</span> <span class="nf">aGroupWithAccessIsCreatedWithGroupManager</span><span class="p">(</span><span class="nv">$title</span><span class="p">,</span> <span class="nv">$access</span><span class="p">,</span> <span class="nv">$username</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nv">$steps</span> <span class="o">=</span> <span class="k">array</span><span class="p">();</span>
+
+  <span class="c1">// Login with existing users.</span>
+  <span class="nv">$steps</span><span class="p">[]</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Step\When</span><span class="p">(</span><span class="s1">&#39;I am logged in as user &quot;&#39;</span><span class="o">.</span> <span class="nv">$username</span> <span class="o">.</span><span class="s1">&#39;&quot;&#39;</span><span class="p">);</span>
+  <span class="nv">$steps</span><span class="p">[]</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Step\When</span><span class="p">(</span><span class="s1">&#39;I visit &quot;node/add/group&quot;&#39;</span><span class="p">);</span>
+
+  <span class="c1">// Set the title and body fields.</span>
+  <span class="nv">$steps</span><span class="p">[]</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Step\When</span><span class="p">(</span><span class="s1">&#39;I fill in &quot;title&quot; with &quot;&#39;</span> <span class="o">.</span> <span class="nv">$title</span> <span class="o">.</span> <span class="s1">&#39;&quot;&#39;</span><span class="p">);</span>
+  <span class="nv">$steps</span><span class="p">[]</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Step\When</span><span class="p">(</span><span class="s1">&#39;I fill in &quot;edit-body-und-0-summary&quot; with &quot;Some text&quot;&#39;</span><span class="p">);</span>
+
+  <span class="c1">// ... Do any logic needed.</span>
+
+  <span class="k">return</span> <span class="nv">$steps</span><span class="p">;</span>
+
+  <span class="p">}</span>
+</code></pre></div>
+<p>Also, we avoid harcoding any URL, so instead of writing <code>When I visit node/1</code>
+we could write <code>When I visit &quot;Public Group 1&quot; of type &quot;group&quot;</code> and write some
+code to find the node by the title and redirect us there.</p>
+<div class="highlight"><pre><code class="php language-php" data-lang="php"><span class="cp">&lt;?php</span>
+
+<span class="sd">/**</span>
+<span class="sd"> * @When /^I visit &quot;([^&quot;]*)&quot; node of type &quot;([^&quot;]*)&quot;$/</span>
+<span class="sd"> */</span>
+<span class="k">public</span> <span class="k">function</span> <span class="nf">iVisitNodePageOfType</span><span class="p">(</span><span class="nv">$title</span><span class="p">,</span> <span class="nv">$type</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nv">$query</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">entityFieldQuery</span><span class="p">();</span>
+  <span class="nv">$result</span> <span class="o">=</span> <span class="nv">$query</span>
+    <span class="o">-&gt;</span><span class="na">entityCondition</span><span class="p">(</span><span class="s1">&#39;entity_type&#39;</span><span class="p">,</span> <span class="s1">&#39;node&#39;</span><span class="p">)</span>
+    <span class="o">-&gt;</span><span class="na">entityCondition</span><span class="p">(</span><span class="s1">&#39;bundle&#39;</span><span class="p">,</span> <span class="nx">strtolower</span><span class="p">(</span><span class="nv">$type</span><span class="p">))</span>
+    <span class="o">-&gt;</span><span class="na">propertyCondition</span><span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="nv">$title</span><span class="p">)</span>
+    <span class="o">-&gt;</span><span class="na">propertyCondition</span><span class="p">(</span><span class="s1">&#39;status&#39;</span><span class="p">,</span> <span class="nx">NODE_PUBLISHED</span><span class="p">)</span>
+    <span class="o">-&gt;</span><span class="na">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="o">-&gt;</span><span class="na">execute</span><span class="p">();</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="k">empty</span><span class="p">(</span><span class="nv">$result</span><span class="p">[</span><span class="s1">&#39;node&#39;</span><span class="p">]))</span> <span class="p">{</span>
+    <span class="nv">$params</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+      <span class="s1">&#39;@title&#39;</span> <span class="o">=&gt;</span> <span class="nv">$title</span><span class="p">,</span>
+      <span class="s1">&#39;@type&#39;</span> <span class="o">=&gt;</span> <span class="nv">$type</span><span class="p">,</span>
+    <span class="p">);</span>
+    <span class="k">throw</span> <span class="k">new</span> <span class="nx">Exception</span><span class="p">(</span><span class="nx">format_string</span><span class="p">(</span><span class="s2">&quot;Node @title of @type not found.&quot;</span><span class="p">,</span> <span class="nv">$params</span><span class="p">));</span>
+  <span class="p">}</span>
+
+  <span class="nv">$nid</span> <span class="o">=</span> <span class="nb">key</span><span class="p">(</span><span class="nv">$result</span><span class="p">[</span><span class="s1">&#39;node&#39;</span><span class="p">]);</span>
+  <span class="c1">// Use Drupal Context &#39;I am at&#39;.</span>
+  <span class="k">return</span> <span class="k">new</span> <span class="nx">Given</span><span class="p">(</span><span class="s2">&quot;I go to </span><span class="se">\&quot;</span><span class="s2">node/</span><span class="si">$nid</span><span class="se">\&quot;</span><span class="s2">&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Behat allows you to create a <strong>clean interface</strong> to your system, without having your internal implementation leak out. Just like RESTful is doing, but for testing instead of REST API.</p>
+
+<h2>Headless Drupal</h2>
+
+<p>As we are working on decoupled backend and frontend, we still want to have our code properly tested.</p>
+
+<p>A nice technique we&#39;ve been using is installing the backend (Drupal) and frontend (AngularJS webapp) on the same Travis instance and running Behat tests on the frontend. By having the backend present we don&#39;t need to mock any data just for the frontend, as we already have some dummy migrated data as part of every installation profile. For that we use PhantomsJS (<a href="https://github.com/Gizra/KnowledgeBase/wiki/Behat-phantomJs-install">easy install</a>).</p>
+
+<p>For the brave, see our <a href="https://github.com/Gizra/negawatt-server/blob/master/.travis.yml">.travis</a> configuration that runs both API and Javascript tests on our fully decoupled app. Note that the linked project is nowhere near ready, but it can still be valuable if you want to see how we got Travis to run our tests.</p>
+
+<h2>CasperJS Vs Behat</h2>
+
+<p>@juampy from Lullabot has recommended in his <a href="https://www.lullabot.com/blog/article/testing-front-end-casperjs">blog post</a> to use CasperJs to test JS. I believe Behat could be better simply because it&#39;s easier to read. For example take this CasperJs code:</p>
+<div class="highlight"><pre><code class="javascript language-javascript" data-lang="javascript"><span class="nx">casper</span><span class="p">.</span><span class="nx">test</span><span class="p">.</span><span class="nx">begin</span><span class="p">(</span><span class="s1">&#39;Tests homepage structure&#39;</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="kd">function</span> <span class="nx">suite</span><span class="p">(</span><span class="nx">test</span><span class="p">)</span> <span class="p">{</span>
+
+  <span class="nx">casper</span><span class="p">.</span><span class="nx">start</span><span class="p">(</span><span class="s1">&#39;http://www.msnbc.com&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// Verify that the main menu links are present.</span>
+    <span class="nx">test</span><span class="p">.</span><span class="nx">assertExists</span><span class="p">(</span><span class="s1">&#39;a.j-signin-label&#39;</span><span class="p">,</span> <span class="s1">&#39;&quot;Sign in&quot; link is found.&#39;</span><span class="p">);</span>
+    <span class="nx">test</span><span class="p">.</span><span class="nx">assertExists</span><span class="p">(</span><span class="s1">&#39;a.j-register-label&#39;</span><span class="p">,</span> <span class="s1">&#39;&quot;Sign up&quot; link is found.&#39;</span><span class="p">);</span>
+    <span class="nx">test</span><span class="p">.</span><span class="nx">assertExists</span><span class="p">(</span><span class="s1">&#39;li.main-nav__link--explore a&#39;</span><span class="p">,</span> <span class="s1">&#39;&quot;Explore&quot; link is found.&#39;</span><span class="p">);</span>
+    <span class="nx">test</span><span class="p">.</span><span class="nx">assertExists</span><span class="p">(</span><span class="s1">&#39;li.main-nav__link--watch a&#39;</span><span class="p">,</span> <span class="s1">&#39;&quot;Watch&quot; link is found.&#39;</span><span class="p">);</span>
+    <span class="nx">test</span><span class="p">.</span><span class="nx">assertExists</span><span class="p">(</span><span class="s1">&#39;li.main-nav__link--join-in a&#39;</span><span class="p">,</span> <span class="s1">&#39;&quot;Join In&quot; link is found.&#39;</span><span class="p">);</span>
+    <span class="nx">test</span><span class="p">.</span><span class="nx">assertExists</span><span class="p">(</span><span class="s1">&#39;li.main-nav__link--speak-out a&#39;</span><span class="p">,</span> <span class="s1">&#39;&quot;Speak Out&quot; link is found.&#39;</span><span class="p">);</span>
+    <span class="c1">// 10 articles should be listed.</span>
+    <span class="nx">test</span><span class="p">.</span><span class="nx">assertElementCount</span><span class="p">(</span><span class="s1">&#39;article&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;10 articles are listed.&#39;</span><span class="p">);</span>
+  <span class="p">});</span>
+
+  <span class="nx">casper</span><span class="p">.</span><span class="nx">run</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">test</span><span class="p">.</span><span class="nx">done</span><span class="p">();</span>
+  <span class="p">});</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>... and imagine how it could have been translated to Behat:</p>
+<div class="highlight"><pre><code class="cucumber language-cucumber" data-lang="cucumber"><span class="nt">@javascript</span><span class="nf"></span>
+<span class="k">Scenario:</span><span class="nf"> Validate an anonymous user can see all links, and a list of articles.</span>
+<span class="k">  Given </span><span class="nf">I am an anonymous user</span>
+<span class="nf">   </span><span class="k">When </span><span class="nf">I visit the homepage</span>
+<span class="nf">   </span><span class="k">Then </span><span class="nf">I should see the main menu links for &quot;</span><span class="s">anonymous</span><span class="nf">&quot; user are present</span>
+<span class="nf">    </span><span class="k">And </span><span class="nf">I should see a teaser with &quot;</span><span class="s">10</span><span class="nf">&quot; items of recent articles</span>
+</code></pre></div>
+<p>The underlying code in the end will be very close to the one in CasperJS - however it better defined <em>what</em> is needed, not only how it should appear, and arguably it&#39;s more readable by other developers.</p>
+
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="bottom-dash"></div>
+          </div>
+
+          <div class="row post-nav">
+            <div class="first">
+              
+              <div class="previous">
+                <a href="/content/restful-discovery">
+                  Previous
+                </a>
+              </div>
+              <a href="/content/restful-discovery" class="prev-text">
+                RESTful Discovery - Who knows about your API?
+              </a>
+              
+            </div>
+            <div class="last">
+              
+            </div>
+          </div>
+
+          <div class="row author-details">
+            <div class="image-wrapper">
+              <img src="/images/team/amitaibu.4179.jpg" class="img-responsive">
+            </div>
+            <div class="text-wrapper">
+              <span class="name">Amitai Burstein</span> <span class="twitter">(@amitaibu)</span>
+              <div class="title">CTO, Co-Owner</div>
+              <div class="bio">Maintainer of Organic groups, the Message stack, and co-maintainer of Drupal 8's Entity reference. <a href="/content/the-about-story/">The about story</a>.</div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="bottom-dash-small"></div>
+          </div>
+
+          <div class="row">
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'gizra';
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="text/javascript">
+var disqus_shortname = 'gizra';
+
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function () {
+var s = document.createElement('script'); s.async = true;
+s.type = 'text/javascript';
+s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+
+
+
+
+    <script src="/js/plugins.5250.js"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+
+    <script src="/js/scripts.87fd.js"></script>
+
+    <!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-6558346-3', 'auto');  // Replace with your property ID.
+  ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+    </body>
+</html>
