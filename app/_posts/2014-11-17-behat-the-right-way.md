@@ -4,7 +4,7 @@ tags:
   - Headless Drupal
   - Behat
   - "Drupal-planet"
-permalink: "/content/restful-discovery"
+permalink: "/content/behat-the-right-way"
 layout: post
 published: true
 ---
