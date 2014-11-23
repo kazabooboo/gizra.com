@@ -181,9 +181,12 @@
 
 <p>This means all I had to do was to write the RESTful resource. You can take a look at the <a href="https://github.com/Gizra/todo_restful/blob/master/todo/modules/custom/todo_restful/plugins/restful/node/todos/1.0/TodosResource.class.php#L8">code</a> needed to appreciate how very little effort is required to make Drupal a proper RESTful server that Simply Works.</p>
 
-<p>On the client side I did two slight modifications:
-1. Added the ability to inject the <code>ENV</code> with a configurable backend URL (to enable local/production/etc development environments) 
-2. Changed the <a href="https://github.com/Gizra/todo_restful/blob/master/client/app/scripts/services/todoStorage.js#L81">response</a> the app was expecting after create/update, from <code>todo.id = resp.data.id;</code> to <code>todo.id = resp.data.data[0].id;</code></p>
+<p>On the client side I did two slight modifications:</p>
+
+<ol>
+<li>Added the ability to inject the <code>ENV</code> with a configurable backend URL (to enable local/production/etc development environments)</li>
+<li>Changed the <a href="https://github.com/Gizra/todo_restful/blob/master/client/app/scripts/services/todoStorage.js#L81">response</a> the app was expecting after create/update, from <code>todo.id = resp.data.id;</code> to <code>todo.id = resp.data.data[0].id;</code></li>
+</ol>
 
 <p>(Note that I could have kept the demo app completely unchanged and do this on the server side by writing a custom RESTful formatter that would wrap the result as expected by the app)</p>
 
