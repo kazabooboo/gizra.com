@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Todo app with RESTful backend</title>
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="/css/main.c107.css"/>
+
+        <link href='http://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
+
+        <!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-6558346-3', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+    </head>
+    <body>
+
+    
+
+    <header class="white">
+      <div class="container">
+        <div class="logo"><a href="/">gizra</a></div>
+        <nav id="nav" role="navigation" class="navbar navbar-default nav-fixed">
+          <div class="navbar-header">
+            <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="/products">Products</a></li>
+              <li><a href="/#about">About</a></li>
+              <li><a href="/#work">Work</a></li>
+              <li><a href="/#code">Showcase</a></li>
+              <li><a href="/blog" class="active">Blog</a></li>
+              <li><a href="/#contact">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div> <!-- End of container -->
+    </header>
+
+    
+
+
+    
+  
+
+
+
+  
+    
+      
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+
+<section id="post-page">
+  <div class="background">
+    <img src="/images/post/background.71f5.png">
+  </div>
+
+  <div class="ballons"></div>
+  <div class="post-back">
+    <a href="/blog">
+      <img src="/images/post/post-back.fca6.png">
+    </a>
+  </div>
+
+  <div class="content">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-8 col-md-offset-2 post">
+          <div class="row">
+            <div class="post-label">
+              <a href="/content/todo-restful-backend">Todo app with RESTful backend</a>
+            </div>
+          </div>
+
+          <div class="row small-row">
+            <div class="date">23 Nov 2014</div>
+            <div class="seprator">|</div>
+            <div class="author">By Amitai Burstein</div>
+          </div>
+
+          <div class="row small-row">
+            <div class="tags">
+
+              
+              <ul class="inline">
+                
+                
+
+  
+    
+      <li><a href="/tags.html#Headless Drupal-ref">Headless Drupal</a></li>
+    
+      <li><a href="/tags.html#RESTful-ref">RESTful</a></li>
+    
+      <li><a href="/tags.html#Drupal-planet-ref">Drupal-planet</a></li>
+    
+  
+
+
+              </ul>
+              
+            </div>
+
+            <div class="comments-count"><a href="http://www.gizra.com/content/todo-restful-backend#disqus_thread"></a></div>
+          </div>
+
+          <div class="row">
+            <div class="post-content">
+              <p>The Drupal community can now proudly claim its own implementation of a <a href="(http://gizra.github.io/todo_restful/#/">Todo app</a> with a RESTful backend!</p>
+
+<p><img src="http://www.gizra.com/assets/images/posts/todo-restful/image1.jpg" /></p>
+
+<p><a href="http://todomvc.com/">TodoMVC</a> is a site that helps you select the right JS MVC library. But more then that, it allows you to learn by comparing those libraries, as they all implement the same thing - a simple Todo app.</p>
+
+<p>I&#39;ve decided to fork the <a href="http://todomvc.com/examples/angularjs/#/">Angular example</a>, and build it on top of <a href="https://github.com/Gizra/restful">RESTful</a>. Looking at the Angular code, I was pleasantly surprised.</p>
+
+<!-- more -->
+
+<p>As it turns out, TodoMVC&#39;s good folks have written the Angular app with both an API backend and a local storage one. If no backend is found, it silently falls back to local storage.</p>
+
+<p>This means all I had to do was to write the RESTful resource. You can take a look at the <a href="https://github.com/Gizra/todo_restful/blob/master/todo/modules/custom/todo_restful/plugins/restful/node/todos/1.0/TodosResource.class.php#L8">code</a> needed to appreciate how very little effort is required to make Drupal a proper RESTful server that Simply Works.</p>
+
+<p>On the client side I did two slight modifications:
+1. Added the ability to inject the <code>ENV</code> with a configurable backend URL (to enable local/production/etc development environments) 
+2. Changed the <a href="https://github.com/Gizra/todo_restful/blob/master/client/app/scripts/services/todoStorage.js#L81">response</a> the app was expecting after create/update, from <code>todo.id = resp.data.id;</code> to <code>todo.id = resp.data.data[0].id;</code></p>
+
+<p>(Note that I could have kept the demo app completely unchanged and do this on the server side by writing a custom RESTful formatter that would wrap the result as expected by the app)</p>
+
+<p>Keeping with &quot;The Gizra Way&quot; obsession with best practices, the entire package is published as an <a href="https://github.com/Gizra/todo_restful#todomvc-adaptation-to-drupals-restful">installation profile</a>. We even added a Behat test to verify it&#39;s installed properly :) Go ahead and try it out at http://gizra.github.io/todo_restful</p>
+
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="bottom-dash"></div>
+          </div>
+
+          <div class="row post-nav">
+            <div class="first">
+              
+              <div class="previous">
+                <a href="/content/behat-the-right-way">
+                  Previous
+                </a>
+              </div>
+              <a href="/content/behat-the-right-way" class="prev-text">
+                Behat - The Right Way
+              </a>
+              
+            </div>
+            <div class="last">
+              
+            </div>
+          </div>
+
+          <div class="row author-details">
+            <div class="image-wrapper">
+              <img src="/images/team/amitaibu.4179.jpg" class="img-responsive">
+            </div>
+            <div class="text-wrapper">
+              <span class="name">Amitai Burstein</span> <span class="twitter">(@amitaibu)</span>
+              <div class="title">CTO, Co-Owner</div>
+              <div class="bio">Maintainer of Organic groups, the Message stack, and co-maintainer of Drupal 8's Entity reference. <a href="/content/the-about-story/">The about story</a>.</div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="bottom-dash-small"></div>
+          </div>
+
+          <div class="row">
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'gizra';
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="text/javascript">
+var disqus_shortname = 'gizra';
+
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function () {
+var s = document.createElement('script'); s.async = true;
+s.type = 'text/javascript';
+s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+
+
+
+
+    <script src="/js/plugins.5250.js"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+
+    <script src="/js/scripts.87fd.js"></script>
+
+    </body>
+</html>
