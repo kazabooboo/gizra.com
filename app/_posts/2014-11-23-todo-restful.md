@@ -1,6 +1,6 @@
 ---
 title: Todo app with RESTful backend
-tags: 
+tags:
   - Headless Drupal
   - RESTful
   - "Drupal-planet"
@@ -26,8 +26,9 @@ As it turns out, TodoMVC's good folks have written the Angular app with both an 
 This means all I had to do was to write the RESTful resource. You can take a look at the [code](https://github.com/Gizra/todo_restful/blob/master/todo/modules/custom/todo_restful/plugins/restful/node/todos/1.0/TodosResource.class.php#L8) needed to appreciate how very little effort is required to make Drupal a proper RESTful server that Simply Works.
 
 On the client side I did two slight modifications:
-1. Added the ability to inject the ``ENV`` with a configurable backend URL (to enable local/production/etc development environments) 
-2. Changed the [response](https://github.com/Gizra/todo_restful/blob/master/client/app/scripts/services/todoStorage.js#L81) the app was expecting after create/update, from ``todo.id = resp.data.id;`` to ``todo.id = resp.data.data[0].id;``
+
+1. Added the ability to inject the ``ENV`` with a configurable backend URL (to enable local/production/etc development environments)
+1. Changed the [response](https://github.com/Gizra/todo_restful/blob/master/client/app/scripts/services/todoStorage.js#L81) the app was expecting after create/update, from ``todo.id = resp.data.id;`` to ``todo.id = resp.data.data[0].id;``
 
 (Note that I could have kept the demo app completely unchanged and do this on the server side by writing a custom RESTful formatter that would wrap the result as expected by the app)
 
