@@ -1,6 +1,6 @@
 ---
-title: "Behat Vs Casper (In Drupal Context)"
-tags:
+title: Behat vs. Casper (In Drupal Context)
+tags: 
   - Behat
   - PhantomJs
 permalink: "/content/behat-vs-casper-for-drupal"
@@ -15,7 +15,7 @@ In my previous blog post [Behat - The Right Way](/content/behat-the-right-way) I
 <blockquote class="twitter-tweet" data-conversation="none" data-cards="hidden" data-partner="tweetdeck"><p><a href="https://twitter.com/amitaibu">@amitaibu</a> <a href="https://twitter.com/juampy72">@juampy72</a> it boils down to this: I&#39;m a frontend dev. Writing PHP is something I avoid whenever possible.</p>&mdash; Chris Ruppel (@rupl) <a href="https://twitter.com/rupl/status/535025236702683136">November 19, 2014</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-I believe my comparison was wrong in the sense it was lacking the key point to Behat's stength for us. It's not really about "Behat Vs Casper". The proper comparison should have been "Behat Vs Casper - _With a Drupal backend_"
+I believe my comparison was wrong in the sense it was lacking the key point to Behat's stength for us. It's not really about "Behat vs. Casper". The proper comparison should have been "Behat vs. Casper - _With a Drupal backend_"
 
 And here's the key difference: With Behat you can interact with Drupal's API even when testing using PhantomJS. That is a lot of testing power!
 
