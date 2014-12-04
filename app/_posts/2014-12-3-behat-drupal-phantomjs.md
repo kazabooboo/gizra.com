@@ -1,8 +1,9 @@
 ---
 title: Behat vs. Casper (In Drupal Context)
-tags: 
+tags:
   - Behat
   - PhantomJs
+  - "Drupal-planet"
 permalink: "/content/behat-vs-casper-for-drupal"
 layout: post
 published: true
