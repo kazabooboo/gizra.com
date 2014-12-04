@@ -1,5 +1,5 @@
 ---
-title: "Behat Vs CasperJs (In Drupal Context)"
+title: "Behat Vs Casper (In Drupal Context)"
 tags:
   - Behat
   - PhantomJs
