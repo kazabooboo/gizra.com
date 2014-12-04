@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Behat Vs CasperJs (In Drupal Context)</title>
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="/css/main.c107.css"/>
+
+        <link href='http://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
+
+        <!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-6558346-3', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+    </head>
+    <body>
+
+    
+
+    <header class="white">
+      <div class="container">
+        <div class="logo"><a href="/">gizra</a></div>
+        <nav id="nav" role="navigation" class="navbar navbar-default nav-fixed">
+          <div class="navbar-header">
+            <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="/products">Products</a></li>
+              <li><a href="/#about">About</a></li>
+              <li><a href="/#work">Work</a></li>
+              <li><a href="/#code">Showcase</a></li>
+              <li><a href="/blog" class="active">Blog</a></li>
+              <li><a href="/#contact">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div> <!-- End of container -->
+    </header>
+
+    
+
+
+    
+  
+
+
+
+  
+    
+      
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+
+<section id="post-page">
+  <div class="background">
+    <img src="/images/post/background.71f5.png">
+  </div>
+
+  <div class="ballons"></div>
+  <div class="post-back">
+    <a href="/blog">
+      <img src="/images/post/post-back.fca6.png">
+    </a>
+  </div>
+
+  <div class="content">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-8 col-md-offset-2 post">
+          <div class="row">
+            <div class="post-label">
+              <a href="/content/behat-vs-casper-for-drupal">Behat Vs CasperJs (In Drupal Context)</a>
+            </div>
+          </div>
+
+          <div class="row small-row">
+            <div class="date">03 Dec 2014</div>
+            <div class="seprator">|</div>
+            <div class="author">By Amitai Burstein</div>
+          </div>
+
+          <div class="row small-row">
+            <div class="tags">
+
+              
+              <ul class="inline">
+                
+                
+
+  
+    
+      <li><a href="/tags.html#Behat-ref">Behat</a></li>
+    
+      <li><a href="/tags.html#PhantomJs-ref">PhantomJs</a></li>
+    
+  
+
+
+              </ul>
+              
+            </div>
+
+            <div class="comments-count"><a href="http://www.gizra.com/content/behat-vs-casper-for-drupal#disqus_thread"></a></div>
+          </div>
+
+          <div class="row">
+            <div class="post-content">
+              <p>In my previous blog post <a href="/content/behat-the-right-way">Behat - The Right Way</a> I made a statement that I think Behat was a better choice for writing tests even for the frontend. Some good arguments were raised in favor of CasperJS.  </p>
+
+<blockquote class="twitter-tweet" data-conversation="none" data-cards="hidden" data-partner="tweetdeck"><p><a href="https://twitter.com/amitaibu">@amitaibu</a> <a href="https://twitter.com/juampy72">@juampy72</a> it boils down to this: I&#39;m a frontend dev. Writing PHP is something I avoid whenever possible.</p>&mdash; Chris Ruppel (@rupl) <a href="https://twitter.com/rupl/status/535025236702683136">November 19, 2014</a></blockquote>
+
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>I believe my comparison was wrong in the sense it was lacking the key point to Behat&#39;s stength for us. It&#39;s not really about &quot;Behat Vs Casper&quot;. The proper comparison should have been &quot;Behat Vs Casper - <em>With a Drupal backend</em>&quot;</p>
+
+<p>And here&#39;s the key difference: With Behat you can interact with Drupal&#39;s API even when testing using PhantomJS. That is a lot of testing power!</p>
+
+<p><img src="/assets/images/posts/behat-casper/image1.gif" /></p>
+
+<!-- more -->
+
+<p>CasperJS knows your site from the browser side. It has no knowledge of the internals of your Drupal site. If you would like to access a node with the title &quot;My article&quot;, you would probably hardcode the URL in your test:</p>
+<div class="highlight"><pre><code class="javascript language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">casper</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;casper&#39;</span><span class="p">).</span><span class="nx">create</span><span class="p">();</span>
+
+<span class="nx">casper</span><span class="p">.</span><span class="nx">start</span><span class="p">(</span><span class="s1">&#39;http://example.com/content/my-article&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">echo</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">getTitle</span><span class="p">());</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>In Behat on the other hand you could write:</p>
+<div class="highlight"><pre><code class="Gherkin language-Gherkin" data-lang="Gherkin"><span class="k">When </span><span class="nf">I visit content &quot;</span><span class="s">New article</span><span class="nf">&quot;</span>
+</code></pre></div>
+<p>This would be translated to some code that will <a href="https://github.com/Gizra/behat-drupal-phantomjs/blob/master/features/bootstrap/FeatureContext.php#L11-L32">query</a> Drupal to find the node by its title, and then redirect there.</p>
+
+<p>This is obviously just a simple example. Changing variables, clearing cache, <a href="https://github.com/Gizra/behat-drupal-phantomjs/blob/master/features/bootstrap/FeatureContext.php#L70-L90">cleaning up</a> before or after each scenario are easily done using Drupal&#39;s API via Behat, while still providing you the full capabilities of PhantomJS. Features like such as taking a <a href="https://github.com/Gizra/behat-drupal-phantomjs/blob/master/features/bootstrap/FeatureContext.php#L50-L68">screenshot</a> of the page after a failed step - to see exactly what PhantomJS &quot;sees&quot;.</p>
+
+<p><img src="/assets/images/posts/behat-casper/image2.jpg" /></p>
+
+<p>Even though Behat is written in PHP we can mimic the functions CasperJS provides, such as <a href="https://github.com/Gizra/behat-drupal-phantomjs/blob/master/features/bootstrap/FeatureContext.php#L34-L39">waiting</a> for an element to appear.</p>
+
+<h2>Boilerplate code</h2>
+
+<p>I think by now you know that part of <a href="http://getpantheon.com/blog/drupal-development-gizra-way">The Gizra Way</a> practices is providing a working example that <em>you</em> can try yourself, right?</p>
+
+<p><a href="https://github.com/Gizra/behat-drupal-phantomjs">Here&#39;s</a> an example repository you can clone into <em>any existing</em> Drupal installation. Follow the README to setup the system - it shouldn&#39;t take too long and it&#39;s worth the effort.</p>
+
+<p>The single test in the repo is looking for a node with the title &quot;New article&quot;. Assuming your site doesn&#39;t have such a node, executing the test with <code>./bin/behat</code> will result with a failing test.</p>
+
+<p>Go ahead and add a new content called &quot;New article&quot;.<br>
+Congrats, your PhantomsJS test now works.</p>
+
+<p><img src="/assets/images/posts/behat-casper/image3.jpg" /></p>
+
+<p>Now add step that will fail, e.g.</p>
+<div class="highlight"><pre><code class="Gherkin language-Gherkin" data-lang="Gherkin"><span class="k">Then </span><span class="nf">I wait for text &quot;</span><span class="s">behat</span><span class="nf">&quot; to &quot;</span><span class="s">appear</span><span class="nf">&quot;</span>
+</code></pre></div>
+<p>The test will fail, and Behat will create a screenshot that you can look at, and understand why it failed. Nice, huh?</p>
+
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="bottom-dash"></div>
+          </div>
+
+          <div class="row post-nav">
+            <div class="first">
+              
+              <div class="previous">
+                <a href="/content/todo-restful-backend">
+                  Previous
+                </a>
+              </div>
+              <a href="/content/todo-restful-backend" class="prev-text">
+                Todo app with RESTful backend
+              </a>
+              
+            </div>
+            <div class="last">
+              
+            </div>
+          </div>
+
+          <div class="row author-details">
+            <div class="image-wrapper">
+              <img src="/images/team/amitaibu.4179.jpg" class="img-responsive">
+            </div>
+            <div class="text-wrapper">
+              <span class="name">Amitai Burstein</span> <span class="twitter">(@amitaibu)</span>
+              <div class="title">CTO, Co-Owner</div>
+              <div class="bio">Maintainer of Organic groups, the Message stack, and co-maintainer of Drupal 8's Entity reference. <a href="/content/the-about-story/">The about story</a>.</div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="bottom-dash-small"></div>
+          </div>
+
+          <div class="row">
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'gizra';
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="text/javascript">
+var disqus_shortname = 'gizra';
+
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function () {
+var s = document.createElement('script'); s.async = true;
+s.type = 'text/javascript';
+s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+
+
+
+
+    <script src="/js/plugins.5250.js"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+
+    <script src="/js/scripts.87fd.js"></script>
+
+    </body>
+</html>
