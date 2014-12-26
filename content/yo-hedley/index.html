@@ -167,26 +167,29 @@
 
           <div class="row">
             <div class="post-content">
-              <p>Bingo! I think we&#39;re on to something here. It&#39;s called <a href="https://github.com/Gizra/generator-hedley">yo hedley</a> - and its one command that brings a true headless Drupal to <em>everybody</em>.</p>
+              <p>Bingo! I think we&#39;re on to something here. It&#39;s called <a href="https://github.com/Gizra/generator-hedley">yo hedley</a> - and it&#39;s one command that brings a true headless Drupal to <em>everybody</em>.</p>
 
 <p><img src="/assets/images/posts/yo-hedley/image1.gif" /></p>
 
-<p>In my last DrupalCon Bof presentation &quot;<a href="content/gizra-we-have-got-your-headless-covered/">Gizra - we&#39;ve got your headless covered</a>&quot; I&#39;ve taken the time to explain why &quot;headless&quot; was in fact mostly a buzz word. While I encourage you to have a look at the presentation, I&#39;m actually more excited about telling you why I feel this is no longer the case.<br>
-Go ahead an check the <a href="http://hedley-demo.gizra.com/">live demo</a>!</p>
+<p>In my last DrupalCon BoF presentation &quot;<a href="content/gizra-we-have-got-your-headless-covered/">Gizra - we&#39;ve got your headless covered</a>&quot; I&#39;ve taken the time to explain why &quot;headless&quot; was in fact mostly a buzzword. While I encourage you to have a look at the presentation, I&#39;m actually more excited about telling you why I feel this is no longer the case. </p>
+
+<p>Go ahead an check the <a href="http://hedley-demo.gizra.com/">live demo</a>!</p>
 
 <!-- more -->
 
-<p>My argument so far was that as a community we were lacking best practices around how to build fully decoupled website. Saying Drupal can do headless based on projects profile companies have built isn&#39;t very fair for the average developer. They probably have no clue where to start.<br>
-As an example, we can safely say doing complex queries and displays is possible in Drupal, since Views can be used by anyone, and there are best practices around <em>how</em> to use Views.</p>
+<p>My argument so far was that as a community we were lacking best practices for building a fully decoupled website. Saying Drupal can do headless based on project profiles companies have built isn&#39;t very fair for the average developer. They probably have no clue where to start - that&#39;s in contrast to saying, for example, that doing complex queries and displays is possible in Drupal, since Views can be used by anyone, and there are best practices around <em>how</em> to use Views.</p>
 
-<p>Hedley is an opinionated approach to how to do decoupled webapps. It&#39;s based on several projects we have already built, and it takes the best from each one. You simply type <code>yo hedley</code> and it installs your installation profile, configs Angular JS, copies behat, composer install, bower install, npm install. Woof!<br>
-In fact all that is left to do is to <code>cd client</code> and <code>grunt serve</code> and login with demo / 1234.</p>
+<p>Hedley is an opinionated approach to building decoupled webapps. It&#39;s based on several projects we have already built, taking the best from each. You simply type <code>yo hedley</code> and it installs your installation profile, configures AngularJS, copies Behat and installs Composer, Bower and NPM. Wooh!  </p>
 
-<p>In this post I could have gone over all the different components and best practices that are bundled in hedley, such as how to write a <a href="https://github.com/Gizra/generator-hedley/blob/master/app/templates/skeleton/modules/custom/skeleton_restful/plugins/restful/node/events/1.0/SkeletonEventsResource.class.php#L8">RESTful resource</a> that references another one, how to use Angular <a href="https://github.com/Gizra/generator-hedley/blob/master/app/templates/client/app/scripts/app.js#L75-L99">UI-Router</a>, how to write <a href="https://github.com/Gizra/generator-hedley/blob/master/app/templates/skeleton/modules/custom/skeleton_migrate/handlers/node/SkeletonCompaniesMigrate.php#L8">migrate handlers</a>, or how to write <a href="https://github.com/Gizra/generator-hedley/blob/master/app/templates/behat/features/login.feature#L1">Behat</a> tests that use phantoms JS.<br>
-I could have even expanded on the idea of the generator itself, and how it allows us to encapsulate the entire knowledge we have gained so far, and <em>keep updating it</em>.</p>
+<p>In fact all that is left to do is to <code>cd client</code> and <code>grunt serve</code> and login with demo / 1234.</p>
 
-<p>However, I won&#39;t. Instead, I&#39;d like encourage all the geeks out there to give it a try, poke the code, find things you think should improve and <a href="https://github.com/Gizra/generator-hedley/#contribute">contribute</a> them back.<br>
-It&#39;s almost 2015, and we could do amazing things together!</p>
+<p>In this post I could have gone over all the different components and best practices that are bundled in Hedley, such as how to write a <a href="https://github.com/Gizra/generator-hedley/blob/master/app/templates/skeleton/modules/custom/skeleton_restful/plugins/restful/node/events/1.0/SkeletonEventsResource.class.php#L8">RESTful resource</a> that references another one, how to use AngularJS <a href="https://github.com/Gizra/generator-hedley/blob/master/app/templates/client/app/scripts/app.js#L75-L99">UI-Router</a>, how to write <a href="https://github.com/Gizra/generator-hedley/blob/master/app/templates/skeleton/modules/custom/skeleton_migrate/handlers/node/SkeletonCompaniesMigrate.php#L8">migrate handlers</a> or how to write <a href="https://github.com/Gizra/generator-hedley/blob/master/app/templates/behat/features/login.feature#L1">Behat</a> tests that use PhantomJS.  </p>
+
+<p>I could have even expanded on the idea of the generator itself, and how it allows us to encapsulate the entire knowledge we have gained so far, and <em>keep updating it</em>.</p>
+
+<p>However, I won&#39;t. Instead, I&#39;d like encourage all the geeks out there to give it a spin, poke the code, find things you think should improve and <a href="https://github.com/Gizra/generator-hedley/#contribute">contribute</a> them back. </p>
+
+<p>It&#39;s almost 2015, and we can do amazing things together!</p>
 
             </div>
           </div>
