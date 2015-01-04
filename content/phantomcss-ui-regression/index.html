@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Yo Hedley!</title>
+        <title>Hedley Generator - PhantomCSS and UI regression</title>
         <meta name="viewport" content="width=device-width">
 
         <link rel="stylesheet" href="/css/main.b74f.css"/>
@@ -129,12 +129,12 @@
         <div class="col-md-8 col-md-offset-2 post">
           <div class="row">
             <div class="post-label">
-              <a href="/content/yo-hedley">Yo Hedley!</a>
+              <a href="/content/phantomcss-ui-regression">Hedley Generator - PhantomCSS and UI regression</a>
             </div>
           </div>
 
           <div class="row small-row">
-            <div class="date">26 Dec 2014</div>
+            <div class="date">04 Jan 2015</div>
             <div class="seprator">|</div>
             <div class="author">By Amitai Burstein</div>
           </div>
@@ -149,7 +149,7 @@
 
   
     
-      <li><a href="/tags.html#Headless Drupal-ref">Headless Drupal</a></li>
+      <li><a href="/tags.html#Hedley generator-ref">Hedley generator</a></li>
     
       <li><a href="/tags.html#The Gizra Way-ref">The Gizra Way</a></li>
     
@@ -162,34 +162,42 @@
               
             </div>
 
-            <div class="comments-count"><a href="http://www.gizra.com/content/yo-hedley#disqus_thread"></a></div>
+            <div class="comments-count"><a href="http://www.gizra.com/content/phantomcss-ui-regression#disqus_thread"></a></div>
           </div>
 
           <div class="row">
             <div class="post-content">
-              <p>Bingo! I think we&#39;re on to something here. It&#39;s called <a href="https://github.com/Gizra/generator-hedley">yo hedley</a> - and it&#39;s one command that brings a true headless Drupal to <em>everybody</em>.</p>
+              <p>What&#39;s fun about having a tool like <a href="/content/yo-hedley/">Hedley</a> is that every new best practice we acquire can be easily added to our ever evolving, versioned, and codified knowledge base - and it&#39;s there for the community to use and improve.</p>
 
-<p><img src="http://www.gizra.com/assets/images/posts/yo-hedley/image1.gif" /></p>
+<p>So, as if it didn&#39;t have enough of best practices bundled in it already, we&#39;ve taken another step to get <a href="https://github.com/Huddle/PhantomCSS">PhantomCSS</a> a &quot;CSS regression testing&quot; tool in.</p>
 
-<p>In my last DrupalCon BoF presentation &quot;<a href="content/gizra-we-have-got-your-headless-covered/">Gizra - we&#39;ve got your headless covered</a>&quot; I&#39;ve taken the time to explain why &quot;headless&quot; was in fact mostly a buzzword. While I encourage you to have a look at the presentation, I&#39;m actually more excited about telling you why I feel this is no longer the case. </p>
-
-<p>Go ahead an check the <a href="http://hedley-demo.gizra.com/">live demo</a>!</p>
+<div class="thumbnail">
+  <img src="http://www.gizra.com/assets/images/posts/phantomcss/image1.jpg" />
+  <div class="caption">PhantomCSS in action</div>
+</div>
 
 <!-- more -->
 
-<p>My argument so far was that as a community we were lacking best practices for building a fully decoupled website. Saying Drupal can do headless based on project profiles companies have built isn&#39;t very fair for the average developer. They probably have no clue where to start - that&#39;s in contrast to saying, for example, that doing complex queries and displays is possible in Drupal, since Views can be used by anyone, and there are best practices around <em>how</em> to use Views.</p>
+<p>PhantomCSS is a great tool for you to make sure there&#39;s no regression in your UI. Considering how easy it is to break your own UI between releases, and how much manual effort it requires to QA your site before each release, a proper automatic solution is much needed. Like any other automatic testing tool it requires some maintenance, but it is probably less effort than fixing the site plus having to explain to the client why something that already looked good is suddenly broken.</p>
 
-<p>Hedley is an opinionated approach to building decoupled webapps. It&#39;s based on several projects we have already built, taking the best from each. You simply type <code>yo hedley</code> and it installs your installation profile, configures AngularJS, copies Behat and installs Composer, Bower and NPM. Wooh!  </p>
+<p>Not only will the single command <code>yo hedley</code> automatically setup PhantomCSS for you, it will also give you a working <code>.travis.yml</code> file, so upon scaffolding your project, it will be immediately tested.</p>
 
-<p>In fact all that is left to do is to <code>cd client</code> and <code>grunt serve</code> and login with demo / 1234.</p>
+<p>One of the difficulties working with Travis or other CI tools is that you don&#39;t have access to the box itself. While phantomCSS is kind enough to notify you that there was a regression and even create screenshots for you to see the difference - you have no access to those files.  </p>
 
-<p>In this post I could have gone over all the different components and best practices that are bundled in Hedley, such as how to write a <a href="https://github.com/Gizra/generator-hedley/blob/master/app/templates/skeleton/modules/custom/skeleton_restful/plugins/restful/node/events/1.0/SkeletonEventsResource.class.php#L8">RESTful resource</a> that references another one, how to use AngularJS <a href="https://github.com/Gizra/generator-hedley/blob/master/app/templates/client/app/scripts/app.js#L75-L99">UI-Router</a>, how to write <a href="https://github.com/Gizra/generator-hedley/blob/master/app/templates/skeleton/modules/custom/skeleton_migrate/handlers/node/SkeletonCompaniesMigrate.php#L8">migrate handlers</a> or how to write <a href="https://github.com/Gizra/generator-hedley/blob/master/app/templates/behat/features/login.feature#L1">Behat</a> tests that use PhantomJS.  </p>
+<p>We solve this by using a nifty <a href="https://github.com/Gizra/generator-hedley/blob/3540852d195ebbf34216e0434379e7709970c9a3/.travis.yml#L76-L82">bash script</a> that uploads the screenshots to <a href="http://imgur.com">imgur</a> - letting us understand how Travis &quot;sees&quot; the app can reduce debugging time considerably.</p>
 
-<p>I could have even expanded on the idea of the generator itself, and how it allows us to encapsulate the entire knowledge we have gained so far, and <em>keep updating it</em>.</p>
+<div class="thumbnail">
+  <img src="http://www.gizra.com/assets/images/posts/phantomcss/image2.jpg" />
+  <div class="caption">A regression was detected, and the failed output was uploaded to imgur</div>
+</div>
 
-<p>However, I won&#39;t. Instead, I&#39;d like encourage all the geeks out there to give it a spin, poke the code, find things you think should improve and <a href="https://github.com/Gizra/generator-hedley/#contribute">contribute</a> them back. </p>
+<h3>Best practices tips</h3>
 
-<p>It&#39;s almost 2015, and we can do amazing things together!</p>
+<ol>
+<li>Follow the best practices <a href="https://github.com/Huddle/PhantomCSS#best-practices">section</a> in PhantomCSS. Pay attention to the recommendation not to try and test entire pages but rather smaller elements. It&#39;s faster and less error prone.</li>
+<li>Travis is running on an Ubuntu instance, so make sure to run the first tests that produce the images you&#39;re are going to compare to on an Ubuntu machine, as every OS might slightly render differently the fonts. If you don&#39;t have an Ubuntu installed, since we have the <code>imgur</code> bash script, you can use Travis itself to create those screenshots.</li>
+<li>Don&#39;t try to overdo with the UI tests. With a few simple tests that validate for example the header, footer and elements in the main content of different pages you will already cover a lot - probably more than you had when you didn&#39;t have any tests... If you have some &quot;extra&quot; testing time you may wish to invest it in <a href="/content/behat-vs-casper-for-drupal/">Behat</a> testing.</li>
+</ol>
 
             </div>
           </div>
@@ -202,25 +210,16 @@
             <div class="first">
               
               <div class="previous">
-                <a href="/content/behat-vs-casper-for-drupal">
+                <a href="/content/yo-hedley">
                   Previous
                 </a>
               </div>
-              <a href="/content/behat-vs-casper-for-drupal" class="prev-text">
-                Behat vs. Casper (In Drupal Context)
+              <a href="/content/yo-hedley" class="prev-text">
+                Yo Hedley!
               </a>
               
             </div>
             <div class="last">
-              
-              <div class="next">
-                <a href="/content/phantomcss-ui-regression">
-                  Next
-                </a>
-              </div>
-              <a href="/content/phantomcss-ui-regression" class="next-text">
-                Hedley Generator - PhantomCSS and UI regression
-              </a>
               
             </div>
           </div>
