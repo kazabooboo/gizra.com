@@ -206,6 +206,7 @@ Assuming my Drupal site is on http://localhost/d7_dev here’s <code>nodejs.conf
     <span class="nx">basePath</span><span class="o">:</span> <span class="s1">&#39;/d7_dev&#39;</span><span class="p">,</span>
     <span class="nx">messagePath</span><span class="o">:</span> <span class="s1">&#39;/nodejs/message&#39;</span>
   <span class="p">},</span>
+  <span class="nx">transports</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;polling&#39;</span><span class="p">,</span> <span class="s1">&#39;websocket&#39;</span><span class="p">],</span>
   <span class="nx">debug</span><span class="o">:</span> <span class="kc">true</span>
 <span class="p">};</span>
 </code></pre></div>
@@ -221,16 +222,16 @@ Next, from the command line execute <code>node server.js</code>. If you defined 
 The reason is that the node.js server is accepting only POST and any GET results with a 404.</p>
 
 <p>Back to Drupal. In your <code>settings.php</code> add <code>$conf[&#39;nodejs_service_key&#39;] = &#39;beejeebusRocks&#39;;</code>, which is the Drupal equivalent for the serviceKey in the JS configuration.
-Visit <code>admin/config/nodejs/config</code> and fill out the form, this time to let _Drupal know about the node.js server. Again, pay attention to leading and trailing slashes.
-Node.js server host = localhost
-port = 5000</p>
-
+Visit <code>admin/config/nodejs/config</code> and fill out the form, this time to let _Drupal know about the node.js server. Again, pay attention to leading and trailing slashes.</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">Node.js server host = localhost
+port = 5000
+</code></pre></div>
 <h4>The Fun Part!</h4>
 
 <ol>
-<li>Enable “Nodejs Notifications” module</li>
+<li>Enable "Nodejs Notifications" module</li>
 <li>Open another browser in the background, and login as another user</li>
-<li>Back as the administrator go to ```admin/config/nodejs/nodejs_notify/broadcast``` and broadcast your message</li>
+<li>Back as the administrator go to ``admin/config/nodejs/nodejs_notify/broadcast`` and broadcast your message</li>
 <li>The message will appear using Growl in the second browser</li>
 <li>Repeat 2 - 5 until you climax. Personally, It took me about 10 browsers open simultaneously to get there!</li>
 </ol>
@@ -283,10 +284,10 @@ Notice how not only the files are pushed to git, but Heroku now builds the depen
 
 <h4>Back to Drupal</h4>
 
-<p>Visit <code>admin/config/nodejs/config</code> and fill out the form. <em>My</em> configuration looked like this:
-Node.js server host = nameless-brook-555.herokuapp.com
-port = 80</p>
-
+<p>Visit <code>admin/config/nodejs/config</code> and fill out the form. <em>My</em> configuration looked like this:</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">Node.js server host = nameless-brook-555.herokuapp.com
+port = 80
+</code></pre></div>
 <p>Enable the Node.js modules, and start enjoying the work of other great people!</p>
 
             </div>
