@@ -46,6 +46,7 @@ settings = {
     basePath: '/d7_dev',
     messagePath: '/nodejs/message'
   },
+  transports: ['polling', 'websocket'],
   debug: true
 };
 ```
@@ -61,19 +62,22 @@ Started http server.
    info  - socket.io started
 ```
 
-Visit ```http://localhost:5000/``` and the (confusing) message “Not found” should greet you. Wait, What? Why “Not found”, if it’s working?!
+Visit ``http://localhost:5000/`` and the (confusing) message “Not found” should greet you. Wait, What? Why “Not found”, if it’s working?!
 The reason is that the node.js server is accepting only POST and any GET results with a 404.
 
-Back to Drupal. In your ```settings.php``` add ```$conf['nodejs_service_key'] = 'beejeebusRocks';```, which is the Drupal equivalent for the serviceKey in the JS configuration.
-Visit ```admin/config/nodejs/config``` and fill out the form, this time to let _Drupal know about the node.js server. Again, pay attention to leading and trailing slashes.
+Back to Drupal. In your ``settings.php`` add ``$conf['nodejs_service_key'] = 'beejeebusRocks';``, which is the Drupal equivalent for the serviceKey in the JS configuration.
+Visit ``admin/config/nodejs/config`` and fill out the form, this time to let _Drupal know about the node.js server. Again, pay attention to leading and trailing slashes.
+
+```
 Node.js server host = localhost
 port = 5000
+```
 
 <h4>The Fun Part!</h4>
 <ol>
-<li>Enable “Nodejs Notifications” module</li>
+<li>Enable "Nodejs Notifications" module</li>
 <li>Open another browser in the background, and login as another user</li>
-<li>Back as the administrator go to ```admin/config/nodejs/nodejs_notify/broadcast``` and broadcast your message</li>
+<li>Back as the administrator go to ``admin/config/nodejs/nodejs_notify/broadcast`` and broadcast your message</li>
 <li>The message will appear using Growl in the second browser</li>
 <li>Repeat 2 - 5 until you climax. Personally, It took me about 10 browsers open simultaneously to get there!</li>
 </ol>
@@ -114,7 +118,7 @@ settings = {
 Notice several changes:
 <ul>
 <li>backend.host is now pointing to my own Pantheon site. Remember to change it</li>
-<li>The port of the node.js server is now ```process.env.PORT || 5000```. Heroku will make sure to inject that variable when executed, so our node.js server will listen on the right port</li>
+<li>The port of the node.js server is now ``process.env.PORT || 5000``. Heroku will make sure to inject that variable when executed, so our node.js server will listen on the right port</li>
 <li>The transport mechanism is xhr-polling. Heroku still doesn't sup Websockets port, but bare in mind that it's the node.js server that gets the polling, _not the Drupal server</li>
 </ul>
 
@@ -130,7 +134,10 @@ Notice how not only the files are pushed to git, but Heroku now builds the depen
 
 <h4>Back to Drupal</h4>
 Visit ``admin/config/nodejs/config`` and fill out the form. _My_ configuration looked like this:
+
+```
 Node.js server host = nameless-brook-555.herokuapp.com
 port = 80
+```
 
 Enable the Node.js modules, and start enjoying the work of other great people!
