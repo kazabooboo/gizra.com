@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>(Automatic) QA</title>
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="/css/main.b74f.css"/>
+
+        <link href='http://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
+
+        <!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-6558346-3', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+    </head>
+    <body>
+
+    
+
+    <header class="white">
+      <div class="container">
+        <div class="logo"><a href="/">gizra</a></div>
+        <nav id="nav" role="navigation" class="navbar navbar-default nav-fixed">
+          <div class="navbar-header">
+            <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="/products">Products</a></li>
+              <li><a href="/#about">About</a></li>
+              <li><a href="/#work">Work</a></li>
+              <li><a href="/#code">Showcase</a></li>
+              <li><a href="/blog" class="active">Blog</a></li>
+              <li><a href="/#contact">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div> <!-- End of container -->
+    </header>
+
+    
+
+
+    
+  
+
+
+
+  
+    
+      
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+
+<section id="post-page">
+  <div class="background">
+    <img src="/images/post/background.71f5.png">
+  </div>
+
+  <div class="ballons"></div>
+  <div class="post-back">
+    <a href="/blog">
+      <img src="/images/post/post-back.fca6.png">
+    </a>
+  </div>
+
+  <div class="content">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-8 col-md-offset-2 post">
+          <div class="row">
+            <div class="post-label">
+              <a href="/content/automatic-qa">(Automatic) QA</a>
+            </div>
+          </div>
+
+          <div class="row small-row">
+            <div class="date">01 Feb 2015</div>
+            <div class="seprator">|</div>
+            <div class="author">By Amitai Burstein</div>
+          </div>
+
+          <div class="row small-row">
+            <div class="tags">
+
+              
+              <ul class="inline">
+                
+                
+
+  
+    
+      <li><a href="/tags.html#The Gizra Way-ref">The Gizra Way</a></li>
+    
+      <li><a href="/tags.html#Drupal-planet-ref">Drupal-planet</a></li>
+    
+  
+
+
+              </ul>
+              
+            </div>
+
+            <div class="comments-count"><a href="http://www.gizra.com/content/automatic-qa#disqus_thread"></a></div>
+          </div>
+
+          <div class="row">
+            <div class="post-content">
+              <p>Here is a known fact - it&#39;s really easy to break the sites you are building. One wrong line of code, and a page is returning a 503 error.</p>
+
+<p>Here is a known secret - (almost) nobody is doing QA. Since I&#39;m not into arguing about this, I&#39;m willing to soften it a bit to &quot;most companies, don&#39;t do proper QA&quot;.</p>
+
+<p>The reasons are pretty clear - not enough time and not enough budget. This post isn&#39;t going to be about the importance of QA - that point is clear to everybody, but rather give <em>realistic</em> tips and tools that will allow you to start improving the quality of your projects, and actually even save you some time and money.</p>
+
+<!-- more -->
+
+<p>Let&#39;s start by agreeing that a developer can never do a proper QA to their own feature. They can&#39;t not because they don&#39;t care, but because they are normally rushed into their next task.  </p>
+
+<p>Let&#39;s also agree that a code review (which for me is even more important than QA, but that&#39;s for another post), isn&#39;t QA. It may catch bugs - but it&#39;s meant to check the entire site or application.</p>
+
+<p>Nothing can replace a human doing a manual check. The trick is however, making sure they do it only once, and let the machine repeat that test automatically over and over again.</p>
+
+<h2>How to start your QA</h2>
+
+<p>Just start. </p>
+
+<p>Seriously, no divine sign will be given. Basically, there are two approaches:</p>
+
+<ol>
+<li>You catch one person of your team that has a good eye for details, and the enthusiasm to make sure all your applications are properly tested, and ask them to be responsible for the QA. It&#39;s recommended that person would be a developer, so they truly understand what they are checking, and know all the weak points.</li>
+<li>You ask all the developers to start doing some (automatic) QA.</li>
+</ol>
+
+<p>As always, in Gizra we are advocating for a balanced approach. We have a couple of people responsible for the QA, and the rest of the developers know they have to write at least one test per day. Why not write a test for each pull request, you ask? The answer is simple - writing tests takes time, so it&#39;s about finding the balance. Start with a test a day, and as your team advances, the automatic tests will get created more regularly.</p>
+
+<p>Our two rules of thumb for automatic tests coverage are:</p>
+
+<ol>
+<li>We try to reach a 15% coverage of all the features.</li>
+<li>When it comes to access we have a 100% test coverage. Your client will thank you for it.</li>
+</ol>
+
+<h2>Practical example</h2>
+
+<p>I&#39;d like to demonstrate how easy it is to start QA. Lets say you are creating a new content type on your site, and you migrate content to it. You will probably validate manually the migrated content once. Now with a minimal effort, the same test can be repeated for you on every commit.</p>
+
+<p>By definition tests shouldn&#39;t be &quot;smart&quot; or try to do super sophisticated stuff. They should just assert a certain behavior. </p>
+<div class="highlight"><pre><code class="Gherkin language-Gherkin" data-lang="Gherkin"><span class="c"># blog_post.feature</span><span class="nf"></span>
+<span class="k">Feature:</span><span class="nf"> Blog post</span>
+<span class="nf">  In order to be able to view a blog post</span>
+<span class="nf">  As an anonymous user</span>
+<span class="nf">  We need to be able to have access to a blog post page</span>
+
+<span class="nf">  @api</span>
+<span class="nf">  </span><span class="k">Scenario Outline:</span><span class="nf"> Visit blog post page</span>
+<span class="k">    Given </span><span class="nf">I am an anonymous user</span>
+<span class="nf">    </span><span class="k">When </span><span class="nf"> I visit &quot;</span><span class="nv">&lt;url&gt;</span><span class="nf">&quot;</span>
+<span class="nf">    </span><span class="k">Then </span><span class="nf"> I should the text &quot;</span><span class="nv">&lt;text&gt;</span><span class="nf">&quot; under the main content</span>
+<span class="nf">    </span><span class="k">And </span><span class="nf">  I should see the author &quot;</span><span class="nv">&lt;author&gt;</span><span class="nf">&quot;</span>
+
+<span class="nf">  </span><span class="k">Examples:</span>
+<span class="k">    |</span><span class="nv"> url</span><span class="k">             |</span><span class="nv"> text</span><span class="k">             |</span><span class="nv"> author</span><span class="k">   |</span><span class="nf"></span>
+<span class="k">    |</span><span class="s"> some-url/foo</span><span class="k">    |</span><span class="s"> That Lorem Ipsum</span><span class="k"> |</span><span class="s"> Hélène</span><span class="k">   |</span><span class="nf"></span>
+<span class="k">    |</span><span class="s"> anotehr-one/bar</span><span class="k"> |</span><span class="s"> </span><span class="nv">&lt;p&gt;</span><span class="s">Some HTML</span><span class="nv">&lt;/p&gt;</span><span class="k"> |</span><span class="s"> Diderich</span><span class="k"> |</span><span class="nf"></span>
+<span class="k">    |</span><span class="s"> and-a-third-one</span><span class="k"> |                  |</span><span class="s"> Celine</span><span class="k">   |</span>
+</code></pre></div>
+<p>Behat&#39;s &quot;Scenario Outline&quot; test will iterate over each row under the <code>Examples</code> table, visit the URL and assert the text or HTML exists in the page or under a specific region.</p>
+
+<p>The sentence <code>Then I should the text &quot;&lt;text&gt;&quot; under the main content</code> gets converted into code which basically instructs Behat to look for a certain HTML under the <code>#main-content</code> region.</p>
+<div class="highlight"><pre><code class="php language-php" data-lang="php"><span class="cp">&lt;?php</span>
+
+<span class="sd">/**</span>
+<span class="sd"> * @Then I should the text :text under the main content</span>
+<span class="sd"> */</span>
+<span class="k">public</span> <span class="k">function</span> <span class="nf">iShouldTheLinkUnderTheMainContent</span><span class="p">(</span><span class="nv">$text</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">assertElementContains</span><span class="p">(</span><span class="s1">&#39;#main-content&#39;</span><span class="p">,</span> <span class="nv">$text</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Obviously we could have tested more, but assuming you had zero tests up until now, I would say it&#39;s enough to test a few items. Again, considering you didn&#39;t have anything before, having something is already a major improvement. The above simple example, for me is considered a <em>proper</em> QA!</p>
+
+<p>So for the next content type, you will only need to copy the <code>blog_post.feature</code> file, and change it a bit to fit the new page&#39;s logic.</p>
+
+<p>You know what&#39;s the best part? If you didn&#39;t have any QA in place up until today (like every other company around you), just by having someone from your team going over your applications with a QA mindset and not a developer mindset, and by writing a few simple automated tests, you will significantly improve your final product, not to mention the time saved on fixing regressions.</p>
+
+<h2>Quickly Setup Behat</h2>
+
+<p>Whenever we want to add <a href="/content/behat-the-right-way/">Behat</a> testing we use the <a href="https://github.com/Gizra/generator-hedley">Hedley generator</a> as it scaffolds all the needed files, and even sets up a <code>.travis.yml</code>. I&#39;ve added some automatic tests to assert Gizra.com which is built on Jekyll. You can grab it and try it for yourself.</p>
+
+<p>One time setup:</p>
+<div class="highlight"><pre><code class="bash language-bash" data-lang="bash">git clone git@github.com:Gizra/Gizra.git
+<span class="nb">cd </span>Gizra
+<span class="nb">cd </span>behat
+<span class="c"># By default the base URL is set to http://gizra.com</span>
+cp behat.local.yml.example behat.local.yml
+<span class="c"># Assuming you have composer instlled globally https://getcomposer.org/doc/00-intro.md#globally</span>
+composer install
+</code></pre></div>
+<p>Execute the tests
+<code>
+./bin/behat
+</code></p>
+
+<p>Not so hard, is it? Go ahead and start your QAing today!</p>
+
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="bottom-dash"></div>
+          </div>
+
+          <div class="row post-nav">
+            <div class="first">
+              
+              <div class="previous">
+                <a href="/content/phantomcss-ui-regression">
+                  Previous
+                </a>
+              </div>
+              <a href="/content/phantomcss-ui-regression" class="prev-text">
+                Hedley Generator - PhantomCSS and UI regression
+              </a>
+              
+            </div>
+            <div class="last">
+              
+            </div>
+          </div>
+
+          <div class="row author-details">
+            <div class="image-wrapper">
+              <img src="/images/team/amitaibu.4179.jpg" class="img-responsive">
+            </div>
+            <div class="text-wrapper">
+              <span class="name">Amitai Burstein</span> <span class="twitter">(@amitaibu)</span>
+              <div class="title">CTO, Co-Owner</div>
+              <div class="bio">Maintainer of Organic groups, the Message stack, and co-maintainer of Drupal 8's Entity reference. <a href="/content/the-about-story/">The about story</a>.</div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="bottom-dash-small"></div>
+          </div>
+
+          <div class="row">
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'gizra';
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="text/javascript">
+var disqus_shortname = 'gizra';
+
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function () {
+var s = document.createElement('script'); s.async = true;
+s.type = 'text/javascript';
+s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+
+
+
+
+    <script src="/js/plugins.5250.js"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+
+    <script src="/js/scripts.87fd.js"></script>
+
+    </body>
+</html>
