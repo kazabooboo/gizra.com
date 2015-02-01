@@ -18,9 +18,9 @@ The reasons are pretty clear - not enough time and not enough budget. This post 
 
 <!-- more -->
 
-Let's start by agreeing that a developer can never do a proper QA to their own feature. They can't not because they don't care, but because they are normally rushed into their next task.  
+Let's start by agreeing that a developer can never do a proper QA to their own feature. They can't - not because they don't care - but because they are normally rushed into their next task.
 
-Let's also agree that a code review (which for me is even more important than QA, but that's for another post), isn't QA. It may catch bugs - but it's meant to check the entire site or application.
+Let's also agree that a code review (which for me is even more important than QA, but that's for another post), isn't QA. It may catch bugs - but it's not meant to check the entire site or application.
 
 Nothing can replace a human doing a manual check. The trick is however, making sure they do it only once, and let the machine repeat that test automatically over and over again.
 
