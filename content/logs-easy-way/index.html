@@ -187,7 +187,7 @@
 
 <p>Drupal also provides a syslog module that can later be used to forward the logs, however as many sites are hosted on platform solutions such as Pantheon, syslog isn&#39;t always available.</p>
 
-<p>In order to lower the barrier, Gizra has developed a general logging module that can send your watchdog data via HTTP called <a href="https://github.com/Gizra/logs_http">Logs HTTP</a>. You just need to set the URL, and the severity level you would like to capture, and you&#39;re done. This module can work for example on your logstash installation:</p>
+<p>In order to lower the barrier, Gizra has developed a general logging module that can send your watchdog data via HTTP called <a href="https://www.drupal.org/project/logs_http">Logs HTTP</a>. You just need to set the URL, and the severity level you would like to capture, and you&#39;re done. This module can work for example on your logstash installation:</p>
 
 <div class="thumbnail">
   <img src="http://www.gizra.com/assets/images/posts/logs-http/image1.jpg" />
@@ -203,7 +203,7 @@
 
 <h2>Logs HTTP module</h2>
 
-<p>The Logs HTTP module takes over your exception handler, so whenever an exception is thrown the backtrace (<code>debug_backtrace()</code>) of the request that caused the error is injected into the watchdog. This is super critical as it gives you a very clear insight to what caused the actuall error. What <code>triggered</code> the error - that&#39;s up to you to figure out.</p>
+<p>The Logs HTTP module takes over your exception handler, so whenever an exception is thrown the backtrace (<code>debug_backtrace()</code>) of the request that caused the error is injected into the watchdog. This is super critical as it gives you a very clear insight to what caused the actuall error. What triggered the error - that&#39;s up to you to figure out.</p>
 
 <p>All the events that are sent via HTTP, are sent in a PHP shutdown function, which means they won&#39;t block your request. The module isn&#39;t tightly coupled to the watchdog events, and you can use its API to send custom events.</p>
 
