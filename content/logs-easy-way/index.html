@@ -205,9 +205,7 @@
 
 <p>The Logs HTTP module takes over your exception handler, so whenever an exception is thrown the backtrace (<code>debug_backtrace()</code>) of the request that caused the error is injected into the watchdog. This is super critical as it gives you a very clear insight to what caused the actuall error. What <code>triggered</code> the error - that&#39;s up to you to figure out.</p>
 
-<p>All the events that are sent via HTTP, are sent in a PHP shutdown function, which means they won&#39;t block your request.</p>
-
-<p>The module isn&#39;t tightly coupled to the watchdog events, and you can use its API to send custom events</p>
+<p>All the events that are sent via HTTP, are sent in a PHP shutdown function, which means they won&#39;t block your request. The module isn&#39;t tightly coupled to the watchdog events, and you can use its API to send custom events.</p>
 
 <div class="thumbnail">
   <img src="http://www.gizra.com/assets/images/posts/logs-http/image3.jpg" />
