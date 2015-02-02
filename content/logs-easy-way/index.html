@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Logs, The Easy Way</title>
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="/css/main.b74f.css"/>
+
+        <link href='http://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
+
+        <!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-6558346-3', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+    </head>
+    <body>
+
+    
+
+    <header class="white">
+      <div class="container">
+        <div class="logo"><a href="/">gizra</a></div>
+        <nav id="nav" role="navigation" class="navbar navbar-default nav-fixed">
+          <div class="navbar-header">
+            <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="/products">Products</a></li>
+              <li><a href="/#about">About</a></li>
+              <li><a href="/#work">Work</a></li>
+              <li><a href="/#code">Showcase</a></li>
+              <li><a href="/blog" class="active">Blog</a></li>
+              <li><a href="/#contact">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div> <!-- End of container -->
+    </header>
+
+    
+
+
+    
+  
+
+
+
+  
+    
+      
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+
+<section id="post-page">
+  <div class="background">
+    <img src="/images/post/background.71f5.png">
+  </div>
+
+  <div class="ballons"></div>
+  <div class="post-back">
+    <a href="/blog">
+      <img src="/images/post/post-back.fca6.png">
+    </a>
+  </div>
+
+  <div class="content">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-8 col-md-offset-2 post">
+          <div class="row">
+            <div class="post-label">
+              <a href="/content/logs-easy-way">Logs, The Easy Way</a>
+            </div>
+          </div>
+
+          <div class="row small-row">
+            <div class="date">02 Feb 2015</div>
+            <div class="seprator">|</div>
+            <div class="author">By Amitai Burstein</div>
+          </div>
+
+          <div class="row small-row">
+            <div class="tags">
+
+              
+              <ul class="inline">
+                
+                
+
+  
+    
+      <li><a href="/tags.html#The Gizra Way-ref">The Gizra Way</a></li>
+    
+      <li><a href="/tags.html#Drupal-planet-ref">Drupal-planet</a></li>
+    
+  
+
+
+              </ul>
+              
+            </div>
+
+            <div class="comments-count"><a href="http://www.gizra.com/content/logs-easy-way#disqus_thread"></a></div>
+          </div>
+
+          <div class="row">
+            <div class="post-content">
+              <p>Your team invested countless hours in development.</p>
+
+<p>Your QA people can barely keep their eyes open - they have worked so hard. Your lead developer who&#39;s responsible for the deployment is almost dehydrated from so much pressure and sweat.  </p>
+
+<p>But it&#39;s all worth it. Your app is live. Now everybody goes to sleep, and your pampered app, is all alone, serving your data to the entire world.  </p>
+
+<p>You forgot one thing - to give it a phone to call home, and tell you something went wrong.</p>
+
+<!-- more -->
+
+<h2>You should have logs</h2>
+
+<blockquote class="twitter-tweet" lang="en"><p>Debugging is like being the detective in a crime movie where you are also the murderer.</p>&mdash; Filipe Fortes (@fortes) <a href="https://twitter.com/fortes/status/399339918213652480">November 10, 2013</a></blockquote>
+
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>Arguing logs are important is like arguing automatic tests are important. Everybody knows that. Just that very few actually do it. </p>
+
+<p>In reality the barrier is mostly because it&#39;s hard to take the first step. In Drupal for example, there&#39;s a watchdog that can send your errors to the DB, but it&#39;s unrealistic to expect anyone to dig up an error in real time on multiple live apps.</p>
+
+<p>Drupal also provides a syslog module that can later be used to forward the logs, however as many sites are hosted on platform solutions such as Pantheon, syslog isn&#39;t always available.</p>
+
+<p>In order to lower the barrier, Gizra has developed a general logging module that can send your watchdog data via HTTP called <a href="https://github.com/Gizra/logs_http">Logs HTTP</a>. You just need to set the URL, and the severity level you would like to capture, and you&#39;re done. This module can work for example on your logstash installation:</p>
+
+<div class="thumbnail">
+  <img src="http://www.gizra.com/assets/images/posts/logs-http/image1.jpg" />
+  <div class="caption">Configuration page. Just add the HTTP endpoint</div>
+</div>
+
+<p>Since we want to concentrate on the actual development of the app (the same reason that brought us to use services like Pantheon in the first place) we&#39;ve decided to go with <a href="https://www.loggly.com/">loggly</a>, a cloud based log service. The price is reasonable and it provides many of the features we want, in particular the ability to send real time email alerts.</p>
+
+<div class="thumbnail">
+  <img src="http://www.gizra.com/assets/images/posts/logs-http/image2.jpg" />
+  <div class="caption">Logstash with a JSON coded message, capturing an exception</div>
+</div>
+
+<h2>Logs HTTP module</h2>
+
+<p>The Logs HTTP module takes over your exception handler, so whenever an exception is thrown the backtrace (<code>debug_backtrace()</code>) of the request that caused the error is injected into the watchdog. This is super critical as it gives you a very clear insight to what caused the actuall error. What <code>triggered</code> the error - that&#39;s up to you to figure out.</p>
+
+<p>All the events that are sent via HTTP, are sent in a PHP shutdown function, which means they won&#39;t block your request.</p>
+
+<p>The module isn&#39;t tightly coupled to the watchdog events, and you can use its API to send custom events</p>
+
+<div class="thumbnail">
+  <img src="http://www.gizra.com/assets/images/posts/logs-http/image3.jpg" />
+  <div class="caption">A saved search in Loggly - get all the errors with severity of <code>error</code> or higher</div>
+</div>
+
+<p>As as single loggly account serves all our sites, we are using the &quot;Unique ID&quot; option, in order to easily understand on which server the error eccoured. The Unique ID can be filled out manually, but it could also be environment specific. For example on <a href="https://www.getpantheon.com/">Pantheon</a>, we use this technique, that takes advatnage of the <code>$_ENV</code> variable:</p>
+<div class="highlight"><pre><code class="php language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="k">empty</span><span class="p">(</span><span class="nv">$_ENV</span><span class="p">))</span> <span class="p">{</span>
+  <span class="c1">// Add the URL only on Pantheon sites.</span>
+  <span class="nv">$conf</span><span class="p">[</span><span class="s1">&#39;loggly_http_url&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Your-Loggly-URL&#39;</span><span class="p">;</span>
+
+  <span class="c1">// Inject the site name and enviorement. This will result for example with ``my_site-live``</span>
+  <span class="nv">$conf</span><span class="p">[</span><span class="s1">&#39;loggly_http_uuid&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nv">$_ENV</span><span class="p">[</span><span class="s1">&#39;PANTHEON_SITE_NAME&#39;</span><span class="p">]</span> <span class="o">.</span> <span class="s1">&#39;-&#39;</span> <span class="o">.</span> <span class="nv">$_ENV</span><span class="p">[</span><span class="s1">&#39;PANTHEON_ENVIRONMENT&#39;</span><span class="p">];</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2>The Outcome</h2>
+
+<p>In Gizra all our projects are connected to Loggly, where a simple alert has been setup - if an event with severity of error (or worth) was triggered - send the devs an email, so we know in real time we should start investigating an error.<br>
+Now <em>all</em> our apps and sites have a phone to call home. </p>
+
+<div class="thumbnail">
+  <img src="http://www.gizra.com/assets/images/posts/logs-http/image4.jpg" />
+  <div class="caption">An email with an alert</div>
+</div>
+
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="bottom-dash"></div>
+          </div>
+
+          <div class="row post-nav">
+            <div class="first">
+              
+              <div class="previous">
+                <a href="/content/automatic-qa">
+                  Previous
+                </a>
+              </div>
+              <a href="/content/automatic-qa" class="prev-text">
+                (Automatic) QA
+              </a>
+              
+            </div>
+            <div class="last">
+              
+            </div>
+          </div>
+
+          <div class="row author-details">
+            <div class="image-wrapper">
+              <img src="/images/team/amitaibu.4179.jpg" class="img-responsive">
+            </div>
+            <div class="text-wrapper">
+              <span class="name">Amitai Burstein</span> <span class="twitter">(@amitaibu)</span>
+              <div class="title">CTO, Co-Owner</div>
+              <div class="bio">Maintainer of Organic groups, the Message stack, and co-maintainer of Drupal 8's Entity reference. <a href="/content/the-about-story/">The about story</a>.</div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="bottom-dash-small"></div>
+          </div>
+
+          <div class="row">
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'gizra';
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="text/javascript">
+var disqus_shortname = 'gizra';
+
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function () {
+var s = document.createElement('script'); s.async = true;
+s.type = 'text/javascript';
+s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+
+
+
+
+    <script src="/js/plugins.5250.js"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+
+    <script src="/js/scripts.87fd.js"></script>
+
+    </body>
+</html>

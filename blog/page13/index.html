@@ -130,6 +130,113 @@
 
           <div class="row">
             <div class="post-label">
+              <a href="/content/message-example-github-news-feed/">Message example = Github news feed</a>
+            </div>
+          </div>
+
+          <div class="row small-row">
+            <div class="date">29 Sep 2010</div>
+            <div class="seprator">|</div>
+            <div class="author">By <a href="#author">Amitai Burstein</a></div>
+          </div>
+
+          <div class="row small-row">
+            <div class="tags">
+              
+              <ul class="inline">
+                
+                
+
+  
+    
+      <li><a href="/tags.html#Drupal-planet-ref">Drupal-planet</a></li>
+    
+      <li><a href="/tags.html#Message-ref">Message</a></li>
+    
+  
+
+
+              </ul>
+              
+            </div>
+            <div class="comments-count"><a href="http://www.gizra.com/blog/page13/index.html#disqus_thread"></a></div>
+          </div>
+
+          <div class="row">
+            <div class="post-content">
+              <p>It&#39;s time for some P.R. (Public relations) on the <a href="http://drupal.org/project/message">Message</a> module, and the best way is a Message example module that loosely imitates Github&#39;s news feed feature.</p>
+
+<p>I won&#39;t get into too much explanation here, just look at the screenshots, or try it yourself - since everything in Message is exportable, you don&#39;t need to do anything to make it work! (Apart of generating nodes and &quot;making friends&quot; by flagging other users).</p>
+
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="bottom-dash"></div>
+          </div>
+        </div>
+      </div>
+      <!--Post End-->
+      
+
+      
+        
+      
+
+      
+        
+          
+            
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+
+      <!--Post begin-->
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2 post">
+
+          <div class="row">
+            <div class="post-label">
               <a href="/content/og7-session-drupalcon-copenhagen/">OG7 session in Drupalcon Copenhagen</a>
             </div>
           </div>
@@ -505,114 +612,6 @@
 <p>When I started writing <a href="http://drupal.org/project/message">Message</a> I had some understanding of how CTools exportables work but having merlinofchaos review my work, explain some of his thoughts and providing his golden code, really changed the way I look at writing generic and reusable code. In fact, I&#39;ve decided to overhaul much of the Message module for it to be more inline with CTools&#39; standards.</p>
 
 <p>Message was a inspired by Context module. Context uses some object oriented, so I&#39;ve copied that too. That&#39;s where I got it wrong - because my use case was a bit different. OOP is powerful _when it&#39;s needed but sometimes it might be an overkiller. Ok, so no OOP, but I still needed a pluggable system. CTools has the $plugin concept. Its almost the same as having an info hook, only it&#39;s without a hook - you place it directly on an <code>inc</code> file that CTools will include for you when its needed. But the &quot;trick&quot; that I&#39;ve learned - and there shouldn&#39;t be any drum rolls cause it might be obvious - is to use a &quot;process&quot; function that populates the $plugin with defaults. The defaults can be for example the callbacks that will be used, the Views handlers that will be automatically declared, the text strings, the allowed operations, etc&#39;. Basically, when you use the $plugin, you should be thinking how an extending module can alter the module&#39;s behavior by simple changes.</p>
-
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="bottom-dash"></div>
-          </div>
-        </div>
-      </div>
-      <!--Post End-->
-      
-
-      
-        
-      
-
-      
-        
-          
-            
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-
-      <!--Post begin-->
-      <div class="row">
-        <div class="col-md-8 col-md-offset-2 post">
-
-          <div class="row">
-            <div class="post-label">
-              <a href="/content/code-sample-drutnet/">Code sample for DrutNet API - connect, load node, save node and upload file</a>
-            </div>
-          </div>
-
-          <div class="row small-row">
-            <div class="date">17 May 2010</div>
-            <div class="seprator">|</div>
-            <div class="author">By <a href="#author">Amitai Burstein</a></div>
-          </div>
-
-          <div class="row small-row">
-            <div class="tags">
-              
-              <ul class="inline">
-                
-                
-
-  
-    
-      <li><a href="/tags.html#Drupal-planet-ref">Drupal-planet</a></li>
-    
-      <li><a href="/tags.html#.NET-ref">.NET</a></li>
-    
-      <li><a href="/tags.html#DrutNet-ref">DrutNet</a></li>
-    
-  
-
-
-              </ul>
-              
-            </div>
-            <div class="comments-count"><a href="http://www.gizra.com/blog/page13/index.html#disqus_thread"></a></div>
-          </div>
-
-          <div class="row">
-            <div class="post-content">
-              <p>In the previous <a href="/content/drutnet-drupal-net-api">post</a> I&#39;ve introduced DrutNet API with an already compiled example, today I will show some code examples.
-Since last post I&#39;ve added a new method that allow file upload with Services, using the base-64 conversion, I will show you how this method works.</p>
 
             </div>
           </div>
