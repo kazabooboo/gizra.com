@@ -181,7 +181,7 @@
 
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-<p>Arguing logs are important is like arguing automatic tests are important. Everybody knows that. Just that very few actually do it. </p>
+<p>Arguing logs are important is like arguing automatic tests are important. Everybody knows that. Just that very few actually do it.</p>
 
 <p>In reality the barrier is mostly because it&#39;s hard to take the first step. In Drupal for example, there&#39;s a watchdog that can send your errors to the DB, but it&#39;s unrealistic to expect anyone to dig up an error in real time on multiple live apps.</p>
 
@@ -203,7 +203,7 @@
 
 <h2>Logs HTTP module</h2>
 
-<p>The Logs HTTP module takes over your exception handler, so whenever an exception is thrown the backtrace (<code>debug_backtrace()</code>) of the request that caused the error is injected into the watchdog. This is super critical as it gives you a very clear insight to what caused the actuall error. What triggered the error - that&#39;s up to you to figure out.</p>
+<p>The Logs HTTP module takes over your exception handler, so whenever an exception is thrown the backtrace (<code>debug_backtrace()</code>) of the request that caused the error is injected into the watchdog. This is super critical as it gives you a very clear insight to what caused the actual error. What triggered the error - that&#39;s up to you to figure out.</p>
 
 <p>All the events that are sent via HTTP, are sent in a PHP shutdown function, which means they won&#39;t block your request. The module isn&#39;t tightly coupled to the watchdog events, and you can use its API to send custom events.</p>
 
@@ -212,25 +212,44 @@
   <div class="caption">A saved search in Loggly - get all the errors with severity of <code>error</code> or higher</div>
 </div>
 
-<p>As as single loggly account serves all our sites, we are using the &quot;Unique ID&quot; option, in order to easily understand on which server the error eccoured. The Unique ID can be filled out manually, but it could also be environment specific. For example on <a href="https://www.getpantheon.com/">Pantheon</a>, we use this technique, that takes advatnage of the <code>$_ENV</code> variable:</p>
+<p>As as single loggly account serves all our sites, we are using the &quot;Unique ID&quot; option, in order to easily understand on which server the error occurred. The Unique ID can be filled out manually, but it could also be environment specific. For example on <a href="https://www.getpantheon.com/">Pantheon</a>, we use this technique, that takes advantage of the <code>$_ENV</code> variable:</p>
 <div class="highlight"><pre><code class="php language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="k">empty</span><span class="p">(</span><span class="nv">$_ENV</span><span class="p">))</span> <span class="p">{</span>
   <span class="c1">// Add the URL only on Pantheon sites.</span>
   <span class="nv">$conf</span><span class="p">[</span><span class="s1">&#39;loggly_http_url&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Your-Loggly-URL&#39;</span><span class="p">;</span>
 
-  <span class="c1">// Inject the site name and enviorement. This will result for example with ``my_site-live``</span>
+  <span class="c1">// Inject the site name and environment. This will result for example with ``my_site-live``</span>
   <span class="nv">$conf</span><span class="p">[</span><span class="s1">&#39;loggly_http_uuid&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nv">$_ENV</span><span class="p">[</span><span class="s1">&#39;PANTHEON_SITE_NAME&#39;</span><span class="p">]</span> <span class="o">.</span> <span class="s1">&#39;-&#39;</span> <span class="o">.</span> <span class="nv">$_ENV</span><span class="p">[</span><span class="s1">&#39;PANTHEON_ENVIRONMENT&#39;</span><span class="p">];</span>
 <span class="p">}</span>
 </code></pre></div>
 <h2>The Outcome</h2>
 
 <p>In Gizra all our projects are connected to Loggly, where a simple alert has been setup - if an event with severity of error (or worth) was triggered - send the devs an email, so we know in real time we should start investigating an error.<br>
-Now <em>all</em> our apps and sites have a phone to call home. </p>
+Now <em>all</em> our apps and sites have a phone to call home.</p>
 
 <div class="thumbnail">
   <img src="http://www.gizra.com/assets/images/posts/logs-http/image4.jpg" />
   <div class="caption">An email with an alert</div>
 </div>
+
+<p>Since Logs HTTP is an API module, you can still log specific events that are not in the severity level you have chosen, so for example, if a the severity level is &quot;error&quot;, but you want to log all the watchdog events of a login event you can:</p>
+<div class="highlight"><pre><code class="php language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<span class="sd">/**</span>
+<span class="sd"> * Implements hook_watchdog().</span>
+<span class="sd"> */</span>
+<span class="k">function</span> <span class="nf">example_user_watchdog</span><span class="p">(</span><span class="k">array</span> <span class="nv">$log_entry</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nv">$log_entry</span><span class="p">[</span><span class="s1">&#39;message&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;Session opened for %name.&#39;</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="nx">logs_http_register_event</span><span class="p">(</span><span class="nv">$log_entry</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>And then in Loggly, you can have an alert with the query <code>json.message:&quot;Session opened for&quot; NOT admin</code> - which means you will be notified whenever a non admin logs in.</p>
+
+<h2>Conclusion</h2>
+
+<p>Like code review, automatic tests, and a proper deployment protocol, logging is an important part of the health of your application. With the <a href="https://www.drupal.org/project/logs_http">Logs HTTP</a> module, having this best practice implemented is only a few clicks away.</p>
 
             </div>
           </div>
