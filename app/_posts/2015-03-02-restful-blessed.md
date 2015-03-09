@@ -30,7 +30,7 @@ If this data looks familiar to you, it might be because it's the same data you s
 The demo is heavily based on the [blessed-contrib](https://github.com/yaronn/blessed-contrib/) repository by Yaron Naveh, with some notable changes:
 
 * No dummy data! All the data that you see in the terminal is real, and is being pulled from a real Drupal server with the data exposed via RESTful.
-* We are using [RamdaJs](http://ramdajs.com) to iterate over the arrays and objects (This repository was a good excuse to practice our functional Javascript).
+* We are using [RamdaJs](http://ramdajs.com) to iterate over the arrays and objects (This repository was a good excuse to practice our functional programing).
 * [Inquirer](https://www.npmjs.com/package/inquirer) library was used to gather the data from the user.
 
 By default, the demo uses the Hedley demo hosted on Pantheon, but you can easily ``yo hedley`` on your local, and set the URL to your local server. This will also let you change the geolocation of the events and see them change on the map in real-time!
