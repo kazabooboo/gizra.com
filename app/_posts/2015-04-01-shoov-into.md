@@ -11,7 +11,7 @@ published: true
 
 {% include setup %}
 
-UI regression is one of these things that make total sense but is rarely put into practice, for a simple reason - it's hard.
+Testing UI regression is one of these things that make total sense but is rarely put into practice, for a simple reason - it's hard.
 
 
 <div class="thumbnail">
