@@ -38,3 +38,5 @@ The next step was almost immediate. Since all our projects are hosted on GitHub,
 
 
 [Shoov](https://github.com/shoov/shoov) is very much work in progress, but all the different pieces are now starting to gel, and we're already beginning to get significant value from it in our daily work at Gizra.
+
+For the brave ones we have created an [example repository](https://github.com/shoov/test-example), so you can check Shoov yourself.
