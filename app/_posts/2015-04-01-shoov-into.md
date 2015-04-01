@@ -1,5 +1,5 @@
 ---
-title: UI regression - Shoov Means Again in Hebrew
+title: Shoov - a new UI regression tool
 tags:
   - UI regression
   - Headless Drupal
@@ -23,9 +23,9 @@ If you read the theory about it, it seems pretty simple. Take a screenshot of a 
 
 <!-- more -->
 
-The difficult part begins when you want to test it on multiple browsers - which is one of the major reasons you got into UI regerssion testing in the first place - and on multiple pages. Soon enough you have lots of baseline images on your hands, and if you follow an agile development process, these images are most likely changing pretty often.
+The difficult part begins when you want to test it on multiple browsers - which is one of the major reasons you got into UI regression testing in the first place - and on multiple pages. Soon enough you have lots of baseline images on your hands, and if you follow an agile development process, these images are most likely changing pretty often.
 
-At Gizra we realized we needed a system in place to help us with the tedious task of maintaining all those baseline images. The biggest problem we faced was how to easily re-create a baseline image from a "regression" image. That is - the baseline image which was the right image a minute ago, may no longer be the correct one once a new piece of code was deployed, so in fact the new regression image should become the baseline.
+At Gizra we realized we needed a system in place to help us with the tedious task of maintaining all those baseline images - we call it Shoov, which means "again" in Hebrew. The biggest problem we faced was how to easily re-create a baseline image from a "regression" image. That is - the baseline image which was the right image a minute ago, may no longer be the correct one once a new piece of code was deployed, so in fact the new regression image should become the baseline.
 
 The second problem was that we wanted to have a single place to easily monitor all regressions so our QA and developers could check them, and if needed download the regression images to serve as the new baselines.
 
