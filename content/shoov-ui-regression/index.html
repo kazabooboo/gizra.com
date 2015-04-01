@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Casa del Lector</title>
+        <title>Shoov Means Again in Hebrew</title>
         <meta name="viewport" content="width=device-width">
 
         <link rel="stylesheet" href="/css/main.b74f.css"/>
@@ -65,15 +65,15 @@
 
   
     
-  
-
-  
-    
-  
-
-  
-    
       
+    
+  
+
+  
+    
+  
+
+  
     
   
 
@@ -129,14 +129,14 @@
         <div class="col-md-8 col-md-offset-2 post">
           <div class="row">
             <div class="post-label">
-              <a href="/content/casa-del-lector">Casa del Lector</a>
+              <a href="/content/shoov-ui-regression">Shoov Means Again in Hebrew</a>
             </div>
           </div>
 
           <div class="row small-row">
-            <div class="date">13 Mar 2014</div>
+            <div class="date">01 Apr 2015</div>
             <div class="seprator">|</div>
-            <div class="author">By Nir Yariv</div>
+            <div class="author">By Amitai Burstein</div>
           </div>
 
           <div class="row small-row">
@@ -149,13 +149,11 @@
 
   
     
-      <li><a href="/tags.html#casa del lector-ref">casa del lector</a></li>
+      <li><a href="/tags.html#UI regression-ref">UI regression</a></li>
     
-      <li><a href="/tags.html#d3js-ref">d3js</a></li>
+      <li><a href="/tags.html#Headless Drupal-ref">Headless Drupal</a></li>
     
-      <li><a href="/tags.html#server-free-ref">server-free</a></li>
-    
-      <li><a href="/tags.html#mobile-ref">mobile</a></li>
+      <li><a href="/tags.html#Drupal-planet-ref">Drupal-planet</a></li>
     
   
 
@@ -164,34 +162,36 @@
               
             </div>
 
-            <div class="comments-count"><a href="http://www.gizra.com/content/casa-del-lector#disqus_thread"></a></div>
+            <div class="comments-count"><a href="http://www.gizra.com/content/shoov-ui-regression#disqus_thread"></a></div>
           </div>
 
           <div class="row">
             <div class="post-content">
-              <p>Last week saw the launch of a pretty unique <a href="http://gizra.github.io/CDL/">project</a> for us. It&#39;s not every day a product we&#39;ve worked on gets a <a href="http://cultura.elpais.com/cultura/2014/03/05/actualidad/1394047004_090821.html">write up on El Pais</a>, or has this kind of launch event:</p>
+              <p>UI regression is one of these things that make total sense but is rarely put into practice, for a simple reason - it&#39;s hard.</p>
 
-<p><img src="/assets/images/posts/casa-del-lector/IMG_8388-2.JPG" alt=""></p>
+<div class="thumbnail">
+  <img src="http://www.gizra.com/assets/images/posts/shoov-intro/image1.gif">
+  <div class="caption">UI regression checking in action</div>
+</div>
 
-<p>The target audience is a bit unusual as well. While it can be accessed like any other site, it&#39;s targeted to be used inside a specific exhibition in the <a href="http://casalector.fundaciongsr.com/">Casa del Lector</a> museum in Madrid, on tablets handed out to the museum visitors:</p>
-
-<p><img src="/assets/images/posts/casa-del-lector/IMG_8259%20-%202.JPG" alt=""></p>
-
-<p>We took great care to stay within the touch UI conventions. When entering the site, the user is presented with a network of connections between items. As she zooms, details are revealed - subitems, their connections and finally their titles:</p>
-
-<p><img src="/assets/images/posts/casa-del-lector/cdl-map-1.gif" alt=""></p>
+<p>If you read the theory about it, it seems pretty simple. Take a screenshot of a certain page in your site which will be your &quot;baseline&quot; image, and from now on, whenever the code changes re-run an automated test that will compare a current screenshot with the baseline image.</p>
 
 <!-- more -->
 
-<p>Tapping a node highlights its connections within the network, and a second tap takes the user to the node content, which contains various media:</p>
+<p>The difficult part begins when you want to test it on multiple browsers - which is one of the major reasons you got into UI regerssion testing in the first place - and on multiple pages. Soon enough you have lots of baseline images on your hands, and if you follow an agile development process, these images are most likely changing pretty often.</p>
 
-<p><img src="/assets/images/posts/casa-del-lector/cdl-item.gif" alt=""></p>
+<p>At Gizra we realized we needed a system in place to help us with the tedious task of maintaining all those baseline images. The biggest problem we faced was how to easily re-create a baseline image from a &quot;regression&quot; image. That is - the baseline image which was the right image a minute ago, may no longer be the correct one once a new piece of code was deployed, so in fact the new regression image should become the baseline.</p>
 
-<p>But the greatest difference is probably under the hood. There&#39;s no server-side as such. The data is entered via a 3rd party desktop app and exported into XML, based on which <a href="https://github.com/Gizra/CDL/">our code</a> creates Jekyll files served from Github Pages, with the fantastic <a href="http://d3js.org/">d3.js</a> powering the network UI.</p>
+<p>The second problem was that we wanted to have a single place to easily monitor all regressions so our QA and developers could check them, and if needed download the regression images to serve as the new baselines.</p>
 
-<p>I think our first exposure to this approach was via Development Seed&#39;s <a href="http://developmentseed.org/blog/2012/07/27/build-cms-free-websites/">blog post</a>. Since then we&#39;ve built a bunch of sites this way, including the one you&#39;re reading this on, and have come to think of it as &quot;server-free&quot; - there&#39;s huge weight off our backs when we don&#39;t have to worry about scaling at all, especially in scenarios which are prone to traffic spikes. Having no database or server side code to worry about is a nice bonus too.</p>
+<p>The next step was almost immediate. Since all our projects are hosted on GitHub, we soon enough realized we could do better than download - Shoov should create a pull request for us. <a href="https://github.com/webdriverio/webdrivercss">WebDriverCSS</a>, <a href="https://github.com/shoov/shoov-pr-server">NodeJs server</a>, <a href="https://github.com/shoov/docker-shoov-pr">Docker</a>, and a GitHub auto-generated access token later: bam! we have pull requests created automatically for us.</p>
 
-<p>If you happen to be in Madrid before the end of Septmeber, perhaps you&#39;ll get to see the <a href="http://casalector.fundaciongsr.com/story.php?id=1288">Depósito de Memoria</a> exhibition - if not, you can still <a href="https://github.com/Gizra/CDL/">visit it online</a>. Enjoy :)</p>
+<div class="thumbnail">
+  <img src="http://www.gizra.com/assets/images/posts/shoov-intro/image2.jpg">
+  <div class="caption">Pull request automatically created</div>
+</div>
+
+<p><a href="https://github.com/shoov/shoov">Shoov</a> is very much work in progress, but all the different pieces are now starting to gel, and we&#39;re already beginning to get significant value from it in our daily work at Gizra.</p>
 
             </div>
           </div>
@@ -204,37 +204,28 @@
             <div class="first">
               
               <div class="previous">
-                <a href="/content/zariz-entity-reference">
+                <a href="/content/headless-drupal-terminal">
                   Previous
                 </a>
               </div>
-              <a href="/content/zariz-entity-reference" class="prev-text">
-                Zariz Loves Entity Reference
+              <a href="/content/headless-drupal-terminal" class="prev-text">
+                Headless Drupal In Your Terminal
               </a>
               
             </div>
             <div class="last">
-              
-              <div class="next">
-                <a href="/content/restful-server">
-                  Next
-                </a>
-              </div>
-              <a href="/content/restful-server" class="next-text">
-                RESTful module
-              </a>
               
             </div>
           </div>
 
           <div class="row author-details">
             <div class="image-wrapper">
-              <img src="/images/team/niryariv.4f24.jpg" class="img-responsive">
+              <img src="/images/team/amitaibu.4179.jpg" class="img-responsive">
             </div>
             <div class="text-wrapper">
-              <span class="name">Nir Yariv</span> <span class="twitter">(@niryariv)</span>
-              <div class="title">Projects Lead</div>
-              <div class="bio">Messed with PHP since before it was cool, and for some time after. Now mostly herds cats.</div>
+              <span class="name">Amitai Burstein</span> <span class="twitter">(@amitaibu)</span>
+              <div class="title">CTO, Co-Owner</div>
+              <div class="bio">Maintainer of Organic groups, the Message stack, and co-maintainer of Drupal 8's Entity reference. <a href="/content/the-about-story/">The about story</a>.</div>
             </div>
           </div>
 

@@ -79,6 +79,115 @@
       
         
           
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+            
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+
+      <!--Post begin-->
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2 post">
+
+          <div class="row">
+            <div class="post-label">
+              <a href="/content/banner-rotator/">Banner rotator</a>
+            </div>
+          </div>
+
+          <div class="row small-row">
+            <div class="date">16 Feb 2012</div>
+            <div class="seprator">|</div>
+            <div class="author">By <a href="#author">Roy Segall</a></div>
+          </div>
+
+          <div class="row small-row">
+            <div class="tags">
+              
+              <ul class="inline">
+                
+                
+
+  
+    
+      <li><a href="/tags.html#Views-ref">Views</a></li>
+    
+      <li><a href="/tags.html#tutorial-ref">tutorial</a></li>
+    
+      <li><a href="/tags.html#Drupal-planet-ref">Drupal-planet</a></li>
+    
+  
+
+
+              </ul>
+              
+            </div>
+            <div class="comments-count"><a href="http://www.gizra.com/blog/page10/index.html#disqus_thread"></a></div>
+          </div>
+
+          <div class="row">
+            <div class="post-content">
+              <p>A common design element we see lately in a lot of sites is a banner rotator - image slideshow with some text and links on the side.</p>
+
+<p>There are several modules that try to deal with it in Drupal (such as &quot;ddblock&quot;, which we don&#39;t use), however we find that using the good old Views slideshow module can give us everything we need. The following blog post gives an overview of how we achieved this task without any code, just Views configuration and a bit of CSS. As always we provide a <a href="http://drupal.org/sandbox/RoySegall/1442236">feature</a> that can be installed and enabled (visit <code>/banner-rotator</code>).</p>
+
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="bottom-dash"></div>
+          </div>
+        </div>
+      </div>
+      <!--Post End-->
+      
+
+      
+        
+      
+
+      
+        
+          
             
           
         
@@ -513,129 +622,6 @@ I’m equally happy that Planet Drupal isn’t swamped with such requests. It’
 
 <p>Sneak preview time...
 As usual we can make a content type (Clubs in this example) a group, through the content type edit.</p>
-
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="bottom-dash"></div>
-          </div>
-        </div>
-      </div>
-      <!--Post End-->
-      
-
-      
-        
-      
-
-      
-        
-          
-            
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-
-      <!--Post begin-->
-      <div class="row">
-        <div class="col-md-8 col-md-offset-2 post">
-
-          <div class="row">
-            <div class="post-label">
-              <a href="/content/og7-and-entity-reference-sponsor-me/">OG7 and Entity reference - Sponsor me</a>
-            </div>
-          </div>
-
-          <div class="row small-row">
-            <div class="date">20 Nov 2011</div>
-            <div class="seprator">|</div>
-            <div class="author">By <a href="#author">Amitai Burstein</a></div>
-          </div>
-
-          <div class="row small-row">
-            <div class="tags">
-              
-              <ul class="inline">
-                
-                
-
-  
-    
-      <li><a href="/tags.html#Drupal-planet-ref">Drupal-planet</a></li>
-    
-      <li><a href="/tags.html#OG7-ref">OG7</a></li>
-    
-  
-
-
-              </ul>
-              
-            </div>
-            <div class="comments-count"><a href="http://www.gizra.com/blog/page10/index.html#disqus_thread"></a></div>
-          </div>
-
-          <div class="row">
-            <div class="post-content">
-              <ul>
-<li>Update 3: <a href="http://treehouseagency.com/">Treehouse Agency</a> are sponsoring and providing developer help</li>
-<li>Update 2: Dev version is out</li>
-<li>Update 1: <a href="http://funnymonkey.com/">FunnyMonkey</a> are sponsoring and providing developer help</li>
-</ul>
-
-<p>I was walking back home from work and thinking to myself Drupal thoughts. One of the thought was about OG7 and its use of &quot;group&quot; entity. At the time of writing OG it seemed as a good idea. It allows flexibility of showing all the groups of the site, without worrying what entity type they are (as the group ID isn’t equal to the node ID).
-It also allows easier internalization of group nodes, as again the group ID isn’t the node ID.
-In a very Drupal like way, in the other side of the world, a day later fago was asking the same question.</p>
-
-<p>After more than a year that OG7 is out, it seems that the flexibility of showing all the groups at once has a price in complexion. It makes Views require one more relationship. It makes Panels require one more relationship. It makes creating Rules and using tokens a non-intuitive task.
-I&#39;ve opened a new <a href="http://drupal.org/node/1342632">issue</a>, with one thing in mind -- deprecating the group entity, and making OG even slimmer and even more robust.
-The idea is to rely on the new kid on the block - Entity Reference, which means your reference field will know how to reference a group of a single entity type. That change will result with changing the signature of a lot of function in OG (i.e. instead of passing the group ID, one will have to pass the entity type of the group, and the entity ID of the group), but it will also result with better UX and DX.</p>
-
-<p>The idea is to create a 2.x branch, to allow people to migrate from 1.x. I honestly don’t think it will be very painful, as I’ll provide automatic migration of data. So it will be just a matter of updating the Views, Panels and custom code.
-In the above issue there are already comments from known community members giving it a big +1, and saying &quot;Let’s see this sooner than later&quot;. I also want to see this happening _fast, but my time resources are not enough.</p>
-
-<p>I’m looking for someone to sponsor this huge and non-trivial feature, which will cost US$7,500
-Please do <a href="http://www.gizra.com/contact">contact</a> me if you are interested. I will credit you on the OG module page, in the README file, and on this blog. The community will thank you greatly.</p>
 
             </div>
           </div>
