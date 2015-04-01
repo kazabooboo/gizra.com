@@ -1,5 +1,5 @@
 ---
-title: Shoov Means Again in Hebrew
+title: UI regression - Shoov Means Again in Hebrew
 tags:
   - UI regression
   - Headless Drupal
