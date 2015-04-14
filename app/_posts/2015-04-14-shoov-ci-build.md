@@ -1,9 +1,9 @@
 ---
 title: "Shoov - CI tests on the live site"
-tags: 
+tags:
   - Shoov
   - "Drupal-planet"
-permalink: "/content/shoov-ci-production-server"
+permalink: "/content/shoov-ci-tests-live-site"
 layout: post
 published: true
 ---
