@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>simpleTest with Behat for Drupal 8</title>
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="/css/main.b74f.css"/>
+
+        <link href='http://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
+
+        <!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-6558346-3', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+    </head>
+    <body>
+
+    
+
+    <header class="white">
+      <div class="container">
+        <div class="logo"><a href="/">gizra</a></div>
+        <nav id="nav" role="navigation" class="navbar navbar-default nav-fixed">
+          <div class="navbar-header">
+            <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="/products">Products</a></li>
+              <li><a href="/#about">About</a></li>
+              <li><a href="/#work">Work</a></li>
+              <li><a href="/#code">Showcase</a></li>
+              <li><a href="/blog" class="active">Blog</a></li>
+              <li><a href="/#contact">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div> <!-- End of container -->
+    </header>
+
+    
+
+
+    
+  
+
+
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+      
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+
+<section id="post-page">
+  <div class="background">
+    <img src="/images/post/background.71f5.png">
+  </div>
+
+  <div class="ballons"></div>
+  <div class="post-back">
+    <a href="/blog">
+      <img src="/images/post/post-back.fca6.png">
+    </a>
+  </div>
+
+  <div class="content">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-8 col-md-offset-2 post">
+          <div class="row">
+            <div class="post-label">
+              <a href="/content/simpletest-behat-drupal-8">simpleTest with Behat for Drupal 8</a>
+            </div>
+          </div>
+
+          <div class="row small-row">
+            <div class="date">28 Apr 2015</div>
+            <div class="seprator">|</div>
+            <div class="author">By Roy Segall</div>
+          </div>
+
+          <div class="row small-row">
+            <div class="tags">
+
+              
+              <ul class="inline">
+                
+                
+
+  
+    
+      <li><a href="/tags.html#Behat-ref">Behat</a></li>
+    
+      <li><a href="/tags.html#PHPunit-ref">PHPunit</a></li>
+    
+      <li><a href="/tags.html#QA-ref">QA</a></li>
+    
+      <li><a href="/tags.html#Drupal-planet-ref">Drupal-planet</a></li>
+    
+  
+
+
+              </ul>
+              
+            </div>
+
+            <div class="comments-count"><a href="http://www.gizra.com/content/simpletest-behat-drupal-8#disqus_thread"></a></div>
+          </div>
+
+          <div class="row">
+            <div class="post-content">
+              <p>The first time I heard about <a href="http://docs.behat.org/en/v2.5/">Behat</a> was at DrupalCon Munich 2012. Since then use of Behat has grown exponentially and the tools it can be integrate with grew as well. With Behat we can test the markup of a page - pretty neat, right?  </p>
+
+<p>Well, it&#39;s time to take Behat integration with Drupal a little further. I&#39;ve decided to try and integrate it with Drupal&#39;s simpleTest, as this would open the door for writing simpleTests that are more readable and more &quot;behavior driven&quot; by nature.</p>
+<div class="highlight"><pre><code class="Gherkin language-Gherkin" data-lang="Gherkin"><span class="k">Scenario:</span><span class="nf"> Testing the login form.</span>
+<span class="k">  Given </span><span class="nf">I visit &#39;user&#39;</span>
+<span class="nf">    </span><span class="k">And </span><span class="nf">I fill in &#39;Username&#39; with &#39;@user-name&#39;</span>
+<span class="nf">    </span><span class="k">And </span><span class="nf">I fill in &#39;Password&#39; with &#39;@user-pass&#39;</span>
+<span class="nf">   </span><span class="k">When </span><span class="nf">I press &#39;Log in&#39;</span>
+<span class="nf">   </span><span class="k">Then </span><span class="nf">I should see &#39;@user-name&#39;</span>
+</code></pre></div>
+<p>Amazingly enough, the above Gherkin code which is being executed by PHPunit can test your Drupal installation!</p>
+
+<div class="thumbnail">
+  <img src="http://www.gizra.com/assets/images/posts/behat-drupal8/test_results.png">
+  <div class="caption">Behat code executed from within Drupal's simpleTest</div>
+</div>
+
+<p>This functionality is provided by an experimental <a href="https://github.com/RoySegall/behat">repo</a>, which comes with an example test.</p>
+
+<!-- more -->
+
+<h2>The Implementation</h2>
+
+<p>The step definition mechanism discovers the methods it needs to invoke by reading the annotation on the class. In order to get the same flexible functionality the <code>I visit &quot;login&quot;</code> is translated to the following annotated class:</p>
+<div class="highlight"><pre><code class="php language-php" data-lang="php"><span class="cp">&lt;?</span> <span class="nx">php</span>
+<span class="c1"># src/Plugin/Step/Visit.php</span>
+
+<span class="c1">// ..</span>
+
+<span class="sd">/**</span>
+<span class="sd"> * @Step(</span>
+<span class="sd"> *  id = &quot;I visit &#39;(.*?)&#39;&quot;</span>
+<span class="sd"> * )</span>
+<span class="sd"> */</span>
+<span class="k">class</span> <span class="nc">Visit</span> <span class="k">extends</span> <span class="nx">BehatStepAbstract</span> <span class="p">{</span>
+
+  <span class="k">public</span> <span class="k">function</span> <span class="nf">step</span><span class="p">(</span><span class="nx">BehatTestsAbstract</span> <span class="nv">$behat</span><span class="p">,</span> <span class="nv">$url</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nv">$behat</span><span class="o">-&gt;</span><span class="na">visit</span><span class="p">(</span><span class="nv">$url</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Each placeholder <code>(.*?)</code> will be passed as additional argument. The <code>$Behat</code>
+object is an instance of <code>BehatTestsAbstract</code> which allows us to invoke the methods of the simpletest class.</p>
+
+<h2>Making it work</h2>
+
+<p>We know how Behat works, how to define a test and that we need to write a feature file. But how can we run it? Let’s see the commented code on how the login tests work:</p>
+<div class="highlight"><pre><code class="php language-php" data-lang="php"><span class="cp">&lt;?php</span>
+
+<span class="k">class</span> <span class="nc">Login</span> <span class="k">extends</span> <span class="nx">BehatTestsAbstract</span> <span class="p">{</span>
+
+  <span class="k">public</span> <span class="k">function</span> <span class="nf">testLogin</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// Create a user.</span>
+    <span class="nv">$account</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">drupalCreateUser</span><span class="p">();</span>
+    <span class="nv">$this</span>
+      <span class="c1">// Populate the behat arguments. Pass the username and password.</span>
+      <span class="o">-&gt;</span><span class="na">setPlaceholder</span><span class="p">(</span><span class="s1">&#39;@user-name&#39;</span><span class="p">,</span> <span class="nv">$account</span><span class="o">-&gt;</span><span class="na">label</span><span class="p">())</span>
+      <span class="o">-&gt;</span><span class="na">setPlaceholder</span><span class="p">(</span><span class="s1">&#39;@user-pass&#39;</span><span class="p">,</span> <span class="nv">$account</span><span class="o">-&gt;</span><span class="na">passRaw</span><span class="p">)</span>
+      <span class="c1">// As each feature file could contain a bunch of scenario and we might</span>
+      <span class="c1">// want to run tests with different tags.</span>
+      <span class="c1">// This will make sure only scenarios with the `@login-success` tag will</span>
+      <span class="c1">// run.</span>
+      <span class="o">-&gt;</span><span class="na">setTag</span><span class="p">(</span><span class="s1">&#39;@login-success&#39;</span><span class="p">)</span>
+      <span class="c1">// Execute the correct scenario.</span>
+      <span class="o">-&gt;</span><span class="na">executeScenario</span><span class="p">(</span><span class="s1">&#39;login&#39;</span><span class="p">,</span> <span class="s1">&#39;behat&#39;</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="k">public</span> <span class="k">function</span> <span class="nf">testLoginFailed</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">setTag</span><span class="p">(</span><span class="s1">&#39;login-failed&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">executeScenario</span><span class="p">(</span><span class="s1">&#39;login&#39;</span><span class="p">,</span> <span class="s1">&#39;behat&#39;</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Lets have a look at the following:</p>
+<div class="highlight"><pre><code class="php language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<span class="nv">$this</span><span class="o">-&gt;</span><span class="na">executeScenario</span><span class="p">(</span><span class="s1">&#39;login&#39;</span><span class="p">,</span> <span class="s1">&#39;Behat&#39;</span><span class="p">);</span>
+</code></pre></div>
+<p>The first argument will be the name of the file, in our example <code>login.feature</code><br>
+The second argument is the module. This tells us which module contains the feature files, so in theory even themes could provide their own tests and step definitions.</p>
+
+<h2>Next steps</h2>
+
+<p>In Drupal Dev Days 2015 quite a few people showed interest in this. Even if it won&#39;t be used by the vast majority, I still feel experiments such as this one help us explore more options, and find better tools for better QA.</p>
+
+<p>My plan for the future is to to completely eliminate the need for <code>executeScenario</code>, thus allow having a feature file without a Drupal class, while still being able to use all the step definitions provided by other modules and themes.</p>
+
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="bottom-dash"></div>
+          </div>
+
+          <div class="row post-nav">
+            <div class="first">
+              
+              <div class="previous">
+                <a href="/content/shoov-ci-tests-live-site">
+                  Previous
+                </a>
+              </div>
+              <a href="/content/shoov-ci-tests-live-site" class="prev-text">
+                Shoov - CI tests on the live site
+              </a>
+              
+            </div>
+            <div class="last">
+              
+            </div>
+          </div>
+
+          <div class="row author-details">
+            <div class="image-wrapper">
+              <img src="/images/team/roysegall.c400.jpg" class="img-responsive">
+            </div>
+            <div class="text-wrapper">
+              <span class="name">Roy Segall</span> <span class="twitter">(@roysegall)</span>
+              <div class="title">Developer</div>
+              <div class="bio">Not afraid of patching Organic groups, Entity reference or the Message stack. Knows how to make tasty Pizza.</div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="bottom-dash-small"></div>
+          </div>
+
+          <div class="row">
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'gizra';
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="text/javascript">
+var disqus_shortname = 'gizra';
+
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function () {
+var s = document.createElement('script'); s.async = true;
+s.type = 'text/javascript';
+s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+
+
+
+
+    <script src="/js/plugins.5250.js"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+
+    <script src="/js/scripts.87fd.js"></script>
+
+    </body>
+</html>

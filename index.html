@@ -318,6 +318,40 @@
     <div class="row">
       <div class="col-md-offset-2 col-md-8 post">
         <div class="date">
+          28 Apr 2015
+        </div>
+
+        <div class="post-label">
+          <a href="/content/simpletest-behat-drupal-8">simpleTest with Behat for Drupal 8</a>
+        </div>
+
+        <div class="teaser">
+          <p>The first time I heard about <a href="http://docs.behat.org/en/v2.5/">Behat</a> was at DrupalCon Munich 2012. Since then use of Behat has grown exponentially and the tools it can be integrate with grew as well. With Behat we can test the markup of a page - pretty neat, right?  </p>
+
+<p>Well, it&#39;s time to take Behat integration with Drupal a little further. I&#39;ve decided to try and integrate it with Drupal&#39;s simpleTest, as this would open the door for writing simpleTests that are more readable and more &quot;behavior driven&quot; by nature.</p>
+<div class="highlight"><pre><code class="Gherkin language-Gherkin" data-lang="Gherkin"><span class="k">Scenario:</span><span class="nf"> Testing the login form.</span>
+<span class="k">  Given </span><span class="nf">I visit &#39;user&#39;</span>
+<span class="nf">    </span><span class="k">And </span><span class="nf">I fill in &#39;Username&#39; with &#39;@user-name&#39;</span>
+<span class="nf">    </span><span class="k">And </span><span class="nf">I fill in &#39;Password&#39; with &#39;@user-pass&#39;</span>
+<span class="nf">   </span><span class="k">When </span><span class="nf">I press &#39;Log in&#39;</span>
+<span class="nf">   </span><span class="k">Then </span><span class="nf">I should see &#39;@user-name&#39;</span>
+</code></pre></div>
+<p>Amazingly enough, the above Gherkin code which is being executed by PHPunit can test your Drupal installation!</p>
+
+<div class="thumbnail">
+  <img src="http://www.gizra.com/assets/images/posts/behat-drupal8/test_results.png">
+  <div class="caption">Behat code executed from within Drupal's simpleTest</div>
+</div>
+
+<p>This functionality is provided by an experimental <a href="https://github.com/RoySegall/behat">repo</a>, which comes with an example test.</p>
+
+        </div>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-md-offset-2 col-md-8 post">
+        <div class="date">
           14 Apr 2015
         </div>
 
@@ -393,29 +427,6 @@
       </div>
     </div>
     
-    <div class="row">
-      <div class="col-md-offset-2 col-md-8 post">
-        <div class="date">
-          02 Feb 2015
-        </div>
-
-        <div class="post-label">
-          <a href="/content/logs-easy-way">Logs, The Easy Way</a>
-        </div>
-
-        <div class="teaser">
-          <p>Your team invested countless hours in development.</p>
-
-<p>Your QA people can barely keep their eyes open - they have worked so hard. Your lead developer who&#39;s responsible for the deployment is almost dehydrated from so much pressure and sweat.  </p>
-
-<p>But it&#39;s all worth it. Your app is live. Now everybody goes to sleep, and your pampered app, is all alone, serving your data to the entire world.  </p>
-
-<p>You forgot one thing - to give it a phone to call home, and tell you something went wrong.</p>
-
-        </div>
-      </div>
-    </div>
-    
 
     <div class="row">
       <div class="col-md-offset-2 col-md-2">
@@ -437,7 +448,10 @@
           5 Brenner St., Tel-Aviv, Israel
         </div>
         <div>
-          <a href="tel:+97233731222" class="telephone">+972-3-3731222</a>
+          Tel: <a href="tel:+97233731222" class="telephone">+972-3-3731222</a>
+        </div>
+        <div>
+          Fax: +972-3-5617771
         </div>
         <div>
           <a href="mailto:info@gizra.com" class="email">info@gizra.com</a>
