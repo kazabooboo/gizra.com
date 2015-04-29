@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Casa del Lector</title>
+        <title>Cross Browser Visual Regression Tests With Shoov</title>
         <meta name="viewport" content="width=device-width">
 
         <link rel="stylesheet" href="/css/main.b74f.css"/>
@@ -65,15 +65,15 @@
 
   
     
-  
-
-  
-    
-  
-
-  
-    
       
+    
+  
+
+  
+    
+  
+
+  
     
   
 
@@ -129,14 +129,14 @@
         <div class="col-md-8 col-md-offset-2 post">
           <div class="row">
             <div class="post-label">
-              <a href="/content/casa-del-lector">Casa del Lector</a>
+              <a href="/content/cross-browser-visual-regression-with-shoov">Cross Browser Visual Regression Tests With Shoov</a>
             </div>
           </div>
 
           <div class="row small-row">
-            <div class="date">13 Mar 2014</div>
+            <div class="date">29 Apr 2015</div>
             <div class="seprator">|</div>
-            <div class="author">By Nir Yariv</div>
+            <div class="author">By Amitai Burstein</div>
           </div>
 
           <div class="row small-row">
@@ -149,13 +149,11 @@
 
   
     
-      <li><a href="/tags.html#casa del lector-ref">casa del lector</a></li>
+      <li><a href="/tags.html#Shoov-ref">Shoov</a></li>
     
-      <li><a href="/tags.html#d3js-ref">d3js</a></li>
+      <li><a href="/tags.html#QA-ref">QA</a></li>
     
-      <li><a href="/tags.html#server-free-ref">server-free</a></li>
-    
-      <li><a href="/tags.html#mobile-ref">mobile</a></li>
+      <li><a href="/tags.html#Drupal-planet-ref">Drupal-planet</a></li>
     
   
 
@@ -164,34 +162,47 @@
               
             </div>
 
-            <div class="comments-count"><a href="http://www.gizra.com/content/casa-del-lector#disqus_thread"></a></div>
+            <div class="comments-count"><a href="http://www.gizra.com/content/cross-browser-visual-regression-with-shoov#disqus_thread"></a></div>
           </div>
 
           <div class="row">
             <div class="post-content">
-              <p>Last week saw the launch of a pretty unique <a href="http://gizra.github.io/CDL/">project</a> for us. It&#39;s not every day a product we&#39;ve worked on gets a <a href="http://cultura.elpais.com/cultura/2014/03/05/actualidad/1394047004_090821.html">write up on El Pais</a>, or has this kind of launch event:</p>
+              <p>Maintaining visual regression tests can be hard, but the more tests we write for our projects, the more we see the tremendous power it provides in terms of QA and monitoring our sites.</p>
 
-<p><img src="/assets/images/posts/casa-del-lector/IMG_8388-2.JPG" alt=""></p>
+<p>One daunting task each developer hates (and often avoids) is validating their markup on multiple browsers. All of Gizra&#39;s developers use either Mac or Ubuntu on their machines, so the line to the &quot;IE computer&quot; on the far end of the office is getting long. Way too long.</p>
 
-<p>The target audience is a bit unusual as well. While it can be accessed like any other site, it&#39;s targeted to be used inside a specific exhibition in the <a href="http://casalector.fundaciongsr.com/">Casa del Lector</a> museum in Madrid, on tablets handed out to the museum visitors:</p>
+<p>And honestly - after our poor developers validated their work once, if we&#39;d ask them to do it again. And again. And again... we&#39;d probably be left without any.</p>
 
-<p><img src="/assets/images/posts/casa-del-lector/IMG_8259%20-%202.JPG" alt=""></p>
+<p>Developers moral shouldn&#39;t be underestimated!</p>
 
-<p>We took great care to stay within the touch UI conventions. When entering the site, the user is presented with a network of connections between items. As she zooms, details are revealed - subitems, their connections and finally their titles:</p>
+<p>Shoov means &quot;Again&quot; in Hebrew for this very reason.Go ahead and jump to our <a href="https://github.com/shoov/test-example">example repo</a> which now has cross browser tests. Writing your tests once - but testing on multiple platforms and browsers is a <em>big</em> win.</p>
 
-<p><img src="/assets/images/posts/casa-del-lector/cdl-map-1.gif" alt=""></p>
+<div class="thumbnail">
+  <img src="http://www.gizra.com/assets/images/posts/shoov-multiple-platforms/image1.jpg">
+  <div class="caption">DuckDuckGo.com tested by BrowserStack on Windows7, IE11, with 1024x780 resolution</div>
+</div>
 
 <!-- more -->
 
-<p>Tapping a node highlights its connections within the network, and a second tap takes the user to the node content, which contains various media:</p>
+<p>You can now execute <code>mocha</code> with different options. The simple <code>mocha</code> will still use a default browser (e.g. phantomJs), but you could also do:</p>
+<div class="highlight"><pre><code class="bash language-bash" data-lang="bash"><span class="c"># Execute the tests using the ie11 config.</span>
+<span class="nv">PROVIDER_PREFIX</span><span class="o">=</span>browserstack <span class="nv">SELECTED_CAPS</span><span class="o">=</span>ie11 mocha
 
-<p><img src="/assets/images/posts/casa-del-lector/cdl-item.gif" alt=""></p>
+<span class="c"># Execute the tests using the chrome on Mac config.</span>
+<span class="nv">PROVIDER_PREFIX</span><span class="o">=</span>saucelabs <span class="nv">SELECTED_CAPS</span><span class="o">=</span>chrome mocha
 
-<p>But the greatest difference is probably under the hood. There&#39;s no server-side as such. The data is entered via a 3rd party desktop app and exported into XML, based on which <a href="https://github.com/Gizra/CDL/">our code</a> creates Jekyll files served from Github Pages, with the fantastic <a href="http://d3js.org/">d3.js</a> powering the network UI.</p>
+<span class="c"># Execute the tests using your own provider and config.</span>
+<span class="nv">PROVIDER_PREFIX</span><span class="o">=</span>myOwnProvider <span class="nv">SELECTED_CAPS</span><span class="o">=</span>myOwnConfig mocha
+</code></pre></div>
+<p>Combined with paid services such as <a href="https://browserstack.com">BrowserStack</a> or <a href="https://saucelabs.com">SauceLabs</a> there is no longer a need for a PC in the corner of the office - as they provide you with an instant virtual machine with lots of platforms and browsers.</p>
 
-<p>I think our first exposure to this approach was via Development Seed&#39;s <a href="http://developmentseed.org/blog/2012/07/27/build-cms-free-websites/">blog post</a>. Since then we&#39;ve built a bunch of sites this way, including the one you&#39;re reading this on, and have come to think of it as &quot;server-free&quot; - there&#39;s huge weight off our backs when we don&#39;t have to worry about scaling at all, especially in scenarios which are prone to traffic spikes. Having no database or server side code to worry about is a nice bonus too.</p>
+<div class="thumbnail">
+  <img src="http://www.gizra.com/assets/images/posts/shoov-multiple-platforms/image2.jpg">
+  <div class="caption">BrowserStack is providing our virtual boxes on demand</div>
+</div>
 
-<p>If you happen to be in Madrid before the end of Septmeber, perhaps you&#39;ll get to see the <a href="http://casalector.fundaciongsr.com/story.php?id=1288">Depósito de Memoria</a> exhibition - if not, you can still <a href="https://github.com/Gizra/CDL/">visit it online</a>. Enjoy :)</p>
+<p>As we are using those services for testing our projects on multiple platforms and browsers, we are suddenly dealing with lots of images. Since our sites are frequently changing, those baseline images tend to change quite frequently.<br>
+This is where <a href="shoov.gizra.com">Shoov</a> really helps us in the tedious task of making sure our visual regression tests are up to date. It does it by allowing us to easily replace the baseline images with the regression ones, either by downloading them with the correct name, or even by creating a pull request for us.</p>
 
             </div>
           </div>
@@ -204,37 +215,28 @@
             <div class="first">
               
               <div class="previous">
-                <a href="/content/zariz-entity-reference">
+                <a href="/content/simpletest-behat-drupal-8">
                   Previous
                 </a>
               </div>
-              <a href="/content/zariz-entity-reference" class="prev-text">
-                Zariz Loves Entity Reference
+              <a href="/content/simpletest-behat-drupal-8" class="prev-text">
+                simpleTest with Behat for Drupal 8
               </a>
               
             </div>
             <div class="last">
-              
-              <div class="next">
-                <a href="/content/restful-server">
-                  Next
-                </a>
-              </div>
-              <a href="/content/restful-server" class="next-text">
-                RESTful module
-              </a>
               
             </div>
           </div>
 
           <div class="row author-details">
             <div class="image-wrapper">
-              <img src="/images/team/niryariv.4f24.jpg" class="img-responsive">
+              <img src="/images/team/amitaibu.4179.jpg" class="img-responsive">
             </div>
             <div class="text-wrapper">
-              <span class="name">Nir Yariv</span> <span class="twitter">(@niryariv)</span>
-              <div class="title">Projects Lead</div>
-              <div class="bio">Messed with PHP since before it was cool, and for some time after. Now mostly herds cats.</div>
+              <span class="name">Amitai Burstein</span> <span class="twitter">(@amitaibu)</span>
+              <div class="title">CTO, Co-Owner</div>
+              <div class="bio">Maintainer of Organic groups, the Message stack, and co-maintainer of Drupal 8's Entity reference. <a href="/content/the-about-story/">The about story</a>.</div>
             </div>
           </div>
 
