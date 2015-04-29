@@ -19,7 +19,7 @@ And honestly - after our poor developers validated their work once, if we'd ask 
 
 Developers moral shouldn't be underestimated!
 
-Shoov means "Again" in Hebrew for this very reason.Go ahead and jump to our [example repo](https://github.com/shoov/test-example) which now has cross browser tests. Writing your tests once - but testing on multiple platforms and browsers is a _big_ win.
+[Shoov](/content/shoov-ui-regression/) means "Again" in Hebrew for this very reason.Go ahead and jump to our [example repo](https://github.com/shoov/test-example) which now has cross browser tests. Writing your tests once - but testing on multiple platforms and browsers is a _big_ win.
 
 <div class="thumbnail">
   <img src="{{BASE_PATH}}/assets/images/posts/shoov-multiple-platforms/image1.jpg">
