@@ -2,6 +2,7 @@ $gizra-orange: #e27058;
 $gizra-orange-dark: #bb5641;
 $gizra-orange-light: #fba200;
 $gizra-blue: #2a5691;
+$gizra-blue-dark: #244b80;
 $gizra-black: #515151;
 $gizra-orange-hover: #E75E08;
 $gizra-text: #5D5D5D;
@@ -1070,7 +1071,31 @@ header {
   }
 }
 
+.demo-block {
+  font-family: OstrichSansMedium;
+  border-top: 1px dashed rgba(154, 43, 44, 0.26);
+  border-bottom: 1px dashed rgba(154, 43, 44, 0.26);
+  padding: 10px 0px;
+  margin-bottom: 20px;
 
+  .demo {
+    margin-right: 10px;
+  }
+
+  .demo, .code {
+    font-size: 22px;
+    color: #ffffff;
+    background: $gizra-blue;
+    padding: 7px 10px;
+    width: 180px;
+    display: inline-block;
+
+    &:hover {
+      background: $gizra-blue-dark;
+      text-decoration: none;
+    }
+  }
+}
 
 
 
