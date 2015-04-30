@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>What is Message module, and its new features</title>
+        <title>AngularJs Ui-Router</title>
         <meta name="viewport" content="width=device-width">
 
         <link rel="stylesheet" href="/css/main.3e33.css"/>
@@ -65,43 +65,43 @@
 
   
     
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
       
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
     
   
 
@@ -129,14 +129,14 @@
         <div class="col-md-8 col-md-offset-2 post">
           <div class="row">
             <div class="post-label">
-              <a href="/content/what-message-module-and-its-new-features/">What is Message module, and its new features</a>
+              <a href="/content/angularjs-ui-router">AngularJs Ui-Router</a>
             </div>
           </div>
 
           <div class="row small-row">
-            <div class="date">12 Jul 2012</div>
+            <div class="date">30 Apr 2015</div>
             <div class="seprator">|</div>
-            <div class="author">By Amitai Burstein</div>
+            <div class="author">By Yaron Miro</div>
           </div>
 
           <div class="row small-row">
@@ -149,9 +149,11 @@
 
   
     
-      <li><a href="/tags.html#Message-ref">Message</a></li>
+      <li><a href="/tags.html#AngularJs-ref">AngularJs</a></li>
     
-      <li><a href="/tags.html#Drupal-planet-ref">Drupal-planet</a></li>
+      <li><a href="/tags.html#Ui-Router-ref">Ui-Router</a></li>
+    
+      <li><a href="/tags.html#Javascript-ref">Javascript</a></li>
     
   
 
@@ -160,47 +162,67 @@
               
             </div>
 
-            <div class="comments-count"><a href="http://www.gizra.com/content/what-message-module-and-its-new-features/#disqus_thread"></a></div>
+            <div class="comments-count"><a href="http://www.gizra.com/content/angularjs-ui-router#disqus_thread"></a></div>
           </div>
 
           <div class="row">
             <div class="post-content">
-              <p><a href="http://drupal.org/project/message">Message</a> module’s inclusion in the upcoming version of Commerce Kickstart, and it’s very likely inclusion in Drupal Commons 7 turns this not very known module into an important module to know about.
-Message can help with many tasks from simple logs to complicated activity streams and even, with the use of  Message Notify module, multilingual digest emails.</p>
+              <p>One of the things I love to do is watch movies at home with my soon-to-be-wife (with emphasis on <em>soon</em> as I&#39;m getting married tomorrow!). We have seen a lot of them over the years so it&#39;s not always easy to find a new movie or to remember a good movie that&#39;s worth watching again.  </p>
+
+<p>Combined with my love to JavaScript I&#39;ve decided to create an AngularJS app with <a href="http://angular-ui.github.io/ui-router/sample/">ui-router</a> library.  The demo app fetches Apple <a href="https://www.apple.com/itunes/charts/movies/">iTunes top 60</a> movies and presents the info and trailer for each, and even has a cool archive feature that lets you create your own private collection.</p>
+
+<div class="demo-block text-center">
+  <a class="demo" target=_blank" href="http://yaronmiro.github.io/AngularJS-UI-Router-Demo">View demo</a>
+  <a class="code" target=_blank" href="https://github.com/YaronMiro/AngularJS-UI-Router-Demo">Get the source code</a>
+</div>
+
+<div class="thumbnail">
+  <img src="http://www.gizra.com/assets/images/posts/angularjs-ui-router/image1.jpg">
+  <div class="caption">angularJS and ui-router demo application</div>
+</div>
 
 <!-- more -->
 
-<h3>What is a message</h3>
+<h2>UI-router</h2>
 
-<p>Messages are entities belonging to a specific “Message type”, defining the purpose of its messages. Think of the relation of a Message to a Message type the same as what a node is to a node type. A good resource for understating Message is the Message-Example module that ships with Message, and is well documented. Even Organic groups’ example module has integration with Message to show how it can be used for group notification.
-<img src="/assets/images/legacy/message-1.jpg" /></p>
+<p>UI-router has the ability to structure your application based on states.
+These states can be <a href="https://github.com/angular-ui/ui-router/wiki#state-manager">parallel</a>, <a href="https://github.com/angular-ui/ui-router/wiki/Nested-States-%26-Nested-Views">nested</a> and even structured into <a href="https://github.com/angular-ui/ui-router/wiki/Nested-States-%26-Nested-Views">multiple named views</a>.</p>
 
-<h3>Tokens</h3>
+<p>A state is not dependent upon a URL. You can assign a URL to a state but it can also be transitioned from one to another without a URL change.</p>
 
-<p>As it is possible to attach fields to messages, we can leverage the token system. In fact we have 3 different powerful ways for text “replacements”:
+<p>The app has plenty of comments that describe each router and its relation to the other <a href="https://github.com/YaronMiro/AngularJS-UI-Router-Demo/blob/master/app/scripts/app.js#L62-L213">states</a>.</p>
+
+<h3>State</h3>
+
+<p>A <code>state</code> can have its own template and controller. This simplifies the application structure, for a cleaner and maintainable code environment. No more thick controllers and fat templates - now you can separate your code into <a href="https://github.com/YaronMiro/AngularJS-UI-Router-Demo/blob/master/app/scripts/controllers/movies.js">smaller</a> <a href="https://github.com/YaronMiro/AngularJS-UI-Router-Demo/blob/master/app/scripts/services/movies.js">reusable</a> fragments.</p>
+
+<h3>Nested States</h3>
+
+<p>Here are some key concepts for nested states:</p>
+
 <ul>
-<li>Regular tokens: <code>[message:user:name]</code>, will be replaced on the fly when presenting the message, with the most updated data</li>
-<li>One-use tokens: <code>@{message:user:name}</code>, similar to the previous example the user’s name will be shown, but instead of calculating it _every time the message is shown, we calculate it once when the Message is saved, so next time we can get the saved value faster</li>
-<li>Callbacks: sometimes we can’t use the token system, for example if we need to show different results based on the value of _two different fields. This is an advanced feature, which is meant for developers, and is documented in the module</li>
-</ul></p>
+<li>Child state can inherit (resolved data or custom data) from their ancestors states.</li>
+<li>Child may extend the ancestor state URL or override with its own URL.</li>
+<li>An abstract parent state can be created as a base-ground for all of its child states.</li>
+</ul>
 
-<h3>Partials</h3>
+<p>Abstract state can never be transitioned to, it is activated implicitly when one of its descendants are activated. This can be useful in several situations:</p>
 
-<p>The message text is of multiple cardinality (or combined of multiple “partials”), in order to allow presenting the message in a complex layout without adding too much markup to the message text.</p>
+<ul>
+<li>Preparing a URL for all of the child states.</li>
+<li>Creating a place holder template that the child state can populate.</li>
+<li>Inheriting $scope objects down to the child state.</li>
+<li>Providing resolved dependencies via resolve for use by child states.</li>
+<li>Providing inherited custom data via data for use by child states or an event listener.</li>
+</ul>
 
-<p><img src="/assets/images/legacy/message-2.jpg" /></p>
+<h3>Multiple Named Views</h3>
 
-<p>Below is  a View using “Panel fields” settings (part of Panels) allowing to set which partial goes on which region of the message template.
-Not only we didn’t have to add complicated HTML to the message itself, in fact in different Views we can have different layouts!</p>
+<p>You can create a complex state that is divided in to regions (named views). Each region can have its own template and controller. Child states may optionally inject their region relative to their ancestor state and thus override it.</p>
 
-<p><img src="/assets/images/legacy/message-3.jpg" /></p>
+<h2>Next steps</h2>
 
-<h3>Auto delete & Purge</h3>
-
-<p>Two new features include purging of messages (e.g. delete all messages older than 30 days, or if reached a maximum of 1000), and deletion of Messages when the referenced entities are deleted - to keep your database nice and slim.
-Don’t worry, Message has lots of tests to make sure we don’t accidentally delete wrong data...</p>
-
-<p>Also, keep an eye on Message notify - Sanjay Rohila (<a href=”http://drupal.org/user/1274328”>crazyrohila</a>) a GSOC student, is wokring on making it pluggable, so you can send a message not only as email, but also as SMS, IM, etc’.</p>
+<p>Next, I plan to add a Drupal backend using <a href="https://github.com/Gizra/generator-hedley">Hedley</a> - currently bookmarking is just locally to <code>localStorage</code>. After that I&#39;m not sure what I&#39;ll do. I think first I&#39;ll enjoy my honeymoon, watching movies with the wife...</p>
 
             </div>
           </div>
@@ -213,37 +235,28 @@ Don’t worry, Message has lots of tests to make sure we don’t accidentally de
             <div class="first">
               
               <div class="previous">
-                <a href="/content/about-strong-partnership-and-winning-game-bowling/">
+                <a href="/content/cross-browser-visual-regression-with-shoov">
                   Previous
                 </a>
               </div>
-              <a href="/content/about-strong-partnership-and-winning-game-bowling/" class="prev-text">
-                About strong partnership and winning a game of bowling
+              <a href="/content/cross-browser-visual-regression-with-shoov" class="prev-text">
+                Cross Browser Visual Regression Tests With Shoov
               </a>
               
             </div>
             <div class="last">
-              
-              <div class="next">
-                <a href="/content/drupalcamp-montreal-keynote/">
-                  Next
-                </a>
-              </div>
-              <a href="/content/drupalcamp-montreal-keynote/" class="next-text">
-                DrupalCamp Montreal Keynote
-              </a>
               
             </div>
           </div>
 
           <div class="row author-details">
             <div class="image-wrapper">
-              <img src="/images/team/amitaibu.4179.jpg" class="img-responsive">
+              <img src="/images/team/yaronMiro.816b.jpg" class="img-responsive">
             </div>
             <div class="text-wrapper">
-              <span class="name">Amitai Burstein</span> <span class="twitter">(@amitaibu)</span>
-              <div class="title">CTO, Co-Owner</div>
-              <div class="bio">Maintainer of Organic groups, the Message stack, and co-maintainer of Drupal 8's Entity reference. <a href="/content/the-about-story/">The about story</a>.</div>
+              <span class="name">Yaron Miro</span> <span class="twitter">(@yaronMiro)</span>
+              <div class="title">Developer</div>
+              <div class="bio">There are no shortcuts in life, Do what is necessary, Everything matters!.</div>
             </div>
           </div>
 

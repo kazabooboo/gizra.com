@@ -6,7 +6,7 @@
         <title>Your Project. The Gizra Way</title>
         <meta name="viewport" content="width=device-width">
 
-        <link rel="stylesheet" href="/css/main.b74f.css"/>
+        <link rel="stylesheet" href="/css/main.3e33.css"/>
 
         <link href='http://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
 
@@ -70,6 +70,142 @@
   <div class="content">
     <div class="container">
 
+      
+
+      
+        
+      
+
+      
+        
+          
+            
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+
+      <!--Post begin-->
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2 post">
+
+          <div class="row">
+            <div class="post-label">
+              <a href="/content/restful-server">RESTful module</a>
+            </div>
+          </div>
+
+          <div class="row small-row">
+            <div class="date">06 May 2014</div>
+            <div class="seprator">|</div>
+            <div class="author">By <a href="#author">Amitai Burstein</a></div>
+          </div>
+
+          <div class="row small-row">
+            <div class="tags">
+              
+              <ul class="inline">
+                
+                
+
+  
+    
+      <li><a href="/tags.html#RESTful-ref">RESTful</a></li>
+    
+      <li><a href="/tags.html#AngularJs-ref">AngularJs</a></li>
+    
+      <li><a href="/tags.html#Drupal-planet-ref">Drupal-planet</a></li>
+    
+  
+
+
+              </ul>
+              
+            </div>
+            <div class="comments-count"><a href="http://www.gizra.com/blog/page6/index.html#disqus_thread"></a></div>
+          </div>
+
+          <div class="row">
+            <div class="post-content">
+              <p><a href="https://github.com/Gizra/restful#restful-best-practices-for-drupal">RESTful module</a> is a new approach to providing a REST server in Drupal. Its concepts and philosophy appears in the module&#39;s README so I won&#39;t repeat it, but I&#39;d like to go over some of the key points.</p>
+<div class="highlight"><pre><code class="php language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<span class="c1">// Handler v1.0</span>
+<span class="nv">$handler</span> <span class="o">=</span> <span class="nx">restful_get_restful_handler</span><span class="p">(</span><span class="s1">&#39;articles&#39;</span><span class="p">);</span>
+<span class="c1">// GET method.</span>
+<span class="nv">$result</span> <span class="o">=</span> <span class="nv">$handler</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+
+<span class="c1">// Output:</span>
+<span class="k">array</span><span class="p">(</span>
+  <span class="s1">&#39;id&#39;</span> <span class="o">=&gt;</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="s1">&#39;label&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;example title&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;self&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;https://example.com/node/1&#39;</span><span class="p">,</span>
+<span class="p">);</span>
+
+<span class="c1">// Handler v1.1 extends v1.0, and removes the &quot;self&quot; property from the</span>
+<span class="c1">// exposed properties.</span>
+<span class="nv">$handler</span> <span class="o">=</span> <span class="nx">restful_get_restful_handler</span><span class="p">(</span><span class="s1">&#39;articles&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+<span class="nv">$result</span> <span class="o">=</span> <span class="nv">$handler</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+
+<span class="c1">// Output:</span>
+<span class="k">array</span><span class="p">(</span>
+  <span class="s1">&#39;id&#39;</span> <span class="o">=&gt;</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="s1">&#39;label&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;example title&#39;</span><span class="p">,</span>
+<span class="p">);</span>
+<span class="cp">?&gt;</span><span class="x"></span>
+</code></pre></div>
+<p>In the past year almost every site we have is either completely decoupled from the server side where AngularJs serves the webapp, or AngularJS plays a smaller part, and we just embed web components inside a Drupal page to provide a slick UI.</p>
+
+<p>Up until now our go to module was RestWs by the wonderful Klausi, which wraps around Entity API module&#39;s metadata wrapper. Basically, it hands over to the metadata wrapper the responsibility for the access and for the actual value it spits out.
+It works fine, however the JSON it exposes has too much information.</p>
+
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="bottom-dash"></div>
+          </div>
+        </div>
+      </div>
+      <!--Post End-->
       
 
       
@@ -503,115 +639,6 @@ that the reference will change on the fly. For example:</p>
               <p>I had a fun conversation with Jam this morning, regarding <a href="http://www.gizra.com/content/zariz-means-agile/">Zariz</a> - the set of Drupal modules we&#39;re developing that (a) <a href="http://www.gizra.com/content/zariz-in-pics/">brings version control into the content space</a> and (b) <a href="http://www.gizra.com/content/drupal-x5-faster/">brings Drupal into the static site space</a>. If you&#39;re into that kind of stuff, you might enjoy it too:</p>
 
 <iframe width="560" height="315" src="//www.youtube.com/embed/vGUSXwURVVo" frameborder="0" allowfullscreen></iframe>
-
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="bottom-dash"></div>
-          </div>
-        </div>
-      </div>
-      <!--Post End-->
-      
-
-      
-        
-      
-
-      
-        
-          
-            
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-
-      <!--Post begin-->
-      <div class="row">
-        <div class="col-md-8 col-md-offset-2 post">
-
-          <div class="row">
-            <div class="post-label">
-              <a href="/content/drupal-x5-faster">Drupal, only x5 faster</a>
-            </div>
-          </div>
-
-          <div class="row small-row">
-            <div class="date">09 Jan 2014</div>
-            <div class="seprator">|</div>
-            <div class="author">By <a href="#author">Amitai Burstein</a></div>
-          </div>
-
-          <div class="row small-row">
-            <div class="tags">
-              
-              <ul class="inline">
-                
-                
-
-  
-    
-      <li><a href="/tags.html#Zariz-ref">Zariz</a></li>
-    
-      <li><a href="/tags.html#Drupal-planet-ref">Drupal-planet</a></li>
-    
-  
-
-
-              </ul>
-              
-            </div>
-            <div class="comments-count"><a href="http://www.gizra.com/blog/page6/index.html#disqus_thread"></a></div>
-          </div>
-
-          <div class="row">
-            <div class="post-content">
-              <p>This is the <code>live</code> branch on the Drupal site
-<img src="/assets/images/posts/zariz-static/1.jpg" alt=""></p>
-
-<p>This is the static site created out of the live site. It looks the same, but loads x5 faster.
-<img src="/assets/images/posts/zariz-static/2.jpg" alt=""></p>
 
             </div>
           </div>
