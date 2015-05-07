@@ -318,6 +318,30 @@
     <div class="row">
       <div class="col-md-offset-2 col-md-8 post">
         <div class="date">
+          07 May 2015
+        </div>
+
+        <div class="post-label">
+          <a href="/content/shoov-monitor-twitter">How we could monitor Twitter (if we had to)</a>
+        </div>
+
+        <div class="teaser">
+          <p>Monitoring your live site is a pretty good idea - that&#39;s generally agreed. Same goes for visual regression testing. Doing it, however, is hard. Enough so that very few companies actually do visual regression testing/monitoring, so don&#39;t feel bad if you haven&#39;t either until now. But after reading this post you should seriously consider doing it. Or at least give it a <a href="https://github.com/shoov/test-example">try</a>.</p>
+
+<p>For example, here&#39;s an overview of how we could monitor Twitter, if someone would actually ask us to (as always you can jump right into the <a href="https://github.com/amitaibu/ci-tests-twitter">repository</a>):</p>
+
+<div class="thumbnail">
+  <img src="http://www.gizra.com/assets/images/posts/shoov-twitter/image1.jpg">
+  <div class="caption">Visual regression on a Twitter page. So much functionality has been asserted in this simple screenshot</div>
+</div>
+
+        </div>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-md-offset-2 col-md-8 post">
+        <div class="date">
           30 Apr 2015
         </div>
 
@@ -403,36 +427,6 @@
 </div>
 
 <p>This functionality is provided by an experimental <a href="https://github.com/RoySegall/behat">repo</a>, which comes with an example test.</p>
-
-        </div>
-      </div>
-    </div>
-    
-    <div class="row">
-      <div class="col-md-offset-2 col-md-8 post">
-        <div class="date">
-          14 Apr 2015
-        </div>
-
-        <div class="post-label">
-          <a href="/content/shoov-ci-tests-live-site">Shoov - CI tests on the live site</a>
-        </div>
-
-        <div class="teaser">
-          <p><a href="/content/shoov-ui-regression/">Shoov</a> keeps evolving, and now has an <a href="https://github.com/shoov/test-example">example repo</a> that demonstrates how we&#39;re trying to make UI regression simpler, we took some time to implement the second feature we were missing - automatic testing on the <em>live</em> site.</p>
-
-<p>We saw a very strange situation everywhere we looked: Dev teams were writing amazing test coverage. They were going the extra mile to setup a Travis box with environment as close as possible to the live site. They tested every single feature, and added a regression test for every bug. Heck, every commit triggered a test suite that run for an hour before being carefully reviewed and merged.</p>
-
-<p>And then the site goes live - and at best they might add <a href="https://www.pingdom.com/">Pingdom</a> monitoring to check it&#39;s working. Pingdom at its simplest form sends an http request every minute to your site. If the answer is <code>200</code> - it means that all is good in the world. Which is of course wrong.</p>
-
-<p>Our mission is to change this, and bring functional testing to the live site. One that is easy to setup and that integrates with your existing testing and GitHub flow.</p>
-
-<div class="thumbnail">
-  <img src="http://www.gizra.com/assets/images/posts/shoov-ci-build/image1.jpg">
-  <div class="caption">The Drupal backend holds the CI build data, including the full log, and status</div>
-</div>
-
-<p>While Pingdom is wonderful and is alerting us on time whenever a site goes down, its &quot;page is fine, move along&quot; approach doesn&#39;t cut it for us. Here are some examples why testing on the production server is a good idea:</p>
 
         </div>
       </div>

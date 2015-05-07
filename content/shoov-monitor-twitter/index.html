@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>How we could monitor Twitter (if we had to)</title>
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="/css/main.3e33.css"/>
+
+        <link href='http://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
+
+        <!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-6558346-3', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+    </head>
+    <body>
+
+    
+
+    <header class="white">
+      <div class="container">
+        <div class="logo"><a href="/">gizra</a></div>
+        <nav id="nav" role="navigation" class="navbar navbar-default nav-fixed">
+          <div class="navbar-header">
+            <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="/products">Products</a></li>
+              <li><a href="/#about">About</a></li>
+              <li><a href="/#work">Work</a></li>
+              <li><a href="/#code">Showcase</a></li>
+              <li><a href="/blog" class="active">Blog</a></li>
+              <li><a href="/#contact">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div> <!-- End of container -->
+    </header>
+
+    
+
+
+    
+  
+
+
+
+  
+    
+      
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+
+<section id="post-page">
+  <div class="background">
+    <img src="/images/post/background.71f5.png">
+  </div>
+
+  <div class="ballons"></div>
+  <div class="post-back">
+    <a href="/blog">
+      <img src="/images/post/post-back.fca6.png">
+    </a>
+  </div>
+
+  <div class="content">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-8 col-md-offset-2 post">
+          <div class="row">
+            <div class="post-label">
+              <a href="/content/shoov-monitor-twitter">How we could monitor Twitter (if we had to)</a>
+            </div>
+          </div>
+
+          <div class="row small-row">
+            <div class="date">07 May 2015</div>
+            <div class="seprator">|</div>
+            <div class="author">By Amitai Burstein</div>
+          </div>
+
+          <div class="row small-row">
+            <div class="tags">
+
+              
+              <ul class="inline">
+                
+                
+
+  
+    
+      <li><a href="/tags.html#Shoov-ref">Shoov</a></li>
+    
+      <li><a href="/tags.html#Visual regression-ref">Visual regression</a></li>
+    
+      <li><a href="/tags.html#Behat-ref">Behat</a></li>
+    
+      <li><a href="/tags.html#Drupal-planet-ref">Drupal-planet</a></li>
+    
+  
+
+
+              </ul>
+              
+            </div>
+
+            <div class="comments-count"><a href="http://www.gizra.com/content/shoov-monitor-twitter#disqus_thread"></a></div>
+          </div>
+
+          <div class="row">
+            <div class="post-content">
+              <p>Monitoring your live site is a pretty good idea - that&#39;s generally agreed. Same goes for visual regression testing. Doing it, however, is hard. Enough so that very few companies actually do visual regression testing/monitoring, so don&#39;t feel bad if you haven&#39;t either until now. But after reading this post you should seriously consider doing it. Or at least give it a <a href="https://github.com/shoov/test-example">try</a>.</p>
+
+<p>For example, here&#39;s an overview of how we could monitor Twitter, if someone would actually ask us to (as always you can jump right into the <a href="https://github.com/amitaibu/ci-tests-twitter">repository</a>):</p>
+
+<div class="thumbnail">
+  <img src="http://www.gizra.com/assets/images/posts/shoov-twitter/image1.jpg">
+  <div class="caption">Visual regression on a Twitter page. So much functionality has been asserted in this simple screenshot</div>
+</div>
+
+<!-- more -->
+
+<h2>Visual Regression is Hard</h2>
+
+<p>Getting a baseline screenshot of a page requires some thinking, and a bit of trial and error.  Twitter&#39;s main page has lots of dynamic content: the user&#39;s tweets count, followers, trending topics, actual tweets etc. Obviously our screenshot cannot include that info.</p>
+
+<p>Luckily <a href="https://github.com/webdriverio/webdrivercss#setup">webdriverCSS</a> already comes with some commands that help us to <code>exclude</code> (place a black rectangle) or even <code>remove</code> (completely hide) an element.</p>
+
+<p>In the <a href="https://github.com/amitaibu/ci-tests-twitter/blob/master/ui-tests/test/tests.js">test file</a> you can see we selected only the CSS selectors that need to be excluded or removed, leaving our page with <em>some</em> data, but not all of it. Don&#39;t be discouraged by not covering 100% though. Even with some parts hidden we have already asserted so much functionality - certainly more than having no visual test in place.</p>
+
+<h2>Functional testing for dynamic parts</h2>
+
+<p>A screenshot is a powerful tool, but not the only one. We still have functional testing frameworks in our toolbelt. <a href="/content/behat-the-right-way/">Behat</a> can easily be used to assert that the number of tweets feature is working.</p>
+
+<p>In the time of writing <a href="https://twitter.com/gizra_drupal">@gizra_drupal</a> has about 340 tweets. So we could write a simple <a href="https://github.com/amitaibu/ci-tests-twitter/blob/master/behat/features/user_page.feature">test</a> that will assert that there&#39;s a minimum of 300 tweets (giving us the flexibility to delete a few without breaking the tests).</p>
+
+<p>The Behat PHP <a href="https://github.com/amitaibu/ci-tests-twitter/blob/master/behat/features/bootstrap/FeatureContext.php#L18-L38">code</a> to implement this is fairly straight forward. It finds the value in the HTML, converts it into an integer, and asserts it has a minimum value.</p>
+
+<h2>Shoov</h2>
+
+<p>Up until now we didn&#39;t need <a href="http://shoov.io/">Shoov</a>, which is good, since Shoov is agnostic to which tools you use - it&#39;s only there to help you deal with the accumulated images and regressions.</p>
+
+<div class="thumbnail">
+  <img src="http://www.gizra.com/assets/images/posts/shoov-twitter/image2.jpg">
+  <div class="caption">Before we've hidden the spinner, Shoov showed us the regression</div>
+</div>
+
+<p>It&#39;s important to realize that once you go down the visual regression road it&#39;s hard to stop. Suddenly PhantomJS isn&#39;t good enough, if you can use BrowserStack or SauceLabs to validate the site on many platforms and browsers. Testing your site on just one screen size isn&#39;t enough either.<br>
+webdriverCSS comes with the powerful <code>screenWidth</code> property, which should make it super simple to test multiple view ports soon as this <a href="https://github.com/webdriverio/webdrivercss/issues/73">issue</a> is fixed.</p>
+
+<h2>New stuff</h2>
+
+<ul>
+<li>We now have a <a href="http://shoov.io">Shoov.io</a> page, which is updated from time to time with new info.</li>
+<li><a href="https://app.shoov.io">app.shoov.io</a> is now the app site, sitting on Amazon S3 and CloudFront with SSL certificate, so you should feel safer using it.</li>
+<li>&quot;Dev Tips&quot; is a new concept we&#39;ve introduced. Since the site and all of its sub-components are open sourced, we have added a few tips in each page to help you - the developer - to better understand how the system works, and maybe even encourage you to contribute.</li>
+</ul>
+
+<div class="thumbnail">
+  <img src="http://www.gizra.com/assets/images/posts/shoov-twitter/image3.jpg">
+  <div class="caption">Login to Shoov.io to learn more from the dev tips</div>
+</div>
+
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="bottom-dash"></div>
+          </div>
+
+          <div class="row post-nav">
+            <div class="first">
+              
+              <div class="previous">
+                <a href="/content/angularjs-ui-router">
+                  Previous
+                </a>
+              </div>
+              <a href="/content/angularjs-ui-router" class="prev-text">
+                AngularJs Ui-Router
+              </a>
+              
+            </div>
+            <div class="last">
+              
+            </div>
+          </div>
+
+          <div class="row author-details">
+            <div class="image-wrapper">
+              <img src="/images/team/amitaibu.4179.jpg" class="img-responsive">
+            </div>
+            <div class="text-wrapper">
+              <span class="name">Amitai Burstein</span> <span class="twitter">(@amitaibu)</span>
+              <div class="title">CTO, Co-Owner</div>
+              <div class="bio">Maintainer of Organic groups, the Message stack, and co-maintainer of Drupal 8's Entity reference. <a href="/content/the-about-story/">The about story</a>.</div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="bottom-dash-small"></div>
+          </div>
+
+          <div class="row">
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'gizra';
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="text/javascript">
+var disqus_shortname = 'gizra';
+
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function () {
+var s = document.createElement('script'); s.async = true;
+s.type = 'text/javascript';
+s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+
+
+
+
+    <script src="/js/plugins.5250.js"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+
+    <script src="/js/scripts.87fd.js"></script>
+
+    </body>
+</html>
