@@ -15,8 +15,8 @@ env:
     - secure: QBsfLL1ERaZM5OID7Z7x+YWydsGfD80C/vzNKgQGdzQQcvNueGM1YDQLddyPye4brGfynzMzKUc0pKC+l/nvHcO1D463BbDahM3u1tPMiqI6diySGP8Da0gzqsiGRjUs2xgZj5XHwfZlsCkDRh6aDp3NCBTDB7slPAoG8civ9R8=
 
     # ngrok.com
-    # travis encrypt NGROK_AUTHTOKEN="7NtZs68XmrYTNG9tz54pn_5VRKGfHXLXdhQAELLVnAA"
-    - secure: "WKnBPzYyLLilUt87mSd2Zddr2SPDCtcv04qzf9pqKzUlPo4Q/1TIwtMFBX/zhMpScG+KQ9ZjJowIHJc2rV8YG0vfv4rESeefwmjIfFoTd69flRrmwMihPbuNrGSBBYq5eLMxLN/V2qjkwLneMDN7oKwEoPk33kT3idwjuPt+AoI="
+    # travis encrypt NGROK_AUTHTOKEN="<your-token>"
+    - secure: ce8tsUIIqoGMuvatiz/dkU6ZGHhhJJpIvT3NVbpDe0uFSaubHhziJUb4JED41BpLJyfcp/zm2lP090e1pvkX9281XpFaymPE7sw7QFhWT91+FURYyPtxLHxaZgR/YBs3sI3sT6CN8LFHEQA5zHjR6fPpx6N/lKrN96IvRy2lub4=
 
 before_install:
   # Create display.
