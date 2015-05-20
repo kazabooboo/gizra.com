@@ -23,13 +23,13 @@ before_install:
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
 
+  # Install ngrok
   - cd ~
   - curl -O https://dl.ngrok.com/ngrok_2.0.17_linux_amd64.zip
   - unzip ngrok_2.0.17_linux_amd64.zip
   - ./ngrok authtoken $NGROK_AUTHTOKEN
   - cd -
 
-  # - until $(curl --output /dev/null --silent --head --fail https://$TRAVIS_COMMIT.ngrok.com); do sleep 1; echo '.'; done
 
 install:
   # Install Bower, Grunt and CasperJs and ngrok.
