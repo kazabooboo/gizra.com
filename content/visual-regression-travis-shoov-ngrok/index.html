@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>How we could monitor Twitter (if we had to)</title>
+        <title>Visual regression tests on every commit</title>
         <meta name="viewport" content="width=device-width">
 
         <link rel="stylesheet" href="/css/main.3e33.css"/>
@@ -129,12 +129,12 @@
         <div class="col-md-8 col-md-offset-2 post">
           <div class="row">
             <div class="post-label">
-              <a href="/content/shoov-monitor-twitter">How we could monitor Twitter (if we had to)</a>
+              <a href="/content/visual-regression-travis-shoov-ngrok">Visual regression tests on every commit</a>
             </div>
           </div>
 
           <div class="row small-row">
-            <div class="date">07 May 2015</div>
+            <div class="date">20 May 2015</div>
             <div class="seprator">|</div>
             <div class="author">By Amitai Burstein</div>
           </div>
@@ -153,8 +153,6 @@
     
       <li><a href="/tags.html#Visual regression-ref">Visual regression</a></li>
     
-      <li><a href="/tags.html#Behat-ref">Behat</a></li>
-    
       <li><a href="/tags.html#Drupal-planet-ref">Drupal-planet</a></li>
     
   
@@ -164,62 +162,51 @@
               
             </div>
 
-            <div class="comments-count"><a href="http://www.gizra.com/content/shoov-monitor-twitter#disqus_thread"></a></div>
+            <div class="comments-count"><a href="http://www.gizra.com/content/visual-regression-travis-shoov-ngrok#disqus_thread"></a></div>
           </div>
 
           <div class="row">
             <div class="post-content">
-              <p>Monitoring your live site is a pretty good idea - that&#39;s generally agreed. Same goes for visual regression testing. Doing it, however, is hard. Enough so that very few companies actually do visual regression testing/monitoring, so don&#39;t feel bad if you haven&#39;t either until now. But after reading this post you should seriously consider doing it. Or at least give it a <a href="https://github.com/shoov/test-example">try</a>.</p>
+              <p>As we dive deeper into visual regression testing in our development workflow we realize a sad truth: on average, we break our own CSS every week and a half.</p>
 
-<p>For example, here&#39;s an overview of how we could monitor Twitter, if someone would actually ask us to (as always you can jump right into the <a href="https://github.com/amitaibu/ci-tests-twitter">repository</a>):</p>
+<p>Don&#39;t feel bad for us, as in fact I&#39;d argue that it&#39;s pretty common across all web projects - they just don&#39;t know it.  It seems we all need a system that will tell us when we break our CSS.</p>
+
+<p>While we don&#39;t know of a single (good) system that does this, we were able to connect together a few (good) systems to get just that, with the help of:
+Travis-CI, <a href="https://github.com/webdriverio/webdrivercss">webdriverCSS</a>, <a href="http://shoov.io/">Shoov.io</a>, BrowserStack/Sauce Labs, and <a href="https://ngrok.com/">ngrok</a>. Oh my!</p>
+
+<p>Don&#39;t be alarmed by the long list. Each one of these does one thing very well, and combining them together was proven to be not too complicated, nor too costly.</p>
+
+<p>You can jump right into the <a href="https://github.com/Gizra/Gizra/blob/master/.travis.yml">.travis</a> file of the Gizra repo to see its configuration, or check the <a href="https://github.com/Gizra/Gizra/blob/master/ui-tests/test/tests.js#L36-L37">webdriverCSS</a> test. Here&#39;s the high level overview of what we&#39;re doing:</p>
+
+<p><a href="http://gizra.com">Gizra.com</a> is built on Jekyll but visual regression could be executed on every site, regardless of the underlying technology. Travis is there to help us build a local installation. Travis also allows adding encrypted keys, so even though the repo is public, we were able to add our Shoov.io and ngrok access tokens in a secure way.</p>
+
+<p>We want to use services such as <a href="http://www.browserstack.com/">BrowserStack</a> or <a href="https://saucelabs.com/">Sauce-Labs</a> to test our local installation on different browsers (e.g. latest chrome and IE11). For that we need to have an external URL accessible by the outside world, which is where ngrok comes in: <code>ngrok http -log=stdout -subdomain=$TRAVIS_COMMIT 9000</code> from the <code>.travis.yml</code> file exposes our Jekyll site inside the Travis box to a unique temporary URL based on the Git commit (e.g. <code>https://someCommitHash.ngrok.io</code>).</p>
+
+<p>WebdriverCSS tests are responsible for capturing the screenshots, and comparing them against the baseline images. If a regression is found, it will be automatically pushed to Shoov, and a link to the regression would be provided in the Travis log. This means that if a test was broken, we can immediately see where&#39;s the regression and figure out if it is indeed a bug - or, if not, replace the baseline image with the &quot;regression&quot; image.</p>
 
 <div class="thumbnail">
-  <img src="http://www.gizra.com/assets/images/posts/shoov-twitter/image1.jpg">
-  <div class="caption">Visual regression on a Twitter page. So much functionality has been asserted in this simple screenshot</div>
+  <img src="http://www.gizra.com/assets/images/posts/shoov-travis/image1.jpg">
+  <div class="caption">Visual regression found and uploaded to shoov.io</div>
 </div>
 
 <!-- more -->
 
-<h2>Visual Regression is Hard</h2>
+<h2>Caveats</h2>
 
-<p>Getting a baseline screenshot of a page requires some thinking, and a bit of trial and error.  Twitter&#39;s main page has lots of dynamic content: the user&#39;s tweets count, followers, trending topics, actual tweets etc. Obviously our screenshot cannot include that info.</p>
+<p>Some gotchas to be aware of:</p>
 
-<p>Luckily <a href="https://github.com/webdriverio/webdrivercss#setup">webdriverCSS</a> already comes with some commands that help us to <code>exclude</code> (place a black rectangle) or even <code>remove</code> (completely hide) an element.</p>
+<p>Even though visual regression testing with BrowserStack or Sauce Labs takes more time than running it on PhantomJS, it&#39;s recommended to use such tools, since they test your site against <em>real</em> browsers.  </p>
 
-<p>In the <a href="https://github.com/amitaibu/ci-tests-twitter/blob/master/ui-tests/test/tests.js">test file</a> you can see we selected only the CSS selectors that need to be excluded or removed, leaving our page with <em>some</em> data, but not all of it. Don&#39;t be discouraged by not covering 100% though. Even with some parts hidden we have already asserted so much functionality - certainly more than having no visual test in place.</p>
-
-<h2>Functional testing for dynamic parts</h2>
-
-<p>A screenshot is a powerful tool, but not the only one. We still have functional testing frameworks in our toolbelt. <a href="/content/behat-the-right-way/">Behat</a> can easily be used to assert that the number of tweets feature is working.</p>
-
-<p>In the time of writing <a href="https://twitter.com/gizra_drupal">@gizra_drupal</a> has about 340 tweets. So we could write a simple <a href="https://github.com/amitaibu/ci-tests-twitter/blob/master/behat/features/user_page.feature">test</a> that will assert that there&#39;s a minimum of 300 tweets (giving us the flexibility to delete a few without breaking the tests).</p>
-
-<p>The Behat PHP <a href="https://github.com/amitaibu/ci-tests-twitter/blob/master/behat/features/bootstrap/FeatureContext.php#L18-L38">code</a> to implement this is fairly straight forward. It finds the value in the HTML, converts it into an integer, and asserts it has a minimum value.</p>
-
-<h2>Shoov</h2>
-
-<p>Up until now we didn&#39;t need <a href="http://shoov.io/">Shoov</a>, which is good, since Shoov is agnostic to which tools you use - it&#39;s only there to help you deal with the accumulated images and regressions.</p>
+<p>Those tools cost money, but we find that it&#39;s well worth it. We are currently using BrowserStack (99$/month), though we&#39;re running into some issues with it not having an internal queue system - so if you reached your limit on virtual hosts concurrency, your tests will simply fail. For that reason we might switch to Sauce Labs (149$/month) which also provides more concurrent VMs.</p>
 
 <div class="thumbnail">
-  <img src="http://www.gizra.com/assets/images/posts/shoov-twitter/image2.jpg">
-  <div class="caption">Before we've hidden the spinner, Shoov showed us the regression</div>
+  <img src="http://www.gizra.com/assets/images/posts/shoov-travis/image2.jpg">
+  <div class="caption">Blog post page tested on IE11, Windows 7</div>
 </div>
 
-<p>It&#39;s important to realize that once you go down the visual regression road it&#39;s hard to stop. Suddenly PhantomJS isn&#39;t good enough, if you can use BrowserStack or SauceLabs to validate the site on many platforms and browsers. Testing your site on just one screen size isn&#39;t enough either.<br>
-webdriverCSS comes with the powerful <code>screenWidth</code> property, which should make it super simple to test multiple view ports soon as this <a href="https://github.com/webdriverio/webdrivercss/issues/73">issue</a> is fixed.</p>
+<p>Travis is limited to 50 minutes&#39; execution time. Capturing each image might take about 30 - 90 sec, so when you reach lots of tests, you should probably split them.</p>
 
-<h2>New stuff</h2>
-
-<ul>
-<li>We now have a <a href="http://shoov.io">Shoov.io</a> page, which is updated from time to time with new info.</li>
-<li><a href="https://app.shoov.io">app.shoov.io</a> is now the app site, sitting on Amazon S3 and CloudFront with SSL certificate, so you should feel safer using it.</li>
-<li>&quot;Dev Tips&quot; is a new concept we&#39;ve introduced. Since the site and all of its sub-components are open sourced, we have added a few tips in each page to help you - the developer - to better understand how the system works, and maybe even encourage you to contribute.</li>
-</ul>
-
-<div class="thumbnail">
-  <img src="http://www.gizra.com/assets/images/posts/shoov-twitter/image3.jpg">
-  <div class="caption">Login to Shoov.io to learn more from the dev tips</div>
-</div>
+<p>The free plan of ngrok allows only a single concurrent tunnel to be opened. Even though BroswerStack and Sauce Labs provide their own tunneling solution, we decided to go with ngrok, in order to provide a more generic solution. We happily upgraded to the $25/month business account following our excellent experience with the free account.</p>
 
             </div>
           </div>
@@ -232,25 +219,16 @@ webdriverCSS comes with the powerful <code>screenWidth</code> property, which sh
             <div class="first">
               
               <div class="previous">
-                <a href="/content/angularjs-ui-router">
+                <a href="/content/shoov-monitor-twitter">
                   Previous
                 </a>
               </div>
-              <a href="/content/angularjs-ui-router" class="prev-text">
-                AngularJs Ui-Router
+              <a href="/content/shoov-monitor-twitter" class="prev-text">
+                How we could monitor Twitter (if we had to)
               </a>
               
             </div>
             <div class="last">
-              
-              <div class="next">
-                <a href="/content/visual-regression-travis-shoov-ngrok">
-                  Next
-                </a>
-              </div>
-              <a href="/content/visual-regression-travis-shoov-ngrok" class="next-text">
-                Visual regression tests on every commit
-              </a>
               
             </div>
           </div>

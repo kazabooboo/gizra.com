@@ -318,6 +318,43 @@
     <div class="row">
       <div class="col-md-offset-2 col-md-8 post">
         <div class="date">
+          20 May 2015
+        </div>
+
+        <div class="post-label">
+          <a href="/content/visual-regression-travis-shoov-ngrok">Visual regression tests on every commit</a>
+        </div>
+
+        <div class="teaser">
+          <p>As we dive deeper into visual regression testing in our development workflow we realize a sad truth: on average, we break our own CSS every week and a half.</p>
+
+<p>Don&#39;t feel bad for us, as in fact I&#39;d argue that it&#39;s pretty common across all web projects - they just don&#39;t know it.  It seems we all need a system that will tell us when we break our CSS.</p>
+
+<p>While we don&#39;t know of a single (good) system that does this, we were able to connect together a few (good) systems to get just that, with the help of:
+Travis-CI, <a href="https://github.com/webdriverio/webdrivercss">webdriverCSS</a>, <a href="http://shoov.io/">Shoov.io</a>, BrowserStack/Sauce Labs, and <a href="https://ngrok.com/">ngrok</a>. Oh my!</p>
+
+<p>Don&#39;t be alarmed by the long list. Each one of these does one thing very well, and combining them together was proven to be not too complicated, nor too costly.</p>
+
+<p>You can jump right into the <a href="https://github.com/Gizra/Gizra/blob/master/.travis.yml">.travis</a> file of the Gizra repo to see its configuration, or check the <a href="https://github.com/Gizra/Gizra/blob/master/ui-tests/test/tests.js#L36-L37">webdriverCSS</a> test. Here&#39;s the high level overview of what we&#39;re doing:</p>
+
+<p><a href="http://gizra.com">Gizra.com</a> is built on Jekyll but visual regression could be executed on every site, regardless of the underlying technology. Travis is there to help us build a local installation. Travis also allows adding encrypted keys, so even though the repo is public, we were able to add our Shoov.io and ngrok access tokens in a secure way.</p>
+
+<p>We want to use services such as <a href="http://www.browserstack.com/">BrowserStack</a> or <a href="https://saucelabs.com/">Sauce-Labs</a> to test our local installation on different browsers (e.g. latest chrome and IE11). For that we need to have an external URL accessible by the outside world, which is where ngrok comes in: <code>ngrok http -log=stdout -subdomain=$TRAVIS_COMMIT 9000</code> from the <code>.travis.yml</code> file exposes our Jekyll site inside the Travis box to a unique temporary URL based on the Git commit (e.g. <code>https://someCommitHash.ngrok.io</code>).</p>
+
+<p>WebdriverCSS tests are responsible for capturing the screenshots, and comparing them against the baseline images. If a regression is found, it will be automatically pushed to Shoov, and a link to the regression would be provided in the Travis log. This means that if a test was broken, we can immediately see where&#39;s the regression and figure out if it is indeed a bug - or, if not, replace the baseline image with the &quot;regression&quot; image.</p>
+
+<div class="thumbnail">
+  <img src="http://www.gizra.com/assets/images/posts/shoov-travis/image1.jpg">
+  <div class="caption">Visual regression found and uploaded to shoov.io</div>
+</div>
+
+        </div>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-md-offset-2 col-md-8 post">
+        <div class="date">
           07 May 2015
         </div>
 
@@ -393,40 +430,6 @@
   <img src="http://www.gizra.com/assets/images/posts/shoov-multiple-platforms/image1.jpg">
   <div class="caption">DuckDuckGo.com tested by BrowserStack on Windows7, IE11, with 1024x780 resolution</div>
 </div>
-
-        </div>
-      </div>
-    </div>
-    
-    <div class="row">
-      <div class="col-md-offset-2 col-md-8 post">
-        <div class="date">
-          28 Apr 2015
-        </div>
-
-        <div class="post-label">
-          <a href="/content/simpletest-behat-drupal-8">simpleTest with Behat for Drupal 8</a>
-        </div>
-
-        <div class="teaser">
-          <p>The first time I heard about <a href="http://docs.behat.org/en/v2.5/">Behat</a> was at DrupalCon Munich 2012. Since then use of Behat has grown exponentially and the tools it can be integrate with grew as well. With Behat we can test the markup of a page - pretty neat, right?  </p>
-
-<p>Well, it&#39;s time to take Behat integration with Drupal a little further. I&#39;ve decided to try and integrate it with Drupal&#39;s simpleTest, as this would open the door for writing simpleTests that are more readable and more &quot;behavior driven&quot; by nature.</p>
-<div class="highlight"><pre><code class="Gherkin language-Gherkin" data-lang="Gherkin"><span class="k">Scenario:</span><span class="nf"> Testing the login form.</span>
-<span class="k">  Given </span><span class="nf">I visit &#39;user&#39;</span>
-<span class="nf">    </span><span class="k">And </span><span class="nf">I fill in &#39;Username&#39; with &#39;@user-name&#39;</span>
-<span class="nf">    </span><span class="k">And </span><span class="nf">I fill in &#39;Password&#39; with &#39;@user-pass&#39;</span>
-<span class="nf">   </span><span class="k">When </span><span class="nf">I press &#39;Log in&#39;</span>
-<span class="nf">   </span><span class="k">Then </span><span class="nf">I should see &#39;@user-name&#39;</span>
-</code></pre></div>
-<p>Amazingly enough, the above Gherkin code which is being executed by PHPunit can test your Drupal installation!</p>
-
-<div class="thumbnail">
-  <img src="http://www.gizra.com/assets/images/posts/behat-drupal8/test_results.png">
-  <div class="caption">Behat code executed from within Drupal's simpleTest</div>
-</div>
-
-<p>This functionality is provided by an experimental <a href="https://github.com/RoySegall/behat">repo</a>, which comes with an example test.</p>
 
         </div>
       </div>

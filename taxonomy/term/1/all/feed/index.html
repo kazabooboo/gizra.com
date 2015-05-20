@@ -4,10 +4,54 @@
     <description></description>
     <title>Gizra.com</title>
     <link>http://www.gizra.com</link>
-    <lastBuildDate>Thu, 07 May 2015 15:01:17 +0300</lastBuildDate>
-    <pubDate>Thu, 07 May 2015 15:01:17 +0300</pubDate>
+    <lastBuildDate>Wed, 20 May 2015 15:32:35 +0300</lastBuildDate>
+    <pubDate>Wed, 20 May 2015 15:32:35 +0300</pubDate>
     <ttl>1800</ttl>
 
+    
+      
+        
+      
+        
+      
+        
+          
+        
+      
+
+      
+      <item>
+        <title>Visual regression tests on every commit</title>
+        <description>
+          &lt;p&gt;As we dive deeper into visual regression testing in our development workflow we realize a sad truth: on average, we break our own CSS every week and a half.&lt;/p&gt;
+
+&lt;p&gt;Don&amp;#39;t feel bad for us, as in fact I&amp;#39;d argue that it&amp;#39;s pretty common across all web projects - they just don&amp;#39;t know it.  It seems we all need a system that will tell us when we break our CSS.&lt;/p&gt;
+
+&lt;p&gt;While we don&amp;#39;t know of a single (good) system that does this, we were able to connect together a few (good) systems to get just that, with the help of:
+Travis-CI, &lt;a href=&quot;https://github.com/webdriverio/webdrivercss&quot;&gt;webdriverCSS&lt;/a&gt;, &lt;a href=&quot;http://shoov.io/&quot;&gt;Shoov.io&lt;/a&gt;, BrowserStack/Sauce Labs, and &lt;a href=&quot;https://ngrok.com/&quot;&gt;ngrok&lt;/a&gt;. Oh my!&lt;/p&gt;
+
+&lt;p&gt;Don&amp;#39;t be alarmed by the long list. Each one of these does one thing very well, and combining them together was proven to be not too complicated, nor too costly.&lt;/p&gt;
+
+&lt;p&gt;You can jump right into the &lt;a href=&quot;https://github.com/Gizra/Gizra/blob/master/.travis.yml&quot;&gt;.travis&lt;/a&gt; file of the Gizra repo to see its configuration, or check the &lt;a href=&quot;https://github.com/Gizra/Gizra/blob/master/ui-tests/test/tests.js#L36-L37&quot;&gt;webdriverCSS&lt;/a&gt; test. Here&amp;#39;s the high level overview of what we&amp;#39;re doing:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://gizra.com&quot;&gt;Gizra.com&lt;/a&gt; is built on Jekyll but visual regression could be executed on every site, regardless of the underlying technology. Travis is there to help us build a local installation. Travis also allows adding encrypted keys, so even though the repo is public, we were able to add our Shoov.io and ngrok access tokens in a secure way.&lt;/p&gt;
+
+&lt;p&gt;We want to use services such as &lt;a href=&quot;http://www.browserstack.com/&quot;&gt;BrowserStack&lt;/a&gt; or &lt;a href=&quot;https://saucelabs.com/&quot;&gt;Sauce-Labs&lt;/a&gt; to test our local installation on different browsers (e.g. latest chrome and IE11). For that we need to have an external URL accessible by the outside world, which is where ngrok comes in: &lt;code&gt;ngrok http -log=stdout -subdomain=$TRAVIS_COMMIT 9000&lt;/code&gt; from the &lt;code&gt;.travis.yml&lt;/code&gt; file exposes our Jekyll site inside the Travis box to a unique temporary URL based on the Git commit (e.g. &lt;code&gt;https://someCommitHash.ngrok.io&lt;/code&gt;).&lt;/p&gt;
+
+&lt;p&gt;WebdriverCSS tests are responsible for capturing the screenshots, and comparing them against the baseline images. If a regression is found, it will be automatically pushed to Shoov, and a link to the regression would be provided in the Travis log. This means that if a test was broken, we can immediately see where&amp;#39;s the regression and figure out if it is indeed a bug - or, if not, replace the baseline image with the &amp;quot;regression&amp;quot; image.&lt;/p&gt;
+
+&lt;div class=&quot;thumbnail&quot;&gt;
+  &lt;img src=&quot;http://www.gizra.com/assets/images/posts/shoov-travis/image1.jpg&quot;&gt;
+  &lt;div class=&quot;caption&quot;&gt;Visual regression found and uploaded to shoov.io&lt;/div&gt;
+&lt;/div&gt;
+
+          &lt;p&gt;&lt;a href=&quot;http://www.gizra.com/content/visual-regression-travis-shoov-ngrok/&quot;&gt;Continue reading…&lt;/a&gt;&lt;/p&gt;
+        </description>
+        <link>http://www.gizra.com/content/visual-regression-travis-shoov-ngrok</link>
+        <guid>http://www.gizra.com/content/shoov-travis</guid>
+        <pubDate>Wed, 20 May 2015 00:00:00 +0300</pubDate>
+      </item>
+      
     
       
         

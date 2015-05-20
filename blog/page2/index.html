@@ -130,6 +130,124 @@
 
           <div class="row">
             <div class="post-label">
+              <a href="/content/shoov-ci-tests-live-site">Shoov - CI tests on the live site</a>
+            </div>
+          </div>
+
+          <div class="row small-row">
+            <div class="date">14 Apr 2015</div>
+            <div class="seprator">|</div>
+            <div class="author">By <a href="#author">Amitai Burstein</a></div>
+          </div>
+
+          <div class="row small-row">
+            <div class="tags">
+              
+              <ul class="inline">
+                
+                
+
+  
+    
+      <li><a href="/tags.html#Shoov-ref">Shoov</a></li>
+    
+      <li><a href="/tags.html#Drupal-planet-ref">Drupal-planet</a></li>
+    
+  
+
+
+              </ul>
+              
+            </div>
+            <div class="comments-count"><a href="http://www.gizra.com/blog/page2/index.html#disqus_thread"></a></div>
+          </div>
+
+          <div class="row">
+            <div class="post-content">
+              <p><a href="/content/shoov-ui-regression/">Shoov</a> keeps evolving, and now has an <a href="https://github.com/shoov/test-example">example repo</a> that demonstrates how we&#39;re trying to make UI regression simpler, we took some time to implement the second feature we were missing - automatic testing on the <em>live</em> site.</p>
+
+<p>We saw a very strange situation everywhere we looked: Dev teams were writing amazing test coverage. They were going the extra mile to setup a Travis box with environment as close as possible to the live site. They tested every single feature, and added a regression test for every bug. Heck, every commit triggered a test suite that run for an hour before being carefully reviewed and merged.</p>
+
+<p>And then the site goes live - and at best they might add <a href="https://www.pingdom.com/">Pingdom</a> monitoring to check it&#39;s working. Pingdom at its simplest form sends an http request every minute to your site. If the answer is <code>200</code> - it means that all is good in the world. Which is of course wrong.</p>
+
+<p>Our mission is to change this, and bring functional testing to the live site. One that is easy to setup and that integrates with your existing testing and GitHub flow.</p>
+
+<div class="thumbnail">
+  <img src="http://www.gizra.com/assets/images/posts/shoov-ci-build/image1.jpg">
+  <div class="caption">The Drupal backend holds the CI build data, including the full log, and status</div>
+</div>
+
+<p>While Pingdom is wonderful and is alerting us on time whenever a site goes down, its &quot;page is fine, move along&quot; approach doesn&#39;t cut it for us. Here are some examples why testing on the production server is a good idea:</p>
+
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="bottom-dash"></div>
+          </div>
+        </div>
+      </div>
+      <!--Post End-->
+      
+
+      
+        
+      
+
+      
+        
+          
+            
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+
+      <!--Post begin-->
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2 post">
+
+          <div class="row">
+            <div class="post-label">
               <a href="/content/shoov-ui-regression">Shoov - a new UI regression tool</a>
             </div>
           </div>
@@ -506,120 +624,6 @@
 <p>Here is a known secret - (almost) nobody is doing QA. Since I&#39;m not into arguing about this, I&#39;m willing to soften it a bit to &quot;most companies, don&#39;t do proper QA&quot;.</p>
 
 <p>The reasons are pretty clear - not enough time and not enough budget. This post isn&#39;t going to be about the importance of QA - that point is clear to everybody, but rather give <em>realistic</em> tips and tools that will allow you to start improving the quality of your projects, and actually even save you some time and money.</p>
-
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="bottom-dash"></div>
-          </div>
-        </div>
-      </div>
-      <!--Post End-->
-      
-
-      
-        
-      
-
-      
-        
-          
-            
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-
-      <!--Post begin-->
-      <div class="row">
-        <div class="col-md-8 col-md-offset-2 post">
-
-          <div class="row">
-            <div class="post-label">
-              <a href="/content/phantomcss-ui-regression">Hedley Generator - PhantomCSS and UI regression</a>
-            </div>
-          </div>
-
-          <div class="row small-row">
-            <div class="date">04 Jan 2015</div>
-            <div class="seprator">|</div>
-            <div class="author">By <a href="#author">Amitai Burstein</a></div>
-          </div>
-
-          <div class="row small-row">
-            <div class="tags">
-              
-              <ul class="inline">
-                
-                
-
-  
-    
-      <li><a href="/tags.html#Hedley generator-ref">Hedley generator</a></li>
-    
-      <li><a href="/tags.html#The Gizra Way-ref">The Gizra Way</a></li>
-    
-      <li><a href="/tags.html#Drupal-planet-ref">Drupal-planet</a></li>
-    
-  
-
-
-              </ul>
-              
-            </div>
-            <div class="comments-count"><a href="http://www.gizra.com/blog/page2/index.html#disqus_thread"></a></div>
-          </div>
-
-          <div class="row">
-            <div class="post-content">
-              <p>What&#39;s fun about having a tool like <a href="/content/yo-hedley/">Hedley</a> is that every new best practice we acquire can be easily added to our ever evolving, versioned, and codified knowledge base - and it&#39;s there for the community to use and improve.</p>
-
-<p>So, as if it didn&#39;t have enough of best practices bundled in it already, we&#39;ve taken another step to get <a href="https://github.com/Huddle/PhantomCSS">PhantomCSS</a> a &quot;CSS regression testing&quot; tool in.</p>
-
-<div class="thumbnail">
-  <img src="http://www.gizra.com/assets/images/posts/phantomcss/image1.jpg" />
-  <div class="caption">PhantomCSS in action</div>
-</div>
 
             </div>
           </div>
