@@ -79,7 +79,141 @@
       
         
           
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
             
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+
+      <!--Post begin-->
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2 post">
+
+          <div class="row">
+            <div class="post-label">
+              <a href="/content/simpletest-behat-drupal-8">simpleTest with Behat for Drupal 8</a>
+            </div>
+          </div>
+
+          <div class="row small-row">
+            <div class="date">28 Apr 2015</div>
+            <div class="seprator">|</div>
+            <div class="author">By <a href="#author">Roy Segall</a></div>
+          </div>
+
+          <div class="row small-row">
+            <div class="tags">
+              
+              <ul class="inline">
+                
+                
+
+  
+    
+      <li><a href="/tags.html#Behat-ref">Behat</a></li>
+    
+      <li><a href="/tags.html#PHPunit-ref">PHPunit</a></li>
+    
+      <li><a href="/tags.html#QA-ref">QA</a></li>
+    
+      <li><a href="/tags.html#Drupal-planet-ref">Drupal-planet</a></li>
+    
+  
+
+
+              </ul>
+              
+            </div>
+            <div class="comments-count"><a href="http://www.gizra.com/blog/page2/index.html#disqus_thread"></a></div>
+          </div>
+
+          <div class="row">
+            <div class="post-content">
+              <p>The first time I heard about <a href="http://docs.behat.org/en/v2.5/">Behat</a> was at DrupalCon Munich 2012. Since then use of Behat has grown exponentially and the tools it can be integrate with grew as well. With Behat we can test the markup of a page - pretty neat, right?  </p>
+
+<p>Well, it&#39;s time to take Behat integration with Drupal a little further. I&#39;ve decided to try and integrate it with Drupal&#39;s simpleTest, as this would open the door for writing simpleTests that are more readable and more &quot;behavior driven&quot; by nature.</p>
+<div class="highlight"><pre><code class="Gherkin language-Gherkin" data-lang="Gherkin"><span class="k">Scenario:</span><span class="nf"> Testing the login form.</span>
+<span class="k">  Given </span><span class="nf">I visit &#39;user&#39;</span>
+<span class="nf">    </span><span class="k">And </span><span class="nf">I fill in &#39;Username&#39; with &#39;@user-name&#39;</span>
+<span class="nf">    </span><span class="k">And </span><span class="nf">I fill in &#39;Password&#39; with &#39;@user-pass&#39;</span>
+<span class="nf">   </span><span class="k">When </span><span class="nf">I press &#39;Log in&#39;</span>
+<span class="nf">   </span><span class="k">Then </span><span class="nf">I should see &#39;@user-name&#39;</span>
+</code></pre></div>
+<p>Amazingly enough, the above Gherkin code which is being executed by PHPunit can test your Drupal installation!</p>
+
+<div class="thumbnail">
+  <img src="http://www.gizra.com/assets/images/posts/behat-drupal8/test_results.png">
+  <div class="caption">Behat code executed from within Drupal's simpleTest</div>
+</div>
+
+<p>This functionality is provided by an experimental <a href="https://github.com/RoySegall/behat">repo</a>, which comes with an example test.</p>
+
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="bottom-dash"></div>
+          </div>
+        </div>
+      </div>
+      <!--Post End-->
+      
+
+      
+        
+      
+
+      
+        
+          
+            
+          
+        
+      
+        
           
         
       
@@ -241,6 +375,10 @@
           
         
       
+        
+          
+        
+      
 
       <!--Post begin-->
       <div class="row">
@@ -312,6 +450,10 @@
         
           
             
+          
+        
+      
+        
           
         
       
@@ -467,6 +609,10 @@
           
         
       
+        
+          
+        
+      
 
       <!--Post begin-->
       <div class="row">
@@ -515,115 +661,6 @@
 <p>But it&#39;s all worth it. Your app is live. Now everybody goes to sleep, and your pampered app, is all alone, serving your data to the entire world.  </p>
 
 <p>You forgot one thing - to give it a phone to call home, and tell you something went wrong.</p>
-
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="bottom-dash"></div>
-          </div>
-        </div>
-      </div>
-      <!--Post End-->
-      
-
-      
-        
-      
-
-      
-        
-          
-            
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-
-      <!--Post begin-->
-      <div class="row">
-        <div class="col-md-8 col-md-offset-2 post">
-
-          <div class="row">
-            <div class="post-label">
-              <a href="/content/automatic-qa">(Automatic) QA</a>
-            </div>
-          </div>
-
-          <div class="row small-row">
-            <div class="date">01 Feb 2015</div>
-            <div class="seprator">|</div>
-            <div class="author">By <a href="#author">Amitai Burstein</a></div>
-          </div>
-
-          <div class="row small-row">
-            <div class="tags">
-              
-              <ul class="inline">
-                
-                
-
-  
-    
-      <li><a href="/tags.html#The Gizra Way-ref">The Gizra Way</a></li>
-    
-      <li><a href="/tags.html#Drupal-planet-ref">Drupal-planet</a></li>
-    
-  
-
-
-              </ul>
-              
-            </div>
-            <div class="comments-count"><a href="http://www.gizra.com/blog/page2/index.html#disqus_thread"></a></div>
-          </div>
-
-          <div class="row">
-            <div class="post-content">
-              <p>Here is a known fact - it&#39;s really easy to break the sites you are building. One wrong line of code, and a page is returning a 503 error.</p>
-
-<p>Here is a known secret - (almost) nobody is doing QA. Since I&#39;m not into arguing about this, I&#39;m willing to soften it a bit to &quot;most companies, don&#39;t do proper QA&quot;.</p>
-
-<p>The reasons are pretty clear - not enough time and not enough budget. This post isn&#39;t going to be about the importance of QA - that point is clear to everybody, but rather give <em>realistic</em> tips and tools that will allow you to start improving the quality of your projects, and actually even save you some time and money.</p>
 
             </div>
           </div>

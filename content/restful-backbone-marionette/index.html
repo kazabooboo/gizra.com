@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Forking Todo Restful with Backbone.Marionette</title>
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="/css/main.3e33.css"/>
+
+        <link href='http://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
+
+        <!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-6558346-3', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+    </head>
+    <body>
+
+    
+
+    <header class="white">
+      <div class="container">
+        <div class="logo"><a href="/">gizra</a></div>
+        <nav id="nav" role="navigation" class="navbar navbar-default nav-fixed">
+          <div class="navbar-header">
+            <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="/products">Products</a></li>
+              <li><a href="/#about">About</a></li>
+              <li><a href="/#work">Work</a></li>
+              <li><a href="/#code">Showcase</a></li>
+              <li><a href="/blog" class="active">Blog</a></li>
+              <li><a href="/#contact">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div> <!-- End of container -->
+    </header>
+
+    
+
+
+    
+  
+
+
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+      
+    
+  
+
+
+<section id="post-page">
+  <div class="background">
+    <img src="/images/post/background.71f5.png">
+  </div>
+
+  <div class="ballons"></div>
+  <div class="post-back">
+    <a href="/blog">
+      <img src="/images/post/post-back.fca6.png">
+    </a>
+  </div>
+
+  <div class="content">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-8 col-md-offset-2 post">
+          <div class="row">
+            <div class="post-label">
+              <a href="/content/restful-backbone-marionette">Forking Todo Restful with Backbone.Marionette</a>
+            </div>
+          </div>
+
+          <div class="row small-row">
+            <div class="date">23 May 2015</div>
+            <div class="seprator">|</div>
+            <div class="author">By Luke Herrington</div>
+          </div>
+
+          <div class="row small-row">
+            <div class="tags">
+
+              
+              <ul class="inline">
+                
+                
+
+  
+    
+      <li><a href="/tags.html#RESTful-ref">RESTful</a></li>
+    
+      <li><a href="/tags.html#Drupal-planet-ref">Drupal-planet</a></li>
+    
+      <li><a href="/tags.html#Guest post-ref">Guest post</a></li>
+    
+  
+
+
+              </ul>
+              
+            </div>
+
+            <div class="comments-count"><a href="http://www.gizra.com/content/restful-backbone-marionette#disqus_thread"></a></div>
+          </div>
+
+          <div class="row">
+            <div class="post-content">
+              <p><strong>In this guest post, <a href="https://twitter.com/lukeherrington">Luke Herrington</a> shares his experience with integrating an existing Drupal backend with a Backbone.Marionette Todo app.</strong></p>
+
+<p>If you&#39;re reading this, you probably already know about all of the great work that Gizra has done in the Drupal/REST space. If you haven&#39;t, I highly recommend you check out their <a href="https://github.com/Gizra">github</a> repo. Also see the <a href="https://github.com/RESTful-Drupal">RESTful</a> module.</p>
+
+<p>One of the projects that Amitai has contributed is <a href="https://github.com/Gizra/todo_restful">Todo Restful</a>. It shows an Angular implementation of the canonical <a href="http://todomvc.com/">TodoMVC</a> Javascript app connecting to a headless Drupal backend. It&#39;s a great demonstration of how easy exposing Drupal content with the RESTful module is. It also shows that when a RESTful API adheres to best practices, connecting it with clients that follow the same best practices is like a nice handshake.</p>
+
+<p>I saw the Todo Restful project and it got me thinking, &quot;If Amitai did this right (hint: he did), then I should be able to get this working with Backbone pretty easily&quot;. I was pleasantly surprised!</p>
+
+<div class="demo-block text-center">
+  <a class="demo" target=_blank" href="http://infiniteluke.github.io/todo_restful/">View demo</a>
+  <a class="code" target=_blank" href="https://github.com/infiniteluke/todo_restful">Get the source code</a>
+</div>
+
+<div class="thumbnail">
+  <img src="http://www.gizra.com/assets/images/posts/restful-backbone/image1.jpg">
+  <div class="caption">Todo app with a Drupal backend</div>
+</div>
+
+<p>Here&#39;s a simplified list of everything I had to do to get it working:</p>
+
+<!-- more -->
+
+<ol>
+<li>Fork the repo</li>
+<li>Delete everything in the client/app directory. (the Angular TodoMVC stuff)</li>
+<li>Put <a href="http://todomvc.com/examples/backbone_marionette/">Backbone.Marionette implementation of TodoMVC</a> into <code>client/app</code> directory.</li>
+<li>Change the API endpoint in the Backbone code
+Override parse functions on Todo model/collection to dig into the <code>data</code> portion of the response from Drupal.
+This was necessary because Backbone expects the response for a collection to be an array of models. The RESTful module sends back other data so it places the models inside an array named data. All I had to do is tell Backbone where to look.</li>
+<li>Edit Grunt file to work with the new app code. This was the hardest part because it was specific to the Angular app.</li>
+<li>Test, Commit, Deploy. Amitai setup a Grunt task to deploy the client side code to a github project page</li>
+</ol>
+
+<p>Note: There are detailed instructions on how to get the app running locally on in the <a href="https://github.com/Gizra/todo_restful/blob/master/README.md">repo readme</a>.</p>
+
+<p>Notice I didn&#39;t have to touch any code on the Drupal side. Amitai&#39;s amazing installation script spun up the Drupal site for me with todo content type created and exposed with RESTful. It just worked. In fact the Backbone.Marionette demo app points to the same backend as the Angular app!</p>
+
+<ul>
+<li><a href="http://infiniteluke.github.io/todo_restful/">Backbone.Marionette app</a></li>
+<li><a href="http://gizra.github.io/todo_restful/#/">Angular app</a></li>
+<li><a href="http://live-todo-restful.pantheon.io/">Drupal backend</a></li>
+</ul>
+
+<p>Also notice, except for steps 4 and 5 I didn&#39;t have to touch the Backbone code!</p>
+
+<p>Now imagine applying this to your project... If your requirements demand a lot of interactivity and slick UI elements, go for it! You don&#39;t even have to go fully headless if you don&#39;t want to! See the <a href="https://github.com/RESTful-Drupal/restful/blob/7.x-1.x/README.md">RESTful module documentation</a> on how to expose your content and start innovating. The possibilities are endless!</p>
+
+<h2>Conclusion</h2>
+
+<p>Amitai and Josh Koenig (Pantheon), in their <a href="https://events.drupal.org/losangeles2015/sessions/decoupled-drupal-when-why-and-how">talk at DrupalCon LA</a>, spoke about Headless Drupal and showed how Drupal can still be relevant in an age where client side frameworks (Angular, Ember, React, Backbone…) rule. It made me excited about Drupal again and showed a whole new way that Drupal can further <a href="http://www.garfieldtech.com/blog/off-the-island-2013">&quot;Get off the island&quot;</a> and start to play nicely with other technologies.</p>
+
+<p>In the end, that&#39;s why I went through this exercise: To show that Drupal is a viable CMS backend for not just Angular, but also Backbone.Marionette or any other front end framework for that matter! There&#39;s a ton of front-end developers out there that don&#39;t know what Drupal is capable of. I hope that by showing how easy this was, front-end devs can see that Drupal is more relevant than ever and that it makes their life really easy. I also did this to show current Drupal devs that with Headless Drupal we can imagine displaying and interacting with our content in ways we never have before.</p>
+
+<p>So who&#39;s next? React? Ember?  </p>
+
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="bottom-dash"></div>
+          </div>
+
+          <div class="row post-nav">
+            <div class="first">
+              
+              <div class="previous">
+                <a href="/content/visual-regression-travis-shoov-ngrok">
+                  Previous
+                </a>
+              </div>
+              <a href="/content/visual-regression-travis-shoov-ngrok" class="prev-text">
+                Visual regression tests on every commit
+              </a>
+              
+            </div>
+            <div class="last">
+              
+            </div>
+          </div>
+
+          <div class="row author-details">
+            <div class="image-wrapper">
+              <img src="/images/team/lukeherrington.89e5.jpg" class="img-responsive">
+            </div>
+            <div class="text-wrapper">
+              <span class="name">Luke Herrington</span> <span class="twitter">(@lukeherrington)</span>
+              <div class="title">Developer</div>
+              <div class="bio">Luke is just another web nerd that loves to learn new technologies. He works at Qualcomm by day as a software application engineer and hangs at home by night as a dad and husband.</div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="bottom-dash-small"></div>
+          </div>
+
+          <div class="row">
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'gizra';
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="text/javascript">
+var disqus_shortname = 'gizra';
+
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function () {
+var s = document.createElement('script'); s.async = true;
+s.type = 'text/javascript';
+s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+
+
+
+
+    <script src="/js/plugins.5250.js"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+
+    <script src="/js/scripts.87fd.js"></script>
+
+    </body>
+</html>
