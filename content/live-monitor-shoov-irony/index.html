@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Cross Browser Visual Regression Tests With Shoov</title>
+        <title>Live Monitoring With Shoov And Some Sweet Irony</title>
         <meta name="viewport" content="width=device-width">
 
         <link rel="stylesheet" href="/css/main.3e33.css"/>
@@ -133,12 +133,12 @@
         <div class="col-md-8 col-md-offset-2 post">
           <div class="row">
             <div class="post-label">
-              <a href="/content/cross-browser-visual-regression-with-shoov">Cross Browser Visual Regression Tests With Shoov</a>
+              <a href="/content/live-monitor-shoov-irony">Live Monitoring With Shoov And Some Sweet Irony</a>
             </div>
           </div>
 
           <div class="row small-row">
-            <div class="date">29 Apr 2015</div>
+            <div class="date">01 Jun 2015</div>
             <div class="seprator">|</div>
             <div class="author">By Amitai Burstein</div>
           </div>
@@ -155,7 +155,7 @@
     
       <li><a href="/tags.html#Shoov-ref">Shoov</a></li>
     
-      <li><a href="/tags.html#QA-ref">QA</a></li>
+      <li><a href="/tags.html#Live Monitoring-ref">Live Monitoring</a></li>
     
       <li><a href="/tags.html#Drupal-planet-ref">Drupal-planet</a></li>
     
@@ -166,47 +166,69 @@
               
             </div>
 
-            <div class="comments-count"><a href="http://www.gizra.com/content/cross-browser-visual-regression-with-shoov#disqus_thread"></a></div>
+            <div class="comments-count"><a href="http://www.gizra.com/content/live-monitor-shoov-irony#disqus_thread"></a></div>
           </div>
 
           <div class="row">
             <div class="post-content">
-              <p>Maintaining visual regression tests can be hard, but the more tests we write for our projects, the more we see the tremendous power it provides in terms of QA and monitoring our sites.</p>
+              <p>Irony presents itself in many forms. Not being able to login to a site that is responsible for testing that the login is working properly on other live sites, is one of them.</p>
 
-<p>One daunting task each developer hates (and often avoids) is validating their markup on multiple browsers. All of Gizra&#39;s developers use either Mac or Ubuntu on their machines, so the line to the &quot;IE computer&quot; on the far end of the office is getting long. Way too long.</p>
+<p>As much as I&#39;d like to say I was able to enjoy the irony, the six hours I spent tracking the bug were slightly frustrating.</p>
 
-<p>And honestly - after our poor developers validated their work once, if we&#39;d ask them to do it again. And again. And again... we&#39;d probably be left without any.</p>
-
-<p>Developers moral shouldn&#39;t be underestimated!</p>
-
-<p><a href="/content/shoov-ui-regression/">Shoov</a> means &quot;Again&quot; in Hebrew for this very reason.Go ahead and jump to our <a href="https://github.com/shoov/test-example">example repo</a> which now has cross browser tests. Writing your tests once - but testing on multiple platforms and browsers is a <em>big</em> win.</p>
+<p>One of the things <a href="http://shoov.io/">Shoov</a> is built for is assisting us with a quick configuration of live site monitoring using your preferred functional testing tool (e.g. Behat or CasperJS).<br>
+As awesome as services like Pingdom are, they still provide very little insight to what&#39;s actually going on in the site. In fact, according to Pingdom, Shoov was up and running, even though no user could have logged in.</p>
 
 <div class="thumbnail">
-  <img src="http://www.gizra.com/assets/images/posts/shoov-multiple-platforms/image1.jpg">
-  <div class="caption">DuckDuckGo.com tested by BrowserStack on Windows7, IE11, with 1024x780 resolution</div>
+  <img src="http://www.gizra.com/assets/images/posts/shoov-post-mortem/image1.jpg">
+  <div class="caption">Shoov login now working. When it wasn't, the fish were sad</div>
 </div>
+
+<h2>Post Mortem</h2>
+
+<p>At this point of time I think very few people care about the &quot;post mortem&quot; of this incident since Shoov is still a work in progress, however some interesting lessons were learned, and some contributions were made.</p>
 
 <!-- more -->
 
-<p>You can now execute <code>mocha</code> with different options. The simple <code>mocha</code> will still use a default browser (e.g. phantomJs), but you could also do:</p>
-<div class="highlight"><pre><code class="bash language-bash" data-lang="bash"><span class="c"># Execute the tests using the ie11 config.</span>
-<span class="nv">PROVIDER_PREFIX</span><span class="o">=</span>browserstack <span class="nv">SELECTED_CAPS</span><span class="o">=</span>ie11 mocha
+<p>First a quick overview of the problem. Shoov is a fully <a href="https://events.drupal.org/losangeles2015/sessions/decoupled-drupal-when-why-and-how">decoupled Drupal</a>, where the only way to register and login are through the GitHub login. Upon login, after the user is redirected back from GitHub&#39;s own authentication, it sends the one time access code it got from GitHub to our Drupal server to do a final validation and register the user.</p>
 
-<span class="c"># Execute the tests using the chrome on Mac config.</span>
-<span class="nv">PROVIDER_PREFIX</span><span class="o">=</span>saucelabs <span class="nv">SELECTED_CAPS</span><span class="o">=</span>chrome mocha
+<p>The login worked perfectly, until suddenly it didn&#39;t. To make things even harder my local installation worked fine.</p>
 
-<span class="c"># Execute the tests using your own provider and config.</span>
-<span class="nv">PROVIDER_PREFIX</span><span class="o">=</span>myOwnProvider <span class="nv">SELECTED_CAPS</span><span class="o">=</span>myOwnConfig mocha
+<p>After more hours that I&#39;m willing to admit and a good pointer from <a href="https://twitter.com/izuzak">@izuzak</a> from GitHub&#39;s support team, we figured that my local was sending the following <code>POST</code>:</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">POST /login/oauth/access_token HTTP/1.0
+User-Agent: Drupal (+http://drupal.org/)
+Host: github.com
+Content-Length: 119
+
+client_id=007xxxx007&amp;client_secret=1xxxxxxa2&amp;code=someOneTimeCode
 </code></pre></div>
-<p>Combined with paid services such as <a href="https://browserstack.com">BrowserStack</a> or <a href="https://saucelabs.com">SauceLabs</a> there is no longer a need for a PC in the corner of the office - as they provide you with an instant virtual machine with lots of platforms and browsers.</p>
+<p>While the live server sent this:</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">POST /login/oauth/access_token HTTP/1.0
+User-Agent: Drupal (+http://drupal.org/)
+Host: github.com
+Content-Length: 111
+
+client_id=007xxxx007&amp;amp;client_secret=1xxxxxxa2&amp;amp;code=someOneTimeCode
+</code></pre></div>
+<p>As you might have noticed (and I can&#39;t blame you if you didn&#39;t) the <code>&amp;</code> char was escaped, and GitHub decided it doesn&#39;t like that anymore.</p>
+
+<h2>Solve and Prevent Regressions</h2>
+
+<p>After quickly solving the error by hardcoding the <code>&amp;</code> char I&#39;ve decided to spend some time in figuring how I could prevent this from happening again. (Remember: Shoov means &quot;again&quot; in Heberw for this very reason...)</p>
+
+<p>I&#39;ve noticed that even though RESTful has thrown an exception when it got the result from GitHub, and even though the site is piping the logs to <a href="http://www.gizra.com/content/logs-easy-way/">Loggly</a> I wasn&#39;t notified about it.</p>
+
+<p>So, the first thing I&#39;ve done was to write a <a href="https://github.com/RESTful-Drupal/restful/pull/522/files">pull-request</a> to RESTful to make sure that exceptions are registered in the watchdog. This means we now got that part covered not just for Shoov, but for all users of RESTful!</p>
+
+<p>Next was writing a <a href="https://github.com/amitaibu/shoov-behat/blob/master/behat/features/github_login.feature">Behat test</a> that will be executed by Shoov every few minutes, and constantly verify that Shoov&#39;s login is working properly. At least this unfortunate bug will not go unnoticed should it return some day (as unfortunate bug tend to do from time to time).</p>
+
+<p>Having to do all that, along with wanting to have it as a public repository, gave me the push to finally introduce the concept of <a href="https://github.com/amitaibu/shoov-behat/blob/master/.shoov.yml#L1-L6">encrypted keys</a>. Since we don&#39;t want the credentials of the dummy GitHub user we&#39;ve created for the test to be exposed, Shoov will now have a secret private key that can be used for AES encryption. Shoov makes sure those encrypted variables will be available in our <a href="https://github.com/amitaibu/shoov-behat/blob/master/behat/features/bootstrap/FeatureContext.php#L44-L49">tests</a>.</p>
 
 <div class="thumbnail">
-  <img src="http://www.gizra.com/assets/images/posts/shoov-multiple-platforms/image2.jpg">
-  <div class="caption">BrowserStack is providing our virtual boxes on demand</div>
+  <img src="http://www.gizra.com/assets/images/posts/shoov-post-mortem/image2.jpg">
+  <div class="caption">Encrypted keys using the same syntax as Travis in .shoov.yml file</div>
 </div>
 
-<p>As we are using those services for testing our projects on multiple platforms and browsers, we are suddenly dealing with lots of images. Since our sites are frequently changing, those baseline images tend to change quite frequently.<br>
-This is where <a href="shoov.gizra.com">Shoov</a> really helps us in the tedious task of making sure our visual regression tests are up to date. It does it by allowing us to easily replace the baseline images with the regression ones, either by downloading them with the correct name, or even by creating a pull request for us.</p>
+<p>And you know what else is great? Since all the different components of Shoov are open source, we can enjoy sharing the code the does the <a href="https://github.com/shoov/php-ci/blob/33f9ea4292005e7898f192cb3d1250d681acaf7e/export-vars.js">decryption</a> with everyone.</p>
 
             </div>
           </div>
@@ -219,25 +241,16 @@ This is where <a href="shoov.gizra.com">Shoov</a> really helps us in the tedious
             <div class="first">
               
               <div class="previous">
-                <a href="/content/simpletest-behat-drupal-8">
+                <a href="/content/restful-backbone-marionette">
                   Previous
                 </a>
               </div>
-              <a href="/content/simpletest-behat-drupal-8" class="prev-text">
-                simpleTest with Behat for Drupal 8
+              <a href="/content/restful-backbone-marionette" class="prev-text">
+                Forking Todo Restful with Backbone.Marionette
               </a>
               
             </div>
             <div class="last">
-              
-              <div class="next">
-                <a href="/content/angularjs-ui-router">
-                  Next
-                </a>
-              </div>
-              <a href="/content/angularjs-ui-router" class="next-text">
-                AngularJs Ui-Router
-              </a>
               
             </div>
           </div>
