@@ -33,7 +33,7 @@ In the [test file](https://github.com/amitaibu/ci-tests-twitter/blob/master/ui-t
 
 ## Functional testing for dynamic parts
 
-A screenshot is a powerful tool, but not the only one. We still have functional testing frameworks in our toolbelt. [Behat](/content/behat-the-right-way/) can easily be used to assert that the number of tweets feature is working.
+A screenshot is a powerful tool, but not the only one. We still have functional testing frameworks in our toolbelt. [Behat](http://gizra.com/content/behat-the-right-way/) can easily be used to assert that the number of tweets feature is working.
 
 In the time of writing [@gizra_drupal](https://twitter.com/gizra_drupal) has about 340 tweets. So we could write a simple [test](https://github.com/amitaibu/ci-tests-twitter/blob/master/behat/features/user_page.feature) that will assert that there's a minimum of 300 tweets (giving us the flexibility to delete a few without breaking the tests).
 
