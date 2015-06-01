@@ -62,7 +62,7 @@ As you might have noticed (and I can't blame you if you didn't) the `&` char was
 
 ## Solve and Prevent Regressions
 
-After quickly solving the error by hardcoding the `&` char I've decided to spend some time in figuring how I could prevent this from happening again. (Remember: Shoov means "again" in Heberw for this very reason...)
+After quickly solving the error by hardcoding the `&` char I've decided to spend some time in figuring how I could prevent this from happening again. (Remember: Shoov means "again" in Hebrew for this very reason...)
 
 I've noticed that even though RESTful has thrown an exception when it got the result from GitHub, and even though the site is piping the logs to [Loggly](http://www.gizra.com/content/logs-easy-way/) I wasn't notified about it.
 
