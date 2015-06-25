@@ -318,6 +318,44 @@
     <div class="row">
       <div class="col-md-offset-2 col-md-8 post">
         <div class="date">
+          25 Jun 2015
+        </div>
+
+        <div class="post-label">
+          <a href="/content/phantomjs-chrome-docker-selenium-standalone">Why PhantomJS When You Can Chrome</a>
+        </div>
+
+        <div class="teaser">
+          <p>Following our <a href="http://www.gizra.com/content/live-monitor-shoov-irony/">unfortunate bug</a> in Shoov which caused login to stop working, we decided to write a Behat test that will continuously check the live site and make sure login with GitHub is working properly.</p>
+
+<p>Writing the Behat test was pretty easy, however it had a major problem - it didn&#39;t work.</p>
+<div class="highlight"><pre><code class="gherkin language-gherkin" data-lang="gherkin"><span class="nt">@javascript</span><span class="nf"></span>
+<span class="k">Scenario:</span><span class="nf"> Login to shoov</span>
+<span class="k">  Given </span><span class="nf">I am an anonymous user</span>
+<span class="nf">   </span><span class="k">When </span><span class="nf">I visit the homepage</span>
+<span class="nf">    </span><span class="k">And </span><span class="nf">I login with my GitHub account</span>
+<span class="nf">   </span><span class="k">Then </span><span class="nf">I should wait for the text &quot;</span><span class="s">My Account</span><span class="nf">&quot; to &quot;</span><span class="s">appear</span><span class="nf">&quot;</span>
+</code></pre></div>
+<p>When Behat sees the <code>@javascript</code> tag in the begining of the scenario, it launches it (with the help of Mink extension) in PhantomJS, Firefox or Chrome.<br>
+PhantomJS is usually the easiest to configure and hook into the CI workflow later on.</p>
+
+<p>But the test we wrote just failed on all versions of PhantomJS we tried. Which made us switch to Firefox instead. Travis CI is kind enough to have a headless Firefox installed in their machine which we could use. Unfortunately, Firefox didn&#39;t like our test either, but for another reason - it couldn&#39;t parse the xpath we use to find our text elements.</p>
+
+<p>So after spending some time trying to figure out a workaround, I suddenly stared at the browser I was using to find the answer - Chrome!</p>
+
+<div class="thumbnail">
+<iframe src="http://gfycat.com/ifr/ThirstyOfficialDikkops" frameborder="0" scrolling="no" width="800" height="424" style="-webkit-backface-visibility: hidden;-webkit-transform: scale(1);" ></iframe>
+
+  <div class="caption">Behat test running on headless Chrome, seen via VNC</div>
+</div>
+
+        </div>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-md-offset-2 col-md-8 post">
+        <div class="date">
           01 Jun 2015
         </div>
 
@@ -412,30 +450,6 @@ Travis-CI, <a href="https://github.com/webdriverio/webdrivercss">webdriverCSS</a
 <div class="thumbnail">
   <img src="http://www.gizra.com/assets/images/posts/shoov-travis/image1.jpg">
   <div class="caption">Visual regression found and uploaded to shoov.io</div>
-</div>
-
-        </div>
-      </div>
-    </div>
-    
-    <div class="row">
-      <div class="col-md-offset-2 col-md-8 post">
-        <div class="date">
-          07 May 2015
-        </div>
-
-        <div class="post-label">
-          <a href="/content/shoov-monitor-twitter">How we could monitor Twitter (if we had to)</a>
-        </div>
-
-        <div class="teaser">
-          <p>Monitoring your live site is a pretty good idea - that&#39;s generally agreed. Same goes for visual regression testing. Doing it, however, is hard. Enough so that very few companies actually do visual regression testing/monitoring, so don&#39;t feel bad if you haven&#39;t either until now. But after reading this post you should seriously consider doing it. Or at least give it a <a href="https://github.com/shoov/test-example">try</a>.</p>
-
-<p>For example, here&#39;s an overview of how we could monitor Twitter, if someone would actually ask us to (as always you can jump right into the <a href="https://github.com/amitaibu/ci-tests-twitter">repository</a>):</p>
-
-<div class="thumbnail">
-  <img src="http://www.gizra.com/assets/images/posts/shoov-twitter/image1.jpg">
-  <div class="caption">Visual regression on a Twitter page. So much functionality has been asserted in this simple screenshot</div>
 </div>
 
         </div>

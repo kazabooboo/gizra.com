@@ -2,12 +2,57 @@
 <rss version="2.0">
   <channel>
     <description></description>
-    <title>Gizra.com</title>
+    <title>Gizra</title>
     <link>http://www.gizra.com</link>
-    <lastBuildDate>Mon, 01 Jun 2015 10:00:43 +0300</lastBuildDate>
-    <pubDate>Mon, 01 Jun 2015 10:00:43 +0300</pubDate>
+    <lastBuildDate>Thu, 25 Jun 2015 20:00:34 +0300</lastBuildDate>
+    <pubDate>Thu, 25 Jun 2015 20:00:34 +0300</pubDate>
     <ttl>1800</ttl>
 
+    
+      
+        
+      
+        
+      
+        
+          
+        
+      
+
+      
+      <item>
+        <title>Why PhantomJS When You Can Chrome</title>
+        <description>
+          &lt;p&gt;Following our &lt;a href=&quot;http://www.gizra.com/content/live-monitor-shoov-irony/&quot;&gt;unfortunate bug&lt;/a&gt; in Shoov which caused login to stop working, we decided to write a Behat test that will continuously check the live site and make sure login with GitHub is working properly.&lt;/p&gt;
+
+&lt;p&gt;Writing the Behat test was pretty easy, however it had a major problem - it didn&amp;#39;t work.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;gherkin language-gherkin&quot; data-lang=&quot;gherkin&quot;&gt;&lt;span class=&quot;nt&quot;&gt;@javascript&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;Scenario:&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt; Login to shoov&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;  Given &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;I am an anonymous user&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;   &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;When &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;I visit the homepage&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;And &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;I login with my GitHub account&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;   &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;Then &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;I should wait for the text &amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;My Account&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;&amp;quot; to &amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;appear&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;When Behat sees the &lt;code&gt;@javascript&lt;/code&gt; tag in the begining of the scenario, it launches it (with the help of Mink extension) in PhantomJS, Firefox or Chrome.&lt;br&gt;
+PhantomJS is usually the easiest to configure and hook into the CI workflow later on.&lt;/p&gt;
+
+&lt;p&gt;But the test we wrote just failed on all versions of PhantomJS we tried. Which made us switch to Firefox instead. Travis CI is kind enough to have a headless Firefox installed in their machine which we could use. Unfortunately, Firefox didn&amp;#39;t like our test either, but for another reason - it couldn&amp;#39;t parse the xpath we use to find our text elements.&lt;/p&gt;
+
+&lt;p&gt;So after spending some time trying to figure out a workaround, I suddenly stared at the browser I was using to find the answer - Chrome!&lt;/p&gt;
+
+&lt;div class=&quot;thumbnail&quot;&gt;
+&lt;iframe src=&quot;http://gfycat.com/ifr/ThirstyOfficialDikkops&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot; width=&quot;800&quot; height=&quot;424&quot; style=&quot;-webkit-backface-visibility: hidden;-webkit-transform: scale(1);&quot; &gt;&lt;/iframe&gt;
+
+  &lt;div class=&quot;caption&quot;&gt;Behat test running on headless Chrome, seen via VNC&lt;/div&gt;
+&lt;/div&gt;
+
+          &lt;p&gt;&lt;a href=&quot;http://www.gizra.com/content/phantomjs-chrome-docker-selenium-standalone/&quot;&gt;Continue reading…&lt;/a&gt;&lt;/p&gt;
+        </description>
+        <link>http://www.gizra.com/content/phantomjs-chrome-docker-selenium-standalone</link>
+        <guid>http://www.gizra.com/content/docker-selenium-standalone</guid>
+        <pubDate>Thu, 25 Jun 2015 00:00:00 +0300</pubDate>
+      </item>
+      
     
       
         
@@ -1603,7 +1648,7 @@ If your not a total geek the first 15 minutes will be enough. Unless you are int
         </description>
         <link>http://www.gizra.com/content/drupalcamp-montreal-keynote/</link>
         <guid>http://www.gizra.com/content/drupalcamp-montreal-keynote</guid>
-        <pubDate>Thu, 18 Oct 2012 00:00:00 +0300</pubDate>
+        <pubDate>Thu, 18 Oct 2012 00:00:00 +0200</pubDate>
       </item>
       
     
@@ -2191,7 +2236,7 @@ Migrate V2 uses &lt;a href =&quot;http://drupal.org/project/drush&quot;&gt;Drush
         </description>
         <link>http://www.gizra.com/content/rounded-corners/</link>
         <guid>http://www.gizra.com/content/rounded-corners</guid>
-        <pubDate>Wed, 20 Oct 2010 00:00:00 +0300</pubDate>
+        <pubDate>Wed, 20 Oct 2010 00:00:00 +0200</pubDate>
       </item>
       
     
@@ -2215,7 +2260,7 @@ Migrate V2 uses &lt;a href =&quot;http://drupal.org/project/drush&quot;&gt;Drush
         </description>
         <link>http://www.gizra.com/content/message-example-github-news-feed/</link>
         <guid>http://www.gizra.com/content/message-example-github-news-feed</guid>
-        <pubDate>Wed, 29 Sep 2010 00:00:00 +0300</pubDate>
+        <pubDate>Wed, 29 Sep 2010 00:00:00 +0200</pubDate>
       </item>
       
     
