@@ -3,6 +3,9 @@ language: php
 php:
   - 5.5
 
+# Use Docker
+sudo: false
+
 mysql:
   database: drupal
   username: root
@@ -36,7 +39,7 @@ install:
   - npm install -g bower grunt-cli mocha
 
   # WebdriverCSS
-  - sudo apt-get install graphicsmagick
+  - apt-get install graphicsmagick
 
   # Install Shoov config
   - curl -o ~/.shoov.json $SHOOV_CURL
