@@ -63,14 +63,15 @@ $gizra-text: #5D5D5D;
   font-family: Abril Fatface;
 }
 
-li {
-  list-style: none;
-}
 
 .parallax-scene {
   position: relative;
   margin: 0 auto;
   text-align: center;
+
+  li {
+    list-style: none;
+  }
 
   img {
     // Each image should be positioned absolute in order for parallax to
