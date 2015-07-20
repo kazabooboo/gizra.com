@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Visually Monitoring Drupal.org</title>
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="/css/main.da78.css"/>
+
+        <link href='http://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
+
+        <!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-6558346-3', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+    </head>
+    <body>
+
+    
+
+    <header class="white">
+      <div class="container">
+        <div class="logo"><a href="/">gizra</a></div>
+        <nav id="nav" role="navigation" class="navbar navbar-default nav-fixed">
+          <div class="navbar-header">
+            <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="/#work">Work</a></li>
+              <li><a href="/#about">About</a></li>
+              <li><a href="/blog">Blog</a></li>
+              <li><a href="/team">Team</a></li>
+              <li><a href="/#contact">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div> <!-- End of container -->
+    </header>
+
+    
+
+
+    
+  
+
+
+
+  
+    
+      
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+
+<section id="post-page">
+  <div class="background">
+    <img src="/images/post/background.71f5.png">
+  </div>
+
+  <div class="ballons"></div>
+  <div class="post-back">
+    <a href="/blog">
+      <img src="/images/post/post-back.fca6.png">
+    </a>
+  </div>
+
+  <div class="content">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-8 col-md-offset-2 post">
+          <div class="row">
+            <div class="post-label">
+              <a href="/content/visual-monitor-drupal">Visually Monitoring Drupal.org</a>
+            </div>
+          </div>
+
+          <div class="row small-row">
+            <div class="date">20 Jul 2015</div>
+            <div class="seprator">|</div>
+            <div class="author">By Amitai Burstein</div>
+          </div>
+
+          <div class="row small-row">
+            <div class="tags">
+
+              
+              <ul class="inline">
+                
+                
+
+  
+    
+      <li><a href="/tags.html#Shoov-ref">Shoov</a></li>
+    
+      <li><a href="/tags.html#Visual Monitor-ref">Visual Monitor</a></li>
+    
+      <li><a href="/tags.html#Drupal-planet-ref">Drupal-planet</a></li>
+    
+  
+
+
+              </ul>
+              
+            </div>
+
+            <div class="comments-count"><a href="http://www.gizra.com/content/visual-monitor-drupal#disqus_thread"></a></div>
+          </div>
+
+          <div class="row">
+            <div class="post-content">
+              <p>In recent months I&#39;ve been demoing visual monitoring to many developers. The reaction was always positive, but I&#39;ve realized that not enough people have taken the step from recognizing the need to actually implementing it on their own projects.</p>
+
+<p>If you have been following my recent blog posts or tweets you&#39;ve probably noticed we are trying to bring visual monitoring along with <a href="http://shoov.io">Shoov</a> to the masses. To do so we&#39;re trying to reduce the complexity and codify our &quot;lessons learned&quot;.</p>
+
+<div class="thumbnail">
+  <iframe src="http://gfycat.com/ifr/FrailVioletEmperorpenguin" frameborder="0" scrolling="no" width="800" height="424" style="-webkit-backface-visibility: hidden;-webkit-transform: scale(1);" ></iframe>
+
+  <div class="caption">Drupal.org visually monitored by Shoov</div>
+</div>
+
+<p>Yeoman generators is one way to achieve this. With the new <a href="https://www.npmjs.com/package/generator-shoov">yo shoov</a> - a single command makes sure all the files needed for visual monitoring are immediately scaffolded in your repository. In fact, it also sets up Behat tests along with a <a href="https://github.com/Gizra/drupal.org-shoov/blob/master/.shoov.yml">.shoov.yml</a> that will allow Shoov to run your visual monitoring tests periodically.</p>
+
+<p>Since visual monitoring might be new for a lot of people, the generator not only scaffolds the files but also attempts to check if your system is properly installed, and tells you how to fix it if not.</p>
+
+<div class="thumbnail">
+  <img src="http://www.gizra.com/assets/images/posts/shoov-drupal/image1.jpg">
+  <div class="caption">Shoov generator in action.</div>
+</div>
+
+<!-- more -->
+
+<p>What&#39;s cool about using libraries such as WebdriverCSS in conjunction with 3rd party services such as BrowserStack or Sauce Labs is that you can write once, and execute multiple times in different environments.</p>
+<div class="highlight"><pre><code class="bash language-bash" data-lang="bash"><span class="c"># Run on Chrome 43.0 on Mac X 10.10</span>
+<span class="nv">PROVIDER_PREFIX</span><span class="o">=</span>saucelabs <span class="nv">SELECTED_CAPS</span><span class="o">=</span>chrome mocha
+
+<span class="c"># Run on Internet Explorer on Windows 7</span>
+<span class="nv">PROVIDER_PREFIX</span><span class="o">=</span>saucelabs <span class="nv">SELECTED_CAPS</span><span class="o">=</span>ie11 mocha
+</code></pre></div>
+<p>Another nifty feature of WebdriverCSS is the ability test the same pages on multiple viewports with a single line of code:</p>
+<div class="highlight"><pre><code class="javascript language-javascript" data-lang="javascript"><span class="p">.</span><span class="nx">webdrivercss</span><span class="p">(</span><span class="nx">testName</span> <span class="o">+</span> <span class="s1">&#39;.homepage&#39;</span><span class="p">,</span> <span class="p">{</span>
+  <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;1&#39;</span><span class="p">,</span>
+  <span class="c1">// ...</span>
+  <span class="c1">// Test on multiple view ports.</span>
+  <span class="nx">screenWidth</span><span class="o">:</span> <span class="nx">selectedCaps</span> <span class="o">==</span> <span class="s1">&#39;chrome&#39;</span> <span class="o">?</span> <span class="p">[</span><span class="mi">320</span><span class="p">,</span> <span class="mi">640</span><span class="p">,</span> <span class="mi">960</span><span class="p">,</span> <span class="mi">1200</span><span class="p">]</span> <span class="o">:</span> <span class="kc">undefined</span><span class="p">,</span>
+<span class="p">},</span> <span class="nx">shoovWebdrivercss</span><span class="p">.</span><span class="nx">processResults</span><span class="p">)</span>
+</code></pre></div>
+<h2>Best Practices</h2>
+
+<p>Visual monitoring best practices are beyond lines of code - they are about the mindset needed when approaching this task. Here are the important ones:</p>
+
+<ol>
+<li>Don&#39;t try to achieve 100% test coverage. Assuming that up until now you had 0 test coverage, it&#39;s probably fine to reach 40% - so don&#39;t feel bad when you <code>exclude</code> or <code>remove</code> the dynamic parts. Their <em>functionality</em> can be complimented by functional testing with Behat or CasperJs.</li>
+<li>Don&#39;t compromise by using PhantomJS. Your sites are being consumed by real people on real browsers. Use 3rd party services, or your own Selenium cloud to run tests. It&#39;s well worth the money.</li>
+<li>Given the last point - the time the tests run should be considered as a resource. Having a gazillion tests would eat much of that resource. Try to find the balance: doing as little effort as possible, with as much gain as possible.</li>
+<li>Look (and contribute) to examples. The Drupal.org <a href="https://github.com/Gizra/drupal.org-shoov">monitoring example</a> is there for the community to learn. While the repo has been &quot;Shoovified&quot;, there&#39;s actually zero vendor lock-in - the WebdriverCSS code is valid with or without Shoov.</li>
+<li>Start simple. Visual monitoring is very powerful, but requires the time to master it. If you will overdo with lots of baseline images from the beginning you might need to adapt them very often until you will get the hang of it.</li>
+</ol>
+
+<h2>Shoov&#39;s Next Steps</h2>
+
+<p>Apart from adding a nicer design to the application, Pusher integration for real time notifications, and lots of smaller features, the Gizra devs are constantly trying to push code to other projects, namely <a href="https://github.com/RESTful-Drupal/restful">RESTful</a> and <a href="https://github.com/Gizra/generator-hedley">yo hedley</a>. We are hoping you could enjoy and use that work on your own Headless Drupal projects, and of course hope the community could contribute back.</p>
+
+<div class="thumbnail">
+  <img src="http://www.gizra.com/assets/images/posts/shoov-drupal/image2.jpg">
+  <div class="caption">Shoov's dashboard.</div>
+</div>
+
+<p>We&#39;ve also began work on a getting started tutorial, which will help guide developers through example to reach visual monitoring best practices nirvana.</p>
+
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="bottom-dash"></div>
+          </div>
+
+          <div class="row post-nav">
+            <div class="first">
+              
+              <div class="previous">
+                <a href="/content/phantomjs-chrome-docker-selenium-standalone">
+                  Previous
+                </a>
+              </div>
+              <a href="/content/phantomjs-chrome-docker-selenium-standalone" class="prev-text">
+                Why PhantomJS When You Can Chrome
+              </a>
+              
+            </div>
+            <div class="last">
+              
+            </div>
+          </div>
+
+          <div class="row author-details">
+            <div class="image-wrapper">
+              <img src="/images/team/amitaibu.4179.jpg" class="img-responsive">
+            </div>
+            <div class="text-wrapper">
+              <span class="name">Amitai Burstein</span> <span class="twitter">(@amitaibu)</span>
+              <div class="title">CTO, Co-Owner</div>
+              <div class="bio">Maintainer of Organic groups, the Message stack, and co-maintainer of Drupal 8's Entity reference. <a href="/content/the-about-story/">The about story</a>.</div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="bottom-dash-small"></div>
+          </div>
+
+          <div class="row">
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'gizra';
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="text/javascript">
+var disqus_shortname = 'gizra';
+
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function () {
+var s = document.createElement('script'); s.async = true;
+s.type = 'text/javascript';
+s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+
+
+
+
+    <script src="/js/plugins.b01d.js"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+
+    <script src="/js/scripts.87fd.js"></script>
+
+    </body>
+</html>
