@@ -76,25 +76,22 @@ title: Your Project. The Gizra Way
       <!--Pager Begin-->
 
       <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-8">
           <div class="row pager-wrapper">
             <ul id="pager">
 
-              <li class="prev">
               {% if paginator.previous_page %}
+              <li class="prev">
                 <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"></a>
-              {% else %}
-                <span></span>
-              {% endif %}
               </li>
+              {% endif %}
 
-              <li class="next">
               {% if paginator.next_page %}
+              <li class="next">
                 <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"></a>
-              {% else %}
-                <span></span>
-              {% endif %}
               </li>
+              {% endif %}
+
             </ul>
           </div>
         </div>

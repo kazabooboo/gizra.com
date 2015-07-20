@@ -1,6 +1,6 @@
 $(function() {
   // Homepage slideshow.
-  $('#slideshow .scene').parallax();
+  $('.parallax-scene').parallax();
 
   // About-story images.
   if (navigator.userAgent.match(/(iPod|iPhone|iPad)/)) {

@@ -44,14 +44,108 @@ $gizra-text: #5D5D5D;
   font-style: normal;
 }
 
+@media (min-width: $screen-lg-desktop) {
+  .container {
+    width: 1000px;
+  }
+}
+
+.col-md-offset-1-5 {
+  margin-left: 12.66%;
+}
 
 .thumbnail {
   display: inline-block;
   text-align: center;
 }
 
+.abril-font {
+  font-family: Abril Fatface;
+}
+
+li {
+  list-style: none;
+}
+
+.parallax-scene {
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+
+  img {
+    // Each image should be positioned absolute in order for parallax to
+    // work.
+    position: absolute;
+  }
+
+  .ballon-brown {
+    left: 2%;
+    top: -44px;
+  }
+
+  .ballon-blue {
+    left: 41%;
+    top: 6%;
+  }
+
+  .ballon-red {
+    left: 44%;
+    top: -34px;
+  }
+
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    .ballon-brown {
+      left: 2%;
+      top: -20px;
+    }
+
+    .ballon-blue {
+      left: 33%;
+      top: 6%;
+    }
+
+    .ballon-red {
+      left: 36%;
+      top: -34px;
+    }
+  }
+
+  @media (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
+    .ballon-brown {
+      left: 0;
+      top: -20px;
+    }
+
+    .ballon-blue {
+      left: 22%;
+      top: 7%;
+    }
+
+    .ballon-red {
+      left: 25%;
+      top: -24px;
+    }
+  }
+
+  @media (max-width: $screen-xs-min) {
+    .ballon-brown {
+      display: none;
+    }
+
+    .ballon-blue {
+      left: 8%;
+      top: 12%;
+    }
+
+    .ballon-red {
+      left: 11%;
+      top: 0;
+    }
+  }
+}
+
 header {
-  background-color: black;
+  background: url('/images/header/background.jpg') no-repeat center top;
   text-align: center;
 
   &.white {
@@ -60,24 +154,27 @@ header {
     .navbar {
       z-index: 1000;
 
-      .navbar-collapse {
-        @media (max-width: 767px) {
-          background: #000000;
-        }
+      .navbar-toggle {
 
-        ul.navbar-nav {
+        .icon-bar {
+          background: black;
+        }
+      }
+
+      ul.navbar-nav {
+
+        li {
+
+          &:after {
+            color: black;
+
+            @media (max-width: $screen-xs-max) {
+              display: none;
+            }
+          }
 
           a {
-            color: #000000;
-
-            @media (max-width: 767px) {
-              color: #ffffff;
-            }
-
-            &:hover,
-            &.active {
-              color: #FF9E2F;
-            }
+            color: black;
           }
         }
       }
@@ -89,20 +186,20 @@ header {
   }
 
   .logo {
-    margin-top: -22px;
+    margin-top: -2px;
 
-    @media (max-width: 767px) {
+    @media (max-width: $screen-xs-max) {
       margin: 15px 0 34px;
       text-align: left;
     }
 
     a {
       font-family: Abril Fatface;
-      font-size: 70px;
+      font-size: 66px;
       text-decoration: none;
       color: $gizra-orange;
 
-      @media (max-width: 767px) {
+      @media (max-width: $screen-xs-max) {
         font-size: 45px;
         padding: 0 20px;
       }
@@ -114,11 +211,12 @@ header {
     border: none;
     display: inline-block;
     min-height: initial;
-    margin-bottom: -17px;
+    margin-top: 3px;
+    margin-bottom: -5px;
     position: relative;
     z-index: 1000;
 
-    @media (max-width: 767px) {
+    @media (max-width: $screen-xs-max) {
       position: absolute;
       top: 25px;
       right: -2px;
@@ -133,12 +231,12 @@ header {
       }
 
       .icon-bar {
-        background: $gizra-orange-light;
+        background: white;
         height: 3px;
       }
     }
 
-    @media (max-width: 767px) {
+    @media (max-width: $screen-xs-max) {
       .navbar-collapse {
         position: relative;
         right: 0;
@@ -151,504 +249,145 @@ header {
 
     ul.navbar-nav {
 
-      a {
-        color: #9c5f1b;
-        padding-top: 0;
-        text-transform: uppercase;
-        font-size: 15px;
-        letter-spacing: 2px;
-        font-family: OstrichSansBlack;
+      li {
 
-        &:hover,
-        &.active {
-          color: #FF9E2F;
+        &:after {
+          content: '.';
+          color: white;
+          display: inline-block;
         }
 
-        @media (max-width: 767px) {
-          font-size: 35px;
-          line-height: 45px;
-          padding-left: 50px;
-          padding-right: 50px;
+        &:last-child {
+
+          &:after {
+            display: none;
+          }
+        }
+
+        a {
+          color: white;
+          padding-top: 0;
+          text-transform: uppercase;
+          font-size: 13px;
+          letter-spacing: 2px;
+          display: inline-block;
+          font-family: Verdana;
+
+          @media (max-width: $screen-xs-max) {
+            color: black;
+          }
+
+
+          &:hover,
+          &.active {
+            color: $gizra-orange-light;
+          }
+
+          @media (max-width: $screen-xs-max) {
+            font-size: 35px;
+            line-height: 45px;
+            padding-left: 50px;
+            padding-right: 50px;
+          }
         }
       }
     }
   }
-}
 
+  #slogan {
+    position: relative;
+    overflow: hidden;
+    height: 685px;
 
-#slideshow {
-  background: black;
-  position: relative;
-  overflow: hidden;
-
-  &:before {
-    content: ' ';
-    display: block;
-    background-color: white;
-    height: 200px;
-    bottom: -100px;
-    left: -100px;
-    right: -100px;
-    position: absolute;
-    @include rotate(4deg);
-  }
-
-  .background-wrapper {
-    text-align: center;
-    margin-top: 125px;
-    // Pull the slides on top of the background.
-    margin-bottom: -485px;
-
-    @media (min-width: 768px) and (max-width: 991px)  {
+    &:after {
+      content: ' ';
+      display: block;
+      background-color: white;
+      height: 285px;
+      bottom: -70px;
+      left: -100px;
+      right: -100px;
       position: absolute;
-      left: -36px;
-    }
-
-    .background {
-      padding-top: 85px;
-
-      @media (max-width: 767px) {
-        visibility: hidden;
-      }
-
+      @include rotate(4.8deg);
     }
 
     h2 {
-      font-size: 33px;
-      margin-top: -46px;
-      color: yellow;
-      font-family: OstrichSansMedium;
-      margin-left: -60px;
+      font-size: 47px;
+      margin: 18px 0 0 0;
+      letter-spacing: 0;
+      word-spacing: 2px;
 
-      @media (max-width: 767px) {
-        display: none;
+      @media (min-width: $screen-lg-min) {
+        margin-right: 98px;
+      }
+
+      @media (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
+        font-size: 35px;
+      }
+
+      @media (max-width: $screen-xs-min) {
+        font-size: 28px;
       }
     }
-  }
 
-  .carousel-indicators {
-    bottom: 61px;
-    left: 46%;
+    h3 {
+      display: inline-block;
+      text-transform: uppercase;
+      font-size: 22px;
+      margin: -4px 0 0 420px;
 
-    @media (max-width: 767px) {
-      display: none;
-    }
+      @media (max-width: $screen-lg-min) {
+        margin-top: 2px;
+      }
 
-    @media (max-width: 992px) {
-      left: 50%;
-    }
+      @media (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
+        margin: 0 0 0 300px;
+        font-size: 18px;
+      }
 
-
-
-    li {
-      height: 8px;
-      width: 8px;
-
-      &.active {
-        height: 9px;
-        width: 9px;
-        background-color: orange;
-        border-color: orange;
+      @media (max-width: $screen-xs-min) {
+        margin: 3px 0 0 120px;
+        font-size: 14px;
       }
     }
-  }
 
-  .carousel-inner {
-    max-height: 483px;
-
-    .scene {
-      position: relative;
+    .parallax-scene {
       min-height: 500px;
       width: 860px;
-      margin: 0 auto;
-
-      img {
-        // Each image should be positioned absolute in order for parallax to
-        // work.
-        position: absolute;
-      }
-
-      &.whitehouse {
-
-        .capital {
-          right: 36%;
-          bottom: 100px;
-
-          @media (min-width: 550px) and (max-width: 767px) {
-            right: 44%;
-          }
-
-          @media (max-width: 550px) {
-            right: 54%;
-          }
-        }
-
-        .three-ballons {
-          left: 37%;
-          bottom: 208px;
-
-          @media (min-width: 550px) and (max-width: 767px) {
-            left: 30%;
-          }
-
-          @media (max-width: 550px) {
-            left: 20%;
-          }
-        }
-
-        .ballon-blue {
-          left: 14%;
-          bottom: 129px;
-
-          @media (min-width: 550px) and (max-width: 767px) {
-            left: 7%;
-            bottom: 180px;
-          }
-
-          @media (max-width: 550px) {
-            left: 2%;
-            bottom: 220px;
-          }
-        }
-
-        .staff {
-          left: 24%;
-          bottom: 75px;
-
-          @media (min-width: 550px) and (max-width: 767px) {
-            left: 20%;
-          }
-
-          @media (max-width: 550px) {
-            left: 5%;
-          }
-        }
-
-        .ballon-red {
-          left: 15%;
-          bottom: 171px;
-        }
-      }
-
-      // IBLI
-     &.ibli {
-
-       .globe {
-        left: 39%;
-        bottom: 84px;
-
-         @media (min-width: 550px) and (max-width: 767px) {
-           left: 33%;
-         }
-
-         @media (max-width: 550px) {
-           left: 5%;
-         }
-       }
-
-       .ufo {
-         left: 18%;
-         top: 204px;
-
-         @media (min-width: 550px) and (max-width: 767px) {
-           left: 14%;
-         }
-
-         @media (max-width: 550px) {
-           left: 5%;
-         }
-       }
-
-       .shuttle {
-         right: 14%;
-         top: 137px;
-
-         @media (min-width: 550px) and (max-width: 767px) {
-           right: 27%;
-         }
-
-         @media (max-width: 550px) {
-           left: 37%;
-         }
-       }
-
-       .satellite {
-         left: 21%;
-         bottom: 125px;
-
-         @media (min-width: 550px) and (max-width: 767px) {
-           left: 13%;
-         }
-
-         @media (max-width: 550px) {
-           left: 5%;
-         }
-       }
-     }
-
-      // Harvard
-      &.harvard {
-
-        .flower {
-          left: 23%;
-          bottom: 95px;
-
-          @media (min-width: 550px) and (max-width: 767px) {
-            left: 14%;
-          }
-
-          @media (max-width: 550px) {
-            left: 5%;
-          }
-        }
-
-        .computer {
-          left: 27%;
-          bottom: 80px;
-
-          @media (min-width: 550px) and (max-width: 767px) {
-            left: 14%;
-          }
-
-          @media (max-width: 550px) {
-            left: 5%;
-          }
-        }
-
-        .tablet {
-          right: 27%;
-          bottom: 80px;
-
-          @media (min-width: 550px) and (max-width: 767px) {
-            right: 44%;
-          }
-
-          @media (max-width: 550px) {
-            right: 5%;
-          }
-        }
-
-        .mobile {
-          right: 40%;
-          bottom: 75px;
-
-          @media (min-width: 550px) and (max-width: 767px) {
-            right: 55%;
-          }
-
-          @media (max-width: 550px) {
-            right: 5%;
-          }
-        }
-
-        .logo {
-          right: 22%;
-          bottom: 66px;
-
-          @media (min-width: 550px) and (max-width: 767px) {
-            right: 38%;
-          }
-
-          @media (max-width: 550px) {
-            right: 5%;
-          }
-        }
-
-        .paper {
-          left: 21%;
-          bottom: 73px;
-
-          @media (min-width: 550px) and (max-width: 767px) {
-            left: 14%;
-          }
-
-          @media (max-width: 550px) {
-            left: 5%;
-          }
-        }
-      }
-
-      // Grammy
-      &.grammy {
-
-        .stand {
-          left: 18%;
-          bottom: 98px;
-
-          @media (min-width: 550px) and (max-width: 767px) {
-            left: 8%;
-          }
-
-          @media (max-width: 550px) {
-            display: none;
-          }
-        }
-
-        .diamond-2 {
-          left: 25%;
-          bottom: 95px;
-
-          @media (min-width: 550px) and (max-width: 767px) {
-            left: 13%;
-          }
-
-          @media (max-width: 550px) {
-            left: 2%;
-          }
-        }
-
-        .gramophone-2 {
-          left: 28%;
-          bottom: 86px;
-
-          @media (min-width: 550px) and (max-width: 767px) {
-            left: 16%;
-          }
-
-          @media (max-width: 550px) {
-            left: 4%;
-          }
-        }
-
-        .diamond-1 {
-          right: 25%;
-          bottom: 70px;
-
-          @media (min-width: 550px) and (max-width: 767px) {
-            right: 35%;
-          }
-
-          @media (max-width: 550px) {
-            display: none;
-          }
-        }
-
-        .gramophone-1 {
-          right: 31%;
-          bottom: 75px;
-
-          @media (min-width: 550px) and (max-width: 767px) {
-            right: 40%;
-          }
-
-          @media (max-width: 550px) {
-            right: 50%;
-          }
-        }
-      }
     }
-
-
-    .carousel-caption {
-      bottom: 0;
-      font-family: OstrichSansMedium;
-      text-transform: uppercase;
-      left: 0;
-      right: 0;
-      padding-bottom: 0;
-      top: 0;
-
-      .big {
-        font-size: 604%;
-        letter-spacing: 4px;
-        line-height: 54px;
-
-        @media (min-width: 991px) and (max-width: 1240px) {
-          font-size: 454%;
-        }
-        @media (min-width: 769px) and (max-width: 990px) {
-          font-size: 354%;
-        }
-        @media (min-width: 550px) and (max-width: 768px) {
-          font-size: 250%;
-        }
-        @media (max-width: 550px) {
-          font-size: 130%;
-          letter-spacing: 2px;
-        }
-      }
-
-      .small {
-        font-size: 265%;
-        letter-spacing: 1px;
-
-        @media (min-width: 550px) {
-          font-size: 160%;
-        }
-        @media (max-width: 550px) {
-          font-size: 130%;
-        }
-      }
-    }
-
   }
 }
 
+
 #work {
-  background: #54898C;
+  padding-bottom: 80px;
+  text-align: center;
+  margin-top: -205px;
   position: relative;
-  overflow-x: hidden;
-  padding-bottom: 40px;
-
-  &:before {
-    content: ' ';
-    display: block;
-    background-color: white;
-    height: 200px;
-    top: -100px;
-    left: -100px;
-    right: -100px;
-    position: absolute;
-    @include rotate(-4deg);
-  }
-
-  .background {
-    text-align: center;
-    margin-top: 24px;
-    color: white;
-
-    h2,
-    .at-work {
-      font-family: OstrichSansMedium;
-    }
-
-    h2 {
-      font-size: 80px;
-      margin-top: 27px;
-      margin-bottom: 0;
-      line-height: 26px;
-    }
-
-    .at-work {
-      font-size: 50px;
-    }
-
-    p {
-      font-size: 12px;
-      margin-top: -13px;
-      margin-bottom: 50px;
-    }
-  }
 
   .container {
 
+    h2 {
+      font-size: 26px;
+      margin-right: 37px;
+      margin-top: 7px;
+      word-spacing: 2px;
+    }
+
     .logo {
-      text-align: center;
-      height: 248px;
-      background: #467D83;
-      border: 2px solid #54898C;
+      float: left;
+      height: 120px;
+      position: relative;
+      line-height:120px;
+      text-align:center;
 
-      @media (min-width: 550px) and (max-width: 767px) {
-        max-width: 282px;
-        margin-left: 10px;
-      }
-      @media (max-width: 549px) {
-        max-width: 282px;
-        margin-left: 15px;
+      img {
+        vertical-align: middle;
+        display: inline-block;
       }
 
-      &:hover {
-        background: #396F74;
+      @media (min-width: $screen-xs-max) {
+        width: 20%;
       }
     }
   }
@@ -656,7 +395,21 @@ header {
 
 #about {
   position: relative;
-  background-color: black;
+  overflow: hidden;
+  background: url('/images/hompage/about/background.jpg') no-repeat center -320px;
+
+  &:before {
+    content: ' ';
+    display: block;
+    background-color: white;
+    height: 150px;
+    top: -99px;
+    left: -100px;
+    right: -100px;
+    position: absolute;
+    z-index: 100;
+    @include rotate(-3.1deg);
+  }
 
   .text-wrapper {
     padding-bottom: 60px;
@@ -667,10 +420,11 @@ header {
     }
 
     h2 {
-      font-family: OstrichSansMedium;
-      font-size: 80px;
+      font-size: 72px;
       line-height: 120px;
       text-align: center;
+      margin: 117px 0 6px 14px;
+      letter-spacing: 2px;
 
       @media (min-width: 320px) and (max-width: 550px) {
         font-size: 55px;
@@ -684,28 +438,34 @@ header {
     }
 
     p {
-      font-size: 22px;
-      line-height: 36px;
-      margin-bottom: 36px;
+      font-size: 16px;
+      line-height: 30px;
+      margin-bottom: 40px;
+      margin-left: 14px;
+      text-align: center;
+      letter-spacing: 0.4px;
+
+      .gold {
+        color: $gizra-orange-light;
+        display: inline-block;
+      }
     }
   }
 }
 
-
 #contact {
-  background: url('/images/hompage/contact/map.jpg') no-repeat;
   background-position: center top;
-  height: 470px;
+  height: 385px;
   background-size: cover;
   position: relative;
-  margin-top: 100px;
+  margin-top: 95px;
 
   @media (max-width: 550px) {
     background: transparent;
   }
 
   .background {
-    background: url('/images/hompage/contact/envelope.png') no-repeat center;
+    background: url('/images/hompage/contact/envelope.png') no-repeat center bottom;
     height: 100%;
     width: 100%;
     position: absolute;
@@ -714,18 +474,26 @@ header {
 
   .contact-wrapper {
     max-width: 580px;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 70px;
+    padding-left: 25px;
+    padding-right: 0;
+    padding-top: 120px;
     margin: 0 auto;
+    position: relative;
+    height: 385px;
   }
 
   h2 {
-    font-family: OstrichSansMedium;
-    font-size: 80px;
-    margin-top: 0;
+    font-size: 69px;
+    margin: 0 0 0 5px;
     line-height: 61px;
     text-align: center;
+    letter-spacing: 3px;
+
+    @media (max-width: $screen-xs-min) {
+      font-size: 49px;
+      margin: 0;
+      line-height: 41px;
+    }
   }
 
   address {
@@ -733,13 +501,31 @@ header {
     color: $gizra-black;
 
     div {
-      padding: 10px 0;
+      padding: 5px 0 0;
+      font-size: 20px;
 
       a {
         color: $gizra-black;
+
+        &.telephone {
+          margin: -10px 0 0 5px;
+          display: block;
+          letter-spacing: 1px;
+          font-size: 19px;
+        }
+
+        &.email {
+          background: black;
+          text-align: center;
+          padding: 3px 25px 8px 28px;
+          color: white;
+          margin-top: 1px;
+          display: inline-block;
+          font-size: 18px;
+          letter-spacing: 1px;
+        }
       }
     }
-
   }
 }
 
