@@ -504,15 +504,15 @@ header {
       padding: 5px 0 0;
       font-size: 20px;
 
+      &.telephone {
+        margin: 0 0 0 5px;
+        display: block;
+        letter-spacing: 1px;
+        font-size: 19px;
+      }
+
       a {
         color: $gizra-black;
-
-        &.telephone {
-          margin: -10px 0 0 5px;
-          display: block;
-          letter-spacing: 1px;
-          font-size: 19px;
-        }
 
         &.email {
           background: black;
