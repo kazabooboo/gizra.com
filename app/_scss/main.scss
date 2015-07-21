@@ -361,7 +361,7 @@ header {
 
 
 #work {
-  padding-bottom: 80px;
+  padding-bottom: 120px;
   text-align: center;
   margin-top: -205px;
   position: relative;
@@ -397,22 +397,20 @@ header {
 #about {
   position: relative;
   overflow: hidden;
+  margin: 0;
+  padding: 50px 0;
+  background: black;
 
   .text-wrapper {
 
     p {
-      color: $gizra-black;
-      font-size: 18px;
+      color: white;
+      font-size: 20px;
       line-height: 30px;
       margin-bottom: 20px;
       margin-left: 14px;
       text-align: justify;
       letter-spacing: 0.4px;
-
-      .gold {
-        color: $gizra-orange-light;
-        display: inline-block;
-      }
     }
   }
 }
@@ -422,7 +420,7 @@ header {
   height: 385px;
   background-size: cover;
   position: relative;
-  margin-top: 20px;
+  margin-top: 145px;
 
   @media (max-width: 550px) {
     background: transparent;
