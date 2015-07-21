@@ -368,10 +368,10 @@ header {
 
   .container {
 
-    h2 {
+    h2.title {
       font-size: 26px;
       margin-right: 37px;
-      margin-top: 7px;
+      margin-top: 57px;
       word-spacing: 2px;
     }
 
@@ -397,53 +397,16 @@ header {
 #about {
   position: relative;
   overflow: hidden;
-  background: url('/images/hompage/about/background.jpg') no-repeat center -320px;
-
-  &:before {
-    content: ' ';
-    display: block;
-    background-color: white;
-    height: 150px;
-    top: -99px;
-    left: -100px;
-    right: -100px;
-    position: absolute;
-    z-index: 100;
-    @include rotate(-3.1deg);
-  }
 
   .text-wrapper {
-    padding-bottom: 60px;
-
-    h2,
-    p {
-      color: white;
-    }
-
-    h2 {
-      font-size: 72px;
-      line-height: 120px;
-      text-align: center;
-      margin: 117px 0 6px 14px;
-      letter-spacing: 2px;
-
-      @media (min-width: 320px) and (max-width: 550px) {
-        font-size: 55px;
-        line-height: 70px;
-      }
-
-      @media (max-width: 320px) {
-        font-size: 45px;
-        line-height: 60px;
-      }
-    }
 
     p {
-      font-size: 16px;
+      color: $gizra-black;
+      font-size: 18px;
       line-height: 30px;
-      margin-bottom: 40px;
+      margin-bottom: 20px;
       margin-left: 14px;
-      text-align: center;
+      text-align: justify;
       letter-spacing: 0.4px;
 
       .gold {
@@ -459,7 +422,7 @@ header {
   height: 385px;
   background-size: cover;
   position: relative;
-  margin-top: 95px;
+  margin-top: 20px;
 
   @media (max-width: 550px) {
     background: transparent;
