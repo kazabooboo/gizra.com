@@ -154,6 +154,132 @@
 
           <div class="row">
             <div class="post-label">
+              <a href="/content/og7-and-entity-reference-part-2/">OG7 and Entity reference - Part 2</a>
+            </div>
+          </div>
+
+          <div class="row small-row">
+            <div class="date">07 Dec 2011</div>
+            <div class="seprator">|</div>
+            <div class="author">By <a href="#author">Amitai Burstein</a></div>
+          </div>
+
+          <div class="row small-row">
+            <div class="tags">
+              
+              <ul class="inline">
+                
+                
+
+  
+    
+      <li><a href="/tags.html#Drupal-planet-ref">Drupal-planet</a></li>
+    
+      <li><a href="/tags.html#OG7-ref">OG7</a></li>
+    
+  
+
+
+              </ul>
+              
+            </div>
+            <div class="comments-count"><a href="http://www.gizra.com/blog/page13/index.html#disqus_thread"></a></div>
+          </div>
+
+          <div class="row">
+            <div class="post-content">
+              <p>Following my <a href="http://www.gizra.com/content/og7-and-entity-reference-sponsor-me">previous</a> post, and after getting some great reaction from the community via IRC and in Drupalcamp Toulouse, I’d like to share both my thoughts about the sponsoring and about the technical stuff.</p>
+
+<p>The sponsoring, which already has <a href="http://funnymonkey.com/">FunnyMonkey</a> committing to pay almost half the price, and providing on top of that developer hours, was something I’ve decided to do only after I was convinced there are some big players using OG7.
+The thing is that _anyway I intend to do this change. The sponsoring is just giving it a boost, and making sure it will be _sooner than later!</p>
+
+<p>I’m happy I was able to post that request and to get good reaction from the community.
+I’m equally happy that Planet Drupal isn’t swamped with such requests. It’s not about Drupal App. It’s about harnessing the community towards a goal. Companies offering to assist by providing developer hours is exactly the proof of that.</p>
+
+<p>Now here’s a quick overview of the planned changes. First the conceptual changes:
+<ul>
+<li>Instead of OG having it&#39;s own field type, we easily hook into Entity reference field, as it allows registering our own handler using a CTools plugin</li>
+<li>Instead of saving the field values <em>and the OG membership as we currently do, we save the OG membership, and use hook</em>field<em>load() to populate the Entity reference with the correct value. Yes, I know, the docs clearly say that we should not load fieldable entities in hook</em>field_load() as it might cause loading recursion, so we&#39;ll just make sure you can&#39;t attach group-audience fields to OG membership (which anyway doesn&#39;t make much sense). The benefit of doing that, after a long talk with the people form the community, notably fago (thanks again fago!), came out as the best solution for a problematic thing</li>
+<li>OG membership is now tightly coupled with the field that it belongs to. This means we can care about the field cardinality (i.e. how many OG membership can be created per field), and since we know the OG membership type we can provide smarter metadata</li>
+<li>We can have multiple fields, to allow subscribing users/ content to group with different membership type. No more hard-coding of the field name as-well</li>
+</ul></p>
+
+<p>Sneak preview time...
+As usual we can make a content type (Clubs in this example) a group, through the content type edit.</p>
+
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="bottom-dash"></div>
+          </div>
+        </div>
+      </div>
+      <!--Post End-->
+      
+
+      
+        
+      
+
+      
+        
+          
+            
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+
+      <!--Post begin-->
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2 post">
+
+          <div class="row">
+            <div class="post-label">
               <a href="/content/og7-and-entity-reference-sponsor-me/">OG7 and Entity reference - Sponsor me</a>
             </div>
           </div>
@@ -565,130 +691,6 @@ Damien, being Damien, gave me a Damien answer. Bojan, being Bojan, explained it 
       <!--Post End-->
       
 
-      
-        
-      
-
-      
-        
-          
-            
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-
-      <!--Post begin-->
-      <div class="row">
-        <div class="col-md-8 col-md-offset-2 post">
-
-          <div class="row">
-            <div class="post-label">
-              <a href="/content/user-modal/">User modal</a>
-            </div>
-          </div>
-
-          <div class="row small-row">
-            <div class="date">27 Jun 2011</div>
-            <div class="seprator">|</div>
-            <div class="author">By <a href="#author">Amitai Burstein</a></div>
-          </div>
-
-          <div class="row small-row">
-            <div class="tags">
-              
-              <ul class="inline">
-                
-                
-
-  
-    
-      <li><a href="/tags.html#Drupal-planet-ref">Drupal-planet</a></li>
-    
-      <li><a href="/tags.html#CTools-ref">CTools</a></li>
-    
-      <li><a href="/tags.html#Overlay-ref">Overlay</a></li>
-    
-      <li><a href="/tags.html#Subform-ref">Subform</a></li>
-    
-  
-
-
-              </ul>
-              
-            </div>
-            <div class="comments-count"><a href="http://www.gizra.com/blog/page13/index.html#disqus_thread"></a></div>
-          </div>
-
-          <div class="row">
-            <div class="post-content">
-              <p>The <a href="http://drupal.org/project/user_modal">user modal</a> is an interesting module we’ve been working lately in gizra for <a href="http://medico.com">Medico.com</a>, and I’d like to share our experience.</p>
-
-<p><img src="http://drupal.org/files/images/user-modal.jpg" alt="User modal example from Medico.com" title="User modal example from Medico.com" width="560" height="382">
-From the README:</p>
-
-<blockquote>
-User modal module allows opening the Register/ Login/ Reset password menu items
-as tabs. Since the tabs are shown via JS and not AJAX, this may lead to a better
-user experience, as there is no time waiting for the selected tab to load.
-Furthermore, the user modal form can be used by other implementing modules, and
-for example allow a user to submit a node and register in the same time.
-</blockquote>
-
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="bottom-dash"></div>
-          </div>
-        </div>
-      </div>
-      <!--Post End-->
-      
-
       <!--Pager Begin-->
 
       <div class="row">
@@ -719,7 +721,7 @@ for example allow a user to submit a node and register in the same time.
 
 
 
-    <script src="/js/plugins.5250.js"></script>
+    <script src="/js/plugins.b01d.js"></script>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
 
