@@ -20,7 +20,7 @@ published: true
 
 A well known DrupalCon fact is that the action mostly takes place in the hallways and social gatherings. The logic is that the sessions are recorded, and the rest isn't.
 
-On DrupalCon L.A. I was spending most of my time in the hallways stalking people to show them the newly born [Shoov](http://shoov.io/) and ask for their feedback. One of those people was my good friend Mike Anello, which later expressed his feeling about Shoov in this fun DrupalEasy [podcast](http://drupaleasy.com/podcast/2015/05/drupaleasy-podcast-153-drupalcon-los-angeles-day-2-recap).
+On DrupalCon L.A. I was spending most of my time in the hallways stalking people to show them the newly born [Shoov](http://shoov.io/) and ask for their feedback. One of those people was my good friend Mike Anello, which later expressed his feelings about Shoov in this fun DrupalEasy [podcast](http://drupaleasy.com/podcast/2015/05/drupaleasy-podcast-153-drupalcon-los-angeles-day-2-recap).
 
 Few months later, with the next DrupalCon already around the corner and Shoov maturing every day, I've contacted him to get his feedback on what we have so far, and I got this:
 
