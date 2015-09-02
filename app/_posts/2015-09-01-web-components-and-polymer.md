@@ -74,6 +74,7 @@ HTML from with a single text input that can receive a given url for Github API a
 ####  * Custom element demo-2 list data display (attribute data interaction):
 custom element that returns a "collection" and display a fancy teaser of each item.
 
+{% include demo_block.html demo='http://yaronmiro.github.io/polymer-example/' code='https://github.com/YaronMiro/polymer-example' %}
 
 
 
