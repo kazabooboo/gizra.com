@@ -75,20 +75,20 @@ It's also adds sugar on top of the web components specifications by adding:
 ------
 
 * Demo 2 movies list form a JSON object:   
-  displays each movie from the "collection" as fancy teaser.
+  displays each movie from the "collection" as a fancy teaser.
 
 ------
 
 * Demo 3 Login form block:   
-  Login form that connects to a server and Authenticate the credentials and returns a response accordingly.
+  Login form that sends the credentials to be authenticated by a server that returns a response.
 
 
- * Success:   
+ * Success response:   
    Fetch the user "token" and save it to the browser localStorage.
 
  ------
 
- * Failure:   
+ * Failure response:   
    Display an informative message about the error.
 
 
