@@ -30,23 +30,24 @@ I have seen the future and I'm so enthusiastic tell you about it. This is not a 
 <!-- more -->
 
 ### What are Web Components and Polymer ?
-Web Components are a collection of specifications that aren't yet been standardize by [W3C](http://www.w3.org/Consortium/facts.html) these specifications enables us to implement and consume custom HTML elements and there is also a javaScript library named Web Components that give us the ability to use it across modern browsers today(No need to wait for them to be standardize before we can use them). In a nutshell Web Components give you the ability to build an element that encapsulate all of the HTML, CSS and JavaScript. 
+Web Components are a collection of specifications that aren't yet been standardize by [W3C](http://www.w3.org/Consortium/facts.html) these specifications enables us to implement and consume custom HTML elements. Custom element has the ability encapsulate all of the HTML, CSS & JavaScript. There is also a javaScript library named Web Components that give us the ability to use it across modern browsers today (no need to wait for them to be standardize before we can use them).
 
-Before exploring the future lets start with the past in order to understand where the future is leading us. Back in the early days of web development when building a web page we had a limiting set of elements to use. It was pretty simple and straight forward all You had to do is declare the element and not necessarily write a lot of javaScript code to build a web application for example:  
+Before exploring the future lets start with the past in order to understand where the future is leading us. Back in the early days of web development when building a web page we had a limiting set of elements to use. It was pretty simple and straight forward. All You had to do is declare the element and not necessarily write a lot of javaScript code to build a web application for example:  
 
-The HTML element: html```<input/>```
+The HTML element: `<input/>`
 
 ------
 
 * Can be customize using HTML attributes.
-* Can be independent or integrate with other element e.g  html```<form>```.
-* Trigger events such as e.g: `onblur`, `onchange`, `onfocus`.
+* Can be independent or integrate with other element e.g `<form>`.
+* Trigger events such as e.g: "onblur", "onchange", "onfocus".
 * Has a built-in styling (CSS).
 * Has properties and methods (API).
 
 ------
 
-> Web Components & Polymer provide the tools to achieve that functionality with any desired element whether it's a custom or an existing element (standardize by W3C) that we want to extend it's capabilities. The bottom line is that if we want to use such an element then we don't need to know or understand his internals we just need to declare it! like in the good old days when the power was in the declaration without the need for writing our own fancy javaScript to make it. can it be more elegant then this!
+> Web Components & Polymer provide the tools to achieve that functionality with any desired element whether it's a custom or an existing element (standardize by W3C e.g `<input/>`) that we want to extend it's capabilities. The bottom line is that if we want to use such an element then we don't need to know or understand his internals we just need to declare it! like in the good old days when **the power was in the declaration** without the need for writing our own fancy javaScript to make it work.   
+Can it be more elegant then this!
 
 
 #### Web Components javaScript library:
@@ -54,23 +55,44 @@ As far as I know only chrome browser (36+) have a full native support for Web Co
 
 #### Polymer library:
 This library is officially at production this mean that you can start using it.
-The main goal behind it is to leverage developers capability when creating custom elements.
-It's built on top of the web components standards and it helps you build your own custom elements:
+The main goal behind it is to leverage developers capability when creating custom elements or extending an existing element.
+It's also adds sugar on top of the web components specifications by adding:
 
 ------
 
-* Has an API to interact with the custom element.
-* Has a declarative syntax that makes it simpler to define custom elements.
-* Has has it's own [components](https://elements.polymer-project.org/) that we can use without using polymer directly.
+* API to interact with the custom element.
+* Declarative syntax that makes it simpler to define custom elements.
+* Provide an impressive [components catalog](https://elements.polymer-project.org) that we can use without using polymer directly.
 
 ------
 
-####  * Custom element demo-1 Github repository info (user data interaction):
-HTML from with a single text input that can receive a given url for Github API and returns an a simple info block about the target repository.
+**On this post I will build the following Polymer elements:**
 
-####  * Custom element demo-2 list data display (attribute data interaction):
-custom element that returns a "collection" and display a fancy teaser of each item.
 
+* Demo 1 Github repository info:    
+  User provides a repository url and will be presented with an info about the repository.
+
+------
+
+* Demo 2 movies list form a JSON object:   
+  displays each movie from the "collection" as fancy teaser.
+
+------
+
+* Demo 3 Login form block:   
+  Login form that connects to a server and Authenticate the credentials and returns a response accordingly.
+
+
+ * Success:   
+   Fetch the user "token" and save it to the browser localStorage.
+
+ ------
+
+ * Failure:   
+   Display an informative message about the error.
+
+
+ </br>
 {% include demo_block.html demo='http://yaronmiro.github.io/polymer-example/' code='https://github.com/YaronMiro/polymer-example' %}
 
 
