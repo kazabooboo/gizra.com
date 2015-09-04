@@ -30,9 +30,9 @@ I have seen the future and I'm so enthusiastic tell you about it. This is not a 
 <!-- more -->
 
 ### What are Web Components and Polymer ?
-Web Components are a collection of specifications that aren't yet been standardize by [W3C](http://www.w3.org/Consortium/facts.html) these specifications enables us to implement and consume custom HTML elements. Custom element has the ability encapsulate all of the HTML, JavaScript & CSS. There is also a javaScript library named Web Components that enables us to these specifications across modern browsers today (no need to wait for them to be officially standardize in order to use them).
+Web Components are a collection of specifications that aren't yet been standardize by [W3C](http://www.w3.org/Consortium/facts.html) these specifications enables us to implement and consume custom HTML elements. Custom element has the ability encapsulate all of the HTML, JavaScript & CSS. There is also a javaScript library named Web Components that enables us to use these specifications across modern browsers today (no need to wait for them to be officially standardize by the W3C before we can actually use them).
 
-Before exploring the future lets start with the past in order to understand where the future is leading us. Back in the early days (90s) of web development when building a web page we had a limiting set of elements to use. It was pretty simple and straight forward. All You had to do is declare the element and not necessarily write a lot of javaScript code to build a web application for example:  
+Before we begin our journey on exploring the future lets start with the past in order to grape a better understanding where this future is leading us. Back in the early days (90s) of web development when building a web page we had a limiting set of elements to use. It was pretty simple and straight forward. All You had to do is declare the element and not necessarily write a lot of javaScript code to build a web application for example:  
 
 The HTML element: `<input/>`
 
