@@ -46,7 +46,7 @@ The HTML element: `<input/>`
 
 ------
 
-> Web Components & Polymer provide the tools to achieve that functionality with any desired element whether it's a "custom element" or an "existing standardize element" (e.g `<input/>`) we wish to extend it's capabilities. The bottom line is that if we want to use such an element then we don't need to know or understand his internals we just need to declare it! like in the good old days when **the power was in the declaration** without the need for writing our own fancy javaScript to make it work.   
+> Web Components & Polymer provide the tools to achieve that functionality with any desired element whether it's a "new custom element" or an "existing standardize element" (e.g `<input/>`) we wish to extend it's capabilities. The bottom line is that if we want to use such an element then we don't need to know or understand his internals we just need to declare it! like in the good old days when **the power was in the declaration** without the need for writing our own fancy javaScript to make it work.   
 Can it be more elegant then this!
 
 
