@@ -31,7 +31,7 @@ I have [Web Components](http://webcomponents.org/) & [Polymer](https://www.polym
 
 <!-- more -->
 
-{% include head_element.html type='h2' text='What are Web Components and Polymer ?' color='#428bca' %}
+{% include title.html type='h2' text='What are Web Components and Polymer ?' color='#9A2B2C' %}
 
 Web Components are a collection of specifications that aren't yet been standardize by [W3C](http://www.w3.org/Consortium/facts.html)
 these specifications enables us to implement and consume custom HTML elements. Custom element has the ability encapsulate all of the HTML, JavaScript & CSS.
@@ -42,7 +42,7 @@ Before we begin our journey on exploring the future lets start with the past in 
 Back in the early days (90s) of web development when building a web page we had a limiting set of elements to use. It was pretty simple and straight forward.
 All You had to do is declare the element and not necessarily write a lot of javaScript code to build a web application.
 
-Let's overview an example of an existing HTML element We all know that all ready poses the power of encapsulation the `<input/>`:
+Let's overview an existing HTML element we are all familiar with that all ready poses the power of encapsulation the `<input/>`:
 
 ------
 
@@ -60,7 +60,7 @@ element then we don't need to know or understand his internals we just need to d
 in the declaration** without the need for writing our own fancy javaScript to make it work.
 Can it be more elegant then this!
 
-{% include head_element.html type='h3' text='Web Components javaScript library' color='#428bca' %}
+{% include title.html type='h3' text='Web Components javaScript library' color='#9A2B2C' %}
 
 As far as I know only chrome browser (36+) have a full native support for Web Components specifications and other browsers have a partial/none native support.
 That is the reason we have this library which ads a sugar on top of those specifications and provides us with a set of polyfills,
@@ -68,7 +68,7 @@ Therefore we are able to use those specifications today across modern browsers, 
 is available by the browser then the library will not use the polyfill.
 
 
-{% include head_element.html type='h3' text='Polymer library' color='#428bca' %}
+{% include title.html type='h3' text='Polymer library' color='#9A2B2C' %}
 
 This library is officially at production (at the time of this writing it's v.1.0) this mean that you can start using it today.
 The main goal behind it is to leverage developers capability when creating custom elements or extending an existing element.
@@ -79,12 +79,12 @@ It's adds sugar on top of the web components specifications by adding:
 * Robust [API](http://polymer.github.io/polymer/) to interact with the custom element.
 * Declarative syntax that makes it simpler to define custom elements.
 * Provide an impressive [components catalog](https://elements.polymer-project.org) that we can use without using polymer directly.
-  These elements are based upon [Material Design](http://www.google.com/design/spec/material-design/introduction.html) so they maintain
+* Components catalog elements are based upon [Material Design](http://www.google.com/design/spec/material-design/introduction.html) so they maintain
   a consist and adoptive design/behavior across a variety of operating system and devices.
 
 ------
 
-### On this post I will build the following elements:
+{% include title.html type='h3' text='On this post I will build the following elements:' color='#9A2B2C' %}
 
 * Demo 1 Github repository info:    
   User provides a repository url and will be presented with an info about the repository.
