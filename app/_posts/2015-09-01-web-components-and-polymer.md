@@ -76,6 +76,8 @@ It's adds sugar on top of the web components specifications by adding:
 * Robust [API](http://polymer.github.io/polymer/) to interact with the custom element.
 * Declarative syntax that makes it simpler to define custom elements.
 * Provide an impressive [components catalog](https://elements.polymer-project.org) that we can use without using polymer directly.
+  These elements are based design upon [Material Design](http://www.google.com/design/spec/material-design/introduction.html) so they maintain
+  a consist and adoptive design/behavior across a variety of operating system and devices (desktop up to mobile).
 
 ------
 
