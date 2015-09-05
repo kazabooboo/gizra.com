@@ -31,7 +31,8 @@ I have [Web Components](http://webcomponents.org/) & [Polymer](https://www.polym
 
 <!-- more -->
 
-## What are Web Components and Polymer ?
+{% include head_element.html type='h2' text='What are Web Components and Polymer ?' color='#428bca' %}
+
 Web Components are a collection of specifications that aren't yet been standardize by [W3C](http://www.w3.org/Consortium/facts.html)
 these specifications enables us to implement and consume custom HTML elements. Custom element has the ability encapsulate all of the HTML, JavaScript & CSS.
 There is also a javaScript library named Web Components that enables us to use these specifications across modern browsers today
@@ -59,14 +60,16 @@ element then we don't need to know or understand his internals we just need to d
 in the declaration** without the need for writing our own fancy javaScript to make it work.
 Can it be more elegant then this!
 
+{% include head_element.html type='h3' text='Web Components javaScript library' color='#428bca' %}
 
-### Web Components javaScript library:
 As far as I know only chrome browser (36+) have a full native support for Web Components specifications and other browsers have a partial/none native support.
 That is the reason we have this library which ads a sugar on top of those specifications and provides us with a set of polyfills,
 Therefore we are able to use those specifications today across modern browsers, It also embraces the "Progressive enhancement" which means that if a native support
 is available by the browser then the library will not use the polyfill.
 
-### Polymer library:
+
+{% include head_element.html type='h3' text='Polymer library' color='#428bca' %}
+
 This library is officially at production (at the time of this writing it's v.1.0) this mean that you can start using it today.
 The main goal behind it is to leverage developers capability when creating custom elements or extending an existing element.
 It's adds sugar on top of the web components specifications by adding:
@@ -76,8 +79,8 @@ It's adds sugar on top of the web components specifications by adding:
 * Robust [API](http://polymer.github.io/polymer/) to interact with the custom element.
 * Declarative syntax that makes it simpler to define custom elements.
 * Provide an impressive [components catalog](https://elements.polymer-project.org) that we can use without using polymer directly.
-  These elements are based design upon [Material Design](http://www.google.com/design/spec/material-design/introduction.html) so they maintain
-  a consist and adoptive design/behavior across a variety of operating system and devices (desktop up to mobile).
+  These elements are based upon [Material Design](http://www.google.com/design/spec/material-design/introduction.html) so they maintain
+  a consist and adoptive design/behavior across a variety of operating system and devices.
 
 ------
 
