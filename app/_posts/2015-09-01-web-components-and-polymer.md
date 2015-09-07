@@ -31,7 +31,7 @@ I have [Web Components](http://webcomponents.org/) & [Polymer](https://www.polym
 
 <!-- more -->
 
-{% include title.html type='h2' text='What are Web Components and Polymer ?' color='#9A2B2C' %}
+{% include title.html type='h1' text='What are Web Components and Polymer ?' color='#9A2B2C' %}
 
 Web Components are a collection of specifications that aren't yet been standardize by [W3C](http://www.w3.org/Consortium/facts.html)
 these specifications enables us to implement and consume custom HTML elements. Custom element has the ability encapsulate all of the HTML, JavaScript & CSS.
@@ -60,7 +60,7 @@ element then we don't need to know or understand his internals we just need to d
 in the declaration** without the need for writing our own fancy javaScript to make it work.
 Can it be more elegant then this!
 
-{% include title.html type='h3' text='Web Components javaScript library' color='#9A2B2C' %}
+{% include title.html type='h1' text='Web Components javaScript library' color='#9A2B2C' %}
 
 As far as I know only chrome browser (36+) have a full native support for Web Components specifications and other browsers have a partial/none native support.
 That is the reason we have this library which ads a sugar on top of those specifications and provides us with a set of polyfills,
@@ -84,7 +84,7 @@ It's adds sugar on top of the web components specifications by adding:
 
 ------
 
-{% include title.html type='h3' text='On this post I will build the following elements:' color='#9A2B2C' %}
+{% include title.html type='h1' text='On this post I will build the following elements:' color='#9A2B2C' %}
 
 * Demo 1 Github repository info:    
   User provides a repository url and will be presented with an info about the repository.
