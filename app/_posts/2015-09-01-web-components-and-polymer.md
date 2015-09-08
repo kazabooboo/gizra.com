@@ -68,7 +68,7 @@ Therefore we are able to use those specifications today across modern browsers, 
 is available by the browser then the library will not use the polyfill.
 
 
-{% include title.html type='h3' text='Polymer library' color='#9A2B2C' %}
+{% include title.html type='h1' text='Polymer library' color='#9A2B2C' %}
 
 This library is officially at production (at the time of this writing it's v.1.0) this mean that you can start using it today.
 The main goal behind it is to leverage developers capability when creating custom elements or extending an existing element.
