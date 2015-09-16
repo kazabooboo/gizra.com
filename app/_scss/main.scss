@@ -81,50 +81,50 @@ $gizra-text: #5D5D5D;
 
   .ballon-brown {
     left: 2%;
-    top: -44px;
+    top: -10px;
   }
 
   .ballon-blue {
     left: 41%;
-    top: 6%;
+    top: 8%;
   }
 
   .ballon-red {
     left: 44%;
-    top: -34px;
+    top: 0;
   }
 
   @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
     .ballon-brown {
       left: 2%;
-      top: -20px;
+      top: -5px;
     }
 
     .ballon-blue {
       left: 33%;
-      top: 6%;
+      top: 8%;
     }
 
     .ballon-red {
       left: 36%;
-      top: -34px;
+      top: 0;
     }
   }
 
   @media (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
     .ballon-brown {
       left: 0;
-      top: -20px;
+      top: -5px;
     }
 
     .ballon-blue {
       left: 22%;
-      top: 7%;
+      top: 9%;
     }
 
     .ballon-red {
       left: 25%;
-      top: -24px;
+      top: 0;
     }
   }
 
@@ -317,10 +317,6 @@ header {
       margin: 18px 0 0 0;
       letter-spacing: 0;
       word-spacing: 2px;
-
-      @media (min-width: $screen-lg-min) {
-        margin-right: 98px;
-      }
 
       @media (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
         font-size: 35px;
