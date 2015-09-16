@@ -30,4 +30,4 @@ We find this works beautifully both for us and the clients. We cut the middleman
 
 As a bonus, this makes the Project Manager's life much easier, especially on a distributed team like ours. A constant stream of GitHub notifications in my email lets me know who's working on what and how it's going. The client gets the same feed, and with that a feel for the project's progress. If a particular task is stuck for some reason the client might decide to change the specification or just ask us to switch to a more important task if the expected functionality isn't worth the effort.
 
-We don't have this working for all clients, yet. But our exprience is positive enough that we do our best to convince clients to take part in this process - for both sides' benefit.
+We don't have this working for all clients, yet. But our experience is positive enough that we do our best to convince clients to take part in this process - for both sides' benefit.
