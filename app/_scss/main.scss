@@ -387,6 +387,14 @@ header {
         width: 20%;
       }
     }
+
+    .empty-logo {
+      width: 12%;
+
+      @media (max-width: $screen-xs-max) {
+        display: none;
+      }
+    }
   }
 }
 
