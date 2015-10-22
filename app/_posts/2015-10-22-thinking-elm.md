@@ -120,7 +120,7 @@ This isn't just semantics. By moving all the logic into a single action that con
 
 ## Baby Steps
 
-I encourage you to learn Elm and see how it can be integrated with your Headless Drupal installation. Even if ultimately you decidoe not to use it for production, just being exposed to this different approach will be worth your while.
+I encourage you to learn Elm and see how it can be integrated with your Headless Drupal installation. Even if ultimately you decide not to use it for production, just being exposed to this different approach will be worth your while.
 
 Some good resources are:
 
