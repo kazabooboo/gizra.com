@@ -154,6 +154,138 @@
 
           <div class="row">
             <div class="post-label">
+              <a href="/content/phantomjs-chrome-docker-selenium-standalone">Why PhantomJS When You Can Chrome</a>
+            </div>
+          </div>
+
+          <div class="row small-row">
+            <div class="date">25 Jun 2015</div>
+            <div class="seprator">|</div>
+            <div class="author">By <a href="#author">Amitai Burstein</a></div>
+          </div>
+
+          <div class="row small-row">
+            <div class="tags">
+              
+              <ul class="inline">
+                
+                
+
+  
+    
+      <li><a href="/tags.html#Shoov-ref">Shoov</a></li>
+    
+      <li><a href="/tags.html#Live Monitoring-ref">Live Monitoring</a></li>
+    
+      <li><a href="/tags.html#Drupal-planet-ref">Drupal-planet</a></li>
+    
+  
+
+
+              </ul>
+              
+            </div>
+            <div class="comments-count"><a href="http://www.gizra.com/blog/page2/index.html#disqus_thread"></a></div>
+          </div>
+
+          <div class="row">
+            <div class="post-content">
+              <p>Following our <a href="http://www.gizra.com/content/live-monitor-shoov-irony/">unfortunate bug</a> in Shoov which caused login to stop working, we decided to write a Behat test that will continuously check the live site and make sure login with GitHub is working properly.</p>
+
+<p>Writing the Behat test was pretty easy, however it had a major problem - it didn&#39;t work.</p>
+<div class="highlight"><pre><code class="gherkin language-gherkin" data-lang="gherkin"><span class="nt">@javascript</span><span class="nf"></span>
+<span class="k">Scenario:</span><span class="nf"> Login to shoov</span>
+<span class="k">  Given </span><span class="nf">I am an anonymous user</span>
+<span class="nf">   </span><span class="k">When </span><span class="nf">I visit the homepage</span>
+<span class="nf">    </span><span class="k">And </span><span class="nf">I login with my GitHub account</span>
+<span class="nf">   </span><span class="k">Then </span><span class="nf">I should wait for the text &quot;</span><span class="s">My Account</span><span class="nf">&quot; to &quot;</span><span class="s">appear</span><span class="nf">&quot;</span>
+</code></pre></div>
+<p>When Behat sees the <code>@javascript</code> tag in the begining of the scenario, it launches it (with the help of Mink extension) in PhantomJS, Firefox or Chrome.<br>
+PhantomJS is usually the easiest to configure and hook into the CI workflow later on.</p>
+
+<p>But the test we wrote just failed on all versions of PhantomJS we tried. Which made us switch to Firefox instead. Travis CI is kind enough to have a headless Firefox installed in their machine which we could use. Unfortunately, Firefox didn&#39;t like our test either, but for another reason - it couldn&#39;t parse the xpath we use to find our text elements.</p>
+
+<p>So after spending some time trying to figure out a workaround, I suddenly stared at the browser I was using to find the answer - Chrome!</p>
+
+<div class="thumbnail">
+<iframe src="http://gfycat.com/ifr/ThirstyOfficialDikkops" frameborder="0" scrolling="no" width="800" height="424" style="-webkit-backface-visibility: hidden;-webkit-transform: scale(1);" ></iframe>
+
+  <div class="caption">Behat test running on headless Chrome, seen via VNC</div>
+</div>
+
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="bottom-dash"></div>
+          </div>
+        </div>
+      </div>
+      <!--Post End-->
+      
+
+      
+        
+      
+
+      
+        
+          
+            
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+
+      <!--Post begin-->
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2 post">
+
+          <div class="row">
+            <div class="post-label">
               <a href="/content/live-monitor-shoov-irony">Live Monitoring With Shoov And Some Sweet Irony</a>
             </div>
           </div>
@@ -597,129 +729,6 @@ Travis-CI, <a href="https://github.com/webdriverio/webdrivercss">webdriverCSS</a
       <!--Post End-->
       
 
-      
-        
-      
-
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-            
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-
-      <!--Post begin-->
-      <div class="row">
-        <div class="col-md-8 col-md-offset-2 post">
-
-          <div class="row">
-            <div class="post-label">
-              <a href="/content/angularjs-ui-router">AngularJs Ui-Router</a>
-            </div>
-          </div>
-
-          <div class="row small-row">
-            <div class="date">30 Apr 2015</div>
-            <div class="seprator">|</div>
-            <div class="author">By <a href="#author">Yaron Miro</a></div>
-          </div>
-
-          <div class="row small-row">
-            <div class="tags">
-              
-              <ul class="inline">
-                
-                
-
-  
-    
-      <li><a href="/tags.html#AngularJs-ref">AngularJs</a></li>
-    
-      <li><a href="/tags.html#Ui-Router-ref">Ui-Router</a></li>
-    
-      <li><a href="/tags.html#Javascript-ref">Javascript</a></li>
-    
-  
-
-
-              </ul>
-              
-            </div>
-            <div class="comments-count"><a href="http://www.gizra.com/blog/page2/index.html#disqus_thread"></a></div>
-          </div>
-
-          <div class="row">
-            <div class="post-content">
-              <p>One of the things I love to do is watch movies at home with my soon-to-be-wife (with emphasis on <em>soon</em> as I&#39;m getting married tomorrow!). We have seen a lot of them over the years so it&#39;s not always easy to find a new movie or to remember a good movie that&#39;s worth watching again.  </p>
-
-<p>Combined with my love to JavaScript I&#39;ve decided to create an AngularJS app with <a href="http://angular-ui.github.io/ui-router/sample/">ui-router</a> library.  The demo app fetches Apple <a href="https://www.apple.com/itunes/charts/movies/">iTunes top 60</a> movies and presents the info and trailer for each, and even has a cool archive feature that lets you create your own private collection.</p>
-
-<div class="demo-block text-center">
-  <a class="demo" target=_blank" href="http://yaronmiro.github.io/AngularJS-UI-Router-Demo">View demo</a>
-  <a class="code" target=_blank" href="https://github.com/YaronMiro/AngularJS-UI-Router-Demo">Get the source code</a>
-</div>
-
-<div class="thumbnail">
-  <img src="http://www.gizra.com/assets/images/posts/angularjs-ui-router/image1.jpg">
-  <div class="caption">angularJS and ui-router demo application</div>
-</div>
-
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="bottom-dash"></div>
-          </div>
-        </div>
-      </div>
-      <!--Post End-->
-      
-
       <!--Pager Begin-->
 
       <div class="row">
@@ -750,7 +759,7 @@ Travis-CI, <a href="https://github.com/webdriverio/webdrivercss">webdriverCSS</a
 
 
 
-    <script src="/js/plugins.5250.js"></script>
+    <script src="/js/plugins.b01d.js"></script>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
 

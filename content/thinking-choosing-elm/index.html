@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Thinking (And Choosing) Elm</title>
+        <meta name="viewport" content="width=device-width">
+
+      <!-- Favicon for all platforms -->
+      <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.b3df.png">
+      <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-touch-icon-60x60.a84d.png">
+      <link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-touch-icon-72x72.664d.png">
+      <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.faf5.png">
+      <link rel="apple-touch-icon" sizes="114x114" href=/"images/favicons/apple-touch-icon-114x114.png">
+      <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.d810.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.1807.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.71bf.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.a9f0.png">
+      <link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.c391.png" sizes="32x32">
+      <link rel="icon" type="image/png" href="/images/favicons/favicon-194x194.e5f8.png" sizes="194x194">
+      <link rel="icon" type="image/png" href="/images/favicons/favicon-96x96.8557.png" sizes="96x96">
+      <link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.0b72.png" sizes="192x192">
+      <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.7353.png" sizes="16x16">
+      <link rel="manifest" href="/images/favicons/manifest.json">
+      <meta name="msapplication-TileColor" content="#000000">
+      <meta name="msapplication-TileImage" content="/images/favicons/mstile-144x144.png">
+      <meta name="theme-color" content="#ffffff">
+      <!-- End favicon for all platforms -->
+
+        <link rel="stylesheet" href="/css/main.7a09.css"/>
+
+        <link href='http://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
+
+        <!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-6558346-3', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+    </head>
+    <body>
+
+    
+
+    <header class="white">
+      <div class="container">
+        <div class="logo"><a href="/">gizra</a></div>
+        <nav id="nav" role="navigation" class="navbar navbar-default nav-fixed">
+          <div class="navbar-header">
+            <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="/#work">Work</a></li>
+              <li><a href="/#about">About</a></li>
+              <li><a href="/blog">Blog</a></li>
+              <li><a href="/team">Team</a></li>
+              <li><a href="/#contact">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div> <!-- End of container -->
+    </header>
+
+    
+
+
+    
+  
+
+
+
+  
+    
+      
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+
+<section id="post-page">
+  <div class="background">
+    <img src="/images/post/background.71f5.png">
+  </div>
+
+  <div class="ballons"></div>
+  <div class="post-back">
+    <a href="/blog">
+      <img src="/images/post/post-back.fca6.png">
+    </a>
+  </div>
+
+  <div class="content">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-8 col-md-offset-2 post">
+          <div class="row">
+            <div class="post-label">
+              <a href="/content/thinking-choosing-elm">Thinking (And Choosing) Elm</a>
+            </div>
+          </div>
+
+          <div class="row small-row">
+            <div class="date">22 Oct 2015</div>
+            <div class="seprator">|</div>
+            <div class="author">By Amitai Burstein</div>
+          </div>
+
+          <div class="row small-row">
+            <div class="tags">
+
+              
+              <ul class="inline">
+                
+                
+
+  
+    
+      <li><a href="/tags.html#Headless Drupal-ref">Headless Drupal</a></li>
+    
+      <li><a href="/tags.html#Elm-ref">Elm</a></li>
+    
+      <li><a href="/tags.html#Drupal-planet-ref">Drupal-planet</a></li>
+    
+  
+
+
+              </ul>
+              
+            </div>
+
+            <div class="comments-count"><a href="http://www.gizra.com/content/thinking-choosing-elm#disqus_thread"></a></div>
+          </div>
+
+          <div class="row">
+            <div class="post-content">
+              <p>In my <a href="http://www.gizra.com/content/elmlang-headless-drupal/">last post</a> I was giving a high level overview of why we were looking at Elm in Gizra. Since that post, we&#39;ve almost completed the <a href="http://gizra.github.io/elm-hedley">demo app</a>, and we&#39;ve changed our status from &quot;Looking at Elm&quot; to &quot;Choosing Elm&quot;.</p>
+
+<p>The reason? In short - I believe it will save us money.<br>
+(Oh, and it&#39;s fun)</p>
+
+<div class="thumbnail">
+  <iframe src="http://gfycat.com/ifr/BountifulGloomyChickadee" frameborder="0" scrolling="no" width="800" height="555" style="-webkit-backface-visibility: hidden;-webkit-transform: scale(1);" ></iframe>
+</div>
+
+<!-- more -->
+
+<h2>Pro &amp; Cons</h2>
+
+<p>Lets start with the main Elm cons:</p>
+
+<ul>
+<li>It&#39;s not mainstream.</li>
+<li>Community is small, which means there aren&#39;t tons of libraries out there, so you&#39;ll have to scratch your own itch more often then not.</li>
+<li>There aren&#39;t many blog posts/tutorials out there, surely compared to popular frameworks such as React.</li>
+<li>High learning curve with a new unknown syntax which is not JS.</li>
+<li>It&#39;s different from other things we know.</li>
+</ul>
+
+<p>And the pros, which are totally subjective:</p>
+
+<ul>
+<li>It&#39;s not JS. Obviously this statement is controversial, but it&#39;s no secret that JS can be very <a href="http://dorey.github.io/JavaScript-Equality-Table/">confusing</a>.</li>
+<li>Having this high learning curve has an interesting side effect: all the developers in the issue queue/mailing list, even the newbies, are seasoned developers. It&#39;s amazing to see how rapidly newcomers learn the new stuff, and contribute back.</li>
+<li>Once you pick up the concepts, and follow the <a href="https://github.com/evancz/elm-architecture-tutorial/">Elm architecture</a>, the pieces start falling really neatly into their natural place. Each component in your app has the exact same structure as the other components and the root component itself.</li>
+<li>There&#39;s a compiler that stops you from screwing things up - as we humans constantly tend to do.</li>
+<li>It&#39;s different from other things we know. I think it&#39;s actually good, because we kind of had enough of &quot;the old way&quot; (read as &quot;Angular 1&quot;). Even <a href="http://aurelia.io/">Aurelia</a> with its great DX and even React &amp; <a href="http://redux.js.org/">Redux</a> with their immense popularity and community felt as a step in the right direction, but not the radical new approach to the problem we were looking for.</li>
+</ul>
+
+<h2>Approaching a Project</h2>
+
+<p>I hope that, like us, you enjoy seeing how the same backend can be served by different front-ends. Starting from the trusty old Angular (which we love to complain about, but still have a warm place in our hearts for), to <a href="http://www.gizra.com/content/headless-drupal-terminal/">crazy node.js</a> running in your console, and now to Elm.</p>
+
+<p>I&#39;d like to share a small example of how we approach the same feature, both in Angular and in Elm. The demo app itself isn&#39;t super complicated, but it&#39;s already doing a lot of stuff typical apps need to do:</p>
+
+<ol>
+<li>Log in a user, and authenticate against a <a href="https://github.com/RESTful-Drupal/restful">RESTful backend</a> (Drupal in our case, but that&#39;s obviously completely hidden from the front - the client just sees clean JSON).</li>
+<li>Fetch a set of events from the backend the user has access to, and present them in a filterable list, along with a map showing their geo-locations.</li>
+<li>Have a simple &quot;My account&quot; page.</li>
+<li>Remember the user by keeping an access token in localStorage, so they won&#39;t have to re-login over and over again.</li>
+<li>Have the URL change when switching pages.</li>
+</ol>
+
+<p>I&#39;d like to concentrate on this last point. Getting the router working on our Elm app helped me realize we were approaching the routing task incorrectly while we were using Angular.</p>
+
+<p>When structuring the app in Angular, setting up the router using the popular ui-router module is one of the first tasks we used to do. While ui-router is working with the concept of states, the URL is baked directly into it.<br>
+So immediately each page had its own URL, but we were now shaping our app around ui-router&#39;s logic. Having the root level app know so much about each page (e.g. which <code>templateUrl</code> to load) or deal with the access via <code>onEnter</code> was a sign that something was off.</p>
+<div class="highlight"><pre><code class="js language-js" data-lang="js"><span class="p">.</span><span class="nx">state</span><span class="p">(</span><span class="s1">&#39;my-account&#39;</span><span class="p">,</span> <span class="p">{</span>
+  <span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;my-account&#39;</span><span class="p">,</span>
+  <span class="nx">templateUrl</span><span class="o">:</span> <span class="s1">&#39;user.html&#39;</span><span class="p">,</span>
+  <span class="nx">controller</span><span class="o">:</span> <span class="s1">&#39;UserCtrl&#39;</span><span class="p">,</span>
+  <span class="nx">onEnter</span><span class="o">:</span> <span class="nx">page403</span><span class="p">,</span>
+  <span class="nx">resolve</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">account</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">Account</span><span class="p">)</span> <span class="p">{</span>
+      <span class="c1">// Resolve the user&#39;s account before we navigate to the page.</span>
+      <span class="k">return</span> <span class="nx">Account</span><span class="p">.</span><span class="nx">get</span><span class="p">();</span>
+    <span class="p">},</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+</code></pre></div>
+<h2>URL Change Is Not Routing</h2>
+
+<p>In our Elm app, getting the URL mapped to a page was in fact the <em>last</em> step, not the first. Let&#39;s see how this can be accomplished and how by following the Elm architecture we were able to better model our app.</p>
+
+<p>First, we need to remember Elm takes a highly centralized approach - the entire app state is kept in one big record, which is the &quot;single source of truth&quot; of our app. It might feel unnatural initially, but the gains are immediate.</p>
+
+<p>We&#39;ll start by defining our <code>Model</code>. It has an <code>activePage</code> property which will hold the state of the page being viewed. An <code>activePage</code> is of type <code>Page</code>, that we define ourself - an arbitrary list of our pages. That&#39;s it.<br>
+Once we&#39;ve modeled it like that, it makes it easier to reason with and understand that our single page application has a property that holds the info on which page is active. It might sound over simplified but it actually is as simple as that.</p>
+
+<p>For a more advanced use case we could even add a second property called <code>nextPage</code> which has the value of a <code>Maybe Page</code>. The <code>Maybe</code> signifies that it <em>might</em> have a <code>Page</code> value, or might not (i.e. <code>Nothing</code>).<br>
+The <code>nextPage</code> will be used whenever we try to login for the first time, and want to redirect the user to the next page. So the <code>activePage</code> would be <code>User</code> (which is the login form), and the next page that the user will be redirected to after being logged in is <code>Just Event</code> (the <code>Just</code> prefix means we have a value here - it&#39;s the opposite of using <code>Nothing</code>).</p>
+<div class="highlight"><pre><code class="haskell language-haskell" data-lang="haskell"><span class="kr">type</span> <span class="kt">Page</span>
+  <span class="ow">=</span> <span class="kt">Event</span>
+  <span class="o">|</span> <span class="kt">User</span>
+
+<span class="kr">type</span> <span class="n">alias</span> <span class="kt">Model</span> <span class="ow">=</span>
+  <span class="p">{</span> <span class="n">activePage</span> <span class="kt">:</span> <span class="kt">Page</span>
+  <span class="c1">-- If the user is anonymous, we want to know where to redirect them</span>
+  <span class="c1">-- after being logged in.</span>
+  <span class="p">,</span> <span class="n">nextPage</span> <span class="kt">:</span> <span class="kt">Maybe</span> <span class="kt">Page</span>
+  <span class="p">}</span>
+</code></pre></div>
+<p>Next lets cover how the active page will be changed. In Elm every change to our model is very explicit, and only a predefined <code>Action</code> can cause an update to our model. This means every single interaction the user has with the app is not automatically converted into data (i.e. no two way data binding).<br>
+Even updating the name and password field on every key stroke need to be explicitly wired into our app. A little more verbose, but helpful in following and maintaining our app, as any change to the state or data is very clear.</p>
+
+<p>So we will define the action that sets the active page. This action is the one and only entry point for changing the active page. The below code says, there&#39;s an action called <code>SetActivePage</code> and it will get an argument of type <code>Page</code> - in our example, <code>User</code> or <code>Event</code> are the only allowed values.</p>
+<div class="highlight"><pre><code class="haskell language-haskell" data-lang="haskell"><span class="kr">type</span> <span class="kt">Action</span>
+  <span class="ow">=</span> <span class="kt">SetActivePage</span> <span class="kt">Page</span>
+</code></pre></div>
+<p>We&#39;ve actually defined the most important parts - our model and action. Next we&#39;ll have to define how our app will behave once <code>SetActivePage</code> is triggered. While this <a href="https://github.com/Gizra/elm-hedley/blob/d052dbac36dfbe801ed94ee085627b556252c861/src/elm/App.elm#L136-L176">update function</a> could be found valuable for devs learning Elm, I&#39;d argue that it&#39;s the less interesting part - it&#39;s &quot;just&quot; an implementation detail.<br>
+In fact, the update function is likely to evolve as our app grows, but the conceptual foundation we laid in the Model and Action, is most probably going to remain as is.</p>
+
+<p>Finally, by using @rgrempel well documented <a href="https://github.com/rgrempel/elm-route-hash">elm-router-hash</a> package we <a href="https://github.com/Gizra/elm-hedley/blob/d052dbac36dfbe801ed94ee085627b556252c861/src/elm/App.elm#L241">map</a> the <code>activePage</code> property of our model to the URL, so whenever it changes the URL changes as-well.</p>
+
+<p>This is where I personally realized that the URL change which up until now I incorrectly called &quot;the router&quot; is just a <em>side effect</em> to the actual routing - the <code>SetActivePage</code>.</p>
+
+<p>This isn&#39;t just semantics. By moving all the logic into a single action that controls setting the page, we can make sure that for example access control is respected no matter where the page is set, from the URL or programtically.</p>
+
+<h2>Baby Steps</h2>
+
+<p>I encourage you to learn Elm and see how it can be integrated with your Headless Drupal installation. Even if ultimately you decidoe not to use it for production, just being exposed to this different approach will be worth your while.</p>
+
+<p>Some good resources are:</p>
+
+<ul>
+<li>The official <a href="http://elm-lang.org/docs">docs</a></li>
+<li>The <a href="https://github.com/evancz/elm-architecture-tutorial/">Elm architecture tutorials</a></li>
+<li>Online courses by <a href="https://pragmaticstudio.com">Pragmatic Studio</a> (Paid, but well worth it)</li>
+<li>The official <a href="https://groups.google.com/forum/#!forum/elm-discuss">mailing list</a></li>
+<li><a href="https://github.com/Gizra/elm-hedley">Elm-hedley</a> demo app</li>
+</ul>
+
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="bottom-dash"></div>
+          </div>
+
+          <div class="row post-nav">
+            <div class="first">
+              
+              <div class="previous">
+                <a href="/content/elmlang-headless-drupal">
+                  Previous
+                </a>
+              </div>
+              <a href="/content/elmlang-headless-drupal" class="prev-text">
+                Elm Loves Headless Drupal
+              </a>
+              
+            </div>
+            <div class="last">
+              
+            </div>
+          </div>
+
+          <div class="row author-details">
+            <div class="image-wrapper">
+              <img src="/images/team/amitaibu.4179.jpg" class="img-responsive">
+            </div>
+            <div class="text-wrapper">
+              <span class="name">Amitai Burstein</span> <span class="twitter">(@amitaibu)</span>
+              <div class="title">CTO, Co-Owner</div>
+              <div class="bio">Maintainer of Organic groups, the Message stack, and co-maintainer of Drupal 8's Entity reference. <a href="/content/the-about-story/">The about story</a>.</div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="bottom-dash-small"></div>
+          </div>
+
+          <div class="row">
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'gizra';
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="text/javascript">
+var disqus_shortname = 'gizra';
+
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function () {
+var s = document.createElement('script'); s.async = true;
+s.type = 'text/javascript';
+s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+
+
+
+
+    <script src="/js/plugins.b01d.js"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+
+    <script src="/js/scripts.d40a.js"></script>
+
+    </body>
+</html>
