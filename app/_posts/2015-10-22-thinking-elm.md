@@ -11,7 +11,7 @@ published: true
 
 {% include setup %}
 
-In my [last post]({{ BASE_PATH }}/content/elmlang-headless-drupal/) I was giving a high level overview of why we were looking at Elm in Gizra. Since that post, we've almost completed the [demo app](http://gizra.github.io/elm-hedley), and we've changed our status from "Looking at Elm" to "Choosing Elm".
+In my [last post]({{ BASE_PATH }}/content/elmlang-headless-drupal/) I was giving a high level overview of why we were looking at Elm in Gizra. Since that post, we've almost completed the [demo app](https://gizra.github.io/elm-hedley), and we've changed our status from "Looking at Elm" to "Choosing Elm".
 
 The reason? In short - I believe it will save us money.  
 (Oh, and it's fun)
