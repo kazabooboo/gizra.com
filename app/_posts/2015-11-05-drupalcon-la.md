@@ -10,7 +10,7 @@ published: true
 
 {% include setup %}
 
-I believe it's safe to say that Decoupled Drupal is here to stay. Back in DrupalCon Los Angeles my good friend [Josh koenig](https://pantheon.io/team/josh-koenig) from [Pantheon](https://pantheon.io/) and I teamed up to share our experience with it.
+I believe it's safe to say that Decoupled Drupal is here to stay. Back in DrupalCon Los Angeles my good friend [Josh Koenig](https://pantheon.io/team/josh-koenig) from [Pantheon](https://pantheon.io/) and I teamed up to share our experience with it.
 
 Josh asked me if I could do the presentation with him and I immediately agreed, as Josh is an awesome presenter and I knew it's going to be fun. My answer, if I recall correctly, was:
 
