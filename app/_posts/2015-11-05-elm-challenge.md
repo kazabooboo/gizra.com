@@ -1,6 +1,6 @@
 ---
 title: Elm Challenge
-tags: 
+tags:
   - Elm
 permalink: "/content/elm-challenge"
 layout: post
@@ -16,7 +16,7 @@ After they are done going over the existing videos/tutorials, we let them get th
 
 Here's the [existing app](https://gizra.github.io/elm-hedley). As you see each event appears as a clickable link.
 
-The challenge is to add a counter next to each event label that increments clicked. When you refresh the page (F5) it shouldn't remember the previous clicks and should start back at 0.
+The challenge is to add a counter next to each event label that increments when clicked. When you refresh the page (F5) it shouldn't remember the previous clicks and should start back at 0.
 
 In short, it should look like this (notice the bottom left list):
 
