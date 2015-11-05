@@ -154,6 +154,132 @@
 
           <div class="row">
             <div class="post-label">
+              <a href="/content/og-7x-11-rc2-out/">OG 7.x-1.1-RC2 is out! </a>
+            </div>
+          </div>
+
+          <div class="row small-row">
+            <div class="date">18 May 2011</div>
+            <div class="seprator">|</div>
+            <div class="author">By <a href="#author">Amitai Burstein</a></div>
+          </div>
+
+          <div class="row small-row">
+            <div class="tags">
+              
+              <ul class="inline">
+                
+                
+
+  
+    
+      <li><a href="/tags.html#Drupal-planet-ref">Drupal-planet</a></li>
+    
+      <li><a href="/tags.html#OG-ref">OG</a></li>
+    
+  
+
+
+              </ul>
+              
+            </div>
+            <div class="comments-count"><a href="http://www.gizra.com/blog/page15/index.html#disqus_thread"></a></div>
+          </div>
+
+          <div class="row">
+            <div class="post-content">
+              <p>The 2nd release candidate of OG7 is out, and it&#39;s probably a good time to tell the (Drupal) planet about what&#39;s new and about the things that I learned since the first official release (See OG&#39;s <a href="http://drupal.org/project/og">home page</a> to get the latest release candidate link).</p>
+
+<p>Here are some things, mostly related to Drupal, I&#39;ve learned since Og-7.x-1.0</p>
+
+<h2>Data migration</h2>
+
+<p>OG6 and OG7 have different tables and different data. OG7 has its tables, its fields and its related entities (group and group membership -- I&#39;ll soon go over those). At first I tried migrating it via hook<em>update</em>N(). I still feel the burns! &quot;Your hook<em>update</em>N() shouldn&#39;t assume anything about the state of a module or it&#39;s API&quot;, said fago, and I listened. Just like CCK has content-migrate module, OG7 has og-migrate. Whenever a module needs to migrate data, they can set a variable to TRUE, implement og-migrate plugins (a la CTools), and the job is done. This means design decisions (and oh boy I had a few) can be rectified without many struggles.</p>
+
+<h2>Fields and entities</h2>
+
+<p>OG7 has two important fields and an entity that acts as a meta-data related to that field. og-group field, which is a Boolean field that marks if a node is a group, when is set to TRUE creates a group entity that holds the group ID, entity ID, creation data, group label etc&#39;. So far so good, no problems here.</p>
+
+<p>The second field is group-audience that holds the the information about the relation a piece of content has with a group (i.e. membership). As of 7.x-1.1 whenever a user selects groups in this field, a group membership entity is created that holds the group ID, entity ID, membership state (i.e. active, pending, blocked) etc&#39;.
+The group membership idea is awesome (thanks donquixote). The problem is actually the field. If we delete a group there is no field API bulk update, that will remove the deleted group from the member&#39;s field. So, the group membership entities have the most up-to-date data, and the fields might not have. After 7.x-1.1 is out I intend to still use the field for it&#39;s widget and formatter, but not as storage. I mean, after a user will select the groups in group-audience field, OG will create the group membership entities, but the fields its will not be written to the DB. I think it&#39;s interesting that also other modules (Field-collection, Relation) decide to use a field but not for it&#39;s storage which is probably the main purpose, but for it&#39;s generic interaction with the entities&#39; form.</p>
+
+<h2>(Thinking of) module renaming</h2>
+
+<p>Don&#39;t do it. Seriously, I&#39;m now stuck with some hybrid of og / group in places I prefer not to change. It&#39;s not horrible, but if your the Anal type it bothers a bit.</p>
+
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="bottom-dash"></div>
+          </div>
+        </div>
+      </div>
+      <!--Post End-->
+      
+
+      
+        
+      
+
+      
+        
+          
+            
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+
+      <!--Post begin-->
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2 post">
+
+          <div class="row">
+            <div class="post-label">
               <a href="/content/ctools-context-tutorial/">CTools context tutorial</a>
             </div>
           </div>
@@ -546,115 +672,6 @@ Migrate V2 uses <a href ="http://drupal.org/project/drush">Drush</a> (Drupal She
 <p>Since my Greek sucks, and since they understood that their presentations can have an appeal world-wide, most of the people gave the presentations in English. Varnish, Cloud computing, Security issues, Crazy clients with crazy demands and even crazier implementations were some of the topics. Not all movies have been uploaded yet, but <a href="http://vimeo.com/user426096/videos/sort:date">here</a> are at least some of them. It&#39;s worth watching.</p>
 
 <p>Although my stay was very short I still had the chance to see the Acropolis a la <a href="http://acquia.com/blog/drupal-greece">Robert Douglass</a> style. This means storming out of the hotel - because my presentation starts in less than two hours - jumping inside a taxi, checking out every spot really quickly, taking a photo or two, back in the taxi, and we&#39;re back. It was much fun!</p>
-
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="bottom-dash"></div>
-          </div>
-        </div>
-      </div>
-      <!--Post End-->
-      
-
-      
-        
-      
-
-      
-        
-          
-            
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-
-      <!--Post begin-->
-      <div class="row">
-        <div class="col-md-8 col-md-offset-2 post">
-
-          <div class="row">
-            <div class="post-label">
-              <a href="/content/moment-zen-1/">A moment of Zen #1</a>
-            </div>
-          </div>
-
-          <div class="row small-row">
-            <div class="date">26 Dec 2010</div>
-            <div class="seprator">|</div>
-            <div class="author">By <a href="#author">Amitai Burstein</a></div>
-          </div>
-
-          <div class="row small-row">
-            <div class="tags">
-              
-              <ul class="inline">
-                
-                
-
-  
-    
-      <li><a href="/tags.html#Drupal-planet-ref">Drupal-planet</a></li>
-    
-      <li><a href="/tags.html#OG-ref">OG</a></li>
-    
-  
-
-
-              </ul>
-              
-            </div>
-            <div class="comments-count"><a href="http://www.gizra.com/blog/page15/index.html#disqus_thread"></a></div>
-          </div>
-
-          <div class="row">
-            <div class="post-content">
-              <p>Organic groups for Drupal 7 has an alpha release. Sure there are bugs, but I try not to let it ruin the warm and fuzzy feeling of seeing all the tests pass.</p>
 
             </div>
           </div>
