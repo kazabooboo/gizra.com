@@ -13,6 +13,7 @@ title : Elm RSS Feed
     <ttl>1800</ttl>
 
     {% for post in site.posts %}
+      {% assign planet = false %}
       {% for t in post.tags %}
         {% if t == 'Elm' %}
           {% assign planet = true %}
