@@ -146,8 +146,8 @@ $gizra-text: #5D5D5D;
 }
 
 header {
-  background: url('/images/header/background.jpg') no-repeat center top;
-  text-align: center;
+  background: url('/images/header/background.png') no-repeat center top;
+  text-align: left;
 
   &.white {
     background: white;
@@ -196,7 +196,7 @@ header {
 
     a {
       font-family: Abril Fatface;
-      font-size: 66px;
+      font-size: 108px;
       text-decoration: none;
       color: $gizra-orange;
 
@@ -212,8 +212,7 @@ header {
     border: none;
     display: inline-block;
     min-height: initial;
-    margin-top: 3px;
-    margin-bottom: -5px;
+    margin: 60px 40px -16px ;
     position: relative;
     z-index: 1000;
 
@@ -268,7 +267,6 @@ header {
         a {
           color: white;
           padding-top: 0;
-          text-transform: uppercase;
           font-size: 13px;
           letter-spacing: 2px;
           display: inline-block;
@@ -299,24 +297,16 @@ header {
     position: relative;
     overflow: hidden;
     height: 685px;
-
-    &:after {
-      content: ' ';
-      display: block;
-      background-color: white;
-      height: 285px;
-      bottom: -70px;
-      left: -100px;
-      right: -100px;
-      position: absolute;
-      @include rotate(4.8deg);
-    }
+    margin-left: 60px;
+    margin-right: 60px;
+    color: white;
 
     h2 {
-      font-size: 47px;
-      margin: 18px 0 0 0;
-      letter-spacing: 0;
-      word-spacing: 2px;
+      font-size: 29px;
+      text-transform: uppercase;
+      margin: 20px 10px 0;
+      letter-spacing: 0.4px;
+      margin-top: 37px;
 
       @media (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
         font-size: 35px;
@@ -325,6 +315,14 @@ header {
       @media (max-width: $screen-xs-min) {
         font-size: 28px;
       }
+    }
+
+    p {
+      margin: 10px;
+      font-size: 20px;
+      max-width: 470px;
+      letter-spacing: 0.6px;
+      line-height: 1.1;
     }
 
     h3 {
