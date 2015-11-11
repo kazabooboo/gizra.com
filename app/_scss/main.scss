@@ -378,20 +378,25 @@ header {
   .logo {
     float: left;
     width: 14.28%;
-    height: 120px;
+    height: 160px;
     position: relative;
-    line-height: 120px;
+    line-height: 160px;
     text-align: center;
     border-right: 1px solid white;
     margin-top: 0;
+    padding-left: 10px;
+    padding-right: 10px;
     list-style-type: none;
 
     &.acquia {
       padding: 20px 10px;
       line-height: normal;
+      font-size: 16px;
 
       a {
-
+        margin-top: 10px;
+        color: white;
+        border: 1px solid white;
       }
     }
 
