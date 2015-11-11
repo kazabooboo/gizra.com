@@ -424,18 +424,18 @@ header {
   overflow: hidden;
   margin: 0;
   padding: 50px 0;
-  background: black;
 
   .text-wrapper {
 
+    .title {
+      font-weight: 600;
+    }
+
     p {
-      color: white;
-      font-size: 20px;
-      line-height: 30px;
-      margin-bottom: 20px;
-      margin-left: 14px;
-      text-align: justify;
-      letter-spacing: 0.4px;
+      font-size: 32px;
+      line-height: 35px;
+      margin-bottom: 12px;
+      letter-spacing: 0.8px;
     }
   }
 }
