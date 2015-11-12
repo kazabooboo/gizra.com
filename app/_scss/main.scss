@@ -1,12 +1,11 @@
 $gizra-orange: #e27058;
 $gizra-orange-dark: #bb5641;
 $gizra-orange-light: #fba200;
-$gizra-blue: #2a5691;
+$gizra-blue: #578E9B;
 $gizra-blue-dark: #244b80;
 $gizra-black: #515151;
 $gizra-orange-hover: #E75E08;
 $gizra-text: #5D5D5D;
-
 
 @import 'bootstrap-sass-official/vendor/assets/stylesheets/bootstrap';
 @import "compass/css3/border-radius";
@@ -415,6 +414,61 @@ header {
 
     @media (max-width: $screen-xs-max) {
       display: none;
+    }
+  }
+}
+
+#responces {
+  margin-top: 20px;
+}
+
+#carousel-responces {
+
+  .carousel-indicators {
+    margin: 0;
+    left: 0;
+    bottom: 0;
+    text-align: left;
+
+    li {
+      margin: 1px;
+      width: 13px;
+      height: 13px;
+      background-color: black;
+    }
+
+    .active {
+      background-color: $gizra-blue;
+    }
+  }
+
+  .item {
+    padding-bottom: 20px;
+
+    .top-image {
+      margin-bottom: 50px;
+    }
+
+    p {
+      font-size: 30px;
+      line-height: 33px;
+    }
+
+    .main-text {
+      font-size: 45px;
+      line-height: 56px;
+      margin-bottom: 40px;
+    }
+
+
+    .title {
+      letter-spacing: 2px;
+      margin-bottom: 3px;
+      color: $gizra-blue;
+    }
+
+    .sub-title {
+      letter-spacing: 1px;
     }
   }
 }
