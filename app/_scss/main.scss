@@ -454,10 +454,27 @@ header {
       line-height: 33px;
     }
 
-    .main-text {
+    .blockquote {
       font-size: 45px;
       line-height: 56px;
       margin-bottom: 40px;
+//      quotes: "\201C""\201D""\201C""\2019";
+
+//      &:before {
+//        content: open-quote;
+//        font-size: 4.8em;
+//        line-height: 0.01em;
+//        margin-right: 0;
+//        vertical-align: -0.47em;
+//      }
+//
+//      &:after {
+//        content: open-quote;
+//        font-size: 4.8em;
+//        line-height: 0.01em;
+//        margin-right: 0;
+//        vertical-align: -0.47em;
+//      }
     }
 
 
