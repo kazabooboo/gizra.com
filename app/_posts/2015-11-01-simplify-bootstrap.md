@@ -36,16 +36,20 @@ across all breakpoints.
 
 ## How can we simplify it ?
 The first thing we need to to before starting to work on the project is to
-understand it's responsive pattern. We can do that by exploring the project
+identify it's **"responsive pattern"**. We can do that by understanding the project
 requirements and needs:
 
- * How big is the project ?
-   * how many pages/views/features/widgets you have ?
- * Is this project suitable to be a hybrid website/app ?
+* **Project capacity:**   
+Our project `estimation time` gets longer and the `budget` will become more expensive
+when taking into consideration the amount of time we need to invest in every page,
+widget or feature to adapt itself on each breakpoint.
+
+* **Project target users:**   
+Our project `estimation time` gets longer and the `budget` will become more expensive
+when taking into consideration the amount of time we need to invest in every page,
+widget or feature to adapt itself on each breakpoint.
+
+* Is this project suitable to be a hybrid website/app ?
    * ddsdss
-
-
-
-
 
 
