@@ -21,7 +21,7 @@ make it more intuitive.
 
 <!-- more -->
 
-{% include demo_block.html demo='http://yaronmiro.github.io/bootstrap-responsive/' code='https://github.com/YaronMiro/bootstrap-responsive' %}
+{% include demo_block.html demo='http://ym-bs-responsive.gizra.com/' code='https://github.com/Gizra/bootstrap-responsive' %}
 
 ## The traditional approach
 Bootstrap provides us with a powerful responsive layout and a matching grid system
@@ -39,15 +39,16 @@ The first thing we need to to before starting to work on the project is to
 identify it's **"responsive pattern"**. We can do that by understanding the project
 requirements and needs:
 
-* **Project capacity:**   
+* **Project Capacity:**   
 Our project `estimation time` gets longer and the `budget` will become more expensive
 when taking into consideration the amount of time we need to invest in every page,
 widget or feature to adapt itself on each breakpoint.
 
-* **Project target users:**   
-Our project `estimation time` gets longer and the `budget` will become more expensive
-when taking into consideration the amount of time we need to invest in every page,
-widget or feature to adapt itself on each breakpoint.
+* **Project UX:**   
+is our project suitable to be a full hybrid website/app ?   
+This means that our project is able to provide the same `User Experience` on any
+device/media screen size.
+
 
 * Is this project suitable to be a hybrid website/app ?
    * ddsdss
