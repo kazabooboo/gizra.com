@@ -8,17 +8,17 @@ $gizra-orange-hover: #E75E08;
 $gizra-text: #5D5D5D;
 
 @import 'bootstrap-sass-official/vendor/assets/stylesheets/bootstrap';
-@import "compass/css3/border-radius";
-@import "compass/css3/transform";
-@import "compass/css3/transition";
+@import 'compass/css3/border-radius';
+@import 'compass/css3/transform';
+@import 'compass/css3/transition';
 
-@import "code";
-@import "mixins/post";
-@import "pages/about";
-@import "pages/blog";
-@import "pages/post";
-@import "pages/products";
-@import "pages/team";
+@import 'code';
+@import 'mixins/post';
+@import 'pages/about';
+@import 'pages/blog';
+@import 'pages/post';
+@import 'pages/products';
+@import 'pages/team';
 
 @font-face {
   font-family: 'OstrichSansMedium';
@@ -161,7 +161,7 @@ header {
         }
       }
 
-      ul.navbar-nav {
+      .navbar-nav {
 
         li {
 
@@ -208,10 +208,10 @@ header {
 
   .navbar {
     background: transparent;
-    border: none;
+    border: 0;
     display: inline-block;
     min-height: initial;
-    margin: 60px 40px -16px ;
+    margin: 60px 40px -16px;
     position: relative;
     z-index: 1000;
 
@@ -224,7 +224,8 @@ header {
     .navbar-toggle {
       border: 0 none;
 
-      &:hover, &:focus {
+      &:hover,
+      &:focus {
         border: 0 none;
         background: none;
       }
@@ -246,7 +247,7 @@ header {
       }
     }
 
-    ul.navbar-nav {
+    .navbar-nav {
 
       li {
 
@@ -463,9 +464,8 @@ header {
       &:before {
         content: '';
         display: inline-block;
-        -moz-box-sizing: border-box;
         box-sizing: border-box;
-        background: url(/images/hompage/quote-mark.png) no-repeat;
+        background: url('/images/hompage/quote-mark.png') no-repeat;
         width: 46px;
         height: 40px;
         margin: 0 5px 7px;
@@ -474,9 +474,8 @@ header {
       &:after {
         content: '';
         display: inline-block;
-        -moz-box-sizing: border-box;
         box-sizing: border-box;
-        background: url(/images/hompage/quote-mark.png) no-repeat;
+        background: url('/images/hompage/quote-mark.png') no-repeat;
         width: 46px;
         height: 40px;
         margin: 0 5px;
@@ -512,7 +511,7 @@ header {
 
     .title {
       font-weight: 600;
-      letter-spacing: 0px;
+      letter-spacing: 0;
       margin-bottom: 14px;
     }
 
@@ -541,7 +540,7 @@ header {
 
   .title {
     font-weight: 600;
-    letter-spacing: 0px;
+    letter-spacing: 0;
     margin-bottom: 14px;
   }
 
@@ -557,7 +556,7 @@ header {
     }
 
     .date {
-      margin-top: 0px;
+      margin-top: 0;
       letter-spacing: 2px;
     }
   }
@@ -670,16 +669,17 @@ header {
   font-family: OstrichSansMedium;
   border-top: 1px dashed rgba(154, 43, 44, 0.26);
   border-bottom: 1px dashed rgba(154, 43, 44, 0.26);
-  padding: 10px 0px;
+  padding: 10px 0;
   margin-bottom: 20px;
 
   .demo {
     margin-right: 10px;
   }
 
-  .demo, .code {
+  .demo,
+  .code {
     font-size: 22px;
-    color: #ffffff;
+    color: white;
     background: $gizra-blue;
     padding: 7px 10px;
     width: 180px;
