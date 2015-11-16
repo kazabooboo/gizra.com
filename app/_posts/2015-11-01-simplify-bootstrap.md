@@ -1,5 +1,5 @@
 ---
-title: "Be Responsive About Your Responsive Design"
+title: "Be Responsive About Your Responsive Design Needs"
 tags:
   - Bootstrap
   - "Drupal-planet"
@@ -20,9 +20,10 @@ __A__: Yes, Of course.
 __Q__: Do we always need so many breakpoints?  
 __A__: No.
 
+
 <div class="thumbnail">
   <img src="{{BASE_PATH}}/assets/images/posts/simplify-bootstrap/image.gif">
-  <div class="caption">Bootstrap "default" layout VS Bootstrap "custom" layout </div>
+  <div class="caption">Bootstrap default layout VS Bootstrap custom layout</div>
 </div>
 
 <!-- more -->
