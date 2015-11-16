@@ -1,7 +1,7 @@
 ---
 title: "Simplify bootstrap"
 tags:
-  - "Bootstrap 3.5"
+  - "Bootstrap 3"
   - "Responsive"
   - CSS
   - HTML5
