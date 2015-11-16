@@ -20,27 +20,9 @@ $gizra-text: #5D5D5D;
 @import 'pages/products';
 @import 'pages/team';
 
-@font-face {
-  font-family: 'OstrichSansMedium';
-  src: url('/fonts/ostrich-sans-fontfacekit/ostrich-regular-webfont.eot');
-  src: url('/fonts/ostrich-sans-fontfacekit/ostrich-regular-webfont.eot?#iefix') format('embedded-opentype'),
-  url('/fonts/ostrich-sans-fontfacekit/ostrich-regular-webfont.woff') format('woff'),
-  url('/fonts/ostrich-sans-fontfacekit/ostrich-regular-webfont.ttf') format('truetype'),
-  url('/fonts/ostrich-sans-fontfacekit/ostrich-regular-webfont.svg#OstrichSansMedium') format('svg');
-  font-weight: normal;
-  font-style: normal;
 
-}
-
-@font-face {
-  font-family: 'OstrichSansBlack';
-  src: url('/fonts/ostrich-sans-fontfacekit/ostrich-black-webfont.eot');
-  src: url('/fonts/ostrich-sans-fontfacekit/ostrich-black-webfont.eot?#iefix') format('embedded-opentype'),
-  url('/fonts/ostrich-sans-fontfacekit/ostrich-black-webfont.woff') format('woff'),
-  url('/fonts/ostrich-sans-fontfacekit/ostrich-black-webfont.ttf') format('truetype'),
-  url('/fonts/ostrich-sans-fontfacekit/ostrich-black-webfont.svg#OstrichSansBlack') format('svg');
-  font-weight: normal;
-  font-style: normal;
+body {
+  font-family: verdana, sans-serif;
 }
 
 @media (min-width: $screen-lg-desktop) {
@@ -302,27 +284,22 @@ header {
     color: white;
 
     h2 {
-      font-size: 29px;
+      font-family: Lato;
+      font-weight: bold;
+      font-size: 25px;
+      line-height: 32px;
       text-transform: uppercase;
       margin: 20px 10px 0;
-      letter-spacing: 0.4px;
-      margin-top: 37px;
-
-      @media (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
-        font-size: 35px;
-      }
-
-      @media (max-width: $screen-xs-min) {
-        font-size: 28px;
-      }
+      letter-spacing: 3.3px;
+      margin-top: 34px;
     }
 
     p {
-      margin: 10px;
+      margin: 7px 10px;
       font-size: 20px;
-      max-width: 470px;
-      letter-spacing: 0.6px;
-      line-height: 1.1;
+      letter-spacing: -1px;
+      max-width: 430px;
+      line-height: 23px;
     }
 
     h3 {
@@ -457,9 +434,10 @@ header {
     }
 
     .blockquote {
-      font-size: 45px;
+      font-size: 41px;
+      letter-spacing: -0.5px;
       line-height: 55px;
-      margin-bottom: 40px;
+      margin-bottom: 45px;
 
       &:before {
         content: '';
@@ -484,13 +462,12 @@ header {
 
 
     .title {
-      letter-spacing: 2px;
       margin-bottom: 3px;
       color: $gizra-blue;
     }
 
-    .sub-title {
-      letter-spacing: 1px;
+    .subtitle {
+      letter-spacing: -1px;
     }
   }
 }
@@ -510,13 +487,14 @@ header {
   .text-wrapper {
 
     .title {
-      font-weight: 600;
+      font-size: 30px;
+      font-weight: bolder;
       letter-spacing: 0;
       margin-bottom: 14px;
     }
 
     p {
-      font-size: 32px;
+      font-size: 30px;
       line-height: 37px;
       margin-bottom: 12px;
       letter-spacing: 0.8px;
@@ -529,6 +507,7 @@ header {
   h2 {
     text-transform: uppercase;
     font-size: 19px;
+    letter-spacing: 0.5px;
     margin-bottom: 25px;
   }
 
@@ -567,8 +546,11 @@ header {
       font-size: 42px;
       letter-spacing: 2.5px;
       font-weight: normal;
-      color: $gizra-orange;
       margin-bottom: 15px;
+    }
+
+    a {
+      color: $gizra-orange;
     }
 
     p {
