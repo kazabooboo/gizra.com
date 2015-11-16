@@ -23,7 +23,7 @@ make it more intuitive.
 
 <div class="thumbnail">
   <img src="{{BASE_PATH}}/assets/images/posts/simplify-bootstrap/image.gif" class="img-responsive">
-  <div class="caption">Bootstrap responsive layout at action gif</div>
+  <div class="caption">Bootstrap "default" layout VS Bootstrap "custom" layout </div>
 </div>
 
 <!-- more -->
