@@ -1,0 +1,13 @@
+/* Desktop */
+@mixin desktop {
+  @media (min-width: $screen-sm) {
+    @content;
+  }
+}
+
+/* Mobile */
+@mixin mobile {
+  @media (max-width: $screen-xs-max) {
+    @content;
+  }
+}
