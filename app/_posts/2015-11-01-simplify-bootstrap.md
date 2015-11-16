@@ -16,13 +16,13 @@ published: true
 
 # Simplifying bootstrap responsive design
 The vast majority of our project at Gizra are based upon Twitter Bootstrap framework and we often
-spend a lot of time and effort in creating the perfect UX (user experience) and layout
+spend a lot of time and effort in creating the perfect resposive layout and UX (user experience) 
 across all breakpoints. I want to share with you my experience and insights about responsive
 web design using Twitter Bootstrap framework and hopefully help you to simplify your workflow and
 make it more intuitive.
 
 <div class="thumbnail">
-  <img src="{{BASE_PATH}}/assets/images/posts/simplify-bootstrap/image.gif" class="img-responsive">
+  <img src="{{BASE_PATH}}/assets/images/posts/simplify-bootstrap/image.gif">
   <div class="caption">Bootstrap "default" layout VS Bootstrap "custom" layout </div>
 </div>
 
@@ -73,8 +73,7 @@ adjust accordingly to it if it's necessary and worth while.
 
 2) `Project UX`   
 Find out what is the mandatory "UX" that the project must provide and can it be implemented
-equivalently on any device/media screen size. This will help us see in a clearer were we need to invest
-our responsive effort on the first project state.
+equivalently on any device/media screen size. This will help us see in a clearer way were we need to invest our responsive effort on the project.
 
 3) `Project UI`   
 Our project "Estimation Time" gets longer and the "Budget" will become more expensive
@@ -84,18 +83,23 @@ We need to concentrate on understanding which parts of the UI (User Interface)
 are the vital for our project.
 
 4) `Summary Stage`   
-Now that we established a firm base ground about our:
+Now that we established a firm base ground about our `Project Audience`, `Project UX` and `Project UI`  responsive relevance to our project, Then we can wisely decide on what we want to fit in to the "Budget" and "Estimation Time" according to our preferences.
 
- - `Project Audience`
- - `Project UX`
- - `Project UI`
+I have create a demo that demonstrates both of these approaches:
 
-Then we can wisely decide on what to fit in to the "Budget" and "Estimation Time" according to our preferences.
+- `Default responsive layout` (4 breakpoints) - "Full Responsive"
+- `Custom responsive layout` (2 breakpoints) - "Responsive Pattern"
 
-To help you get started. I have create a demo that demonstrates:   
-Twitter bootstrap `default responsive layout` (4 breakpoints) vs   
-Twitter bootstrap `custom responsive layout` (2 breakpoints)
-
-I also add another goodie which is my personal "live responsive" monitor
-
+</br>
 {% include demo_block.html demo='http://ym-bs-responsive.gizra.com/' code='https://github.com/Gizra/bootstrap-responsive' %}
+
+</br>
+> I also add another "goodie" which is my personal "live responsive monitor".
+  This little tool is very handy when working with a responsive layout.
+  You get a live feedback on the current breakpoint when it changes.
+  I like ti keep it at the top of my layout but you can put it where ever you desire.
+  
+> <div class="thumbnail" style="margin-bottom: 0">
+    <img src="{{BASE_PATH}}/assets/images/posts/simplify-bootstrap/responsive-monitor.gif">
+    <div class="caption">Live responsive monitor</div>
+  </div>
