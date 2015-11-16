@@ -503,11 +503,12 @@ header {
 }
 
 #blog {
+  letter-spacing: 0.5px;
 
   h2 {
     text-transform: uppercase;
     font-size: 19px;
-    letter-spacing: 0.5px;
+    letter-spacing: -0.5px;
     margin-bottom: 25px;
   }
 
@@ -529,14 +530,12 @@ header {
 
     .name {
       margin-top: 24px;
-      letter-spacing: 2px;
       line-height: 20px;
       margin-bottom: 0;
     }
 
     .date {
       margin-top: 0;
-      letter-spacing: 2px;
     }
   }
 
@@ -544,7 +543,6 @@ header {
 
     .title {
       font-size: 42px;
-      letter-spacing: 2.5px;
       font-weight: normal;
       margin-bottom: 15px;
     }
@@ -555,7 +553,7 @@ header {
 
     p {
       font-size: 28px;
-      letter-spacing: 1px;
+      letter-spacing: 0.3px;
       line-height: 37px;
     }
 
