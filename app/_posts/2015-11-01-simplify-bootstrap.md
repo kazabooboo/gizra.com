@@ -1,11 +1,8 @@
 ---
-title: "Simplify bootstrap"
+title: "Be Responsive About Your Responsive Design"
 tags:
-  - "Bootstrap 3"
-  - "Responsive"
-  - CSS
-  - HTML5
-  - Web deign
+  - Bootstrap
+  - "Drupal-planet"
 permalink: "/content/simplify-bootstrap"
 layout: post
 author: YaronMiro
@@ -14,12 +11,14 @@ published: true
 
 {% include setup %}
 
-# Simplifying bootstrap responsive design
-The vast majority of our project at Gizra are based upon Twitter Bootstrap framework and we often
-spend a lot of time and effort in creating the perfect resposive layout and UX (user experience) 
-across all breakpoints. I want to share with you my experience and insights about responsive
-web design using Twitter Bootstrap framework and hopefully help you to simplify your workflow and
-make it more intuitive.
+The vast majority of our projects at Gizra are based on [Bootstrap](http://getbootstrap.com/) framework and we often spend a lot of time and effort in creating the perfect responsive layout and UX (user experience)
+across all breakpoints. As Bootstrap comes by default with four breaking points, we found ourself implementing them, until we started asking ourself:
+
+__Q__: Is responsive really needed?  
+__A__: Yes, Of course.
+
+__Q__: Do we always need so many breakpoints?  
+__A__: No.
 
 <div class="thumbnail">
   <img src="{{BASE_PATH}}/assets/images/posts/simplify-bootstrap/image.gif">
@@ -28,10 +27,9 @@ make it more intuitive.
 
 <!-- more -->
 
------------
-
 ### "Full Responsive" approach
-`Full Responsive` - The project adapt it self to support all devices and screen sizes.
+
+`Full Responsive` - The project adapts itself to support as many devices and screen sizes (large desktop, desktop, tablet, mobile).
 
 Bootstrap provides us with a powerful responsive layout and a matching grid system
 but with great power comes great responsibility!
@@ -39,9 +37,8 @@ Our responsibility is making sure that our website/app UX is
 consist and that the layout looks perfect across all of the breakpoints isn't always
 an easy task to achieve and above all it consume a considerable amount of project time.
 
------------
-
 ### "Responsive Pattern" approach
+
 `Responsive Pattern` - Defines the project responsive support range.
 
 Project adapt it self according to a "Responsive Pattern" that's was defined by it's
@@ -57,8 +54,6 @@ But in most cases we won't have to. At least not on the first stage of the proje
 So by not doing it "full responsive" or by doing it in stages we simplify our workflow and making
 it more intuitive. The beauty of it is that we can also have different "responsive patterns" on
 different stages of the project.
-
------------
 
 ### "Responsive pattern" discovery stage
 The discovery stage of our project "responsive pattern" is very important
@@ -98,7 +93,7 @@ I have create a demo that demonstrates both of these approaches:
   This little tool is very handy when working with a responsive layout.
   You get a live feedback on the current breakpoint when it changes.
   I like ti keep it at the top of my layout but you can put it where ever you desire.
-  
+
 > <div class="thumbnail" style="margin-bottom: 0">
     <img src="{{BASE_PATH}}/assets/images/posts/simplify-bootstrap/responsive-monitor.gif">
     <div class="caption">Live responsive monitor</div>
