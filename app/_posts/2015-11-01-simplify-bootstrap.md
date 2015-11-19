@@ -18,7 +18,9 @@ __Q__: Is responsive really needed?
 __A__: Yes, Of course.
 
 __Q__: Do we always need so many breakpoints?  
-__A__: No.
+__A__: No. Or said differently: Yes. But not necessarily immediately.
+
+Don't get me wrong. I'm not against responsive design. I'm just saying each breakpoint has an impact on the time line and budget. It's up to us, to help the client decide how many breakpoints are right for them.
 
 
 <div class="thumbnail">
@@ -28,74 +30,46 @@ __A__: No.
 
 <!-- more -->
 
-### "Full Responsive" approach
+## The "Bootstrap got it right, don't mess with it" Approach
 
-`Full Responsive` - The project adapts itself to support as many devices and screen sizes (large desktop, desktop, tablet, mobile).
+The project adapts itself to support as many devices and screen sizes (large desktop, desktop, tablet, mobile).
 
 Bootstrap provides us with a powerful responsive layout and a matching grid system
 but with great power comes great responsibility!
-Our responsibility is making sure that our website/app UX is
-consist and that the layout looks perfect across all of the breakpoints isn't always
-an easy task to achieve and above all it consume a considerable amount of project time.
+Our responsibility is making sure that our website or webapp UX is
+consist. Making sure the layout looks perfect across all of the breakpoints isn't always
+an easy task to achieve and above all it consumes a considerable amount of project time.
 
-### "Responsive Pattern" approach
+## The "Bootstrap is awesome, but default is just a default" Approach
 
-`Responsive Pattern` - Defines the project responsive support range.
+In this approach we define the project responsives needs based on quantitative data, such as looking at Google analytics to get the source of visitors or just analyzing the expected audience, and defining the breakpoints according to it. For example, with this approach, we may start only with the large desktop and mobile breakpoints.
 
-Project adapt it self according to a "Responsive Pattern" that's was defined by it's
-internal requirements and needs. On this approach we have the advantaged of supporting what
-is really vital and suitable for the current project state. This give us the ability to
-create a rapid solid project in a reasonable amount of time.
+This approach doesn't mean we cannot change and add more breakpoints in the future, however it allows us to concentrate on the vital elements in order to get the project out the door. In fact there is a good chance we will find out there is a need for all Bootstrap's default breakpoints, or even more - but at least we have actively, and mindfully, decided to do it.
 
-The responsive pattern isn't absolute and may change in the future,
-But the important thing is to have a clarified solid pattern to start from when working on a project.
+## Discovery Stage
 
-Of course We can still decide that it's vital to do it all and have a "full responsive" support,
-But in most cases we won't have to. At least not on the first stage of the project.
-So by not doing it "full responsive" or by doing it in stages we simplify our workflow and making
-it more intuitive. The beauty of it is that we can also have different "responsive patterns" on
-different stages of the project.
+The discovery stage of our project is so important it deserves its own blog post, but lets focus only on the breakpoints aspect:
 
-### "Responsive pattern" discovery stage
-The discovery stage of our project "responsive pattern" is very important
-and must be done in the exact order because each step relies in the previous one.
+### Project Audience
 
-1) `Project Audience`   
-In our case the audience are devices (phones, tablets, Desktops)
-Concentrate on the current most important audience.
-In the future we can monitor our website/app with "google analytics" tool
-and get a better comprehension of the kind of audience traffic we have and
+In our case the audience are devices (phones, tablets, Desktops). Concentrate on the current most important audience.  
+If possible, try to analyze based on real data (read as Google analytics) to get a better comprehension of the kind of audience traffic we have and
 adjust accordingly to it if it's necessary and worth while.
 
-2) `Project UX`   
-Find out what is the mandatory "UX" that the project must provide and can it be implemented
-equivalently on any device/media screen size. This will help us see in a clearer way were we need to invest our responsive effort on the project.
+### Time Line & Budget
 
-3) `Project UI`   
-Our project "Estimation Time" gets longer and the "Budget" will become more expensive
-when taking into consideration the amount of time we need to invest in every page,
-widget or feature to adapt itself on multiple breakpoints.
-We need to concentrate on understanding which parts of the UI (User Interface)
-are the vital for our project.
+Our project's time estimation gets longer and the budget will become more expensive for every extra breakpoint. We often like to put it into numbers for the client and say (amount might vary, but it helps getting the point): "Each breakpoint will cost you 2,500$. Lets skip two of them, and invest that 5,000$ in one of your core functionalities."
 
-4) `Summary Stage`   
-Now that we established a firm base ground about our `Project Audience`, `Project UX` and `Project UI`  responsive relevance to our project, Then we can wisely decide on what we want to fit in to the "Budget" and "Estimation Time" according to our preferences.
 
-I have create a demo that demonstrates both of these approaches:
+## Demo
 
-- `Default responsive layout` (4 breakpoints) - "Full Responsive"
-- `Custom responsive layout` (2 breakpoints) - "Responsive Pattern"
+To better understand the impact of this approach below you can find a [demo](http://ym-bs-responsive.gizra.com/). Notice how for example in `col-md` size, the above layout seems cut. Wonder what normal people do when they see their site cut? They simple make the browser's window bigger :)
 
-</br>
-{% include demo_block.html demo='http://ym-bs-responsive.gizra.com/' code='https://github.com/Gizra/bootstrap-responsive' %}
+## Bonus For Jekyll users
 
-</br>
-> I also add another "goodie" which is my personal "live responsive monitor".
-  This little tool is very handy when working with a responsive layout.
-  You get a live feedback on the current breakpoint when it changes.
-  I like ti keep it at the top of my layout but you can put it where ever you desire.
+Here's a niftty snippet I add to the top of my Jekyll mockups, which indicates which breakpoint we are looking at.
 
-> <div class="thumbnail" style="margin-bottom: 0">
-    <img src="{{BASE_PATH}}/assets/images/posts/simplify-bootstrap/responsive-monitor.gif">
-    <div class="caption">Live responsive monitor</div>
-  </div>
+<div class="thumbnail" style="margin-bottom: 0">
+  <img src="{{BASE_PATH}}/assets/images/posts/simplify-bootstrap/responsive-monitor.gif">
+  <div class="caption">Live responsive monitor</div>
+</div>
