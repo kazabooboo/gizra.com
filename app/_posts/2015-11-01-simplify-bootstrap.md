@@ -42,7 +42,7 @@ an easy task to achieve and above all it consumes a considerable amount of proje
 
 ## The "Bootstrap is awesome, but default is just a default" Approach
 
-In this approach we define the project responsives needs based on quantitative data, such as looking at Google analytics to get the source of visitors or just analyzing the expected audience, and defining the breakpoints according to it. For example, with this approach, we may start only with the large desktop and mobile breakpoints.
+In this approach we define the project responsiveness needs based on quantitative data, such as looking at Google analytics to get the source of visitors or just analyzing the expected audience, and defining the breakpoints according to it. For example, with this approach, we may start only with the large desktop and mobile breakpoints.
 
 This approach doesn't mean we cannot change and add more breakpoints in the future, however it allows us to concentrate on the vital elements in order to get the project out the door. In fact there is a good chance we will find out there is a need for all Bootstrap's default breakpoints, or even more - but at least we have actively, and mindfully, decided to do it.
 
@@ -60,16 +60,6 @@ adjust accordingly to it if it's necessary and worth while.
 
 Our project's time estimation gets longer and the budget will become more expensive for every extra breakpoint. We often like to put it into numbers for the client and say (amount might vary, but it helps getting the point): "Each breakpoint will cost you 2,500$. Lets skip two of them, and invest that 5,000$ in one of your core functionalities."
 
-
 ## Demo
 
 To better understand the impact of this approach below you can find a [demo](http://ym-bs-responsive.gizra.com/). Notice how for example in `col-md` size, the above layout seems cut. Wonder what normal people do when they see their site cut? They simple make the browser's window bigger :)
-
-## Bonus For Jekyll users
-
-Here's a nifty snippet I add to the top of my Jekyll mockups, which indicates which breakpoint we are looking at.
-
-<div class="thumbnail" style="margin-bottom: 0">
-  <img src="{{BASE_PATH}}/assets/images/posts/simplify-bootstrap/responsive-monitor.gif">
-  <div class="caption">Live responsive monitor</div>
-</div>
