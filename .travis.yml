@@ -75,6 +75,6 @@ script:
   - ./bin/behat --tags=~@wip
   - cd ..
 
-  - cd ui-tests
-  - PROVIDER_PREFIX=browserstack SELECTED_CAPS=chrome mocha
-  - PROVIDER_PREFIX=browserstack SELECTED_CAPS=ie11 mocha
+  # - cd ui-tests
+  # - PROVIDER_PREFIX=browserstack SELECTED_CAPS=chrome mocha
+  # - PROVIDER_PREFIX=browserstack SELECTED_CAPS=ie11 mocha
