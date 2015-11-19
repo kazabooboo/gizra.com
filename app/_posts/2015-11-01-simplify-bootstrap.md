@@ -67,7 +67,7 @@ To better understand the impact of this approach below you can find a [demo](htt
 
 ## Bonus For Jekyll users
 
-Here's a niftty snippet I add to the top of my Jekyll mockups, which indicates which breakpoint we are looking at.
+Here's a nifty snippet I add to the top of my Jekyll mockups, which indicates which breakpoint we are looking at.
 
 <div class="thumbnail" style="margin-bottom: 0">
   <img src="{{BASE_PATH}}/assets/images/posts/simplify-bootstrap/responsive-monitor.gif">
