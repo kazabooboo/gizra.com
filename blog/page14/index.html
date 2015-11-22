@@ -154,6 +154,123 @@
 
           <div class="row">
             <div class="post-label">
+              <a href="/content/sending-lots-emails-hint-drush/">Sending LOTS of emails (Hint: with Drush)</a>
+            </div>
+          </div>
+
+          <div class="row small-row">
+            <div class="date">24 Jan 2012</div>
+            <div class="seprator">|</div>
+            <div class="author">By <a href="#author">Amitai Burstein</a></div>
+          </div>
+
+          <div class="row small-row">
+            <div class="tags">
+              
+              <ul class="inline">
+                
+                
+
+  
+    
+      <li><a href="/tags.html#Drupal-planet-ref">Drupal-planet</a></li>
+    
+      <li><a href="/tags.html#Message-ref">Message</a></li>
+    
+      <li><a href="/tags.html#Drush-ref">Drush</a></li>
+    
+  
+
+
+              </ul>
+              
+            </div>
+            <div class="comments-count"><a href="http://www.gizra.com/blog/page14/index.html#disqus_thread"></a></div>
+          </div>
+
+          <div class="row">
+            <div class="post-content">
+              <p>On my <a href="http://www.gizra.com/content/message-notify-multilingual-email-notifications">last blog</a> post I talked about Message notify module, and mentioned we were using it to send digest emails. While Message notify really eases the pain of creating personalized emails, and sending them, we still needed to find a scalable solutions for sending lots of emails. LOTS of emails!</p>
+
+<p>Doing it on hook_cron() is nice if you need to send few emails, but when you need to send thousands of emails a day, it won’t do. Cron will take too long, or might hang up if we try to process too many digest emails at once.</p>
+
+<p>A nice and simple solution we came up with, was to write a Drush command that will process a small batch of users, and use Jenkins to fire up this command every two minutes.</p>
+
+<p>This post will demonstrate the code, that can be used by others - however you will need to copy and change the command to fit your business logic.</p>
+
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="bottom-dash"></div>
+          </div>
+        </div>
+      </div>
+      <!--Post End-->
+      
+
+      
+        
+      
+
+      
+        
+          
+            
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+
+      <!--Post begin-->
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2 post">
+
+          <div class="row">
+            <div class="post-label">
               <a href="/content/message-notify-multilingual-email-notifications/">Message notify - Multilingual email notifications</a>
             </div>
           </div>
@@ -562,121 +679,6 @@ Damien, being Damien, gave me a Damien answer. Bojan, being Bojan, explained it 
 <p>After that ,there was a minute of silence before I asked Damien how did the people react, and did he think they liked it. Damien, well, you know. He just said - but this time with a little smile - &quot;I don’t know if they liked it, but it sure was disruptive&quot;.</p>
 
 <p>The next day I had my own presentation. It’s no secret some parts of it were completely non-linear. If I may, I would use Damien’s answer to describe my own presentation.</p>
-
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="bottom-dash"></div>
-          </div>
-        </div>
-      </div>
-      <!--Post End-->
-      
-
-      
-        
-      
-
-      
-        
-          
-            
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-
-      <!--Post begin-->
-      <div class="row">
-        <div class="col-md-8 col-md-offset-2 post">
-
-          <div class="row">
-            <div class="post-label">
-              <a href="/content/drupalcamp-spain-sevilla/">Drupalcamp Spain - Sevilla</a>
-            </div>
-          </div>
-
-          <div class="row small-row">
-            <div class="date">02 Oct 2011</div>
-            <div class="seprator">|</div>
-            <div class="author">By <a href="#author">Amitai Burstein</a></div>
-          </div>
-
-          <div class="row small-row">
-            <div class="tags">
-              
-              <ul class="inline">
-                
-                
-
-  
-    
-      <li><a href="/tags.html#Drupal-planet-ref">Drupal-planet</a></li>
-    
-      <li><a href="/tags.html#movie-ref">movie</a></li>
-    
-      <li><a href="/tags.html#Drupalcamp-ref">Drupalcamp</a></li>
-    
-      <li><a href="/tags.html#OG7-ref">OG7</a></li>
-    
-  
-
-
-              </ul>
-              
-            </div>
-            <div class="comments-count"><a href="http://www.gizra.com/blog/page14/index.html#disqus_thread"></a></div>
-          </div>
-
-          <div class="row">
-            <div class="post-content">
-              <p>Here&#39;s my presentation held in Drupalcamp Spain. I&#39;m going over a new feature in OG7, that allows having multiple group audience fields and having a membership type assigned to each field -- in English it means that you can have some users join a group with &quot;Default&quot; membership and others with &quot;Expire&quot; membership.</p>
-
-<p>Also checkout Pedro&#39;s (pcambra) new suit!</p>
 
             </div>
           </div>

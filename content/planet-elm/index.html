@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Mindful Custom Breakpoints</title>
+        <title>Planet Elm</title>
         <meta name="viewport" content="width=device-width">
 
       <!-- Favicon for all platforms -->
@@ -85,43 +85,43 @@
 
   
     
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
       
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
     
   
 
@@ -153,14 +153,14 @@
         <div class="col-md-8 col-md-offset-2 post">
           <div class="row">
             <div class="post-label">
-              <a href="/content/mindful-custom-breakpoints-bootstrap">Mindful Custom Breakpoints</a>
+              <a href="/content/planet-elm">Planet Elm</a>
             </div>
           </div>
 
           <div class="row small-row">
-            <div class="date">19 Nov 2015</div>
+            <div class="date">23 Nov 2015</div>
             <div class="seprator">|</div>
-            <div class="author">By Yaron Miro</div>
+            <div class="author">By Amitai Burstein</div>
           </div>
 
           <div class="row small-row">
@@ -173,9 +173,7 @@
 
   
     
-      <li><a href="/tags.html#Bootstrap-ref">Bootstrap</a></li>
-    
-      <li><a href="/tags.html#Drupal-planet-ref">Drupal-planet</a></li>
+      <li><a href="/tags.html#Elm-ref">Elm</a></li>
     
   
 
@@ -184,64 +182,24 @@
               
             </div>
 
-            <div class="comments-count"><a href="http://www.gizra.com/content/mindful-custom-breakpoints-bootstrap#disqus_thread"></a></div>
+            <div class="comments-count"><a href="http://www.gizra.com/content/planet-elm#disqus_thread"></a></div>
           </div>
 
           <div class="row">
             <div class="post-content">
-              <p>The vast majority of our projects at Gizra use <a href="http://getbootstrap.com/">Bootstrap</a> for layout. We spend a lot of time and effort creating the perfect responsive layout and UX across all breakpoints. As Bootstrap comes by default with four breaking points, we naturally implemented them all, until we started asking ourself:</p>
+              <h1><a href="http://planet.elm-lang.org/">planet.elm-lang.org</a> is live!</h1>
 
-<p><strong>Q</strong>: Is responsive really needed?<br>
-<strong>A</strong>: Yes, Of course.</p>
-
-<p><strong>Q</strong>: Do we always need so many breakpoints?<br>
-<strong>A</strong>: No. Or, to say it differently: Yes. But not necessarily immediately.</p>
-
-<p>Don&#39;t get me wrong. I&#39;m not against responsive design. I&#39;m just saying each breakpoint has an impact on the project length and budget. It&#39;s up to us to help the client decide how many breakpoints are right for them. As you know, Bootstrap can have <a href="http://mindful-custom-breakpoint-bootstrap.gizra.com/">custom breakpoints</a>.</p>
+<p>Nice, right? Planet Elm and its <a href="http://planet.elm-lang.org/feeds.xml">RSS feed</a> is up and running - just grab it, and the best Elm related posts would appear in your favorite RSS reader.</p>
 
 <div class="thumbnail">
-  <iframe src="http://gfycat.com/ifr/DistortedBarrenGroundbeetle" frameborder="0" scrolling="no" width="800" height="555" style="-webkit-backface-visibility: hidden;-webkit-transform: scale(1);" ></iframe>
-  <div class="caption">Bootstrap default layout VS Bootstrap custom layout</div>
+  <img src="http://www.gizra.com/assets/images/posts/planet-elm/image1.jpg">
 </div>
 
-<!-- more -->
+<p>I felt the need for such a site the day I started with Elm. Getting the Gizra devs to <a href="https://github.com/Gizra/planet-elm">build</a> it was the next logical thing.</p>
 
-<h2>The &quot;Bootstrap got it right, don&#39;t mess with it&quot; Approach</h2>
+<p>Having this main site as a central place for aggregating all the interesting content about Elm is yet another step in getting Elm into the mainstream.</p>
 
-<p>The project adapts itself to support multiple devices and screen sizes (large desktop, desktop, tablet, mobile).</p>
-
-<p>Bootstrap provides us with a powerful responsive layout and a matching grid system. But with great power comes great responsibility! Our responsibility is making sure the UI is consistent. Making sure the layout looks perfect across all of the breakpoints isn&#39;t always an easy task to achieve and above all it consumes a considerable amount of project time.</p>
-
-<h2>The &quot;Bootstrap is awesome, but default is just a default&quot; Approach</h2>
-
-<p>In this approach we define the project responsiveness needs based on quantitative data, from Google Analytics and similar resources, and decide on the breakpoints accordingly. For example, with this approach, we may start only with the large desktop and mobile breakpoints.</p>
-
-<p>This approach doesn&#39;t mean we cannot change or add more breakpoints in the future, however it allows us to concentrate on the vital elements in order to get the project out the door. In fact, there is a good chance we will find out there is a need for all Bootstrap&#39;s default breakpoints, or even more - but at least we have actively, and mindfully, <em>decided</em> to do it.</p>
-
-<h2>Discovery Stage</h2>
-
-<p>The discovery stage of our projects is so important it probably deserves its own blog post, but lets focus only on the breakpoints aspect:</p>
-
-<h3>Project Audience</h3>
-
-<p>In our case the audience are devices (phones, tablets, desktops). Concentrate on the current most <a href="https://en.wikipedia.org/wiki/Pareto_principle">important audience</a>.<br>
-If possible, try to analyze based on real data (e.g. Google Analytics) to get a better idea of the kind of traffic we have and adjust accordingly to it.</p>
-
-<h3>Time &amp; Budget</h3>
-
-<p>Our project&#39;s time estimation gets bigger and the budget more expensive with every extra breakpoint. We often like to put it into numbers for the client and say (amount might vary, but it helps getting the point): &quot;Each breakpoint will cost you $2,500. Lets skip two of them, and invest that $5,000 in your core features.&quot;</p>
-
-<h2>Demo</h2>
-
-<p>To better understand the impact of this approach you can check the <a href="http://mindful-custom-breakpoint-bootstrap.gizra.com/">demo site</a>. Notice how for example in <code>col-md</code> size, the above layout seems cut.  </p>
-
-<p>Wonder what normal people do when they see their site cut?  </p>
-
-<p>They simple make the browser&#39;s window bigger :)</p>
-
-<div class="thumbnail">
-  <img src="http://www.gizra.com/assets/images/posts/mindful-custom-breakpoint-bootstrap/image2.jpg">
-</div>
+<p>If you maintain your own blog, go ahead, and <a href="https://github.com/Gizra/planet-elm/wiki/Planet-Elm-guidelines">submit your RSS feeds</a>.</p>
 
             </div>
           </div>
@@ -254,37 +212,28 @@ If possible, try to analyze based on real data (e.g. Google Analytics) to get a 
             <div class="first">
               
               <div class="previous">
-                <a href="/content/elm-challenge">
+                <a href="/content/mindful-custom-breakpoints-bootstrap">
                   Previous
                 </a>
               </div>
-              <a href="/content/elm-challenge" class="prev-text">
-                Elm Challenge
+              <a href="/content/mindful-custom-breakpoints-bootstrap" class="prev-text">
+                Mindful Custom Breakpoints
               </a>
               
             </div>
             <div class="last">
-              
-              <div class="next">
-                <a href="/content/planet-elm">
-                  Next
-                </a>
-              </div>
-              <a href="/content/planet-elm" class="next-text">
-                Planet Elm
-              </a>
               
             </div>
           </div>
 
           <div class="row author-details">
             <div class="image-wrapper">
-              <img src="/images/team/yaronMiro.00e7.jpg" class="img-responsive">
+              <img src="/images/team/amitaibu.4179.jpg" class="img-responsive">
             </div>
             <div class="text-wrapper">
-              <span class="name">Yaron Miro</span> <span class="twitter">(@yaronMiro)</span>
-              <div class="title">Developer</div>
-              <div class="bio">There are no shortcuts in life, Do what is necessary, Everything matters!.</div>
+              <span class="name">Amitai Burstein</span> <span class="twitter">(@amitaibu)</span>
+              <div class="title">CTO, Co-Owner</div>
+              <div class="bio">Maintainer of Organic groups, the Message stack, and co-maintainer of Drupal 8's Entity reference. <a href="/content/the-about-story/">The about story</a>.</div>
             </div>
           </div>
 
