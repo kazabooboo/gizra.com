@@ -35,6 +35,7 @@ var testName = selectedCaps ? providerPrefix + selectedCaps : providerPrefix + '
 
 // Change base URL if it's run under travis.
 var baseUrl = process.env.TRAVIS_COMMIT ? 'https://' + process.env.TRAVIS_COMMIT + '.ngrok.io' : 'http://localhost:9000';
+var baseUrl = 'http://gizra.com';
 
 describe('Blog posts tests', function() {
 
