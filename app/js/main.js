@@ -1,4 +1,17 @@
 $(function() {
+
+  // Popup div instead logo
+  var main = $('.logo.popup .main-block');
+  var popup = $('.logo.popup .popup-block');
+  $('.logo.popup').hover(
+    function(){
+      main.fadeOut();
+      popup.fadeIn();
+    }, function(){
+      popup.fadeOut();
+      main.fadeIn();
+    }
+  );
   // Homepage slideshow.
   $('.parallax-scene').parallax();
 
