@@ -21,6 +21,14 @@ module.exports = function (grunt) {
       dist: 'dist'
     },
     watch: {
+      bootlint: {
+        files: ['<%= yeoman.app %>/**/*.{html,html}'],
+        tasks: ['bootlint']
+      },
+      scsslint: {
+        files: ['<%= yeoman.app %>/_scss/*.scss'],
+        tasks: ['scsslint']
+      },
       compass: {
         files: ['<%= yeoman.app %>/_scss/**/*.{scss,sass}'],
         tasks: ['compass:server', 'autoprefixer:server']
@@ -322,6 +330,8 @@ module.exports = function (grunt) {
     },
     concurrent: {
       server: [
+        'bootlint',
+        'scsslint',
         'compass:server',
         'copy:stageCss',
         'jekyll:server'
@@ -330,6 +340,37 @@ module.exports = function (grunt) {
         'compass:dist',
         'copy:dist'
       ]
+    },
+    bootlint: {
+      options: {
+        showallerrors: false,
+        stoponerror: false,
+        relaxerror: {
+          'E001': [],
+          'E029': [],
+          'W001': [],
+          'W002': [],
+          'W003': [],
+          'W005': []
+        }
+      },
+      files: [
+        '<%= yeoman.app %>/index.html',
+        //'<%= yeoman.app %>/*.{html,html}',
+        //'!<%= yeoman.app %>/_includes/**/*',
+        //'!<%= yeoman.app %>/_layouts/**/*'
+      ]
+    },
+    scsslint: {
+      allFiles: [
+        '<%= yeoman.app %>/_scss/*.scss'
+      ],
+      options: {
+        config: '.scss-lint.yml',
+        exclude: '<%= yeoman.app %>/_scss/_code.scss',
+        colorizeOutput: true,
+        force: true
+      }
     }
   });
 
