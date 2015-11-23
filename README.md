@@ -6,6 +6,7 @@
 ## Install
 
 ```bash
+gem update --system && gem install scss-lint
 bundler install
 npm install
 bower install
