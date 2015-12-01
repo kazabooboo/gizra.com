@@ -338,7 +338,7 @@ module.exports = function (grunt) {
     },
     scsslint: {
       allFiles: [
-        '<%= yeoman.app %>/_scss/*.scss'
+        '<%= yeoman.app %>/_scss/**/*.scss'
       ],
       options: {
         config: '.scss-lint.yml',

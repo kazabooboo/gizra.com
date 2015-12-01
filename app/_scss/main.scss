@@ -17,7 +17,8 @@ $gizra-text: #5D5D5D;
 @import 'mixins/post';
 @import 'pages/about';
 @import 'pages/blog';
-@import 'pages/post';
+//@import 'pages/post';
+@import 'pages/newpost';
 @import 'pages/products';
 @import 'pages/team';
 
@@ -26,7 +27,9 @@ body {
   font-family: verdana, sans-serif;
 }
 
-
+.text-uppercase {
+  text-transform: uppercase;
+}
 
 .thumbnail {
   display: inline-block;
@@ -37,16 +40,49 @@ body {
   font-family: Abril Fatface;
 }
 
-header {
+.header-homepage {
   background: url('/images/header/background.png') no-repeat left top;
   background-size: cover;
   width: 100%;
   text-align: left;
 
+  #slogan {
+    position: relative;
+    overflow: hidden;
+    height: 414px;
+    color: white;
+    margin-left: 8px;
+
+    h2 {
+      font-family: Lato;
+      font-weight: bold;
+      font-size: 25px;
+      line-height: 32px;
+      text-transform: uppercase;
+      margin: 10px 2px 0;
+      letter-spacing: 3.3px;
+    }
+
+    p {
+      margin: 7px 2px;
+      font-size: 18px;
+      max-width: 430px;
+      line-height: 23px;
+    }
+
+    h3 {
+      display: inline-block;
+      text-transform: uppercase;
+      font-size: 22px;
+      margin: -4px 0 0 420px;
+    }
+  }
+}
+
+header {
 
   .gizra-logo {
     margin-top: -2px;
-    margin-bottom: 0;
 
     @media (max-width: $screen-xs-max) {
       margin: 15px 0 34px;
@@ -162,43 +198,6 @@ header {
           }
         }
       }
-    }
-  }
-
-  #slogan {
-    position: relative;
-    overflow: hidden;
-    height: 414px;
-    color: white;
-    margin-left: 8px;
-
-    h2 {
-      font-family: Lato;
-      font-weight: bold;
-      font-size: 25px;
-      line-height: 32px;
-      text-transform: uppercase;
-      margin: 25px 2px 0;
-      letter-spacing: 3.3px;
-    }
-
-    p {
-      margin: 7px 2px;
-      font-size: 18px;
-      max-width: 430px;
-      line-height: 23px;
-    }
-
-    h3 {
-      display: inline-block;
-      text-transform: uppercase;
-      font-size: 22px;
-      margin: -4px 0 0 420px;
-    }
-
-    .parallax-scene {
-      min-height: 500px;
-      width: 860px;
     }
   }
 }
@@ -365,7 +364,6 @@ header {
   .text-wrapper {
 
     .title {
-      font-family: Helvetica, sans-serif;
       font-size: 30px;
       font-weight: bolder;
       letter-spacing: 0;
