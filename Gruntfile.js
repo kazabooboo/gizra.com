@@ -21,6 +21,10 @@ module.exports = function (grunt) {
       dist: 'dist'
     },
     watch: {
+      scsslint: {
+        files: ['<%= yeoman.app %>/_scss/*.scss'],
+        tasks: ['scsslint']
+      },
       compass: {
         files: ['<%= yeoman.app %>/_scss/**/*.{scss,sass}'],
         tasks: ['compass:server', 'autoprefixer:server']
@@ -53,7 +57,7 @@ module.exports = function (grunt) {
         port: 9000,
         livereload: 35729,
         // change this to '0.0.0.0' to access the server from outside
-        hostname: 'localhost'
+        hostname: '0.0.0.0'
       },
       livereload: {
         options: {
@@ -322,6 +326,7 @@ module.exports = function (grunt) {
     },
     concurrent: {
       server: [
+        'scsslint',
         'compass:server',
         'copy:stageCss',
         'jekyll:server'
@@ -330,6 +335,17 @@ module.exports = function (grunt) {
         'compass:dist',
         'copy:dist'
       ]
+    },
+    scsslint: {
+      allFiles: [
+        '<%= yeoman.app %>/_scss/*.scss'
+      ],
+      options: {
+        config: '.scss-lint.yml',
+        exclude: '<%= yeoman.app %>/_scss/_code.scss',
+        colorizeOutput: true,
+        force: true
+      }
     }
   });
 
