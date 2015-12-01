@@ -21,6 +21,10 @@ module.exports = function (grunt) {
       dist: 'dist'
     },
     watch: {
+      bootlint: {
+        files: ['<%= yeoman.app %>/**/*.{html,html}'],
+        tasks: ['bootlint']
+      },
       scsslint: {
         files: ['<%= yeoman.app %>/_scss/*.scss'],
         tasks: ['scsslint']
@@ -326,6 +330,7 @@ module.exports = function (grunt) {
     },
     concurrent: {
       server: [
+        'bootlint',
         'scsslint',
         'compass:server',
         'copy:stageCss',
@@ -334,6 +339,27 @@ module.exports = function (grunt) {
       dist: [
         'compass:dist',
         'copy:dist'
+      ]
+    },
+    bootlint: {
+      options: {
+        showallerrors: false,
+        stoponerror: false,
+        relaxerror: {
+          'E001': [],
+          'E029': [],
+          'W001': [],
+          'W002': [],
+          'W003': [],
+          'W005': []
+        }
+      },
+      files: [
+        '<%= yeoman.app %>/index.html',
+        '<%= yeoman.app %>/_layouts/post.html',
+        //'<%= yeoman.app %>/*.{html,html}',
+        //'!<%= yeoman.app %>/_includes/**/*',
+        //'!<%= yeoman.app %>/_layouts/**/*'
       ]
     },
     scsslint: {
