@@ -1,3 +1,6 @@
+/Gemfile.lock
+/validation-status.json
+/validation-report.json
 # .gitignore for Yeoman-Jekyll projects
 
 # Ignore hidden folders #

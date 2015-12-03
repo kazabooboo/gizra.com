@@ -58,7 +58,7 @@ module.exports = function (grunt) {
     },
     connect: {
       options: {
-        port: 9000,
+        port: 9001,
         livereload: 35729,
         // change this to '0.0.0.0' to access the server from outside
         hostname: '0.0.0.0'
@@ -330,6 +330,7 @@ module.exports = function (grunt) {
     },
     concurrent: {
       server: [
+        'validation',
         'bootlint',
         'scsslint',
         'compass:server',
@@ -371,6 +372,20 @@ module.exports = function (grunt) {
         exclude: '<%= yeoman.app %>/_scss/_code.scss',
         colorizeOutput: true,
         force: true
+      }
+    },
+    validation: {
+      options: {
+        reset: grunt.option('reset') || false,
+        stoponerror: false,
+        remotePath: '0.0.0.0:9001',
+        relaxerror: ['Bad value X-UA-Compatible for attribute http-equiv on element meta.'] //ignores these errors
+      },
+      files: {
+        src: ['<%= yeoman.app %>/*.html',
+          '!<%= yeoman.app %>/index.html',
+          '!<%= yeoman.app %>/modules.html',
+          '!<%= yeoman.app %>/404.html']
       }
     }
   });
