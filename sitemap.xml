@@ -1,0 +1,1008 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+    <url>
+      <loc>/content/planet-elm</loc>
+      
+        <lastmod>2015-11-23T00:00:00+02:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/mindful-custom-breakpoints-bootstrap</loc>
+      
+        <lastmod>2015-11-19T00:00:00+02:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/elm-challenge</loc>
+      
+        <lastmod>2015-11-05T00:00:00+02:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/decoupled-drupal-drupalcon-los-angeles</loc>
+      
+        <lastmod>2015-11-05T00:00:00+02:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/thinking-choosing-elm</loc>
+      
+        <lastmod>2015-10-22T00:00:00+03:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/elmlang-headless-drupal</loc>
+      
+        <lastmod>2015-10-01T00:00:00+03:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/sticky-floors-happy-kids</loc>
+      
+        <lastmod>2015-09-29T00:00:00+03:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/visual-regression-tutorials</loc>
+      
+        <lastmod>2015-08-04T00:00:00+03:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/visual-monitor-drupal</loc>
+      
+        <lastmod>2015-07-20T00:00:00+03:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/phantomjs-chrome-docker-selenium-standalone</loc>
+      
+        <lastmod>2015-06-25T00:00:00+03:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/live-monitor-shoov-irony</loc>
+      
+        <lastmod>2015-06-01T00:00:00+03:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/restful-backbone-marionette</loc>
+      
+        <lastmod>2015-05-23T00:00:00+03:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/visual-regression-travis-shoov-ngrok</loc>
+      
+        <lastmod>2015-05-20T00:00:00+03:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/shoov-monitor-twitter</loc>
+      
+        <lastmod>2015-05-07T00:00:00+03:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/angularjs-ui-router</loc>
+      
+        <lastmod>2015-04-30T00:00:00+03:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/cross-browser-visual-regression-with-shoov</loc>
+      
+        <lastmod>2015-04-29T00:00:00+03:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/simpletest-behat-drupal-8</loc>
+      
+        <lastmod>2015-04-28T00:00:00+03:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/shoov-ci-tests-live-site</loc>
+      
+        <lastmod>2015-04-14T00:00:00+03:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/shoov-ui-regression</loc>
+      
+        <lastmod>2015-04-01T00:00:00+03:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/headless-drupal-terminal</loc>
+      
+        <lastmod>2015-03-02T00:00:00+02:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/logs-easy-way</loc>
+      
+        <lastmod>2015-02-02T00:00:00+02:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/automatic-qa</loc>
+      
+        <lastmod>2015-02-01T00:00:00+02:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/phantomcss-ui-regression</loc>
+      
+        <lastmod>2015-01-04T00:00:00+02:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/yo-hedley</loc>
+      
+        <lastmod>2014-12-26T00:00:00+02:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/behat-vs-casper-for-drupal</loc>
+      
+        <lastmod>2014-12-04T00:00:00+02:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/todo-restful-backend</loc>
+      
+        <lastmod>2014-11-23T00:00:00+02:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/behat-the-right-way</loc>
+      
+        <lastmod>2014-11-17T00:00:00+02:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/restful-discovery</loc>
+      
+        <lastmod>2014-10-30T00:00:00+02:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/gizra-we-have-got-your-headless-covered</loc>
+      
+        <lastmod>2014-10-19T00:00:00+03:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/headless-drupal-form-api-drupal9</loc>
+      
+        <lastmod>2014-07-24T00:00:00+03:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/headless-drupal-inline-edit</loc>
+      
+        <lastmod>2014-07-14T00:00:00+03:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/backend-free-apps-grunt-jekyll-d3js</loc>
+      
+        <lastmod>2014-07-10T00:00:00+03:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/restful-angular-forms</loc>
+      
+        <lastmod>2014-07-09T00:00:00+03:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/custom-css-as-contrib-with-jekyll</loc>
+      
+        <lastmod>2014-07-01T00:00:00+03:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/custom-breakpoint-bootstrap-sass</loc>
+      
+        <lastmod>2014-06-25T00:00:00+03:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/emmet-tutorial/</loc>
+      
+        <lastmod>2014-06-08T00:00:00+03:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/how-to-submit-an-application-to-itunes-app-store</loc>
+      
+        <lastmod>2014-05-26T00:00:00+03:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/the-amitaibu-show</loc>
+      
+        <lastmod>2014-05-25T00:00:00+03:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/how-to-have-lunch-without-speaking-drupal</loc>
+      
+        <lastmod>2014-05-22T00:00:00+03:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/restful-server</loc>
+      
+        <lastmod>2014-05-06T00:00:00+03:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/casa-del-lector</loc>
+      
+        <lastmod>2014-03-13T00:00:00+02:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/zariz-entity-reference</loc>
+      
+        <lastmod>2014-01-20T00:00:00+02:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/openscholar-new-bilbio</loc>
+      
+        <lastmod>2014-01-20T00:00:00+02:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/zariz-on-tv</loc>
+      
+        <lastmod>2014-01-16T00:00:00+02:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/drupal-x5-faster</loc>
+      
+        <lastmod>2014-01-09T00:00:00+02:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/zariz-in-pics</loc>
+      
+        <lastmod>2013-12-24T00:00:00+02:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/zariz-means-agile</loc>
+      
+        <lastmod>2013-12-11T00:00:00+02:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/the-about-story</loc>
+      
+        <lastmod>2013-10-31T00:00:00+02:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/how-we-use-github-issues</loc>
+      
+        <lastmod>2013-10-31T00:00:00+02:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/tipali-a-tool-for-easily-finding-polio-vaccination-clinics</loc>
+      
+        <lastmod>2013-09-04T00:00:00+03:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/open-source-real-world/</loc>
+      
+        <lastmod>2013-08-28T00:00:00+03:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/dekyll-new-github-pages-flavor/</loc>
+      
+        <lastmod>2013-07-14T00:00:00+03:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/dekyll-drupal-on-jekyll/</loc>
+      
+        <lastmod>2013-06-30T00:00:00+03:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/gizra-drupalcon-portland/</loc>
+      
+        <lastmod>2013-06-23T00:00:00+03:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/the-gizra-way/</loc>
+      
+        <lastmod>2013-06-17T00:00:00+03:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/harvard-openscholar/</loc>
+      
+        <lastmod>2013-06-04T00:00:00+03:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/migrate-and-baking-content/</loc>
+      
+        <lastmod>2012-12-27T00:00:00+02:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/drupal-nodejs-pantheon-and-heroku/</loc>
+      
+        <lastmod>2012-12-19T00:00:00+02:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/message-subscribe-new-subscription-system/</loc>
+      
+        <lastmod>2012-10-31T00:00:00+02:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/drupalcamp-montreal-keynote/</loc>
+      
+        <lastmod>2012-10-18T00:00:00+03:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/what-message-module-and-its-new-features/</loc>
+      
+        <lastmod>2012-07-12T00:00:00+03:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/about-strong-partnership-and-winning-game-bowling/</loc>
+      
+        <lastmod>2012-07-09T00:00:00+03:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/how-deal-colliding-aliases/</loc>
+      
+        <lastmod>2012-03-01T00:00:00+02:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/banner-rotator/</loc>
+      
+        <lastmod>2012-02-16T00:00:00+02:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/commerce-product-subform/</loc>
+      
+        <lastmod>2012-01-29T00:00:00+02:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/sending-lots-emails-hint-drush/</loc>
+      
+        <lastmod>2012-01-24T00:00:00+02:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/message-notify-multilingual-email-notifications/</loc>
+      
+        <lastmod>2012-01-01T00:00:00+02:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/og7-and-entity-reference-part-2/</loc>
+      
+        <lastmod>2011-12-07T00:00:00+02:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/og7-and-entity-reference-sponsor-me/</loc>
+      
+        <lastmod>2011-11-20T00:00:00+02:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/about-walk-bojanz-damz-and-i-had-london/</loc>
+      
+        <lastmod>2011-11-04T00:00:00+02:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/drupalcamp-spain-sevilla/</loc>
+      
+        <lastmod>2011-10-02T00:00:00+03:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/og7-drupalcon-london/</loc>
+      
+        <lastmod>2011-09-18T00:00:00+03:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/user-modal/</loc>
+      
+        <lastmod>2011-06-27T00:00:00+03:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/og-7x-11-rc2-out/</loc>
+      
+        <lastmod>2011-05-18T00:00:00+03:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/ctools-context-tutorial/</loc>
+      
+        <lastmod>2011-05-11T00:00:00+03:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/data-migration-part-2/</loc>
+      
+        <lastmod>2011-01-24T00:00:00+02:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/data-migration-part-1/</loc>
+      
+        <lastmod>2011-01-06T00:00:00+02:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/drupalcamp-athens/</loc>
+      
+        <lastmod>2010-12-26T00:00:00+02:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/moment-zen-1/</loc>
+      
+        <lastmod>2010-12-26T00:00:00+02:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/rounded-corners/</loc>
+      
+        <lastmod>2010-10-20T00:00:00+03:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/message-example-github-news-feed/</loc>
+      
+        <lastmod>2010-09-29T00:00:00+03:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/og7-session-drupalcon-copenhagen/</loc>
+      
+        <lastmod>2010-09-07T00:00:00+03:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/let-sleeping-dogs-lie/</loc>
+      
+        <lastmod>2010-07-03T00:00:00+03:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/views-and-panels-ajaxified/</loc>
+      
+        <lastmod>2010-06-30T00:00:00+03:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/message-module-and-ctools-plugin/</loc>
+      
+        <lastmod>2010-06-10T00:00:00+03:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/code-sample-drutnet/</loc>
+      
+        <lastmod>2010-05-17T00:00:00+03:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/group-intro/</loc>
+      
+        <lastmod>2010-05-09T00:00:00+03:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/drutnet-drupal-net-api/</loc>
+      
+        <lastmod>2010-04-29T00:00:00+03:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/zen-960/</loc>
+      
+        <lastmod>2010-04-26T00:00:00+03:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/message-module-intro/</loc>
+      
+        <lastmod>2010-04-22T00:00:00+03:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/dynamic-landing-pages/</loc>
+      
+        <lastmod>2010-04-14T00:00:00+03:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/ctools-context-and-message/</loc>
+      
+        <lastmod>2010-04-05T00:00:00+03:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/thinking-grid-960/</loc>
+      
+        <lastmod>2010-01-21T00:00:00+02:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/user-points-rules-style/</loc>
+      
+        <lastmod>2010-01-14T00:00:00+02:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/organic-groups-7/</loc>
+      
+        <lastmod>2010-01-03T00:00:00+02:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/using-git-write-patches/</loc>
+      
+        <lastmod>2009-12-27T00:00:00+02:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/outsourcing-kittens/</loc>
+      
+        <lastmod>2009-12-14T00:00:00+02:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/does-every-page-really-need-be-node/</loc>
+      
+        <lastmod>2009-12-07T00:00:00+02:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>/content/hookwidgetsettingsalter-and-pandora/</loc>
+      
+        <lastmod>2009-11-19T00:00:00+02:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+  
+    <url>
+      <loc>/blog/index.html</loc>
+     </url>
+  
+    <url>
+      <loc>/elm-rss/index.html</loc>
+     </url>
+  
+    <url>
+      <loc>/index.html</loc>
+     </url>
+  
+    <url>
+      <loc>/products/index.html</loc>
+     </url>
+  
+    <url>
+      <loc>/sitemap.xml</loc>
+     </url>
+  
+    <url>
+      <loc>/tags.html</loc>
+     </url>
+  
+    <url>
+      <loc>/taxonomy/term/1/all/feed/index.html</loc>
+     </url>
+  
+    <url>
+      <loc>/team/index.html</loc>
+     </url>
+  
+    <url>
+      <loc>/team-detail.html</loc>
+     </url>
+  
+    <url>
+      <loc>/blog/page2/index.html</loc>
+     </url>
+  
+    <url>
+      <loc>/blog/page3/index.html</loc>
+     </url>
+  
+    <url>
+      <loc>/blog/page4/index.html</loc>
+     </url>
+  
+    <url>
+      <loc>/blog/page5/index.html</loc>
+     </url>
+  
+    <url>
+      <loc>/blog/page6/index.html</loc>
+     </url>
+  
+    <url>
+      <loc>/blog/page7/index.html</loc>
+     </url>
+  
+    <url>
+      <loc>/blog/page8/index.html</loc>
+     </url>
+  
+    <url>
+      <loc>/blog/page9/index.html</loc>
+     </url>
+  
+    <url>
+      <loc>/blog/page10/index.html</loc>
+     </url>
+  
+    <url>
+      <loc>/blog/page11/index.html</loc>
+     </url>
+  
+    <url>
+      <loc>/blog/page12/index.html</loc>
+     </url>
+  
+    <url>
+      <loc>/blog/page13/index.html</loc>
+     </url>
+  
+    <url>
+      <loc>/blog/page14/index.html</loc>
+     </url>
+  
+    <url>
+      <loc>/blog/page15/index.html</loc>
+     </url>
+  
+    <url>
+      <loc>/blog/page16/index.html</loc>
+     </url>
+  
+    <url>
+      <loc>/blog/page17/index.html</loc>
+     </url>
+  
+    <url>
+      <loc>/blog/page18/index.html</loc>
+     </url>
+  
+    <url>
+      <loc>/blog/page19/index.html</loc>
+     </url>
+  
+    <url>
+      <loc>/blog/page20/index.html</loc>
+     </url>
+  
+</urlset>
