@@ -6,7 +6,7 @@
         <title>Creating a Custom Breakpoint in Bootstrap-Sass</title>
         <meta name="description" content="">
         <meta name="keywords" content="">
-        <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
       <!-- Favicon for all platforms -->
       <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.b3df.png">
@@ -29,11 +29,11 @@
       <meta name="theme-color" content="#ffffff">
       <!-- End favicon for all platforms -->
 
-        <link rel="stylesheet" href="/css/main.d506.css"/>
-
-        <link href='http://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
-
-        <!-- Google Analytics -->
+      <link rel="stylesheet" href="/css/main.8514.css"/>
+      <link href='http://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
+      <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+      <!-- Google Analytics -->
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -51,51 +51,9 @@
     <body>
 
     
-
-    <header class="white">
-      <div class="container">
-        <div class="logo"><a href="/">gizra</a></div>
-        <nav id="nav" role="navigation" class="navbar navbar-default nav-fixed">
-          <div class="navbar-header">
-            <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-          </div>
-          <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-              <li><a href="/#work">Work</a></li>
-              <li><a href="/#about">About</a></li>
-              <li><a href="/blog">Blog</a></li>
-              <li><a href="/team">Team</a></li>
-              <li><a href="/#contact">Contact</a></li>
-            </ul>
-          </div>
-        </nav>
-      </div> <!-- End of container -->
-    </header>
-
-    
-
-
-    
   
 
 
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
 
   
     
@@ -135,43 +93,94 @@
     
   
 
+  
+    
+  
 
-<section id="post-page">
-  <div class="background">
-    <img src="/images/post/background.71f5.png">
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+
+<header class="header-post">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-10 col-sm-offset-1">
+        <nav id="nav" role="navigation" class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="/team">Meet the team</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+    </div>
   </div>
+</nav>
 
-  <div class="ballons"></div>
-  <div class="post-back">
-    <a href="/blog">
-      <img src="/images/post/post-back.fca6.png">
-    </a>
+  <div class="gizra-logo"><a href="/">gizra</a></div>
+
+
+      </div>
+    </div>
   </div>
+</header>
 
-  <div class="content">
-    <div class="container">
-      <div class="row">
-
-        <div class="col-md-8 col-md-offset-2 post">
-          <div class="row">
-            <div class="post-label">
-              <a href="/content/custom-breakpoint-bootstrap-sass">Creating a Custom Breakpoint in Bootstrap-Sass</a>
-            </div>
-          </div>
-
-          <div class="row small-row">
-            <div class="date">25 Jun 2014</div>
-            <div class="seprator">|</div>
-            <div class="author">By Nader Safadi</div>
-          </div>
-
-          <div class="row small-row">
-            <div class="tags">
-
-              
-              <ul class="inline">
-                
-                
+<div class="container">
+  <div class="row">
+    <div class="col-sm-10 col-sm-offset-1">
+      <article class="post">
+        <h1><a href="/content/custom-breakpoint-bootstrap-sass">Creating a Custom Breakpoint in Bootstrap-Sass </a></h1>
+        <div class="date">25 Jun 2014, By Nader Safadi</div>
+        <div class="tags">
+          <img src="/images/post/tag-icon-small.15a8.png" class="tags-icon"/>
+          <ul class="inline">
+            
+            
 
   
     
@@ -184,16 +193,11 @@
   
 
 
-              </ul>
-              
-            </div>
-
-            <div class="comments-count"><a href="http://www.gizra.com/content/custom-breakpoint-bootstrap-sass#disqus_thread"></a></div>
+          </ul>
           </div>
+        <div class="post-content">
 
-          <div class="row">
-            <div class="post-content">
-              <p>Bootstrap is our go to base theme, but what happens when the grid the client asks for has different width, or more break points?
+          <p>Bootstrap is our go to base theme, but what happens when the grid the client asks for has different width, or more break points?
 Using Bootstrap-Sass creating a custom grid is possible in a manner that can be copied and adjusted from one project to another. As example for this post, and for your future reference you may follow the <a href="http://gizra.github.io/custom-breakpoint-example/">live demo</a> and <a href="https://github.com/Gizra/custom-breakpoint-example">repository</a> that changes Bootstrap to work with five breakpoints (tip: use <a href="http://lab.maltewassermann.com/viewport-resizer/">Resizer</a> for easy viewport resize).<br>
 Note that example is using Jekyll for simplicity, however the same technique can be used on Drupal.</p>
 
@@ -213,57 +217,53 @@ Note that example is using Jekyll for simplicity, however the same technique can
 <li>An optional step, yet recommended, is to add <a href="https://github.com/Gizra/custom-grid/blob/master/app/_scss/_grids.scss#L19-L36">visible and hidden</a> classes to the custom breakpoint. In our example adding a <code>visible-is</code> or <code>hidden-is</code> will have the desired effect when the new breakpoint will be used.</li>
 </ol>
 
-            </div>
-          </div>
 
-          <div class="row">
-            <div class="bottom-dash"></div>
-          </div>
-
-          <div class="row post-nav">
-            <div class="first">
-              
-              <div class="previous">
-                <a href="/content/emmet-tutorial/">
-                  Previous
-                </a>
-              </div>
-              <a href="/content/emmet-tutorial/" class="prev-text">
-                Introducing Emmet!
+        </div>
+      </article>
+      <section class="post-nav">
+        <div class="row">
+          <div class="col-xs-6 previous">
+            
+            <div class="text-uppercase">
+              <a href="/content/emmet-tutorial/">
+                Previous
+                <span class="visible-xs"> post</span>
               </a>
-              
             </div>
-            <div class="last">
-              
-              <div class="next">
-                <a href="/content/custom-css-as-contrib-with-jekyll">
-                  Next
-                </a>
-              </div>
-              <a href="/content/custom-css-as-contrib-with-jekyll" class="next-text">
-                No more CSS in your Drupal Theme!
+            <a href="/content/emmet-tutorial/" class="prev-text">
+              <span class="hidden-xs">Introducing Emmet!</span>
+            </a>
+            
+          </div>
+          <div class="col-xs-6 next">
+            
+            <div class="text-uppercase">
+              <a href="/content/custom-css-as-contrib-with-jekyll">
+                Next
+                <span class="visible-xs"> post</span>
               </a>
-              
             </div>
+            <a href="/content/custom-css-as-contrib-with-jekyll" class="next-text">
+              <span class="hidden-xs">No more CSS in your Drupal Theme!</span>
+            </a>
+            
           </div>
-
-          <div class="row author-details">
-            <div class="image-wrapper">
-              <img src="/images/team/nedSaf.4ab8.jpg" class="img-responsive">
-            </div>
-            <div class="text-wrapper">
-              <span class="name">Nader Safadi</span> <span class="twitter">(@nedSaf)</span>
-              <div class="title">Developer</div>
-              <div class="bio">Show me the source code and I'll be happy!</div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="bottom-dash-small"></div>
-          </div>
-
-          <div class="row">
-            <div id="disqus_thread"></div>
+        </div>
+      </section>
+      <section class="author-details">
+        <div class="image-wrapper">
+          <img src="/images/team/avatars/nedSaf.4ab8.jpg" class="img-circle img-responsive">
+        </div>
+        <div class="text-wrapper">
+          <span class="name">Nader Safadi</span>
+          
+          <div class="title">Team Lead</div>
+          <div class="bio">Show me the source code and I'll be happy!</div>
+        </div>
+      </section>
+      <div class="bottom-dash-small"></div>
+      <section>
+        <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_developer = 1;
     var disqus_shortname = 'gizra';
@@ -276,34 +276,38 @@ Note that example is using Jekyll for simplicity, however the same technique can
 </script>
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-          </div>
-
-        </div>
-      </div>
+      </section>
     </div>
   </div>
-</section>
-
-<script type="text/javascript">
-var disqus_shortname = 'gizra';
-
-/* * * DON'T EDIT BELOW THIS LINE * * */
-(function () {
-var s = document.createElement('script'); s.async = true;
-s.type = 'text/javascript';
-s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
-(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-}());
-</script>
+</div>
 
 
+    
+      <footer id="contact">
+        <div class="background">
+          <div class="contact-wrapper">
+            <h2>Talk to us</h2>
+            <address>
+              <div>
+                5 Brenner St., Tel-Aviv, Israel
+              </div>
+              <div class="telephone">
+                <a href="tel:+97233731222">+972-3-3731222</a>
+              </div>
+              <div>
+                <a href="mailto:info@gizra.com" class="email">info@gizra.com</a>
+              </div>
+            </address>
+          </div>
+        </div>
+      </footer>
+    
 
-
-    <script src="/js/plugins.b0cf.js"></script>
+    <script src="/js/plugins.7686.js"></script>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
 
-    <script src="/js/scripts.d40a.js"></script>
+    <script src="/js/scripts.e6d0.js"></script>
 
     </body>
 </html>

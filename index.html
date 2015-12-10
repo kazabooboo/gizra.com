@@ -6,7 +6,7 @@
         <title>Design + Web Development | Gizra</title>
         <meta name="description" content="Web development and web design New York and Tel aviv. Gizra is a digital agency, web strategy for business and startups, non-profits, eCommerce, B2B, SaaS and enterprise.">
         <meta name="keywords" content="The Gizra Way, Web development Tel-aviv, Web development New york, Statup POC.">
-        <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
       <!-- Favicon for all platforms -->
       <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.b3df.png">
@@ -29,11 +29,11 @@
       <meta name="theme-color" content="#ffffff">
       <!-- End favicon for all platforms -->
 
-        <link rel="stylesheet" href="/css/main.d506.css"/>
-
-        <link href='http://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
-
-        <!-- Google Analytics -->
+      <link rel="stylesheet" href="/css/main.8514.css"/>
+      <link href='http://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
+      <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+      <!-- Google Analytics -->
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -50,135 +50,421 @@
     </head>
     <body>
 
-    
-
-
-    <header>
-  <div class="container">
-    <div class="logo"><a href="/">gizra</a></div>
-    <nav id="nav" role="navigation" class="navbar navbar-default nav-fixed">
-      <div class="navbar-header">
-        <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      </div>
-      <div class="navbar-collapse collapse">
-        <ul class="nav navbar-nav">
-          <li><a href="/#work">Work</a></li>
-          <li><a href="/#about">About</a></li>
-          <li><a href="/blog">Blog</a></li>
-          <li><a href="/team">Team</a></li>
-          <li><a href="/#contact">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-  </div> <!-- End of container -->
-  <div id="slogan">
-    <h2 class="abril-font">Take a leap of faith with us - it's beautiful here</h2>
-    <ul class="parallax-scene" data-limit-y="0.01" data-limit-x="3">
-      <li class="layer" data-depth="0.50"><img class="ballon-brown" src="/images/header/brown-ballon.a1c8.png"></li>
-      <li class="layer" data-depth="1.00"><img class="ballon-blue" src="/images/header/blue-ballon.50ef.png"></li>
-      <li class="layer" data-depth="1.50"><img class="ballon-red" src="/images/header/red-ballon.28c3.png"></li>
-    </ul>
-  </div>
-</header>
-
-<section id="work">
+    <header class="header-homepage">
   <div class="container">
     <div class="row">
-      <div class="col-md-12">
-        <h2 class="title abril-font">You might have seen our work already</h2>
+      <div class="col-sm-12">
+        <nav id="nav" role="navigation" class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="/team">Meet the team</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <h1 class="gizra-logo"><a href="/">gizra</a></h1>
+
+
+        <div id="slogan">
+          <h2 class="text-uppercase">
+            Take a leap of faith with us,
+            <br class="hidden-xs">
+            it's beautiful here
+          </h2>
+          <p>Build an amazing cutting edge web solution that you will be proud of. Seriously. Do it in a truly transparent, best practices driven, honest partnership with passionate people.</p>
+        </div>
+        <div id="work">
+          <h2 class="title">You may have seen our work before:</h2>
+          <div class="row">
+            <!--Our work Desktop-->
+            <div class="col-xs-12 hidden-xs">
+              <ul class="clients">
+                <li class="logo">
+                  <img src="/images/homepage/code/harvard.9e00.png" class="img-responsive" alt="OpenScholar">
+                  <div class="popup-block">
+                      <a href="http://openscholar.harvard.edu">Visit project</a>
+                  </div>
+                </li>
+                <li class="logo">
+                  <img src="/images/homepage/code/acquia.4cc0.png" class="img-responsive main-block" alt="acquia">
+                  <div class="popup-block">
+                    <a href="http://www.acquia.com">Visit project</a>
+                  </div>
+                </li>
+                <li class="logo">
+                  <img src="/images/homepage/code/commerce-guys.478f.png" class="img-responsive" alt="Commerce Guys">
+                  <div class="popup-block">
+                    <a href="http://commerceguys.com">Visit project</a>
+                  </div>
+                </li>
+                <li class="logo">
+                  <img src="/images/homepage/code/ec.36a9.png" class="img-responsive" alt="European Commission">
+                  <div class="popup-block">
+                    <a href="http://capacity4dev.ec.europa.eu">Visit project</a>
+                  </div>
+                </li>
+                <li class="logo">
+                  <img src="/images/homepage/code/grammy.0ea6.png" class="img-responsive" alt="The Grammy Awards">
+                  <div class="popup-block">
+                    <a href="https://www.grammypro.com/">Visit project</a>
+                  </div>
+                </li>
+                <li class="logo">
+                  <img src="/images/homepage/code/wix.65fc.png" class="img-responsive" alt="WiX">
+                  <div class="popup-block">
+                    <a href="http://www.wix.com">Visit project</a>
+                  </div>
+                </li>
+                <li class="logo">
+                  <img src="/images/homepage/code/white-house.d7b8.png" class="img-responsive" alt="The White House">
+                  <div class="popup-block">
+                    <a href="http://www.whitehouse.gov">Visit project</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!--Our work Mobile-->
+            <!--Our work Mobile-->
+            <div class="col-xs-12 visible-xs">
+              <ul class="clients">
+                <li class="logo">
+                  <a href="http://openscholar.harvard.edu">
+                    <img src="/images/homepage/code/harvard.9e00.png" alt="OpenScholar">
+                  </a>
+                </li>
+                <li class="logo">
+                  <a href="http://capacity4dev.ec.europa.eu">
+                    <img src="/images/homepage/code/ec.36a9.png" alt="European Commission">
+                  </a>
+                </li>
+                <li class="logo">
+                  <a href="http://www.wix.com">
+                    <img src="/images/homepage/code/wix.65fc.png" alt="WiX">
+                  </a>
+                </li>
+                <li class="logo">
+                  <a href="http://commerceguys.com">
+                    <img src="/images/homepage/code/commerce-guys.478f.png" alt="Commerce Guys">
+                  </a>
+                </li>
+                <li class="logo">
+                  <a href="http://www.whitehouse.gov">
+                    <img src="/images/homepage/code/white-house.d7b8.png" alt="The White House">
+                  </a>
+                </li>
+                <li class="logo">
+                  <a href="http://www.acquia.com">
+                    <img src="/images/homepage/code/acquia.4cc0.png" alt="acquia">
+                  </a>
+                </li>
+                <li class="logo">
+                  <a href="https://www.grammypro.com/">
+                    <img src="/images/homepage/code/grammy.0ea6.png" alt="The Grammy Awards">
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-
+  </div>
+</header>
+<section id="recommendations">
+  <div class="container">
     <div class="row">
-      <div class="col-xs-12 logo">
-        <img src="/images/hompage/code/acquia.2498.png" class="img-responsive" title="Acquia">
+      <div class="col-sm-10 col-sm-offset-1">
+        <!--Desktop recommendations-->
+        <div class="hidden-xs"> 
+<div id="carousel-recommendations-desktop" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-recommendations-desktop" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-recommendations-desktop" data-slide-to="1"></li>
+    <li data-target="#carousel-recommendations-desktop" data-slide-to="2"></li>
+  </ol>
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="/images/homepage/code/harvard-logo.b85c.png" class="top-image img-responsive" title="OpenScholar">
+      <div>
+        <p class="blockquote">
+          The professionalism and knowledge delivered by the Gizra team
+          have convinced us to keep an ongoing relationship We had them
+          work with complex requirements and Gizra has always delivered
+          high-quality solutions focusing not just on the output but also
+          on future maintainability and best practices.
+        </p>
+        <p class="title">Richard Brandon - Sr Software Engineer</p>
+        <p class="subtitle">Harvard University</p>
       </div>
-
-      <div class="col-xs-12 logo">
-        <img src="/images/hompage/code/harvard.b85c.png" class="img-responsive" title="OpenScholar">
+    </div>
+    <div class="item">
+      <img src="/images/homepage/code/acquia-black.2f52.png" class="top-image img-responsive" title="OpenScholar">
+      <div>
+        <p class="blockquote">
+          I consistently recommend Gizra as a top choice for anyone looking for complex Drupal development work done right.
+        </p>
+        <p class="title">Ezra Gildesgame - Product Manager</p>
+        <p class="subtitle">Acquia</p>
       </div>
-
-      <div class="col-xs-12 logo">
-        <img src="/images/hompage/code/energy.5796.png" class="img-responsive" title="Energy.gov">
+    </div>
+    <div class="item">
+      <img src="/images/homepage/code/national-library.1176.png" class="top-image img-responsive" title="OpenScholar">
+      <div>
+        <p class="blockquote">
+          Gizra helped [..] translate our wishes to a technical specification then to a working product, and did so in a timely
+          manner and within budget. Not less important, they were able to remain attentive to capture the most of the needs
+          arising from the different partners.
+        </p>
+        <p class="title">Ido Ivri - Head of Business Development and Innovation,
+          </p>
+        <p class="subtitle">The National Library of Israel</p>
       </div>
-
-      <div class="col-xs-12 logo">
-        <img src="/images/hompage/code/wix.f19e.png" class="img-responsive" title="WiX">
+    </div>
+  </div>
+</div>
+</div>
+        <!--Mobile recommendations-->
+        <div class="visible-xs">
+          <button type="button" class="btn btn-default btn-block" data-toggle="collapse" data-target="#recommendations-mobile">View Recommendations</button>
+          <div id="recommendations-mobile" class="collapse">
+            
+<div id="carousel-recommendations-mobile" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-recommendations-mobile" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-recommendations-mobile" data-slide-to="1"></li>
+    <li data-target="#carousel-recommendations-mobile" data-slide-to="2"></li>
+  </ol>
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="/images/homepage/code/harvard-logo.b85c.png" class="top-image img-responsive" title="OpenScholar">
+      <div>
+        <p class="blockquote">
+          The professionalism and knowledge delivered by the Gizra team
+          have convinced us to keep an ongoing relationship We had them
+          work with complex requirements and Gizra has always delivered
+          high-quality solutions focusing not just on the output but also
+          on future maintainability and best practices.
+        </p>
+        <p class="title">Richard Brandon - Sr Software Engineer</p>
+        <p class="subtitle">Harvard University</p>
       </div>
-
-      <div class="col-xs-12 logo">
-        <img src="/images/hompage/code/symantec.2b2a.png" class="img-responsive" title="Symantec">
+    </div>
+    <div class="item">
+      <img src="/images/homepage/code/acquia-black.2f52.png" class="top-image img-responsive" title="OpenScholar">
+      <div>
+        <p class="blockquote">
+          I consistently recommend Gizra as a top choice for anyone looking for complex Drupal development work done right.
+        </p>
+        <p class="title">Ezra Gildesgame - Product Manager</p>
+        <p class="subtitle">Acquia</p>
       </div>
-
-      <div class="col-xs-12 logo empty-logo"></div>
-
-      <div class="col-xs-12 logo">
-        <img src="/images/hompage/code/grammy.1ee8.png" class="img-responsive" title="The Grammy Awards">
+    </div>
+    <div class="item">
+      <img src="/images/homepage/code/national-library.1176.png" class="top-image img-responsive" title="OpenScholar">
+      <div>
+        <p class="blockquote">
+          Gizra helped [..] translate our wishes to a technical specification then to a working product, and did so in a timely
+          manner and within budget. Not less important, they were able to remain attentive to capture the most of the needs
+          arising from the different partners.
+        </p>
+        <p class="title">Ido Ivri - Head of Business Development and Innovation,
+          </p>
+        <p class="subtitle">The National Library of Israel</p>
       </div>
+    </div>
+  </div>
+</div>
 
-      <div class="col-xs-12 logo">
-        <img src="/images/hompage/code/ec.0efb.png" class="img-responsive" title="European Commission">
+          </div>
+        </div>
       </div>
-
-      <div class="col-xs-12 logo">
-        <img src="/images/hompage/code/white-house.721d.png" class="img-responsive" title="The White House">
-      </div>
-
-      <div class="col-xs-12 logo">
-        <img src="/images/hompage/code/commerce-guys.379f.png" class="img-responsive" title="Commerce Guys">
-      </div>
-
     </div>
   </div>
 </section>
-
 <section id="about">
   <div class="container">
     <div class="row text-wrapper">
-      <div class="col-md-offset-1 col-md-10">
-          <p>Founded in 2009, Gizra LTD is a twenty person software development shop specializing in Open Source technologies.</p>
-          <p>Gizra created and maintains several key Drupal modules used in major websites such as the White House, The Economist, Energy.gov and others, and is a contributor to Drupal 8 core. Our Open Source work led to client engagements with organizations such as the European Commission, Harvard University and the United Nations.</p>
-          <p>We put a high emphasis on sharing our knowledge and speak regularly at software development conferences worldwide.</p>
-          <p>We are committed to continually reviewing our process and our work, being open and honest in our code and personal relations and never stop seeking a better way.</p>
+      <div class="col-sm-10 col-sm-offset-1">
+          <h2 class="">About us</h2>
+          <p class="title"> Founded in 2009, Gizra LTD is a twenty person software development shop specializing in Open Source technologies.</p>
+          <p>
+            Gizra created and maintains several key Drupal modules used in major
+            websites such as the White House, The Economist, Energy.gov and others,
+            and is a contributor to Drupal 8 core. Our Open Source work led to client
+            engagements with organizations such as the European Commission, Harvard
+            University and the United Nations.
+            We put a high emphasis on sharing our knowledge and speak regularly at
+            software development conferences worldwide.
+            We are committed to continually reviewing our process and our work, being
+            open and honest in our code and personal relations and never stop
+            seeking a better way.
+          </p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="blog">
+  <div class="container">
+    <div class="row text-wrapper">
+      <div class="col-sm-10 col-sm-offset-1">
+        <h2 class="">From our blog:</h2>
+        
+          
+            
+          
+
+          
+            
+              
+                
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+          <div class="article-details clearfix">
+            <img src="/images/team/avatars/amitaibu.4179.jpg" class="img-responsive img-circle">
+            <p class="name">Amitai Burstein</p>
+            <p class="date">22 Oct 2015</p>
+          </div>
+          <div class="article" >
+            <p class="title"><a href="/content/planet-elm" >Planet Elm</a></p>
+            <p>
+              planet.elm-lang.org is live!
+
+Nice, right? Planet Elm and its RSS feed is up and running - just grab it, and the best Elm related posts would appear in your favorite RSS reader.
+
+
+  
+
+
+I felt the need for such a site the day I started with Elm. Getting the Gizra devs to build it was the next logi...
+              <span class="read-more"><a href="/content/planet-elm">Read More</a></span>
+            </p>
+          </div>
+        
       </div>
     </div>
   </div>
 </section>
 
-<section id="contact">
-  <div class="background">
-    <div class="contact-wrapper">
-      <h2 class="abril-font">Contact Us</h2>
-      <address>
-        <div>
-          5 Brenner St., Tel-Aviv, Israel
-        </div>
-        <div class="telephone">
-          Tel: <a href="tel:+97233731222">+972-3-3731222</a>
-        </div>
-        <div class="telephone">
-          Fax: +972-3-5617771
-        </div>
-        <div>
-          <a href="mailto:info@gizra.com" class="email">info@gizra.com</a>
-        </div>
-      </address>
-    </div>
-  </div>
-</section>
 
+    
+      <footer id="contact">
+        <div class="background">
+          <div class="contact-wrapper">
+            <h2>Talk to us</h2>
+            <address>
+              <div>
+                5 Brenner St., Tel-Aviv, Israel
+              </div>
+              <div class="telephone">
+                <a href="tel:+97233731222">+972-3-3731222</a>
+              </div>
+              <div>
+                <a href="mailto:info@gizra.com" class="email">info@gizra.com</a>
+              </div>
+            </address>
+          </div>
+        </div>
+      </footer>
+    
 
-
-    <script src="/js/plugins.b0cf.js"></script>
+    <script src="/js/plugins.7686.js"></script>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
 
-    <script src="/js/scripts.d40a.js"></script>
+    <script src="/js/scripts.e6d0.js"></script>
 
     </body>
 </html>

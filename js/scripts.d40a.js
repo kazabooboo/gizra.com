@@ -1,1 +1,0 @@
-$(function(){$(".parallax-scene").parallax(),navigator.userAgent.match(/(iPod|iPhone|iPad)/)&&($(".section2").backstretch("/assets/images/about-story/lamp.jpg"),$(".section4").backstretch("/assets/images/about-story/fish.jpg"))});
