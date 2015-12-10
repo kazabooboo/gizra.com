@@ -9,7 +9,7 @@ published: true
 
 {% include setup %}
 
-# [planet.elm-lang.org](http://planet.elm-lang.org/) is live!
+## [planet.elm-lang.org](http://planet.elm-lang.org/) is live!
 
 Nice, right? Planet Elm and its [RSS feed](http://planet.elm-lang.org/feeds.xml) is up and running - just grab it, and the best Elm related posts would appear in your favorite RSS reader.
 
