@@ -31,63 +31,179 @@ excerpt_separator: "<!-- more -->"
 paginate: 5
 paginate_path: "blog/page:num"
 
-
 authors:
-  - Amitaibu:
+  - amitaibu:
       name: Amitai Burstein
       title: CTO, Co-Owner
-      twitter: amitaibu
+      is_member: true
       bio: Maintainer of Organic groups, the Message stack, and co-maintainer of Drupal 8's Entity reference. <a href="/content/the-about-story/">The about story</a>.
+      email: amitai@gizra.com
+      twitter: amitaibu
+      github: amitaibu
+      avatar: amitaibu.jpg
+      image: amitaibu.jpg
   - bricel:
       name: Brice Lenfant
       title: CEO, Co-Owner
-      twitter: bricel
+      is_member: true
       bio: Brice leads strategy, and helps run projects at Gizra. He works closely with both the team and customers to strategize and develop the project end-to-end and coordinate project needs and delivery.
+      email: brice@gizra.com
+      twitter: bricel
+      github: bricel
+      avatar: bricel.jpg
+      image: bricel.jpg
   - niryariv:
       name: Nir Yariv
-      title: Projects Lead
-      twitter: niryariv
+      title: CMO
+      is_member: true
       bio: Messed with PHP since before it was cool, and for some time after. Now mostly herds cats.
-  - NofarG:
-      name: Nofar Gilor
-      title: Developer
-      bio: Something about Nofar
-  - itamar:
+      email: nir@gizra.com
+      twitter: niryariv
+      github: niryariv
+      avatar: niryariv.jpg
+      image: niryariv.jpg
+  - OritiMG:
+      name: Orit Geron
+      title: Operations Manager
+      is_member: true
+      bio: I speak fluent geek, and can translate to human speaking
+      email: orit@gizra.com
+      twitter: OritiMG
+      github: OritGeron
+      avatar: OritGeron.jpg
+      image: OritGeron.jpg
+  - HelenaEksler:
+      name: Helena Eksler
+      title: Team Lead
+      is_member: true
+      bio: Something about Helenas
+      email: helena@gizra.com
+      github: HelenaEksler
+      avatar: female.jpg
+      image: HelenaEksler.jpg
+  - bitamar:
       name: Itamar Bar-Lev
-      title: Developer
+      title: Team Lead
+      is_member: true
       bio: Something about Itamar
+      email: itamar@gizra.com
+      github: bitamar
+      avatar: male.jpg
+      image: bitamar.jpg
+  - IshaDakota:
+      name: Adam Stewart
+      title: USA CTO
+      is_member: true
+      bio: Something about Adam
+      email: adam@gizra.com
+      github: IshaDakota
+      avatar: male.jpg
+      image: male.jpg
+  - NaderSafadi:
+      name: Nader Safadi
+      title: Team Lead
+      is_member: true
+      bio: Show me the source code and I'll be happy!
+      email: nader@gizra.com
+      github: nader77
+      avatar: nedSaf.jpg
+      image: nedSaf.jpg
+  - RoySegall:
+      name: Roy Segall
+      title: Team Lead
+      is_member: true
+      bio: Not afraid of patching Organic groups, Entity reference or the Message stack. Knows how to make tasty Pizza.
+      email: roy.segall@gizra.com
+      github: RoySegall
+      avatar: RoySegall.jpg
+      image: RoySegall.jpg
+  - Moo64c:
+      name: Amir Arbel
+      title: Developer
+      is_member: true
+      bio: Something about Amir
+      email: amir@gizra.com
+      github: Moo64c
+      avatar: male.jpg
+      image: male.jpg
+  - ordavidil:
+      name: Or David
+      title: Developer
+      is_member: true
+      bio: Something about Or
+      email: or@gizra.com
+      github: ordavidil
+      avatar: male.jpg
+      image: ordavidil.jpg
+  - DavidKohav:
+      name: David Kochav
+      title: QA Engeneer
+      is_member: true
+      bio: Somthing about David
+      email: david@gizra.com
+      github: DavidKohav
+      avatar: male.jpg
+      image: DavidKohav.jpg
+  - shahardo:
+      name: Shahar Dolev
+      title: Developer
+      is_member: true
+      bio: Something about Shahar
+      email: shahar@gizra.com
+      github: shahardo
+      avatar: male.jpg
+      image: male.jpg
+  - YuriGizra:
+      name: Yuri Failer
+      title: Developer
+      is_member: true
+      bio: Something about Yuri
+      email: yuri@gizra.com
+      github: YuriGizra
+      avatar: male.jpg
+      image: YuriGizra.jpg
+  - YaronMiro:
+      name: Yaron Miro
+      title: UX/UI Developer
+      is_member: true
+      bio: There are no shortcuts in life, Do what is necessary, Everything matters!.
+      email: yaron@gizra.com
+      github: YaronMiro
+      avatar: YaronMiro.jpg
+      image: YaronMiro.jpg
+  - nirGilon:
+      name: Nir Gilon
+      title: Developer
+      is_member: true
+      bio: Something about Nir
+      email: nir.gilon@gizra.com
+      github: nirgn975
+      avatar: male.jpg
+      image: male.jpg
+  - RachelBaram:
+      name: Rachel Baram
+      title: Business Development & Marketing
+      is_member: true
+      bio: Somthing about Rachel
+      email: rachel@gizra.com
+      github: RachelBaram
+      avatar: female.jpg
+      image: RachelBaram.jpg
   - itamarbu:
       name: Itamar Burstein
       title: Industrial Designer
+      is_member: false
       bio: My designs have been endorsed by companies such as VIA France, Roche Bobois, Metalarte, Ligne Roset & Jofebar. That's pretty awesome.
-      twitter: itamarbu
-  - RoySegall:
-      name: Roy Segall
-      title: Developer
-      bio: Not afraid of patching Organic groups, Entity reference or the Message stack. Knows how to make tasty Pizza.
-      twitter: roysegall
-  - OritiMG:
-      name: Orit Geron
-      title: HR manager
-      bio: I speak fluent geek, and can translate to human speaking
-      twitter: OritiMG
+      avatar: itamarbu.jpg
   - ceoaliongroo:
       name: Carlos Mantilla
       title: Full stack developer
+      is_member: false
       bio: AngularJs, d3js, nodejs. Everythis JS!
-      twitter: cmantillacode
-  - YaronMiro:
-      name: Yaron Miro
-      title: Developer
-      bio: There are no shortcuts in life, Do what is necessary, Everything matters!.
-      twitter: yaronMiro
-  - NaderSafadi:
-      name: Nader Safadi
-      title: Developer
-      bio: Show me the source code and I'll be happy!
-      twitter: nedSaf
+      avatar: ceoaliongroo.jpg
   - lukeherrington:
       name: Luke Herrington
       title: Developer
+      is_member: false
       bio: Luke is just another web nerd that loves to learn new technologies. He works at Qualcomm by day as a software application engineer and hangs at home by night as a dad and husband.
-      twitter: lukeherrington
+      avatar: lukeherrington.jpg

@@ -6,7 +6,7 @@
         <title>{{ page.title }}</title>
         <meta name="description" content="{{ page.description }}">
         <meta name="keywords" content="{{ page.keywords }}">
-        <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
       <!-- Favicon for all platforms -->
       <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.png">
@@ -29,49 +29,39 @@
       <meta name="theme-color" content="#ffffff">
       <!-- End favicon for all platforms -->
 
-        <!-- build:css({app,.tmp}) /css/main.css -->
-        <link rel="stylesheet" href="/css/main.css">
-        <!-- endbuild -->
-
-        <link href='http://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
-
-        {% include ga.html %}
+      <!-- build:css({app,.tmp}) /css/main.css -->
+      <link rel="stylesheet" href="/css/main.css">
+      <!-- endbuild -->
+      <link href='http://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
+      <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+      {% include ga.html %}
 
     </head>
     <body>
 
-    {% if page.homepage == nil %}
-
-    <header class="white">
-      <div class="container">
-        <div class="logo"><a href="/">gizra</a></div>
-        <nav id="nav" role="navigation" class="navbar navbar-default nav-fixed">
-          <div class="navbar-header">
-            <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-          </div>
-          <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-              <li><a href="/#work">Work</a></li>
-              <li><a href="/#about">About</a></li>
-              <li><a href="/blog">Blog</a></li>
-              <li><a href="/team">Team</a></li>
-              <li><a href="/#contact">Contact</a></li>
-            </ul>
-          </div>
-        </nav>
-      </div> <!-- End of container -->
-    </header>
-
-    {% endif %}
-
-
     {{ content }}
 
+    {% unless page.exclude_footer %}
+      <footer id="contact">
+        <div class="background">
+          <div class="contact-wrapper">
+            <h2>Talk to us</h2>
+            <address>
+              <div>
+                5 Brenner St., Tel-Aviv, Israel
+              </div>
+              <div class="telephone">
+                <a href="tel:+97233731222">+972-3-3731222</a>
+              </div>
+              <div>
+                <a href="mailto:info@gizra.com" class="email">info@gizra.com</a>
+              </div>
+            </address>
+          </div>
+        </div>
+      </footer>
+    {% endunless %}
 
     <!-- build:js(app) /js/plugins.js -->
     <script src="/_bower_components/jquery/jquery.js"></script>
@@ -80,8 +70,7 @@
     <script src="/_bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/collapse.js"></script>
     <script src="/_bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/dropdown.js"></script>
     <script src="/_bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/tooltip.js"></script>
-
-    <script src="/_bower_components/parallax/deploy/jquery.parallax.min.js"></script>
+    <script src="/_bower_components/jquery-hoverIntent/jquery.hoverIntent.js"></script>
     <!-- endbuild -->
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>

@@ -5,121 +5,188 @@ description: Web development and web design New York and Tel aviv. Gizra is a di
 keywords: The Gizra Way, Web development Tel-aviv, Web development New york, Statup POC.
 homepage: true
 ---
-<header>
-  <div class="container">
-    <div class="logo"><a href="/">gizra</a></div>
-    <nav id="nav" role="navigation" class="navbar navbar-default nav-fixed">
-      <div class="navbar-header">
-        <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      </div>
-      <div class="navbar-collapse collapse">
-        <ul class="nav navbar-nav">
-          <li><a href="/#work">Work</a></li>
-          <li><a href="/#about">About</a></li>
-          <li><a href="/blog">Blog</a></li>
-          <li><a href="/team">Team</a></li>
-          <li><a href="/#contact">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-  </div> <!-- End of container -->
-  <div id="slogan">
-    <h2 class="abril-font">Take a leap of faith with us - it's beautiful here</h2>
-    <ul class="parallax-scene" data-limit-y="0.01" data-limit-x="3">
-      <li class="layer" data-depth="0.50"><img class="ballon-brown" src="/images/header/brown-ballon.png"></li>
-      <li class="layer" data-depth="1.00"><img class="ballon-blue" src="/images/header/blue-ballon.png"></li>
-      <li class="layer" data-depth="1.50"><img class="ballon-red" src="/images/header/red-ballon.png"></li>
-    </ul>
-  </div>
-</header>
-
-<section id="work">
+<header class="header-homepage">
   <div class="container">
     <div class="row">
-      <div class="col-md-12">
-        <h2 class="title abril-font">You might have seen our work already</h2>
+      <div class="col-sm-12">
+        {% include header.html %}
+        <div id="slogan">
+          <h2 class="text-uppercase">
+            Take a leap of faith with us,
+            <br class="hidden-xs">
+            it's beautiful here
+          </h2>
+          <p>Build an amazing cutting edge web solution that you will be proud of. Seriously. Do it in a truly transparent, best practices driven, honest partnership with passionate people.</p>
+        </div>
+        <div id="work">
+          <h2 class="title">You may have seen our work before:</h2>
+          <div class="row">
+            <!--Our work Desktop-->
+            <div class="col-xs-12 hidden-xs">
+              <ul class="clients">
+                <li class="logo">
+                  <img src="/images/homepage/code/harvard.png" class="img-responsive" alt="OpenScholar">
+                  <div class="popup-block">
+                      <a href="http://openscholar.harvard.edu">Visit project</a>
+                  </div>
+                </li>
+                <li class="logo">
+                  <img src="/images/homepage/code/acquia.png" class="img-responsive main-block" alt="acquia">
+                  <div class="popup-block">
+                    <a href="http://www.acquia.com">Visit project</a>
+                  </div>
+                </li>
+                <li class="logo">
+                  <img src="/images/homepage/code/commerce-guys.png" class="img-responsive" alt="Commerce Guys">
+                  <div class="popup-block">
+                    <a href="http://commerceguys.com">Visit project</a>
+                  </div>
+                </li>
+                <li class="logo">
+                  <img src="/images/homepage/code/ec.png" class="img-responsive" alt="European Commission">
+                  <div class="popup-block">
+                    <a href="http://capacity4dev.ec.europa.eu">Visit project</a>
+                  </div>
+                </li>
+                <li class="logo">
+                  <img src="/images/homepage/code/grammy.png" class="img-responsive" alt="The Grammy Awards">
+                  <div class="popup-block">
+                    <a href="https://www.grammypro.com/">Visit project</a>
+                  </div>
+                </li>
+                <li class="logo">
+                  <img src="/images/homepage/code/wix.png" class="img-responsive" alt="WiX">
+                  <div class="popup-block">
+                    <a href="http://www.wix.com">Visit project</a>
+                  </div>
+                </li>
+                <li class="logo">
+                  <img src="/images/homepage/code/white-house.png" class="img-responsive" alt="The White House">
+                  <div class="popup-block">
+                    <a href="http://www.whitehouse.gov">Visit project</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!--Our work Mobile-->
+            <!--Our work Mobile-->
+            <div class="col-xs-12 visible-xs">
+              <ul class="clients">
+                <li class="logo">
+                  <a href="http://openscholar.harvard.edu">
+                    <img src="/images/homepage/code/harvard.png" alt="OpenScholar">
+                  </a>
+                </li>
+                <li class="logo">
+                  <a href="http://capacity4dev.ec.europa.eu">
+                    <img src="/images/homepage/code/ec.png" alt="European Commission">
+                  </a>
+                </li>
+                <li class="logo">
+                  <a href="http://www.wix.com">
+                    <img src="/images/homepage/code/wix.png" alt="WiX">
+                  </a>
+                </li>
+                <li class="logo">
+                  <a href="http://commerceguys.com">
+                    <img src="/images/homepage/code/commerce-guys.png" alt="Commerce Guys">
+                  </a>
+                </li>
+                <li class="logo">
+                  <a href="http://www.whitehouse.gov">
+                    <img src="/images/homepage/code/white-house.png" alt="The White House">
+                  </a>
+                </li>
+                <li class="logo">
+                  <a href="http://www.acquia.com">
+                    <img src="/images/homepage/code/acquia.png" alt="acquia">
+                  </a>
+                </li>
+                <li class="logo">
+                  <a href="https://www.grammypro.com/">
+                    <img src="/images/homepage/code/grammy.png" alt="The Grammy Awards">
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-
+  </div>
+</header>
+<section id="recommendations">
+  <div class="container">
     <div class="row">
-      <div class="col-xs-12 logo">
-        <img src="/images/hompage/code/acquia.png" class="img-responsive" title="Acquia">
+      <div class="col-sm-10 col-sm-offset-1">
+        <!--Desktop recommendations-->
+        <div class="hidden-xs"> {% include recommendations.html id="carousel-recommendations-desktop" %}</div>
+        <!--Mobile recommendations-->
+        <div class="visible-xs">
+          <button type="button" class="btn btn-default btn-block" data-toggle="collapse" data-target="#recommendations-mobile">View Recommendations</button>
+          <div id="recommendations-mobile" class="collapse">
+            {% include recommendations.html id="carousel-recommendations-mobile" %}
+          </div>
+        </div>
       </div>
-
-      <div class="col-xs-12 logo">
-        <img src="/images/hompage/code/harvard.png" class="img-responsive" title="OpenScholar">
-      </div>
-
-      <div class="col-xs-12 logo">
-        <img src="/images/hompage/code/energy.png" class="img-responsive" title="Energy.gov">
-      </div>
-
-      <div class="col-xs-12 logo">
-        <img src="/images/hompage/code/wix.png" class="img-responsive" title="WiX">
-      </div>
-
-      <div class="col-xs-12 logo">
-        <img src="/images/hompage/code/symantec.png" class="img-responsive" title="Symantec">
-      </div>
-
-      <div class="col-xs-12 logo empty-logo"></div>
-
-      <div class="col-xs-12 logo">
-        <img src="/images/hompage/code/grammy.png" class="img-responsive" title="The Grammy Awards">
-      </div>
-
-      <div class="col-xs-12 logo">
-        <img src="/images/hompage/code/ec.png" class="img-responsive" title="European Commission">
-      </div>
-
-      <div class="col-xs-12 logo">
-        <img src="/images/hompage/code/white-house.png" class="img-responsive" title="The White House">
-      </div>
-
-      <div class="col-xs-12 logo">
-        <img src="/images/hompage/code/commerce-guys.png" class="img-responsive" title="Commerce Guys">
-      </div>
-
     </div>
   </div>
 </section>
-
 <section id="about">
   <div class="container">
     <div class="row text-wrapper">
-      <div class="col-md-offset-1 col-md-10">
-          <p>Founded in 2009, Gizra LTD is a twenty person software development shop specializing in Open Source technologies.</p>
-          <p>Gizra created and maintains several key Drupal modules used in major websites such as the White House, The Economist, Energy.gov and others, and is a contributor to Drupal 8 core. Our Open Source work led to client engagements with organizations such as the European Commission, Harvard University and the United Nations.</p>
-          <p>We put a high emphasis on sharing our knowledge and speak regularly at software development conferences worldwide.</p>
-          <p>We are committed to continually reviewing our process and our work, being open and honest in our code and personal relations and never stop seeking a better way.</p>
+      <div class="col-sm-10 col-sm-offset-1">
+          <h2 class="">About us</h2>
+          <p class="title"> Founded in 2009, Gizra LTD is a twenty person software development shop specializing in Open Source technologies.</p>
+          <p>
+            Gizra created and maintains several key Drupal modules used in major
+            websites such as the White House, The Economist, Energy.gov and others,
+            and is a contributor to Drupal 8 core. Our Open Source work led to client
+            engagements with organizations such as the European Commission, Harvard
+            University and the United Nations.
+            We put a high emphasis on sharing our knowledge and speak regularly at
+            software development conferences worldwide.
+            We are committed to continually reviewing our process and our work, being
+            open and honest in our code and personal relations and never stop
+            seeking a better way.
+          </p>
       </div>
     </div>
   </div>
 </section>
+<section class="blog">
+  <div class="container">
+    <div class="row text-wrapper">
+      <div class="col-sm-10 col-sm-offset-1">
+        <h2 class="">From our blog:</h2>
+        {% for post in site.posts limit:1 %}
+          {% if post.author == nil %}
+            {% assign author = "amitaibu" %}
+          {% else %}
+            {% assign author = post.author %}
+          {% endif %}
 
-<section id="contact">
-  <div class="background">
-    <div class="contact-wrapper">
-      <h2 class="abril-font">Contact Us</h2>
-      <address>
-        <div>
-          5 Brenner St., Tel-Aviv, Israel
-        </div>
-        <div class="telephone">
-          Tel: <a href="tel:+97233731222">+972-3-3731222</a>
-        </div>
-        <div class="telephone">
-          Fax: +972-3-5617771
-        </div>
-        <div>
-          <a href="mailto:info@gizra.com" class="email">info@gizra.com</a>
-        </div>
-      </address>
+          {% for authors in site.authors %}
+            {% for author_info in authors %}
+              {% if author_info[0] == author %}
+                {% assign author = author_info[1] %}
+              {% endif %}
+            {% endfor %}
+          {% endfor %}
+          <div class="article-details clearfix">
+            <img src="/images/team/avatars/{{ author.avatar }}" class="img-responsive img-circle">
+            <p class="name">{{ author.name }}</p>
+            <p class="date">22 Oct 2015</p>
+          </div>
+          <div class="article" >
+            <p class="title"><a href="{{ post.url }}" >{{ post.title }}</a></p>
+            <p>
+              {{ post.excerpt |  strip_html | truncate: 300 }}
+              <span class="read-more"><a href="{{ post.url }}">Read More</a></span>
+            </p>
+          </div>
+        {% endfor %}
+      </div>
     </div>
   </div>
 </section>

@@ -4,8 +4,16 @@ title: Tags
 header: Posts By Tag
 group: navigation
 ---
+<header class="header-post">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-10 col-sm-offset-1">
+        {% include header.html %}
+      </div>
+    </div>
+  </div>
+</header>
 <div class="container">
-
   <div class="row">
     {% for tag in site.tags %}
     <h2 id="{{ tag[0] }}-ref">{{ tag[0] }}</h2>
@@ -15,6 +23,5 @@ group: navigation
     </ul>
     {% endfor %}
   </div>
-
 </div>
 

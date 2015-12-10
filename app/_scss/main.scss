@@ -1,232 +1,125 @@
 $gizra-orange: #e27058;
 $gizra-orange-dark: #bb5641;
 $gizra-orange-light: #fba200;
-$gizra-blue: #2a5691;
+$gizra-blue: #578E9B;
 $gizra-blue-dark: #244b80;
 $gizra-black: #515151;
 $gizra-orange-hover: #E75E08;
 $gizra-text: #5D5D5D;
 
-
 @import 'bootstrap-sass-official/vendor/assets/stylesheets/bootstrap';
-@import "compass/css3/border-radius";
-@import "compass/css3/transform";
-@import "compass/css3/transition";
+@import 'compass/css3/border-radius';
+@import 'compass/css3/transform';
+@import 'compass/css3/transition';
 
-@import "code";
-@import "mixins/post";
-@import "pages/about";
-@import "pages/blog";
-@import "pages/post";
-@import "pages/products";
-@import "pages/team";
+@import 'mixins';
+@import 'code';
+@import 'pages/about';
+@import 'pages/blog';
+@import 'pages/post';
+@import 'pages/team';
 
-@font-face {
-  font-family: 'OstrichSansMedium';
-  src: url('/fonts/ostrich-sans-fontfacekit/ostrich-regular-webfont.eot');
-  src: url('/fonts/ostrich-sans-fontfacekit/ostrich-regular-webfont.eot?#iefix') format('embedded-opentype'),
-  url('/fonts/ostrich-sans-fontfacekit/ostrich-regular-webfont.woff') format('woff'),
-  url('/fonts/ostrich-sans-fontfacekit/ostrich-regular-webfont.ttf') format('truetype'),
-  url('/fonts/ostrich-sans-fontfacekit/ostrich-regular-webfont.svg#OstrichSansMedium') format('svg');
-  font-weight: normal;
-  font-style: normal;
 
+body {
+  font-family: verdana, sans-serif;
 }
 
-@font-face {
-  font-family: 'OstrichSansBlack';
-  src: url('/fonts/ostrich-sans-fontfacekit/ostrich-black-webfont.eot');
-  src: url('/fonts/ostrich-sans-fontfacekit/ostrich-black-webfont.eot?#iefix') format('embedded-opentype'),
-  url('/fonts/ostrich-sans-fontfacekit/ostrich-black-webfont.woff') format('woff'),
-  url('/fonts/ostrich-sans-fontfacekit/ostrich-black-webfont.ttf') format('truetype'),
-  url('/fonts/ostrich-sans-fontfacekit/ostrich-black-webfont.svg#OstrichSansBlack') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@media (min-width: $screen-lg-desktop) {
-  .container {
-    width: 1000px;
-  }
-}
-
-.col-md-offset-1-5 {
-  margin-left: 12.66%;
+.text-uppercase {
+  text-transform: uppercase;
 }
 
 .thumbnail {
   display: inline-block;
   text-align: center;
+  border: 0;
 }
 
 .abril-font {
   font-family: Abril Fatface;
 }
 
+.header-homepage {
+  background: url('/images/header/background.png') no-repeat left top;
+  background-size: cover;
+  width: 100%;
+  text-align: left;
 
-.parallax-scene {
-  position: relative;
-  margin: 0 auto;
-  text-align: center;
+  #slogan {
+    position: relative;
+    overflow: hidden;
+    color: white;
+    margin-left: 8px;
 
-  li {
-    list-style: none;
-  }
-
-  img {
-    // Each image should be positioned absolute in order for parallax to
-    // work.
-    position: absolute;
-  }
-
-  .ballon-brown {
-    left: 2%;
-    top: -10px;
-  }
-
-  .ballon-blue {
-    left: 41%;
-    top: 8%;
-  }
-
-  .ballon-red {
-    left: 44%;
-    top: 0;
-  }
-
-  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
-    .ballon-brown {
-      left: 2%;
-      top: -5px;
+    @include desktop {
+      height: 414px;
     }
 
-    .ballon-blue {
-      left: 33%;
-      top: 8%;
+    h2 {
+      font-family: Lato;
+      font-weight: bold;
+      font-size: 25px;
+      line-height: 32px;
+      text-transform: uppercase;
+      margin: 25px 2px 0;
+      letter-spacing: 3.3px;
+
+      @include mobile {
+        font-size: 23px;
+      }
     }
 
-    .ballon-red {
-      left: 36%;
-      top: 0;
-    }
-  }
-
-  @media (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
-    .ballon-brown {
-      left: 0;
-      top: -5px;
+    p {
+      margin: 7px 2px;
+      font-size: 18px;
+      max-width: 430px;
+      line-height: 23px;
     }
 
-    .ballon-blue {
-      left: 22%;
-      top: 9%;
-    }
-
-    .ballon-red {
-      left: 25%;
-      top: 0;
-    }
-  }
-
-  @media (max-width: $screen-xs-min) {
-    .ballon-brown {
-      display: none;
-    }
-
-    .ballon-blue {
-      left: 8%;
-      top: 12%;
-    }
-
-    .ballon-red {
-      left: 11%;
-      top: 0;
+    h3 {
+      display: inline-block;
+      text-transform: uppercase;
+      font-size: 22px;
+      margin: -4px 0 0 420px;
     }
   }
 }
 
 header {
-  background: url('/images/header/background.jpg') no-repeat center top;
-  text-align: center;
 
-  &.white {
-    background: white;
-
-    .navbar {
-      z-index: 1000;
-
-      .navbar-toggle {
-
-        .icon-bar {
-          background: black;
-        }
-      }
-
-      ul.navbar-nav {
-
-        li {
-
-          &:after {
-            color: black;
-
-            @media (max-width: $screen-xs-max) {
-              display: none;
-            }
-          }
-
-          a {
-            color: black;
-          }
-        }
-      }
-    }
-  }
-
-  .container {
-    border-bottom: 2px solid white;
-  }
-
-  .logo {
-    margin-top: -2px;
-
-    @media (max-width: $screen-xs-max) {
-      margin: 15px 0 34px;
-      text-align: left;
-    }
+  .gizra-logo {
+    margin: -2px 0 0 8px;
 
     a {
       font-family: Abril Fatface;
-      font-size: 66px;
+      font-size: 108px;
       text-decoration: none;
       color: $gizra-orange;
-
-      @media (max-width: $screen-xs-max) {
-        font-size: 45px;
-        padding: 0 20px;
-      }
     }
   }
 
   .navbar {
     background: transparent;
-    border: none;
-    display: inline-block;
-    min-height: initial;
-    margin-top: 3px;
-    margin-bottom: -5px;
-    position: relative;
-    z-index: 1000;
+    border: 0;
 
-    @media (max-width: $screen-xs-max) {
-      position: absolute;
-      top: 25px;
-      right: -2px;
+    @include desktop {
+      margin: 60px 3px -16px;
+      display: inline-block;
+    }
+
+    @include mobile {
+      margin-bottom: -25px;
+    }
+
+    .container-fluid {
+      padding-left: 0;
+      padding-right: 0;
     }
 
     .navbar-toggle {
-      border: 0 none;
+      border: 0;
 
-      &:hover, &:focus {
+      &:hover,
+      &:focus {
         border: 0 none;
         background: none;
       }
@@ -237,163 +130,250 @@ header {
       }
     }
 
-    @media (max-width: $screen-xs-max) {
-      .navbar-collapse {
-        position: relative;
-        right: 0;
-        top: -10px;
-        z-index: 1000;
-        border-top: 0 none;
-        background: #ffffff;
-      }
-    }
-
-    ul.navbar-nav {
+    .navbar-nav {
 
       li {
 
-        &:after {
-          content: '.';
-          color: white;
-          display: inline-block;
-        }
-
-        &:last-child {
-
+        @include desktop {
           &:after {
-            display: none;
+            content: '.';
+            color: white;
+            display: inline-block;
+          }
+
+          &:first-child  a {
+            padding-left: 0;
+          }
+
+          &:last-child {
+
+            &:after {
+              display: none;
+            }
           }
         }
 
         a {
           color: white;
           padding-top: 0;
-          text-transform: uppercase;
-          font-size: 13px;
-          letter-spacing: 2px;
+          font-size: 14px;
+          letter-spacing: 0.5px;
           display: inline-block;
           font-family: Verdana;
 
-          @media (max-width: $screen-xs-max) {
-            color: black;
+          @include mobile {
+            padding-left: 25px;
           }
-
 
           &:hover,
           &.active {
             color: $gizra-orange-light;
           }
-
-          @media (max-width: $screen-xs-max) {
-            font-size: 35px;
-            line-height: 45px;
-            padding-left: 50px;
-            padding-right: 50px;
-          }
         }
       }
     }
   }
+}
 
-  #slogan {
+#work {
+  padding-bottom: 37px;
+  text-align: left;
+  position: relative;
+  color: white;
+
+
+  .title {
+    font-size: 17px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    margin-left: 8px;
+
+    @include mobile {
+      text-align: center;
+      margin: 45px 0 0;
+    }
+  }
+
+  .clients {
+    list-style: none;
+    border-top: 1px solid white;
+    padding: 0;
+
+    @include desktop {
+      padding-top: 20px;
+    }
+
+    @include mobile {
+      margin-top: 10px;
+      text-align: center;
+      border-bottom: 1px solid white;
+      padding: 10px 0;
+    }
+  }
+
+  .logo {
     position: relative;
-    overflow: hidden;
-    height: 685px;
+    padding: 0 10px;
 
-    &:after {
-      content: ' ';
-      display: block;
-      background-color: white;
-      height: 285px;
-      bottom: -70px;
-      left: -100px;
-      right: -100px;
+    @include desktop {
+      border-right: 1px solid white;
+      text-align: center;
+      float: left;
+      line-height: 160px;
+      height: 160px;
+      width: 14.28%;
+
+      &:last-child {
+        border-right: 0;
+      }
+    }
+
+    @include mobile {
+      padding: 20px 0;
+    }
+
+    &:hover img {
+      @include mobile {
+        opacity: 0.5;
+      }
+    }
+
+    .popup-block {
+      display: none;
       position: absolute;
-      @include rotate(4.8deg);
-    }
+      top: 50%;
+      transform: translateY(-50%);
+      padding: 3px 10px;
+      line-height: normal;
+      font-size: 16px;
 
-    h2 {
-      font-size: 47px;
-      margin: 18px 0 0 0;
-      letter-spacing: 0;
-      word-spacing: 2px;
-
-      @media (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
-        font-size: 35px;
-      }
-
-      @media (max-width: $screen-xs-min) {
-        font-size: 28px;
+      a {
+        display: inline-block;
+        margin-top: 5px;
+        padding: 6px 14px;
+        color: white;
+        border: 1px solid white;
+        border-radius: 3px;
       }
     }
 
-    h3 {
+    img {
       display: inline-block;
-      text-transform: uppercase;
-      font-size: 22px;
-      margin: -4px 0 0 420px;
 
-      @media (max-width: $screen-lg-min) {
-        margin-top: 2px;
+      @include desktop {
+        vertical-align: middle;
       }
 
-      @media (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
-        margin: 0 0 0 300px;
-        font-size: 18px;
+      @include mobile {
+        max-width: 100%;
+        height: auto;
       }
-
-      @media (max-width: $screen-xs-min) {
-        margin: 3px 0 0 120px;
-        font-size: 14px;
-      }
-    }
-
-    .parallax-scene {
-      min-height: 500px;
-      width: 860px;
     }
   }
 }
 
+#recommendations {
+  margin-top: 90px;
 
-#work {
-  padding-bottom: 120px;
-  text-align: center;
-  margin-top: -205px;
-  position: relative;
+  @include mobile {
+    margin-top: 30px;
+  }
 
-  .container {
+  button {
+    color: white;
+    background: $gizra-blue;
+    border: 0;
+    outline: none;
 
-    h2.title {
-      font-size: 26px;
-      margin-right: 37px;
-      margin-top: 57px;
-      word-spacing: 2px;
+    &:hover {
+      background: #3A656F;
+    }
+  }
+  
+  #recommendations-mobile {
+    margin-top: 35px;
+    margin-bottom: 22px;
+  }
+}
+
+#carousel-recommendations-desktop ,
+#carousel-recommendations-mobile {
+
+  .carousel-indicators {
+    margin: 0;
+    left: 0;
+    bottom: 0;
+    text-align: left;
+
+    @include mobile {
+      bottom: -22px;
+      text-align: center;
+      width: 100%;
     }
 
-    .logo {
-      float: left;
-      height: 120px;
-      position: relative;
-      line-height:120px;
-      text-align:center;
+    li {
+      margin: 1px;
+      width: 13px;
+      height: 13px;
+      background-color: black;
 
-      img {
-        vertical-align: middle;
+      @include mobile {
+        margin: 5px;
+        width: 17px;
+        height: 17px;
+      }
+    }
+
+    .active {
+      background-color: $gizra-blue;
+    }
+  }
+
+  .item {
+    padding-bottom: 20px;
+
+    .top-image {
+      margin-bottom: 50px;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    .blockquote {
+      font-size: 23px;
+      line-height: 38px;
+      margin-bottom: 45px;
+
+      &:before {
+        content: '';
         display: inline-block;
+        box-sizing: border-box;
+        background: url('/images/homepage/quote-mark-small.png') no-repeat;
+        width: 32px;
+        height: 28px;
+        margin: 0;
       }
 
-      @media (min-width: $screen-xs-max) {
-        width: 20%;
+      &:after {
+        content: '';
+        display: inline-block;
+        box-sizing: border-box;
+        background: url('/images/homepage/quote-mark-small.png') no-repeat;
+        width: 32px;
+        height: 28px;
+        margin: 0 5px;
       }
     }
 
-    .empty-logo {
-      width: 12%;
+    .title {
+      margin-bottom: 3px;
+      color: $gizra-blue;
+    }
 
-      @media (max-width: $screen-xs-max) {
-        display: none;
-      }
+    .subtitle {
+      letter-spacing: -1px;
     }
   }
 }
@@ -402,86 +382,159 @@ header {
   position: relative;
   overflow: hidden;
   margin: 0;
-  padding: 50px 0;
-  background: black;
+  padding: 90px 0;
+
+  @include mobile {
+    padding: 20px 0;
+  }
+
+  h2 {
+    text-transform: uppercase;
+    font-size: 19px;
+    margin-bottom: 25px;
+  }
 
   .text-wrapper {
 
+    .title {
+      font-size: 22px;
+      font-weight: bolder;
+      margin-bottom: 14px;
+      line-height: 1.2em;
+    }
+
     p {
-      color: white;
       font-size: 20px;
-      line-height: 30px;
-      margin-bottom: 20px;
-      margin-left: 14px;
-      text-align: justify;
-      letter-spacing: 0.4px;
+      margin-bottom: 12px;
+      letter-spacing: 0.8px;
+      line-height: 1.5em;
     }
   }
 }
 
-#contact {
-  background-position: center top;
-  height: 385px;
-  background-size: cover;
-  position: relative;
-  margin-top: 145px;
+.blog {
+  margin-top: 27px;
+  margin-bottom: 85px;
+  letter-spacing: 0.5px;
 
-  @media (max-width: 550px) {
-    background: transparent;
-  }
-
-  .background {
-    background: url('/images/hompage/contact/envelope.png') no-repeat center bottom;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    margin: 0 auto;
-  }
-
-  .contact-wrapper {
-    max-width: 580px;
-    padding-left: 25px;
-    padding-right: 0;
-    padding-top: 120px;
-    margin: 0 auto;
-    position: relative;
-    height: 385px;
+  @include mobile {
+    margin-top: 10px;
+    margin-bottom: 20px;
   }
 
   h2 {
-    font-size: 69px;
-    margin: 0 0 0 5px;
-    line-height: 61px;
-    text-align: center;
-    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 19px;
+    letter-spacing: -0.5px;
+    margin-bottom: 25px;
+  }
 
-    @media (max-width: $screen-xs-min) {
-      font-size: 49px;
-      margin: 0;
-      line-height: 41px;
+
+  .article-details {
+    font-size: 17px;
+    margin-bottom: 40px;
+
+    .name {
+      margin-top: 24px;
+      line-height: 20px;
+      margin-bottom: 0;
     }
+
+    .date {
+      margin-top: 0;
+    }
+
+    img {
+      width: 90px;
+      float: left;
+      margin-right: 15px;
+    }
+  }
+
+  .article {
+
+    .title {
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    a {
+      color: $gizra-orange;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.5em;
+    }
+  }
+
+  .read-more {
+    display: block;
+    margin-top: 15px;
+    font-size: 23px;
+
+    a {
+      color: $gizra-orange;
+      font-weight: normal;
+    }
+  }
+}
+
+#disqus_thread {
+  margin-bottom: 165px;
+}
+
+#contact {
+  background: url('/images/homepage/contact/footer.png') no-repeat center top;
+  background-size: cover;
+  margin-top: 0;
+  height: 660px;
+  position: relative;
+
+  .contact-wrapper {
+    max-width: 580px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 337px;
+    margin: 0 auto;
+    position: relative;
+    height: 535px;
+  }
+
+  h2 {
+    font-size: 14px;
+    margin: 0 0 7px;
+    line-height: normal;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: white;
   }
 
   address {
     text-align: center;
-    color: $gizra-black;
+    color: white;
 
     div {
-      padding: 5px 0 0;
-      font-size: 20px;
+      padding: 0;
+      font-size: 22px;
+      letter-spacing: 1px;
+
+      @media (max-width: $screen-sm-min) {
+        font-size: 29px;
+      }
 
       &.telephone {
-        margin: 0 0 0 5px;
+        margin: 0;
         display: block;
         letter-spacing: 1px;
-        font-size: 19px;
       }
 
       a {
-        color: $gizra-black;
+        color: white;
 
         &.email {
-          background: black;
           text-align: center;
           padding: 3px 25px 8px 28px;
           color: white;
@@ -495,28 +548,29 @@ header {
   }
 }
 
-.demo-block {
-  font-family: OstrichSansMedium;
-  border-top: 1px dashed rgba(154, 43, 44, 0.26);
-  border-bottom: 1px dashed rgba(154, 43, 44, 0.26);
-  padding: 10px 0px;
-  margin-bottom: 20px;
+.demo-block a {
+  margin-top: 20px;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 4px;
+  color: #ffffff;
+  background: $gizra-blue;
+}
 
-  .demo {
-    margin-right: 10px;
+// Media queries.
+@include desktop {
+
+  // Default.
+  .container {
+    min-width: 1200px;
   }
 
-  .demo, .code {
-    font-size: 22px;
-    color: #ffffff;
-    background: $gizra-blue;
-    padding: 7px 10px;
-    width: 180px;
-    display: inline-block;
-
-    &:hover {
-      background: $gizra-blue-dark;
-      text-decoration: none;
-    }
+  header,
+  header .container,
+  .header-post .container,
+  .header-team .container,
+  #team-page .container,
+  #contact {
+    min-width: 1336px;
   }
 }

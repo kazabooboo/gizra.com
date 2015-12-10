@@ -26,6 +26,6 @@ class FeatureContext extends MinkContext implements SnippetAcceptingContext {
    * @Then I should see the author :author
    */
   public function iShouldSeeTheAuthor($author) {
-    $this->assertElementContains('.author', $author);
+    $this->assertElementContains('.date', $author);
   }
 }

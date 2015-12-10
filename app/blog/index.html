@@ -1,102 +1,68 @@
 ---
 layout: default
 title: Your Project. The Gizra Way
+blog: true
 ---
-
+<header class="header-post">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-10 col-sm-offset-1">
+        {% include header.html %}
+      </div>
+    </div>
+  </div>
+</header>
 <section id="blog-page">
-  <div class="background">
-    <img src="/images/post/background.png">
-  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-10 col-sm-offset-1 blog">
+        {% for post in paginator.posts %}
 
-  <div class="blog-title">
-    <h2>Blog</h2>
-  </div>
-
-  <div class="content">
-    <div class="container">
-
-      {% for post in paginator.posts %}
-
-      {% if post.author == null %}
-        {% assign author = "Amitaibu" %}
-      {% else %}
-        {% assign author = post.author %}
-      {% endif %}
-
-      {% for authors in site.authors %}
-        {% for author_info in authors %}
-          {% if author_info[0] == author %}
-            {% assign author = author_info[1] %}
+          {% if post.author == nil %}
+            {% assign author = "amitaibu" %}
+          {% else %}
+            {% assign author = post.author %}
           {% endif %}
-        {% endfor %}
-      {% endfor %}
 
-      <!--Post begin-->
-      <div class="row">
-        <div class="col-md-8 col-md-offset-2 post">
-
-          <div class="row">
-            <div class="post-label">
-              <a href="{{ post.url }}">{{ post.title }}</a>
+          {% for authors in site.authors %}
+            {% for author_info in authors %}
+             {% if author_info[0] == author %}
+               {% assign author = author_info[1] %}
+             {% endif %}
+            {% endfor %}
+          {% endfor %}
+          <article class="post">
+            <div class="article-details clearfix">
+              <img src="/images/team/avatars/{{ author.avatar }}" class="img-responsive img-circle">
+              <p class="name">{{ author.name }}</p>
+              <p class="date">{{ post.date | date_to_string }}</p>
             </div>
-          </div>
-
-          <div class="row small-row">
-            <div class="date">{{ post.date | date_to_string }}</div>
-            <div class="seprator">|</div>
-            <div class="author">By <a href="#author">{{ author.name }}</a></div>
-          </div>
-
-          <div class="row small-row">
-            <div class="tags">
-              {% unless post.tags == empty %}
-              <ul class="inline">
-                {% assign tags_list = post.tags %}
-                {% include tags_list.html %}
-              </ul>
-              {% endunless %}
-            </div>
-            <div class="comments-count"><a href="http://www.gizra.com{{page.url}}#disqus_thread"></a></div>
-          </div>
-
-          <div class="row">
+            <h1><a href="{{ post.url }}">{{ post.title }} </a></h1>
             <div class="post-content">
               {{ post.excerpt }}
             </div>
-          </div>
-
-          <div class="row">
-            <div class="bottom-dash"></div>
-          </div>
-        </div>
+            <span class="read-more"><a href="{{ post.url }}">Read More</a></span>
+          </article>
+        {% endfor %}
       </div>
-      <!--Post End-->
-      {% endfor %}
-
-      <!--Pager Begin-->
-
-      <div class="row">
-        <div class="col-md-offset-2 col-md-8">
-          <div class="row pager-wrapper">
-            <ul id="pager">
-
-              {% if paginator.previous_page %}
-              <li class="prev">
-                <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"></a>
-              </li>
-              {% endif %}
-
-              {% if paginator.next_page %}
-              <li class="next">
-                <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"></a>
-              </li>
-              {% endif %}
-
-            </ul>
-          </div>
-        </div>
-      </div>
-      <!--Pager End-->
     </div>
+    <!--Pager Begin-->
+    <div class="row">
+      <div id="pager" class="col-sm-offset-1 col-sm-10">
+        <ul class="pager-nav">
+          <li class="prev text-uppercase">
+            {% if paginator.previous_page %}
+            <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">Previous</a>
+            {% endif %}
+          </li>
+          <li class="next text-uppercase">
+            {% if paginator.next_page %}
+            <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next</a>
+            {% endif %}
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!--Pager End-->
   </div>
 </section>

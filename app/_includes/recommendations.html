@@ -1,0 +1,49 @@
+{% assign id = include.id %}
+<div id="{{ id }}" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#{{ id }}" data-slide-to="0" class="active"></li>
+    <li data-target="#{{ id }}" data-slide-to="1"></li>
+    <li data-target="#{{ id }}" data-slide-to="2"></li>
+  </ol>
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="/images/homepage/code/harvard-logo.png" class="top-image img-responsive" title="OpenScholar">
+      <div>
+        <p class="blockquote">
+          The professionalism and knowledge delivered by the Gizra team
+          have convinced us to keep an ongoing relationship We had them
+          work with complex requirements and Gizra has always delivered
+          high-quality solutions focusing not just on the output but also
+          on future maintainability and best practices.
+        </p>
+        <p class="title">Richard Brandon - Sr Software Engineer</p>
+        <p class="subtitle">Harvard University</p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="/images/homepage/code/acquia-black.png" class="top-image img-responsive" title="OpenScholar">
+      <div>
+        <p class="blockquote">
+          I consistently recommend Gizra as a top choice for anyone looking for complex Drupal development work done right.
+        </p>
+        <p class="title">Ezra Gildesgame - Product Manager</p>
+        <p class="subtitle">Acquia</p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="/images/homepage/code/national-library.png" class="top-image img-responsive" title="OpenScholar">
+      <div>
+        <p class="blockquote">
+          Gizra helped [..] translate our wishes to a technical specification then to a working product, and did so in a timely
+          manner and within budget. Not less important, they were able to remain attentive to capture the most of the needs
+          arising from the different partners.
+        </p>
+        <p class="title">Ido Ivri - Head of Business Development and Innovation,
+          </p>
+        <p class="subtitle">The National Library of Israel</p>
+      </div>
+    </div>
+  </div>
+</div>

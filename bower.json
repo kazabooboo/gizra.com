@@ -4,6 +4,7 @@
   "dependencies": {
     "parallax": "~1.0.0",
     "jquery": "~1.10.2",
-    "bootstrap-sass-official": "~3.1.1"
+    "bootstrap-sass-official": "~3.1.1",
+    "jquery-hoverIntent": "~1.8.1"
   }
 }
