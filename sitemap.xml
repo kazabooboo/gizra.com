@@ -894,6 +894,26 @@
   
   
     <url>
+      <loc>/blog/index.html</loc>
+     </url>
+  
+    <url>
+      <loc>/elm-rss/index.html</loc>
+     </url>
+  
+    <url>
+      <loc>/index.html</loc>
+     </url>
+  
+    <url>
+      <loc>/services/elm/index.html</loc>
+     </url>
+  
+    <url>
+      <loc>/sitemap.xml</loc>
+     </url>
+  
+    <url>
       <loc>/tags.html</loc>
      </url>
   
@@ -902,27 +922,7 @@
      </url>
   
     <url>
-      <loc>/index.html</loc>
-     </url>
-  
-    <url>
-      <loc>/elm-rss/index.html</loc>
-     </url>
-  
-    <url>
-      <loc>/sitemap.xml</loc>
-     </url>
-  
-    <url>
-      <loc>/blog/index.html</loc>
-     </url>
-  
-    <url>
       <loc>/team/index.html</loc>
-     </url>
-  
-    <url>
-      <loc>/services/elm/index.html</loc>
      </url>
   
     <url>
