@@ -38,6 +38,12 @@ body {
   font-family: Abril Fatface;
 }
 
+.divider {
+  margin: 20px auto;
+  border-top: 1px solid white;
+  width: 90%;
+}
+
 .header-homepage {
   background: url('/images/header/background.png') no-repeat left top;
   background-size: cover;
@@ -489,17 +495,14 @@ header {
   background: url('/images/homepage/contact/footer.png') no-repeat center top;
   background-size: cover;
   margin-top: 0;
-  height: 660px;
   position: relative;
 
+  @include desktop {
+    height: 660px;
+  }
+
   .contact-wrapper {
-    max-width: 580px;
-    padding-left: 0;
-    padding-right: 0;
     padding-top: 337px;
-    margin: 0 auto;
-    position: relative;
-    height: 535px;
   }
 
   h2 {
@@ -513,6 +516,7 @@ header {
   }
 
   address {
+    margin: 0;
     text-align: center;
     color: white;
 
