@@ -26,7 +26,7 @@ $(document).ready(function(){
   }
   // In case we are on "desktop" device.
   else {
-    // Display the client "info" block
+    // Display the client "info" block.
     $("#work .clients li").has('.popup-block').hoverIntent(
       // While hovering the target element.
       function(){
