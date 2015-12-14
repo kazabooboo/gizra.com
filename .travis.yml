@@ -25,7 +25,6 @@ before_install:
 
   # Install ngrok
   - cd ~
-  - echo $NGROK_AUTHTOKEN
   - wget https://dl.ngrok.com/ngrok_2.0.17_linux_amd64.zip
   - unzip ngrok_2.0.17_linux_amd64.zip
   - ./ngrok authtoken $NGROK_AUTHTOKEN
