@@ -63,11 +63,11 @@ install:
 
 before_script:
   # Wait for Grunt to finish loading.
-  - until $(curl --output /dev/null --silent --head --fail http://localhost:9000); do sleep 1; done
+  - until $(curl --output /dev/null --silent --head --fail http://localhost:9001); do sleep 1; done
 
   # Run ngrok
   - echo $TRAVIS_COMMIT
-  - ~/ngrok http -log=stdout -subdomain=$TRAVIS_COMMIT 9000 > ~/ngrok.log 2>&1 &
+  - ~/ngrok http -log=stdout -subdomain=$TRAVIS_COMMIT 9001 > ~/ngrok.log 2>&1 &
   - until $(curl --output /dev/null --silent --head --fail https://$TRAVIS_COMMIT.ngrok.io); do sleep 1; echo '.'; done
 
 script:
