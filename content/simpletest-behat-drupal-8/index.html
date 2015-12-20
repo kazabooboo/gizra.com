@@ -29,9 +29,10 @@
       <meta name="theme-color" content="#ffffff">
       <!-- End favicon for all platforms -->
 
-      <link rel="stylesheet" href="/css/main.40ee.css"/>
+      <link rel="stylesheet" href="/css/main.3465.css"/>
       <link href='http://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
-      <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Hind:400,600,300,500' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600,800' rel='stylesheet' type='text/css'>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
       <!-- Google Analytics -->
 <script>
@@ -50,6 +51,7 @@
     </head>
     <body>
 
+    <!-- Main content -->
     
   
 
@@ -138,49 +140,46 @@
   
 
 
-<header class="header-post">
+<div id="post-page">
+  <header class="header-post">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-10 col-sm-offset-1">
+          <nav id="nav" role="navigation" class="navbar navbar-default">
+  <div class="navbar-header">
+    <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+  </div>
+  <div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav">
+      <li><a href="/team">Meet the team</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+<h1 class="gizra-logo"><a href="/">gizra</a></h1>
+
+        </div>
+      </div>
+    </div>
+  </header>
+
   <div class="container">
     <div class="row">
       <div class="col-sm-10 col-sm-offset-1">
-        <nav id="nav" role="navigation" class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-    </div>
-    <div class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-        <li><a href="/team">Meet the team</a></li>
-        <li><a href="/blog">Blog</a></li>
-        <li><a href="/#contact">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-  <div class="gizra-logo"><a href="/">gizra</a></div>
-
-
-      </div>
-    </div>
-  </div>
-</header>
-
-<div class="container">
-  <div class="row">
-    <div class="col-sm-10 col-sm-offset-1">
-      <article class="post">
-        <h1><a href="/content/simpletest-behat-drupal-8">simpleTest with Behat for Drupal 8 </a></h1>
-        <div class="date">28 Apr 2015, By Roy Segall</div>
-        <div class="tags">
-          <img src="/images/post/tag-icon-small.15a8.png" class="tags-icon"/>
-          <ul class="inline">
-            
-            
+        <article class="post">
+          <h1><a href="/content/simpletest-behat-drupal-8">simpleTest with Behat for Drupal 8 </a></h1>
+          <div class="date">28 Apr 2015, By Roy Segall</div>
+          <div class="tags">
+            <img src="/images/post/tag-icon-small.15a8.png" class="tags-icon"/>
+            <ul class="inline">
+              
+              
 
   
     
@@ -195,11 +194,11 @@
   
 
 
-          </ul>
-          </div>
-        <div class="post-content">
+            </ul>
+            </div>
+          <div class="post-content">
 
-          <p>The first time I heard about <a href="http://docs.behat.org/en/v2.5/">Behat</a> was at DrupalCon Munich 2012. Since then use of Behat has grown exponentially and the tools it can be integrate with grew as well. With Behat we can test the markup of a page - pretty neat, right?  </p>
+            <p>The first time I heard about <a href="http://docs.behat.org/en/v2.5/">Behat</a> was at DrupalCon Munich 2012. Since then use of Behat has grown exponentially and the tools it can be integrate with grew as well. With Behat we can test the markup of a page - pretty neat, right?  </p>
 
 <p>Well, it&#39;s time to take Behat integration with Drupal a little further. I&#39;ve decided to try and integrate it with Drupal&#39;s simpleTest, as this would open the door for writing simpleTests that are more readable and more &quot;behavior driven&quot; by nature.</p>
 <div class="highlight"><pre><code class="Gherkin language-Gherkin" data-lang="Gherkin"><span class="k">Scenario:</span><span class="nf"> Testing the login form.</span>
@@ -285,52 +284,51 @@ The second argument is the module. This tells us which module contains the featu
 <p>My plan for the future is to to completely eliminate the need for <code>executeScenario</code>, thus allow having a feature file without a Drupal class, while still being able to use all the step definitions provided by other modules and themes.</p>
 
 
-        </div>
-      </article>
-      <section class="post-nav">
-        <div class="row">
-          <div class="col-xs-6 previous">
-            
-            <div class="text-uppercase">
-              <a href="/content/shoov-ci-tests-live-site">
-                Previous
-                <span class="visible-xs"> post</span>
-              </a>
-            </div>
-            <a href="/content/shoov-ci-tests-live-site" class="prev-text">
-              <span class="hidden-xs">Shoov - CI tests on the live site</span>
-            </a>
-            
           </div>
-          <div class="col-xs-6 next">
-            
-            <div class="text-uppercase">
-              <a href="/content/cross-browser-visual-regression-with-shoov">
-                Next
-                <span class="visible-xs"> post</span>
+        </article>
+        <section class="post-nav">
+          <div class="row">
+            <div class="col-xs-6 previous">
+              
+              <div class="text-uppercase">
+                <a href="/content/shoov-ci-tests-live-site">
+                  Previous
+                  <span class="visible-xs"> post</span>
+                </a>
+              </div>
+              <a href="/content/shoov-ci-tests-live-site" class="prev-text">
+                <span class="hidden-xs">Shoov - CI tests on the live site</span>
               </a>
+              
             </div>
-            <a href="/content/cross-browser-visual-regression-with-shoov" class="next-text">
-              <span class="hidden-xs">Cross Browser Visual Regression Tests With Shoov</span>
-            </a>
-            
+            <div class="col-xs-6 next">
+              
+              <div class="text-uppercase">
+                <a href="/content/cross-browser-visual-regression-with-shoov">
+                  Next
+                  <span class="visible-xs"> post</span>
+                </a>
+              </div>
+              <a href="/content/cross-browser-visual-regression-with-shoov" class="next-text">
+                <span class="hidden-xs">Cross Browser Visual Regression Tests With Shoov</span>
+              </a>
+              
+            </div>
           </div>
-        </div>
-      </section>
-      <section class="author-details">
-        <div class="image-wrapper">
-          <img src="/images/team/avatars/RoySegall.a616.jpg" class="img-circle img-responsive">
-        </div>
-        <div class="text-wrapper">
-          <span class="name">Roy Segall</span>
-          
-          <div class="title">Team Lead</div>
-          <div class="bio">Not afraid of patching Organic groups, Entity reference or the Message stack. Knows how to make tasty Pizza.</div>
-        </div>
-      </section>
-      <div class="bottom-dash-small"></div>
-      <section>
-        <div id="disqus_thread"></div>
+        </section>
+        <section class="author-details">
+          <div class="image-wrapper">
+            <img src="/images/team/avatars/RoySegall.a616.jpg" class="img-circle img-responsive">
+          </div>
+          <div class="text-wrapper">
+            <span class="name">Roy Segall</span>
+            
+            <div class="title">Team Lead</div>
+            <div class="bio">Not afraid of patching Organic groups, Entity reference or the Message stack. Knows how to make tasty Pizza.</div>
+          </div>
+        </section>
+        <section>
+          <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_developer = 1;
     var disqus_shortname = 'gizra';
@@ -343,50 +341,51 @@ The second argument is the module. This tells us which module contains the featu
 </script>
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-      </section>
+        </section>
+      </div>
     </div>
   </div>
 </div>
 
 
+    <!--Footer -->
     
-      <footer id="contact">
+  <div id="contact">
+    <footer id="footer">
+      <div class="footer-wrapper">
         <div class="background">
-          <div class="contact-wrapper">
-            <h2>Talk to us</h2>
-            <div class="container">
-              <div class="row">
-                <address class="col-sm-6">
-                  <div>
-                    5 Brenner St.,
-                    <br/> Tel-Aviv, Israel
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12 narrow">
+                <h2 class="title">Talk to us</h2>
+                <div class="clearfix">
+                  <address>
+                    <div class="strong">Israel Headquarters</div>
+                    <span>5 Brenner St., Tel Aviv</span>
+                    <a class="telephone" href="tel:+97233731222">+972-3-3731222</a>
+                    <a class="email" href="mailto:info@gizra.com">info@gizra.com</a>
+                  </address>
+                  <address class="separator">
+                    <div class="strong">United States Office</div>
+                    <span>120 W 105th St., New York, NY 10025</span>
+                    <a class="telephone" href="tel:+13476864508">+1 347 686-4508</a>
+                    <a class="email" href="mailto:usoffice@gizra.com">usoffice@gizra.com</a>
+                  </address>
+                  <div class="separator social-links">
+                  <span class="link twitter">
+                  <a href="https://twitter.com/gizra_drupal" target="_blank"><i class="fa fa-twitter-square"></i></a>
+                  </span>
                   </div>
-                  <div class="telephone">
-                    <a href="tel:+97233731222">+972-3-3731222</a>
-                  </div>
-                  <div>
-                    <a href="mailto:info@gizra.com" class="email">info@gizra.com</a>
-                  </div>
-                </address>
-                <div class="divider visible-xs"></div>
-                <address class="col-sm-6">
-                  <div>
-                    120 W 105th St.,
-                    <br/> New York, NY, 10025 USA
-                  </div>
-                  <div class="telephone">
-                    <a href="tel:+13476864508">+1-347-686-4508</a>
-                  </div>
-                  <div>
-                    <a href="mailto:usa@gizra.com" class="email">usa@gizra.com</a>
-                  </div>
-                </address>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </footer>
-    
+      </div>
+    </footer>
+  </div>
+
+
 
     <script src="/js/plugins.f180.js"></script>
 
