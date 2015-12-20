@@ -15,7 +15,6 @@
     margin-left: 10px;
 
     h2 {
-      letter-spacing: 0.3px;
       margin-bottom: 21px;
     }
 
@@ -41,7 +40,7 @@
     padding-right: 0;
 
     @include desktop {
-      height: 499px;
+      height: 449px;
     }
 
     .icon-info {

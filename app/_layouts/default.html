@@ -33,53 +33,19 @@
       <link rel="stylesheet" href="/css/main.css">
       <!-- endbuild -->
       <link href='http://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
-      <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Hind:400,600,300,500' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600,800' rel='stylesheet' type='text/css'>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
       {% include ga.html %}
 
     </head>
     <body>
 
+    <!-- Main content -->
     {{ content }}
 
-    {% unless page.exclude_footer %}
-      <footer id="contact">
-        <div class="background">
-          <div class="contact-wrapper">
-            <h2>Talk to us</h2>
-            <div class="container">
-              <div class="row">
-                <address class="col-sm-6">
-                  <div>
-                    5 Brenner St.,
-                    <br/> Tel-Aviv, Israel
-                  </div>
-                  <div class="telephone">
-                    <a href="tel:+97233731222">+972-3-3731222</a>
-                  </div>
-                  <div>
-                    <a href="mailto:info@gizra.com" class="email">info@gizra.com</a>
-                  </div>
-                </address>
-                <div class="divider visible-xs"></div>
-                <address class="col-sm-6">
-                  <div>
-                    120 W 105th St.,
-                    <br/> New York, NY, 10025 USA
-                  </div>
-                  <div class="telephone">
-                    <a href="tel:+13476864508">+1-347-686-4508</a>
-                  </div>
-                  <div>
-                    <a href="mailto:usa@gizra.com" class="email">usa@gizra.com</a>
-                  </div>
-                </address>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
-    {% endunless %}
+    <!--Footer -->
+    {% include footer.html %}
 
     <!-- build:js(app) /js/plugins.js -->
     <script src="/_bower_components/jquery/jquery.js"></script>

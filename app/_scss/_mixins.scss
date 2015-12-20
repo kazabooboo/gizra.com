@@ -1,13 +1,96 @@
-// Desktop
+// Global colors.
+$gizra-orange: #e27058;
+$gizra-orange-dark: #bb5641;
+$gizra-orange-light: #fba200;
+$gizra-blue: #578E9B;
+$gizra-blue-dark: #244b80;
+$gizra-black: #515151;
+$gizra-body: #717171;
+$gizra-orange-hover: #E75E08;
+$gizra-text: #5D5D5D;
+$soft-white: rgba(255, 255, 255, 0.32);
+$softer-white: rgba(255, 255, 255, 0.15);
+$softer-border: rgba(227, 227, 227, 0.58);
+$harder-border: #E3E3E3;
+
+// Global config.
+$spacing: 20px;
+$negative-spacing: -20px;
+
+// Desktop.
 @mixin desktop {
   @media (min-width: $screen-sm) {
     @content;
   }
 }
 
-// Mobile
+// Mobile.
 @mixin mobile {
   @media (max-width: $screen-xs-max) {
     @content;
   }
 }
+
+@mixin pill($color) {
+  color: $color;
+  border: 1px solid $color;
+  border-radius: 4px;
+}
+
+.gray-box {
+  border-top: 1px solid $softer-border;
+  border-bottom: 1px solid $softer-border;
+  background: #F1F1F1;
+}
+
+.hp-title {
+  color: $gizra-blue;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  font-size: 1.25em;
+  letter-spacing: 0.035em;
+}
+
+.container-divider {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  padding-bottom: 100px;
+}
+
+.side-shadow {
+  @include box-shadow(0 0 70px -14px rgba(0, 0, 0, 0.4));
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.bottom-shadow {
+  @include box-shadow(0 20px 30px -14px rgba(0, 0, 0, 0.16));
+  margin-bottom: 20px;
+}
+
+.soft-box {
+  @include box-shadow(0 1px 2px 0 rgba(0, 0, 0, 0.22));
+  border: 1px solid $softer-border;
+}
+
+.headers-styling {
+  margin-top: 25px;
+  color: $gizra-blue;
+  font-weight: bold;
+
+  a {
+    color: inherit;
+  }
+}
+
+.h1-styling {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.55em;
+  margin-bottom: 6px;
+
+  a {
+    font-weight: inherit;
+    text-decoration: none;
+  }
+}
+

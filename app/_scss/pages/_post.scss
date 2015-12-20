@@ -7,31 +7,15 @@
 }
 
 .post {
-  font-family: helvetica, sans-serif;
-  margin-top: 61px;
-  font-size: 26px;
 
   h1,
   h2,
   h3 {
-    margin-top: 25px;
-    color: $gizra-blue;
-
-    a {
-      color: $gizra-blue;
-    }
+    @extend .headers-styling;
   }
 
   h1 {
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 24px;
-    margin-bottom: 6px;
-
-    a {
-      font-weight: bold;
-      text-decoration: none;
-    }
+    @extend .h1-styling;
   }
 
   h2 {
@@ -45,7 +29,6 @@
 
   .date {
     font-size: 18px;
-    color: $gizra-blue;
   }
 
   .tags {
@@ -66,13 +49,13 @@
       padding-left: 0;
       display: inline;
 
-      &:after {
+      &::after {
         content: ',';
       }
 
       &:last-child {
 
-        &:after {
+        &::after {
           content: '';
         }
       }
@@ -84,13 +67,9 @@
   }
 
   .post-content {
+    margin-bottom: 20px;
     font-size: 18px;
     line-height: 25px;
-  }
-
-  img {
-    padding-top: 35px;
-    padding-bottom: 6px;
   }
 
   .caption {
@@ -137,7 +116,6 @@
 
   blockquote {
     font-size: 21px;
-    font-family: Verdana;
     padding-left: 51px;
     line-height: 32px;
     border-left: 10px gray solid;
@@ -163,7 +141,6 @@
     display: block;
     margin-top: 0;
     font-size: 15px;
-    letter-spacing: 0.2px;
   }
 
   a {
@@ -171,43 +148,39 @@
   }
 }
 
-.author-details {
-  margin-top: 40px;
-  margin-bottom: 20px;
-  font-family: Helvetica;
-  
-  .image-wrapper {
-    float: left;
-  }
+#post-page {
+  .author-details {
+    margin-top: 35px;
 
-  img {
-    width: 95px;
-    margin: 6px;
-  }
-  
-  .text-wrapper {
-    margin-left: 130px;
-    padding-top: 11px;
-    font-size: 18px;
-    line-height: 25px;
-  }
+    .image-wrapper {
+      float: left;
+    }
 
-  .bio {
+    img {
+      width: 95px;
+      margin: 6px;
+    }
 
-    a {
-      color: $gizra-orange;
+    .text-wrapper {
+      margin-left: 130px;
+      padding-top: 11px;
+      font-size: 18px;
+      line-height: 25px;
+    }
+
+    .bio {
+
+      a {
+        color: $gizra-orange;
+      }
+    }
+
+    .name,
+    .twitter,
+    .title {
+      color: $gizra-blue;
     }
   }
-  
-  .name,
-  .twitter,
-  .title {
-    color: $gizra-blue;
-  }
-}
 
-.bottom-dash-small {
-  border-bottom: 2px dashed #838383;
-  margin: 30px 0;
 }
 
