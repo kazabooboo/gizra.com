@@ -9,14 +9,21 @@ linters:
   ColorVariable:
     enabled: false
 
+  DuplicateProperty:
+    exclude:
+      - 'app/_scss/_homepage.scss'
+
   HexLength:
-      enabled: false
+    enabled: false
 
   HexNotation:
-      enabled: false
+    enabled: false
 
   IdSelector:
-      enabled: false
+    enabled: false
+
+  ImportantRule:
+    enabled: false
 
   LeadingZero:
     enabled: false
@@ -27,9 +34,15 @@ linters:
   PropertySortOrder:
     enabled: false
 
+  PlaceholderInExtend:
+    enabled: false
+
   SelectorDepth:
     max_depth: 5
 
+  Shorthand:
+    enabled: false
+
   SelectorFormat:
     exclude:
-      - 'app/_scss/main.scss'
+      - 'app/_scss/_general.scss'

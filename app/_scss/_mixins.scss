@@ -37,6 +37,33 @@ $negative-spacing: -20px;
   border-radius: 4px;
 }
 
+@mixin touch {
+  .touch-element-block,
+  .touch-element-inline-block,
+  .touch-element-inline {
+    display: none !important;
+  }
+
+  &.is-touch-device {
+
+    .touch-element-block {
+      display: block !important;
+    }
+
+    .touch-element-inline-block {
+      display: inline-block !important;
+    }
+
+    .touch-element-inline {
+      display: inline !important;
+    }
+
+    .touch-element-hidden {
+      display: none !important;
+    }
+  }
+}
+
 .gray-box {
   border-top: 1px solid $softer-border;
   border-bottom: 1px solid $softer-border;

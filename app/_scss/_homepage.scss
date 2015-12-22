@@ -1,0 +1,62 @@
+@import 'testimonials';
+
+.header-homepage {
+
+  background: #292929;
+  background: url('/images/header/background.png') no-repeat left top;
+  background-size: cover;
+  width: 100%;
+  text-align: left;
+
+  #slogan {
+    position: relative;
+    overflow: hidden;
+    color: white;
+
+    h2 {
+      margin: 60px 0 10px;
+      font-weight: bold;
+      font-size: 1.9em;
+      line-height: 1.3em;
+      letter-spacing: 0.025em;
+      text-transform: uppercase;
+    }
+
+    p {
+      margin: 7px 0;
+      font-size: 1.23em;
+      max-width: 430px;
+      line-height: 1.45em;
+      letter-spacing: 0.013em;
+    }
+
+    .about-us-story {
+      margin-top: 15px;
+
+      a {
+        color: white;
+        text-decoration: underline;
+      }
+    }
+
+    h3 {
+      display: inline-block;
+      text-transform: uppercase;
+      font-size: 22px;
+      margin: -4px 0 0 420px;
+    }
+  }
+}
+
+
+@include desktop {
+
+  .header-homepage #slogan {
+    margin-left: 15px;
+    height: 414px;
+
+    h2 {
+      max-width: 474px;
+    }
+  }
+}

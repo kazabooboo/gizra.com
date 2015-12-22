@@ -1,0 +1,112 @@
+#testimonials {
+  margin-top: 90px;
+
+  .container {
+    @extend .container-divider;
+  }
+}
+
+#carousel-testimonials {
+  @extend .soft-box;
+  border-radius: 6px;
+
+  .carousel-indicators {
+    @include box-shadow(0 1px 2px 0 rgba(0, 0, 0, 0.22));
+    margin: 0 0 0 -41.5px;
+    left: 50%;
+    bottom: -16px;
+    padding: 9px 0 5px;
+    width: auto;
+    text-align: left;
+    background: white;
+    display: inline-block;
+    border-radius: 6px;
+    border: 1px solid rgba(227, 227, 227, 0.51);
+
+    li {
+      position: relative;
+      margin: 1px 5px;
+      width: 13px;
+      height: 13px;
+      background-color: $gizra-black;
+
+      &:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        top: -12px;
+        bottom: -15px;
+        width: 1px;
+        background: rgba(81, 81, 81, 0.15);
+        right: -9px;
+      }
+    }
+
+    .active {
+      background-color: $gizra-blue;
+    }
+  }
+
+  .item {
+    padding-bottom: 15px;
+
+    img {
+      margin: 10px 0 15px 20px;
+    }
+
+    p {
+      margin: 0;
+      font-size: 1.25em;
+      line-height: 25px;
+    }
+
+    .blockquote {
+      @extend .gray-box;
+      margin-bottom: 12px;
+      padding: 15px 20px;
+      min-height: 132px;
+      color: $gizra-black;
+      font-size: 1.4em;
+      font-weight: bolder;
+      line-height: 1.5em;
+
+      &::before,
+      &::after {
+        @include text-shadow(3px 3px 0 rgba(0, 0, 0, 0.15));
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: 0.75em;
+        color: $gizra-black;
+      }
+
+      &::before {
+        content: '\f10d';
+      }
+
+      &::after {
+        content: '\f10e';
+      }
+    }
+
+    .name {
+      font-size: 1.25em;
+      color: $gizra-blue;
+      font-weight: bolder;
+    }
+
+    .title {
+      color: #9C9C9C;
+      margin-bottom: 3px;
+      font-size: 1.1em;
+    }
+
+    .client {
+      margin-top: 10px;
+    }
+
+    .name,
+    .title,
+    .client {
+      margin-left: 20px;
+    }
+  }
+}

@@ -1,0 +1,116 @@
+header {
+
+  .gizra-logo {
+
+    a {
+      font-family: Abril Fatface;
+      font-size: 3.5em;
+      text-decoration: none;
+      color: $gizra-orange;
+    }
+  }
+
+  .navbar {
+    background: transparent;
+    border: 0;
+
+    .container-fluid {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .navbar-toggle {
+      border: 0;
+
+      &:hover,
+      &:focus {
+        border: 0 none;
+        background: none;
+      }
+
+      .icon-bar {
+        background: white;
+        height: 3px;
+      }
+    }
+
+    .navbar-nav {
+      li {
+
+        a {
+          color: white;
+          padding-top: 0;
+          padding-left: 0;
+          font-size: 1.13em;
+          display: inline-block;
+
+          &:hover,
+          &.active {
+            color: $gizra-orange;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Desktop Media query.
+@include desktop {
+
+  .gizra-logo {
+    margin-left: 15px;
+  }
+
+  #nav {
+    min-height: 0;
+    margin: 40px 0 0;
+    border-radius: 0;
+
+    .navbar-nav li {
+
+      a {
+        padding: 0 8px 0 0;
+      }
+
+      &:not(:last-child) {
+        position: relative;
+        margin-right: 30px;
+
+        a::after {
+          content: '.';
+          position: absolute;
+          top: 0;
+          right: -10px;
+          width: 1px;
+          height: 100%;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+// Mobile Media query.
+@include mobile {
+
+  .navbar-default .navbar-collapse {
+    border-top: 1px solid $soft-white;
+    border-bottom: 1px solid $soft-white;
+  }
+
+  #nav {
+    .navbar-nav {
+      margin: 0 -15px;
+
+      li {
+        &:not(:last-child) {
+          border-bottom: 1px solid $soft-white;
+        }
+
+        a {
+          padding: 20px 0;
+        }
+      }
+    }
+  }
+}
