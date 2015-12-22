@@ -29,7 +29,7 @@
       <meta name="theme-color" content="#ffffff">
       <!-- End favicon for all platforms -->
 
-      <link rel="stylesheet" href="/css/main.6daf.css"/>
+      <link rel="stylesheet" href="/css/main.84de.css"/>
       <link href='http://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Hind:400,600,300,500' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600,800' rel='stylesheet' type='text/css'>
@@ -69,7 +69,7 @@
     <ul class="nav navbar-nav">
       <li><a href="/team">Meet the team</a></li>
       <li><a href="/blog">Blog</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#contact" class="smooth-scroll-to">Contact</a></li>
     </ul>
   </div>
 </nav>
@@ -88,110 +88,117 @@
             honest partnership with passionate people.
           </p>
           <p class="about-us-story">
-            Read our "<a href="/content/the-about-story/">About Story</a>". It's different.
+            Read our "<a target="_blank" href="/content/the-about-story/">About Story</a>". It's different.
           </p>
         </div>
         <div id="work">
-          <h2 class="title">You may have seen our work before</h2>
-          <div class="row">
-            <!--Our work Desktop-->
-            <div class="col-xs-12 hidden-xs">
-              <ul class="clients">
-                <li class="logo">
-                  <img src="/images/homepage/code/harvard.4103.png" class="img-responsive" alt="OpenScholar">
-                  <div class="popup-block">
-                    <a href="http://openscholar.harvard.edu">OpenScholar</a>
-                    , an Open Source web publishing solutions powering thousand of academic websites.
-                  </div>
-                </li>
-                <li class="logo">
-                  <img src="/images/homepage/code/acquia.4cc0.png" class="img-responsive main-block" alt="acquia">
-                  <div class="popup-block">
-                    Acquia worked with Gizra to develop
-                    <a href="https://www.acquia.com/solutions/digital-experience-management/community">Drupal Commons</a>
-                    , a social-focused Drupal distribution.
-                  </div>
-                </li>
-                <li class="logo">
-                  <img src="/images/homepage/code/commerce-guys.cddf.png" class="img-responsive" alt="Commerce Guys">
-                  <div class="popup-block">
-                    Collaborated with Gizra to build
-                    <a href="https://commerceguys.com/product/commerce-kickstart">Commerce Kickstart</a>
-                    , an eCommerce focused Drupal Distribution.
-                  </div>
-                </li>
-                <li class="logo">
-                  <img src="/images/homepage/code/ec.36a9.png" class="img-responsive" alt="European Commission">
-                  <div class="popup-block">
-                    Collaborated on
-                    <a href="http://capacity4dev.ec.europa.eu">Capacity4Dev </a>
-                    and Projects4Dev websites that manages international development projects.
-                  </div>
-                </li>
-                <li class="logo">
-                  <img src="/images/homepage/code/grammy.1fa7.png" class="img-responsive" alt="The Grammy Awards">
-                  <div class="popup-block">
-                    <a href="https://www.grammypro.com/">GrammyPro.com</a>
-                    Powered by the high profile Gizra-developed Drupal modules Organic Groups and Message Stack.
-                  </div>
-                </li>
-                <li class="logo">
-                  <img src="/images/homepage/code/wix.65fc.png" class="img-responsive" alt="WiX">
-                  <div class="popup-block">
-                    Wix hired Gizra to build feed features for its platform, powering over 70 million websites.
-                  </div>
-                </li>
-                <li class="logo">
-                  <img src="/images/homepage/code/white-house.1697.png" class="img-responsive" alt="The White House">
-                  <div class="popup-block">
-                    <a href="http://www.whitehouse.gov">WhiteHouse.gov</a>
-                     Powered by the high profile Gizra-developed Drupal modules Organic Groups and Message Stack.
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <!--Our work Mobile-->
-            <div class="col-xs-12 visible-xs">
-              <ul class="clients">
-                <li class="logo">
-                  <a href="http://openscholar.harvard.edu">
-                    <img src="/images/homepage/code/harvard.4103.png" alt="OpenScholar">
-                  </a>
-                </li>
-                <li class="logo">
-                  <a href="http://capacity4dev.ec.europa.eu">
-                    <img src="/images/homepage/code/ec.36a9.png" alt="European Commission">
-                  </a>
-                </li>
-                <li class="logo">
-                  <a href="http://www.wix.com">
-                    <img src="/images/homepage/code/wix.65fc.png" alt="WiX">
-                  </a>
-                </li>
-                <li class="logo">
-                  <a href="https://commerceguys.com/product/commerce-kickstart">
-                    <img src="/images/homepage/code/commerce-guys.cddf.png" alt="Commerce Guys">
-                  </a>
-                </li>
-                <li class="logo">
-                  <a href="http://www.whitehouse.gov">
-                    <img src="/images/homepage/code/white-house.1697.png" alt="The White House">
-                  </a>
-                </li>
-                <li class="logo">
-                  <a href="https://www.acquia.com/solutions/digital-experience-management/community">
-                    <img src="/images/homepage/code/acquia.4cc0.png" alt="acquia">
-                  </a>
-                </li>
-                <li class="logo">
-                  <a href="https://www.grammypro.com/">
-                    <img src="/images/homepage/code/grammy.1fa7.png" alt="The Grammy Awards">
-                  </a>
-                </li>
-              </ul>
-            </div>
+  <h2 class="title">You may have seen our work before</h2>
+  <div class="row">
+    <!--Our work Desktop-->
+    <div class="col-xs-12 hidden-xs">
+      <ul class="clients">
+        <li class="logo">
+          <img src="/images/homepage/code/harvard.4103.png" class="img-responsive" alt="OpenScholar">
+          <div class="popup-block">
+            <a class="touch-element-hidden" target="_blank" href="http://openscholar.harvard.edu">OpenScholar </a>
+            <span class="touch-element-inline">OpenScholar</span>
+            , an Open Source web publishing solutions powering thousand of academic websites.
           </div>
-        </div>
+        </li>
+        <li class="logo">
+          <img src="/images/homepage/code/acquia.4cc0.png" class="img-responsive main-block" alt="acquia">
+          <div class="popup-block">
+            Acquia worked with Gizra to develop
+            <a class="touch-element-hidden" target="_blank" href="https://www.acquia.com/solutions/digital-experience-management/community">Drupal Commons </a>
+            <span class="touch-element-inline">Drupal Commons</span>
+            , a social-focused Drupal distribution.
+          </div>
+        </li>
+        <li class="logo">
+          <img src="/images/homepage/code/commerce-guys.cddf.png" class="img-responsive" alt="Commerce Guys">
+          <div class="popup-block">
+            Collaborated with Gizra to build
+            <a class="touch-element-hidden" target="_blank" href="https://commerceguys.com/product/commerce-kickstart">Commerce Kickstart </a>
+            <span class="touch-element-inline">Commerce Kickstart</span>
+            , an eCommerce focused Drupal Distribution.
+          </div>
+        </li>
+        <li class="logo">
+          <img src="/images/homepage/code/ec.36a9.png" class="img-responsive" alt="European Commission">
+          <div class="popup-block">
+            Collaborated on
+            <a class="touch-element-hidden" target="_blank" href="http://capacity4dev.ec.europa.eu">Capacity4Dev </a>
+            <span class="touch-element-inline">Capacity4Dev </span>
+            and Projects4Dev websites that manages international development projects.
+          </div>
+        </li>
+        <li class="logo">
+          <img src="/images/homepage/code/grammy.1fa7.png" class="img-responsive" alt="The Grammy Awards">
+          <div class="popup-block">
+            <a class="touch-element-hidden" target="_blank" href="https://www.grammypro.com/">GrammyPro.com </a>
+            <span class="touch-element-inline">GrammyPro.com </span>
+            Powered by the high profile Gizra-developed Drupal modules Organic Groups and Message Stack.
+          </div>
+        </li>
+        <li class="logo">
+          <img src="/images/homepage/code/wix.65fc.png" class="img-responsive" alt="WiX">
+          <div class="popup-block">
+            Wix hired Gizra to build feed features for its platform, powering over 70 million websites.
+          </div>
+        </li>
+        <li class="logo">
+          <img src="/images/homepage/code/white-house.1697.png" class="img-responsive" alt="The White House">
+          <div class="popup-block">
+            <a class="touch-element-hidden" target="_blank" href="http://www.whitehouse.gov">WhiteHouse.gov </a>
+            <span class="touch-element-inline">WhiteHouse.gov </span>
+            Powered by the high profile Gizra-developed Drupal modules Organic Groups and Message Stack.
+          </div>
+        </li>
+      </ul>
+    </div>
+    <!--Our work Mobile-->
+    <div class="col-xs-12 visible-xs">
+      <ul class="clients">
+        <li class="logo">
+          <a target="_blank" href="http://openscholar.harvard.edu">
+            <img src="/images/homepage/code/harvard.4103.png" alt="OpenScholar">
+          </a>
+        </li>
+        <li class="logo">
+          <a target="_blank" href="http://capacity4dev.ec.europa.eu">
+            <img src="/images/homepage/code/ec.36a9.png" alt="European Commission">
+          </a>
+        </li>
+        <li class="logo">
+          <a target="_blank" href="http://www.wix.com">
+            <img src="/images/homepage/code/wix.65fc.png" alt="WiX">
+          </a>
+        </li>
+        <li class="logo">
+          <a target="_blank" href="https://commerceguys.com/product/commerce-kickstart">
+            <img src="/images/homepage/code/commerce-guys.cddf.png" alt="Commerce Guys">
+          </a>
+        </li>
+        <li class="logo">
+          <a target="_blank" href="http://www.whitehouse.gov">
+            <img src="/images/homepage/code/white-house.1697.png" alt="The White House">
+          </a>
+        </li>
+        <li class="logo">
+          <a target="_blank" href="https://www.acquia.com/solutions/digital-experience-management/community">
+            <img src="/images/homepage/code/acquia.4cc0.png" alt="acquia">
+          </a>
+        </li>
+        <li class="logo">
+          <a target="_blank" href="https://www.grammypro.com/">
+            <img src="/images/homepage/code/grammy.1fa7.png" alt="The Grammy Awards">
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
       </div>
     </div>
   </div>
@@ -200,111 +207,113 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12 narrow">
-        <!--Recommendations -->
-        <h2 class="hp-title">Testimonials</h2>
+        <!-- Testimonials -->
         <div id="carousel-testimonials" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#carousel-testimonials" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-testimonials" data-slide-to="1"></li>
-    <li data-target="#carousel-testimonials" data-slide-to="2"></li>
-  </ol>
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner" role="listbox">
-    <div class="item active">
-      <div>
-        <img src="/images/homepage/testimonials/harvard-logo.9c54.png" title="OpenScholar">
-        <p class="blockquote">
-          We had them work with complex requirements and Gizra has always delivered high-quality
-          solutions focusing not just on the output but also on future maintainability and best practices.
-        </p>
-        <p class="name">Richard Brandon</p>
-        <p class="title">Sr Software Engineer</p>
-        <p class="client">Harvard University</p>
-      </div>
-    </div>
-    <div class="item">
-      <div>
-        <img src="/images/homepage/testimonials/acquia-black.e583.png" title="Acquia">
-        <p class="blockquote">
-          I consistently recommend Gizra as a top choice for anyone looking for complex Drupal development work done right.
-        </p>
-        <p class="name">Ezra Gildesgame</p>
-        <p class="title">Product Manager</p>
-        <p class="client">Acquia</p>
-      </div>
-    </div>
-    <div class="item">
-      <div>
-        <img src="/images/homepage/testimonials/national-library.8778.png" title="The National Library of Israel">
-        <p class="blockquote">
-          Gizra translated our wishes to technical specifications and to a working product and did
-          so in a timely manner and within budget. Not less important, they remained attentive and captured the
-          needs arising from the different partners.
-        </p>
-        <p class="name">Ido Ivri</p>
-        <p class="title">Head of Business Development and Innovation</p>
-        <p class="client">The National Library of Israel</p>
-      </div>
-    </div>
-  </div>
-</div>
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#carousel-testimonials" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-testimonials" data-slide-to="1"></li>
+            <li data-target="#carousel-testimonials" data-slide-to="2"></li>
+          </ol>
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner" role="listbox">
+            <div class="item active">
+              <div>
+                <img src="/images/homepage/testimonials/harvard-logo.9c54.png" title="OpenScholar">
+                <p class="blockquote">
+                  We had them work with complex requirements and Gizra has always delivered high-quality
+                  solutions focusing not just on the output but also on future maintainability and best practices.
+                </p>
+                <p class="name">Richard Brandon</p>
+                <p class="title">Sr Software Engineer</p>
+                <p class="client">Harvard University</p>
+              </div>
+            </div>
+            <div class="item">
+              <div>
+                <img src="/images/homepage/testimonials/acquia-black.e583.png" title="Acquia">
+                <p class="blockquote">
+                  I consistently recommend Gizra as a top choice for anyone looking for complex Drupal development work done right.
+                </p>
+                <p class="name">Ezra Gildesgame</p>
+                <p class="title">Product Manager</p>
+                <p class="client">Acquia</p>
+              </div>
+            </div>
+            <div class="item">
+              <div>
+                <img src="/images/homepage/testimonials/national-library.8778.png" title="The National Library of Israel">
+                <p class="blockquote">
+                  Gizra translated our wishes to technical specifications and to a working product and did
+                  so in a timely manner and within budget. Not less important, they remained attentive and captured the
+                  needs arising from the different partners.
+                </p>
+                <p class="name">Ido Ivri</p>
+                <p class="title">Head of Business Development and Innovation</p>
+                <p class="client">The National Library of Israel</p>
+              </div>
+            </div>
+          </div>
+        </div>
 
       </div>
     </div>
   </div>
 </section>
+
+
 <section id="about">
   <div class="container">
     <div class="row text-wrapper">
       <div class="col-sm-12 narrow">
-          <h2 class="hp-title">About us</h2>
-          <p>
+        <h2 class="hp-title">About us</h2>
+        <p>
           Formed in 2009, Gizra Internet Solutions, is a fast growing international software development company with
           an extensive track record in site building and content management system configuration and
           implementation. Gizra is experienced in agile and continuous deployment and is a pioneer in Drupal
           development and software methodologies. Gizra is known among its clients as an efficient executor
           of complex web projects.
-          </p>
-          <h3>What Makes Us Different</h3>
-          <p>
+        </p>
+        <h3>What Makes Us Different</h3>
+        <p>
           Gizra developed a unique work methodology called The Gizra Way. It’s a culmination of best practices,
           lessons learned and open source philosophy that we incorporate into our project workflows, saving money
           and ensuring timely delivery. Our clients positive experience is found not only in the excellence of
           their web solution but in the way we get there.
           <br class="hidden-xs"/>The key elements are:<br/>
-          </p>
-          <h4>True Transparency</h4>
-          <p>
+        </p>
+        <h4>True Transparency</h4>
+        <p>
           Client has full access to Gizra’s source repository and task tracking system, viewing code commits
           as they happen. This means that all of Gizra’s internal communications and actions are in full view to the client.
           We like it this way because it attains an environment of collaboration,openness and accountability.
-          </p>
-          <h4>Effective Communication</h4>
-          <p>
+        </p>
+        <h4>Effective Communication</h4>
+        <p>
           Client is a member of the task tracking system and is encouraged to fully participate in
           the development process interacting directly with developers of all levels.
           All stakeholders stay up to date on progress and decisions making occurs quickly and per the client’s
           needs and priorities.
-          </p>
-          <h4>Meticulous Execution</h4>
-          <p>
+        </p>
+        <h4>Meticulous Execution</h4>
+        <p>
           Complete deployment and testing system built into projects from day one, growing as the code does.
           We use <a href="http://shoov.io/" target="_blank">Shoov</a>, a Gizra developed testing toolkit conceived from our internal best practices.
           Collaborate with the best designers to ensure design is optimal from visual, interaction and technical standpoint.
           The final design is completed with pixel-perfect implementation.
-          </p>
-          <h4>Invest in Human Assets & Community</h4>
-          <p>
+        </p>
+        <h4>Invest in Human Assets & Community</h4>
+        <p>
           The Gizra Way is also implemented internally with a flat organizational structure,
           a diligent mentorship program, persistent execution of best practices and an in-house mechanism for continuous improvement.
           As pioneers in the Drupal community we regularly present at DrupalCon and DrupalCamp conferences globalwide. Employees are
           given the opportunity to contribute to the Open Source community on company time.
-          </p>
+        </p>
       </div>
     </div>
   </div>
 </section>
+
 <section class="blog">
   <div class="container">
     <div class="row text-wrapper">
@@ -476,7 +485,7 @@ I felt the need for such a site the day I started with Elm. Getting the Gizra de
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
 
-    <script src="/js/scripts.e6d0.js"></script>
+    <script src="/js/scripts.6037.js"></script>
 
     </body>
 </html>
