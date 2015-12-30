@@ -176,6 +176,119 @@
             <div class="author-details clearfix">
               <img src="/images/team/avatars/amitaibu.4179.jpg" class="img-responsive img-circle">
               <p class="name">Amitai Burstein</p>
+              <p class="date"><i class="fa fa-calendar"></i> 10 Jun 2010</p>
+            </div>
+            <h1><a href="/content/message-module-and-ctools-plugin/">Message module and CTools $plugin </a></h1>
+            <div class="post-content">
+              <p>If I may quote myself:
+ <blockquote>I&#39;m thinking, _which is easier than actually sitting down and writing a patch, that it would be neat if CTools exportables plugin had a uniform UI that modules such as Context, Message and others to come, could use. </blockquote></p>
+
+<p>We&#39;re in a scratch your own itch world aren&#39;t we, huh? So I&#39;ve created a CTools repository in github, created a branch called export-ui and it resulted with this <del>getting-close-to-commit</del> committed <a href="http://drupal.org/node/787644">patch</a>.</p>
+
+<p>When I started writing <a href="http://drupal.org/project/message">Message</a> I had some understanding of how CTools exportables work but having merlinofchaos review my work, explain some of his thoughts and providing his golden code, really changed the way I look at writing generic and reusable code. In fact, I&#39;ve decided to overhaul much of the Message module for it to be more inline with CTools&#39; standards.</p>
+
+<p>Message was a inspired by Context module. Context uses some object oriented, so I&#39;ve copied that too. That&#39;s where I got it wrong - because my use case was a bit different. OOP is powerful _when it&#39;s needed but sometimes it might be an overkiller. Ok, so no OOP, but I still needed a pluggable system. CTools has the $plugin concept. Its almost the same as having an info hook, only it&#39;s without a hook - you place it directly on an <code>inc</code> file that CTools will include for you when its needed. But the &quot;trick&quot; that I&#39;ve learned - and there shouldn&#39;t be any drum rolls cause it might be obvious - is to use a &quot;process&quot; function that populates the $plugin with defaults. The defaults can be for example the callbacks that will be used, the Views handlers that will be automatically declared, the text strings, the allowed operations, etc&#39;. Basically, when you use the $plugin, you should be thinking how an extending module can alter the module&#39;s behavior by simple changes.</p>
+
+            </div>
+            <div class="read-more">
+              <a href="/content/message-module-and-ctools-plugin/">
+                Read More <i class="fa fa-angle-right"></i>
+              </a>
+            </div>
+          </article>
+        
+
+          
+            
+          
+
+          
+            
+             
+               
+             
+            
+          
+            
+             
+            
+          
+            
+             
+            
+          
+            
+             
+            
+          
+            
+             
+            
+          
+            
+             
+            
+          
+            
+             
+            
+          
+            
+             
+            
+          
+            
+             
+            
+          
+            
+             
+            
+          
+            
+             
+            
+          
+            
+             
+            
+          
+            
+             
+            
+          
+            
+             
+            
+          
+            
+             
+            
+          
+            
+             
+            
+          
+            
+             
+            
+          
+            
+             
+            
+          
+            
+             
+            
+          
+            
+             
+            
+          
+          <article class="post post-teaser">
+            <div class="author-details clearfix">
+              <img src="/images/team/avatars/amitaibu.4179.jpg" class="img-responsive img-circle">
+              <p class="name">Amitai Burstein</p>
               <p class="date"><i class="fa fa-calendar"></i> 17 May 2010</p>
             </div>
             <h1><a href="/content/code-sample-drutnet/">Code sample for DrutNet API - connect, load node, save node and upload file </a></h1>
@@ -542,114 +655,6 @@ dvessel&#39;s Ninesixty takes the power of grid 960 -that we really love as it a
             </div>
           </article>
         
-
-          
-            
-          
-
-          
-            
-             
-               
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-          <article class="post post-teaser">
-            <div class="author-details clearfix">
-              <img src="/images/team/avatars/amitaibu.4179.jpg" class="img-responsive img-circle">
-              <p class="name">Amitai Burstein</p>
-              <p class="date"><i class="fa fa-calendar"></i> 22 Apr 2010</p>
-            </div>
-            <h1><a href="/content/message-module-intro/">Message module intro </a></h1>
-            <div class="post-content">
-              <p>Here&#39;s a quick overview of the <a href="http://drupal.org/project/message">Message</a> module.</p>
-
-<p>For those that find my accent hard to understand, or simply for those that prefer reading - I&#39;ve published the <a href="http://docs.google.com/View?id=dcp3t3ms_194wdbgsmfc">movie script</a>.</p>
-
-            </div>
-            <div class="read-more">
-              <a href="/content/message-module-intro/">
-                Read More <i class="fa fa-angle-right"></i>
-              </a>
-            </div>
-          </article>
-        
       </div>
     </div>
     <!--Pager Begin-->
@@ -713,7 +718,7 @@ dvessel&#39;s Ninesixty takes the power of grid 960 -that we really love as it a
 
 
 
-    <script src="/js/plugins.f180.js"></script>
+    <script src="/js/plugins.7686.js"></script>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
 
