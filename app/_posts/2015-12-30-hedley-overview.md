@@ -71,7 +71,7 @@ After getting used to Elm's compiler saving us from doing mistakes, developing J
 
 Admittedly some parts in the [interop file](https://github.com/Gizra/elm-hedley/blob/v1.0.0/src/js/elm-interop.js) (short of [interoperability](https://en.wikipedia.org/wiki/Interoperability)) could be improved in terms of interacting with the DOM, but still for us the Elm's benefits are well worth the small hacks we had to do. I believe that as Elm matures those interactions would be even easier.
 
-Here are for example to integration parts of Leaflet's map under the [Events](http://gizra.github.io/elm-hedley/#!/events) page - the [Elm code](https://github.com/Gizra/elm-hedley/blob/v1.0.0/src/elm/Main.elm#L51-L75), and the [JS interop](https://github.com/Gizra/elm-hedley/blob/v1.0.0/src/js/elm-interop.js#L64-L194) one.
+Here are for example the integration parts of Leaflet's map under the [Events](http://gizra.github.io/elm-hedley/#!/events) page - the [Elm code](https://github.com/Gizra/elm-hedley/blob/v1.0.0/src/elm/Main.elm#L51-L75), and the [JS interop](https://github.com/Gizra/elm-hedley/blob/v1.0.0/src/js/elm-interop.js#L64-L194) one.
 
 ## Gulp
 
