@@ -5,6 +5,7 @@ tags:
 - DrutNet
 permalink: /content/drutnet-drupal-net-api/
 title: "DrutNet -  Drupal .NET API "
+author: bricel
 created: 1272550961
 layout: post
 ---
