@@ -3,18 +3,19 @@
  */
 runTests = function() {
   var errors = [];
-  var buildId = 17;
-  var buildToken = '45974c049b94a808ede67034c3ad2dec';
+  var buildId = 21706;
+  var buildToken = '77c40f0079b809f297082c1be2741375fde105e8';
 
   var customTests = function() {
     return [
       {
-        id: "it should find the a visible add to cart link",
+        id: "it should find the slogan",
         result: function() {
-          var element = document.querySelector('a.cart');
-          return !!element && element.offsetParent !== null;
+          var element = document.evaluate('//h2[contains(., "Take a leap")]', document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+          var random = Math.random() * 10;
+          return random > 5;
         }
-      },
+      }
     ]
   };
 
@@ -27,10 +28,14 @@ runTests = function() {
     errors.push(row.id);
   });
 
+  if (!errors.length) {
+    return;
+  }
   var request = new XMLHttpRequest();
 
   var data = {
     build: buildId,
+    //url: '/',
     errors: errors.join("\r\n")
   };
 
@@ -53,7 +58,7 @@ runTests = function() {
       image.src = canvas.toDataURL("image/png");
       document.body.appendChild(image);
 
-      request.open('POST', 'http://localhost/shoov/www/api/v1.0/js-lm-incidents?token=' + buildToken, true);
+      request.open('POST', 'https://live-shoov.pantheon.io/api/v1.0/js-lm-incidents?token=' + buildToken, true);
       request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
 
       request.onload = function() {
