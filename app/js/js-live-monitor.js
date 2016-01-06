@@ -61,12 +61,6 @@ runTests = function() {
       request.open('POST', 'https://live-shoov.pantheon.io/api/v1.0/js-lm-incidents?token=' + buildToken, true);
       request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
 
-      request.onload = function() {
-        if (request.status !== 200) {
-          console.log('Request failed.  Returned status of ' + request.status);
-        }
-      };
-
       request.send(encodeURI(serializeObject(data)));
     }
   });
