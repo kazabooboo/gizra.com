@@ -70,10 +70,17 @@ $(document).ready(function(){
    *
    */
   function teamMemberInfoOnTouch()  {
+
     // Toggle the member 'info' block to 'fade in'/'fade out' on each touch.
-    $('#team-page .member-box .icon-info').bind( 'touchstart', function() {
-      $(this).parent('.member-box').find('.popup-block').fadeToggle( 'slow');
+    $('#team-page .member-box').bind( 'touchstart', function() {
+
+      //Hide previous open member info.
+      $('#team-page .member-box .popup-block:visible').fadeToggle('fast', 'linear');
+
+      //Toggle the selected logo.
+      $(this).find('.popup-block').fadeToggle('fast', 'linear');
     })
+
   }
 
   /**
