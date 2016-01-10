@@ -1,12 +1,13 @@
 .blog {
   margin-top: 27px;
-  margin-bottom: 85px;
+  margin-bottom: 20px;
 
   .post-teaser {
     @extend .soft-box;
     position: relative;
-    margin-bottom: 65px;
-    padding: $spacing 0;
+    margin-bottom: 28px;
+    padding-top: $spacing;
+    padding-bottom: 7px;
     border-radius: 6px;
 
     > * {
@@ -16,19 +17,24 @@
   }
 
   .author-details {
+    margin-bottom: 10px;
+    position: relative;
 
     .name {
-      margin-top: 24px;
-      margin-bottom: 0;
-      color: $gizra-black;
+      margin-bottom: 5px;
       font-family: 'Raleway', sans-serif;
       font-size: 1em;
       font-weight: bolder;
       letter-spacing: 0.03em;
+
+      a {
+        color: $gizra-orange;
+        text-decoration: none;
+      }
     }
 
     .date {
-      margin-top: 8px;
+      margin-bottom: 5px;
       font-size: 1.1em;
 
       i {
@@ -37,73 +43,56 @@
       }
     }
 
-    img {
+    .avatar {
       @extend .soft-box;
-      float: left;
-      margin-right: 15px;
-      padding: 8px;
-      width: 100px;
+      padding: 4px;
+      width: 60px;
+      position: absolute;
+      z-index: 4;
+      top: -46px;
+      right: 12px;
+      background: white;
     }
   }
 
   .article {
-    .text {
-      @extend .gray-box;
-      margin: 14px $negative-spacing $spacing $negative-spacing;
-      padding: $spacing;
-      font-size: 1.17em;
-      line-height: 1.5em;
+    .main-image {
+      position: relative;
+      display: block;
+      border: 1px solid #C5C5C5;
+      margin-bottom: 12px;
+      overflow: hidden;
+      background: black;
+
+      img {
+        @include transition(all 0.5s ease-in-out);
+        position: relative;
+        max-width: 100%;
+
+        &:hover {
+          @include transform(scale(1.15));
+          opacity: 0.5;
+        }
+      }
     }
 
     .title {
       @extend .h1-styling;
-    }
-  }
-
-  .read-more-wrapper {
-    margin: $spacing 0 0;
-    padding: $spacing $spacing 0;
-    border-top: 1px solid $softer-border;
-    padding-top: $spacing;
-  }
-
-  .read-more a {
-    @extend .soft-box;
-    position: relative;
-    padding: 8px;
-    display: inline-block;
-    text-decoration: none;
-    color: $gizra-orange;
-    background: white;
-    border-radius: 4px;
-
-    &::after {
-      position: absolute;
-      content: '';
-      top: 0;
-      right: 21px;
-      bottom: 0;
-      width: 1px;
-      background: #E3E3E3;
-      height: 100%;
-    }
-
-    i {
-      margin-left: 12px;
-      vertical-align: middle;
+      margin-bottom: 0;
+      text-transform: none;
+      line-height: 1.35em;
+      font-size: 1.4em;
     }
   }
 }
 
 // Desktop Media query.
 @include desktop {
-  .blog .read-more-wrapper {
-    position: absolute;
-    bottom: -16px;
-    right: $spacing;
-    margin: 0;
-    padding: 0;
+
+  .blog .posts >*:nth-of-type(3n+1) {
+    clear: both;
   }
+
 }
 
 // Mobile Media query.
@@ -113,15 +102,22 @@
     margin-top: 10px;
     margin-bottom: 20px;
 
-    .read-more-wrapper {
-      margin: $spacing 0 0;
-      padding: $spacing $spacing 0;
-      border-top: 1px solid $softer-border;
-      padding-top: $spacing;
+    .author-details .avatar {
+      width: 75px;
+      top: -53px;
     }
 
-    .read-more {
-      text-align: right;
+    .article .title {
+      margin-bottom: 0;
     }
+  }
+}
+
+// Specific media query.
+@media (min-width: 400px) and (max-width: $screen-sm) {
+  .blog .post-teaser {
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
   }
 }

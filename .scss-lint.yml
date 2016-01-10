@@ -12,6 +12,7 @@ linters:
   DuplicateProperty:
     exclude:
       - 'app/_scss/_homepage.scss'
+      - 'app/_scss/_mixins.scss'
 
   HexLength:
     enabled: false
@@ -35,6 +36,9 @@ linters:
     enabled: false
 
   PlaceholderInExtend:
+    enabled: false
+
+  VendorPrefix:
     enabled: false
 
   SelectorDepth:

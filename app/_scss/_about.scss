@@ -1,7 +1,7 @@
 #about {
   position: relative;
   overflow: hidden;
-  margin: 90px 0;
+  margin: 65px 0;
 
   .container {
     @extend .container-divider;
@@ -9,38 +9,33 @@
 
   .text-wrapper {
 
-    .title {
-      margin-bottom: 14px;
-      color: $gizra-black;
-      font-size: 1.5em;
-      font-weight: bolder;
-      line-height: 1.4em;
-    }
-
     p {
+      @extend .p-styling;
       margin-bottom: 12px;
-      font-size: 1.17em;
-      line-height: 1.65em;
     }
 
     h3 {
+      @extend .h3-styling;
       margin-top: 35px;
-      font-weight: 500;
-      font-size: 1.25em;
     }
 
     h4 {
+      @extend .h4-styling;
       margin-top: 20px;
-      font-size: 1.17em;
     }
   }
 }
-
 
 // Mobile Media query.
 @include mobile {
 
   #about {
+    margin-top: 35px;
+    margin-bottom: 10px;
     padding: 20px 0;
+
+    .container {
+      padding-bottom: 50px;
+    }
   }
 }

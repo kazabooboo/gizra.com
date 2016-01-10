@@ -48,6 +48,20 @@
   }
 }
 
+.blog .blog-more {
+  text-align: center;
+  margin-bottom: 45px;
+
+  a {
+    @extend .soft-box;
+    color: $gizra-blue;
+    font-weight: 400;
+    text-decoration: none;
+    padding: $spacing;
+    display: inline-block;
+  }
+}
+
 // Desktop Media query.
 @include desktop {
 

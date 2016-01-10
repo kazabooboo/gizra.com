@@ -15,4 +15,10 @@
     </ul>
   </div>
 </nav>
-<h1 class="gizra-logo"><a href="/">gizra</a></h1>
+
+{% if page.homepage == nil %}
+  <h2 class="gizra-logo"><a href="/">gizra</a></h2>
+{% else %}
+  <h1 class="gizra-logo"><a href="/">gizra</a></h1>
+{% endif %}
+

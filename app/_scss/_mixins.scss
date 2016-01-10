@@ -12,10 +12,11 @@ $soft-white: rgba(255, 255, 255, 0.32);
 $softer-white: rgba(255, 255, 255, 0.15);
 $softer-border: rgba(227, 227, 227, 0.58);
 $harder-border: #E3E3E3;
+$blur: 4px;
 
 // Global config.
-$spacing: 20px;
-$negative-spacing: -20px;
+$spacing: 10px;
+$negative-spacing: -10px;
 
 // Desktop.
 @mixin desktop {
@@ -64,6 +65,10 @@ $negative-spacing: -20px;
   }
 }
 
+.text-uppercase {
+  text-transform: capitalize;
+}
+
 .gray-box {
   border-top: 1px solid $softer-border;
   border-bottom: 1px solid $softer-border;
@@ -80,7 +85,7 @@ $negative-spacing: -20px;
 
 .container-divider {
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-  padding-bottom: 100px;
+  padding-bottom: 80px;
 }
 
 .side-shadow {
@@ -113,7 +118,6 @@ $negative-spacing: -20px;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 1.55em;
-  margin-bottom: 6px;
 
   a {
     font-weight: inherit;
@@ -121,3 +125,26 @@ $negative-spacing: -20px;
   }
 }
 
+.h3-styling {
+  font-weight: 500;
+  font-size: 1.25em;
+}
+
+.h4-styling {
+  font-size: 1.17em;
+}
+
+.p-styling {
+  font-size: 1.17em;
+  line-height: 1.65em;
+}
+
+.grayscale {
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  filter: grayscale(100%);
+  filter: gray;
+  filter: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' height='0'><filter id='greyscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0' /></filter></svg>#greyscale");
+}

@@ -37,9 +37,13 @@ body {
 
   header,
   header .container,
-  .header-post .container,
-  .header-team .container,
+  #header-blog .container,
+  #header-post .container,
+  #header-team .container,
   #team-page .container,
+  #header-service .container,
+  #service-page .container,
+  #services-page .container,
   #about,
   #footer {
     min-width: 1200px;
@@ -48,5 +52,4 @@ body {
   .narrow {
     padding: 0 80px;
   }
-
 }

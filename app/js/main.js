@@ -102,6 +102,43 @@ $(document).ready(function(){
     )
   }
 
+  /**
+   * When been redirect to the team page we can focus on a specific member.
+   *
+   * The function check if we have a query string that matches
+   * e.g: 'team/?member=github_account_name'. then we will auto scroll to the
+   * member and display his info as well.
+   *
+   */
+  function focusOnMember() {
+
+    var $teamPage = $('#team-page');
+    // Return early if we are not on the team page.
+    if (!$teamPage.length) {
+      return;
+    }
+
+    // Getting the target member.
+    var memberName = '#' + location.search.split('member=')[1];
+    var $member = $(memberName);
+
+    // Return early if member isn't found.
+    if (!$member.length) {
+      return;
+    }
+
+    // Scroll to member.
+    $('html, body').animate({
+      scrollTop: $(memberName).offset().top
+    }, 800);
+
+    // Display the member info.
+    $member.find('.popup-block').fadeIn()
+  }
+
+  // Scroll to a member when been redirect to the team page from a member link.
+  focusOnMember();
+
   // In case we have a devices that support touch.
   if (is_touch_device()) {
     // Adding touch class to the body tag if it's a touch device.
