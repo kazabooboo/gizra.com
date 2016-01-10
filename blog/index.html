@@ -29,7 +29,7 @@
       <meta name="theme-color" content="#ffffff">
       <!-- End favicon for all platforms -->
 
-      <link rel="stylesheet" href="/css/main.f3ce.css"/>
+      <link rel="stylesheet" href="/css/main.781a.css"/>
       <link href='http://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Hind:400,600,300,500' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600,800' rel='stylesheet' type='text/css'>
@@ -52,10 +52,10 @@
     <body>
 
     <!-- Main content -->
-    <header class="header-post">
+    <header id="header-blog">
   <div class="container">
     <div class="row">
-      <div class="col-sm-10 col-sm-offset-1">
+      <div class="col-sm-12 narrow">
         <nav id="nav" role="navigation" class="navbar navbar-default">
   <div class="navbar-header">
     <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
@@ -73,8 +73,15 @@
     </ul>
   </div>
 </nav>
-<h1 class="gizra-logo"><a href="/">gizra</a></h1>
 
+
+  <h2 class="gizra-logo"><a href="/">gizra</a></h2>
+
+
+
+        <h1 class="text-uppercase">
+          <a href="/blog">Blog</a>
+        </h1>
       </div>
     </div>
   </div>
@@ -82,611 +89,1050 @@
 <section id="blog-page">
   <div class="container">
     <div class="row">
-      <div class="col-sm-10 col-sm-offset-1 blog">
+      <div class="col-sm-12 narrow blog">
+        <div class="row posts">
+          
+            <div class="col-sm-4">
+              <article class="post post-teaser">
+    
+      
+    
+
+    
+      
         
-
           
-            
-          
-
-          
-            
-             
-               
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-          <article class="post post-teaser">
-            <div class="author-details clearfix">
-              <img src="/images/team/avatars/amitaibu.4179.jpg" class="img-responsive img-circle">
-              <p class="name">Amitai Burstein</p>
-              <p class="date"><i class="fa fa-calendar"></i> 30 Dec 2015</p>
-            </div>
-            <h1><a href="/content/elm-hedley-overview">Elm-Hedley, App Overview </a></h1>
-            <div class="post-content">
-              <p>In August 2015 I challenged myself (and later the rest of the Gizra devs) to create a typical web-app with all the bells and whistles in Elm. It&#39;s called <a href="https://gizra.github.io/elm-hedley">elm-hedley</a>, and I&#39;m super proud it is now featuring in Elm&#39;s <a href="http://elm-lang.org/">front page</a>.</p>
-
-<div class="thumbnail">
-  <img src="http://www.gizra.com/assets/images/posts/elm-hedley-overview/image1.jpg">
-</div>
-
-<p>This post is going to give a high level overview and point out some parts that are worth noting. However, before diving into the technical section, it is important to emphasize the virtues of <em>simply doing</em>.</p>
-
-<p>If you would go back in the commits history you would see some nasty stuff that have been completely overhauled and polished. The only way of getting to that &quot;improving&quot; part is of course by starting! Only after that will one become smarter and recognize what needs improving, as well as be more experienced to know how to do it.</p>
-
-            </div>
-            <div class="read-more">
-              <a href="/content/elm-hedley-overview">
-                Read More <i class="fa fa-angle-right"></i>
-              </a>
-            </div>
-          </article>
         
-
-          
-            
-          
-
-          
-            
-             
-               
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-          <article class="post post-teaser">
-            <div class="author-details clearfix">
-              <img src="/images/team/avatars/amitaibu.4179.jpg" class="img-responsive img-circle">
-              <p class="name">Amitai Burstein</p>
-              <p class="date"><i class="fa fa-calendar"></i> 23 Nov 2015</p>
-            </div>
-            <h1><a href="/content/planet-elm">Planet Elm </a></h1>
-            <div class="post-content">
-              <h2><a href="http://planet.elm-lang.org/">planet.elm-lang.org</a> is live!</h2>
-
-<p>Nice, right? Planet Elm and its <a href="http://planet.elm-lang.org/feeds.xml">RSS feed</a> is up and running - just grab it, and the best Elm related posts would appear in your favorite RSS reader.</p>
-
-<div class="thumbnail">
-  <img src="http://www.gizra.com/assets/images/posts/planet-elm/image1.jpg">
-</div>
-
-<p>I felt the need for such a site the day I started with Elm. Getting the Gizra devs to <a href="https://github.com/Gizra/planet-elm">build</a> it was the next logical thing.</p>
-
-<p>Having this main site as a central place for aggregating all the interesting content about Elm is yet another step in getting Elm into the mainstream.</p>
-
-<p>If you maintain your own blog, go ahead, and <a href="https://github.com/Gizra/planet-elm/wiki/Planet-Elm-guidelines">submit your RSS feeds</a>.</p>
-
-            </div>
-            <div class="read-more">
-              <a href="/content/planet-elm">
-                Read More <i class="fa fa-angle-right"></i>
-              </a>
-            </div>
-          </article>
+      
+    
+      
         
-
-          
-            
-          
-
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-               
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-          <article class="post post-teaser">
-            <div class="author-details clearfix">
-              <img src="/images/team/avatars/YaronMiro.00e7.jpg" class="img-responsive img-circle">
-              <p class="name">Yaron Miro</p>
-              <p class="date"><i class="fa fa-calendar"></i> 19 Nov 2015</p>
-            </div>
-            <h1><a href="/content/mindful-custom-breakpoints-bootstrap">Mindful Custom Breakpoints </a></h1>
-            <div class="post-content">
-              <p>The vast majority of our projects at Gizra use <a href="http://getbootstrap.com/">Bootstrap</a> for layout. We spend a lot of time and effort creating the perfect responsive layout and UX across all breakpoints. As Bootstrap comes by default with four breaking points, we naturally implemented them all, until we started asking ourself:</p>
-
-<p><strong>Q</strong>: Is responsive really needed?<br>
-<strong>A</strong>: Yes, Of course.</p>
-
-<p><strong>Q</strong>: Do we always need so many breakpoints?<br>
-<strong>A</strong>: No. Or, to say it differently: Yes. But not necessarily immediately.</p>
-
-<p>Don&#39;t get me wrong. I&#39;m not against responsive design. I&#39;m just saying each breakpoint has an impact on the project length and budget. It&#39;s up to us to help the client decide how many breakpoints are right for them. As you know, Bootstrap can have <a href="http://mindful-custom-breakpoint-bootstrap.gizra.com/">custom breakpoints</a>.</p>
-
-<div class="thumbnail">
-  <iframe src="http://gfycat.com/ifr/DistortedBarrenGroundbeetle" frameborder="0" scrolling="no" width="800" height="555" style="-webkit-backface-visibility: hidden;-webkit-transform: scale(1);" ></iframe>
-  <div class="caption">Bootstrap default layout VS Bootstrap custom layout</div>
-</div>
-
-            </div>
-            <div class="read-more">
-              <a href="/content/mindful-custom-breakpoints-bootstrap">
-                Read More <i class="fa fa-angle-right"></i>
-              </a>
-            </div>
-          </article>
+      
+    
+      
         
-
-          
-            
-          
-
-          
-            
-             
-               
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-          <article class="post post-teaser">
-            <div class="author-details clearfix">
-              <img src="/images/team/avatars/amitaibu.4179.jpg" class="img-responsive img-circle">
-              <p class="name">Amitai Burstein</p>
-              <p class="date"><i class="fa fa-calendar"></i> 05 Nov 2015</p>
-            </div>
-            <h1><a href="/content/elm-challenge">Elm Challenge </a></h1>
-            <div class="post-content">
-              <p>As part of our adoption of <a href="http://www.gizra.com/content/thinking-choosing-elm/">Elm in production</a>, Gizra devs are learning and practicing their Elm skills.</p>
-
-<p>After they are done going over the existing videos/tutorials, we let them get their hands dirty. <a href="https://github.com/Gizra/elm-hedley">elm-hedley</a> was created just for that - to simulate a simple yet typical web app with login, RESTful, etc.</p>
-
-<p>Here&#39;s the <a href="https://gizra.github.io/elm-hedley">existing app</a>. As you see each event appears as a clickable link.</p>
-
-<p>The challenge is to add a counter next to each event label that increments when clicked. When you refresh the page (F5) it shouldn&#39;t remember the previous clicks and should start back at 0.</p>
-
-<p>In short, it should look like this (notice the bottom left list):</p>
-
-<iframe src="http://gfycat.com/ifr/MellowUnpleasantBoar" frameborder="0" scrolling="no" width="653" height="390" style="-webkit-backface-visibility: hidden;-webkit-transform: scale(1);" ></iframe>
-
-<p>Go ahead, fork the repo and try for yourself. And don&#39;t peek below, as it has the answer!</p>
-
-<p>.<br>
-.<br>
-.<br>
-.<br>
-.  </p>
-
-            </div>
-            <div class="read-more">
-              <a href="/content/elm-challenge">
-                Read More <i class="fa fa-angle-right"></i>
-              </a>
-            </div>
-          </article>
+      
+    
+      
         
-
-          
-            
-          
-
-          
-            
-             
-               
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-          <article class="post post-teaser">
-            <div class="author-details clearfix">
-              <img src="/images/team/avatars/amitaibu.4179.jpg" class="img-responsive img-circle">
-              <p class="name">Amitai Burstein</p>
-              <p class="date"><i class="fa fa-calendar"></i> 05 Nov 2015</p>
-            </div>
-            <h1><a href="/content/decoupled-drupal-drupalcon-los-angeles">Decoupled Drupal: When, Why, and How - The Video </a></h1>
-            <div class="post-content">
-              <p>I believe it&#39;s safe to say that Decoupled Drupal is here to stay. Back in DrupalCon Los Angeles my good friend <a href="https://pantheon.io/team/josh-koenig">Josh Koenig</a> from <a href="https://pantheon.io/">Pantheon</a> and I teamed up to share our experience with it.</p>
-
-<p>Josh asked me if I could do the presentation with him and I immediately agreed, as Josh is an awesome presenter and I knew it&#39;s going to be fun. My answer, if I recall correctly, was:</p>
-
-<blockquote>If the session gets selected it will need to be partially weird. And you might need to grow a mustache for that.</blockquote>
-
-<p>He didn&#39;t grow a mustache. But it was fun and full of energy. And it has a lot of very pragmatic tips, such as <strong>Headless Drupal is a terrible idea!</strong></p>
-
-<p>Anyway, enough text - here is the video:</p>
-
-<iframe width="640" height="360" src="https://www.youtube.com/embed/bLWa3SbEEa8?rel=0" frameborder="0" allowfullscreen></iframe>
-
-            </div>
-            <div class="read-more">
-              <a href="/content/decoupled-drupal-drupalcon-los-angeles">
-                Read More <i class="fa fa-angle-right"></i>
-              </a>
-            </div>
-          </article>
+      
+    
+      
         
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+
+  <div class="article">
+    <!-- The post teaser main image. -->
+    <a href="/content/elm-hedley-overview" class="main-image">
+      
+        <img src="/images/post/1.f65a.jpg" alt="Elm-Hedley, App Overview">
+      
+    </a>
+    <!-- The Author detail's -->
+    <div class="author-details">
+      <!-- Link to author on the team page if author is a member -->
+      
+        <p class="name">By <a href="/team?member=amitaibu">Amitai Burstein</a> </p>
+      
+      <a href="/content/elm-hedley-overview">
+        <img src="/images/team/avatars/amitaibu.4179.jpg" class="img-responsive img-circle avatar grayscale">
+      </a>
+      <p class="date">Dec 30, 2015</p>
+    </div>
+    <p class="title" title="Elm-Hedley, App Overview"><a href="/content/elm-hedley-overview" >Elm-Hedley, App Overview</a></p>
+  </div>
+</article>
+
+            </div>
+          
+            <div class="col-sm-4">
+              <article class="post post-teaser">
+    
+      
+    
+
+    
+      
+        
+          
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+
+  <div class="article">
+    <!-- The post teaser main image. -->
+    <a href="/content/planet-elm" class="main-image">
+      
+        <img src="/images/post/2.8d55.jpg" alt="Planet Elm">
+      
+    </a>
+    <!-- The Author detail's -->
+    <div class="author-details">
+      <!-- Link to author on the team page if author is a member -->
+      
+        <p class="name">By <a href="/team?member=amitaibu">Amitai Burstein</a> </p>
+      
+      <a href="/content/planet-elm">
+        <img src="/images/team/avatars/amitaibu.4179.jpg" class="img-responsive img-circle avatar grayscale">
+      </a>
+      <p class="date">Nov 23, 2015</p>
+    </div>
+    <p class="title" title="Planet Elm"><a href="/content/planet-elm" >Planet Elm</a></p>
+  </div>
+</article>
+
+            </div>
+          
+            <div class="col-sm-4">
+              <article class="post post-teaser">
+    
+      
+    
+
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+
+  <div class="article">
+    <!-- The post teaser main image. -->
+    <a href="/content/mindful-custom-breakpoints-bootstrap" class="main-image">
+      
+        <img src="/images/post/3.326e.jpg" alt="Mindful Custom Breakpoints">
+      
+    </a>
+    <!-- The Author detail's -->
+    <div class="author-details">
+      <!-- Link to author on the team page if author is a member -->
+      
+        <p class="name">By <a href="/team?member=YaronMiro">Yaron Miro</a> </p>
+      
+      <a href="/content/mindful-custom-breakpoints-bootstrap">
+        <img src="/images/team/avatars/YaronMiro.00e7.jpg" class="img-responsive img-circle avatar grayscale">
+      </a>
+      <p class="date">Nov 19, 2015</p>
+    </div>
+    <p class="title" title="Mindful Custom Breakpoints"><a href="/content/mindful-custom-breakpoints-bootstrap" >Mindful Custom Breakpoints</a></p>
+  </div>
+</article>
+
+            </div>
+          
+            <div class="col-sm-4">
+              <article class="post post-teaser">
+    
+      
+    
+
+    
+      
+        
+          
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+
+  <div class="article">
+    <!-- The post teaser main image. -->
+    <a href="/content/elm-challenge" class="main-image">
+      
+        <img src="/images/post/4.3556.jpg" alt="Elm Challenge">
+      
+    </a>
+    <!-- The Author detail's -->
+    <div class="author-details">
+      <!-- Link to author on the team page if author is a member -->
+      
+        <p class="name">By <a href="/team?member=amitaibu">Amitai Burstein</a> </p>
+      
+      <a href="/content/elm-challenge">
+        <img src="/images/team/avatars/amitaibu.4179.jpg" class="img-responsive img-circle avatar grayscale">
+      </a>
+      <p class="date">Nov 5, 2015</p>
+    </div>
+    <p class="title" title="Elm Challenge"><a href="/content/elm-challenge" >Elm Challenge</a></p>
+  </div>
+</article>
+
+            </div>
+          
+            <div class="col-sm-4">
+              <article class="post post-teaser">
+    
+      
+    
+
+    
+      
+        
+          
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+
+  <div class="article">
+    <!-- The post teaser main image. -->
+    <a href="/content/decoupled-drupal-drupalcon-los-angeles" class="main-image">
+      
+        <img src="/images/post/5.9861.jpg" alt="Decoupled Drupal: When, Why, and How - The Video">
+      
+    </a>
+    <!-- The Author detail's -->
+    <div class="author-details">
+      <!-- Link to author on the team page if author is a member -->
+      
+        <p class="name">By <a href="/team?member=amitaibu">Amitai Burstein</a> </p>
+      
+      <a href="/content/decoupled-drupal-drupalcon-los-angeles">
+        <img src="/images/team/avatars/amitaibu.4179.jpg" class="img-responsive img-circle avatar grayscale">
+      </a>
+      <p class="date">Nov 5, 2015</p>
+    </div>
+    <p class="title" title="Decoupled Drupal: When, Why, and How - The Video"><a href="/content/decoupled-drupal-drupalcon-los-angeles" >Decoupled Drupal: When, Why, and How - The Video</a></p>
+  </div>
+</article>
+
+            </div>
+          
+            <div class="col-sm-4">
+              <article class="post post-teaser">
+    
+      
+    
+
+    
+      
+        
+          
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+
+  <div class="article">
+    <!-- The post teaser main image. -->
+    <a href="/content/thinking-choosing-elm" class="main-image">
+      
+        <img src="/images/post/6.f59f.jpg" alt="Thinking (And Choosing) Elm">
+      
+    </a>
+    <!-- The Author detail's -->
+    <div class="author-details">
+      <!-- Link to author on the team page if author is a member -->
+      
+        <p class="name">By <a href="/team?member=amitaibu">Amitai Burstein</a> </p>
+      
+      <a href="/content/thinking-choosing-elm">
+        <img src="/images/team/avatars/amitaibu.4179.jpg" class="img-responsive img-circle avatar grayscale">
+      </a>
+      <p class="date">Oct 22, 2015</p>
+    </div>
+    <p class="title" title="Thinking (And Choosing) Elm"><a href="/content/thinking-choosing-elm" >Thinking (And Choosing) Elm</a></p>
+  </div>
+</article>
+
+            </div>
+          
+            <div class="col-sm-4">
+              <article class="post post-teaser">
+    
+      
+    
+
+    
+      
+        
+          
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+
+  <div class="article">
+    <!-- The post teaser main image. -->
+    <a href="/content/elmlang-headless-drupal" class="main-image">
+      
+        <img src="/images/post/7.79a3.jpg" alt="Elm Loves Headless Drupal">
+      
+    </a>
+    <!-- The Author detail's -->
+    <div class="author-details">
+      <!-- Link to author on the team page if author is a member -->
+      
+        <p class="name">By <a href="/team?member=amitaibu">Amitai Burstein</a> </p>
+      
+      <a href="/content/elmlang-headless-drupal">
+        <img src="/images/team/avatars/amitaibu.4179.jpg" class="img-responsive img-circle avatar grayscale">
+      </a>
+      <p class="date">Oct 1, 2015</p>
+    </div>
+    <p class="title" title="Elm Loves Headless Drupal"><a href="/content/elmlang-headless-drupal" >Elm Loves Headless Drupal</a></p>
+  </div>
+</article>
+
+            </div>
+          
+            <div class="col-sm-4">
+              <article class="post post-teaser">
+    
+      
+    
+
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+
+  <div class="article">
+    <!-- The post teaser main image. -->
+    <a href="/content/sticky-floors-happy-kids" class="main-image">
+      
+        <img src="/images/post/8.2b82.jpg" alt="Sticky Floors and Happy Kids">
+      
+    </a>
+    <!-- The Author detail's -->
+    <div class="author-details">
+      <!-- Link to author on the team page if author is a member -->
+      
+        <p class="name">By <a href="/team?member=OritGeron">Orit Geron</a> </p>
+      
+      <a href="/content/sticky-floors-happy-kids">
+        <img src="/images/team/avatars/OritGeron.9020.jpg" class="img-responsive img-circle avatar grayscale">
+      </a>
+      <p class="date">Sep 29, 2015</p>
+    </div>
+    <p class="title" title="Sticky Floors and Happy Kids"><a href="/content/sticky-floors-happy-kids" >Sticky Floors and Happy Kids</a></p>
+  </div>
+</article>
+
+            </div>
+          
+            <div class="col-sm-4">
+              <article class="post post-teaser">
+    
+      
+    
+
+    
+      
+        
+          
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+
+  <div class="article">
+    <!-- The post teaser main image. -->
+    <a href="/content/visual-regression-tutorials" class="main-image">
+      
+        <img src="/images/post/9.7c78.jpg" alt="Visual Regression Tutorials">
+      
+    </a>
+    <!-- The Author detail's -->
+    <div class="author-details">
+      <!-- Link to author on the team page if author is a member -->
+      
+        <p class="name">By <a href="/team?member=amitaibu">Amitai Burstein</a> </p>
+      
+      <a href="/content/visual-regression-tutorials">
+        <img src="/images/team/avatars/amitaibu.4179.jpg" class="img-responsive img-circle avatar grayscale">
+      </a>
+      <p class="date">Aug 4, 2015</p>
+    </div>
+    <p class="title" title="Visual Regression Tutorials"><a href="/content/visual-regression-tutorials" >Visual Regression Tutorials</a></p>
+  </div>
+</article>
+
+            </div>
+          
+        </div>
       </div>
     </div>
     <!--Pager Begin-->
     <div class="row">
-      <div id="pager" class="col-sm-offset-1 col-sm-10">
+      <div id="pager" class="col-sm-12 narrow">
         <ul class="pager-nav">
           <li class="prev text-uppercase">
             
           </li>
           <li class="next text-uppercase">
             
-            <a href="/blog/page2">Next</a>
+            <a href="/blog/page2">
+              <span>Next <i class="fa fa-chevron-circle-right"></i></span>
+            </a>
             
           </li>
         </ul>
@@ -705,7 +1151,7 @@
         <div class="background">
           <div class="container">
             <div class="row">
-              <div class="col-sm-12 narrow">
+              <div class="col-sm-12">
                 <h2 class="title">Talk to us</h2>
                 <div class="clearfix">
                   <address>
@@ -724,6 +1170,9 @@
                     <span class="link twitter">
                       <a href="https://twitter.com/gizra_drupal" target="_blank"><i class="fa fa-twitter-square"></i></a>
                     </span>
+                    <span class="link linkedin">
+                      <a href="https://www.linkedin.com/company/gizra-ltd" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+                    </span>
                   </div>
                 </div>
               </div>
@@ -740,7 +1189,6 @@
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
 
-    <script src="/js/scripts.c3ac.js"></script>
-
+    <script src="/js/scripts.ddd6.js"></script>
     </body>
 </html>

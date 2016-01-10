@@ -29,7 +29,7 @@
       <meta name="theme-color" content="#ffffff">
       <!-- End favicon for all platforms -->
 
-      <link rel="stylesheet" href="/css/main.f3ce.css"/>
+      <link rel="stylesheet" href="/css/main.781a.css"/>
       <link href='http://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Hind:400,600,300,500' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600,800' rel='stylesheet' type='text/css'>
@@ -52,10 +52,10 @@
     <body>
 
     <!-- Main content -->
-    <header class="header-post">
+    <header id="header-blog">
   <div class="container">
     <div class="row">
-      <div class="col-sm-10 col-sm-offset-1">
+      <div class="col-sm-12 narrow">
         <nav id="nav" role="navigation" class="navbar navbar-default">
   <div class="navbar-header">
     <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
@@ -73,8 +73,15 @@
     </ul>
   </div>
 </nav>
-<h1 class="gizra-logo"><a href="/">gizra</a></h1>
 
+
+  <h2 class="gizra-logo"><a href="/">gizra</a></h2>
+
+
+
+        <h1 class="text-uppercase">
+          <a href="/blog">Blog</a>
+        </h1>
       </div>
     </div>
   </div>
@@ -82,598 +89,1054 @@
 <section id="blog-page">
   <div class="container">
     <div class="row">
-      <div class="col-sm-10 col-sm-offset-1 blog">
+      <div class="col-sm-12 narrow blog">
+        <div class="row posts">
+          
+            <div class="col-sm-4">
+              <article class="post post-teaser">
+    
+      
+    
+
+    
+      
         
-
           
-            
-          
-
-          
-            
-             
-               
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-          <article class="post post-teaser">
-            <div class="author-details clearfix">
-              <img src="/images/team/avatars/amitaibu.4179.jpg" class="img-responsive img-circle">
-              <p class="name">Amitai Burstein</p>
-              <p class="date"><i class="fa fa-calendar"></i> 06 May 2014</p>
-            </div>
-            <h1><a href="/content/restful-server">RESTful module </a></h1>
-            <div class="post-content">
-              <p><a href="https://github.com/Gizra/restful#restful-best-practices-for-drupal">RESTful module</a> is a new approach to providing a REST server in Drupal. Its concepts and philosophy appears in the module&#39;s README so I won&#39;t repeat it, but I&#39;d like to go over some of the key points.</p>
-<div class="highlight"><pre><code class="php language-php" data-lang="php"><span class="cp">&lt;?php</span>
-<span class="c1">// Handler v1.0</span>
-<span class="nv">$handler</span> <span class="o">=</span> <span class="nx">restful_get_restful_handler</span><span class="p">(</span><span class="s1">&#39;articles&#39;</span><span class="p">);</span>
-<span class="c1">// GET method.</span>
-<span class="nv">$result</span> <span class="o">=</span> <span class="nv">$handler</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
-
-<span class="c1">// Output:</span>
-<span class="k">array</span><span class="p">(</span>
-  <span class="s1">&#39;id&#39;</span> <span class="o">=&gt;</span> <span class="mi">1</span><span class="p">,</span>
-  <span class="s1">&#39;label&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;example title&#39;</span><span class="p">,</span>
-  <span class="s1">&#39;self&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;https://example.com/node/1&#39;</span><span class="p">,</span>
-<span class="p">);</span>
-
-<span class="c1">// Handler v1.1 extends v1.0, and removes the &quot;self&quot; property from the</span>
-<span class="c1">// exposed properties.</span>
-<span class="nv">$handler</span> <span class="o">=</span> <span class="nx">restful_get_restful_handler</span><span class="p">(</span><span class="s1">&#39;articles&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
-<span class="nv">$result</span> <span class="o">=</span> <span class="nv">$handler</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
-
-<span class="c1">// Output:</span>
-<span class="k">array</span><span class="p">(</span>
-  <span class="s1">&#39;id&#39;</span> <span class="o">=&gt;</span> <span class="mi">1</span><span class="p">,</span>
-  <span class="s1">&#39;label&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;example title&#39;</span><span class="p">,</span>
-<span class="p">);</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</code></pre></div>
-<p>In the past year almost every site we have is either completely decoupled from the server side where AngularJs serves the webapp, or AngularJS plays a smaller part, and we just embed web components inside a Drupal page to provide a slick UI.</p>
-
-<p>Up until now our go to module was RestWs by the wonderful Klausi, which wraps around Entity API module&#39;s metadata wrapper. Basically, it hands over to the metadata wrapper the responsibility for the access and for the actual value it spits out.
-It works fine, however the JSON it exposes has too much information.</p>
-
-            </div>
-            <div class="read-more">
-              <a href="/content/restful-server">
-                Read More <i class="fa fa-angle-right"></i>
-              </a>
-            </div>
-          </article>
         
-
-          
-            
-          
-
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-               
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-          <article class="post post-teaser">
-            <div class="author-details clearfix">
-              <img src="/images/team/avatars/niryariv.4f24.jpg" class="img-responsive img-circle">
-              <p class="name">Nir Yariv</p>
-              <p class="date"><i class="fa fa-calendar"></i> 13 Mar 2014</p>
-            </div>
-            <h1><a href="/content/casa-del-lector">Casa del Lector </a></h1>
-            <div class="post-content">
-              <p>Last week saw the launch of a pretty unique <a href="http://gizra.github.io/CDL/">project</a> for us. It&#39;s not every day a product we&#39;ve worked on gets a <a href="http://cultura.elpais.com/cultura/2014/03/05/actualidad/1394047004_090821.html">write up on El Pais</a>, or has this kind of launch event:</p>
-
-<p><img src="/assets/images/posts/casa-del-lector/IMG_8388-2.JPG" alt=""></p>
-
-<p>The target audience is a bit unusual as well. While it can be accessed like any other site, it&#39;s targeted to be used inside a specific exhibition in the <a href="http://casalector.fundaciongsr.com/">Casa del Lector</a> museum in Madrid, on tablets handed out to the museum visitors:</p>
-
-<p><img src="/assets/images/posts/casa-del-lector/IMG_8259%20-%202.JPG" alt=""></p>
-
-<p>We took great care to stay within the touch UI conventions. When entering the site, the user is presented with a network of connections between items. As she zooms, details are revealed - subitems, their connections and finally their titles:</p>
-
-<p><img src="/assets/images/posts/casa-del-lector/cdl-map-1.gif" alt=""></p>
-
-            </div>
-            <div class="read-more">
-              <a href="/content/casa-del-lector">
-                Read More <i class="fa fa-angle-right"></i>
-              </a>
-            </div>
-          </article>
+      
+    
+      
         
-
-          
-            
-          
-
-          
-            
-             
-               
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-          <article class="post post-teaser">
-            <div class="author-details clearfix">
-              <img src="/images/team/avatars/amitaibu.4179.jpg" class="img-responsive img-circle">
-              <p class="name">Amitai Burstein</p>
-              <p class="date"><i class="fa fa-calendar"></i> 20 Jan 2014</p>
-            </div>
-            <h1><a href="/content/zariz-entity-reference">Zariz Loves Entity Reference </a></h1>
-            <div class="post-content">
-              <p>Zariz is now integrated with entity reference and is &quot;branch&quot; aware. This means
-that the reference will change on the fly. For example:</p>
-
-            </div>
-            <div class="read-more">
-              <a href="/content/zariz-entity-reference">
-                Read More <i class="fa fa-angle-right"></i>
-              </a>
-            </div>
-          </article>
+      
+    
+      
         
-
-          
-            
-          
-
-          
-            
-             
-               
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-          <article class="post post-teaser">
-            <div class="author-details clearfix">
-              <img src="/images/team/avatars/amitaibu.4179.jpg" class="img-responsive img-circle">
-              <p class="name">Amitai Burstein</p>
-              <p class="date"><i class="fa fa-calendar"></i> 20 Jan 2014</p>
-            </div>
-            <h1><a href="/content/openscholar-new-bilbio">OpenScholar and the new Biblio </a></h1>
-            <div class="post-content">
-              <p>OpenScholar is the de facto go to solution for academic sites. Over the past year we saw it being adopted in many Harvard departments and higher ed institutions worldwide.</p>
-
-<p><img src="/assets/images/posts/os-biblio/6.jpg" alt=""></p>
-
-<p>I&#39;m proud that our work is not just based on open source, but also contributes to it - big time. Case in point, the <a href="https://github.com/Gizra/biblio">Biblio</a> module which is responsible for bibliographies and citations since back in Drupal 4.6, and has provided a great solution. It was becoming clear the 4.6 architecture is showing its age, and could use an overhaul.</p>
-
-            </div>
-            <div class="read-more">
-              <a href="/content/openscholar-new-bilbio">
-                Read More <i class="fa fa-angle-right"></i>
-              </a>
-            </div>
-          </article>
+      
+    
+      
         
-
-          
-            
-          
-
-          
-            
-             
-               
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-          <article class="post post-teaser">
-            <div class="author-details clearfix">
-              <img src="/images/team/avatars/amitaibu.4179.jpg" class="img-responsive img-circle">
-              <p class="name">Amitai Burstein</p>
-              <p class="date"><i class="fa fa-calendar"></i> 16 Jan 2014</p>
-            </div>
-            <h1><a href="/content/zariz-on-tv">Zariz on TV </a></h1>
-            <div class="post-content">
-              <p>I had a fun conversation with Jam this morning, regarding <a href="http://www.gizra.com/content/zariz-means-agile/">Zariz</a> - the set of Drupal modules we&#39;re developing that (a) <a href="http://www.gizra.com/content/zariz-in-pics/">brings version control into the content space</a> and (b) <a href="http://www.gizra.com/content/drupal-x5-faster/">brings Drupal into the static site space</a>. If you&#39;re into that kind of stuff, you might enjoy it too:</p>
-
-<iframe width="560" height="315" src="//www.youtube.com/embed/vGUSXwURVVo" frameborder="0" allowfullscreen></iframe>
-
-            </div>
-            <div class="read-more">
-              <a href="/content/zariz-on-tv">
-                Read More <i class="fa fa-angle-right"></i>
-              </a>
-            </div>
-          </article>
+      
+    
+      
         
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+
+  <div class="article">
+    <!-- The post teaser main image. -->
+    <a href="/content/og7-drupalcon-london/" class="main-image">
+      
+        <img src="/images/post/1.f65a.jpg" alt="OG7 Drupalcon London">
+      
+    </a>
+    <!-- The Author detail's -->
+    <div class="author-details">
+      <!-- Link to author on the team page if author is a member -->
+      
+        <p class="name">By <a href="/team?member=amitaibu">Amitai Burstein</a> </p>
+      
+      <a href="/content/og7-drupalcon-london/">
+        <img src="/images/team/avatars/amitaibu.4179.jpg" class="img-responsive img-circle avatar grayscale">
+      </a>
+      <p class="date">Sep 18, 2011</p>
+    </div>
+    <p class="title" title="OG7 Drupalcon London"><a href="/content/og7-drupalcon-london/" >OG7 Drupalcon London</a></p>
+  </div>
+</article>
+
+            </div>
+          
+            <div class="col-sm-4">
+              <article class="post post-teaser">
+    
+      
+    
+
+    
+      
+        
+          
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+
+  <div class="article">
+    <!-- The post teaser main image. -->
+    <a href="/content/user-modal/" class="main-image">
+      
+        <img src="/images/post/2.8d55.jpg" alt="User modal">
+      
+    </a>
+    <!-- The Author detail's -->
+    <div class="author-details">
+      <!-- Link to author on the team page if author is a member -->
+      
+        <p class="name">By <a href="/team?member=amitaibu">Amitai Burstein</a> </p>
+      
+      <a href="/content/user-modal/">
+        <img src="/images/team/avatars/amitaibu.4179.jpg" class="img-responsive img-circle avatar grayscale">
+      </a>
+      <p class="date">Jun 27, 2011</p>
+    </div>
+    <p class="title" title="User modal"><a href="/content/user-modal/" >User modal</a></p>
+  </div>
+</article>
+
+            </div>
+          
+            <div class="col-sm-4">
+              <article class="post post-teaser">
+    
+      
+    
+
+    
+      
+        
+          
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+
+  <div class="article">
+    <!-- The post teaser main image. -->
+    <a href="/content/og-7x-11-rc2-out/" class="main-image">
+      
+        <img src="/images/post/3.326e.jpg" alt="OG 7.x-1.1-RC2 is out! ">
+      
+    </a>
+    <!-- The Author detail's -->
+    <div class="author-details">
+      <!-- Link to author on the team page if author is a member -->
+      
+        <p class="name">By <a href="/team?member=amitaibu">Amitai Burstein</a> </p>
+      
+      <a href="/content/og-7x-11-rc2-out/">
+        <img src="/images/team/avatars/amitaibu.4179.jpg" class="img-responsive img-circle avatar grayscale">
+      </a>
+      <p class="date">May 18, 2011</p>
+    </div>
+    <p class="title" title="OG 7.x-1.1-RC2 is out! "><a href="/content/og-7x-11-rc2-out/" >OG 7.x-1.1-RC2 is out! </a></p>
+  </div>
+</article>
+
+            </div>
+          
+            <div class="col-sm-4">
+              <article class="post post-teaser">
+    
+      
+    
+
+    
+      
+        
+          
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+
+  <div class="article">
+    <!-- The post teaser main image. -->
+    <a href="/content/ctools-context-tutorial/" class="main-image">
+      
+        <img src="/images/post/4.3556.jpg" alt="CTools context tutorial">
+      
+    </a>
+    <!-- The Author detail's -->
+    <div class="author-details">
+      <!-- Link to author on the team page if author is a member -->
+      
+        <p class="name">By <a href="/team?member=amitaibu">Amitai Burstein</a> </p>
+      
+      <a href="/content/ctools-context-tutorial/">
+        <img src="/images/team/avatars/amitaibu.4179.jpg" class="img-responsive img-circle avatar grayscale">
+      </a>
+      <p class="date">May 11, 2011</p>
+    </div>
+    <p class="title" title="CTools context tutorial"><a href="/content/ctools-context-tutorial/" >CTools context tutorial</a></p>
+  </div>
+</article>
+
+            </div>
+          
+            <div class="col-sm-4">
+              <article class="post post-teaser">
+    
+      
+    
+
+    
+      
+        
+          
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+
+  <div class="article">
+    <!-- The post teaser main image. -->
+    <a href="/content/data-migration-part-2/" class="main-image">
+      
+        <img src="/images/post/5.9861.jpg" alt="Data Migration - part 2">
+      
+    </a>
+    <!-- The Author detail's -->
+    <div class="author-details">
+      <!-- Link to author on the team page if author is a member -->
+      
+        <p class="name">By <a href="/team?member=amitaibu">Amitai Burstein</a> </p>
+      
+      <a href="/content/data-migration-part-2/">
+        <img src="/images/team/avatars/amitaibu.4179.jpg" class="img-responsive img-circle avatar grayscale">
+      </a>
+      <p class="date">Jan 24, 2011</p>
+    </div>
+    <p class="title" title="Data Migration - part 2"><a href="/content/data-migration-part-2/" >Data Migration - part 2</a></p>
+  </div>
+</article>
+
+            </div>
+          
+            <div class="col-sm-4">
+              <article class="post post-teaser">
+    
+      
+    
+
+    
+      
+        
+          
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+
+  <div class="article">
+    <!-- The post teaser main image. -->
+    <a href="/content/data-migration-part-1/" class="main-image">
+      
+        <img src="/images/post/6.f59f.jpg" alt="Data Migration - part 1">
+      
+    </a>
+    <!-- The Author detail's -->
+    <div class="author-details">
+      <!-- Link to author on the team page if author is a member -->
+      
+        <p class="name">By <a href="/team?member=amitaibu">Amitai Burstein</a> </p>
+      
+      <a href="/content/data-migration-part-1/">
+        <img src="/images/team/avatars/amitaibu.4179.jpg" class="img-responsive img-circle avatar grayscale">
+      </a>
+      <p class="date">Jan 6, 2011</p>
+    </div>
+    <p class="title" title="Data Migration - part 1"><a href="/content/data-migration-part-1/" >Data Migration - part 1</a></p>
+  </div>
+</article>
+
+            </div>
+          
+            <div class="col-sm-4">
+              <article class="post post-teaser">
+    
+      
+    
+
+    
+      
+        
+          
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+
+  <div class="article">
+    <!-- The post teaser main image. -->
+    <a href="/content/drupalcamp-athens/" class="main-image">
+      
+        <img src="/images/post/7.79a3.jpg" alt="Drupalcamp Athens">
+      
+    </a>
+    <!-- The Author detail's -->
+    <div class="author-details">
+      <!-- Link to author on the team page if author is a member -->
+      
+        <p class="name">By <a href="/team?member=amitaibu">Amitai Burstein</a> </p>
+      
+      <a href="/content/drupalcamp-athens/">
+        <img src="/images/team/avatars/amitaibu.4179.jpg" class="img-responsive img-circle avatar grayscale">
+      </a>
+      <p class="date">Dec 26, 2010</p>
+    </div>
+    <p class="title" title="Drupalcamp Athens"><a href="/content/drupalcamp-athens/" >Drupalcamp Athens</a></p>
+  </div>
+</article>
+
+            </div>
+          
+            <div class="col-sm-4">
+              <article class="post post-teaser">
+    
+      
+    
+
+    
+      
+        
+          
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+
+  <div class="article">
+    <!-- The post teaser main image. -->
+    <a href="/content/moment-zen-1/" class="main-image">
+      
+        <img src="/images/post/8.2b82.jpg" alt="A moment of Zen #1">
+      
+    </a>
+    <!-- The Author detail's -->
+    <div class="author-details">
+      <!-- Link to author on the team page if author is a member -->
+      
+        <p class="name">By <a href="/team?member=amitaibu">Amitai Burstein</a> </p>
+      
+      <a href="/content/moment-zen-1/">
+        <img src="/images/team/avatars/amitaibu.4179.jpg" class="img-responsive img-circle avatar grayscale">
+      </a>
+      <p class="date">Dec 26, 2010</p>
+    </div>
+    <p class="title" title="A moment of Zen #1"><a href="/content/moment-zen-1/" >A moment of Zen #1</a></p>
+  </div>
+</article>
+
+            </div>
+          
+            <div class="col-sm-4">
+              <article class="post post-teaser">
+    
+      
+    
+
+    
+      
+        
+          
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+
+  <div class="article">
+    <!-- The post teaser main image. -->
+    <a href="/content/rounded-corners/" class="main-image">
+      
+        <img src="/images/post/9.7c78.jpg" alt="Rounded corners">
+      
+    </a>
+    <!-- The Author detail's -->
+    <div class="author-details">
+      <!-- Link to author on the team page if author is a member -->
+      
+        <p class="name">By <a href="/team?member=amitaibu">Amitai Burstein</a> </p>
+      
+      <a href="/content/rounded-corners/">
+        <img src="/images/team/avatars/amitaibu.4179.jpg" class="img-responsive img-circle avatar grayscale">
+      </a>
+      <p class="date">Oct 20, 2010</p>
+    </div>
+    <p class="title" title="Rounded corners"><a href="/content/rounded-corners/" >Rounded corners</a></p>
+  </div>
+</article>
+
+            </div>
+          
+        </div>
       </div>
     </div>
     <!--Pager Begin-->
     <div class="row">
-      <div id="pager" class="col-sm-offset-1 col-sm-10">
+      <div id="pager" class="col-sm-12 narrow">
         <ul class="pager-nav">
           <li class="prev text-uppercase">
             
-            <a href="/blog/page8">Previous</a>
+            <a href="/blog/page8">
+              <span><i class="fa fa-chevron-circle-left"></i> Previous</span>
+            </a>
             
           </li>
           <li class="next text-uppercase">
             
-            <a href="/blog/page10">Next</a>
+            <a href="/blog/page10">
+              <span>Next <i class="fa fa-chevron-circle-right"></i></span>
+            </a>
             
           </li>
         </ul>
@@ -692,7 +1155,7 @@ that the reference will change on the fly. For example:</p>
         <div class="background">
           <div class="container">
             <div class="row">
-              <div class="col-sm-12 narrow">
+              <div class="col-sm-12">
                 <h2 class="title">Talk to us</h2>
                 <div class="clearfix">
                   <address>
@@ -711,6 +1174,9 @@ that the reference will change on the fly. For example:</p>
                     <span class="link twitter">
                       <a href="https://twitter.com/gizra_drupal" target="_blank"><i class="fa fa-twitter-square"></i></a>
                     </span>
+                    <span class="link linkedin">
+                      <a href="https://www.linkedin.com/company/gizra-ltd" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+                    </span>
                   </div>
                 </div>
               </div>
@@ -727,7 +1193,6 @@ that the reference will change on the fly. For example:</p>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
 
-    <script src="/js/scripts.c3ac.js"></script>
-
+    <script src="/js/scripts.ddd6.js"></script>
     </body>
 </html>

@@ -29,7 +29,7 @@
       <meta name="theme-color" content="#ffffff">
       <!-- End favicon for all platforms -->
 
-      <link rel="stylesheet" href="/css/main.f3ce.css"/>
+      <link rel="stylesheet" href="/css/main.781a.css"/>
       <link href='http://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Hind:400,600,300,500' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600,800' rel='stylesheet' type='text/css'>
@@ -52,10 +52,10 @@
     <body>
 
     <!-- Main content -->
-    <header class="header-post">
+    <header id="header-blog">
   <div class="container">
     <div class="row">
-      <div class="col-sm-10 col-sm-offset-1">
+      <div class="col-sm-12 narrow">
         <nav id="nav" role="navigation" class="navbar navbar-default">
   <div class="navbar-header">
     <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
@@ -73,8 +73,15 @@
     </ul>
   </div>
 </nav>
-<h1 class="gizra-logo"><a href="/">gizra</a></h1>
 
+
+  <h2 class="gizra-logo"><a href="/">gizra</a></h2>
+
+
+
+        <h1 class="text-uppercase">
+          <a href="/blog">Blog</a>
+        </h1>
       </div>
     </div>
   </div>
@@ -82,612 +89,1054 @@
 <section id="blog-page">
   <div class="container">
     <div class="row">
-      <div class="col-sm-10 col-sm-offset-1 blog">
+      <div class="col-sm-12 narrow blog">
+        <div class="row posts">
+          
+            <div class="col-sm-4">
+              <article class="post post-teaser">
+    
+      
+    
+
+    
+      
         
-
-          
-            
-          
-
-          
-            
-             
-               
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-          <article class="post post-teaser">
-            <div class="author-details clearfix">
-              <img src="/images/team/avatars/amitaibu.4179.jpg" class="img-responsive img-circle">
-              <p class="name">Amitai Burstein</p>
-              <p class="date"><i class="fa fa-calendar"></i> 24 Jul 2014</p>
-            </div>
-            <h1><a href="/content/headless-drupal-form-api-drupal9">Headless Drupal - Form API, Drupal 9 </a></h1>
-            <div class="post-content">
-              <h2>Defining moment</h2>
-
-<p>A few months ago my DrupalCon Austin session was rejected. I was a bit upset, since presenting plays a big part in my trip to the states, and also surprised, as I mistakenly assumed my presentation repertoire would almost guarantee my session would be accepted. But the committee decided differently.</p>
-
-<p>This has been an important moment for me. Two days later I told myself I don&#39;t care. I mean, I cared about the <em>presentation</em>, I just stopped caring that it was not selected, since I decided I was going to do it anyway. As an &quot;unplugged&quot; BoF.</p>
-
-<p><a href="https://www.getpantheon.com/blog/drupal-development-gizra-way">The Gizra Way</a>. I think this is probably the best presentation I&#39;ve given so far, and quite ironically my <em>rejected</em> session is second only to Dries&#39;s keynote in YouTube.</p>
-
-<p>You see - I had a &quot;<a href="https://www.youtube.com/watch?v=dzm8kTIj_0M">there is no spoon</a>&quot; moment. The second I realized it can be done differently, I was on my own track, perhaps even setting the path for others.</p>
-
-<h2>Form API, Drupal 9</h2>
-
-<blockquote>
-<p>I use Drupal because Form API is so great <div class="small">No one, ever</div></p>
-</blockquote>
-
-            </div>
-            <div class="read-more">
-              <a href="/content/headless-drupal-form-api-drupal9">
-                Read More <i class="fa fa-angle-right"></i>
-              </a>
-            </div>
-          </article>
+      
+    
+      
         
-
-          
-            
-          
-
-          
-            
-             
-               
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-          <article class="post post-teaser">
-            <div class="author-details clearfix">
-              <img src="/images/team/avatars/amitaibu.4179.jpg" class="img-responsive img-circle">
-              <p class="name">Amitai Burstein</p>
-              <p class="date"><i class="fa fa-calendar"></i> 14 Jul 2014</p>
-            </div>
-            <h1><a href="/content/headless-drupal-inline-edit">Headless Drupal - Inline edit </a></h1>
-            <div class="post-content">
-              <p>In our <a href="http://www.gizra.com/content/restful-angular-forms/">last example</a> we showed how to create node using an angular form served from Drupal itself. This time we are taking one big step further and create the node from a completely decoupled <a href="https://github.com/Gizra/angular-drupal-forms-example">web app</a>.<br>
-And if that&#39;s not enough for the readers excited by the idea of a decoupled Drupal, we&#39;ve also added inline editing to the example!</p>
-
-<p>Enjoy the <a href="http://gizra.github.io/angular-drupal-forms-example/#/">live demo</a></p>
-
-<div class="thumbnail">
-  <img src="http://www.gizra.com/assets/images/posts/headless-drupal-inline-edit/image1.gif" />
-  <div class="caption">If you know Form API's pains, you should be excited now</div>
-</div>
-
-            </div>
-            <div class="read-more">
-              <a href="/content/headless-drupal-inline-edit">
-                Read More <i class="fa fa-angle-right"></i>
-              </a>
-            </div>
-          </article>
+      
+    
+      
         
-
           
-            
-          
-
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-               
-             
-            
-          
-            
-             
-            
-          
-          <article class="post post-teaser">
-            <div class="author-details clearfix">
-              <img src="/images/team/avatars/ceoaliongroo.dc93.jpg" class="img-responsive img-circle">
-              <p class="name">Carlos Mantilla</p>
-              <p class="date"><i class="fa fa-calendar"></i> 10 Jul 2014</p>
-            </div>
-            <h1><a href="/content/backend-free-apps-grunt-jekyll-d3js">Backend-free apps with Grunt, jekyll and D3.js </a></h1>
-            <div class="post-content">
-              <p>When we started working on a mobile web site for <a href="http://www.gizra.com/content/casa-del-lector/">Casa del Lector</a>&#39;s exhibition, we decided early on it would be a backend-free app, mainly for reasons of stability and performance:</p>
-
-<div class="thumbnail">
-  <img src="/assets/images/posts/backendless-apps/image1.jpg" />
-  <div class="caption">App is faster than 96% of other websites</div>
-</div>
-
-<p>The data was entered by the client on a 3rd party desktop tool which exported it to XML. We used a bunch of open source tools to massage it a bit and prepare it for the App. Since the project is open sourced you can check out the <a href="https://github.com/Gizra/CDL">actual code</a>.</p>
-
-<div class="thumbnail">
-  <img src="/assets/images/posts/casa-del-lector/cdl-item.gif" />
-  <div class="caption">The App in action</div>
-</div>
-
-            </div>
-            <div class="read-more">
-              <a href="/content/backend-free-apps-grunt-jekyll-d3js">
-                Read More <i class="fa fa-angle-right"></i>
-              </a>
-            </div>
-          </article>
         
-
-          
-            
-          
-
-          
-            
-             
-               
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-          <article class="post post-teaser">
-            <div class="author-details clearfix">
-              <img src="/images/team/avatars/amitaibu.4179.jpg" class="img-responsive img-circle">
-              <p class="name">Amitai Burstein</p>
-              <p class="date"><i class="fa fa-calendar"></i> 09 Jul 2014</p>
-            </div>
-            <h1><a href="/content/restful-angular-forms">Headless Drupal, One form at a time </a></h1>
-            <div class="post-content">
-              <ul>
-<li>Form API is great, but Form API is hard when you try to do fancier stuff - like wizards and other things that clients often want.</li>
-<li>Angular forms are great, but Angular forms are hard too - you need to write your own custom endpoints and server side validation.</li>
-</ul>
-
-<p>But now that <a href="https://github.com/Gizra/restful">RESTful</a> integrates with Entity Validator, I would change the equation and simply say something rarely heard in the Drupal community: Forms are Fun!</p>
-
-<div class="thumbnail">
-  <img src="http://www.gizra.com/assets/images/posts/restful-angular-forms/angular-form.gif" />
-  <div class="caption">This form is not Form API, it's angular!</div>
-</div>
-
-<p>Go ahead, <a href="https://github.com/Gizra/restful/blob/7.x-1.x/modules/restful_angular_example/README.md#test-on-simplytestme-recommended">try it</a> yourself on simplyTest.me</p>
-
-            </div>
-            <div class="read-more">
-              <a href="/content/restful-angular-forms">
-                Read More <i class="fa fa-angle-right"></i>
-              </a>
-            </div>
-          </article>
+      
+    
+      
         
-
-          
-            
-          
-
-          
-            
-             
-               
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-          <article class="post post-teaser">
-            <div class="author-details clearfix">
-              <img src="/images/team/avatars/amitaibu.4179.jpg" class="img-responsive img-circle">
-              <p class="name">Amitai Burstein</p>
-              <p class="date"><i class="fa fa-calendar"></i> 01 Jul 2014</p>
-            </div>
-            <h1><a href="/content/custom-css-as-contrib-with-jekyll">No more CSS in your Drupal Theme! </a></h1>
-            <div class="post-content">
-              <h2>Treat your custom CSS as contrib</h2>
-
-<p>Getting your Drupal to be pixel perfect is hard. In fact, it&#39;s probably four times faster to write the logic
-of a page, in comparison to the time it takes to get it&#39;s markup right. Not to talk about making it responsive.</p>
-
-<p>If you&#39;ve seen my presentation about <a href="http://goo.gl/hJhZb8">The Gizra Way</a> you noticed we take pixel perfect very seriously.</p>
-
-<p>One of the tools that helps us getting the markup fast, correct and in a way that would allow us to communicate with the client is Jekyll - the static site generator. Here&#39;s the idea in a nutshell:</p>
-
-<ul>
-<li>Using Jekyll we can concentrate on a clean markup</li>
-<li>Using Grunt we compile the SASS, and are able to push the the HTML into Github pages - where the client can easily see and interact with the final markup</li>
-<li>The CSS produced by Jekyll is treated by our Drupal application as contrib. This means we have zero custom CSS in our theme. Seriously, <strong>absolutely no custom CSS in your Drupal theme!</strong></li>
-<li>Any change to the CSS can be done only in a <em>single</em> place, which is Jekyll</li>
-</ul>
-
-            </div>
-            <div class="read-more">
-              <a href="/content/custom-css-as-contrib-with-jekyll">
-                Read More <i class="fa fa-angle-right"></i>
-              </a>
-            </div>
-          </article>
+      
+    
+      
         
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+
+  <div class="article">
+    <!-- The post teaser main image. -->
+    <a href="/content/gizra-drupalcon-portland/" class="main-image">
+      
+        <img src="/images/post/1.f65a.jpg" alt="Amitai's DrupalCon Portland Presentation">
+      
+    </a>
+    <!-- The Author detail's -->
+    <div class="author-details">
+      <!-- Link to author on the team page if author is a member -->
+      
+        <p class="name">By <a href="/team?member=niryariv">Nir Yariv</a> </p>
+      
+      <a href="/content/gizra-drupalcon-portland/">
+        <img src="/images/team/avatars/niryariv.4f24.jpg" class="img-responsive img-circle avatar grayscale">
+      </a>
+      <p class="date">Jun 23, 2013</p>
+    </div>
+    <p class="title" title="Amitai's DrupalCon Portland Presentation"><a href="/content/gizra-drupalcon-portland/" >Amitai's DrupalCon Portland Presentation</a></p>
+  </div>
+</article>
+
+            </div>
+          
+            <div class="col-sm-4">
+              <article class="post post-teaser">
+    
+      
+    
+
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+
+  <div class="article">
+    <!-- The post teaser main image. -->
+    <a href="/content/the-gizra-way/" class="main-image">
+      
+        <img src="/images/post/2.8d55.jpg" alt="The Gizra Way - How We Roll (and Rollback)">
+      
+    </a>
+    <!-- The Author detail's -->
+    <div class="author-details">
+      <!-- Link to author on the team page if author is a member -->
+      
+        <p class="name">By <a href="/team?member=niryariv">Nir Yariv</a> </p>
+      
+      <a href="/content/the-gizra-way/">
+        <img src="/images/team/avatars/niryariv.4f24.jpg" class="img-responsive img-circle avatar grayscale">
+      </a>
+      <p class="date">Jun 17, 2013</p>
+    </div>
+    <p class="title" title="The Gizra Way - How We Roll (and Rollback)"><a href="/content/the-gizra-way/" >The Gizra Way - How We Roll (and Rollback)</a></p>
+  </div>
+</article>
+
+            </div>
+          
+            <div class="col-sm-4">
+              <article class="post post-teaser">
+    
+      
+    
+
+    
+      
+        
+          
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+
+  <div class="article">
+    <!-- The post teaser main image. -->
+    <a href="/content/harvard-openscholar/" class="main-image">
+      
+        <img src="/images/post/3.326e.jpg" alt="Harvard's OpenScholar">
+      
+    </a>
+    <!-- The Author detail's -->
+    <div class="author-details">
+      <!-- Link to author on the team page if author is a member -->
+      
+        <p class="name">By <a href="/team?member=amitaibu">Amitai Burstein</a> </p>
+      
+      <a href="/content/harvard-openscholar/">
+        <img src="/images/team/avatars/amitaibu.4179.jpg" class="img-responsive img-circle avatar grayscale">
+      </a>
+      <p class="date">Jun 4, 2013</p>
+    </div>
+    <p class="title" title="Harvard's OpenScholar"><a href="/content/harvard-openscholar/" >Harvard's OpenScholar</a></p>
+  </div>
+</article>
+
+            </div>
+          
+            <div class="col-sm-4">
+              <article class="post post-teaser">
+    
+      
+    
+
+    
+      
+        
+          
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+
+  <div class="article">
+    <!-- The post teaser main image. -->
+    <a href="/content/migrate-and-baking-content/" class="main-image">
+      
+        <img src="/images/post/4.3556.jpg" alt="Migrate, and baking content">
+      
+    </a>
+    <!-- The Author detail's -->
+    <div class="author-details">
+      <!-- Link to author on the team page if author is a member -->
+      
+        <p class="name">By <a href="/team?member=amitaibu">Amitai Burstein</a> </p>
+      
+      <a href="/content/migrate-and-baking-content/">
+        <img src="/images/team/avatars/amitaibu.4179.jpg" class="img-responsive img-circle avatar grayscale">
+      </a>
+      <p class="date">Dec 27, 2012</p>
+    </div>
+    <p class="title" title="Migrate, and baking content"><a href="/content/migrate-and-baking-content/" >Migrate, and baking content</a></p>
+  </div>
+</article>
+
+            </div>
+          
+            <div class="col-sm-4">
+              <article class="post post-teaser">
+    
+      
+    
+
+    
+      
+        
+          
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+
+  <div class="article">
+    <!-- The post teaser main image. -->
+    <a href="/content/drupal-nodejs-pantheon-and-heroku/" class="main-image">
+      
+        <img src="/images/post/5.9861.jpg" alt="Drupal, Node.js, Pantheon, and Heroku">
+      
+    </a>
+    <!-- The Author detail's -->
+    <div class="author-details">
+      <!-- Link to author on the team page if author is a member -->
+      
+        <p class="name">By <a href="/team?member=amitaibu">Amitai Burstein</a> </p>
+      
+      <a href="/content/drupal-nodejs-pantheon-and-heroku/">
+        <img src="/images/team/avatars/amitaibu.4179.jpg" class="img-responsive img-circle avatar grayscale">
+      </a>
+      <p class="date">Dec 19, 2012</p>
+    </div>
+    <p class="title" title="Drupal, Node.js, Pantheon, and Heroku"><a href="/content/drupal-nodejs-pantheon-and-heroku/" >Drupal, Node.js, Pantheon, and Heroku</a></p>
+  </div>
+</article>
+
+            </div>
+          
+            <div class="col-sm-4">
+              <article class="post post-teaser">
+    
+      
+    
+
+    
+      
+        
+          
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+
+  <div class="article">
+    <!-- The post teaser main image. -->
+    <a href="/content/message-subscribe-new-subscription-system/" class="main-image">
+      
+        <img src="/images/post/6.f59f.jpg" alt="Message-subscribe - A New Subscription System">
+      
+    </a>
+    <!-- The Author detail's -->
+    <div class="author-details">
+      <!-- Link to author on the team page if author is a member -->
+      
+        <p class="name">By <a href="/team?member=amitaibu">Amitai Burstein</a> </p>
+      
+      <a href="/content/message-subscribe-new-subscription-system/">
+        <img src="/images/team/avatars/amitaibu.4179.jpg" class="img-responsive img-circle avatar grayscale">
+      </a>
+      <p class="date">Oct 31, 2012</p>
+    </div>
+    <p class="title" title="Message-subscribe - A New Subscription System"><a href="/content/message-subscribe-new-subscription-system/" >Message-subscribe - A New Subscription System</a></p>
+  </div>
+</article>
+
+            </div>
+          
+            <div class="col-sm-4">
+              <article class="post post-teaser">
+    
+      
+    
+
+    
+      
+        
+          
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+
+  <div class="article">
+    <!-- The post teaser main image. -->
+    <a href="/content/drupalcamp-montreal-keynote/" class="main-image">
+      
+        <img src="/images/post/7.79a3.jpg" alt="DrupalCamp Montreal Keynote">
+      
+    </a>
+    <!-- The Author detail's -->
+    <div class="author-details">
+      <!-- Link to author on the team page if author is a member -->
+      
+        <p class="name">By <a href="/team?member=amitaibu">Amitai Burstein</a> </p>
+      
+      <a href="/content/drupalcamp-montreal-keynote/">
+        <img src="/images/team/avatars/amitaibu.4179.jpg" class="img-responsive img-circle avatar grayscale">
+      </a>
+      <p class="date">Oct 18, 2012</p>
+    </div>
+    <p class="title" title="DrupalCamp Montreal Keynote"><a href="/content/drupalcamp-montreal-keynote/" >DrupalCamp Montreal Keynote</a></p>
+  </div>
+</article>
+
+            </div>
+          
+            <div class="col-sm-4">
+              <article class="post post-teaser">
+    
+      
+    
+
+    
+      
+        
+          
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+
+  <div class="article">
+    <!-- The post teaser main image. -->
+    <a href="/content/what-message-module-and-its-new-features/" class="main-image">
+      
+        <img src="/images/post/8.2b82.jpg" alt="What is Message module, and its new features">
+      
+    </a>
+    <!-- The Author detail's -->
+    <div class="author-details">
+      <!-- Link to author on the team page if author is a member -->
+      
+        <p class="name">By <a href="/team?member=amitaibu">Amitai Burstein</a> </p>
+      
+      <a href="/content/what-message-module-and-its-new-features/">
+        <img src="/images/team/avatars/amitaibu.4179.jpg" class="img-responsive img-circle avatar grayscale">
+      </a>
+      <p class="date">Jul 12, 2012</p>
+    </div>
+    <p class="title" title="What is Message module, and its new features"><a href="/content/what-message-module-and-its-new-features/" >What is Message module, and its new features</a></p>
+  </div>
+</article>
+
+            </div>
+          
+            <div class="col-sm-4">
+              <article class="post post-teaser">
+    
+      
+    
+
+    
+      
+        
+          
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+
+  <div class="article">
+    <!-- The post teaser main image. -->
+    <a href="/content/about-strong-partnership-and-winning-game-bowling/" class="main-image">
+      
+        <img src="/images/post/9.7c78.jpg" alt="About strong partnership and winning a game of bowling">
+      
+    </a>
+    <!-- The Author detail's -->
+    <div class="author-details">
+      <!-- Link to author on the team page if author is a member -->
+      
+        <p class="name">By <a href="/team?member=amitaibu">Amitai Burstein</a> </p>
+      
+      <a href="/content/about-strong-partnership-and-winning-game-bowling/">
+        <img src="/images/team/avatars/amitaibu.4179.jpg" class="img-responsive img-circle avatar grayscale">
+      </a>
+      <p class="date">Jul 9, 2012</p>
+    </div>
+    <p class="title" title="About strong partnership and winning a game of bowling"><a href="/content/about-strong-partnership-and-winning-game-bowling/" >About strong partnership and winning a game of bowling</a></p>
+  </div>
+</article>
+
+            </div>
+          
+        </div>
       </div>
     </div>
     <!--Pager Begin-->
     <div class="row">
-      <div id="pager" class="col-sm-offset-1 col-sm-10">
+      <div id="pager" class="col-sm-12 narrow">
         <ul class="pager-nav">
           <li class="prev text-uppercase">
             
-            <a href="/blog/page6">Previous</a>
+            <a href="/blog/page6">
+              <span><i class="fa fa-chevron-circle-left"></i> Previous</span>
+            </a>
             
           </li>
           <li class="next text-uppercase">
             
-            <a href="/blog/page8">Next</a>
+            <a href="/blog/page8">
+              <span>Next <i class="fa fa-chevron-circle-right"></i></span>
+            </a>
             
           </li>
         </ul>
@@ -706,7 +1155,7 @@ of a page, in comparison to the time it takes to get it&#39;s markup right. Not 
         <div class="background">
           <div class="container">
             <div class="row">
-              <div class="col-sm-12 narrow">
+              <div class="col-sm-12">
                 <h2 class="title">Talk to us</h2>
                 <div class="clearfix">
                   <address>
@@ -725,6 +1174,9 @@ of a page, in comparison to the time it takes to get it&#39;s markup right. Not 
                     <span class="link twitter">
                       <a href="https://twitter.com/gizra_drupal" target="_blank"><i class="fa fa-twitter-square"></i></a>
                     </span>
+                    <span class="link linkedin">
+                      <a href="https://www.linkedin.com/company/gizra-ltd" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+                    </span>
                   </div>
                 </div>
               </div>
@@ -741,7 +1193,6 @@ of a page, in comparison to the time it takes to get it&#39;s markup right. Not 
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
 
-    <script src="/js/scripts.c3ac.js"></script>
-
+    <script src="/js/scripts.ddd6.js"></script>
     </body>
 </html>

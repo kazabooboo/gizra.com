@@ -29,7 +29,7 @@
       <meta name="theme-color" content="#ffffff">
       <!-- End favicon for all platforms -->
 
-      <link rel="stylesheet" href="/css/main.f3ce.css"/>
+      <link rel="stylesheet" href="/css/main.781a.css"/>
       <link href='http://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Hind:400,600,300,500' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600,800' rel='stylesheet' type='text/css'>
@@ -52,10 +52,10 @@
     <body>
 
     <!-- Main content -->
-    <header class="header-post">
+    <header id="header-blog">
   <div class="container">
     <div class="row">
-      <div class="col-sm-10 col-sm-offset-1">
+      <div class="col-sm-12 narrow">
         <nav id="nav" role="navigation" class="navbar navbar-default">
   <div class="navbar-header">
     <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
@@ -73,8 +73,15 @@
     </ul>
   </div>
 </nav>
-<h1 class="gizra-logo"><a href="/">gizra</a></h1>
 
+
+  <h2 class="gizra-logo"><a href="/">gizra</a></h2>
+
+
+
+        <h1 class="text-uppercase">
+          <a href="/blog">Blog</a>
+        </h1>
       </div>
     </div>
   </div>
@@ -82,614 +89,1055 @@
 <section id="blog-page">
   <div class="container">
     <div class="row">
-      <div class="col-sm-10 col-sm-offset-1 blog">
+      <div class="col-sm-12 narrow blog">
+        <div class="row posts">
+          
+            <div class="col-sm-4">
+              <article class="post post-teaser">
+    
+      
+    
+
+    
+      
         
-
           
-            
-          
-
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-               
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-          <article class="post post-teaser">
-            <div class="author-details clearfix">
-              <img src="/images/team/avatars/YaronMiro.00e7.jpg" class="img-responsive img-circle">
-              <p class="name">Yaron Miro</p>
-              <p class="date"><i class="fa fa-calendar"></i> 30 Apr 2015</p>
-            </div>
-            <h1><a href="/content/angularjs-ui-router">AngularJs Ui-Router </a></h1>
-            <div class="post-content">
-              <p>One of the things I love to do is watch movies at home with my soon-to-be-wife (with emphasis on <em>soon</em> as I&#39;m getting married tomorrow!). We have seen a lot of them over the years so it&#39;s not always easy to find a new movie or to remember a good movie that&#39;s worth watching again.  </p>
-
-<p>Combined with my love to JavaScript I&#39;ve decided to create an AngularJS app with <a href="http://angular-ui.github.io/ui-router/sample/">ui-router</a> library.  The demo app fetches Apple <a href="https://www.apple.com/itunes/charts/movies/">iTunes top 60</a> movies and presents the info and trailer for each, and even has a cool archive feature that lets you create your own private collection.</p>
-
-<div class="demo-block text-center">
-  <a class="demo" target=_blank" href="http://yaronmiro.github.io/AngularJS-UI-Router-Demo">View demo</a>
-  <a class="code" target=_blank" href="https://github.com/YaronMiro/AngularJS-UI-Router-Demo">Get the source code</a>
-</div>
-
-<div class="thumbnail">
-  <img src="http://www.gizra.com/assets/images/posts/angularjs-ui-router/image1.jpg">
-  <div class="caption">angularJS and ui-router demo application</div>
-</div>
-
-            </div>
-            <div class="read-more">
-              <a href="/content/angularjs-ui-router">
-                Read More <i class="fa fa-angle-right"></i>
-              </a>
-            </div>
-          </article>
         
-
-          
-            
-          
-
-          
-            
-             
-               
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-          <article class="post post-teaser">
-            <div class="author-details clearfix">
-              <img src="/images/team/avatars/amitaibu.4179.jpg" class="img-responsive img-circle">
-              <p class="name">Amitai Burstein</p>
-              <p class="date"><i class="fa fa-calendar"></i> 29 Apr 2015</p>
-            </div>
-            <h1><a href="/content/cross-browser-visual-regression-with-shoov">Cross Browser Visual Regression Tests With Shoov </a></h1>
-            <div class="post-content">
-              <p>Maintaining visual regression tests can be hard, but the more tests we write for our projects, the more we see the tremendous power it provides in terms of QA and monitoring our sites.</p>
-
-<p>One daunting task each developer hates (and often avoids) is validating their markup on multiple browsers. All of Gizra&#39;s developers use either Mac or Ubuntu on their machines, so the line to the &quot;IE computer&quot; on the far end of the office is getting long. Way too long.</p>
-
-<p>And honestly - after our poor developers validated their work once, if we&#39;d ask them to do it again. And again. And again... we&#39;d probably be left without any.</p>
-
-<p>Developers moral shouldn&#39;t be underestimated!</p>
-
-<p><a href="/content/shoov-ui-regression/">Shoov</a> means &quot;Again&quot; in Hebrew for this very reason.Go ahead and jump to our <a href="https://github.com/shoov/test-example">example repo</a> which now has cross browser tests. Writing your tests once - but testing on multiple platforms and browsers is a <em>big</em> win.</p>
-
-<div class="thumbnail">
-  <img src="http://www.gizra.com/assets/images/posts/shoov-multiple-platforms/image1.jpg">
-  <div class="caption">DuckDuckGo.com tested by BrowserStack on Windows7, IE11, with 1024x780 resolution</div>
-</div>
-
-            </div>
-            <div class="read-more">
-              <a href="/content/cross-browser-visual-regression-with-shoov">
-                Read More <i class="fa fa-angle-right"></i>
-              </a>
-            </div>
-          </article>
+      
+    
+      
         
-
-          
-            
-          
-
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-               
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-          <article class="post post-teaser">
-            <div class="author-details clearfix">
-              <img src="/images/team/avatars/RoySegall.a616.jpg" class="img-responsive img-circle">
-              <p class="name">Roy Segall</p>
-              <p class="date"><i class="fa fa-calendar"></i> 28 Apr 2015</p>
-            </div>
-            <h1><a href="/content/simpletest-behat-drupal-8">simpleTest with Behat for Drupal 8 </a></h1>
-            <div class="post-content">
-              <p>The first time I heard about <a href="http://docs.behat.org/en/v2.5/">Behat</a> was at DrupalCon Munich 2012. Since then use of Behat has grown exponentially and the tools it can be integrate with grew as well. With Behat we can test the markup of a page - pretty neat, right?  </p>
-
-<p>Well, it&#39;s time to take Behat integration with Drupal a little further. I&#39;ve decided to try and integrate it with Drupal&#39;s simpleTest, as this would open the door for writing simpleTests that are more readable and more &quot;behavior driven&quot; by nature.</p>
-<div class="highlight"><pre><code class="Gherkin language-Gherkin" data-lang="Gherkin"><span class="k">Scenario:</span><span class="nf"> Testing the login form.</span>
-<span class="k">  Given </span><span class="nf">I visit &#39;user&#39;</span>
-<span class="nf">    </span><span class="k">And </span><span class="nf">I fill in &#39;Username&#39; with &#39;@user-name&#39;</span>
-<span class="nf">    </span><span class="k">And </span><span class="nf">I fill in &#39;Password&#39; with &#39;@user-pass&#39;</span>
-<span class="nf">   </span><span class="k">When </span><span class="nf">I press &#39;Log in&#39;</span>
-<span class="nf">   </span><span class="k">Then </span><span class="nf">I should see &#39;@user-name&#39;</span>
-</code></pre></div>
-<p>Amazingly enough, the above Gherkin code which is being executed by PHPunit can test your Drupal installation!</p>
-
-<div class="thumbnail">
-  <img src="http://www.gizra.com/assets/images/posts/behat-drupal8/test_results.png">
-  <div class="caption">Behat code executed from within Drupal's simpleTest</div>
-</div>
-
-<p>This functionality is provided by an experimental <a href="https://github.com/RoySegall/behat">repo</a>, which comes with an example test.</p>
-
-            </div>
-            <div class="read-more">
-              <a href="/content/simpletest-behat-drupal-8">
-                Read More <i class="fa fa-angle-right"></i>
-              </a>
-            </div>
-          </article>
+      
+    
+      
         
-
-          
-            
-          
-
-          
-            
-             
-               
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-          <article class="post post-teaser">
-            <div class="author-details clearfix">
-              <img src="/images/team/avatars/amitaibu.4179.jpg" class="img-responsive img-circle">
-              <p class="name">Amitai Burstein</p>
-              <p class="date"><i class="fa fa-calendar"></i> 14 Apr 2015</p>
-            </div>
-            <h1><a href="/content/shoov-ci-tests-live-site">Shoov - CI tests on the live site </a></h1>
-            <div class="post-content">
-              <p><a href="/content/shoov-ui-regression/">Shoov</a> keeps evolving, and now has an <a href="https://github.com/shoov/test-example">example repo</a> that demonstrates how we&#39;re trying to make UI regression simpler, we took some time to implement the second feature we were missing - automatic testing on the <em>live</em> site.</p>
-
-<p>We saw a very strange situation everywhere we looked: Dev teams were writing amazing test coverage. They were going the extra mile to setup a Travis box with environment as close as possible to the live site. They tested every single feature, and added a regression test for every bug. Heck, every commit triggered a test suite that run for an hour before being carefully reviewed and merged.</p>
-
-<p>And then the site goes live - and at best they might add <a href="https://www.pingdom.com/">Pingdom</a> monitoring to check it&#39;s working. Pingdom at its simplest form sends an http request every minute to your site. If the answer is <code>200</code> - it means that all is good in the world. Which is of course wrong.</p>
-
-<p>Our mission is to change this, and bring functional testing to the live site. One that is easy to setup and that integrates with your existing testing and GitHub flow.</p>
-
-<div class="thumbnail">
-  <img src="http://www.gizra.com/assets/images/posts/shoov-ci-build/image1.jpg">
-  <div class="caption">The Drupal backend holds the CI build data, including the full log, and status</div>
-</div>
-
-<p>While Pingdom is wonderful and is alerting us on time whenever a site goes down, its &quot;page is fine, move along&quot; approach doesn&#39;t cut it for us. Here are some examples why testing on the production server is a good idea:</p>
-
-            </div>
-            <div class="read-more">
-              <a href="/content/shoov-ci-tests-live-site">
-                Read More <i class="fa fa-angle-right"></i>
-              </a>
-            </div>
-          </article>
+      
+    
+      
         
-
-          
-            
-          
-
-          
-            
-             
-               
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-          <article class="post post-teaser">
-            <div class="author-details clearfix">
-              <img src="/images/team/avatars/amitaibu.4179.jpg" class="img-responsive img-circle">
-              <p class="name">Amitai Burstein</p>
-              <p class="date"><i class="fa fa-calendar"></i> 01 Apr 2015</p>
-            </div>
-            <h1><a href="/content/shoov-ui-regression">Shoov - a new UI regression tool </a></h1>
-            <div class="post-content">
-              <p>Testing UI regression is one of these things that make total sense but is rarely put into practice, for a simple reason - it&#39;s hard.</p>
-
-<div class="thumbnail">
-  <img src="http://www.gizra.com/assets/images/posts/shoov-intro/image1.gif">
-  <div class="caption">UI regression checking in action</div>
-</div>
-
-<p>If you read the theory about it, it seems pretty simple. Take a screenshot of a certain page in your site which will be your &quot;baseline&quot; image, and from now on, whenever the code changes re-run an automated test that will compare a current screenshot with the baseline image.</p>
-
-            </div>
-            <div class="read-more">
-              <a href="/content/shoov-ui-regression">
-                Read More <i class="fa fa-angle-right"></i>
-              </a>
-            </div>
-          </article>
+      
+    
+      
         
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+
+  <div class="article">
+    <!-- The post teaser main image. -->
+    <a href="/content/behat-the-right-way" class="main-image">
+      
+        <img src="/images/post/1.f65a.jpg" alt="Behat - The Right Way">
+      
+    </a>
+    <!-- The Author detail's -->
+    <div class="author-details">
+      <!-- Link to author on the team page if author is a member -->
+      
+        <p class="name">By <a href="/team?member=amitaibu">Amitai Burstein</a> </p>
+      
+      <a href="/content/behat-the-right-way">
+        <img src="/images/team/avatars/amitaibu.4179.jpg" class="img-responsive img-circle avatar grayscale">
+      </a>
+      <p class="date">Nov 17, 2014</p>
+    </div>
+    <p class="title" title="Behat - The Right Way"><a href="/content/behat-the-right-way" >Behat - The Right Way</a></p>
+  </div>
+</article>
+
+            </div>
+          
+            <div class="col-sm-4">
+              <article class="post post-teaser">
+    
+      
+    
+
+    
+      
+        
+          
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+
+  <div class="article">
+    <!-- The post teaser main image. -->
+    <a href="/content/restful-discovery" class="main-image">
+      
+        <img src="/images/post/2.8d55.jpg" alt="RESTful Discovery - Who knows about your API?">
+      
+    </a>
+    <!-- The Author detail's -->
+    <div class="author-details">
+      <!-- Link to author on the team page if author is a member -->
+      
+        <p class="name">By <a href="/team?member=amitaibu">Amitai Burstein</a> </p>
+      
+      <a href="/content/restful-discovery">
+        <img src="/images/team/avatars/amitaibu.4179.jpg" class="img-responsive img-circle avatar grayscale">
+      </a>
+      <p class="date">Oct 30, 2014</p>
+    </div>
+    <p class="title" title="RESTful Discovery - Who knows about your API?"><a href="/content/restful-discovery" >RESTful Discovery - Who knows about your API?</a></p>
+  </div>
+</article>
+
+            </div>
+          
+            <div class="col-sm-4">
+              <article class="post post-teaser">
+    
+      
+    
+
+    
+      
+        
+          
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+
+  <div class="article">
+    <!-- The post teaser main image. -->
+    <a href="/content/gizra-we-have-got-your-headless-covered" class="main-image">
+      
+        <img src="/images/post/3.326e.jpg" alt="Gizra - We've Got Your Headless Covered">
+      
+    </a>
+    <!-- The Author detail's -->
+    <div class="author-details">
+      <!-- Link to author on the team page if author is a member -->
+      
+        <p class="name">By <a href="/team?member=amitaibu">Amitai Burstein</a> </p>
+      
+      <a href="/content/gizra-we-have-got-your-headless-covered">
+        <img src="/images/team/avatars/amitaibu.4179.jpg" class="img-responsive img-circle avatar grayscale">
+      </a>
+      <p class="date">Oct 19, 2014</p>
+    </div>
+    <p class="title" title="Gizra - We've Got Your Headless Covered"><a href="/content/gizra-we-have-got-your-headless-covered" >Gizra - We've Got Your Headless Covered</a></p>
+  </div>
+</article>
+
+            </div>
+          
+            <div class="col-sm-4">
+              <article class="post post-teaser">
+    
+      
+    
+
+    
+      
+        
+          
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+
+  <div class="article">
+    <!-- The post teaser main image. -->
+    <a href="/content/headless-drupal-form-api-drupal9" class="main-image">
+      
+        <img src="/images/post/4.3556.jpg" alt="Headless Drupal - Form API, Drupal 9">
+      
+    </a>
+    <!-- The Author detail's -->
+    <div class="author-details">
+      <!-- Link to author on the team page if author is a member -->
+      
+        <p class="name">By <a href="/team?member=amitaibu">Amitai Burstein</a> </p>
+      
+      <a href="/content/headless-drupal-form-api-drupal9">
+        <img src="/images/team/avatars/amitaibu.4179.jpg" class="img-responsive img-circle avatar grayscale">
+      </a>
+      <p class="date">Jul 24, 2014</p>
+    </div>
+    <p class="title" title="Headless Drupal - Form API, Drupal 9"><a href="/content/headless-drupal-form-api-drupal9" >Headless Drupal - Form API, Drupal 9</a></p>
+  </div>
+</article>
+
+            </div>
+          
+            <div class="col-sm-4">
+              <article class="post post-teaser">
+    
+      
+    
+
+    
+      
+        
+          
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+
+  <div class="article">
+    <!-- The post teaser main image. -->
+    <a href="/content/headless-drupal-inline-edit" class="main-image">
+      
+        <img src="/images/post/5.9861.jpg" alt="Headless Drupal - Inline edit">
+      
+    </a>
+    <!-- The Author detail's -->
+    <div class="author-details">
+      <!-- Link to author on the team page if author is a member -->
+      
+        <p class="name">By <a href="/team?member=amitaibu">Amitai Burstein</a> </p>
+      
+      <a href="/content/headless-drupal-inline-edit">
+        <img src="/images/team/avatars/amitaibu.4179.jpg" class="img-responsive img-circle avatar grayscale">
+      </a>
+      <p class="date">Jul 14, 2014</p>
+    </div>
+    <p class="title" title="Headless Drupal - Inline edit"><a href="/content/headless-drupal-inline-edit" >Headless Drupal - Inline edit</a></p>
+  </div>
+</article>
+
+            </div>
+          
+            <div class="col-sm-4">
+              <article class="post post-teaser">
+    
+      
+    
+
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          
+        
+      
+    
+      
+        
+      
+    
+
+  <div class="article">
+    <!-- The post teaser main image. -->
+    <a href="/content/backend-free-apps-grunt-jekyll-d3js" class="main-image">
+      
+        <img src="/images/post/6.f59f.jpg" alt="Backend-free apps with Grunt, jekyll and D3.js">
+      
+    </a>
+    <!-- The Author detail's -->
+    <div class="author-details">
+      <!-- Link to author on the team page if author is a member -->
+      
+      <!-- No link because the author isn't a member on the team page -->
+      <p class="name">By Carlos Mantilla </p>
+      
+      <a href="/content/backend-free-apps-grunt-jekyll-d3js">
+        <img src="/images/team/avatars/ceoaliongroo.dc93.jpg" class="img-responsive img-circle avatar grayscale">
+      </a>
+      <p class="date">Jul 10, 2014</p>
+    </div>
+    <p class="title" title="Backend-free apps with Grunt, jekyll and D3.js"><a href="/content/backend-free-apps-grunt-jekyll-d3js" >Backend-free apps with Grunt, jekyll and D3.js</a></p>
+  </div>
+</article>
+
+            </div>
+          
+            <div class="col-sm-4">
+              <article class="post post-teaser">
+    
+      
+    
+
+    
+      
+        
+          
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+
+  <div class="article">
+    <!-- The post teaser main image. -->
+    <a href="/content/restful-angular-forms" class="main-image">
+      
+        <img src="/images/post/7.79a3.jpg" alt="Headless Drupal, One form at a time">
+      
+    </a>
+    <!-- The Author detail's -->
+    <div class="author-details">
+      <!-- Link to author on the team page if author is a member -->
+      
+        <p class="name">By <a href="/team?member=amitaibu">Amitai Burstein</a> </p>
+      
+      <a href="/content/restful-angular-forms">
+        <img src="/images/team/avatars/amitaibu.4179.jpg" class="img-responsive img-circle avatar grayscale">
+      </a>
+      <p class="date">Jul 9, 2014</p>
+    </div>
+    <p class="title" title="Headless Drupal, One form at a time"><a href="/content/restful-angular-forms" >Headless Drupal, One form at a time</a></p>
+  </div>
+</article>
+
+            </div>
+          
+            <div class="col-sm-4">
+              <article class="post post-teaser">
+    
+      
+    
+
+    
+      
+        
+          
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+
+  <div class="article">
+    <!-- The post teaser main image. -->
+    <a href="/content/custom-css-as-contrib-with-jekyll" class="main-image">
+      
+        <img src="/images/post/8.2b82.jpg" alt="No more CSS in your Drupal Theme!">
+      
+    </a>
+    <!-- The Author detail's -->
+    <div class="author-details">
+      <!-- Link to author on the team page if author is a member -->
+      
+        <p class="name">By <a href="/team?member=amitaibu">Amitai Burstein</a> </p>
+      
+      <a href="/content/custom-css-as-contrib-with-jekyll">
+        <img src="/images/team/avatars/amitaibu.4179.jpg" class="img-responsive img-circle avatar grayscale">
+      </a>
+      <p class="date">Jul 1, 2014</p>
+    </div>
+    <p class="title" title="No more CSS in your Drupal Theme!"><a href="/content/custom-css-as-contrib-with-jekyll" >No more CSS in your Drupal Theme!</a></p>
+  </div>
+</article>
+
+            </div>
+          
+            <div class="col-sm-4">
+              <article class="post post-teaser">
+    
+      
+    
+
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+
+  <div class="article">
+    <!-- The post teaser main image. -->
+    <a href="/content/custom-breakpoint-bootstrap-sass" class="main-image">
+      
+        <img src="/images/post/9.7c78.jpg" alt="Creating a Custom Breakpoint in Bootstrap-Sass">
+      
+    </a>
+    <!-- The Author detail's -->
+    <div class="author-details">
+      <!-- Link to author on the team page if author is a member -->
+      
+        <p class="name">By <a href="/team?member=nader77">Nader Safadi</a> </p>
+      
+      <a href="/content/custom-breakpoint-bootstrap-sass">
+        <img src="/images/team/avatars/nedSaf.0878.jpg" class="img-responsive img-circle avatar grayscale">
+      </a>
+      <p class="date">Jun 25, 2014</p>
+    </div>
+    <p class="title" title="Creating a Custom Breakpoint in Bootstrap-Sass"><a href="/content/custom-breakpoint-bootstrap-sass" >Creating a Custom Breakpoint in Bootstrap-Sass</a></p>
+  </div>
+</article>
+
+            </div>
+          
+        </div>
       </div>
     </div>
     <!--Pager Begin-->
     <div class="row">
-      <div id="pager" class="col-sm-offset-1 col-sm-10">
+      <div id="pager" class="col-sm-12 narrow">
         <ul class="pager-nav">
           <li class="prev text-uppercase">
             
-            <a href="/blog/page3">Previous</a>
+            <a href="/blog/page3">
+              <span><i class="fa fa-chevron-circle-left"></i> Previous</span>
+            </a>
             
           </li>
           <li class="next text-uppercase">
             
-            <a href="/blog/page5">Next</a>
+            <a href="/blog/page5">
+              <span>Next <i class="fa fa-chevron-circle-right"></i></span>
+            </a>
             
           </li>
         </ul>
@@ -708,7 +1156,7 @@
         <div class="background">
           <div class="container">
             <div class="row">
-              <div class="col-sm-12 narrow">
+              <div class="col-sm-12">
                 <h2 class="title">Talk to us</h2>
                 <div class="clearfix">
                   <address>
@@ -727,6 +1175,9 @@
                     <span class="link twitter">
                       <a href="https://twitter.com/gizra_drupal" target="_blank"><i class="fa fa-twitter-square"></i></a>
                     </span>
+                    <span class="link linkedin">
+                      <a href="https://www.linkedin.com/company/gizra-ltd" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+                    </span>
                   </div>
                 </div>
               </div>
@@ -743,7 +1194,6 @@
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
 
-    <script src="/js/scripts.c3ac.js"></script>
-
+    <script src="/js/scripts.ddd6.js"></script>
     </body>
 </html>

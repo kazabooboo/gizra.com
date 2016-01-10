@@ -29,7 +29,7 @@
       <meta name="theme-color" content="#ffffff">
       <!-- End favicon for all platforms -->
 
-      <link rel="stylesheet" href="/css/main.f3ce.css"/>
+      <link rel="stylesheet" href="/css/main.781a.css"/>
       <link href='http://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Hind:400,600,300,500' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600,800' rel='stylesheet' type='text/css'>
@@ -52,10 +52,10 @@
     <body>
 
     <!-- Main content -->
-    <header class="header-post">
+    <header id="header-blog">
   <div class="container">
     <div class="row">
-      <div class="col-sm-10 col-sm-offset-1">
+      <div class="col-sm-12 narrow">
         <nav id="nav" role="navigation" class="navbar navbar-default">
   <div class="navbar-header">
     <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
@@ -73,8 +73,15 @@
     </ul>
   </div>
 </nav>
-<h1 class="gizra-logo"><a href="/">gizra</a></h1>
 
+
+  <h2 class="gizra-logo"><a href="/">gizra</a></h2>
+
+
+
+        <h1 class="text-uppercase">
+          <a href="/blog">Blog</a>
+        </h1>
       </div>
     </div>
   </div>
@@ -82,591 +89,1055 @@
 <section id="blog-page">
   <div class="container">
     <div class="row">
-      <div class="col-sm-10 col-sm-offset-1 blog">
+      <div class="col-sm-12 narrow blog">
+        <div class="row posts">
+          
+            <div class="col-sm-4">
+              <article class="post post-teaser">
+    
+      
+    
+
+    
+      
         
-
           
-            
-          
-
-          
-            
-             
-               
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-          <article class="post post-teaser">
-            <div class="author-details clearfix">
-              <img src="/images/team/avatars/amitaibu.4179.jpg" class="img-responsive img-circle">
-              <p class="name">Amitai Burstein</p>
-              <p class="date"><i class="fa fa-calendar"></i> 04 Dec 2014</p>
-            </div>
-            <h1><a href="/content/behat-vs-casper-for-drupal">Behat vs. Casper (In Drupal Context) </a></h1>
-            <div class="post-content">
-              <p>In my previous blog post <a href="/content/behat-the-right-way">Behat - The Right Way</a> I made a statement that I think Behat was a better choice for writing tests even for the frontend. Some good arguments were raised in favor of CasperJS.  </p>
-
-<blockquote class="twitter-tweet" data-conversation="none" data-cards="hidden" data-partner="tweetdeck"><p><a href="https://twitter.com/amitaibu">@amitaibu</a> <a href="https://twitter.com/juampy72">@juampy72</a> it boils down to this: I&#39;m a frontend dev. Writing PHP is something I avoid whenever possible.</p>&mdash; Chris Ruppel (@rupl) <a href="https://twitter.com/rupl/status/535025236702683136">November 19, 2014</a></blockquote>
-
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-<p>I believe my comparison was wrong in the sense it was lacking the key point to Behat&#39;s stength for us. It&#39;s not really about &quot;Behat vs. Casper&quot;. The proper comparison should have been &quot;Behat vs. Casper - <em>With a Drupal backend</em>&quot;</p>
-
-<p>And here&#39;s the key difference: With Behat you can interact with Drupal&#39;s API even when testing using PhantomJS. That is a lot of testing power!</p>
-
-<p><img src="/assets/images/posts/behat-casper/image1.gif" /></p>
-
-            </div>
-            <div class="read-more">
-              <a href="/content/behat-vs-casper-for-drupal">
-                Read More <i class="fa fa-angle-right"></i>
-              </a>
-            </div>
-          </article>
         
-
-          
-            
-          
-
-          
-            
-             
-               
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-          <article class="post post-teaser">
-            <div class="author-details clearfix">
-              <img src="/images/team/avatars/amitaibu.4179.jpg" class="img-responsive img-circle">
-              <p class="name">Amitai Burstein</p>
-              <p class="date"><i class="fa fa-calendar"></i> 23 Nov 2014</p>
-            </div>
-            <h1><a href="/content/todo-restful-backend">Todo app with RESTful backend </a></h1>
-            <div class="post-content">
-              <p>The Drupal community can now proudly claim its own implementation of a <a href="http://gizra.github.io/todo_restful/#/">Todo app</a> with a RESTful backend!</p>
-
-<p><img src="http://www.gizra.com/assets/images/posts/todo-restful/image1.jpg" /></p>
-
-<p><a href="http://todomvc.com/">TodoMVC</a> is a site that helps you select the right JS MVC library. But more then that, it allows you to learn by comparing those libraries, as they all implement the same thing - a simple Todo app.</p>
-
-<p>I&#39;ve decided to fork the <a href="http://todomvc.com/examples/angularjs/#/">Angular example</a>, and build it on top of <a href="https://github.com/Gizra/restful">RESTful</a>. Looking at the Angular code, I was pleasantly surprised.</p>
-
-            </div>
-            <div class="read-more">
-              <a href="/content/todo-restful-backend">
-                Read More <i class="fa fa-angle-right"></i>
-              </a>
-            </div>
-          </article>
+      
+    
+      
         
-
-          
-            
-          
-
-          
-            
-             
-               
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-          <article class="post post-teaser">
-            <div class="author-details clearfix">
-              <img src="/images/team/avatars/amitaibu.4179.jpg" class="img-responsive img-circle">
-              <p class="name">Amitai Burstein</p>
-              <p class="date"><i class="fa fa-calendar"></i> 17 Nov 2014</p>
-            </div>
-            <h1><a href="/content/behat-the-right-way">Behat - The Right Way </a></h1>
-            <div class="post-content">
-              <p><a href="http://behat.org">Behat</a> is a wonderful tool for automatic testing. It allows you to write your user stories and scenarios in proper English, which is then parsed by Behat and transformed to a set of clicks or other operations that mimic a real user.</p>
-
-<p>If you don&#39;t have automated tests on your project, I would argue that you&#39;re doing it wrong (I explain why on <a href="https://www.getpantheon.com/blog/drupal-development-gizra-way">The Gizra Way</a> presentation). Even having a <em>single</em> test is much better than none.</p>
-
-<p>With that said, it&#39;s super easy to abuse Behat. We are developers and we think sort of like machines (not really, but you get my point). If you would like to test login to your site you could easily do</p>
-<div class="highlight"><pre><code class="cucumber language-cucumber" data-lang="cucumber"><span class="k">Given </span><span class="nf">I visit &quot;</span><span class="s">/user/login</span><span class="nf">&quot;</span>
-<span class="nf"> </span><span class="c"># fill the username and password input fields, and click submit</span><span class="nf"></span>
-<span class="nf"> </span><span class="k">When </span><span class="nf">I fill &quot;</span><span class="s">username</span><span class="nf">&quot; with &quot;</span><span class="s">foo</span><span class="nf">&quot;</span>
-<span class="nf">  </span><span class="k">And </span><span class="nf">I fill &quot;</span><span class="s">password</span><span class="nf">&quot; with &quot;</span><span class="s">bar</span><span class="nf">&quot;</span>
-<span class="nf">  </span><span class="k">And </span><span class="nf">I press &quot;</span><span class="s">Login</span><span class="nf">&quot;</span>
-<span class="nf"> </span><span class="k">Then </span><span class="nf">I should get a &quot;</span><span class="s">200</span><span class="nf">&quot; HTTP response</span>
-</code></pre></div>
-<p>Your test will return green, but it could be improved:</p>
-
-            </div>
-            <div class="read-more">
-              <a href="/content/behat-the-right-way">
-                Read More <i class="fa fa-angle-right"></i>
-              </a>
-            </div>
-          </article>
+      
+    
+      
         
-
-          
-            
-          
-
-          
-            
-             
-               
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-          <article class="post post-teaser">
-            <div class="author-details clearfix">
-              <img src="/images/team/avatars/amitaibu.4179.jpg" class="img-responsive img-circle">
-              <p class="name">Amitai Burstein</p>
-              <p class="date"><i class="fa fa-calendar"></i> 30 Oct 2014</p>
-            </div>
-            <h1><a href="/content/restful-discovery">RESTful Discovery - Who knows about your API? </a></h1>
-            <div class="post-content">
-              <p>As extremely pedantic developers we take documenting our APIs very seriously. It&#39;s not rare to see a good patch rejected in code review just because the PHPdocs weren&#39;t clear enough, or a <code>@param</code> wasn&#39;t declared properly.</p>
-
-<p>In fact, I often explain to junior devs that the most important part of a function is its signature, and the PHPdocs. The body of the function is just &quot;implementation details&quot;. How it communicates its meaning to the person reading it is the vital part.</p>
-
-<p>But where does this whole pedantic mindset got when we open up our web-services?<br>
-I would argue that at least 95% of the developers who expose their web-service simply enable RESTws without any modifications. And here&#39;s what a developer implementing your web-service will see when visiting <code>/node.json</code>:</p>
-
-            </div>
-            <div class="read-more">
-              <a href="/content/restful-discovery">
-                Read More <i class="fa fa-angle-right"></i>
-              </a>
-            </div>
-          </article>
+      
+    
+      
         
-
-          
-            
-          
-
-          
-            
-             
-               
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-            
-             
-            
-          
-          <article class="post post-teaser">
-            <div class="author-details clearfix">
-              <img src="/images/team/avatars/amitaibu.4179.jpg" class="img-responsive img-circle">
-              <p class="name">Amitai Burstein</p>
-              <p class="date"><i class="fa fa-calendar"></i> 19 Oct 2014</p>
-            </div>
-            <h1><a href="/content/gizra-we-have-got-your-headless-covered">Gizra - We've Got Your Headless Covered </a></h1>
-            <div class="post-content">
-              <h2>What&#39;s the name of the Angular component for login?</h2>
-
-<p>The difficulties in creating a semi or fully decoupled site isn&#39;t in the RESTful part. Spitting out JSON is now covered by several modules, including <a href="https://github.com/Gizra/restful">RESTful</a> which aims for a &quot;best practices&quot; solution.</p>
-
-<p>One of the real problems, though, is how to prevent us, the community, from re-inventing the wheel over and over again. Basically, how do we package our frontend code similarly to how we package our generic backend code - AKA &quot;modules&quot;. I discussed these problems, and offered some solutions in my &quot;BoF&quot; persentation:</p>
-
-<iframe width="560" height="315" src="//www.youtube.com/embed/wh6ZQOEzOgs?rel=0" frameborder="0" allowfullscreen></iframe>
-
-            </div>
-            <div class="read-more">
-              <a href="/content/gizra-we-have-got-your-headless-covered">
-                Read More <i class="fa fa-angle-right"></i>
-              </a>
-            </div>
-          </article>
+      
+    
+      
         
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+
+  <div class="article">
+    <!-- The post teaser main image. -->
+    <a href="/content/drupal-x5-faster" class="main-image">
+      
+        <img src="/images/post/1.f65a.jpg" alt="Drupal, only x5 faster">
+      
+    </a>
+    <!-- The Author detail's -->
+    <div class="author-details">
+      <!-- Link to author on the team page if author is a member -->
+      
+        <p class="name">By <a href="/team?member=amitaibu">Amitai Burstein</a> </p>
+      
+      <a href="/content/drupal-x5-faster">
+        <img src="/images/team/avatars/amitaibu.4179.jpg" class="img-responsive img-circle avatar grayscale">
+      </a>
+      <p class="date">Jan 9, 2014</p>
+    </div>
+    <p class="title" title="Drupal, only x5 faster"><a href="/content/drupal-x5-faster" >Drupal, only x5 faster</a></p>
+  </div>
+</article>
+
+            </div>
+          
+            <div class="col-sm-4">
+              <article class="post post-teaser">
+    
+      
+    
+
+    
+      
+        
+          
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+
+  <div class="article">
+    <!-- The post teaser main image. -->
+    <a href="/content/zariz-in-pics" class="main-image">
+      
+        <img src="/images/post/2.8d55.jpg" alt="Zariz in Pics">
+      
+    </a>
+    <!-- The Author detail's -->
+    <div class="author-details">
+      <!-- Link to author on the team page if author is a member -->
+      
+        <p class="name">By <a href="/team?member=amitaibu">Amitai Burstein</a> </p>
+      
+      <a href="/content/zariz-in-pics">
+        <img src="/images/team/avatars/amitaibu.4179.jpg" class="img-responsive img-circle avatar grayscale">
+      </a>
+      <p class="date">Dec 24, 2013</p>
+    </div>
+    <p class="title" title="Zariz in Pics"><a href="/content/zariz-in-pics" >Zariz in Pics</a></p>
+  </div>
+</article>
+
+            </div>
+          
+            <div class="col-sm-4">
+              <article class="post post-teaser">
+    
+      
+    
+
+    
+      
+        
+          
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+
+  <div class="article">
+    <!-- The post teaser main image. -->
+    <a href="/content/zariz-means-agile" class="main-image">
+      
+        <img src="/images/post/3.326e.jpg" alt="Zariz Means Agile">
+      
+    </a>
+    <!-- The Author detail's -->
+    <div class="author-details">
+      <!-- Link to author on the team page if author is a member -->
+      
+        <p class="name">By <a href="/team?member=amitaibu">Amitai Burstein</a> </p>
+      
+      <a href="/content/zariz-means-agile">
+        <img src="/images/team/avatars/amitaibu.4179.jpg" class="img-responsive img-circle avatar grayscale">
+      </a>
+      <p class="date">Dec 11, 2013</p>
+    </div>
+    <p class="title" title="Zariz Means Agile"><a href="/content/zariz-means-agile" >Zariz Means Agile</a></p>
+  </div>
+</article>
+
+            </div>
+          
+            <div class="col-sm-4">
+              <article class="post post-teaser">
+    
+      
+    
+
+    
+      
+        
+          
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+
+  <div class="article">
+    <!-- The post teaser main image. -->
+    <a href="/content/the-about-story" class="main-image">
+      
+        <img src="/images/post/4.3556.jpg" alt="The "About" Story">
+      
+    </a>
+    <!-- The Author detail's -->
+    <div class="author-details">
+      <!-- Link to author on the team page if author is a member -->
+      
+        <p class="name">By <a href="/team?member=amitaibu">Amitai Burstein</a> </p>
+      
+      <a href="/content/the-about-story">
+        <img src="/images/team/avatars/amitaibu.4179.jpg" class="img-responsive img-circle avatar grayscale">
+      </a>
+      <p class="date">Oct 31, 2013</p>
+    </div>
+    <p class="title" title="The "About" Story"><a href="/content/the-about-story" >The "About" Story</a></p>
+  </div>
+</article>
+
+            </div>
+          
+            <div class="col-sm-4">
+              <article class="post post-teaser">
+    
+      
+    
+
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+
+  <div class="article">
+    <!-- The post teaser main image. -->
+    <a href="/content/how-we-use-github-issues" class="main-image">
+      
+        <img src="/images/post/5.9861.jpg" alt="How We Achieve Faster Development and Happier Clients by Opening Our GitHub Issues">
+      
+    </a>
+    <!-- The Author detail's -->
+    <div class="author-details">
+      <!-- Link to author on the team page if author is a member -->
+      
+        <p class="name">By <a href="/team?member=niryariv">Nir Yariv</a> </p>
+      
+      <a href="/content/how-we-use-github-issues">
+        <img src="/images/team/avatars/niryariv.4f24.jpg" class="img-responsive img-circle avatar grayscale">
+      </a>
+      <p class="date">Oct 31, 2013</p>
+    </div>
+    <p class="title" title="How We Achieve Faster Development and Happier Clients by Opening Our GitHub Issues"><a href="/content/how-we-use-github-issues" >How We Achieve Faster Development and Happier Clients by Opening Our GitHub Issues</a></p>
+  </div>
+</article>
+
+            </div>
+          
+            <div class="col-sm-4">
+              <article class="post post-teaser">
+    
+      
+    
+
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+
+  <div class="article">
+    <!-- The post teaser main image. -->
+    <a href="/content/tipali-a-tool-for-easily-finding-polio-vaccination-clinics" class="main-image">
+      
+        <img src="/images/post/6.f59f.jpg" alt="Tipa.li – a Tool for Easily Finding Polio Vaccination Clinics">
+      
+    </a>
+    <!-- The Author detail's -->
+    <div class="author-details">
+      <!-- Link to author on the team page if author is a member -->
+      
+        <p class="name">By <a href="/team?member=niryariv">Nir Yariv</a> </p>
+      
+      <a href="/content/tipali-a-tool-for-easily-finding-polio-vaccination-clinics">
+        <img src="/images/team/avatars/niryariv.4f24.jpg" class="img-responsive img-circle avatar grayscale">
+      </a>
+      <p class="date">Sep 4, 2013</p>
+    </div>
+    <p class="title" title="Tipa.li – a Tool for Easily Finding Polio Vaccination Clinics"><a href="/content/tipali-a-tool-for-easily-finding-polio-vaccination-clinics" >Tipa.li – a Tool for Easily Finding Polio Vaccination Clinics</a></p>
+  </div>
+</article>
+
+            </div>
+          
+            <div class="col-sm-4">
+              <article class="post post-teaser">
+    
+      
+    
+
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+
+  <div class="article">
+    <!-- The post teaser main image. -->
+    <a href="/content/open-source-real-world/" class="main-image">
+      
+        <img src="/images/post/7.79a3.jpg" alt="Open Source - Real World">
+      
+    </a>
+    <!-- The Author detail's -->
+    <div class="author-details">
+      <!-- Link to author on the team page if author is a member -->
+      
+      <!-- No link because the author isn't a member on the team page -->
+      <p class="name">By Itamar Burstein </p>
+      
+      <a href="/content/open-source-real-world/">
+        <img src="/images/team/avatars/itamarbu.d61a.jpg" class="img-responsive img-circle avatar grayscale">
+      </a>
+      <p class="date">Aug 28, 2013</p>
+    </div>
+    <p class="title" title="Open Source - Real World"><a href="/content/open-source-real-world/" >Open Source - Real World</a></p>
+  </div>
+</article>
+
+            </div>
+          
+            <div class="col-sm-4">
+              <article class="post post-teaser">
+    
+      
+    
+
+    
+      
+        
+          
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+
+  <div class="article">
+    <!-- The post teaser main image. -->
+    <a href="/content/dekyll-new-github-pages-flavor/" class="main-image">
+      
+        <img src="/images/post/8.2b82.jpg" alt="Dekyll's new "Github Pages" flavor">
+      
+    </a>
+    <!-- The Author detail's -->
+    <div class="author-details">
+      <!-- Link to author on the team page if author is a member -->
+      
+        <p class="name">By <a href="/team?member=amitaibu">Amitai Burstein</a> </p>
+      
+      <a href="/content/dekyll-new-github-pages-flavor/">
+        <img src="/images/team/avatars/amitaibu.4179.jpg" class="img-responsive img-circle avatar grayscale">
+      </a>
+      <p class="date">Jul 14, 2013</p>
+    </div>
+    <p class="title" title="Dekyll's new "Github Pages" flavor"><a href="/content/dekyll-new-github-pages-flavor/" >Dekyll's new "Github Pages" flavor</a></p>
+  </div>
+</article>
+
+            </div>
+          
+            <div class="col-sm-4">
+              <article class="post post-teaser">
+    
+      
+    
+
+    
+      
+        
+          
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+
+  <div class="article">
+    <!-- The post teaser main image. -->
+    <a href="/content/dekyll-drupal-on-jekyll/" class="main-image">
+      
+        <img src="/images/post/9.7c78.jpg" alt="Dekyll - Drupal on Jekyll">
+      
+    </a>
+    <!-- The Author detail's -->
+    <div class="author-details">
+      <!-- Link to author on the team page if author is a member -->
+      
+        <p class="name">By <a href="/team?member=amitaibu">Amitai Burstein</a> </p>
+      
+      <a href="/content/dekyll-drupal-on-jekyll/">
+        <img src="/images/team/avatars/amitaibu.4179.jpg" class="img-responsive img-circle avatar grayscale">
+      </a>
+      <p class="date">Jun 30, 2013</p>
+    </div>
+    <p class="title" title="Dekyll - Drupal on Jekyll"><a href="/content/dekyll-drupal-on-jekyll/" >Dekyll - Drupal on Jekyll</a></p>
+  </div>
+</article>
+
+            </div>
+          
+        </div>
       </div>
     </div>
     <!--Pager Begin-->
     <div class="row">
-      <div id="pager" class="col-sm-offset-1 col-sm-10">
+      <div id="pager" class="col-sm-12 narrow">
         <ul class="pager-nav">
           <li class="prev text-uppercase">
             
-            <a href="/blog/page5">Previous</a>
+            <a href="/blog/page5">
+              <span><i class="fa fa-chevron-circle-left"></i> Previous</span>
+            </a>
             
           </li>
           <li class="next text-uppercase">
             
-            <a href="/blog/page7">Next</a>
+            <a href="/blog/page7">
+              <span>Next <i class="fa fa-chevron-circle-right"></i></span>
+            </a>
             
           </li>
         </ul>
@@ -685,7 +1156,7 @@ I would argue that at least 95% of the developers who expose their web-service s
         <div class="background">
           <div class="container">
             <div class="row">
-              <div class="col-sm-12 narrow">
+              <div class="col-sm-12">
                 <h2 class="title">Talk to us</h2>
                 <div class="clearfix">
                   <address>
@@ -704,6 +1175,9 @@ I would argue that at least 95% of the developers who expose their web-service s
                     <span class="link twitter">
                       <a href="https://twitter.com/gizra_drupal" target="_blank"><i class="fa fa-twitter-square"></i></a>
                     </span>
+                    <span class="link linkedin">
+                      <a href="https://www.linkedin.com/company/gizra-ltd" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+                    </span>
                   </div>
                 </div>
               </div>
@@ -720,7 +1194,6 @@ I would argue that at least 95% of the developers who expose their web-service s
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
 
-    <script src="/js/scripts.c3ac.js"></script>
-
+    <script src="/js/scripts.ddd6.js"></script>
     </body>
 </html>
