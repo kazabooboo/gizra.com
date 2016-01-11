@@ -1,5 +1,10 @@
 #about-page {
   background: url('/assets/images/about-story/background.jpg');
+  color: #464646;
+  font-family: 'Hind', sans-serif;
+  font-size: 18px;
+  line-height: 1.9em;
+  letter-spacing: 0.020em;
 
   @media (min-width: 1200px) {
     .container {
@@ -12,16 +17,8 @@
     padding-right: 0;
   }
 
-  h1,
   p {
-    color: black;
-  }
-
-  p {
-    font-size: 20px;
-    line-height: 40px;
     margin-top: 60px;
-    font-family: 'Source Sans Pro';
   }
 
   h1 {
@@ -45,6 +42,7 @@
   .section2 {
     background: url('/assets/images/about-story/lamp.jpg') no-repeat no-repeat;
     height: 300px;
+    opacity: 0.85;
   }
 
   .section3 {
