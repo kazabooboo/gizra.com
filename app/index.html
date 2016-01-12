@@ -5,50 +5,49 @@ description: Web development and web design New York and Tel aviv. Gizra is a di
 keywords: The Gizra Way, Web development Tel-aviv, Web development New york, Statup POC.
 homepage: true
 ---
-<header class="header-homepage">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-        {% include header.html %}
-        <div id="slogan">
-          <h2 class="text-uppercase">
-            Take a leap of faith with us,
-            <br class="hidden-xs">
-            it's beautiful here.
-          </h2>
-          <p>Build an amazing cutting edge web solution that you will be proud of. Seriously.</p>
-          <p>
-            Do it in a truly transparent, best practices driven,
-            <br/>
-            honest partnership with passionate people.
-          </p>
-          <p class="about-us-story">
-            Read our "<a target="_blank" href="/content/the-about-story/">About Story</a>". It's different.
-          </p>
-        </div>
-        {% include clients.html %}
-      </div>
-    </div>
-  </div>
-</header>
-{% include testimonials.html %}
-{% include about.html %}
-<section class="blog">
-  <div class="container">
-    <div class="row text-wrapper">
-      <div class="col-sm-12 narrow">
-        <h2 class="hp-title text-center">From our blog</h2>
-        <div class="row">
-          {% for post in site.posts limit:3 %}
-          <div class="col-sm-4">
-            {% include post_teaser.html %}
+<div id="homepage">
+  <header class="header-homepage">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          {% include header.html %}
+          <div id="slogan">
+            <h2 class="text-uppercase">
+              Take a leap of faith with us,
+              <br class="hidden-xs">
+              it's beautiful here.
+            </h2>
+            <p>Build an amazing cutting edge web solution that you will be proud of. Seriously.</p>
+            <p>
+              Do it in a truly transparent, best practices driven,
+              <br/>
+              honest partnership with passionate people.
+            </p>
+            <p class="about-us-story">
+              Read our "<a target="_blank" href="/content/the-about-story/">About Story</a>". It's different.
+            </p>
           </div>
-          {% endfor %}
-          <div class="col-xs-12 blog-more">
-            <a href="/blog#">View our blog</a>
-          </div>
+          {% include clients.html %}
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </header>
+  {% include testimonials.html %}
+  {% include about.html %}
+  <section class="blog">
+    <div class="container">
+      <div class="row text-wrapper">
+        <div class="col-sm-12 narrow">
+          <h2 class="hp-title text-center"><a href="/blog#">From our blog</a></h2>
+          <div class="row">
+            {% for post in site.posts limit:3 %}
+            <div class="col-sm-4">
+              {% include post_teaser.html img_number=forloop.index %}
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

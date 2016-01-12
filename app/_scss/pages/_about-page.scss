@@ -87,3 +87,13 @@
     }
   }
 }
+
+// Desktop Media query.
+@include desktop {
+
+  #about-page p {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+}

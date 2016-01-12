@@ -17,7 +17,7 @@
     <!-- The post teaser main image. -->
     <a href="{{ post.url }}" class="main-image">
       {% if post.image == nil %}
-        <img src="/images/post/{{ forloop.index }}.jpg" alt="{{ post.title }}">
+        <img src="/images/post/{{ include.img_number }}.jpg" alt="{{ post.title }}">
       {% else %}
         <img src="{{ post.image }}" alt="{{ post.title }}">
       {% endif %}

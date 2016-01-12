@@ -22,7 +22,7 @@ blog: true
         <div class="row posts">
           {% for post in paginator.posts %}
             <div class="col-sm-4">
-              {% include post_teaser.html %}
+              {% include post_teaser.html img_number=forloop.index %}
             </div>
           {% endfor %}
         </div>
