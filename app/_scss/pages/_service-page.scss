@@ -224,7 +224,17 @@
     }
 
     .service-wrapper {
+      padding-top: 17px;
       padding-bottom: 0;
+
+      .service-description {
+        margin-bottom: 17px;
+      }
+
+      .description,
+      .service-description {
+        padding: 0 17px;
+      }
 
       .service-features-mobile > * {
         position: relative;
