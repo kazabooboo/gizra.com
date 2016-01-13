@@ -903,7 +903,11 @@
   
   
     <url>
-      <loc>http://www.gizra.com/tags.html</loc>
+      <loc>http://www.gizra.com/elm-rss/index.html</loc>
+     </url>
+  
+    <url>
+      <loc>http://www.gizra.com/team/index.html</loc>
      </url>
   
     <url>
@@ -915,19 +919,15 @@
      </url>
   
     <url>
-      <loc>http://www.gizra.com/elm-rss/index.html</loc>
-     </url>
-  
-    <url>
-      <loc>http://www.gizra.com/sitemap.xml</loc>
-     </url>
-  
-    <url>
       <loc>http://www.gizra.com/blog/index.html</loc>
      </url>
   
     <url>
-      <loc>http://www.gizra.com/team/index.html</loc>
+      <loc>http://www.gizra.com/tags.html</loc>
+     </url>
+  
+    <url>
+      <loc>http://www.gizra.com/sitemap.xml</loc>
      </url>
   
     <url>
