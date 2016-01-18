@@ -3,7 +3,7 @@
  */
 runTests = function() {
   var errors = [];
-  var buildId = 21706;
+  var buildId = 21248;
   var buildToken = '77c40f0079b809f297082c1be2741375fde105e8';
 
   var customTests = function() {
@@ -58,7 +58,7 @@ runTests = function() {
       image.src = canvas.toDataURL("image/png");
       document.body.appendChild(image);
 
-      request.open('POST', 'https://live-shoov.pantheon.io/api/v1.0/js-lm-incidents?token=' + buildToken, true);
+      request.open('POST', 'https://dev-shoov.pantheon.io/api/v1.0/js-lm-incidents?token=' + buildToken, true);
       request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
 
       request.send(encodeURI(serializeObject(data)));
