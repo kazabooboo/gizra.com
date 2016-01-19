@@ -179,7 +179,8 @@
         border-right: 1px solid $softer-border;
       }
 
-      .title, .text {
+      .title,
+      .text {
         padding-right: 100px;
       }
 
@@ -194,7 +195,7 @@
 
       a {
         text-decoration: none;
-        color:  $gizra-orange;;
+        color: $gizra-orange;
         padding: 0 2px;
         border-bottom: 1px dotted rgba(226, 112, 88, 0.91);
         margin-right: 15px;
@@ -272,7 +273,7 @@
       margin-bottom: 35px;
 
       a {
-        color:  $gizra-orange;
+        color: $gizra-orange;
         padding: 4px 8px;
         border: 1px dotted $gizra-orange;
         border-radius: 3px;
