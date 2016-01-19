@@ -1,0 +1,55 @@
+#page-404 {
+
+  #bg {
+    z-index: -10;
+    min-height: 100%;
+    min-width: 1024px;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  h1 {
+    margin-top: 9% ;
+    font-family: Abril Fatface;
+    font-size: 13.5em;
+    text-decoration: none;
+    color: #e27058;
+  }
+
+  .wrapper {
+    max-width: 500px;
+    margin: 0 auto;
+    font-size: 1.5em;
+    line-height: 1.2em;
+
+    a {
+      color: $gizra-orange;
+      border: 1px dotted;
+      padding: 10px;
+      display: inline-block;
+      margin-top: 18px;
+      border-radius: 5px;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+// Mobile Media query.
+@include mobile {
+
+  #page-404 {
+    .wrapper {
+      line-height: 0.9em;
+    }
+
+    h1 {
+      font-size: 10.5em;
+    }
+  }
+}

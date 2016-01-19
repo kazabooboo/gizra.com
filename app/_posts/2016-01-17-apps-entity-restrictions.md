@@ -6,6 +6,7 @@ tags:
 permalink: "/content/apps-entity-restrictions"
 author: RoySegall
 layout: post
+image: "/assets/images/posts/apps-entity-restrictions/burner.jpg"
 published: true
 ---
 
