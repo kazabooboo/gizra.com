@@ -1,0 +1,7 @@
+{% case page.title %}
+  {% when 'Blog' %}
+    {% capture title %}"Blog page - {{ paginator.page }} | Gizra"{% endcapture %}
+  {% else %}
+    {% assign title = page.title %}
+{% endcase %}
+<title>{{ title }}</title>
