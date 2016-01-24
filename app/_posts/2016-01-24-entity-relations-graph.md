@@ -18,7 +18,7 @@ developer arrives and we need to quickly bring them on board. The complexity of 
 One way we like to look at a project before diving into the code is through its data structure. The different entities and their relations can tell us a lot about the business logic of the site and its internal logic. We assumed that if we could _easily_ generate a graph
 with all the bundles, entities, and their relations this complex task would be easier.
 
-After some experience, I believe our assumption was right. For example it's much easier to look at the following graph and understand that `Work session`, `Time tracking`, `Salary`, `Payment`, and `Github Issue` bundles are pointing at a `Project`, which in turn points to an `Account` bundle.
+After some experience, I believe our assumption was right. For example it's much easier to look at the following graph and understand that `Work session`, `Time tracking`, `Payment`, and `Github Issue` bundles are pointing at a `Project`, which in turn points to an `Account` bundle. `Github Issue` cal also reference itself.
 
 <div class="thumbnail">
   <img src="{{BASE_PATH}}/assets/images/posts/entity-relations/image1.jpg">
