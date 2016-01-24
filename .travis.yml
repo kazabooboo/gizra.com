@@ -1,12 +1,6 @@
 language: php
-
 php:
-  - 5.5
-
-mysql:
-  database: drupal
-  username: root
-  encoding: utf8
+  - '5.6'
 
 env:
   global:
@@ -24,11 +18,11 @@ before_install:
   - sh -e /etc/init.d/xvfb start
 
   # Install ngrok
-  - cd ~
-  - wget https://dl.ngrok.com/ngrok_2.0.17_linux_amd64.zip
-  - unzip ngrok_2.0.17_linux_amd64.zip
-  - ./ngrok authtoken $NGROK_AUTHTOKEN
-  - cd -
+  # - cd ~
+  # - wget https://dl.ngrok.com/ngrok_2.0.17_linux_amd64.zip
+  # - unzip ngrok_2.0.17_linux_amd64.zip
+  # - ./ngrok authtoken $NGROK_AUTHTOKEN
+  # - cd -
 
 
 install:
@@ -36,7 +30,7 @@ install:
   - npm install -g bower grunt-cli mocha
 
   # WebdriverCSS
-  - sudo apt-get install graphicsmagick
+  # - sudo apt-get install graphicsmagick
 
   # Install Shoov config
   - curl -o ~/.shoov.json $SHOOV_CURL
@@ -56,18 +50,18 @@ install:
   - cd ..
 
   # Install webdriverCSS
-  - cd ui-tests
-  - npm install
-  - cd ..
+  # - cd ui-tests
+  # - npm install
+  # - cd ..
 
 before_script:
   # Wait for Grunt to finish loading.
   - until $(curl --output /dev/null --silent --head --fail http://localhost:9000); do sleep 1; done
 
   # Run ngrok
-  - echo $TRAVIS_COMMIT
-  - ~/ngrok http -log=stdout -subdomain=$TRAVIS_COMMIT 9000 > ~/ngrok.log 2>&1 &
-  - until $(curl --output /dev/null --silent --head --fail https://$TRAVIS_COMMIT.ngrok.io); do sleep 1; echo '.'; done
+  # - echo $TRAVIS_COMMIT
+  # - ~/ngrok http -log=stdout -subdomain=$TRAVIS_COMMIT 9000 > ~/ngrok.log 2>&1 &
+  # - until $(curl --output /dev/null --silent --head --fail https://$TRAVIS_COMMIT.ngrok.io); do sleep 1; echo '.'; done
 
 script:
   # Run behat tests.
@@ -75,6 +69,6 @@ script:
   - ./bin/behat --tags=~@wip
   - cd ..
 
-  - cd ui-tests
-#  - PROVIDER_PREFIX=browserstack SELECTED_CAPS=chrome mocha
-#  - PROVIDER_PREFIX=browserstack SELECTED_CAPS=ie11 mocha
+  # - cd ui-tests
+  # - PROVIDER_PREFIX=browserstack SELECTED_CAPS=chrome mocha
+  # - PROVIDER_PREFIX=browserstack SELECTED_CAPS=ie11 mocha

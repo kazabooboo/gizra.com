@@ -5,75 +5,49 @@ description: Web development and web design New York and Tel aviv. Gizra is a di
 keywords: The Gizra Way, Web development Tel-aviv, Web development New york, Statup POC.
 homepage: true
 ---
-<header class="header-homepage">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-        {% include header.html %}
-        <div id="slogan">
-          <h2 class="text-uppercase">
-            Take a leap of faith with us,
-            <br class="hidden-xs">
-            it's beautiful here.
-          </h2>
-          <p>Build an amazing cutting edge web solution that you will be proud of. Seriously.</p>
-          <p>
-            Do it in a truly transparent, best practices driven,
-            <br/>
-            honest partnership with passionate people.
-          </p>
-          <p class="about-us-story">
-            Read our "<a target="_blank" href="/content/the-about-story/">About Story</a>". It's different.
-          </p>
+<div id="homepage">
+  <header class="header-homepage">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          {% include header.html %}
+          <div id="slogan">
+            <h2 class="text-uppercase">
+              Take a leap of faith with us,
+              <br class="hidden-xs">
+              it's beautiful here.
+            </h2>
+            <p>Build an amazing cutting edge web solution that you will be proud of. Seriously.</p>
+            <p>
+              Do it in a truly transparent, best practices driven,
+              <br/>
+              honest partnership with passionate people.
+            </p>
+            <p class="about-us-story">
+              Read our "<a target="_blank" href="/content/the-about-story/">About Story</a>". It's different.
+            </p>
+          </div>
+          {% include clients.html %}
         </div>
-        {% include clients.html %}
       </div>
     </div>
-  </div>
-</header>
-{% include testimonials.html %}
-{% include about.html %}
-<section class="blog">
-  <div class="container">
-    <div class="row text-wrapper">
-      <div class="col-sm-12 narrow">
-        <h2 class="hp-title">From our blog</h2>
-        <article class="post post-teaser">
-          {% for post in site.posts limit:1 %}
-            {% if post.author == nil %}
-              {% assign author = "amitaibu" %}
-            {% else %}
-              {% assign author = post.author %}
-            {% endif %}
-
-            {% for authors in site.authors %}
-              {% for author_info in authors %}
-                {% if author_info[0] == author %}
-                  {% assign author = author_info[1] %}
-                {% endif %}
-              {% endfor %}
+  </header>
+  {% include testimonials.html %}
+  {% include about.html %}
+  <section class="blog">
+    <div class="container">
+      <div class="row text-wrapper">
+        <div class="col-sm-12 narrow">
+          <h2 class="hp-title text-center"><a href="/blog">From our blog</a></h2>
+          <div class="row">
+            {% for post in site.posts limit:3 %}
+            <div class="col-sm-4">
+              {% include post_teaser.html img_number=forloop.index %}
+            </div>
             {% endfor %}
-            <div class="article" >
-              <p class="title"><a href="{{ post.url }}" >{{ post.title }}</a></p>
-              <p class="text">
-                {{ post.excerpt |  strip_html | truncate: 300 }}
-              </p>
-            </div>
-          <div class="author-details clearfix">
-            <img src="/images/team/avatars/{{ author.avatar }}" class="img-responsive img-circle">
-            <p class="name">{{ author.name }}</p>
-            <p class="date"><i class="fa fa-calendar"></i> {{ post.date | date_to_string }}</p>
           </div>
-          <div class="read-more-wrapper">
-            <div class="read-more">
-              <a href="{{ post.url }}">
-                Read More <i class="fa fa-angle-right"></i>
-              </a>
-            </div>
-          </div>
-          {% endfor %}
-        </article>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+</div>

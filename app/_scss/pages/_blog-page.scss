@@ -1,22 +1,30 @@
-#blog-page {
+// Post page.
+#header-post,
+#header-blog {
+  background: url('/images/post/background.png') no-repeat center top;
+  background-size: cover;
+  text-align: left;
 
-  .read-more {
-    text-align: right;
+  .gizra-logo {
+    margin-bottom: 30px;
   }
+}
 
-  .post-content {
-    border-top: 1px solid $softer-border;
-    border-bottom: 1px solid $softer-border;
-    padding: 0 $spacing;
-    margin: $spacing 0 $spacing;
-    padding-top: $spacing;
-    padding-bottom: $spacing;
 
-    *:last-child {
-      margin-bottom: 0 !important;
-      padding-bottom: 0 !important;
+#header-blog {
+  h1 {
+    margin-left: 15px;
+    color: white;
+
+    a {
+      color: inherit;
+      text-decoration: none;
     }
   }
+}
+
+#blog-page {
+  margin-top: 45px;
 
   #pager {
     list-style: none;
@@ -26,13 +34,17 @@
     .pager-nav {
       padding-left: 0;
       list-style-type: none;
-      font-size: 23px;
-      font-family: verdana, sans-serif;
+      font-size: 1.2em;
+      font-weight: 500;
     }
 
     .prev,
     .next {
       width: 50%;
+
+      a {
+        text-decoration: none;
+      }
     }
 
     .prev {
@@ -52,6 +64,7 @@
 
 // Mobile Media query.
 @include mobile {
+
   .post-content {
     overflow-x: hidden;
   }

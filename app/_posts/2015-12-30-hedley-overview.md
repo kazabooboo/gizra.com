@@ -7,7 +7,6 @@ layout: post
 published: true
 ---
 
-
 {% include setup %}
 
 In August 2015 I challenged myself (and later the rest of the Gizra devs) to create a typical web-app with all the bells and whistles in Elm. It's called [elm-hedley](https://gizra.github.io/elm-hedley), and I'm super proud it is now featuring in Elm's [front page](http://elm-lang.org/).

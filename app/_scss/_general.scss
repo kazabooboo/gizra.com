@@ -12,6 +12,7 @@ body {
   display: inline-block;
   text-align: center;
   border: 0;
+  width: 100%;
 }
 
 #disqus_thread {
@@ -37,9 +38,14 @@ body {
 
   header,
   header .container,
-  .header-post .container,
-  .header-team .container,
+  #page-404 .container,
+  #header-blog .container,
+  #header-post .container,
+  #header-team .container,
   #team-page .container,
+  #header-service .container,
+  #service-page .container,
+  #services-page .container,
   #about,
   #footer {
     min-width: 1200px;
@@ -48,5 +54,4 @@ body {
   .narrow {
     padding: 0 80px;
   }
-
 }

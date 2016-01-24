@@ -1,5 +1,6 @@
 $twitter: #55acee;
 $facebook: #3b5998;
+$linkedin: #0077b5;
 $google-plus: #d34836;
 
 #footer {
@@ -63,6 +64,14 @@ $google-plus: #d34836;
 
       &.google-plus {
         color: $google-plus;
+      }
+
+      &.linkedin {
+        color: $linkedin;
+      }
+
+      &:not(:first-child) {
+        margin-left: 3px;
       }
 
       a {
