@@ -7,6 +7,7 @@ permalink: /content/code-sample-drutnet/
 title: "Code sample for DrutNet API - connect, load node, save node and upload file"
 created: 1274085839
 layout: post
+author: bricel
 ---
 In the previous <a href="/content/drutnet-drupal-net-api">post</a> I've introduced DrutNet API with an already compiled example, today I will show some code examples.
 Since last post I've added a new method that allow file upload with Services, using the base-64 conversion, I will show you how this method works.
@@ -61,11 +62,3 @@ service_connection.NodeSave(node);
  service_connection.FileUpload(filePath , fileIndex , nodeID , fieldName);
 ```FileUpload method takes care of converting the file to base64 and also used both services FileSave and NodeSave.
 </li></ol>
-
-
-
-
-
-
-
-
