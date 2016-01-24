@@ -1,5 +1,5 @@
 ---
-title: "Entity Relationships Graph for Drupal 7"
+title: "Entity Relationships Graph"
 description: "Drupal 7 module that generates an entity relationships graph"
 keywords: "Drupal"
 tags:
