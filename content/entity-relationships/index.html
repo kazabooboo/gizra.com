@@ -6,10 +6,10 @@
         
     
 
-<title>DrutNet -  Drupal .NET API </title>
+<title>Entity Relationships Graph</title>
 
-        <meta name="description" content="">
-        <meta name="keywords" content="">
+        <meta name="description" content="Drupal 7 module that generates an entity relationships graph">
+        <meta name="keywords" content="Drupal">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
       <!-- Favicon for all platforms -->
@@ -186,8 +186,8 @@
     <div class="row">
       <div class="col-sm-10 col-sm-offset-1">
         <article class="post">
-          <h1><a href="/content/drutnet-drupal-net-api/">DrutNet -  Drupal .NET API  </a></h1>
-          <div class="date">29 Apr 2010, By Brice Lenfant</div>
+          <h1><a href="/content/entity-relationships">Entity Relationships Graph </a></h1>
+          <div class="date">24 Jan 2016, By Brice Lenfant</div>
           <div class="tags">
             <img src="/images/post/tag-icon-small.15a8.png" class="tags-icon"/>
             <ul class="inline">
@@ -198,10 +198,6 @@
     
       <li><a href="/tags.html#Drupal-planet-ref">Drupal-planet</a></li>
     
-      <li><a href="/tags.html#.NET-ref">.NET</a></li>
-    
-      <li><a href="/tags.html#DrutNet-ref">DrutNet</a></li>
-    
   
 
 
@@ -209,58 +205,45 @@
             </div>
           <div class="post-content">
 
-            <p>DrutNet is a .NET API to create client applications that connects to a Drupal site, and allow file upload, node save/load, view get and more.</p>
+            <p>We are often challenged with the maintenance of existing projects that were developed by other agencies, or a new developer arrives and we need to quickly bring them on board. The complexity of legacy projects can be very high and the risk of breaking existing logic is something we want to avoid.</p>
 
-<p><strong>Introduction</strong>
-I&#39;ve created this simple API to connect Drupal with .NET applications easily and quickly, this API was based on an API that I wrote for one of our projects, for this project we had to create a few client application to upload files, connect to desktop application and update the content. I used two different interfaces to cover all my needs, cURL - to upload files; and Services module - to create/ update nodes.</p>
+<p>One way we like to look at a project before diving into the code is through its data structure. The different entities and their relations can tell us a lot about the business logic of the site and its internal logic. We assumed that if we could <em>easily</em> generate a graph with all the bundles, entities, and their relations this complex task would be easier.</p>
 
-<p><strong>Features Snapshot</strong>
-DrutNet API has a <code>Services</code> class:
-<ul>
-<li>Services.Login - Login to Drupal</li>
-<li>Services.NodeGet - Load a node</li>
-<li>Services.UserGet - Load a user</li>
-<li>Services.NodeSave - Save a node</li>
-</ul></p>
+<p>Having done this for a while now, I believe our assumption was right. Taking our open-source <a href="https://github.com/Gizra/productivity#gizra-productivity">Productivity project</a> (Gizra&#39;s internal ERP/Project management system) as an example, it&#39;s much easier to look at the following graph and understand that <code>Work session</code>, <code>Time tracking</code>, <code>Payment</code>, and <code>Github Issue</code> bundles are pointing at a <code>Project</code>, which in turn points to an <code>Account</code> bundle. <code>Github Issue</code> can also reference itself.</p>
+
+<div class="thumbnail">
+  <img src="http://www.gizra.com/assets/images/posts/entity-relations/image1.jpg">
+</div>
 
 <!-- more -->
 
-<p>To upload files using the API use the <code>CURL</code> class:
+<p>Thanks to <a href="https://www.drupal.org/u/damien-tournoud">Damien Tournoud&#39;s</a> <a href="(https://www.drupal.org/project/1438582/git-instructions">previous work</a> getting the graph out wasn&#39;t too complicated. His sanbox module already output the entities and bundles. It was merely missing the relationships between them, and a UI to display the graph.</p>
+
+<p>So, standing on the shoulders of giants, we&#39;ve adapted the code and now have an <a href="https://github.com/Gizra/entityrelationships">Entity Relationships</a> module.</p>
+
+<h2>Usage</h2>
+
+<p>There are two interfaces to get the graph:</p>
+
+<h3>Drush</h3>
+
+<p>When using Drush we need the <a href="http://www.graphviz.org/doc/info/command.html">Graphviz</a> command line library to generate the graph,
+since the module only generates text file in the <a href="https://en.wikipedia.org/wiki/DOT_(graph_description_language">DOT language</a>.</p>
+
+<p>Use this from the command line to get an image:<br>
+<code>drush entityrelations | dot -Gratio=0.7 -Eminlen=2 -T png -o ./test.png</code></p>
+
+<h3>UI</h3>
+
+<p>Craft your URL according to your needs:</p>
+
 <ul>
-<li>Curl.Login - Login to Drupal with cURL, which is required in order to uplaod a file. This login is _not the same as the Services login</li>
-<li>Curl.UploadFile - Upload a file to a CCK file/ image field. The &quot;File form&quot; module provided in the <code>/Drupal Module</code> folder must be enabled on the Drupal site</li>
-</ul></p>
+<li>All the entities at <code>/admin/entity-relations</code></li>
+<li>Only the node&#39;s bundles <code>/admin/entity-relations/node</code></li>
+<li>A simplified graph of the node&#39;s bundles, with no fields at <code>/admin/entity-relations/node/false</code></li>
+</ul>
 
-<p><strong>Source</strong>
-The source code is stored under <a href="http://github.com/bricel/DrutNet">GitHub</a>  (we didn&#39;t publish it in Drupal as apparently it against some the CVS guidelines).</p>
-
-<p><strong>Example</strong>
-In the source there is a <code>sample</code> project, that demonstrates the use of the API to load/ save a node, and to upload a file.
-To test the API follow the instructions bellow (no programing or compiling required when using the):</p>
-
-<ol>
-<li>Place both Drupal modules under '/Drupal Module' in your Drupal installation (e.g. under ```sites/all/modules```):
-- DrutNet sample module - The module creates a ```DrutNet smaple``` content type to test the system with the DrutNETSample
-- File form - This module is required for file upload with cURL
-<li>Download and enable the required modules
-```
-drush dl cck views features filefield services
-```
-</li>
-<li>Compile the sample project Or use the already compiled program in ```/Dlls/DrutNETSample.exe```</li>
-<li>Insert your username password to Drupal and the Drupal site URL
-<img src="/assets/images/legacy/Drutnet1.png" /><br/>
-</li>
-<li>Click on "Login to services", and then click "Login to cURL".
-<img src="/assets/images/legacy/Drutnet2.png" /><br/>
-</li>
-<li>Update an existing node by indicating the node ID, loading it, changing the text and "Save" it.
-<img src="/assets/images/legacy/Drutnet3.png" /><br/>
-</li>
-<li>To test file upload, switch to the Upload tab, choose a file and fill the node ID, CCK field name to attach the file to (in our example we use ```field_file```), and hit the Upload Button</li>
-</ol>
-
-<p>For features or bug report use GitHub <a href="http://github.com/bricel/DrutNet/issues">project page</a></p>
+<p>Simple, but powerful.</p>
 
 
           </div>
@@ -270,27 +253,17 @@ drush dl cck views features filefield services
             <div class="col-xs-6 previous">
               
               <div class="text-uppercase">
-                <a href="/content/zen-960/">
+                <a href="/content/apps-entity-restrictions">
                   Previous
                   <span class="visible-xs"> post</span>
                 </a>
               </div>
-              <a href="/content/zen-960/" class="prev-text">
-                <span class="hidden-xs">Zen-960</span>
+              <a href="/content/apps-entity-restrictions" class="prev-text">
+                <span class="hidden-xs">Drupal, Hippies and Backend Restrictions</span>
               </a>
               
             </div>
             <div class="col-xs-6 next">
-              
-              <div class="text-uppercase">
-                <a href="/content/group-intro/">
-                  Next
-                  <span class="visible-xs"> post</span>
-                </a>
-              </div>
-              <a href="/content/group-intro/" class="next-text">
-                <span class="hidden-xs">Group (the new OG) intro</span>
-              </a>
               
             </div>
           </div>
