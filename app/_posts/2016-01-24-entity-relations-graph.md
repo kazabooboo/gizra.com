@@ -2,11 +2,12 @@
 title: Entity Relationships Graph
 description: Drupal 7 module that generates an entity relationships graph
 keywords: Drupal
-tags: 
+tags:
   - "Drupal-planet"
 permalink: "/content/entity-relationships"
 layout: post
 published: true
+image: "/assets/images/posts/entity-relations/image1.jpg"
 author: bricel
 ---
 
@@ -17,7 +18,7 @@ We are often challenged with the maintenance of existing projects that were deve
 
 One way we like to look at a project before diving into the code is through its data structure. The different entities and their relations can tell us a lot about the business logic of the site and its internal logic. We assumed that if we could _easily_ generate a graph with all the bundles, entities, and their relations this complex task would be easier.
 
-Having done this for a while now, I believe our assumption was right. For example it's much easier to look at the following graph and understand that `Work session`, `Time tracking`, `Payment`, and `Github Issue` bundles are pointing at a `Project`, which in turn points to an `Account` bundle. `Github Issue` cal also reference itself.
+Having done this for a while now, I believe our assumption was right. For example it's much easier to look at the following graph and understand that `Work session`, `Time tracking`, `Payment`, and `Github Issue` bundles are pointing at a `Project`, which in turn points to an `Account` bundle. `Github Issue` can also reference itself.
 
 <div class="thumbnail">
   <img src="{{BASE_PATH}}/assets/images/posts/entity-relations/image1.jpg">
@@ -37,10 +38,10 @@ There are two interfaces to get the graph:
 ### Drush
 
 When using Drush we need the [Graphviz](http://www.graphviz.org/doc/info/command.html) command line library to generate the graph,
-since the module only generates text file in the [DOT language](https://en.wikipedia.org/wiki/DOT_(graph_description_language)).
+since the module only generates text file in the [DOT language](https://en.wikipedia.org/wiki/DOT_(graph_description_language).
 
-Use `drush entityrelations | dot -Gratio=0.7 -Eminlen=2 -T png -o ./test.png` to get the image.
-
+Use this from the command line to get an image:  
+`drush entityrelations | dot -Gratio=0.7 -Eminlen=2 -T png -o ./test.png`
 
 ### UI
 
@@ -50,4 +51,4 @@ Craft your URL according to your needs:
 * Only the node's bundles `/admin/entity-relations/node`
 * A simplified graph of the node's bundles, with no fields at `/admin/entity-relations/node/false`
 
-That's all there is to it. Enjoy - and let us know how it worked for you.
+Simple, but powerful.
