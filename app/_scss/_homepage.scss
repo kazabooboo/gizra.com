@@ -49,14 +49,23 @@
     }
   }
 
-  .hp-title {
-    @include title-blue;
+  .main-title {
+    @include title;
+    color: $gizra-orange;
     margin-top: 0;
-    margin-bottom: 25px;
+    margin-bottom: 5px;
 
     a {
       text-decoration: none;
       color: inherit;
+    }
+  }
+
+  .blog {
+    margin-top: 15px;
+
+    .main-title {
+      margin-bottom: 15px;
     }
   }
 }
@@ -70,6 +79,24 @@
 
     h2 {
       max-width: 474px;
+    }
+  }
+}
+
+// Mobile Media query.
+@include mobile {
+
+  #homepage {
+
+    #about #main-wrapper {
+      border: 1px solid $softer-border;
+      padding: 20px;
+      border-radius: 5px;
+    }
+
+    .blog .main-title {
+      margin-bottom: 15px;
+      text-align: center;
     }
   }
 }

@@ -1,15 +1,12 @@
 #about {
   position: relative;
   overflow: hidden;
-  margin-top: 45px;
+  margin-top: 109px;
   margin-bottom: 0;
 
-  .container {
-    @extend .divider-bottom;
-    padding-bottom: 45px;
-  }
-
-  .text-wrapper {
+  #main-wrapper,
+  #gizra-way {
+    position: relative;
 
     p {
       @extend .p-styling;
@@ -20,10 +17,79 @@
       @extend .h3-styling;
       margin-top: 35px;
     }
+  }
 
-    h4 {
-      @extend .h4-styling;
-      margin-top: 20px;
+  #main-wrapper {
+    @extend .divider-top;
+    @extend .divider-bottom;
+    padding-top: 45px;
+    padding-bottom: 33px;
+  }
+
+  #gizra-way {
+    margin-top: 77px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 82px;
+      bottom: 99px;
+      right: 36px;
+      border-right: 1px solid $softer-border;
+      z-index: -1;
+    }
+
+    .main-title {
+      margin-bottom: 17px;
+    }
+
+    .element {
+      position: relative;
+      margin-bottom: 45px;
+      padding: 7px 20px;
+      border: 1px solid $softer-border;
+      border-radius: 5px;
+      background: white;
+
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: -30px;
+        right: 20px;
+        height: 45px;
+        width: 65px;
+        background: url('/images/homepage/fancy bullet.png') no-repeat center right;
+      }
+
+      h4 {
+        @extend .h4-styling;
+        margin-bottom: 9px;
+      }
+    }
+  }
+}
+
+// Desktop Media query.
+@include desktop {
+
+  #about {
+    text-align: justify;
+
+    #gizra-way {
+      margin-top: 45px;
+
+      .element {
+        margin-left: -17px;
+        margin-right: -17px;
+      }
+    }
+
+    #main-wrapper {
+      margin-left: -80px;
+      margin-right: -80px;
+      padding-right: 80px;
+      padding-left: 80px;
     }
   }
 }
@@ -35,6 +101,23 @@
     margin-top: 35px;
     margin-bottom: 10px;
     padding: 20px 0;
+    
+    .mobile-title {
+      margin-bottom: 17px;
+    }
+
+    #gizra-way {
+
+      &::after {
+        right: 53px;
+
+      }
+
+      .element:last-child {
+        margin-bottom: 0;
+      }
+
+    }
 
     .container {
       padding-bottom: 50px;

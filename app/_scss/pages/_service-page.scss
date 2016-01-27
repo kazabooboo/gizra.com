@@ -52,7 +52,8 @@
   }
 
   .section-title {
-    @include title-blue;
+    @include title;
+    color: $gizra-blue;
     margin: 0;
   }
   

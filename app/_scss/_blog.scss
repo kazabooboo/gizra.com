@@ -103,10 +103,15 @@
 // Desktop Media query.
 @include desktop {
 
-  .blog .posts >*:nth-of-type(3n+1) {
-    clear: both;
-  }
+  .blog {
+    .posts >*:nth-of-type(3n+1) {
+      clear: both;
+    }
 
+    .article .main-image {
+      height: 203px;
+    }
+  }
 }
 
 // Mobile Media query.
