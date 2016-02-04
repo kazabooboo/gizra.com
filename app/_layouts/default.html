@@ -37,14 +37,20 @@
       <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600,800' rel='stylesheet' type='text/css'>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
       {% include ga.html %}
-              
+      
+      <!-- Begin Inspectlet Embed Code -->
+      <script type="text/javascript" id="inspectletjs">
+      window.__insp = window.__insp || [];
+      __insp.push(['wid', 314054580]);
+      (function() {
+      function ldinsp(){if(typeof window.__inspld != "undefined") return; window.__inspld = 1; var insp = document.createElement('script'); insp.type = 'text/javascript'; insp.async = true; insp.id = "inspsync"; insp.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://cdn.inspectlet.com/inspectlet.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(insp, x); };
+      setTimeout(ldinsp, 500); document.readyState != "complete" ? (window.attachEvent ? window.attachEvent('onload', ldinsp) : window.addEventListener('load', ldinsp, false)) : ldinsp();
+      })();
+      </script>
+      <!-- End Inspectlet Embed Code -->
+      
     </head>
     <body>
-    <!-- ClickTale Top part -->
-    <script type="text/javascript">
-    var WRInitTime=(new Date()).getTime();
-    </script>
-    <!-- ClickTale end of Top part -->
 
     <!-- Main content -->
     {{ content }}
@@ -67,22 +73,5 @@
     <!-- build:js(app) /js/scripts.js -->
     <script src="/js/main.js"></script>
     <!-- endbuild -->'
-      
-    <!-- ClickTale Bottom part -->
-    
-    <script type='text/javascript'>
-    // The ClickTale Balkan Tracking Code may be programmatically customized using hooks:
-    // 
-    //   function ClickTalePreRecordingHook() { /* place your customized code here */  }
-    //
-    // For details about ClickTale hooks, please consult the wiki page http://wiki.clicktale.com/Article/Customizing_code_version_2
-    
-    document.write(unescape("%3Cscript%20src='"+
-    (document.location.protocol=='https:'?
-    "https://cdnssl.clicktale.net/www07/ptc/dea77991-0e38-46cc-a46f-1043e9e6e781.js":
-    "http://cdn.clicktale.net/www07/ptc/dea77991-0e38-46cc-a46f-1043e9e6e781.js")+"'%20type='text/javascript'%3E%3C/script%3E"));
-    </script>
-    
-    <!-- ClickTale end of Bottom part -->
     </body>
 </html>
