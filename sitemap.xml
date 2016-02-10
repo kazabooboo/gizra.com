@@ -562,7 +562,7 @@
     <url>
       <loc>http://www.gizra.com/content/drupalcamp-montreal-keynote/</loc>
       
-        <lastmod>2012-10-18T00:00:00+03:00</lastmod>
+        <lastmod>2012-10-18T00:00:00+02:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -742,7 +742,7 @@
     <url>
       <loc>http://www.gizra.com/content/rounded-corners/</loc>
       
-        <lastmod>2010-10-20T00:00:00+03:00</lastmod>
+        <lastmod>2010-10-20T00:00:00+02:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -751,7 +751,7 @@
     <url>
       <loc>http://www.gizra.com/content/message-example-github-news-feed/</loc>
       
-        <lastmod>2010-09-29T00:00:00+03:00</lastmod>
+        <lastmod>2010-09-29T00:00:00+02:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -921,30 +921,6 @@
   
   
     <url>
-      <loc>http://www.gizra.com/404.html</loc>
-     </url>
-  
-    <url>
-      <loc>http://www.gizra.com/blog/index.html</loc>
-     </url>
-  
-    <url>
-      <loc>http://www.gizra.com/elm-rss/index.html</loc>
-     </url>
-  
-    <url>
-      <loc>http://www.gizra.com/index.html</loc>
-     </url>
-  
-    <url>
-      <loc>http://www.gizra.com/services/elm/index.html</loc>
-     </url>
-  
-    <url>
-      <loc>http://www.gizra.com/sitemap.xml</loc>
-     </url>
-  
-    <url>
       <loc>http://www.gizra.com/tags.html</loc>
      </url>
   
@@ -953,7 +929,31 @@
      </url>
   
     <url>
+      <loc>http://www.gizra.com/index.html</loc>
+     </url>
+  
+    <url>
+      <loc>http://www.gizra.com/elm-rss/index.html</loc>
+     </url>
+  
+    <url>
+      <loc>http://www.gizra.com/sitemap.xml</loc>
+     </url>
+  
+    <url>
+      <loc>http://www.gizra.com/blog/index.html</loc>
+     </url>
+  
+    <url>
       <loc>http://www.gizra.com/team/index.html</loc>
+     </url>
+  
+    <url>
+      <loc>http://www.gizra.com/services/elm/index.html</loc>
+     </url>
+  
+    <url>
+      <loc>http://www.gizra.com/404.html</loc>
      </url>
   
     <url>
