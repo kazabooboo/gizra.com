@@ -18,6 +18,7 @@ author: HelenaEksler
 When we develop a website we should take care of many things like design, responsiveness, speed, QA - and of course, security.
 
 One of the major security concerns in websites and web applications is Cross Site Scripting (XSS). You definitely don't want somebody to run their own malicious code in your website.
+And to avoid it - you would like to have some kind of "vaccine" from such "disease".
 
 We all know about Drupal's `check_plain()`, `filter_xss()` and similar functions that sanitize user generated text, but unless we are actively checking for XSS, how can we be sure we've added them on all the right places?
 
@@ -25,7 +26,9 @@ Well, we found a nice solution for it that can be easily applied in your project
 
 <!-- more -->
 
-All Gizra's projects are scaffolded from our home grown [hedley generator](/content/yo-hedley/), which comes with migration files that help with adding dummy and real content to your Drupal site. What we do when we add our own dummy migration data, so every time we rebuild the site it comes with some content, is add some data that has deliberate XSS in the title, body and text fields.
+Assuming you are creating some dummy data during the development - you should create an "XSS Example" for each content type, vocabulary etc.
+
+But creating dummy data after each re-install during the development is annoying. All Gizra's projects are scaffolded from our home grown [hedley generator](/content/yo-hedley/), which comes with migration files that help with adding dummy and real content to your Drupal site. What we do when we add our own dummy migration data, so every time we rebuild the site it comes with some content, is add some data that has deliberate XSS in the title, body and text fields.
 
 <div class="thumbnail">
   <img src="{{BASE_PATH}}/assets/images/posts/xss-attack/image1.jpg">
@@ -36,7 +39,9 @@ All Gizra's projects are scaffolded from our home grown [hedley generator](/cont
   <div class="caption">XSS properly sanitized on the node view</div>
 </div>
 
-If you are following this best practice of using the Migration to import content into your platform, you should create an "XSS Example" for each content type, vocabulary etc.
+If you are following this best practice of using the Migration to import content into your platform, you should add "XSS Examples" for each migration.
+
+Of course it's not a panacea, but at least you reduce the chance someone will be able to inject dangerous script into your website.
 
 <div class="thumbnail">
   <img src="{{BASE_PATH}}/assets/images/posts/xss-attack/image3.jpg">
