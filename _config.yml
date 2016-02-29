@@ -78,10 +78,10 @@ authors:
       name: Helena Eksler
       title: Team Lead
       is_member: true
-      bio: Something about Helenas
+      bio: Cooking well, doesn't matter - dinner or code.
       email: helena@gizra.com
       github: HelenaEksler
-      avatar: female.jpg
+      avatar: HelenaEksler.jpg
       image: HelenaEksler.jpg
   - bitamar:
       name: Itamar Bar-Lev
