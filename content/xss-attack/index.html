@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        
+    
+
+<title>Cross-Site Scripting attack detection</title>
+
+        <meta name="description" content="">
+        <meta name="keywords" content="Drupal">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+      <!-- Favicon for all platforms -->
+      <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.3a41.png">
+      <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-touch-icon-60x60.a84d.png">
+      <link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-touch-icon-72x72.664d.png">
+      <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.20fe.png">
+      <link rel="apple-touch-icon" sizes="114x114" href=/"images/favicons/apple-touch-icon-114x114.png">
+      <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.842b.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.0175.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.f9ac.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.f24a.png">
+      <link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.c391.png" sizes="32x32">
+      <link rel="icon" type="image/png" href="/images/favicons/favicon-194x194.2d07.png" sizes="194x194">
+      <link rel="icon" type="image/png" href="/images/favicons/favicon-96x96.8557.png" sizes="96x96">
+      <link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.6d91.png" sizes="192x192">
+      <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.a93c.png" sizes="16x16">
+      <link rel="manifest" href="/images/favicons/manifest.json">
+      <meta name="msapplication-TileColor" content="#000000">
+      <meta name="msapplication-TileImage" content="/images/favicons/mstile-144x144.png">
+      <meta name="theme-color" content="#ffffff">
+      <!-- End favicon for all platforms -->
+
+      <link rel="stylesheet" href="/css/main.dbee.css"/>
+      <link href='http://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Hind:400,600,300,500' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600,800' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+      <!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-6558346-3', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+      
+      <!-- Begin Inspectlet Embed Code -->
+      <script type="text/javascript" id="inspectletjs">
+      window.__insp = window.__insp || [];
+      __insp.push(['wid', 314054580]);
+      (function() {
+      function ldinsp(){if(typeof window.__inspld != "undefined") return; window.__inspld = 1; var insp = document.createElement('script'); insp.type = 'text/javascript'; insp.async = true; insp.id = "inspsync"; insp.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://cdn.inspectlet.com/inspectlet.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(insp, x); };
+      setTimeout(ldinsp, 500); document.readyState != "complete" ? (window.attachEvent ? window.attachEvent('onload', ldinsp) : window.addEventListener('load', ldinsp, false)) : ldinsp();
+      })();
+      </script>
+      <!-- End Inspectlet Embed Code -->
+      
+    </head>
+    <body>
+
+    <!-- Main content -->
+    
+  
+
+
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+      
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+
+<div id="post-page">
+  <header id="header-post">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-10 col-sm-offset-1">
+          
+  
+
+<nav id="nav" role="navigation" class="navbar navbar-default">
+  <div class="navbar-header">
+    <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+  </div>
+  <div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav">
+      <li><a href="/#about" class="smooth-scroll-to">About us</a></li>
+      <li><a href="/team">Meet the team</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="#contact" class="smooth-scroll-to">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+  <h2 class="gizra-logo"><a href="/">gizra</a></h2>
+
+
+
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-10 col-sm-offset-1">
+        <article class="post">
+          <h1><a href="/content/xss-attack">Cross-Site Scripting attack detection </a></h1>
+          <div class="date">29 Feb 2016, By Helena Eksler</div>
+          <div class="tags">
+            <img src="/images/post/tag-icon-small.15a8.png" class="tags-icon"/>
+            <ul class="inline">
+              
+              
+
+  
+    
+      <li><a href="/tags.html#Drupal-planet-ref">Drupal-planet</a></li>
+    
+      <li><a href="/tags.html#Security-ref">Security</a></li>
+    
+      <li><a href="/tags.html#XSS-ref">XSS</a></li>
+    
+  
+
+
+            </ul>
+            </div>
+          <div class="post-content">
+
+            <p>When we develop a website we should take care of many things like design, responsiveness, speed, QA - and of course, security.</p>
+
+<p>One of the major security concerns in websites and web applications is Cross Site Scripting (XSS). You definitely don&#39;t want somebody to run their own malicious code in your website.
+And to avoid it - you would like to have some kind of &quot;vaccine&quot; from such &quot;disease&quot;.</p>
+
+<p>We all know about Drupal&#39;s <code>check_plain()</code>, <code>filter_xss()</code> and similar functions that sanitize user generated text, but unless we are actively checking for XSS, how can we be sure we&#39;ve added them on all the right places?</p>
+
+<p>Well, we found a nice solution for it that can be easily applied in your projects as well.</p>
+
+<div class="thumbnail">
+  <img src="http://www.gizra.com/assets/images/posts/xss-attack/image1.jpg">
+  <div class="caption">XSS on the title and body fields of an article</div>
+</div>
+
+<!-- more -->
+
+<p>Assuming you are creating some dummy data during the development - you should create an &quot;XSS Example&quot; for each content type, vocabulary etc.</p>
+
+<p>But creating dummy data after each re-install during the development is annoying. All Gizra&#39;s projects are scaffolded from our home grown <a href="/content/yo-hedley/">hedley generator</a>, which comes with migration files that help with adding dummy and real content to your Drupal site. What we do when we add our own dummy migration data is add some data that has deliberate XSS in the title, body and text fields like in the image above.</p>
+
+<div class="thumbnail">
+  <img src="http://www.gizra.com/assets/images/posts/xss-attack/image2.jpg">
+  <div class="caption">XSS properly sanitized on the node view</div>
+</div>
+
+<p>If you are following this best practice of using the Migration module to import content into your platform, you should add &quot;XSS Examples&quot; for each migration. If you start from Hedley, you are lucky, as I&#39;ve just added such an <a href="https://github.com/Gizra/generator-hedley/pull/95/files#diff-ac7aeca225bb2174a1c2b2292c9cfc9cR6">example there</a>.</p>
+
+<p>Of course it&#39;s not a panacea, but at least you reduce the chance someone will be able to inject dangerous script into your website.</p>
+
+<p>For the most part Drupal core will already take care of preventing XSS, but for contrib modules and your custom code extra attention is required.<br>
+In fact, we&#39;ve found that one of the most widely used contrib modules doesn&#39;t santize page titles properly in a specific scenario involving i18n (obviously we opened a security issue and a patch was already created)</p>
+
+<div class="thumbnail">
+  <img src="http://www.gizra.com/assets/images/posts/xss-attack/image3.jpg">
+  <div class="caption">JS alert popping up is the sign for XSS in action</div>
+</div>
+
+<p>The point is, if we hadn&#39;t worked with infected data, we wouldn&#39;t have noticed the security hole. By having this in place, we further minimized our site&#39;s security threat.</p>
+
+<p>Give it a try, and notice how a JS alert page pops up in unexpected places from time to time. And then be grateful <em>you</em> found it, before it reached your production.</p>
+
+
+          </div>
+        </article>
+        <section class="post-nav">
+          <div class="row">
+            <div class="col-xs-6 previous">
+              
+              <div class="text-capitalize">
+                <a href="/content/entity-relationships">
+                  Previous
+                  <span class="visible-xs"> post</span>
+                </a>
+              </div>
+              <a href="/content/entity-relationships" class="prev-text">
+                <span class="hidden-xs">Entity Relationships Graph</span>
+              </a>
+              
+            </div>
+            <div class="col-xs-6 next">
+              
+            </div>
+          </div>
+        </section>
+        <section class="author-details">
+          <div class="image-wrapper">
+            <img src="/images/team/avatars/HelenaEksler.e3c9.jpg" class="img-circle img-responsive">
+          </div>
+          <div class="text-wrapper">
+            <span class="name">Helena Eksler</span>
+            
+            <div class="title">Team Lead</div>
+            <div class="bio">Cooking well, doesn't matter - dinner or code.</div>
+          </div>
+        </section>
+        <section>
+          <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'gizra';
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <!--Footer -->
+    
+  <div id="contact">
+    <footer id="footer">
+      <div class="footer-wrapper">
+        <div class="background">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12">
+                <h2 class="title">Talk to us</h2>
+                <div class="clearfix">
+                  <address>
+                    <div class="strong">Israel Headquarters</div>
+                    <span>5 Brenner St., Tel Aviv</span>
+                      <a class="telephone" href="tel:+97233731222">+972-3-3731222</a>
+                    <a class="email" href="mailto:info@gizra.com">info@gizra.com</a>
+                  </address>
+                  <address class="separator">
+                    <div class="strong">United States Office</div>
+                    <span>1157 Columbus Ave, 4th floor. New York, NY 10023</span>
+                      <a class="telephone" href="tel:+13476864508">+1 347 686-4508</a>
+                    <a class="email" href="mailto:usoffice@gizra.com">usoffice@gizra.com</a>
+                  </address>
+                  <div class="separator social-links">
+                    <span class="link github">
+                      <a href="https://github.com/Gizra" target="_blank"><i class="fa fa-github-square"></i></a>
+                    </span>
+                    <span class="link twitter">
+                      <a href="https://twitter.com/gizra_drupal" target="_blank"><i class="fa fa-twitter-square"></i></a>
+                    </span>
+                    <span class="link linkedin">
+                      <a href="https://www.linkedin.com/company/gizra-ltd" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+
+
+    <script src="/js/plugins.c51b.js"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+
+    <script src="/js/scripts.ddd6.js"></script>
+    </body>
+</html>
