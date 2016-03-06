@@ -98,9 +98,10 @@ authors:
       is_member: true
       bio: Something about Adam
       email: adam@gizra.com
+      twitter: adamhstewart
       github: IshaDakota
       avatar: male.jpg
-      image: male.jpg
+      image: ishadakota.jpg
   - NaderSafadi:
       name: Nader Safadi
       title: Team Lead
