@@ -6,10 +6,10 @@
         
     
 
-<title>Cross-Site Scripting attack detection</title>
+<title>Gizra Alpha</title>
 
         <meta name="description" content="">
-        <meta name="keywords" content="Drupal">
+        <meta name="keywords" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
       <!-- Favicon for all platforms -->
@@ -82,15 +82,15 @@
 
   
     
-  
-
-  
-    
-  
-
-  
-    
       
+    
+  
+
+  
+    
+  
+
+  
     
   
 
@@ -195,8 +195,8 @@
     <div class="row">
       <div class="col-sm-10 col-sm-offset-1">
         <article class="post">
-          <h1><a href="/content/xss-attack">Cross-Site Scripting attack detection </a></h1>
-          <div class="date">29 Feb 2016, By Helena Eksler</div>
+          <h1><a href="/content/gizra-alpha/">Gizra Alpha </a></h1>
+          <div class="date">10 Mar 2016, By Nir Yariv</div>
           <div class="tags">
             <img src="/images/post/tag-icon-small.15a8.png" class="tags-icon"/>
             <ul class="inline">
@@ -205,11 +205,7 @@
 
   
     
-      <li><a href="/tags.html#Drupal-planet-ref">Drupal-planet</a></li>
-    
-      <li><a href="/tags.html#Security-ref">Security</a></li>
-    
-      <li><a href="/tags.html#XSS-ref">XSS</a></li>
+      <li><a href="/tags.html#gizra alpha-ref">gizra alpha</a></li>
     
   
 
@@ -218,46 +214,35 @@
             </div>
           <div class="post-content">
 
-            <p>When we develop a website we should take care of many things like design, responsiveness, speed, QA - and of course, security.</p>
+            <blockquote>
+Software is eating the world.
+<footer>Marc Andreessen</footer>
+</blockquote>
 
-<p>One of the major security concerns in websites and web applications is Cross Site Scripting (XSS). You definitely don&#39;t want somebody to run their own malicious code in your website.
-And to avoid it - you would like to have some kind of &quot;vaccine&quot; from such &quot;disease&quot;.</p>
+<blockquote>
+The future is already here — it's just not very evenly distributed.
+<footer>William Gibson</footer>
+</blockquote>
 
-<p>We all know about Drupal&#39;s <code>check_plain()</code>, <code>filter_xss()</code> and similar functions that sanitize user generated text, but unless we are actively checking for XSS, how can we be sure we&#39;ve added them on all the right places?</p>
+<p>Gizra began its life as a product company, trying to solve a specific problem in the textile software space. As often happens, the product was taking a long time to build and the bills were accumulating, and so Brice &amp; Amitai took on a client project to pay rent, then another, and another, and seven years later found themselves leading a 20 person development house, doing projects for clients such as Harvard University, The UN and The European Commission.</p>
 
-<p>Well, we found a nice solution for it that can be easily applied in your projects as well.</p>
+<p>About a year ago, we felt it was time to take Gizra to the next level and put a real effort behind our products side. To do so, we formed a new company called Gizra Alpha and set it on a somewhat unusual path. The quotes above might give you an idea.</p>
 
 <div class="thumbnail">
-  <img src="http://www.gizra.com/assets/images/posts/xss-attack/image1.jpg">
-  <div class="caption">XSS on the title and body fields of an article</div>
+  <img src="/assets/images/posts/gizra-alpha/jfk-go-to-the-moon.jpg" />
 </div>
 
 <!-- more -->
 
-<p>Assuming you are creating some dummy data during the development - you should create an &quot;XSS Example&quot; for each content type, vocabulary etc.</p>
+<p><strong>Gizra Alpha makes a key assumption: <a href="http://www.wsj.com/articles/SB10001424053111903480904576512250915629460">Software is eating the world</a> - but not evenly</strong>. Being in the business of building software, we&#39;re relatively spoiled with state of the art software tools and methodologies. This is not necessarily the case for other businesses, and we see a huge opportunity in applying modern web software tools in places where they are not usually found.</p>
 
-<p>But creating dummy data after each re-install during the development is annoying. All Gizra&#39;s projects are scaffolded from our home grown <a href="/content/yo-hedley/">hedley generator</a>, which comes with migration files that help with adding dummy and real content to your Drupal site. What we do when we add our own dummy migration data is add some data that has deliberate XSS in the title, body and text fields like in the image above.</p>
+<p>We actively seek out people who have built careers in fields unrelated to software, accumulated domain expertise and business connections, and have identified a specific need in their market that can be met with the web based technologies we’ve become highly skilled at applying.</p>
 
-<div class="thumbnail">
-  <img src="http://www.gizra.com/assets/images/posts/xss-attack/image2.jpg">
-  <div class="caption">XSS properly sanitized on the node view</div>
-</div>
+<p>Then, we begin by creating an informal partnership to explore the potential. Together, we define the need. We figure out, sometimes bringing in external advisors, a software solution. We show the proposed concept to potential clients, to validate a market need. Only then do we build an MVP, allocating it a fixed amount of resources (usually 2 developers x 3 months). We then see if the clients are actually buying the product. If not, we iterate until they do - or until we decide to shut it down. If the former happens, we incorporate our partnership into an independent company. This is the desired outcome (and the beginning of another journey we’re just starting to learn about).</p>
 
-<p>If you are following this best practice of using the Migration module to import content into your platform, you should add &quot;XSS Examples&quot; for each migration. If you start from Hedley, you are lucky, as I&#39;ve just added such an <a href="https://github.com/Gizra/generator-hedley/pull/95/files#diff-ac7aeca225bb2174a1c2b2292c9cfc9cR6">example there</a>.</p>
+<p>Since Gizra Alpha got its start, we initiated four such projects. Our initial thesis seems to hold true: many sectors are indeed using dated software tools. We often find we’re replacing a lot of Excel sheets and Visual Basic applications with modern technology, providing users with vastly more powerful tools to do their job.</p>
 
-<p>Of course it&#39;s not a panacea, but at least you reduce the chance someone will be able to inject dangerous script into your website.</p>
-
-<p>For the most part Drupal core will already take care of preventing XSS, but for contrib modules and your custom code extra attention is required.<br>
-In fact, we&#39;ve found that one of the most widely used contrib modules doesn&#39;t santize page titles properly in a specific scenario involving i18n (obviously we opened a security issue and a patch was already created)</p>
-
-<div class="thumbnail">
-  <img src="http://www.gizra.com/assets/images/posts/xss-attack/image3.jpg">
-  <div class="caption">JS alert popping up is the sign for XSS in action</div>
-</div>
-
-<p>The point is, if we hadn&#39;t worked with infected data, we wouldn&#39;t have noticed the security hole. By having this in place, we further minimized our site&#39;s security threat.</p>
-
-<p>Give it a try, and notice how a JS alert page pops up in unexpected places from time to time. And then be grateful <em>you</em> found it, before it reached your production.</p>
+<p>Our first venture was in the public auction field, and is now incorporated as an independent company. Another is in the energy/IoT area, and just secured a second round of financing from the Israeli Chief Scientist Office. An education-related project is currently making the rounds at VCs. And after comprehensive market validation efforts, a fourth project the DevOps space is currently on hold.  We’re now starting a fifth venture in the health sector, and we’re always looking for more - please feel free to contact us at <a href="mailto:nir@gizra.com">nir@gizra.com</a>.</p>
 
 
           </div>
@@ -267,40 +252,32 @@ In fact, we&#39;ve found that one of the most widely used contrib modules doesn&
             <div class="col-xs-6 previous">
               
               <div class="text-capitalize">
-                <a href="/content/entity-relationships">
+                <a href="/content/xss-attack">
                   Previous
                   <span class="visible-xs"> post</span>
                 </a>
               </div>
-              <a href="/content/entity-relationships" class="prev-text">
-                <span class="hidden-xs">Entity Relationships Graph</span>
+              <a href="/content/xss-attack" class="prev-text">
+                <span class="hidden-xs">Cross-Site Scripting attack detection</span>
               </a>
               
             </div>
             <div class="col-xs-6 next">
-              
-              <div class="text-capitalize">
-                <a href="/content/gizra-alpha/">
-                  Next
-                  <span class="visible-xs"> post</span>
-                </a>
-              </div>
-              <a href="/content/gizra-alpha/" class="next-text">
-                <span class="hidden-xs">Gizra Alpha</span>
-              </a>
               
             </div>
           </div>
         </section>
         <section class="author-details">
           <div class="image-wrapper">
-            <img src="/images/team/avatars/HelenaEksler.e3c9.jpg" class="img-circle img-responsive">
+            <img src="/images/team/avatars/niryariv.4f24.jpg" class="img-circle img-responsive">
           </div>
           <div class="text-wrapper">
-            <span class="name">Helena Eksler</span>
+            <span class="name">Nir Yariv</span>
             
-            <div class="title">Team Lead</div>
-            <div class="bio">Cooking well, doesn't matter - dinner or code.</div>
+              <span class="twitter">(@niryariv)</span>
+            
+            <div class="title">CPO</div>
+            <div class="bio">Messed with PHP since before it was cool, and for some time after. Now mostly herds cats.</div>
           </div>
         </section>
         <section>
