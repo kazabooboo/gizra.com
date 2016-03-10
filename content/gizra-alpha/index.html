@@ -6,7 +6,7 @@
         
     
 
-<title>The Gizra Way - How We Roll (and Rollback)</title>
+<title>Gizra Alpha</title>
 
         <meta name="description" content="">
         <meta name="keywords" content="">
@@ -81,8 +81,6 @@
   
 
   
-    
-      
     
   
 
@@ -195,8 +193,8 @@
     <div class="row">
       <div class="col-sm-10 col-sm-offset-1">
         <article class="post">
-          <h1><a href="/content/the-gizra-way/">The Gizra Way - How We Roll (and Rollback) </a></h1>
-          <div class="date">17 Jun 2013, By Nir Yariv</div>
+          <h1><a href="/content/gizra-alpha/">Gizra Alpha </a></h1>
+          <div class="date">10 Mar 2016, By </div>
           <div class="tags">
             <img src="/images/post/tag-icon-small.15a8.png" class="tags-icon"/>
             <ul class="inline">
@@ -205,9 +203,7 @@
 
   
     
-      <li><a href="/tags.html#Project management-ref">Project management</a></li>
-    
-      <li><a href="/tags.html#Drupal-planet-ref">Drupal-planet</a></li>
+      <li><a href="/tags.html#gizra alpha-ref">gizra alpha</a></li>
     
   
 
@@ -216,47 +212,35 @@
             </div>
           <div class="post-content">
 
-            <p>My involvement with Gizra is a bit unusual. Before settling into my fake Aeron in Gizra&#39;s plush Tel Aviv facilities I was actually a client for two years, contracting Brice &amp; Amitai to write code for a New York startup I was working for. Together, we managed to build a continuous deployment setup where we pushed new code to production every day while working 7 timezones apart, while, surprisingly, keeping our sanity mostly intact.</p>
+            <blockquote>
+Software is eating the world.
+- Marc Andreessen
+</blockquote>
+
+<blockquote>
+The future is already here — it's just not very evenly distributed.
+- William Gibson
+</blockquote>
+
+<p>Gizra began its life as a product company, trying to solve a specific problem in the textile software space. As often happens, the product was taking a long time to build and the bills were accumulating, and so Brice &amp; Amitai took on a client project to pay rent, then another, and another, and seven years later found themselves leading a 20 person development house, doing projects for clients such as Harvard University, The UN and The European Commission.</p>
+
+<p>About a year ago, we felt it was time to take Gizra to the next level and put a real effort behind our products side. To do so, we formed a new company called Gizra Alpha and set it on a somewhat unusual path. The quotes above might give you an idea.</p>
+
+<div class="thumbnail">
+  <img src="/assets/images/posts/gizra-alpha/jfk-go-to-the-moon.jpg" />
+</div>
 
 <!-- more -->
 
-<p>Having done quite a bit of remote work since then, with clients like Harvard in Boston or Commerce Guys in Paris, we&#39;ve come up with a bunch of tools and practices that help us keep a Drupal project moving smoothly while maintaining minimal overhead. Bear in mind the following isn&#39;t a &quot;7 Failproof Secrets to Manage a Drupal Project in 24 Hours for Dummies&quot; type post. These are notes from an ongoing journey, as we keep experimenting with new tools and methods and altering them as we learn.</p>
+<p><strong>Gizra Alpha makes a key assumption: <a href="http://www.wsj.com/articles/SB10001424053111903480904576512250915629460">Software is eating the world</a> - but not evenly</strong>. Being in the business of building software, we&#39;re relatively spoiled with state of the art software tools and methodologies. This is not necessarily the case for other businesses, and we see a huge opportunity in applying modern web software tools in places where they are not usually found.</p>
 
-<h2>The Call</h2>
+<p>We actively seek out people who have built careers in fields unrelated to software, accumulated domain expertise and business connections, and have identified a specific need in their market that can be met with the web based technologies we’ve become highly skilled at applying.</p>
 
-<p>A project manager&#39;s job is communicating. This is critical especially in software, where projects are always different to some degree from the initial plan (when such a plan exists at all) and where the people involved tend to be less than chatty by nature.</p>
+<p>Then, we begin by creating an informal partnership to explore the potential. Together, we define the need. We figure out, sometimes bringing in external advisors, a software solution. We show the proposed concept to potential clients, to validate a market need. Only then do we build an MVP, allocating it a fixed amount of resources (usually 2 developers x 3 months). We then see if the clients are actually buying the product. If not, we iterate until they do - or until we decide to shut it down. If the former happens, we incorporate our partnership into an independent company. This is the desired outcome (and the beginning of another journey we’re just starting to learn about).</p>
 
-<p>In large projects, where the territory is still being discovered and directions often change, we&#39;ll often hold a daily Skype call with the client&#39;s project lead. A quick 5-10 minute call to make sure everyone is on the same page can often save hours on non-interactive channels like email.</p>
+<p>Since Gizra Alpha got its start, we initiated four such projects. Our initial thesis seems to hold true: many sectors are indeed using dated software tools. We often find we’re replacing a lot of Excel sheets and Visual Basic applications with modern technology, providing users with vastly more powerful tools to do their job.</p>
 
-<p>We&#39;re not SCRUM fundamentalists and when the project finds its pace we may switch to less frequent calls, but whenever we feel the question marks are piling up again we&#39;ll set up a call ASAP to resolve them.</p>
-
-<h2>The Build</h2>
-
-<p>One thing that&#39;s particualrly tricky with Drupal and similar CMS systems is that a part of the logic is actually in the database, rather than the code. This can make it hard to deploy code on a new environment if you don&#39;t make sure to keep everything synchronized.</p>
-
-<p>Our solution makes use of some excellent Drupal modules like Features and <a href="http://www.gizra.com/content/migrate-and-baking-content/">Migrate</a>, adds a few of our own methods and concentrates everything in an <code>install.sh</code> which every Gizra project has in its root dir. Whenever we pull code this script is executed and completely rebuilds everything from scratch, installing Drupal + modules + DB + migrated content.</p>
-
-<p>Whenever someone pulls code from Git, they run <code>install.sh</code>. This means the <em>whole</em> environment is constantly being rebuilt across developers&#39; machines. This keeps us honest. You can&#39;t take shortcuts and if you left something out, the code will break in the code review before we merge it to master.</p>
-
-<h2>The Code Review</h2>
-
-<p>Every task has a GitHub issue ticket. Every ticket gets a branch. Every branch gets code reviewed by Amitai or Brice before it is merged. This means every piece of code is written to be human readable and meet Gizra&#39;s best practices. As result, any Gizra developer can <em>and does</em> pick up someone else&#39;s code and continue developing with minimal startup time.</p>
-
-<p>Notice &quot;<em>and does</em>&quot;. We can add or remove developers on a project as needed. That&#39;s a huge advantage for a relatively small company that takes on some serious projects.</p>
-
-<h2>The Tools</h2>
-
-<p><a href="https://www.getpantheon.com/">Pantheon</a> deserves a lot of the credit for our continuous deployment setup. It gives us a highly optimized Drupal hosting environment, but most importantly a one-click dev &gt; test &gt; live migration. That along with New Relic integration, Varnish, and a lot of other stuff. We love it.</p>
-
-<p><a href="https://github.com/">GitHub</a> is where all our code is stored and where all issues are tracked. Ideally, clients are added to the project&#39;s members - this lets them follow progress as it happens, and lets us communicate with them over GitHub tickets. This brings a some of the open source &quot;people will read this code&quot; feel into closed code projects, keeping us on our toes.</p>
-
-<h2>Balance</h2>
-
-<p>It&#39;s a 9 hour workday, five days a week. People with kids leave early once a week to pick them up from kindergarten or school. Weekends and nights are spent offline (or in some cases rewriting Organic Groups / changing diapers). Of course there are emergencies, but we take great care to make sure they&#39;re rare.</p>
-
-<p>This is something that was important to me even back when I was Gizra&#39;s client. That kind of pacing makes for long term thinking, code that&#39;s better thought out, and a positive work environment.</p>
-
-<p>This last point is the most important one. Gizra wouldn&#39;t come up with these practices if we were constantly chasing after some deadline. Good environment makes for good code.</p>
+<p>Our first venture was in the public auction field, and is now incorporated as an independent company. Another is in the energy/IoT area, and just secured a second round of financing from the Israeli Chief Scientist Office. An education-related project is currently making the rounds at VCs. And after comprehensive market validation efforts, a fourth project the DevOps space is currently on hold.  We’re now starting a fifth venture in the health sector, and we’re always looking for more - please feel free to contact us at <a href="mailto:nir@gizra.com">nir@gizra.com</a>.</p>
 
 
           </div>
@@ -266,42 +250,30 @@
             <div class="col-xs-6 previous">
               
               <div class="text-capitalize">
-                <a href="/content/harvard-openscholar/">
+                <a href="/content/xss-attack">
                   Previous
                   <span class="visible-xs"> post</span>
                 </a>
               </div>
-              <a href="/content/harvard-openscholar/" class="prev-text">
-                <span class="hidden-xs">Harvard's OpenScholar</span>
+              <a href="/content/xss-attack" class="prev-text">
+                <span class="hidden-xs">Cross-Site Scripting attack detection</span>
               </a>
               
             </div>
             <div class="col-xs-6 next">
-              
-              <div class="text-capitalize">
-                <a href="/content/gizra-drupalcon-portland/">
-                  Next
-                  <span class="visible-xs"> post</span>
-                </a>
-              </div>
-              <a href="/content/gizra-drupalcon-portland/" class="next-text">
-                <span class="hidden-xs">Amitai's DrupalCon Portland Presentation</span>
-              </a>
               
             </div>
           </div>
         </section>
         <section class="author-details">
           <div class="image-wrapper">
-            <img src="/images/team/avatars/niryariv.4f24.jpg" class="img-circle img-responsive">
+            <img src="/images/team/avatars/" class="img-circle img-responsive">
           </div>
           <div class="text-wrapper">
-            <span class="name">Nir Yariv</span>
+            <span class="name"></span>
             
-              <span class="twitter">(@niryariv)</span>
-            
-            <div class="title">CPO</div>
-            <div class="bio">Messed with PHP since before it was cool, and for some time after. Now mostly herds cats.</div>
+            <div class="title"></div>
+            <div class="bio"></div>
           </div>
         </section>
         <section>
