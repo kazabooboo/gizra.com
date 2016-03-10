@@ -54,7 +54,7 @@ $google-plus: #d34836;
       color: white;
       height: 48px;
       line-height: 48px;
-      font-size: 42px;
+      font-size: 32px;
 
       &.github {
         color: $gizra-blue;
@@ -92,8 +92,6 @@ $google-plus: #d34836;
   #footer {
 
     address {
-      float: left;
-
       >:not(div) {
         position: relative;
         display: inline-block;
@@ -116,8 +114,9 @@ $google-plus: #d34836;
       padding-left: 14px;
     }
 
-    .social-links {
-      float: right;
+    .social-links,
+    address {
+      float: left;
     }
   }
 }
