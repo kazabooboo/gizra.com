@@ -5,7 +5,7 @@ permalink: /content/gizra-alpha/
 title: Gizra Alpha
 created: 1457426160
 layout: post
-image: "/assets/images/posts/gizra-alpha/jfk-space.png"
+image: "/assets/images/posts/gizra-alpha/thumb.jpg"
 author: niryariv
 
 ---
@@ -24,7 +24,7 @@ Gizra began its life as a product company, trying to solve a specific problem in
 About a year ago, we felt it was time to take Gizra to the next level and put a real effort behind our products side. To do so, we formed a new company called Gizra Alpha and set it on a somewhat unusual path. The quotes above might give you an idea.
 
 <div class="thumbnail">
-  <img src="{{BASE_PATH}}/assets/images/posts/gizra-alpha/jfk-go-to-the-moon.jpg" />
+  <img src="{{BASE_PATH}}/assets/images/posts/gizra-alpha/image1.jpg" />
 </div>
 
 <!-- more -->
