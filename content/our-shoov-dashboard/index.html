@@ -6,7 +6,7 @@
         
     
 
-<title>Headless Drupal - Form API, Drupal 9</title>
+<title>Our Shoov Dashboard</title>
 
         <meta name="description" content="">
         <meta name="keywords" content="">
@@ -74,15 +74,15 @@
 
   
     
+  
+
+  
+    
+  
+
+  
+    
       
-    
-  
-
-  
-    
-  
-
-  
     
   
 
@@ -195,8 +195,8 @@
     <div class="row">
       <div class="col-sm-10 col-sm-offset-1">
         <article class="post">
-          <h1><a href="/content/headless-drupal-form-api-drupal9">Headless Drupal - Form API, Drupal 9 </a></h1>
-          <div class="date">24 Jul 2014, By Amitai Burstein</div>
+          <h1><a href="/content/our-shoov-dashboard">Our Shoov Dashboard </a></h1>
+          <div class="date">13 Mar 2016, By Nir Yariv</div>
           <div class="tags">
             <img src="/images/post/tag-icon-small.15a8.png" class="tags-icon"/>
             <ul class="inline">
@@ -205,15 +205,9 @@
 
   
     
-      <li><a href="/tags.html#Headless Drupal-ref">Headless Drupal</a></li>
+      <li><a href="/tags.html#shoov-ref">shoov</a></li>
     
-      <li><a href="/tags.html#The Gizra Way-ref">The Gizra Way</a></li>
-    
-      <li><a href="/tags.html#AngularJs-ref">AngularJs</a></li>
-    
-      <li><a href="/tags.html#RESTful-ref">RESTful</a></li>
-    
-      <li><a href="/tags.html#Drupal-planet-ref">Drupal-planet</a></li>
+      <li><a href="/tags.html#project management-ref">project management</a></li>
     
   
 
@@ -222,61 +216,18 @@
             </div>
           <div class="post-content">
 
-            <h2>Defining moment</h2>
-
-<p>A few months ago my DrupalCon Austin session was rejected. I was a bit upset, since presenting plays a big part in my trip to the states, and also surprised, as I mistakenly assumed my presentation repertoire would almost guarantee my session would be accepted. But the committee decided differently.</p>
-
-<p>This has been an important moment for me. Two days later I told myself I don&#39;t care. I mean, I cared about the <em>presentation</em>, I just stopped caring that it was not selected, since I decided I was going to do it anyway. As an &quot;unplugged&quot; BoF.</p>
-
-<p><a href="https://www.getpantheon.com/blog/drupal-development-gizra-way">The Gizra Way</a>. I think this is probably the best presentation I&#39;ve given so far, and quite ironically my <em>rejected</em> session is second only to Dries&#39;s keynote in YouTube.</p>
-
-<p>You see - I had a &quot;<a href="https://www.youtube.com/watch?v=dzm8kTIj_0M">there is no spoon</a>&quot; moment. The second I realized it can be done differently, I was on my own track, perhaps even setting the path for others.</p>
-
-<h2>Form API, Drupal 9</h2>
-
-<blockquote>
-<p>I use Drupal because Form API is so great <div class="small">No one, ever</div></p>
-</blockquote>
-
-<!-- more -->
-
-<p>Form API is the unbent spoon. Yes, I can appreciate its role, and how it improved security and extensibility. But nowadays I think we might have better alternatives, which are more inline with where the web is heading. </p>
-
-<p>Maybe we should stop thinking about forms as forms.  </p>
-
-<p>Maybe Drupal should spit a JSON, that AngularJS (or another library) can leverage to build its dynamic input fields. Those forms don&#39;t need to be written manually, we could use something like <a href="http://justmaier.github.io/angular-autoFields-bootstrap/#demo">Angular Autofields</a> (the concept, not necessarily the code).</p>
-
-<p>Drupal&#39;s strength is in its entity and field API. It&#39;s so easy to create structured data. If we stopped thinking about forms as forms, and moved to thinking about them as a <em>RESTful interface</em> to the underlying entity, then suddenly it&#39;s easier to bend the spoon. In fact, the spoon might no longer be there.</p>
-
-<h2>Best practices need to be practiced</h2>
-
-<p>Headless Drupal is a hot topic. We&#39;re trying to figure how it will be used for Drupal 8. Some even plan for Drupal 9. I&#39;d like to suggest something else - Let&#39;s do it now.</p>
-
-<p>I&#39;ll explain: The concept of Headless Drupal by itself is pretty simple. Send JSON from the server, and use that in the client side. So how come we&#39;re not seeing everybody move to fully/semi decoupled sites?  </p>
-
-<p>I think the answer to that is that we&#39;re still lacking the best practices. Everybody can declare a <code>hook_menu()</code> and send a JSON response, but unless there are best practices and some sort of standardization few people will, as it will require re-inventing the wheel over and over again.</p>
-
-<p>This is where the <a href="https://github.com/Gizra/restful">RESTful</a> module, and our Headless Drupal post series comes in. We&#39;re trying to fill the gap of those missing best practices, and do that in real life scenarios, for websites developed and deployed today.</p>
-
-<p>That&#39;s without neglecting the future, of course - we plan to upgrade RESTful to Drupal 8, since it has some different concepts than Drupal 8&#39;s REST module.</p>
-
-<h2>Less Theory, More Code</h2>
-
-<p>Ok, so back to the fun geeky stuff, as the headless series <a href="http://www.gizra.com/content/headless-drupal-inline-edit/">continues</a>.</p>
-
-<p>This time we&#39;ll see how RESTful deals with a common scenario - a node referencing taxonomy terms. The Select2 library provides us with a nice UI, which allows selecting existing terms as well as creating new ones: </p>
+            <p>Hi there! Please meet our dashboard:</p>
 
 <div class="thumbnail">
-  <img src="http://www.gizra.com/assets/images/posts/headless-drupal-form-api-9/image1.gif" />
-  
-  <div class="caption">
-    AngularJS form with Select2 in action
-  </div>
+  <img src="/assets/images/posts/our-dashboard/image1.jpg">
+  <div class="caption">Our Shoov Dashboard</div>
 </div>
 
-<p>An interesting part of the example is that the creation of the multiple entities (i.e. the node and the taxonomy terms) is done in a <em>single</em> HTTP request. The sub resources (in our example the taxonomy terms), are POSTed or PATCHed / PUT as needed.</p>
+<p>It&#39;s powered by <a href="http://shoov.io">Shoov</a>. Did we mention Shoov before? I <a href="http://www.gizra.com/content/shoov-ci-tests-live-site">think</a> <a href="http://www.gizra.com/content/cross-browser-visual-regression-with-shoov">we</a> <a href="http://www.gizra.com/content/visual-regression-travis-shoov-ngrok">did</a>. Basically every project we work on has full test coverage - like everyone&#39;s, I know - but Shoov also provides us with a visual regression testing harness.</p>
 
-<p>As always, you can play with the <a href="http://test-gizra-headless-drupal-inline-edit.gotpantheon.com/restful-example/form">live demo</a>.</p>
+<p>Shoov constantly runs its tests in the background, 24x7. When everything passes the project icon is green. When a test fails, it&#39;s red. The monitor sits in the main room, so everyone can see when there&#39;s an issue and feel deeply ashamed of their fragile, error-prone, carbon based brains.</p>
+
+<p>I&#39;m kidding of course. We all make mistakes - we&#39;re only human. But Shoov isn&#39;t.</p>
 
 
           </div>
@@ -286,42 +237,32 @@
             <div class="col-xs-6 previous">
               
               <div class="text-capitalize">
-                <a href="/content/headless-drupal-inline-edit">
+                <a href="/content/gizra-alpha/">
                   Previous
                   <span class="visible-xs"> post</span>
                 </a>
               </div>
-              <a href="/content/headless-drupal-inline-edit" class="prev-text">
-                <span class="hidden-xs">Headless Drupal - Inline edit</span>
+              <a href="/content/gizra-alpha/" class="prev-text">
+                <span class="hidden-xs">Gizra Alpha</span>
               </a>
               
             </div>
             <div class="col-xs-6 next">
-              
-              <div class="text-capitalize">
-                <a href="/content/gizra-we-have-got-your-headless-covered">
-                  Next
-                  <span class="visible-xs"> post</span>
-                </a>
-              </div>
-              <a href="/content/gizra-we-have-got-your-headless-covered" class="next-text">
-                <span class="hidden-xs">Gizra - We've Got Your Headless Covered</span>
-              </a>
               
             </div>
           </div>
         </section>
         <section class="author-details">
           <div class="image-wrapper">
-            <img src="/images/team/avatars/amitaibu.4179.jpg" class="img-circle img-responsive">
+            <img src="/images/team/avatars/niryariv.4f24.jpg" class="img-circle img-responsive">
           </div>
           <div class="text-wrapper">
-            <span class="name">Amitai Burstein</span>
+            <span class="name">Nir Yariv</span>
             
-              <span class="twitter">(@amitaibu)</span>
+              <span class="twitter">(@niryariv)</span>
             
-            <div class="title">CTO, Co-Owner</div>
-            <div class="bio">Maintainer of Organic groups, the Message stack, and co-maintainer of Drupal 8's Entity reference. <a href="/content/the-about-story/">The about story</a>.</div>
+            <div class="title">CPO</div>
+            <div class="bio">Messed with PHP since before it was cool, and for some time after. Now mostly herds cats.</div>
           </div>
         </section>
         <section>
