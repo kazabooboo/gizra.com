@@ -28,7 +28,7 @@ Having done this for a while now, I believe our assumption was right. Taking our
 
 Thanks to [Damien Tournoud's](https://www.drupal.org/u/damien-tournoud) [previous work](https://www.drupal.org/project/1438582/git-instructions) getting the graph out wasn't too complicated. His sanbox module already output the entities and bundles. It was merely missing the relationships between them, and a UI to display the graph.
 
-So, standing on the shoulders of giants, we've adapted the code and now have an [Entity Relationships](https://github.com/Gizra/entitiesdiagram) module.
+So, standing on the shoulders of giants, we've adapted the code and now have an [Entities Diagram](https://github.com/Gizra/entitiesdiagram) module.
 
 
 ## Usage
