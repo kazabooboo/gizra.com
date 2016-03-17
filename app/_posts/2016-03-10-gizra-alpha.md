@@ -9,6 +9,9 @@ image: "/assets/images/posts/gizra-alpha/thumb.jpg"
 author: niryariv
 
 ---
+
+{% include setup %}
+
 <blockquote>
 Software is eating the world.
 <footer>Marc Andreessen</footer>

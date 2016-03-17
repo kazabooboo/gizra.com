@@ -9,6 +9,8 @@ image: /assets/images/posts/our-dashboard/thumb.jpg
 author: niryariv
 ---
 
+{% include setup %}
+
 Hi there! Please meet our dashboard:
 
 <div class="thumbnail">

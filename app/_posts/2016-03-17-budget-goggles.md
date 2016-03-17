@@ -10,6 +10,8 @@ image: /assets/images/posts/budget-goggles/thumb.jpg
 author: RachelBaram
 ---
 
+{% include setup %}
+
 By default IT projects will fail. They may still launch but not accomplish any one of the following requirements of a successful project: on time, within budget, with happy users.
 
 Gizra addresses this by defining the ambiguous with the simple but powerful principle that the __budget dictates the project__. It all begins (and ends) at the price estimation. Our budget breakdown creates a common language for all stakeholders and sets expectations early on.
