@@ -13,7 +13,7 @@ By default IT projects will fail. They may still launch but not accomplish any o
 
 Gizra addresses this by defining the ambiguous with the simple but powerful principle that the __budget dictates the project__. It all begins (and ends) at the price estimation. Our budget breakdown creates a common language for all stakeholders and sets expectations early on.
 
-After a __discovery phase__, the project is broken down to __timeboxed tasks__ - each with a clear deadline and cost to produce the deliverable. We set the maximum time to complete a task at 12 hours (for us it means a cost of $1440) because this number is easily grasped by all stakeholders. Every feature and bug has a price tag and we encourage our clients _not_ to try to buy them all (at least not at first).
+After a __discovery phase__, the project is broken down to __timeboxed tasks__ - each with a clear deadline and cost to produce the deliverable. We set the maximum time to complete a task at 12 hours because this number is easily grasped by all stakeholders. Every feature and bug has a price tag and we encourage our clients _not_ to try to buy them all (at least not at first).
 
 An example of our budget breakdown:
 
