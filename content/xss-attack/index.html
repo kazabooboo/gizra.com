@@ -33,7 +33,7 @@
       <meta name="theme-color" content="#ffffff">
       <!-- End favicon for all platforms -->
 
-      <link rel="stylesheet" href="/css/main.1ede.css"/>
+      <link rel="stylesheet" href="/css/main.96fa.css"/>
       <link href='http://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Hind:400,600,300,500' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600,800' rel='stylesheet' type='text/css'>
@@ -228,8 +228,18 @@ And to avoid it - you would like to have some kind of &quot;vaccine&quot; from s
 <p>Well, we found a nice solution for it that can be easily applied in your projects as well.</p>
 
 <div class="thumbnail">
-  <img src="http://www.gizra.com/assets/images/posts/xss-attack/image1.jpg">
-  <div class="caption">XSS on the title and body fields of an article</div>
+  <div class="img-wrapper">
+
+    
+
+    
+      <img src="http://www.gizra.com/assets/images/posts/xss-attack/image1.jpg">
+    
+
+  </div>
+  
+    <div class="caption">XSS on the title and body fields of an article</div>
+  
 </div>
 
 <!-- more -->
@@ -239,8 +249,18 @@ And to avoid it - you would like to have some kind of &quot;vaccine&quot; from s
 <p>But creating dummy data after each re-install during the development is annoying. All Gizra&#39;s projects are scaffolded from our home grown <a href="/content/yo-hedley/">hedley generator</a>, which comes with migration files that help with adding dummy and real content to your Drupal site. What we do when we add our own dummy migration data is add some data that has deliberate XSS in the title, body and text fields like in the image above.</p>
 
 <div class="thumbnail">
-  <img src="http://www.gizra.com/assets/images/posts/xss-attack/image2.jpg">
-  <div class="caption">XSS properly sanitized on the node view</div>
+  <div class="img-wrapper">
+
+    
+
+    
+      <img src="http://www.gizra.com/assets/images/posts/xss-attack/image2.jpg">
+    
+
+  </div>
+  
+    <div class="caption">XSS properly sanitized on the node view</div>
+  
 </div>
 
 <p>If you are following this best practice of using the Migration module to import content into your platform, you should add &quot;XSS Examples&quot; for each migration. If you start from Hedley, you are lucky, as I&#39;ve just added such an <a href="https://github.com/Gizra/generator-hedley/pull/95/files#diff-ac7aeca225bb2174a1c2b2292c9cfc9cR6">example there</a>.</p>
@@ -251,8 +271,18 @@ And to avoid it - you would like to have some kind of &quot;vaccine&quot; from s
 In fact, we&#39;ve found that one of the most widely used contrib modules doesn&#39;t santize page titles properly in a specific scenario involving i18n (obviously we opened a security issue and a patch was already created)</p>
 
 <div class="thumbnail">
-  <img src="http://www.gizra.com/assets/images/posts/xss-attack/image3.jpg">
-  <div class="caption">JS alert popping up is the sign for XSS in action</div>
+  <div class="img-wrapper">
+
+    
+
+    
+      <img src="http://www.gizra.com/assets/images/posts/xss-attack/image3.jpg">
+    
+
+  </div>
+  
+    <div class="caption">JS alert popping up is the sign for XSS in action</div>
+  
 </div>
 
 <p>The point is, if we hadn&#39;t worked with infected data, we wouldn&#39;t have noticed the security hole. By having this in place, we further minimized our site&#39;s security threat.</p>
@@ -372,7 +402,7 @@ In fact, we&#39;ve found that one of the most widely used contrib modules doesn&
 
 
 
-    <script src="/js/plugins.c51b.js"></script>
+    <script src="/js/plugins.f180.js"></script>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
 

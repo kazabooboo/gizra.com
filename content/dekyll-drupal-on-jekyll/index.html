@@ -33,7 +33,7 @@
       <meta name="theme-color" content="#ffffff">
       <!-- End favicon for all platforms -->
 
-      <link rel="stylesheet" href="/css/main.1ede.css"/>
+      <link rel="stylesheet" href="/css/main.96fa.css"/>
       <link href='http://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Hind:400,600,300,500' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600,800' rel='stylesheet' type='text/css'>
@@ -267,7 +267,16 @@
 <p>Here&#39;s how this post looks in Jekyll.</p>
 
 <div class="thumbnail">
-  <img src="/assets/images/legacy/dekyll-jekyll-file.jpg" />
+  <div class="img-wrapper">
+
+    
+
+    
+      <img src="/assets/images/legacy/dekyll-jekyll-file.jpg">
+    
+
+  </div>
+  
 </div>
 
 <p>On top you can see the <code>YAML front header</code>, this is the part where you can add some metadata to your page. If you&#39;re not a developer, I probably lost you around <code>YAML front header</code>. And that is one of the things Dekyll tries to solve: Imagine you tell your client, a content editor: &quot;You can enter tags - only make sure to never do a typo when you enter an existing tag, or touch any of the other YAML properties otherwise your page won&#39;t appear where it should&quot;.</p>
@@ -288,10 +297,18 @@ Here are some ingredients of what we use to build Dekyll. Some are technical som
 
 <ul>
 <li>Plugins. Whenever you code something and think to yourself &quot;I&#39;m not sure if everybody would like to have it <em>exactly</em> like this&quot;, you should probably use plugins. Dekyll plugins are classes, so for example the Product reference plugin simply extends the Entity reference plugin. Very little code, a lot of flexibility.</li>
-<li>Field configuration. We hook into the field settings and allow to select the plugin that should process the field. For example, when editing an image field, Dekyll will know to show the <code>Image</code> and <code>Image style</code> plugins. Each plugin can have its own settings.
+<li><p>Field configuration. We hook into the field settings and allow to select the plugin that should process the field. For example, when editing an image field, Dekyll will know to show the <code>Image</code> and <code>Image style</code> plugins. Each plugin can have its own settings.
 <div class="thumbnail">
-<img src="/assets/images/legacy/dekyll-file-configuration.jpg" />
-</div></li>
+<div class="img-wrapper"></p>
+
+<p><img src="/assets/images/legacy/dekyll-file-configuration.jpg"></p>
+
+<p></div></p></li>
+</ul>
+
+<p></div></p>
+
+<ul>
 <li>Keep rewriting. Dekyll relatively short existence has already seen three or four rewrites. We are moving fast, and we try our best to avoid technical debts.</li>
 <li>The enemy of good is excellent. This one is the opposite of the above statement, but is required for some balance. We are not writing a theoretical concept, rather we are building a tool that can help us build websites <em>fast</em> yet in a  <em>reliable</em> manner.</li>
 <li>Have real life use cases. When we started Dekyll we just had the vision. Once we knew which sites we want to use it on, then the need dictated the solution.</li>
@@ -302,15 +319,34 @@ Here are some ingredients of what we use to build Dekyll. Some are technical som
 <p>Disposable: An existing Jekyll site can be imported into Dekyll, and all the configuration and content is duplicated into Drupal. However this Drupal is completely disposable. We can drop the database, and rebuild it. In this case Jekyll is the Canonical entity. A typical use case would be a blog site, just like gizra.com. In fact, this blog post you are reading <strong>was completely written using Dekyll!</strong></p>
 
 <div class="thumbnail">
-  <img src="/assets/images/legacy/dekyll-import.jpg" />
-  <div class="caption">Dekyll imports previous blog posts from Jekyll files</div>
+  <div class="img-wrapper">
+
+    
+
+    
+      <img src="/assets/images/legacy/dekyll-import.jpg">
+    
+
+  </div>
+  
+    <div class="caption">Dekyll imports previous blog posts from Jekyll files</div>
+  
 </div>
 
-<p><br />
 <div class="thumbnail">
-  <img src="/assets/images/legacy/dekyll-node-edit.jpg" />
-  <div class="caption">After saving the node, Dekyll will export it to Jekyll format</div>
-</div></p>
+  <div class="img-wrapper">
+
+    
+
+    
+      <img src="/assets/images/legacy/dekyll-node-edit.jpg">
+    
+
+  </div>
+  
+    <div class="caption">After saving the node, Dekyll will export it to Jekyll format</div>
+  
+</div>
 
 <p>Canonical: In this case the Drupal database needs to be kept. More about this mode will be in the next blog post, where we explain how we are building a dynamic commerce site using Dekyll where the content editors add the products via Drupal, and Dekyll will export them to Jekyll (spoiler: AngularJs manages the cart). We will see how Dekyll handles complex data. Complex as in a node referencing commerce product(s), referencing field collections, referencing taxonomy terms. Oh my!</p>
 
@@ -429,7 +465,7 @@ Here are some ingredients of what we use to build Dekyll. Some are technical som
 
 
 
-    <script src="/js/plugins.c51b.js"></script>
+    <script src="/js/plugins.f180.js"></script>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
 

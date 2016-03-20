@@ -33,7 +33,7 @@
       <meta name="theme-color" content="#ffffff">
       <!-- End favicon for all platforms -->
 
-      <link rel="stylesheet" href="/css/main.1ede.css"/>
+      <link rel="stylesheet" href="/css/main.96fa.css"/>
       <link href='http://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Hind:400,600,300,500' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600,800' rel='stylesheet' type='text/css'>
@@ -241,15 +241,35 @@
 <p>In order to lower the barrier, Gizra has developed a general logging module that can send your watchdog data via HTTP called <a href="https://www.drupal.org/project/logs_http">Logs HTTP</a>. You just need to set the URL, and the severity level you would like to capture, and you&#39;re done. This module can work for example on your logstash installation:</p>
 
 <div class="thumbnail">
-  <img src="http://www.gizra.com/assets/images/posts/logs-http/image1.jpg" />
-  <div class="caption">Configuration page. Just add the HTTP endpoint</div>
+  <div class="img-wrapper">
+
+    
+
+    
+      <img src="http://www.gizra.com/assets/images/posts/logs-http/image1.jpg">
+    
+
+  </div>
+  
+    <div class="caption">Configuration page. Just add the HTTP endpoint</div>
+  
 </div>
 
 <p>Since we want to concentrate on the actual development of the app (the same reason that brought us to use services like Pantheon in the first place) we&#39;ve decided to go with <a href="https://www.loggly.com/">Loggly</a>, a cloud based log service. The price is reasonable and it provides many of the features we want, in particular the ability to send real time email alerts.</p>
 
 <div class="thumbnail">
-  <img src="http://www.gizra.com/assets/images/posts/logs-http/image2.jpg" />
-  <div class="caption">Logstash with a JSON coded message, capturing an exception</div>
+  <div class="img-wrapper">
+
+    
+
+    
+      <img src="http://www.gizra.com/assets/images/posts/logs-http/image2.jpg">
+    
+
+  </div>
+  
+    <div class="caption">Logstash with a JSON coded message, capturing an exception</div>
+  
 </div>
 
 <h2>Logs HTTP module</h2>
@@ -259,8 +279,18 @@
 <p>All the events that are sent via HTTP, are sent in a PHP shutdown function, which means they won&#39;t block your request. The module isn&#39;t tightly coupled to the watchdog events, and you can use its API to send custom events.</p>
 
 <div class="thumbnail">
-  <img src="http://www.gizra.com/assets/images/posts/logs-http/image3.jpg" />
-  <div class="caption">A saved search in Loggly - get all the errors with severity of <code>error</code> or higher</div>
+  <div class="img-wrapper">
+
+    
+
+    
+      <img src="http://www.gizra.com/assets/images/posts/logs-http/image3.jpg">
+    
+
+  </div>
+  
+    <div class="caption">A saved search in Loggly - get all the errors with severity of <code>error</code> or higher</div>
+  
 </div>
 
 <p>As as single loggly account serves all our sites, we are using the &quot;Unique ID&quot; option, in order to easily understand on which server the error occurred. The Unique ID can be filled out manually, but it could also be environment specific. For example on <a href="https://www.getpantheon.com/">Pantheon</a>, we use this technique, that takes advantage of the <code>$_ENV</code> variable:</p>
@@ -279,8 +309,18 @@
 Now <em>all</em> our apps and sites have a phone to call home.</p>
 
 <div class="thumbnail">
-  <img src="http://www.gizra.com/assets/images/posts/logs-http/image4.jpg" />
-  <div class="caption">An email with an alert</div>
+  <div class="img-wrapper">
+
+    
+
+    
+      <img src="http://www.gizra.com/assets/images/posts/logs-http/image4.jpg">
+    
+
+  </div>
+  
+    <div class="caption">An email with an alert</div>
+  
 </div>
 
 <p>Since Logs HTTP is an API module, you can still log specific events that are not in the severity level you have chosen, so for example, if a the severity level is &quot;error&quot;, but you want to log all the watchdog events of a login event you can:</p>
@@ -417,7 +457,7 @@ Now <em>all</em> our apps and sites have a phone to call home.</p>
 
 
 
-    <script src="/js/plugins.c51b.js"></script>
+    <script src="/js/plugins.f180.js"></script>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
 
