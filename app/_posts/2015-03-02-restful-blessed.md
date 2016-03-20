@@ -10,10 +10,7 @@ published: true
 
 {% include setup %}
 
-<div class="thumbnail">
-  <iframe width="640" height="360" src="https://www.youtube.com/embed/cA6ZRmRK3mw?rel=0" frameborder="0" allowfullscreen></iframe>
-  <div class="caption">Graphics in the Terminal, for you geeking pleasure</div>
-</div>
+{% include thumbnail.html  iframe="<iframe width='100%' height='360' src='https://www.youtube.com/embed/cA6ZRmRK3mw?rel=0' frameborder='0' allowfullscreen></iframe>" caption="Same data pulled into an Angular app" %}
 
 If you're excited about this, you are most likely a developer - so [here's](https://github.com/amitaibu/restful-blessed) the code.
 
@@ -21,11 +18,7 @@ If this data looks familiar to you, it might be because it's the same data you s
 
 <!-- more -->
 
-<div class="thumbnail">
-  <img src="{{BASE_PATH}}/assets/images/posts/yo-hedley/image1.gif">
-  <div class="caption">Same data pulled into an Angular app</div>
-</div>
-
+{% include thumbnail.html  image_path="assets/images/posts/yo-hedley/image1.gif" caption="Same data pulled into an Angular app" %}
 
 The demo is heavily based on the [blessed-contrib](https://github.com/yaronn/blessed-contrib/) repository by Yaron Naveh, with some notable changes:
 

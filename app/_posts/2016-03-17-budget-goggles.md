@@ -20,9 +20,7 @@ After a __discovery phase__, the project is broken down to __timeboxed tasks__ -
 
 An example of our budget breakdown:
 
-<div class="thumbnail">
-  <img src="{{BASE_PATH}}/assets/images/posts/budget-goggles/image1.jpg">
-</div>
+{% include thumbnail.html image_path="assets/images/posts/budget-goggles/image1.jpg" %}
 
 <!-- more -->
 

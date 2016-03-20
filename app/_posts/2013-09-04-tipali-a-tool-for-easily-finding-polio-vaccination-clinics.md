@@ -15,10 +15,7 @@ Parents of children under the age of 9 were asked to bring them to the nearest T
 
 The Ministry of Health decided to create a mobile application to help parents find the nearest clinic. It commissioned one of the country’s largest development shops to create it. They decided to create a native app. [This is the Android version](https://play.google.com/store/apps/details?id=com.matrix.tipathalav):
 
-<div class="thumbnail">
-  <img src="{{BASE_PATH}}/assets/images/posts/tipa/image1.jpg" />
-  <div class="caption">It’s in Hebrew, but you get the idea</div>
-</div>
+{% include thumbnail.html image_path="assets/images/posts/tipa/image1.jpg" %}
 
 I assume the iOS version is still undergoing the App Store approval process.
 
@@ -28,10 +25,7 @@ We discussed the app during lunch at Gizra. We’re no doctors, but we thought w
 
 Lunch concluded with a particularly good Malabi. It’s one of the few deserts I ever bother with, so I’m pretty sure the extra sugar is the reason I shot off a message to the [Public Knowledge Workshop](http://www.hasadna.org.il/en/) mailing list as I got back to my laptop, asking who’s with me – help me scrape the clinic data and I’ll take care of the front end.
 
-<div class="thumbnail">
-  <img src="{{BASE_PATH}}/assets/images/posts/tipa/image2.jpg" />
-  <div class="caption">Malabi, by <a href="http://www.flickr.com/photos/7826272@N06/4818656579/in/photolist-8kNSHR-6c2Z8H-rzrQQ-5AsnHV-rzrTY-Dv5gr-avrhAk-5Zu4Hp">naamanus</a>. This is good.</div>
-</div>
+{% include thumbnail.html image_path="assets/images/posts/tipa/image2.jpg" caption="Malabi, by <a href='http://www.flickr.com/photos/7826272@N06/4818656579/in/photolist-8kNSHR-6c2Z8H-rzrQQ-5AsnHV-rzrTY-Dv5gr-avrhAk-5Zu4Hp'>naamanus</a>. This is good." %}
 
 Within a few hours, a person I’ve never met [sent me a link](https://twitter.com/sharonmoravi/status/371632490147880960) to a JSON file with all the clinics. I still have no idea who this is and how s/he had this file. I geo-encoded a few, put the data on map using GitHub’s geoJSON support, and sent a link back to the mailing list. At 1am that night, [Alon Nisser](http://degeladom.wordpress.com/) (whom I’ve also never met before) sent some patches that fixed the major missing parts in my code.
 
@@ -41,11 +35,7 @@ With the data in Alon, Udi and Erez’s capable hands, I focused on the front en
 
 The final app is extremely simple. When opening [tipa.li](http://tipa.li/) (Hebrew wordplay meaning “My drop” or “Tiny drop”) the user is presented with a map, zoomed to the city level and centered on her current location, showing nearby stations. Touching a marker (design donated by [Ilan Dray](http://www.inkod-hypera.com/), who I’ve also yet to meet) reveals its street address, opening hours and a phone number.
 
-<div class="thumbnail">
-  <img src="{{BASE_PATH}}/assets/images/posts/tipa/image3.jpg" />
-  <div class="caption">Tipa.li UI. This is all of it.</div>
-</div>
-
+{% include thumbnail.html image_path="assets/images/posts/tipa/image3.jpg" caption="Tipa.li UI. This is all of it." %}
 
 That’s all. No search or distance filtering features to clutter the UI. The user knows better – a more distant station might have better parking, for example. All the stations in the country are the one geoJSON file, so users can find clinics in other locations by just zooming and panning around.
 

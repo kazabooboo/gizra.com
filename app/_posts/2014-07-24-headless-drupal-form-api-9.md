@@ -55,13 +55,7 @@ Ok, so back to the fun geeky stuff, as the headless series [continues]({{BASE_PA
 
 This time we'll see how RESTful deals with a common scenario - a node referencing taxonomy terms. The Select2 library provides us with a nice UI, which allows selecting existing terms as well as creating new ones: 
 
-<div class="thumbnail">
-  <img src="{{BASE_PATH}}/assets/images/posts/headless-drupal-form-api-9/image1.gif" />
-  
-  <div class="caption">
-    AngularJS form with Select2 in action
-  </div>
-</div>
+{% include thumbnail.html image_path="assets/images/posts/headless-drupal-form-api-9/image1.gif" caption="AngularJS form with Select2 in action" %}
 
 An interesting part of the example is that the creation of the multiple entities (i.e. the node and the taxonomy terms) is done in a *single* HTTP request. The sub resources (in our example the taxonomy terms), are POSTed or PATCHed / PUT as needed.
 

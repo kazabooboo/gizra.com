@@ -5,16 +5,13 @@ tags:
 permalink: "/content/elm-hedley-overview"
 layout: post
 published: true
----
+--- 
 
 {% include setup %}
 
 In August 2015 I challenged myself (and later the rest of the Gizra devs) to create a typical web-app with all the bells and whistles in Elm. It's called [elm-hedley](https://gizra.github.io/elm-hedley), and I'm super proud it is now featuring in Elm's [front page](http://elm-lang.org/).
 
-<div class="thumbnail">
-  <img src="{{BASE_PATH}}/assets/images/posts/elm-hedley-overview/image1.jpg">
-</div>
-
+{% include thumbnail.html image_path="assets/images/posts/elm-hedley-overview/image1.jpg" %}
 
 This post is going to give a high level overview and point out some parts that are worth noting. However, before diving into the technical section, it is important to emphasize the virtues of _simply doing_.
 
@@ -30,9 +27,7 @@ Model holds the data; Update is in charge of changing the data based on actions;
 
 We love this approach so much we have even ended up splitting each component to those files. So everything is consistent and makes finding stuff easy. The MUV is just a suggestion, you can add or remove stuff. Each [component](https://github.com/Gizra/elm-hedley/tree/v1.0.0/src/elm/Pages/Event) can also have a `Test`, `Router`, `Utils`, or completely omit the `Update` and `View` if they are [not needed](https://github.com/Gizra/elm-hedley/tree/v1.0.0/src/elm/Event).
 
-<div class="thumbnail">
-  <img src="{{BASE_PATH}}/assets/images/posts/elm-hedley-overview/image2.jpg">
-</div>
+{% include thumbnail.html image_path="assets/images/posts/elm-hedley-overview/image2.jpg" %}
 
 ## Components Vs Pages
 
@@ -58,9 +53,7 @@ Looking for a better solution we dusted off our [CasperJS](http://casperjs.org/)
 
 We were so happy with the solution we've added it to our home grown [Yo generator](https://github.com/Gizra/generator-elmlang), so now everybody that uses it gets a fully working [Travis integration](https://github.com/Gizra/elm-hedley/blob/v1.0.0/.travis.yml).
 
-<div class="thumbnail">
-  <img src="{{BASE_PATH}}/assets/images/posts/elm-hedley-overview/image3.jpg">
-</div>
+{% include thumbnail.html image_path="assets/images/posts/elm-hedley-overview/image3.jpg" %}
 
 ## Ports & Interop
 

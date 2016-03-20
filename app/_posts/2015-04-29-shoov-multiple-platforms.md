@@ -21,10 +21,7 @@ Developers moral shouldn't be underestimated!
 
 [Shoov](/content/shoov-ui-regression/) means "Again" in Hebrew for this very reason.Go ahead and jump to our [example repo](https://github.com/shoov/test-example) which now has cross browser tests. Writing your tests once - but testing on multiple platforms and browsers is a _big_ win.
 
-<div class="thumbnail">
-  <img src="{{BASE_PATH}}/assets/images/posts/shoov-multiple-platforms/image1.jpg">
-  <div class="caption">DuckDuckGo.com tested by BrowserStack on Windows7, IE11, with 1024x780 resolution</div>
-</div>
+{% include thumbnail.html image_path="assets/images/posts/shoov-multiple-platforms/image1.jpg" caption="DuckDuckGo.com tested by BrowserStack on Windows7, IE11, with 1024x780 resolution" %}
 
 <!-- more -->
 
@@ -40,13 +37,9 @@ PROVIDER_PREFIX=saucelabs SELECTED_CAPS=chrome mocha
 # Execute the tests using your own provider and config.
 PROVIDER_PREFIX=myOwnProvider SELECTED_CAPS=myOwnConfig mocha
 ```
-
 Combined with paid services such as [BrowserStack](https://browserstack.com) or [SauceLabs](https://saucelabs.com) there is no longer a need for a PC in the corner of the office - as they provide you with an instant virtual machine with lots of platforms and browsers.
 
-<div class="thumbnail">
-  <img src="{{BASE_PATH}}/assets/images/posts/shoov-multiple-platforms/image2.jpg">
-  <div class="caption">BrowserStack is providing our virtual boxes on demand</div>
-</div>
+{% include thumbnail.html image_path="assets/images/posts/shoov-multiple-platforms/image2.jpg" caption="BrowserStack is providing our virtual boxes on demand" %}
 
 As we are using those services for testing our projects on multiple platforms and browsers, we are suddenly dealing with lots of images. Since our sites are frequently changing, those baseline images tend to change quite frequently.  
 This is where [Shoov](shoov.gizra.com) really helps us in the tedious task of making sure our visual regression tests are up to date. It does it by allowing us to easily replace the baseline images with the regression ones, either by downloading them with the correct name, or even by creating a pull request for us.

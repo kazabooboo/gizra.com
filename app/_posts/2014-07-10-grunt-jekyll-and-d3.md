@@ -12,18 +12,11 @@ published: true
 
 When we started working on a mobile web site for [Casa del Lector](http://www.gizra.com/content/casa-del-lector/)'s exhibition, we decided early on it would be a backend-free app, mainly for reasons of stability and performance:
 
-<div class="thumbnail">
-  <img src="{{BASE_PATH}}/assets/images/posts/backendless-apps/image1.jpg" />
-  <div class="caption">App is faster than 96% of other websites</div>
-</div>
-
+{% include thumbnail.html image_path="assets/images/posts/backendless-apps/image1.jpg" caption="App is faster than 96% of other websites" %}
 
 The data was entered by the client on a 3rd party desktop tool which exported it to XML. We used a bunch of open source tools to massage it a bit and prepare it for the App. Since the project is open sourced you can check out the [actual code](https://github.com/Gizra/CDL).
 
-<div class="thumbnail">
-  <img src="{{BASE_PATH}}/assets/images/posts/casa-del-lector/cdl-item.gif" />
-  <div class="caption">The App in action</div>
-</div>
+{% include thumbnail.html image_path="assets/images/posts/casa-del-lector/cdl-item.gif" caption="The App in action" %}
 
 <!-- more -->
 

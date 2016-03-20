@@ -1,0 +1,16 @@
+<div class="thumbnail">
+  <div class="img-wrapper">
+
+    {% if include.iframe != nil %}
+      {{ include.iframe }}
+    {% endif %}
+
+    {% if include.image_path != nil %}
+      <img src="{{BASE_PATH}}/{{ include.image_path }}">
+    {% endif %}
+
+  </div>
+  {% if include.caption != nil %}
+    <div class="caption">{{ include.caption }}</div>
+  {% endif %}
+</div>

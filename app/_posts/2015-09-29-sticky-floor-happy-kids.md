@@ -14,9 +14,7 @@ published: true
 
 There's a saying "Good moms have sticky floors, messy kitchens, laundry piles, dirty ovens, and happy kids”. God knows I score an A+ and by that phrase alone I am THE perfect mother. But how do you leave those happy kids and get back to work?!
 
-<div class="thumbnail">
-  <img src="{{BASE_PATH}}/assets/images/posts/happy-kids/wonder-woman.jpg">
-</div>
+{% include thumbnail.html  image_path="assets/images/posts/happy-kids/wonder-woman.jpg" %}
 
 I have 3 kids (recent one is brand new - in fact I'm writing this post while being on maternity leave), which I absolutely adore and admire with every breath they take, a husband that I'm (still, after so many years together) crazy about and, lucky me, I love my job and co-workers. 
 

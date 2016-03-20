@@ -26,10 +26,7 @@ Gizra began its life as a product company, trying to solve a specific problem in
 
 About a year ago, we felt it was time to take Gizra to the next level and put a real effort behind our products side. To do so, we formed a new company called Gizra Alpha and set it on a somewhat unusual path. The quotes above might give you an idea.
 
-<div class="thumbnail">
-  <img src="{{BASE_PATH}}/assets/images/posts/gizra-alpha/image1.jpg" />
-</div>
-
+{% include thumbnail.html image_path="assets/images/posts/gizra-alpha/image1.jpg" %}
 <!-- more -->
 
 **Gizra Alpha makes a key assumption: <a href="http://www.wsj.com/articles/SB10001424053111903480904576512250915629460">Software is eating the world</a> - but not evenly**. Being in the business of building software, we're relatively spoiled with state of the art software tools and methodologies. This is not necessarily the case for other businesses, and we see a huge opportunity in applying modern web software tools in places where they are not usually found.

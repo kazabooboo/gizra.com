@@ -18,10 +18,7 @@ Combined with my love to JavaScript I've decided to create an AngularJS app with
 
 {% include demo_block.html demo='http://yaronmiro.github.io/AngularJS-UI-Router-Demo' code='https://github.com/YaronMiro/AngularJS-UI-Router-Demo' %}
 
-<div class="thumbnail">
-  <img src="{{BASE_PATH}}/assets/images/posts/angularjs-ui-router/image1.jpg">
-  <div class="caption">angularJS and ui-router demo application</div>
-</div>
+{% include thumbnail.html image_path="assets/images/posts/angularjs-ui-router/image1.jpg" caption="angularJS and ui-router demo application" %}
 
 <!-- more -->
 

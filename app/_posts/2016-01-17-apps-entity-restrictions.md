@@ -17,10 +17,7 @@ You might have heard of [Burning Man](http://burningman.org/). Basically it's a 
 
 It's not for me.
 
-<div class="thumbnail">
-  <img src="{{BASE_PATH}}/assets/images/posts/apps-entity-restrictions/burner.jpg">
-  <div class="caption">Radical Self-expression is one of <a href="http://midburn.org/en-ten-principles/">Midburn ten principles</a>. &#169; Eyal Levkovich.</div>
-</div>
+{% include thumbnail.html  image_path="assets/images/posts/apps-entity-restrictions/burner.jpg" caption="Radical Self-expression is one of <a href='http://midburn.org/en-ten-principles/'>Midburn ten principles</a>. &#169; Eyal Levkovich." %}
 
 <!-- more -->
 
@@ -30,10 +27,7 @@ Soon I came across a big problem: How can we manage 3rd party applications and m
 How can we prevent the Secret Santa application (an app that provides addresses of other Burning Man attendees so they could receive gifts) from accessing a user's medical qualification data?
 Or prevent the Midburn questionnaire application from accessing attendees private data?
 
-<div class="thumbnail">
-    <iframe src="http://gfycat.com/ifr/FragrantUnequaledHerculesbeetle" frameborder="0" scrolling="no" width="800" height="600" style="-webkit-backface-visibility: hidden;-webkit-transform: scale(1);" ></iframe>
-  <div class="caption">Apps Entity Restrictions in action</div>
-</div>
+{% include thumbnail.html  iframe="<iframe src='http://gfycat.com/ifr/FragrantUnequaledHerculesbeetle' frameborder='0' scrolling='no' width='100%' height='600' style='-webkit-backface-visibility: hidden;-webkit-transform: scale(1);' ></iframe>" caption="Apps Entity Restrictions in action" %}
 
 [Apps Entity Restrictions](https://github.com/RoySegall/apps_entity_restrictions) is our answer to the problem.
 
@@ -73,7 +67,4 @@ for developers to get this restriction validation on their endpoint. If you're i
 
 The next step is baking in some more statistics. Wouldn't it be great if you could know the usage stats for each application? Apart from knowing usage patterns, having information like, for example, amount of _invalid_ requests might help in detecting intrusion attempts.
 
-<div class="thumbnail">
-  <img src="{{BASE_PATH}}/assets/images/posts/apps-entity-restrictions/image1.jpg">
-  <div class="caption">Requests graphs. Cool, right?</div>
-</div>
+{% include thumbnail.html image_path="assets/images/posts/apps-entity-restrictions/image1.jpg" caption="Requests graphs. Cool, right?" %}

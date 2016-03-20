@@ -22,10 +22,7 @@ I saw the Todo Restful project and it got me thinking, "If Amitai did this right
 
 {% include demo_block.html demo='http://infiniteluke.github.io/todo_restful/' code='https://github.com/infiniteluke/todo_restful' %}
 
-<div class="thumbnail">
-  <img src="{{BASE_PATH}}/assets/images/posts/restful-backbone/image1.jpg">
-  <div class="caption">Todo app with a Drupal backend</div>
-</div>
+{% include thumbnail.html image_path="assets/images/posts/restful-backbone/image1.jpg" caption="Todo app with a Drupal backend" %}
 
 Here's a simplified list of everything I had to do to get it working:
 

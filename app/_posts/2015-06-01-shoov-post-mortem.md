@@ -19,12 +19,7 @@ As much as I'd like to say I was able to enjoy the irony, the six hours I spent 
 One of the things [Shoov](http://shoov.io/) is built for is assisting us with a quick configuration of live site monitoring using your preferred functional testing tool (e.g. Behat or CasperJS).  
 As awesome as services like Pingdom are, they still provide very little insight to what's actually going on in the site. In fact, according to Pingdom, Shoov was up and running, even though no user could have logged in.
 
-
-<div class="thumbnail">
-  <img src="{{BASE_PATH}}/assets/images/posts/shoov-post-mortem/image1.jpg">
-  <div class="caption">Shoov login now working. When it wasn't, the fish were sad</div>
-</div>
-
+{% include thumbnail.html image_path="assets/images/posts/restful-backbone/image1.jpg" caption="Shoov login now working. When it wasn't, the fish were sad" %}
 
 ## Post Mortem
 
@@ -72,9 +67,6 @@ Next was writing a [Behat test](https://github.com/amitaibu/shoov-behat/blob/mas
 
 Having to do all that, along with wanting to have it as a public repository, gave me the push to finally introduce the concept of [encrypted keys](https://github.com/amitaibu/shoov-behat/blob/master/.shoov.yml#L1-L6). Since we don't want the credentials of the dummy GitHub user we've created for the test to be exposed, Shoov will now have a secret private key that can be used for AES encryption. Shoov makes sure those encrypted variables will be available in our [tests](https://github.com/amitaibu/shoov-behat/blob/master/behat/features/bootstrap/FeatureContext.php#L44-L49).
 
-<div class="thumbnail">
-  <img src="{{BASE_PATH}}/assets/images/posts/shoov-post-mortem/image2.jpg">
-  <div class="caption">Encrypted keys using the same syntax as Travis in .shoov.yml file</div>
-</div>
+{% include thumbnail.html image_path="assets/images/posts/shoov-post-mortem/image2.jpg" caption="Encrypted keys using the same syntax as Travis in .shoov.yml file" %}
 
 And you know what else is great? Since all the different components of Shoov are open source, we can enjoy sharing the code the does the [decryption](https://github.com/shoov/php-ci/blob/33f9ea4292005e7898f192cb3d1250d681acaf7e/export-vars.js) with everyone.

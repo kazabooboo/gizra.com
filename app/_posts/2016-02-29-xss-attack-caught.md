@@ -24,10 +24,7 @@ We all know about Drupal's `check_plain()`, `filter_xss()` and similar functions
 
 Well, we found a nice solution for it that can be easily applied in your projects as well.
 
-<div class="thumbnail">
-  <img src="{{BASE_PATH}}/assets/images/posts/xss-attack/image1.jpg">
-  <div class="caption">XSS on the title and body fields of an article</div>
-</div>
+{% include thumbnail.html  image_path="assets/images/posts/xss-attack/image1.jpg"  caption="XSS on the title and body fields of an article"  %}
 
 <!-- more -->
 
@@ -35,10 +32,7 @@ Assuming you are creating some dummy data during the development - you should cr
 
 But creating dummy data after each re-install during the development is annoying. All Gizra's projects are scaffolded from our home grown [hedley generator](/content/yo-hedley/), which comes with migration files that help with adding dummy and real content to your Drupal site. What we do when we add our own dummy migration data is add some data that has deliberate XSS in the title, body and text fields like in the image above.
 
-<div class="thumbnail">
-  <img src="{{BASE_PATH}}/assets/images/posts/xss-attack/image2.jpg">
-  <div class="caption">XSS properly sanitized on the node view</div>
-</div>
+{% include thumbnail.html  image_path="assets/images/posts/xss-attack/image2.jpg"  caption="XSS properly sanitized on the node view"  %}
 
 If you are following this best practice of using the Migration module to import content into your platform, you should add "XSS Examples" for each migration. If you start from Hedley, you are lucky, as I've just added such an [example there](https://github.com/Gizra/generator-hedley/pull/95/files#diff-ac7aeca225bb2174a1c2b2292c9cfc9cR6).
 
@@ -47,10 +41,7 @@ Of course it's not a panacea, but at least you reduce the chance someone will be
 For the most part Drupal core will already take care of preventing XSS, but for contrib modules and your custom code extra attention is required.  
 In fact, we've found that one of the most widely used contrib modules doesn't santize page titles properly in a specific scenario involving i18n (obviously we opened a security issue and a patch was already created)
 
-<div class="thumbnail">
-  <img src="{{BASE_PATH}}/assets/images/posts/xss-attack/image3.jpg">
-  <div class="caption">JS alert popping up is the sign for XSS in action</div>
-</div>
+{% include thumbnail.html  image_path="assets/images/posts/xss-attack/image3.jpg"  caption="JS alert popping up is the sign for XSS in action"  %}
 
 The point is, if we hadn't worked with infected data, we wouldn't have noticed the security hole. By having this in place, we further minimized our site's security threat.
 

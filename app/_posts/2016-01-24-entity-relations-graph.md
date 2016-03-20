@@ -20,9 +20,7 @@ One way we like to look at a project before diving into the code is through its 
 
 Having done this for a while now, I believe our assumption was right. Taking our open-source [Productivity project](https://github.com/Gizra/productivity#gizra-productivity) (Gizra's internal ERP/Project management system) as an example, it's much easier to look at the following graph and understand that `Work session`, `Time tracking`, `Payment`, and `Github Issue` bundles are pointing at a `Project`, which in turn points to an `Account` bundle. `Github Issue` can also reference itself.
 
-<div class="thumbnail">
-  <img src="{{BASE_PATH}}/assets/images/posts/entity-relations/image1.jpg">
-</div>
+{% include thumbnail.html image_path="assets/images/posts/entity-relations/image1.jpg" %}
 
 <!-- more -->
 

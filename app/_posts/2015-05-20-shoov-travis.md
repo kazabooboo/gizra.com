@@ -29,10 +29,7 @@ We want to use services such as [BrowserStack](http://www.browserstack.com/) or 
 
 WebdriverCSS tests are responsible for capturing the screenshots, and comparing them against the baseline images. If a regression is found, it will be automatically pushed to Shoov, and a link to the regression would be provided in the Travis log. This means that if a test was broken, we can immediately see where's the regression and figure out if it is indeed a bug - or, if not, replace the baseline image with the "regression" image.
 
-<div class="thumbnail">
-  <img src="{{BASE_PATH}}/assets/images/posts/shoov-travis/image1.jpg">
-  <div class="caption">Visual regression found and uploaded to shoov.io</div>
-</div>
+{% include thumbnail.html image_path="assets/images/posts/shoov-travis/image1.jpg" caption="Visual regression found and uploaded to shoov.io" %}
 
 <!-- more -->
 
@@ -44,10 +41,7 @@ Even though visual regression testing with BrowserStack or Sauce Labs takes more
 
 Those tools cost money, but we find that it's well worth it. We are currently using BrowserStack (99$/month), though we're running into some issues with it not having an internal queue system - so if you reached your limit on virtual hosts concurrency, your tests will simply fail. For that reason we might switch to Sauce Labs (149$/month) which also provides more concurrent VMs.
 
-<div class="thumbnail">
-  <img src="{{BASE_PATH}}/assets/images/posts/shoov-travis/image2.jpg">
-  <div class="caption">Blog post page tested on IE11, Windows 7</div>
-</div>
+{% include thumbnail.html image_path="assets/images/posts/shoov-travis/image2.jpg" caption="Blog post page tested on IE11, Windows 7" %}
 
 Travis is limited to 50 minutes' execution time. Capturing each image might take about 30 - 90 sec, so when you reach lots of tests, you should probably split them.
 

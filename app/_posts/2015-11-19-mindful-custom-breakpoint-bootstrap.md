@@ -21,10 +21,7 @@ __A__: No. Or, to say it differently: Yes. But not necessarily immediately.
 
 Don't get me wrong. I'm not against responsive design. I'm just saying each breakpoint has an impact on the project length and budget. It's up to us to help the client decide how many breakpoints are right for them. As you know, Bootstrap can have [custom breakpoints](http://mindful-custom-breakpoint-bootstrap.gizra.com/).
 
-<div class="thumbnail">
-  <iframe src="http://gfycat.com/ifr/DistortedBarrenGroundbeetle" frameborder="0" scrolling="no" width="800" height="555" style="-webkit-backface-visibility: hidden;-webkit-transform: scale(1);" ></iframe>
-  <div class="caption">Bootstrap default layout VS Bootstrap custom layout</div>
-</div>
+{% include thumbnail.html  iframe="<iframe src='http://gfycat.com/ifr/DistortedBarrenGroundbeetle' frameborder='0' scrolling='no' width='100%' height='555' style='-webkit-backface-visibility: hidden;-webkit-transform: scale(1);' ></iframe>" caption="Bootstrap default layout VS Bootstrap custom layout" %}
 
 <!-- more -->
 
@@ -61,6 +58,4 @@ Wonder what normal people do when they see their site cut?
 
 They simple make the browser's window bigger :)
 
-<div class="thumbnail">
-  <img src="{{BASE_PATH}}/assets/images/posts/mindful-custom-breakpoint-bootstrap/image2.jpg">
-</div>
+{% include thumbnail.html  image_path="assets/images/posts/mindful-custom-breakpoint-bootstrap/image2.jpg" %}

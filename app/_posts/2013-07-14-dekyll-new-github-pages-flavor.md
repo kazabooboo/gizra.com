@@ -39,36 +39,24 @@ Note that when the Drupal installation is finished it starts the queue workers w
 
 Upon opening the local site, you're redirected to log in via Github and then to create your new repo (a fork of the ``jekyll-bootstrap`` repository):
 
-<div class="thumbnail">
-  <img src="/assets/images/dekyll-flavor-1.jpg" />
-</div>
+{% include thumbnail.html  image_path="assets/images/dekyll-flavor-1.jpg" %}
 
 Dekyll now engages on some behind the scenes dialog with Github, and lets you fork ``Gizra/jekyll-bootstrap`` from Dekyll itself. Once that's done you're redirected to the new Branch node that was created (i.e. branch ``gh-pages`` on the forked ``jekyll-bootstrap`` repository).
 
-<div class="thumbnail">
-  <img src="/assets/images/dekyll-flavor-2.jpg" />
-</div>
+{% include thumbnail.html  image_path="assets/images/dekyll-flavor-2.jpg" %}
 
 Take a look at the command line, and you'll see the repository is cloned and imported by the queue workers - Jekyll files are being parsed and created as nodes. Dekyll still doesn't have the JS to do it for you, so you'll need to refresh the page after a few seconds to see your new content.
 
-<div class="thumbnail">
-  <img src="/assets/images/dekyll-flavor-3.jpg" />
-  <div class="caption">All the imported files are listed, and you can create new ones as-well.</div>
-</div>
+{% include thumbnail.html  image_path="assets/images/dekyll-flavor-3.jpg" caption="All the imported files are listed, and you can create new ones as-well." %}
 
 Select for example the "Hello Dekyll" node, and edit it: change the title, add some text in the body and click save.
 
 The IFrame you see in the node view might not be updated yet. This is one caveat of using Jekyll on Github pages - you need to wait for the file to be pushed to Github and for the site to be re-built.
 
-<div class="thumbnail">
-  <img src="/assets/images/dekyll-flavor-4.jpg" />
-</div>
+{% include thumbnail.html  image_path="assets/images/dekyll-flavor-4.jpg" %}
 
 Dekyll was "smart" enough to configure your ``_config.yml`` file and point it to the right URL address. It even personalized the "Hello Dekyll" page to show you the links of your new site on Github Page, and the Dekyll site.
 
 Thanks to Dekyll, Drupal can now power the content editing of super fast static sites. Including the very blog post you're reading.
 
-<div class="thumbnail">
-  <img src="/assets/images/dekyll-flavor-5.jpg" />
-  <div class="caption">The images used in this blog post were uploaded to the node as-well, and exported to the correct directory by Dekyll.</div>
-</div>
+{% include thumbnail.html  image_path="assets/images/dekyll-flavor-5.jpg" caption="The images used in this blog post were uploaded to the node as-well, and exported to the correct directory by Dekyll." %}

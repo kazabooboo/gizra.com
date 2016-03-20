@@ -13,11 +13,7 @@ published: true
 
 Testing UI regression is one of these things that make total sense but is rarely put into practice, for a simple reason - it's hard.
 
-
-<div class="thumbnail">
-  <img src="{{BASE_PATH}}/assets/images/posts/shoov-intro/image1.gif">
-  <div class="caption">UI regression checking in action</div>
-</div>
+{% include thumbnail.html image_path="assets/images/posts/shoov-intro/image1.gif" caption="UI regression checking in action" %}
 
 If you read the theory about it, it seems pretty simple. Take a screenshot of a certain page in your site which will be your "baseline" image, and from now on, whenever the code changes re-run an automated test that will compare a current screenshot with the baseline image.
 
@@ -31,11 +27,7 @@ The second problem was that we wanted to have a single place to easily monitor a
 
 The next step was almost immediate. Since all our projects are hosted on GitHub, we soon enough realized we could do better than download - Shoov should create a pull request for us. [WebDriverCSS](https://github.com/webdriverio/webdrivercss), [NodeJs server](https://github.com/shoov/shoov-pr-server), [Docker](https://github.com/shoov/docker-shoov-pr), and a GitHub auto-generated access token later: bam! we have pull requests created automatically for us.
 
-<div class="thumbnail">
-  <img src="{{BASE_PATH}}/assets/images/posts/shoov-intro/image2.jpg">
-  <div class="caption">Pull request automatically created</div>
-</div>
-
+{% include thumbnail.html image_path="assets/images/posts/shoov-intro/image2.jpg" caption="Pull request automatically created" %}
 
 [Shoov](https://github.com/shoov/shoov) is very much work in progress, but all the different pieces are now starting to gel, and we're already beginning to get significant value from it in our daily work at Gizra.
 

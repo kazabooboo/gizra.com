@@ -15,12 +15,7 @@ Using Bootstrap-Sass creating a custom grid is possible in a manner that can be 
 Note that example is using Jekyll for simplicity, however the same technique can be used on Drupal.
 
 <!-- more -->
-
-<div class="thumbnail">
-  <img src="{{BASE_PATH}}/assets/images/posts/creating-a-custom-grid-in-sass-bootstrap/customgrid-gizra.gif">
-  <div class="caption">Notice the responsiveness of the site. The part with the white background marks our custom breakpoint.</div>
-</div>
-
+{% include thumbnail.html image_path="assets/images/posts/creating-a-custom-grid-in-sass-bootstrap/customgrid-gizra.gif" caption="Notice the responsiveness of the site. The part with the white background marks our custom breakpoint." %}
 
 1. [Set](https://github.com/Gizra/custom-breakpoint-example/blob/master/app/_scss/main.scss#L1-L14) the custom breakpoint. In this example arbitrarily called ``is`` (Intermediate small - because it's between the extra small ``xs`` and small ``sm`` breakpoints), which means we can set the cols writing ``col-is-4``.
 2. Create a custom ``_grids.scss`` file next to your main ``styles.scss`` and [include](https://github.com/Gizra/custom-breakpoint-example/blob/master/app/_scss/main.scss#L16-L19) it. Be sure to include it after the ``bootstrap.scss`` file.

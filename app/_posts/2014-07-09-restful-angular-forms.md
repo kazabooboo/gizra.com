@@ -17,10 +17,7 @@ published: true
 
 But now that [RESTful](https://github.com/Gizra/restful) integrates with Entity Validator, I would change the equation and simply say something rarely heard in the Drupal community: Forms are Fun!
 
-<div class="thumbnail">
-  <img src="{{BASE_PATH}}/assets/images/posts/restful-angular-forms/angular-form.gif" />
-  <div class="caption">This form is not Form API, it's angular!</div>
-</div>
+{% include thumbnail.html image_path="assets/images/posts/restful-angular-forms/angular-form.gif" caption="This form is not Form API, it's angular!" %}
 
 Go ahead, [try it](https://github.com/Gizra/restful/blob/7.x-1.x/modules/restful_angular_example/README.md#test-on-simplytestme-recommended) yourself on simplyTest.me
 
@@ -34,15 +31,9 @@ Developers would appreciate the very little code needed to declare the [validati
 
 As a benefit, since RESTful spits out structured error messages, displaying error messages inline is really simple.
 
-<div class="thumbnail">
-  <img src="{{BASE_PATH}}/assets/images/posts/restful-angular-forms/image1.jpg" />
-  <div class="caption">Detailed errors are part of the JSON response</div>
-</div>
+{% include thumbnail.html image_path="assets/images/posts/restful-angular-forms/image1.jpg" caption="captionDetailed errors are part of the JSON response" %}
 
-<div class="thumbnail">
-  <img src="{{BASE_PATH}}/assets/images/posts/restful-angular-forms/image2.jpg" />
-  <div class="caption">Inline errors, provide a better UX</div>
-</div>
+{% include thumbnail.html image_path="assets/images/posts/restful-angular-forms/image2.jpg" caption="Inline errors, provide a better UX" %}
 
 In Gizra we already have projects where we don't use any node form to create or edit content. Everything is implemented in a slick Angular based UI - one that users _enjoy_ using.
 

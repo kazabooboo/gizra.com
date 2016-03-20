@@ -15,10 +15,7 @@ What's fun about having a tool like [Hedley](/content/yo-hedley/) is that every 
 
 So, as if it didn't have enough of best practices bundled in it already, we've taken another step to get [PhantomCSS](https://github.com/Huddle/PhantomCSS) a "CSS regression testing" tool in.
 
-<div class="thumbnail">
-  <img src="{{BASE_PATH}}/assets/images/posts/phantomcss/image1.jpg" />
-  <div class="caption">PhantomCSS in action</div>
-</div>
+{% include thumbnail.html  image_path="assets/images/posts/phantomcss/image1.jpg" caption="PhantomCSS in action" %}
 
 <!-- more -->
 
@@ -30,10 +27,7 @@ One of the difficulties working with Travis or other CI tools is that you don't 
 
 We solve this by using a nifty [bash script](https://github.com/Gizra/generator-hedley/blob/3540852d195ebbf34216e0434379e7709970c9a3/.travis.yml#L76-L82) that uploads the screenshots to [imgur](http://imgur.com) - letting us understand how Travis "sees" the app can reduce debugging time considerably.
 
-<div class="thumbnail">
-  <img src="{{BASE_PATH}}/assets/images/posts/phantomcss/image2.jpg" />
-  <div class="caption">A regression was detected, and the failed output was uploaded to imgur</div>
-</div>
+{% include thumbnail.html  image_path="assets/images/posts/phantomcss/image2.jpg" caption="A regression was detected, and the failed output was uploaded to imgur" %}
 
 
 ### Best practices tips

@@ -28,10 +28,7 @@ Scenario: Testing the login form.
 
 Amazingly enough, the above Gherkin code which is being executed by PHPunit can test your Drupal installation!
 
-<div class="thumbnail">
-  <img src="{{BASE_PATH}}/assets/images/posts/behat-drupal8/test_results.png">
-  <div class="caption">Behat code executed from within Drupal's simpleTest</div>
-</div>
+{% include thumbnail.html image_path="assets/images/posts/behat-drupal8/test_results.png" caption="Behat code executed from within Drupal's simpleTest" %}
 
 This functionality is provided by an experimental [repo](https://github.com/RoySegall/behat), which comes with an example test.
 

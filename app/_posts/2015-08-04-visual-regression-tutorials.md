@@ -9,14 +9,9 @@ layout: post
 published: true
 ---
 
-
 {% include setup %}
 
-<div class="thumbnail">
-  <img src="{{BASE_PATH}}/assets/images/posts/shoov-tutorials/image1.jpg">
-  <div class="caption">Complex dynamic page</div>
-</div>
-
+{% include thumbnail.html  image_path="assets/images/posts/shoov-tutorials/image1.jpg" caption="Complex dynamic page" %}
 
 A well known DrupalCon fact is that the action mostly takes place in the hallways and social gatherings. The logic is that the sessions are recorded, and the rest isn't.
 

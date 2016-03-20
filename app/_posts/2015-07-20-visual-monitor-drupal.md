@@ -9,28 +9,19 @@ layout: post
 published: true
 ---
 
-
 {% include setup %}
 
 In recent months I've been demoing visual monitoring to many developers. The reaction was always positive, but I've realized that not enough people have taken the step from recognizing the need to actually implementing it on their own projects.
 
 If you have been following my recent blog posts or tweets you've probably noticed we are trying to bring visual monitoring along with [Shoov](http://shoov.io) to the masses. To do so we're trying to reduce the complexity and codify our "lessons learned".
 
-
-<div class="thumbnail">
-  <iframe src="http://gfycat.com/ifr/FrailVioletEmperorpenguin" frameborder="0" scrolling="no" width="800" height="424" style="-webkit-backface-visibility: hidden;-webkit-transform: scale(1);" ></iframe>
-
-  <div class="caption">Drupal.org visually monitored by Shoov</div>
-</div>
+{% include thumbnail.html  iframe="<iframe src='http://gfycat.com/ifr/FrailVioletEmperorpenguin' frameborder='0' scrolling='no' width='100%' height='424' style='-webkit-backface-visibility: hidden;-webkit-transform: scale(1);' ></iframe>" caption="Drupal.org visually monitored by Shoov" %}
 
 Yeoman generators is one way to achieve this. With the new [yo shoov](https://www.npmjs.com/package/generator-shoov) - a single command makes sure all the files needed for visual monitoring are immediately scaffolded in your repository. In fact, it also sets up Behat tests along with a [.shoov.yml](https://github.com/Gizra/drupal.org-shoov/blob/master/.shoov.yml) that will allow Shoov to run your visual monitoring tests periodically.
 
 Since visual monitoring might be new for a lot of people, the generator not only scaffolds the files but also attempts to check if your system is properly installed, and tells you how to fix it if not.
 
-<div class="thumbnail">
-  <img src="{{BASE_PATH}}/assets/images/posts/shoov-drupal/image1.jpg">
-  <div class="caption">Shoov generator in action.</div>
-</div>
+{% include thumbnail.html  image_path="assets/images/posts/shoov-drupal/image1.jpg" caption="Shoov generator in action." %}
 
 <!-- more -->
 
@@ -69,9 +60,6 @@ Visual monitoring best practices are beyond lines of code - they are about the m
 
 Apart from adding a nicer design to the application, Pusher integration for real time notifications, and lots of smaller features, the Gizra devs are constantly trying to push code to other projects, namely [RESTful](https://github.com/RESTful-Drupal/restful) and [yo hedley](https://github.com/Gizra/generator-hedley). We are hoping you could enjoy and use that work on your own Headless Drupal projects, and of course hope the community could contribute back.
 
-<div class="thumbnail">
-  <img src="{{BASE_PATH}}/assets/images/posts/shoov-drupal/image2.jpg">
-  <div class="caption">Shoov's dashboard.</div>
-</div>
+{% include thumbnail.html  image_path="assets/images/posts/shoov-drupal/image2.jpg" caption="Shoov's dashboard." %}
 
 We've also began work on a getting started tutorial, which will help guide developers through example to reach visual monitoring best practices nirvana.

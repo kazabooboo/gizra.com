@@ -18,10 +18,7 @@ And then the site goes live - and at best they might add [Pingdom](https://www.p
 
 Our mission is to change this, and bring functional testing to the live site. One that is easy to setup and that integrates with your existing testing and GitHub flow.
 
-<div class="thumbnail">
-  <img src="{{BASE_PATH}}/assets/images/posts/shoov-ci-build/image1.jpg">
-  <div class="caption">The Drupal backend holds the CI build data, including the full log, and status</div>
-</div>
+{% include thumbnail.html image_path="assets/images/posts/shoov-ci-build/image1.jpg" caption="The Drupal backend holds the CI build data, including the full log, and status" %}
 
 While Pingdom is wonderful and is alerting us on time whenever a site goes down, its "page is fine, move along" approach doesn't cut it for us. Here are some examples why testing on the production server is a good idea:
 

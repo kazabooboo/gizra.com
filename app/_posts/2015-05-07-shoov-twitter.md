@@ -16,10 +16,7 @@ Monitoring your live site is a pretty good idea - that's generally agreed. Same 
 
 For example, here's an overview of how we could monitor Twitter, if someone would actually ask us to (as always you can jump right into the [repository](https://github.com/amitaibu/ci-tests-twitter)):
 
-<div class="thumbnail">
-  <img src="{{BASE_PATH}}/assets/images/posts/shoov-twitter/image1.jpg">
-  <div class="caption">Visual regression on a Twitter page. So much functionality has been asserted in this simple screenshot</div>
-</div>
+{% include thumbnail.html image_path="assets/images/posts/shoov-twitter/image1.jpg" caption="Visual regression on a Twitter page. So much functionality has been asserted in this simple screenshot" %}
 
 <!-- more -->
 
@@ -43,10 +40,7 @@ The Behat PHP [code](https://github.com/amitaibu/ci-tests-twitter/blob/master/be
 
 Up until now we didn't need [Shoov](http://shoov.io/), which is good, since Shoov is agnostic to which tools you use - it's only there to help you deal with the accumulated images and regressions.
 
-<div class="thumbnail">
-  <img src="{{BASE_PATH}}/assets/images/posts/shoov-twitter/image2.jpg">
-  <div class="caption">Before we've hidden the spinner, Shoov showed us the regression</div>
-</div>
+{% include thumbnail.html image_path="assets/images/posts/shoov-twitter/image2.jpg" caption="Before we've hidden the spinner, Shoov showed us the regression" %}
 
 It's important to realize that once you go down the visual regression road it's hard to stop. Suddenly PhantomJS isn't good enough, if you can use BrowserStack or SauceLabs to validate the site on many platforms and browsers. Testing your site on just one screen size isn't enough either.  
 webdriverCSS comes with the powerful `screenWidth` property, which should make it super simple to test multiple view ports soon as this [issue](https://github.com/webdriverio/webdrivercss/issues/73) is fixed.
@@ -57,7 +51,4 @@ webdriverCSS comes with the powerful `screenWidth` property, which should make i
 * [app.shoov.io](https://app.shoov.io) is now the app site, sitting on Amazon S3 and CloudFront with SSL certificate, so you should feel safer using it.
 * "Dev Tips" is a new concept we've introduced. Since the site and all of its sub-components are open sourced, we have added a few tips in each page to help you - the developer - to better understand how the system works, and maybe even encourage you to contribute.
 
-<div class="thumbnail">
-  <img src="{{BASE_PATH}}/assets/images/posts/shoov-twitter/image3.jpg">
-  <div class="caption">Login to Shoov.io to learn more from the dev tips</div>
-</div>
+{% include thumbnail.html image_path="assets/images/posts/shoov-twitter/image3.jpg" caption="Login to Shoov.io to learn more from the dev tips" %}

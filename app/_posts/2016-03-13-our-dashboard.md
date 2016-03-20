@@ -13,10 +13,7 @@ author: niryariv
 
 Hi there! Please meet our dashboard:
 
-<div class="thumbnail">
-  <img src="{{BASE_PATH}}/assets/images/posts/our-dashboard/image1.jpg">
-  <div class="caption">Our Shoov Dashboard</div>
-</div>
+{% include thumbnail.html image_path="assets/images/posts/our-dashboard/image1.jpg" caption="Our Shoov Dashboard" %}
 
 It's powered by [Shoov](http://shoov.io). Did we mention Shoov before? I [think](http://www.gizra.com/content/shoov-ci-tests-live-site) [we](http://www.gizra.com/content/cross-browser-visual-regression-with-shoov) [did](http://www.gizra.com/content/visual-regression-travis-shoov-ngrok). Basically every project we work on has full test coverage - like everyone's, I know - but Shoov also provides us with a visual regression testing harness.
 

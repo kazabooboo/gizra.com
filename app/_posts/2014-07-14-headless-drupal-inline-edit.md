@@ -15,10 +15,7 @@ And if that's not enough for the readers excited by the idea of a decoupled Drup
 
 Enjoy the [live demo](http://gizra.github.io/angular-drupal-forms-example/#/)
 
-<div class="thumbnail">
-  <img src="{{BASE_PATH}}/assets/images/posts/headless-drupal-inline-edit/image1.gif" />
-  <div class="caption">If you know Form API's pains, you should be excited now</div>
-</div>
+{% include thumbnail.html image_path="assets/images/posts/headless-drupal-inline-edit/image1.gif" caption="If you know Form API's pains, you should be excited now" %}
 
 <!-- more -->
 

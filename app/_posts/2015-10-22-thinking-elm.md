@@ -16,10 +16,7 @@ In my [last post]({{ BASE_PATH }}/content/elmlang-headless-drupal/) I was giving
 The reason? In short - I believe it will save us money.  
 (Oh, and it's fun)
 
-<div class="thumbnail">
-  <iframe src="http://gfycat.com/ifr/BountifulGloomyChickadee" frameborder="0" scrolling="no" width="800" height="555" style="-webkit-backface-visibility: hidden;-webkit-transform: scale(1);" ></iframe>
-</div>
-
+{% include thumbnail.html iframe="<iframe src='http://gfycat.com/ifr/BountifulGloomyChickadee' frameborder='0' scrolling='no' width='100%' height='555' style='-webkit-backface-visibility: hidden;-webkit-transform: scale(1);' ></iframe>" %}
 
 <!-- more -->
 

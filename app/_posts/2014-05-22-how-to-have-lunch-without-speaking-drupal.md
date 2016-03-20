@@ -13,10 +13,7 @@ Oh no, It’s lunch time!
 I wonder if I’ll have anything to contribute to the conversation today. Will lunch today - like yesterday or the day before that - revolve around pull requests, Organic groups, migrate, scrum, code reviews, modules. Boring.  
 If you share the same feeling reading the above lines, this blog post if for you.
 
-<div class="thumbnail">
-  <img src="{{BASE_PATH}}/assets/images/posts/lunch/photo1.jpg" />
-  <div class="caption">Geeks having a spontaneous reaction to a new version of a Drupal module. I love those guys!</div>
-</div>
+{% include thumbnail.html image_path="assets/images/posts/lunch/photo1.jpg" caption="Geeks having a spontaneous reaction to a new version of a Drupal module. I love those guys!" %}
 
 Don’t get me wrong - I love my job and I love my co-workers as well. It’s just that every time they talk about these things it makes me wanna stand up on our designer kitchen chair and shout:  
 <strong>My name is Orit and I am not a Drupal geek!</strong>
@@ -41,10 +38,8 @@ Since I will probably never be a developer, I decided to roll up my sleeves and 
 ## How to teach your Drupal geeks to do human stuff, and not just talk about stuff no body cares. 101.
 
 1. Get them out of their bubble - from the comfort of their ergonomic office chairs, get their heads out of their screens and go to a <em>Funday</em> outside the office!  who doesn't likes a field-day?
-<div class="thumbnail">
-  <img src="{{BASE_PATH}}/assets/images/posts/lunch/photo2.jpg" />
-  <div class="caption">My geeks can paint!</div>
-</div>
+
+{% include thumbnail.html image_path="assets/images/posts/lunch/photo2.jpg" caption="My geeks can paint!" %}
 
 2. Exercise - Make them activate body parts other than their heads using a Multi Trainer device. That’s how their body will get some physical exercise, rather than their eyes, brains and fingers.
 3. Brainstorming - Get them brainstorming all week about what will be on the menu of our Weekly Happy-Hour. That makes them communicate with each other on things other than work.

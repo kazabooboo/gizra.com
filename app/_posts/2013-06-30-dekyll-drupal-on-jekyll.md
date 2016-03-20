@@ -60,9 +60,7 @@ Before diving into Dekyll, let's understand what are the problems that it tries 
 
 Here's how this post looks in Jekyll.
 
-<div class="thumbnail">
-  <img src="/assets/images/legacy/dekyll-jekyll-file.jpg" />
-</div>
+{% include thumbnail.html  image_path="assets/images/legacy/dekyll-jekyll-file.jpg" %}
 
 On top you can see the ``YAML front header``, this is the part where you can add some metadata to your page. If you're not a developer, I probably lost you around ``YAML front header``. And that is one of the things Dekyll tries to solve: Imagine you tell your client, a content editor: "You can enter tags - only make sure to never do a typo when you enter an existing tag, or touch any of the other YAML properties otherwise your page won't appear where it should".
 
@@ -82,9 +80,7 @@ Here are some ingredients of what we use to build Dekyll. Some are technical som
 
 * Plugins. Whenever you code something and think to yourself "I'm not sure if everybody would like to have it _exactly_ like this", you should probably use plugins. Dekyll plugins are classes, so for example the Product reference plugin simply extends the Entity reference plugin. Very little code, a lot of flexibility.
 * Field configuration. We hook into the field settings and allow to select the plugin that should process the field. For example, when editing an image field, Dekyll will know to show the ``Image`` and ``Image style`` plugins. Each plugin can have its own settings.
-<div class="thumbnail">
-  <img src="/assets/images/legacy/dekyll-file-configuration.jpg" />
-</div>
+{% include thumbnail.html  image_path="assets/images/legacy/dekyll-file-configuration.jpg" %}
 * Keep rewriting. Dekyll relatively short existence has already seen three or four rewrites. We are moving fast, and we try our best to avoid technical debts.
 * The enemy of good is excellent. This one is the opposite of the above statement, but is required for some balance. We are not writing a theoretical concept, rather we are building a tool that can help us build websites _fast_ yet in a  _reliable_ manner.
 * Have real life use cases. When we started Dekyll we just had the vision. Once we knew which sites we want to use it on, then the need dictated the solution.
@@ -93,15 +89,8 @@ Here are some ingredients of what we use to build Dekyll. Some are technical som
 
 Disposable: An existing Jekyll site can be imported into Dekyll, and all the configuration and content is duplicated into Drupal. However this Drupal is completely disposable. We can drop the database, and rebuild it. In this case Jekyll is the Canonical entity. A typical use case would be a blog site, just like gizra.com. In fact, this blog post you are reading **was completely written using Dekyll!**
 
-<div class="thumbnail">
-  <img src="/assets/images/legacy/dekyll-import.jpg" />
-  <div class="caption">Dekyll imports previous blog posts from Jekyll files</div>
-</div>
+{% include thumbnail.html  image_path="assets/images/legacy/dekyll-import.jpg" caption="Dekyll imports previous blog posts from Jekyll files" %}
 
-<br />
-<div class="thumbnail">
-  <img src="/assets/images/legacy/dekyll-node-edit.jpg" />
-  <div class="caption">After saving the node, Dekyll will export it to Jekyll format</div>
-</div>
+{% include thumbnail.html  image_path="assets/images/legacy/dekyll-node-edit.jpg" caption="After saving the node, Dekyll will export it to Jekyll format" %}
 
 Canonical: In this case the Drupal database needs to be kept. More about this mode will be in the next blog post, where we explain how we are building a dynamic commerce site using Dekyll where the content editors add the products via Drupal, and Dekyll will export them to Jekyll (spoiler: AngularJs manages the cart). We will see how Dekyll handles complex data. Complex as in a node referencing commerce product(s), referencing field collections, referencing taxonomy terms. Oh my!

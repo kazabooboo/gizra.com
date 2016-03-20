@@ -32,11 +32,7 @@ But the test we wrote just failed on all versions of PhantomJS we tried. Which m
 
 So after spending some time trying to figure out a workaround, I suddenly stared at the browser I was using to find the answer - Chrome!
 
-<div class="thumbnail">
-<iframe src="http://gfycat.com/ifr/ThirstyOfficialDikkops" frameborder="0" scrolling="no" width="800" height="424" style="-webkit-backface-visibility: hidden;-webkit-transform: scale(1);" ></iframe>
-
-  <div class="caption">Behat test running on headless Chrome, seen via VNC</div>
-</div>
+{% include thumbnail.html iframe="<iframe src='http://gfycat.com/ifr/ThirstyOfficialDikkops' frameborder='0' scrolling='no' width='100%' height='424' style='-webkit-backface-visibility: hidden;-webkit-transform: scale(1);'></iframe>" caption="Behat test running on headless Chrome, seen via VNC" %}
 
 <!-- more -->
 

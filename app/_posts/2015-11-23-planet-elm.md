@@ -13,10 +13,7 @@ published: true
 
 Nice, right? Planet Elm and its [RSS feed](http://planet.elm-lang.org/feeds.xml) is up and running - just grab it, and the best Elm related posts would appear in your favorite RSS reader.
 
-<div class="thumbnail">
-  <img src="{{BASE_PATH}}/assets/images/posts/planet-elm/image1.jpg">
-</div>
-
+{% include thumbnail.html  image_path="assets/images/posts/planet-elm/image1.jpg" %}
 
 I felt the need for such a site the day I started with Elm. Getting the Gizra devs to [build](https://github.com/Gizra/planet-elm) it was the next logical thing.
 
