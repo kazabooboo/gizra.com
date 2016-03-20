@@ -9,18 +9,6 @@
     <ttl>1800</ttl>
 
     
-      
-      
-        
-          
-        
-      
-        
-      
-        
-      
-
-      
       <item>
         <title>Budget Goggles - creating a common language and setting expectations</title>
         <description>
@@ -51,36 +39,77 @@
         <guid>http://www.gizra.com/content/budget-goggles</guid>
         <pubDate>Thu, 17 Mar 2016 00:00:00 +0200</pubDate>
       </item>
-      
     
-      
-      
-        
-      
-        
-      
+      <item>
+        <title>Our Shoov Dashboard</title>
+        <description>
+          &lt;p&gt;Hi there! Please meet our dashboard:&lt;/p&gt;
 
-      
+&lt;div class=&quot;thumbnail&quot;&gt;
+  &lt;div class=&quot;img-wrapper&quot;&gt;
+
     
-      
-      
-        
-      
 
-      
     
-      
-      
-        
-          
-        
-      
-        
-      
-        
-      
+      &lt;img src=&quot;http://www.gizra.com/assets/images/posts/our-dashboard/image1.jpg&quot;&gt;
+    
 
-      
+  &lt;/div&gt;
+  
+    &lt;div class=&quot;caption&quot;&gt;Our Shoov Dashboard&lt;/div&gt;
+  
+&lt;/div&gt;
+
+&lt;p&gt;It&amp;#39;s powered by &lt;a href=&quot;http://shoov.io&quot;&gt;Shoov&lt;/a&gt;. Did we mention Shoov before? I &lt;a href=&quot;http://www.gizra.com/content/shoov-ci-tests-live-site&quot;&gt;think&lt;/a&gt; &lt;a href=&quot;http://www.gizra.com/content/cross-browser-visual-regression-with-shoov&quot;&gt;we&lt;/a&gt; &lt;a href=&quot;http://www.gizra.com/content/visual-regression-travis-shoov-ngrok&quot;&gt;did&lt;/a&gt;. Basically every project we work on has full test coverage - like everyone&amp;#39;s, I know - but Shoov also provides us with a visual regression testing harness.&lt;/p&gt;
+
+&lt;p&gt;Shoov constantly runs its tests in the background, 24x7. When everything passes the project icon is green. When a test fails, it&amp;#39;s red. The monitor sits in the main room, so everyone can see when there&amp;#39;s an issue and feel deeply ashamed of their fragile, error-prone, carbon based brains.&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;m kidding of course. We all make mistakes - we&amp;#39;re only human. But Shoov isn&amp;#39;t.&lt;/p&gt;
+
+          &lt;p&gt;&lt;a href=&quot;http://www.gizra.com/content/our-shoov-dashboard/&quot;&gt;Continue reading…&lt;/a&gt;&lt;/p&gt;
+        </description>
+        <link>http://www.gizra.com/content/our-shoov-dashboard</link>
+        <guid>http://www.gizra.com/content/our-dashboard</guid>
+        <pubDate>Sun, 13 Mar 2016 00:00:00 +0200</pubDate>
+      </item>
+    
+      <item>
+        <title>Gizra Alpha</title>
+        <description>
+          &lt;blockquote&gt;
+Software is eating the world.
+&lt;footer&gt;Marc Andreessen&lt;/footer&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+The future is already here — it&#39;s just not very evenly distributed.
+&lt;footer&gt;William Gibson&lt;/footer&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Gizra began its life as a product company, trying to solve a specific problem in the textile software space. As often happens, the product was taking a long time to build and the bills were accumulating, so Brice &amp;amp; Amitai took on a client project to pay rent, then another, and another, and seven years later found themselves leading a 20 person development house, doing projects for clients such as Harvard University, The UN and The European Commission.&lt;/p&gt;
+
+&lt;p&gt;About a year ago, we felt it was time to take Gizra to the next level and put a real effort behind our products side. To do so, we formed a new company called Gizra Alpha and set it on a somewhat unusual path. The quotes above might give you an idea.&lt;/p&gt;
+
+&lt;div class=&quot;thumbnail&quot;&gt;
+  &lt;div class=&quot;img-wrapper&quot;&gt;
+
+    
+
+    
+      &lt;img src=&quot;http://www.gizra.com/assets/images/posts/gizra-alpha/image1.jpg&quot;&gt;
+    
+
+  &lt;/div&gt;
+  
+&lt;/div&gt;
+
+          &lt;p&gt;&lt;a href=&quot;http://www.gizra.com/content/gizra-alpha//&quot;&gt;Continue reading…&lt;/a&gt;&lt;/p&gt;
+        </description>
+        <link>http://www.gizra.com/content/gizra-alpha/</link>
+        <guid>http://www.gizra.com/content/gizra-alpha</guid>
+        <pubDate>Thu, 10 Mar 2016 00:00:00 +0200</pubDate>
+      </item>
+    
       <item>
         <title>Cross-Site Scripting attack detection</title>
         <description>
@@ -114,16 +143,7 @@ And to avoid it - you would like to have some kind of &amp;quot;vaccine&amp;quot
         <guid>http://www.gizra.com/content/xss-attack-caught</guid>
         <pubDate>Mon, 29 Feb 2016 00:00:00 +0200</pubDate>
       </item>
-      
     
-      
-      
-        
-          
-        
-      
-
-      
       <item>
         <title>Entity Relationships Graph</title>
         <description>
@@ -152,18 +172,7 @@ And to avoid it - you would like to have some kind of &amp;quot;vaccine&amp;quot
         <guid>http://www.gizra.com/content/entity-relations-graph</guid>
         <pubDate>Sun, 24 Jan 2016 00:00:00 +0200</pubDate>
       </item>
-      
     
-      
-      
-        
-      
-        
-          
-        
-      
-
-      
       <item>
         <title>Drupal, Hippies and Backend Restrictions</title>
         <description>
@@ -192,32 +201,69 @@ And to avoid it - you would like to have some kind of &amp;quot;vaccine&amp;quot
         <guid>http://www.gizra.com/content/apps-entity-restrictions</guid>
         <pubDate>Sun, 17 Jan 2016 00:00:00 +0200</pubDate>
       </item>
-      
     
-      
-      
-        
-      
+      <item>
+        <title>Elm-Hedley, App Overview</title>
+        <description>
+          &lt;p&gt;In August 2015 I challenged myself (and later the rest of the Gizra devs) to create a typical web-app with all the bells and whistles in Elm. It&amp;#39;s called &lt;a href=&quot;https://gizra.github.io/elm-hedley&quot;&gt;elm-hedley&lt;/a&gt;, and I&amp;#39;m super proud it is now featuring in Elm&amp;#39;s &lt;a href=&quot;http://elm-lang.org/&quot;&gt;front page&lt;/a&gt;.&lt;/p&gt;
 
-      
+&lt;div class=&quot;thumbnail&quot;&gt;
+  &lt;div class=&quot;img-wrapper&quot;&gt;
+
     
-      
-      
-        
-      
 
-      
     
-      
-      
-        
-      
-        
-          
-        
-      
+      &lt;img src=&quot;http://www.gizra.com/assets/images/posts/elm-hedley-overview/image1.jpg&quot;&gt;
+    
 
-      
+  &lt;/div&gt;
+  
+&lt;/div&gt;
+
+&lt;p&gt;This post is going to give a high level overview and point out some parts that are worth noting. However, before diving into the technical section, it is important to emphasize the virtues of &lt;em&gt;simply doing&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;If you would go back in the commits history you would see some nasty stuff that have been completely overhauled and polished. The only way of getting to that &amp;quot;improving&amp;quot; part is of course by starting! Only after that will one become smarter and recognize what needs improving, as well as be more experienced to know how to do it.&lt;/p&gt;
+
+          &lt;p&gt;&lt;a href=&quot;http://www.gizra.com/content/elm-hedley-overview/&quot;&gt;Continue reading…&lt;/a&gt;&lt;/p&gt;
+        </description>
+        <link>http://www.gizra.com/content/elm-hedley-overview</link>
+        <guid>http://www.gizra.com/content/hedley-overview</guid>
+        <pubDate>Wed, 30 Dec 2015 00:00:00 +0200</pubDate>
+      </item>
+    
+      <item>
+        <title>Planet Elm</title>
+        <description>
+          &lt;h2&gt;&lt;a href=&quot;http://planet.elm-lang.org/&quot;&gt;planet.elm-lang.org&lt;/a&gt; is live!&lt;/h2&gt;
+
+&lt;p&gt;Nice, right? Planet Elm and its &lt;a href=&quot;http://planet.elm-lang.org/feeds.xml&quot;&gt;RSS feed&lt;/a&gt; is up and running - just grab it, and the best Elm related posts would appear in your favorite RSS reader.&lt;/p&gt;
+
+&lt;div class=&quot;thumbnail&quot;&gt;
+  &lt;div class=&quot;img-wrapper&quot;&gt;
+
+    
+
+    
+      &lt;img src=&quot;http://www.gizra.com/assets/images/posts/planet-elm/image1.jpg&quot;&gt;
+    
+
+  &lt;/div&gt;
+  
+&lt;/div&gt;
+
+&lt;p&gt;I felt the need for such a site the day I started with Elm. Getting the Gizra devs to &lt;a href=&quot;https://github.com/Gizra/planet-elm&quot;&gt;build&lt;/a&gt; it was the next logical thing.&lt;/p&gt;
+
+&lt;p&gt;Having this main site as a central place for aggregating all the interesting content about Elm is yet another step in getting Elm into the mainstream.&lt;/p&gt;
+
+&lt;p&gt;If you maintain your own blog, go ahead, and &lt;a href=&quot;https://github.com/Gizra/planet-elm/wiki/Planet-Elm-guidelines&quot;&gt;submit your RSS feeds&lt;/a&gt;.&lt;/p&gt;
+
+          &lt;p&gt;&lt;a href=&quot;http://www.gizra.com/content/planet-elm/&quot;&gt;Continue reading…&lt;/a&gt;&lt;/p&gt;
+        </description>
+        <link>http://www.gizra.com/content/planet-elm</link>
+        <guid>http://www.gizra.com/content/planet-elm</guid>
+        <pubDate>Mon, 23 Nov 2015 00:00:00 +0200</pubDate>
+      </item>
+    
       <item>
         <title>Mindful Custom Breakpoints</title>
         <description>
@@ -252,25 +298,37 @@ And to avoid it - you would like to have some kind of &amp;quot;vaccine&amp;quot
         <guid>http://www.gizra.com/content/mindful-custom-breakpoint-bootstrap</guid>
         <pubDate>Thu, 19 Nov 2015 00:00:00 +0200</pubDate>
       </item>
-      
     
-      
-      
-        
-      
+      <item>
+        <title>Elm Challenge</title>
+        <description>
+          &lt;p&gt;As part of our adoption of &lt;a href=&quot;http://www.gizra.com/content/thinking-choosing-elm/&quot;&gt;Elm in production&lt;/a&gt;, Gizra devs are learning and practicing their Elm skills.&lt;/p&gt;
 
-      
+&lt;p&gt;After they are done going over the existing videos/tutorials, we let them get their hands dirty. &lt;a href=&quot;https://github.com/Gizra/elm-hedley&quot;&gt;elm-hedley&lt;/a&gt; was created just for that - to simulate a simple yet typical web app with login, RESTful, etc.&lt;/p&gt;
+
+&lt;p&gt;Here&amp;#39;s the &lt;a href=&quot;https://gizra.github.io/elm-hedley&quot;&gt;existing app&lt;/a&gt;. As you see each event appears as a clickable link.&lt;/p&gt;
+
+&lt;p&gt;The challenge is to add a counter next to each event label that increments when clicked. When you refresh the page (F5) it shouldn&amp;#39;t remember the previous clicks and should start back at 0.&lt;/p&gt;
+
+&lt;p&gt;In short, it should look like this (notice the bottom left list):&lt;/p&gt;
+
+&lt;iframe src=&quot;http://gfycat.com/ifr/MellowUnpleasantBoar&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot; width=&quot;653&quot; height=&quot;390&quot; style=&quot;-webkit-backface-visibility: hidden;-webkit-transform: scale(1);&quot; &gt;&lt;/iframe&gt;
+
+&lt;p&gt;Go ahead, fork the repo and try for yourself. And don&amp;#39;t peek below, as it has the answer!&lt;/p&gt;
+
+&lt;p&gt;.&lt;br&gt;
+.&lt;br&gt;
+.&lt;br&gt;
+.&lt;br&gt;
+.  &lt;/p&gt;
+
+          &lt;p&gt;&lt;a href=&quot;http://www.gizra.com/content/elm-challenge/&quot;&gt;Continue reading…&lt;/a&gt;&lt;/p&gt;
+        </description>
+        <link>http://www.gizra.com/content/elm-challenge</link>
+        <guid>http://www.gizra.com/content/elm-challenge</guid>
+        <pubDate>Thu, 05 Nov 2015 00:00:00 +0200</pubDate>
+      </item>
     
-      
-      
-        
-      
-        
-          
-        
-      
-
-      
       <item>
         <title>Decoupled Drupal: When, Why, and How - The Video</title>
         <description>
@@ -292,20 +350,7 @@ And to avoid it - you would like to have some kind of &amp;quot;vaccine&amp;quot
         <guid>http://www.gizra.com/content/drupalcon-la</guid>
         <pubDate>Thu, 05 Nov 2015 00:00:00 +0200</pubDate>
       </item>
-      
     
-      
-      
-        
-      
-        
-      
-        
-          
-        
-      
-
-      
       <item>
         <title>Thinking (And Choosing) Elm</title>
         <description>
@@ -333,20 +378,7 @@ And to avoid it - you would like to have some kind of &amp;quot;vaccine&amp;quot
         <guid>http://www.gizra.com/content/thinking-elm</guid>
         <pubDate>Thu, 22 Oct 2015 00:00:00 +0300</pubDate>
       </item>
-      
     
-      
-      
-        
-      
-        
-      
-        
-          
-        
-      
-
-      
       <item>
         <title>Elm Loves Headless Drupal</title>
         <description>
@@ -398,29 +430,66 @@ And to avoid it - you would like to have some kind of &amp;quot;vaccine&amp;quot
         <guid>http://www.gizra.com/content/elmlang</guid>
         <pubDate>Thu, 01 Oct 2015 00:00:00 +0300</pubDate>
       </item>
-      
     
-      
-      
-        
-      
-        
-      
+      <item>
+        <title>Sticky Floors and Happy Kids</title>
+        <description>
+          &lt;p&gt;There&amp;#39;s a saying &amp;quot;Good moms have sticky floors, messy kitchens, laundry piles, dirty ovens, and happy kids”. God knows I score an A+ and by that phrase alone I am THE perfect mother. But how do you leave those happy kids and get back to work?!&lt;/p&gt;
 
-      
+&lt;div class=&quot;thumbnail&quot;&gt;
+  &lt;div class=&quot;img-wrapper&quot;&gt;
+
     
-      
-      
-        
-      
-        
-      
-        
-          
-        
-      
 
-      
+    
+      &lt;img src=&quot;http://www.gizra.com/assets/images/posts/happy-kids/wonder-woman.jpg&quot;&gt;
+    
+
+  &lt;/div&gt;
+  
+&lt;/div&gt;
+
+&lt;p&gt;I have 3 kids (recent one is brand new - in fact I&amp;#39;m writing this post while being on maternity leave), which I absolutely adore and admire with every breath they take, a husband that I&amp;#39;m (still, after so many years together) crazy about and, lucky me, I love my job and co-workers. &lt;/p&gt;
+
+&lt;p&gt;I must be the fortunate one to hit the jackpot as a most people I know are not even satisfied with one thing, let alone three!  &lt;/p&gt;
+
+&lt;p&gt;I should know. I was &amp;quot;most people”. A nine to five office monkey, working tons of overtime and weekends, trying to get to the top. I was carefree at that time (for the singles in the crowd: this means no children) and my main concerns were questions such as what&amp;#39;s the best party to attend to on Thursday night? Which movie to go to on Friday night? What to eat, where? You get my point.&lt;/p&gt;
+
+&lt;p&gt;So I met my husband; then came the kids; and then there was Gizra.&lt;/p&gt;
+
+&lt;p&gt;Gizra is known for our up-front, straightforward attitude, and as such I want to be very honest - on the verge of blunt - and share with you some thoughts.
+I am a working mother. A wife. A person. Not by that specific order but that sounds just about right to me as I feel like the &amp;quot;person&amp;quot; part kicks in only after the kids are in beds.&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;ve been asking myself some questions lately:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;I want to be at the office while I am on my maternity leave. Does that make me a bad mother?&lt;/li&gt;
+&lt;li&gt;I miss my kids and my husband and I want to be with them instead of being at the office, while I am at work. Does that make me a bad employee?&lt;/li&gt;
+&lt;li&gt;Sometimes I cannot stand the sound of my own name when one of my employees calls me, wants something from me. Does that make me a bad manager?&lt;/li&gt;
+&lt;li&gt;I find myself often screening my friends calls and avoiding meeting them (sometimes it involves telling a little white lie) because I just wanna stay home. Does that make me a bad friend?&lt;/li&gt;
+&lt;li&gt;Sometimes all I want is just be left alone for a while. No kids shouting M-O-M-M-Y, No employees telling me they need something from me. Does that make me a bad person?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Is there a way to keep everyone happy? Your kids, your bosses, your employees, your friends, your husband, and last but not least - even yourself?&lt;br&gt;
+I just know I love my job; love my husband; love my kids (definitely not in that specific order).&lt;/p&gt;
+
+&lt;p&gt;Truth be told, I don&amp;#39;t have all the answers, far from it, but I&amp;#39;d like to share some tips on how you can make family and work combine (just a little bit) better together:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Working nine to five?&lt;/code&gt; - Not necessarily! Try to be flexible in terms of working hours. You are killing two birds with one stone: arriving early means you get to leave early - just in time to get your kids out of daycare.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Safety net&lt;/code&gt; - There&amp;#39;s nothing like family support, if you&amp;#39;re fortunate enough to have one who is able to help you. Play nice with your mother in law, your brother, your distant cousin etc.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Don&amp;#39;t be a stranger&lt;/code&gt; - There&amp;#39;s a saying &amp;quot;Better a nearby neighbor than a far away brother&amp;quot;. Get to know your neighbors just a little bit better, you might find it useful one day.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Don&amp;#39;t be sociopaths&lt;/code&gt; - Everybody knows that the worst thing in the world is to be in a kindergarten&amp;#39;s WhatsApp group! I&amp;#39;d be the first to admit it - once I&amp;#39;ve been added to one, I curse like hell and immediately silence it for a year! Who wants to get messages announcing the appearance of lice or which kid lost his coat or a toy. However, it may save your ass if you&amp;#39;re stuck in traffic or in an important meeting and you might need another mom or dad to take your kids out of the kindergarten/school.&lt;/li&gt;
+&lt;li&gt;Playdates - Try to convince your kids to go to a playdate, preferably at another mom&amp;#39;s house! That way you have some peace and quiet to finish some tasks you were suppose to finish long time ago or to finish an important presentation.&lt;/li&gt;
+&lt;/ul&gt;
+
+          &lt;p&gt;&lt;a href=&quot;http://www.gizra.com/content/sticky-floors-happy-kids/&quot;&gt;Continue reading…&lt;/a&gt;&lt;/p&gt;
+        </description>
+        <link>http://www.gizra.com/content/sticky-floors-happy-kids</link>
+        <guid>http://www.gizra.com/content/sticky-floor-happy-kids</guid>
+        <pubDate>Tue, 29 Sep 2015 00:00:00 +0300</pubDate>
+      </item>
+    
       <item>
         <title>Visual Regression Tutorials</title>
         <description>
@@ -462,20 +531,7 @@ Do you remember that time in the past where functional testing was just a &lt;em
         <guid>http://www.gizra.com/content/visual-regression-tutorials</guid>
         <pubDate>Tue, 04 Aug 2015 00:00:00 +0300</pubDate>
       </item>
-      
     
-      
-      
-        
-      
-        
-      
-        
-          
-        
-      
-
-      
       <item>
         <title>Visually Monitoring Drupal.org</title>
         <description>
@@ -523,20 +579,7 @@ Do you remember that time in the past where functional testing was just a &lt;em
         <guid>http://www.gizra.com/content/visual-monitor-drupal</guid>
         <pubDate>Mon, 20 Jul 2015 00:00:00 +0300</pubDate>
       </item>
-      
     
-      
-      
-        
-      
-        
-      
-        
-          
-        
-      
-
-      
       <item>
         <title>Why PhantomJS When You Can Chrome</title>
         <description>
@@ -578,20 +621,7 @@ PhantomJS is usually the easiest to configure and hook into the CI workflow late
         <guid>http://www.gizra.com/content/docker-selenium-standalone</guid>
         <pubDate>Thu, 25 Jun 2015 00:00:00 +0300</pubDate>
       </item>
-      
     
-      
-      
-        
-      
-        
-      
-        
-          
-        
-      
-
-      
       <item>
         <title>Live Monitoring With Shoov And Some Sweet Irony</title>
         <description>
@@ -627,20 +657,7 @@ As awesome as services like Pingdom are, they still provide very little insight 
         <guid>http://www.gizra.com/content/shoov-post-mortem</guid>
         <pubDate>Mon, 01 Jun 2015 00:00:00 +0300</pubDate>
       </item>
-      
     
-      
-      
-        
-      
-        
-          
-        
-      
-        
-      
-
-      
       <item>
         <title>Forking Todo Restful with Backbone.Marionette</title>
         <description>
@@ -680,20 +697,7 @@ As awesome as services like Pingdom are, they still provide very little insight 
         <guid>http://www.gizra.com/content/restful-backbone</guid>
         <pubDate>Sat, 23 May 2015 00:00:00 +0300</pubDate>
       </item>
-      
     
-      
-      
-        
-      
-        
-      
-        
-          
-        
-      
-
-      
       <item>
         <title>Visual regression tests on every commit</title>
         <description>
@@ -735,22 +739,7 @@ Travis-CI, &lt;a href=&quot;https://github.com/webdriverio/webdrivercss&quot;&gt
         <guid>http://www.gizra.com/content/shoov-travis</guid>
         <pubDate>Wed, 20 May 2015 00:00:00 +0300</pubDate>
       </item>
-      
     
-      
-      
-        
-      
-        
-      
-        
-      
-        
-          
-        
-      
-
-      
       <item>
         <title>How we could monitor Twitter (if we had to)</title>
         <description>
@@ -779,31 +768,41 @@ Travis-CI, &lt;a href=&quot;https://github.com/webdriverio/webdrivercss&quot;&gt
         <guid>http://www.gizra.com/content/shoov-twitter</guid>
         <pubDate>Thu, 07 May 2015 00:00:00 +0300</pubDate>
       </item>
-      
     
-      
-      
-        
-      
-        
-      
-        
-      
+      <item>
+        <title>AngularJs Ui-Router</title>
+        <description>
+          &lt;p&gt;One of the things I love to do is watch movies at home with my soon-to-be-wife (with emphasis on &lt;em&gt;soon&lt;/em&gt; as I&amp;#39;m getting married tomorrow!). We have seen a lot of them over the years so it&amp;#39;s not always easy to find a new movie or to remember a good movie that&amp;#39;s worth watching again.  &lt;/p&gt;
 
-      
+&lt;p&gt;Combined with my love to JavaScript I&amp;#39;ve decided to create an AngularJS app with &lt;a href=&quot;http://angular-ui.github.io/ui-router/sample/&quot;&gt;ui-router&lt;/a&gt; library.  The demo app fetches Apple &lt;a href=&quot;https://www.apple.com/itunes/charts/movies/&quot;&gt;iTunes top 60&lt;/a&gt; movies and presents the info and trailer for each, and even has a cool archive feature that lets you create your own private collection.&lt;/p&gt;
+
+&lt;div class=&quot;demo-block text-center&quot;&gt;
+  &lt;a class=&quot;demo&quot; target=_blank&quot; href=&quot;http://yaronmiro.github.io/AngularJS-UI-Router-Demo&quot;&gt;View demo&lt;/a&gt;
+  &lt;a class=&quot;code&quot; target=_blank&quot; href=&quot;https://github.com/YaronMiro/AngularJS-UI-Router-Demo&quot;&gt;Get the source code&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;thumbnail&quot;&gt;
+  &lt;div class=&quot;img-wrapper&quot;&gt;
+
     
-      
-      
-        
-      
-        
-      
-        
-          
-        
-      
 
-      
+    
+      &lt;img src=&quot;http://www.gizra.com/assets/images/posts/angularjs-ui-router/image1.jpg&quot;&gt;
+    
+
+  &lt;/div&gt;
+  
+    &lt;div class=&quot;caption&quot;&gt;angularJS and ui-router demo application&lt;/div&gt;
+  
+&lt;/div&gt;
+
+          &lt;p&gt;&lt;a href=&quot;http://www.gizra.com/content/angularjs-ui-router/&quot;&gt;Continue reading…&lt;/a&gt;&lt;/p&gt;
+        </description>
+        <link>http://www.gizra.com/content/angularjs-ui-router</link>
+        <guid>http://www.gizra.com/content/angularjs-ui-router</guid>
+        <pubDate>Thu, 30 Apr 2015 00:00:00 +0300</pubDate>
+      </item>
+    
       <item>
         <title>Cross Browser Visual Regression Tests With Shoov</title>
         <description>
@@ -838,22 +837,7 @@ Travis-CI, &lt;a href=&quot;https://github.com/webdriverio/webdrivercss&quot;&gt
         <guid>http://www.gizra.com/content/shoov-multiple-platforms</guid>
         <pubDate>Wed, 29 Apr 2015 00:00:00 +0300</pubDate>
       </item>
-      
     
-      
-      
-        
-      
-        
-      
-        
-      
-        
-          
-        
-      
-
-      
       <item>
         <title>simpleTest with Behat for Drupal 8</title>
         <description>
@@ -892,18 +876,7 @@ Travis-CI, &lt;a href=&quot;https://github.com/webdriverio/webdrivercss&quot;&gt
         <guid>http://www.gizra.com/content/drupal8-behat</guid>
         <pubDate>Tue, 28 Apr 2015 00:00:00 +0300</pubDate>
       </item>
-      
     
-      
-      
-        
-      
-        
-          
-        
-      
-
-      
       <item>
         <title>Shoov - CI tests on the live site</title>
         <description>
@@ -938,20 +911,7 @@ Travis-CI, &lt;a href=&quot;https://github.com/webdriverio/webdrivercss&quot;&gt
         <guid>http://www.gizra.com/content/shoov-ci-build</guid>
         <pubDate>Tue, 14 Apr 2015 00:00:00 +0300</pubDate>
       </item>
-      
     
-      
-      
-        
-      
-        
-      
-        
-          
-        
-      
-
-      
       <item>
         <title>Shoov - a new UI regression tool</title>
         <description>
@@ -980,18 +940,7 @@ Travis-CI, &lt;a href=&quot;https://github.com/webdriverio/webdrivercss&quot;&gt
         <guid>http://www.gizra.com/content/shoov-into</guid>
         <pubDate>Wed, 01 Apr 2015 00:00:00 +0300</pubDate>
       </item>
-      
     
-      
-      
-        
-      
-        
-          
-        
-      
-
-      
       <item>
         <title>Headless Drupal In Your Terminal</title>
         <description>
@@ -1020,18 +969,7 @@ Travis-CI, &lt;a href=&quot;https://github.com/webdriverio/webdrivercss&quot;&gt
         <guid>http://www.gizra.com/content/restful-blessed</guid>
         <pubDate>Mon, 02 Mar 2015 00:00:00 +0200</pubDate>
       </item>
-      
     
-      
-      
-        
-      
-        
-          
-        
-      
-
-      
       <item>
         <title>Logs, The Easy Way</title>
         <description>
@@ -1049,18 +987,7 @@ Travis-CI, &lt;a href=&quot;https://github.com/webdriverio/webdrivercss&quot;&gt
         <guid>http://www.gizra.com/content/logs-http</guid>
         <pubDate>Mon, 02 Feb 2015 00:00:00 +0200</pubDate>
       </item>
-      
     
-      
-      
-        
-      
-        
-          
-        
-      
-
-      
       <item>
         <title>(Automatic) QA</title>
         <description>
@@ -1076,20 +1003,7 @@ Travis-CI, &lt;a href=&quot;https://github.com/webdriverio/webdrivercss&quot;&gt
         <guid>http://www.gizra.com/content/automatic-qa</guid>
         <pubDate>Sun, 01 Feb 2015 00:00:00 +0200</pubDate>
       </item>
-      
     
-      
-      
-        
-      
-        
-      
-        
-          
-        
-      
-
-      
       <item>
         <title>Hedley Generator - PhantomCSS and UI regression</title>
         <description>
@@ -1118,20 +1032,7 @@ Travis-CI, &lt;a href=&quot;https://github.com/webdriverio/webdrivercss&quot;&gt
         <guid>http://www.gizra.com/content/phantomcss</guid>
         <pubDate>Sun, 04 Jan 2015 00:00:00 +0200</pubDate>
       </item>
-      
     
-      
-      
-        
-      
-        
-      
-        
-          
-        
-      
-
-      
       <item>
         <title>Yo Hedley!</title>
         <description>
@@ -1149,20 +1050,7 @@ Travis-CI, &lt;a href=&quot;https://github.com/webdriverio/webdrivercss&quot;&gt
         <guid>http://www.gizra.com/content/yo-hedley</guid>
         <pubDate>Fri, 26 Dec 2014 00:00:00 +0200</pubDate>
       </item>
-      
     
-      
-      
-        
-      
-        
-      
-        
-          
-        
-      
-
-      
       <item>
         <title>Behat vs. Casper (In Drupal Context)</title>
         <description>
@@ -1184,20 +1072,7 @@ Travis-CI, &lt;a href=&quot;https://github.com/webdriverio/webdrivercss&quot;&gt
         <guid>http://www.gizra.com/content/behat-drupal-phantomjs</guid>
         <pubDate>Thu, 04 Dec 2014 00:00:00 +0200</pubDate>
       </item>
-      
     
-      
-      
-        
-      
-        
-      
-        
-          
-        
-      
-
-      
       <item>
         <title>Todo app with RESTful backend</title>
         <description>
@@ -1215,20 +1090,7 @@ Travis-CI, &lt;a href=&quot;https://github.com/webdriverio/webdrivercss&quot;&gt
         <guid>http://www.gizra.com/content/todo-restful</guid>
         <pubDate>Sun, 23 Nov 2014 00:00:00 +0200</pubDate>
       </item>
-      
     
-      
-      
-        
-      
-        
-      
-        
-          
-        
-      
-
-      
       <item>
         <title>Behat - The Right Way</title>
         <description>
@@ -1252,20 +1114,7 @@ Travis-CI, &lt;a href=&quot;https://github.com/webdriverio/webdrivercss&quot;&gt
         <guid>http://www.gizra.com/content/behat-the-right-way</guid>
         <pubDate>Mon, 17 Nov 2014 00:00:00 +0200</pubDate>
       </item>
-      
     
-      
-      
-        
-      
-        
-      
-        
-          
-        
-      
-
-      
       <item>
         <title>RESTful Discovery - Who knows about your API?</title>
         <description>
@@ -1282,22 +1131,7 @@ I would argue that at least 95% of the developers who expose their web-service s
         <guid>http://www.gizra.com/content/restful-discovery</guid>
         <pubDate>Thu, 30 Oct 2014 00:00:00 +0200</pubDate>
       </item>
-      
     
-      
-      
-        
-      
-        
-      
-        
-      
-        
-          
-        
-      
-
-      
       <item>
         <title>Gizra - We've Got Your Headless Covered</title>
         <description>
@@ -1315,24 +1149,7 @@ I would argue that at least 95% of the developers who expose their web-service s
         <guid>http://www.gizra.com/content/gizra-weve-got-your-headless-covered</guid>
         <pubDate>Sun, 19 Oct 2014 00:00:00 +0300</pubDate>
       </item>
-      
     
-      
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-          
-        
-      
-
-      
       <item>
         <title>Headless Drupal - Form API, Drupal 9</title>
         <description>
@@ -1358,22 +1175,7 @@ I would argue that at least 95% of the developers who expose their web-service s
         <guid>http://www.gizra.com/content/headless-drupal-form-api-9</guid>
         <pubDate>Thu, 24 Jul 2014 00:00:00 +0300</pubDate>
       </item>
-      
     
-      
-      
-        
-      
-        
-      
-        
-      
-        
-          
-        
-      
-
-      
       <item>
         <title>Headless Drupal - Inline edit</title>
         <description>
@@ -1403,33 +1205,51 @@ And if that&amp;#39;s not enough for the readers excited by the idea of a decoup
         <guid>http://www.gizra.com/content/headless-drupal-inline-edit</guid>
         <pubDate>Mon, 14 Jul 2014 00:00:00 +0300</pubDate>
       </item>
-      
     
-      
-      
-        
-      
-        
-      
-        
-      
+      <item>
+        <title>Backend-free apps with Grunt, jekyll and D3.js</title>
+        <description>
+          &lt;p&gt;When we started working on a mobile web site for &lt;a href=&quot;http://www.gizra.com/content/casa-del-lector/&quot;&gt;Casa del Lector&lt;/a&gt;&amp;#39;s exhibition, we decided early on it would be a backend-free app, mainly for reasons of stability and performance:&lt;/p&gt;
 
-      
+&lt;div class=&quot;thumbnail&quot;&gt;
+  &lt;div class=&quot;img-wrapper&quot;&gt;
+
     
-      
-      
-        
-      
-        
-      
-        
-      
-        
-          
-        
-      
 
-      
+    
+      &lt;img src=&quot;/assets/images/posts/backendless-apps/image1.jpg&quot;&gt;
+    
+
+  &lt;/div&gt;
+  
+    &lt;div class=&quot;caption&quot;&gt;App is faster than 96% of other websites&lt;/div&gt;
+  
+&lt;/div&gt;
+
+&lt;p&gt;The data was entered by the client on a 3rd party desktop tool which exported it to XML. We used a bunch of open source tools to massage it a bit and prepare it for the App. Since the project is open sourced you can check out the &lt;a href=&quot;https://github.com/Gizra/CDL&quot;&gt;actual code&lt;/a&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;thumbnail&quot;&gt;
+  &lt;div class=&quot;img-wrapper&quot;&gt;
+
+    
+
+    
+      &lt;img src=&quot;/assets/images/posts/casa-del-lector/cdl-item.gif&quot;&gt;
+    
+
+  &lt;/div&gt;
+  
+    &lt;div class=&quot;caption&quot;&gt;The App in action&lt;/div&gt;
+  
+&lt;/div&gt;
+
+          &lt;p&gt;&lt;a href=&quot;http://www.gizra.com/content/backend-free-apps-grunt-jekyll-d3js/&quot;&gt;Continue reading…&lt;/a&gt;&lt;/p&gt;
+        </description>
+        <link>http://www.gizra.com/content/backend-free-apps-grunt-jekyll-d3js</link>
+        <guid>http://www.gizra.com/content/grunt-jekyll-and-d3</guid>
+        <pubDate>Thu, 10 Jul 2014 00:00:00 +0300</pubDate>
+      </item>
+    
       <item>
         <title>Headless Drupal, One form at a time</title>
         <description>
@@ -1463,22 +1283,7 @@ And if that&amp;#39;s not enough for the readers excited by the idea of a decoup
         <guid>http://www.gizra.com/content/restful-angular-forms</guid>
         <pubDate>Wed, 09 Jul 2014 00:00:00 +0300</pubDate>
       </item>
-      
     
-      
-      
-        
-      
-        
-      
-        
-      
-        
-          
-        
-      
-
-      
       <item>
         <title>No more CSS in your Drupal Theme!</title>
         <description>
@@ -1504,20 +1309,7 @@ of a page, in comparison to the time it takes to get it&amp;#39;s markup right. 
         <guid>http://www.gizra.com/content/jekyll-css</guid>
         <pubDate>Tue, 01 Jul 2014 00:00:00 +0300</pubDate>
       </item>
-      
     
-      
-      
-        
-      
-        
-      
-        
-          
-        
-      
-
-      
       <item>
         <title>Creating a Custom Breakpoint in Bootstrap-Sass</title>
         <description>
@@ -1531,24 +1323,7 @@ Note that example is using Jekyll for simplicity, however the same technique can
         <guid>http://www.gizra.com/content/creating-a-custom-grid-in-sass-bootstrap</guid>
         <pubDate>Wed, 25 Jun 2014 00:00:00 +0300</pubDate>
       </item>
-      
     
-      
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-          
-        
-      
-
-      
       <item>
         <title>Introducing Emmet!</title>
         <description>
@@ -1569,33 +1344,21 @@ Emmet uses these abbreviations to parse them in runtime and transform them into 
         <guid>http://www.gizra.com/content/emmet-tutorial</guid>
         <pubDate>Sun, 08 Jun 2014 00:00:00 +0300</pubDate>
       </item>
-      
     
-      
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
+      <item>
+        <title>How to submit an application to iTunes App Store</title>
+        <description>
+          &lt;p&gt;Submitting an app to the iTunes App Store is, to put it mildly, not as simple as one might think.&lt;/p&gt;
 
-      
+&lt;p&gt;Afters struggling with it a few times, we thought it might be useful to create a step-by-step guide - hopefully you might find it useful too.&lt;/p&gt;
+
+          &lt;p&gt;&lt;a href=&quot;http://www.gizra.com/content/how-to-submit-an-application-to-itunes-app-store/&quot;&gt;Continue reading…&lt;/a&gt;&lt;/p&gt;
+        </description>
+        <link>http://www.gizra.com/content/how-to-submit-an-application-to-itunes-app-store</link>
+        <guid>http://www.gizra.com/content/how-to-submit-an-application-to-itunes-app-store</guid>
+        <pubDate>Mon, 26 May 2014 00:00:00 +0300</pubDate>
+      </item>
     
-      
-      
-        
-      
-        
-          
-        
-      
-
-      
       <item>
         <title>The @amitaibu show (unplugged)</title>
         <description>
@@ -1617,18 +1380,7 @@ And you know what? I&amp;#39;m really excited about this idea. It feels like I&a
         <guid>http://www.gizra.com/content/the-amitaibu-show</guid>
         <pubDate>Sun, 25 May 2014 00:00:00 +0300</pubDate>
       </item>
-      
     
-      
-      
-        
-      
-        
-          
-        
-      
-
-      
       <item>
         <title>How to have lunch without speaking Drupal</title>
         <description>
@@ -1662,20 +1414,7 @@ If you share the same feeling reading the above lines, this blog post if for you
         <guid>http://www.gizra.com/content/how-to-have-lunch-without-speaking-drupal</guid>
         <pubDate>Thu, 22 May 2014 00:00:00 +0300</pubDate>
       </item>
-      
     
-      
-      
-        
-      
-        
-      
-        
-          
-        
-      
-
-      
       <item>
         <title>RESTful module</title>
         <description>
@@ -1716,31 +1455,29 @@ It works fine, however the JSON it exposes has too much information.&lt;/p&gt;
         <guid>http://www.gizra.com/content/restful-server</guid>
         <pubDate>Tue, 06 May 2014 00:00:00 +0300</pubDate>
       </item>
-      
     
-      
-      
-        
-      
-        
-      
-        
-      
-        
-      
+      <item>
+        <title>Casa del Lector</title>
+        <description>
+          &lt;p&gt;Last week saw the launch of a pretty unique &lt;a href=&quot;http://gizra.github.io/CDL/&quot;&gt;project&lt;/a&gt; for us. It&amp;#39;s not every day a product we&amp;#39;ve worked on gets a &lt;a href=&quot;http://cultura.elpais.com/cultura/2014/03/05/actualidad/1394047004_090821.html&quot;&gt;write up on El Pais&lt;/a&gt;, or has this kind of launch event:&lt;/p&gt;
 
-      
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/casa-del-lector/IMG_8388-2.JPG&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;The target audience is a bit unusual as well. While it can be accessed like any other site, it&amp;#39;s targeted to be used inside a specific exhibition in the &lt;a href=&quot;http://casalector.fundaciongsr.com/&quot;&gt;Casa del Lector&lt;/a&gt; museum in Madrid, on tablets handed out to the museum visitors:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/casa-del-lector/IMG_8259%20-%202.JPG&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;We took great care to stay within the touch UI conventions. When entering the site, the user is presented with a network of connections between items. As she zooms, details are revealed - subitems, their connections and finally their titles:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/casa-del-lector/cdl-map-1.gif&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+          &lt;p&gt;&lt;a href=&quot;http://www.gizra.com/content/casa-del-lector/&quot;&gt;Continue reading…&lt;/a&gt;&lt;/p&gt;
+        </description>
+        <link>http://www.gizra.com/content/casa-del-lector</link>
+        <guid>http://www.gizra.com/content/casa-del-lector</guid>
+        <pubDate>Thu, 13 Mar 2014 00:00:00 +0200</pubDate>
+      </item>
     
-      
-      
-        
-      
-        
-          
-        
-      
-
-      
       <item>
         <title>Zariz Loves Entity Reference</title>
         <description>
@@ -1753,20 +1490,7 @@ that the reference will change on the fly. For example:&lt;/p&gt;
         <guid>http://www.gizra.com/content/zariz-entity-reference</guid>
         <pubDate>Mon, 20 Jan 2014 00:00:00 +0200</pubDate>
       </item>
-      
     
-      
-      
-        
-      
-        
-      
-        
-          
-        
-      
-
-      
       <item>
         <title>OpenScholar and the new Biblio</title>
         <description>
@@ -1782,18 +1506,7 @@ that the reference will change on the fly. For example:&lt;/p&gt;
         <guid>http://www.gizra.com/content/openscholar-new-bilbio</guid>
         <pubDate>Mon, 20 Jan 2014 00:00:00 +0200</pubDate>
       </item>
-      
     
-      
-      
-        
-      
-        
-          
-        
-      
-
-      
       <item>
         <title>Zariz on TV</title>
         <description>
@@ -1807,18 +1520,7 @@ that the reference will change on the fly. For example:&lt;/p&gt;
         <guid>http://www.gizra.com/content/zariz-on-tv</guid>
         <pubDate>Thu, 16 Jan 2014 00:00:00 +0200</pubDate>
       </item>
-      
     
-      
-      
-        
-      
-        
-          
-        
-      
-
-      
       <item>
         <title>Drupal, only x5 faster</title>
         <description>
@@ -1834,20 +1536,7 @@ that the reference will change on the fly. For example:&lt;/p&gt;
         <guid>http://www.gizra.com/content/zariz-static</guid>
         <pubDate>Thu, 09 Jan 2014 00:00:00 +0200</pubDate>
       </item>
-      
     
-      
-      
-        
-      
-        
-      
-        
-          
-        
-      
-
-      
       <item>
         <title>Zariz in Pics</title>
         <description>
@@ -1869,22 +1558,7 @@ that the reference will change on the fly. For example:&lt;/p&gt;
         <guid>http://www.gizra.com/content/zariz-in-pics</guid>
         <pubDate>Tue, 24 Dec 2013 00:00:00 +0200</pubDate>
       </item>
-      
     
-      
-      
-        
-      
-        
-      
-        
-      
-        
-          
-        
-      
-
-      
       <item>
         <title>Zariz Means Agile</title>
         <description>
@@ -1906,25 +1580,20 @@ that the reference will change on the fly. For example:&lt;/p&gt;
         <guid>http://www.gizra.com/content/zariz-means-quick</guid>
         <pubDate>Wed, 11 Dec 2013 00:00:00 +0200</pubDate>
       </item>
-      
     
-      
-      
-
-      
-    
-      
-      
-        
-      
-        
+      <item>
+        <title>The "About" Story</title>
+        <description>
           
-        
-      
-        
-      
 
-      
+
+          &lt;p&gt;&lt;a href=&quot;http://www.gizra.com/content/the-about-story/&quot;&gt;Continue reading…&lt;/a&gt;&lt;/p&gt;
+        </description>
+        <link>http://www.gizra.com/content/the-about-story</link>
+        <guid>http://www.gizra.com/content/the-about-story</guid>
+        <pubDate>Thu, 31 Oct 2013 00:00:00 +0200</pubDate>
+      </item>
+    
       <item>
         <title>How We Achieve Faster Development and Happier Clients by Opening Our GitHub Issues</title>
         <description>
@@ -1936,18 +1605,7 @@ that the reference will change on the fly. For example:&lt;/p&gt;
         <guid>http://www.gizra.com/content/how-we-use-github-issues</guid>
         <pubDate>Thu, 31 Oct 2013 00:00:00 +0200</pubDate>
       </item>
-      
     
-      
-      
-        
-      
-        
-          
-        
-      
-
-      
       <item>
         <title>Tipa.li – a Tool for Easily Finding Polio Vaccination Clinics</title>
         <description>
@@ -1980,16 +1638,7 @@ that the reference will change on the fly. For example:&lt;/p&gt;
         <guid>http://www.gizra.com/content/tipali-a-tool-for-easily-finding-polio-vaccination-clinics</guid>
         <pubDate>Wed, 04 Sep 2013 00:00:00 +0300</pubDate>
       </item>
-      
     
-      
-      
-        
-          
-        
-      
-
-      
       <item>
         <title>Open Source - Real World</title>
         <description>
@@ -2005,18 +1654,7 @@ that the reference will change on the fly. For example:&lt;/p&gt;
         <guid>http://www.gizra.com/content/open-source-real-world</guid>
         <pubDate>Wed, 28 Aug 2013 00:00:00 +0300</pubDate>
       </item>
-      
     
-      
-      
-        
-      
-        
-          
-        
-      
-
-      
       <item>
         <title>Dekyll's new "Github Pages" flavor</title>
         <description>
@@ -2030,20 +1668,7 @@ that the reference will change on the fly. For example:&lt;/p&gt;
         <guid>http://www.gizra.com/content/dekyll-new-github-pages-flavor</guid>
         <pubDate>Sun, 14 Jul 2013 00:00:00 +0300</pubDate>
       </item>
-      
     
-      
-      
-        
-      
-        
-      
-        
-          
-        
-      
-
-      
       <item>
         <title>Dekyll - Drupal on Jekyll</title>
         <description>
@@ -2067,22 +1692,7 @@ that the reference will change on the fly. For example:&lt;/p&gt;
         <guid>http://www.gizra.com/content/dekyll-drupal-on-jekyll</guid>
         <pubDate>Sun, 30 Jun 2013 00:00:00 +0300</pubDate>
       </item>
-      
     
-      
-      
-        
-      
-        
-      
-        
-      
-        
-          
-        
-      
-
-      
       <item>
         <title>Amitai's DrupalCon Portland Presentation</title>
         <description>
@@ -2098,18 +1708,7 @@ that the reference will change on the fly. For example:&lt;/p&gt;
         <guid>http://www.gizra.com/content/drupalcon-portland</guid>
         <pubDate>Sun, 23 Jun 2013 00:00:00 +0300</pubDate>
       </item>
-      
     
-      
-      
-        
-      
-        
-          
-        
-      
-
-      
       <item>
         <title>The Gizra Way - How We Roll (and Rollback)</title>
         <description>
@@ -2121,20 +1720,7 @@ that the reference will change on the fly. For example:&lt;/p&gt;
         <guid>http://www.gizra.com/content/how-we-roll</guid>
         <pubDate>Mon, 17 Jun 2013 00:00:00 +0300</pubDate>
       </item>
-      
     
-      
-      
-        
-      
-        
-      
-        
-          
-        
-      
-
-      
       <item>
         <title>Harvard's OpenScholar</title>
         <description>
@@ -2148,18 +1734,7 @@ that the reference will change on the fly. For example:&lt;/p&gt;
         <guid>http://www.gizra.com/content/harvard-openscholar</guid>
         <pubDate>Tue, 04 Jun 2013 00:00:00 +0300</pubDate>
       </item>
-      
     
-      
-      
-        
-          
-        
-      
-        
-      
-
-      
       <item>
         <title>Migrate, and baking content</title>
         <description>
@@ -2173,22 +1748,7 @@ Oh, and you can also migrate data from other (older) sites.&lt;/p&gt;
         <guid>http://www.gizra.com/content/migrate-and-baking-content</guid>
         <pubDate>Thu, 27 Dec 2012 00:00:00 +0200</pubDate>
       </item>
-      
     
-      
-      
-        
-      
-        
-      
-        
-      
-        
-          
-        
-      
-
-      
       <item>
         <title>Drupal, Node.js, Pantheon, and Heroku</title>
         <description>
@@ -2209,18 +1769,7 @@ Oh, and you can also migrate data from other (older) sites.&lt;/p&gt;
         <guid>http://www.gizra.com/content/drupal-node-js-pantheon-and-heroku</guid>
         <pubDate>Wed, 19 Dec 2012 00:00:00 +0200</pubDate>
       </item>
-      
     
-      
-      
-        
-          
-        
-      
-        
-      
-
-      
       <item>
         <title>Message-subscribe - A New Subscription System</title>
         <description>
@@ -2241,20 +1790,7 @@ Drupal 7 has Message-subscribe &amp;amp; Message-notify&lt;/p&gt;
         <guid>http://www.gizra.com/content/message-subscribe-a-new-subscription-system</guid>
         <pubDate>Wed, 31 Oct 2012 00:00:00 +0200</pubDate>
       </item>
-      
     
-      
-      
-        
-      
-        
-          
-        
-      
-        
-      
-
-      
       <item>
         <title>DrupalCamp Montreal Keynote</title>
         <description>
@@ -2267,18 +1803,7 @@ If your not a total geek the first 15 minutes will be enough. Unless you are int
         <guid>http://www.gizra.com/content/drupalcamp-montreal-keynote</guid>
         <pubDate>Thu, 18 Oct 2012 00:00:00 +0200</pubDate>
       </item>
-      
     
-      
-      
-        
-      
-        
-          
-        
-      
-
-      
       <item>
         <title>What is Message module, and its new features</title>
         <description>
@@ -2291,16 +1816,7 @@ Message can help with many tasks from simple logs to complicated activity stream
         <guid>http://www.gizra.com/content/what-is-message-module-and-its-new-features</guid>
         <pubDate>Thu, 12 Jul 2012 00:00:00 +0300</pubDate>
       </item>
-      
     
-      
-      
-        
-          
-        
-      
-
-      
       <item>
         <title>About strong partnership and winning a game of bowling</title>
         <description>
@@ -2314,18 +1830,7 @@ Do you dig what I am saying?  You know, one cannot even be sure it&amp;#39;s an 
         <guid>http://www.gizra.com/content/about-strong-partnership-and-winning-a-game-of-bowling</guid>
         <pubDate>Mon, 09 Jul 2012 00:00:00 +0300</pubDate>
       </item>
-      
     
-      
-      
-        
-      
-        
-          
-        
-      
-
-      
       <item>
         <title>How to deal with colliding aliases</title>
         <description>
@@ -2342,20 +1847,7 @@ Do you dig what I am saying?  You know, one cannot even be sure it&amp;#39;s an 
         <guid>http://www.gizra.com/content/how-to-deal-with-colliding-aliases</guid>
         <pubDate>Thu, 01 Mar 2012 00:00:00 +0200</pubDate>
       </item>
-      
     
-      
-      
-        
-      
-        
-      
-        
-          
-        
-      
-
-      
       <item>
         <title>Banner rotator</title>
         <description>
@@ -2369,22 +1861,7 @@ Do you dig what I am saying?  You know, one cannot even be sure it&amp;#39;s an 
         <guid>http://www.gizra.com/content/banner-rotator</guid>
         <pubDate>Thu, 16 Feb 2012 00:00:00 +0200</pubDate>
       </item>
-      
     
-      
-      
-        
-      
-        
-      
-        
-      
-        
-          
-        
-      
-
-      
       <item>
         <title>Commerce product + Subform</title>
         <description>
@@ -2398,20 +1875,7 @@ Do you dig what I am saying?  You know, one cannot even be sure it&amp;#39;s an 
         <guid>http://www.gizra.com/content/commerce-product-subform</guid>
         <pubDate>Sun, 29 Jan 2012 00:00:00 +0200</pubDate>
       </item>
-      
     
-      
-      
-        
-          
-        
-      
-        
-      
-        
-      
-
-      
       <item>
         <title>Sending LOTS of emails (Hint: with Drush)</title>
         <description>
@@ -2429,18 +1893,7 @@ Do you dig what I am saying?  You know, one cannot even be sure it&amp;#39;s an 
         <guid>http://www.gizra.com/content/sending-lots-of-emails-hint-with-drush</guid>
         <pubDate>Tue, 24 Jan 2012 00:00:00 +0200</pubDate>
       </item>
-      
     
-      
-      
-        
-          
-        
-      
-        
-      
-
-      
       <item>
         <title>Message notify - Multilingual email notifications</title>
         <description>
@@ -2454,18 +1907,7 @@ Do you dig what I am saying?  You know, one cannot even be sure it&amp;#39;s an 
         <guid>http://www.gizra.com/content/message-notify-multilingual-email-notifications</guid>
         <pubDate>Sun, 01 Jan 2012 00:00:00 +0200</pubDate>
       </item>
-      
     
-      
-      
-        
-          
-        
-      
-        
-      
-
-      
       <item>
         <title>OG7 and Entity reference - Part 2</title>
         <description>
@@ -2494,18 +1936,7 @@ As usual we can make a content type (Clubs in this example) a group, through the
         <guid>http://www.gizra.com/content/og7-and-entity-reference-part-2</guid>
         <pubDate>Wed, 07 Dec 2011 00:00:00 +0200</pubDate>
       </item>
-      
     
-      
-      
-        
-          
-        
-      
-        
-      
-
-      
       <item>
         <title>OG7 and Entity reference - Sponsor me</title>
         <description>
@@ -2535,18 +1966,7 @@ Please do &lt;a href=&quot;http://www.gizra.com/contact&quot;&gt;contact&lt;/a&g
         <guid>http://www.gizra.com/content/og7-and-entity-reference-sponsor-me</guid>
         <pubDate>Sun, 20 Nov 2011 00:00:00 +0200</pubDate>
       </item>
-      
     
-      
-      
-        
-          
-        
-      
-        
-      
-
-      
       <item>
         <title>About that walk bojanz, Damz and I had in London</title>
         <description>
@@ -2567,22 +1987,7 @@ Damien, being Damien, gave me a Damien answer. Bojan, being Bojan, explained it 
         <guid>http://www.gizra.com/content/about-that-walk-bojanz-damz-and-i-had-in-london</guid>
         <pubDate>Fri, 04 Nov 2011 00:00:00 +0200</pubDate>
       </item>
-      
     
-      
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-
-      
       <item>
         <title>Drupalcamp Spain - Sevilla</title>
         <description>
@@ -2596,22 +2001,7 @@ Damien, being Damien, gave me a Damien answer. Bojan, being Bojan, explained it 
         <guid>http://www.gizra.com/content/drupalcamp-spain-sevilla</guid>
         <pubDate>Sun, 02 Oct 2011 00:00:00 +0300</pubDate>
       </item>
-      
     
-      
-      
-        
-      
-        
-      
-        
-      
-        
-          
-        
-      
-
-      
       <item>
         <title>OG7 Drupalcon London</title>
         <description>
@@ -2623,22 +2013,7 @@ Damien, being Damien, gave me a Damien answer. Bojan, being Bojan, explained it 
         <guid>http://www.gizra.com/content/og7-drupalcon-london</guid>
         <pubDate>Sun, 18 Sep 2011 00:00:00 +0300</pubDate>
       </item>
-      
     
-      
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-
-      
       <item>
         <title>User modal</title>
         <description>
@@ -2661,18 +2036,7 @@ for example allow a user to submit a node and register in the same time.
         <guid>http://www.gizra.com/content/user-modal</guid>
         <pubDate>Mon, 27 Jun 2011 00:00:00 +0300</pubDate>
       </item>
-      
     
-      
-      
-        
-          
-        
-      
-        
-      
-
-      
       <item>
         <title>OG 7.x-1.1-RC2 is out! </title>
         <description>
@@ -2701,20 +2065,7 @@ The group membership idea is awesome (thanks donquixote). The problem is actuall
         <guid>http://www.gizra.com/content/og-7-x-1-1-rc2-is-out</guid>
         <pubDate>Wed, 18 May 2011 00:00:00 +0300</pubDate>
       </item>
-      
     
-      
-      
-        
-          
-        
-      
-        
-      
-        
-      
-
-      
       <item>
         <title>CTools context tutorial</title>
         <description>
@@ -2730,18 +2081,7 @@ The group membership idea is awesome (thanks donquixote). The problem is actuall
         <guid>http://www.gizra.com/content/ctools-context-tutorial</guid>
         <pubDate>Wed, 11 May 2011 00:00:00 +0300</pubDate>
       </item>
-      
     
-      
-      
-        
-          
-        
-      
-        
-      
-
-      
       <item>
         <title>Data Migration - part 2</title>
         <description>
@@ -2760,18 +2100,7 @@ Migrate extra module enables import of file field.&lt;/p&gt;
         <guid>http://www.gizra.com/content/data-migration-part-2</guid>
         <pubDate>Mon, 24 Jan 2011 00:00:00 +0200</pubDate>
       </item>
-      
     
-      
-      
-        
-      
-        
-          
-        
-      
-
-      
       <item>
         <title>Data Migration - part 1</title>
         <description>
@@ -2794,20 +2123,7 @@ Migrate V2 uses &lt;a href =&quot;http://drupal.org/project/drush&quot;&gt;Drush
         <guid>http://www.gizra.com/content/data-migration-part-1</guid>
         <pubDate>Thu, 06 Jan 2011 00:00:00 +0200</pubDate>
       </item>
-      
     
-      
-      
-        
-          
-        
-      
-        
-      
-        
-      
-
-      
       <item>
         <title>Drupalcamp Athens</title>
         <description>
@@ -2823,18 +2139,7 @@ Migrate V2 uses &lt;a href =&quot;http://drupal.org/project/drush&quot;&gt;Drush
         <guid>http://www.gizra.com/content/drupalcamp-athens</guid>
         <pubDate>Sun, 26 Dec 2010 00:00:00 +0200</pubDate>
       </item>
-      
     
-      
-      
-        
-          
-        
-      
-        
-      
-
-      
       <item>
         <title>A moment of Zen #1</title>
         <description>
@@ -2846,20 +2151,7 @@ Migrate V2 uses &lt;a href =&quot;http://drupal.org/project/drush&quot;&gt;Drush
         <guid>http://www.gizra.com/content/a-moment-of-zen-1</guid>
         <pubDate>Sun, 26 Dec 2010 00:00:00 +0200</pubDate>
       </item>
-      
     
-      
-      
-        
-          
-        
-      
-        
-      
-        
-      
-
-      
       <item>
         <title>Rounded corners</title>
         <description>
@@ -2875,18 +2167,7 @@ Migrate V2 uses &lt;a href =&quot;http://drupal.org/project/drush&quot;&gt;Drush
         <guid>http://www.gizra.com/content/rounded-corners</guid>
         <pubDate>Wed, 20 Oct 2010 00:00:00 +0200</pubDate>
       </item>
-      
     
-      
-      
-        
-          
-        
-      
-        
-      
-
-      
       <item>
         <title>Message example = Github news feed</title>
         <description>
@@ -2900,20 +2181,7 @@ Migrate V2 uses &lt;a href =&quot;http://drupal.org/project/drush&quot;&gt;Drush
         <guid>http://www.gizra.com/content/message-example-github-news-feed</guid>
         <pubDate>Wed, 29 Sep 2010 00:00:00 +0200</pubDate>
       </item>
-      
     
-      
-      
-        
-          
-        
-      
-        
-      
-        
-      
-
-      
       <item>
         <title>OG7 session in Drupalcon Copenhagen</title>
         <description>
@@ -2927,18 +2195,7 @@ Migrate V2 uses &lt;a href =&quot;http://drupal.org/project/drush&quot;&gt;Drush
         <guid>http://www.gizra.com/content/og7-session-in-drupalcon-copenhagen</guid>
         <pubDate>Tue, 07 Sep 2010 00:00:00 +0300</pubDate>
       </item>
-      
     
-      
-      
-        
-          
-        
-      
-        
-      
-
-      
       <item>
         <title>Let sleeping dogs lie</title>
         <description>
@@ -2953,20 +2210,7 @@ Migrate V2 uses &lt;a href =&quot;http://drupal.org/project/drush&quot;&gt;Drush
         <guid>http://www.gizra.com/content/let-sleeping-dogs-lie</guid>
         <pubDate>Sat, 03 Jul 2010 00:00:00 +0300</pubDate>
       </item>
-      
     
-      
-      
-        
-      
-        
-      
-        
-          
-        
-      
-
-      
       <item>
         <title>Views and Panels Ajaxified</title>
         <description>
@@ -2985,20 +2229,7 @@ Migrate V2 uses &lt;a href =&quot;http://drupal.org/project/drush&quot;&gt;Drush
         <guid>http://www.gizra.com/content/views-and-panels-ajaxified</guid>
         <pubDate>Wed, 30 Jun 2010 00:00:00 +0300</pubDate>
       </item>
-      
     
-      
-      
-        
-          
-        
-      
-        
-      
-        
-      
-
-      
       <item>
         <title>Message module and CTools $plugin</title>
         <description>
@@ -3017,20 +2248,7 @@ Migrate V2 uses &lt;a href =&quot;http://drupal.org/project/drush&quot;&gt;Drush
         <guid>http://www.gizra.com/content/message-module-and-ctools-plugin</guid>
         <pubDate>Thu, 10 Jun 2010 00:00:00 +0300</pubDate>
       </item>
-      
     
-      
-      
-        
-          
-        
-      
-        
-      
-        
-      
-
-      
       <item>
         <title>Code sample for DrutNet API - connect, load node, save node and upload file</title>
         <description>
@@ -3043,20 +2261,7 @@ Since last post I&amp;#39;ve added a new method that allow file upload with Serv
         <guid>http://www.gizra.com/content/code-sample-for-drutnet-api-connect-load-node-save-node-and-upload-file</guid>
         <pubDate>Mon, 17 May 2010 00:00:00 +0300</pubDate>
       </item>
-      
     
-      
-      
-        
-          
-        
-      
-        
-      
-        
-      
-
-      
       <item>
         <title>Group (the new OG) intro</title>
         <description>
@@ -3079,20 +2284,7 @@ Since last post I&amp;#39;ve added a new method that allow file upload with Serv
         <guid>http://www.gizra.com/content/group-the-new-og-intro</guid>
         <pubDate>Sun, 09 May 2010 00:00:00 +0300</pubDate>
       </item>
-      
     
-      
-      
-        
-          
-        
-      
-        
-      
-        
-      
-
-      
       <item>
         <title>DrutNet -  Drupal .NET API </title>
         <description>
@@ -3116,22 +2308,7 @@ DrutNet API has a &lt;code&gt;Services&lt;/code&gt; class:
         <guid>http://www.gizra.com/content/drutnet-drupal-net-api</guid>
         <pubDate>Thu, 29 Apr 2010 00:00:00 +0300</pubDate>
       </item>
-      
     
-      
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-
-      
       <item>
         <title>Zen-960</title>
         <description>
@@ -3153,22 +2330,7 @@ dvessel&amp;#39;s Ninesixty takes the power of grid 960 -that we really love as 
         <guid>http://www.gizra.com/content/zen-960</guid>
         <pubDate>Mon, 26 Apr 2010 00:00:00 +0300</pubDate>
       </item>
-      
     
-      
-      
-        
-      
-        
-      
-        
-      
-        
-          
-        
-      
-
-      
       <item>
         <title>Message module intro</title>
         <description>
@@ -3182,20 +2344,7 @@ dvessel&amp;#39;s Ninesixty takes the power of grid 960 -that we really love as 
         <guid>http://www.gizra.com/content/message-module-intro</guid>
         <pubDate>Thu, 22 Apr 2010 00:00:00 +0300</pubDate>
       </item>
-      
     
-      
-      
-        
-          
-        
-      
-        
-      
-        
-      
-
-      
       <item>
         <title>Dynamic landing pages</title>
         <description>
@@ -3209,18 +2358,7 @@ dvessel&amp;#39;s Ninesixty takes the power of grid 960 -that we really love as 
         <guid>http://www.gizra.com/content/dynamic-landing-pages</guid>
         <pubDate>Wed, 14 Apr 2010 00:00:00 +0300</pubDate>
       </item>
-      
     
-      
-      
-        
-          
-        
-      
-        
-      
-
-      
       <item>
         <title>CTools, Context and Message</title>
         <description>
@@ -3236,22 +2374,7 @@ dvessel&amp;#39;s Ninesixty takes the power of grid 960 -that we really love as 
         <guid>http://www.gizra.com/content/ctools-context-and-message</guid>
         <pubDate>Mon, 05 Apr 2010 00:00:00 +0300</pubDate>
       </item>
-      
     
-      
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-
-      
       <item>
         <title>Thinking 960</title>
         <description>
@@ -3266,16 +2389,7 @@ In 960 you have CSS classes that can be used to set elements width and position.
         <guid>http://www.gizra.com/content/thinking-960</guid>
         <pubDate>Thu, 21 Jan 2010 00:00:00 +0200</pubDate>
       </item>
-      
     
-      
-      
-        
-          
-        
-      
-
-      
       <item>
         <title>User points - Rules style</title>
         <description>
@@ -3294,16 +2408,7 @@ The tutorial will cover the &amp;quot;Rule sets&amp;quot; concept in Rules modul
         <guid>http://www.gizra.com/content/user-points-rules-style</guid>
         <pubDate>Thu, 14 Jan 2010 00:00:00 +0200</pubDate>
       </item>
-      
     
-      
-      
-        
-          
-        
-      
-
-      
       <item>
         <title>Organic groups 7!</title>
         <description>
@@ -3321,16 +2426,7 @@ OG brings roles and permissions to the _group level.
         <guid>http://www.gizra.com/content/organic-groups-7</guid>
         <pubDate>Sun, 03 Jan 2010 00:00:00 +0200</pubDate>
       </item>
-      
     
-      
-      
-        
-          
-        
-      
-
-      
       <item>
         <title>Using git to write patches</title>
         <description>
@@ -3342,16 +2438,7 @@ OG brings roles and permissions to the _group level.
         <guid>http://www.gizra.com/content/using-git-to-write-patches</guid>
         <pubDate>Sun, 27 Dec 2009 00:00:00 +0200</pubDate>
       </item>
-      
     
-      
-      
-        
-          
-        
-      
-
-      
       <item>
         <title>Outsourcing and Kittens</title>
         <description>
@@ -3395,16 +2482,7 @@ Meh, no kittens should die.&lt;/p&gt;
         <guid>http://www.gizra.com/content/outsourcing-and-kittens</guid>
         <pubDate>Mon, 14 Dec 2009 00:00:00 +0200</pubDate>
       </item>
-      
     
-      
-      
-        
-          
-        
-      
-
-      
       <item>
         <title>Does every page really need to be a node?</title>
         <description>
@@ -3425,16 +2503,7 @@ Let&amp;#39;s take the &amp;quot;usual&amp;quot; home page as an example:&lt;/p&
         <guid>http://www.gizra.com/content/does-every-page-really-need-to-be-a-node</guid>
         <pubDate>Mon, 07 Dec 2009 00:00:00 +0200</pubDate>
       </item>
-      
     
-      
-      
-        
-          
-        
-      
-
-      
       <item>
         <title>hook_widget_settings_alter() and Pandora</title>
         <description>
@@ -3455,7 +2524,6 @@ It seems that the new addition to CCK, the new hook&lt;/em&gt;widget&lt;em&gt;se
         <guid>http://www.gizra.com/content/hook_widget_settings_alter-and-pandora</guid>
         <pubDate>Thu, 19 Nov 2009 00:00:00 +0200</pubDate>
       </item>
-      
     
 
   </channel>
