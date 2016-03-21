@@ -60,7 +60,7 @@ drush en optionwidgets text views_ui ctools _panels page_manager views_content
 <li>Next, in our theme to copy page.tpl.php to page-landing-page.tpl.php, and the printing of the sidebars</li>
 <li>Optional; copy node.tpl.php to node-view-landing_page.tpl.php and delete the printing of the node title</li>
 <li>Optional; In admin/build/themes/settings uncheck "Display post information" from our new content type</li>
-<li>Now, all that is left to do, is to add three Landing page elements content, with the same page ID (e.g. ```gizra```), and with different locations</li>
+<li>Now, all that is left to do, is to add three Landing page elements content, with the same page ID (e.g. `gizra`), and with different locations</li>
 <li>Navigate to landing-pages/gizra and see your landing page!</li>
 </ol>
 
