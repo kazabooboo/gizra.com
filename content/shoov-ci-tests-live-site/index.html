@@ -33,7 +33,7 @@
       <meta name="theme-color" content="#ffffff">
       <!-- End favicon for all platforms -->
 
-      <link rel="stylesheet" href="/css/main.96fa.css"/>
+      <link rel="stylesheet" href="/css/main.4fd0.css"/>
       <link href='http://fonts.googleapis.com/css?family=Abril+Fatface&text=gizra' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Hind:400,600,300,500' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600,800' rel='stylesheet' type='text/css'>
@@ -191,17 +191,15 @@
     </div>
   </header>
 
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-10 col-sm-offset-1">
-        <article class="post">
-          <h1><a href="/content/shoov-ci-tests-live-site">Shoov - CI tests on the live site </a></h1>
-          <div class="date">14 Apr 2015, By Amitai Burstein</div>
-          <div class="tags">
-            <img src="/images/post/tag-icon-small.15a8.png" class="tags-icon"/>
-            <ul class="inline">
-              
-              
+  <div class="content-container">
+    <article class="post">
+      <h1><a href="/content/shoov-ci-tests-live-site">Shoov - CI tests on the live site </a></h1>
+      <div class="date">14 Apr 2015, By Amitai Burstein</div>
+      <div class="tags">
+        <img src="/images/post/tag-icon-small.15a8.png" class="tags-icon"/>
+        <ul class="inline">
+          
+          
 
   
     
@@ -212,11 +210,11 @@
   
 
 
-            </ul>
-            </div>
-          <div class="post-content">
+        </ul>
+        </div>
+      <div class="post-content">
 
-            <p><a href="/content/shoov-ui-regression/">Shoov</a> keeps evolving, and now has an <a href="https://github.com/shoov/test-example">example repo</a> that demonstrates how we&#39;re trying to make UI regression simpler, we took some time to implement the second feature we were missing - automatic testing on the <em>live</em> site.</p>
+        <p><a href="/content/shoov-ui-regression/">Shoov</a> keeps evolving, and now has an <a href="https://github.com/shoov/test-example">example repo</a> that demonstrates how we&#39;re trying to make UI regression simpler, we took some time to implement the second feature we were missing - automatic testing on the <em>live</em> site.</p>
 
 <p>We saw a very strange situation everywhere we looked: Dev teams were writing amazing test coverage. They were going the extra mile to setup a Travis box with environment as close as possible to the live site. They tested every single feature, and added a regression test for every bug. Heck, every commit triggered a test suite that run for an hour before being carefully reviewed and merged.</p>
 
@@ -267,53 +265,53 @@
 <p>The backend part is almost done, so our next task is to have a UI that helps connect GitHub repos to Shoov. We expect something similar to the interface Travis provides - a checkbox to enable or disable the service. From there it will be up to you to add a <a href="https://github.com/amitaibu/gizra-behat/blob/master/.shoov.yml">.shoov.yml</a> file to the repo, and write some actual tests.</p>
 
 
+      </div>
+    </article>
+    <section class="post-nav">
+      <div class="row">
+        <div class="col-xs-6 previous">
+          
+          <div class="text-capitalize">
+            <a href="/content/shoov-ui-regression">
+              Previous
+              <span class="visible-xs"> post</span>
+            </a>
           </div>
-        </article>
-        <section class="post-nav">
-          <div class="row">
-            <div class="col-xs-6 previous">
-              
-              <div class="text-capitalize">
-                <a href="/content/shoov-ui-regression">
-                  Previous
-                  <span class="visible-xs"> post</span>
-                </a>
-              </div>
-              <a href="/content/shoov-ui-regression" class="prev-text">
-                <span class="hidden-xs">Shoov - a new UI regression tool</span>
-              </a>
-              
-            </div>
-            <div class="col-xs-6 next">
-              
-              <div class="text-capitalize">
-                <a href="/content/simpletest-behat-drupal-8">
-                  Next
-                  <span class="visible-xs"> post</span>
-                </a>
-              </div>
-              <a href="/content/simpletest-behat-drupal-8" class="next-text">
-                <span class="hidden-xs">simpleTest with Behat for Drupal 8</span>
-              </a>
-              
-            </div>
+          <a href="/content/shoov-ui-regression" class="prev-text">
+            <span class="hidden-xs">Shoov - a new UI regression tool</span>
+          </a>
+          
+        </div>
+        <div class="col-xs-6 next">
+          
+          <div class="text-capitalize">
+            <a href="/content/simpletest-behat-drupal-8">
+              Next
+              <span class="visible-xs"> post</span>
+            </a>
           </div>
-        </section>
-        <section class="author-details">
-          <div class="image-wrapper">
-            <img src="/images/team/avatars/amitaibu.4179.jpg" class="img-circle img-responsive">
-          </div>
-          <div class="text-wrapper">
-            <span class="name">Amitai Burstein</span>
-            
-              <span class="twitter">(@amitaibu)</span>
-            
-            <div class="title">CTO, Co-Owner</div>
-            <div class="bio">Maintainer of Organic groups, the Message stack, and co-maintainer of Drupal 8's Entity reference. <a href="/content/the-about-story/">The about story</a>.</div>
-          </div>
-        </section>
-        <section>
-          <div id="disqus_thread"></div>
+          <a href="/content/simpletest-behat-drupal-8" class="next-text">
+            <span class="hidden-xs">simpleTest with Behat for Drupal 8</span>
+          </a>
+          
+        </div>
+      </div>
+    </section>
+    <section class="author-details">
+      <div class="image-wrapper">
+        <img src="/images/team/avatars/amitaibu.4179.jpg" class="img-circle img-responsive">
+      </div>
+      <div class="text-wrapper">
+        <span class="name">Amitai Burstein</span>
+        
+          <span class="twitter">(@amitaibu)</span>
+        
+        <div class="title">CTO, Co-Owner</div>
+        <div class="bio">Maintainer of Organic groups, the Message stack, and co-maintainer of Drupal 8's Entity reference. <a href="/content/the-about-story/">The about story</a>.</div>
+      </div>
+    </section>
+    <section>
+      <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_developer = 1;
     var disqus_shortname = 'gizra';
@@ -326,9 +324,7 @@
 </script>
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-        </section>
-      </div>
-    </div>
+    </section>
   </div>
 </div>
 
@@ -381,7 +377,7 @@
 
 
 
-    <script src="/js/plugins.c51b.js"></script>
+    <script src="/js/plugins.7686.js"></script>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
 
