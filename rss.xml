@@ -4,10 +4,68 @@
     <description></description>
     <title>Gizra</title>
     <link>http://www.gizra.com</link>
-    <lastBuildDate>Wed, 23 Mar 2016 12:17:48 +0200</lastBuildDate>
-    <pubDate>Wed, 23 Mar 2016 12:17:48 +0200</pubDate>
+    <lastBuildDate>Thu, 24 Mar 2016 11:52:22 +0200</lastBuildDate>
+    <pubDate>Thu, 24 Mar 2016 11:52:22 +0200</pubDate>
     <ttl>1800</ttl>
 
+    
+      <item>
+        <title>How To Think Elm</title>
+        <description>
+          &lt;p&gt;The 2nd Elm - TLV meetup was lots of fun. But it was in Hebrew, and the intersection
+between Hebrew speakers and Elm devs is still very limited.&lt;/p&gt;
+
+&lt;p&gt;So I&amp;#39;ve re-recorded my presentation in English. If you haven&amp;#39;t ever seen Elm, or
+already develop in Elm and want to better understand &amp;quot;how to think Elm&amp;quot; this presentation
+might give you a nudge in the right direction.&lt;/p&gt;
+
+&lt;iframe width=&quot;480&quot; height=&quot;360&quot; src=&quot;https://www.youtube.com/embed/tx07ysIrAz8?rel=0&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+          &lt;p&gt;&lt;a href=&quot;http://www.gizra.com/content/how-think-elm/&quot;&gt;Continue reading…&lt;/a&gt;&lt;/p&gt;
+        </description>
+        <link>http://www.gizra.com/content/how-think-elm</link>
+        <guid>http://www.gizra.com/content/how-think-elm</guid>
+        <pubDate>Thu, 24 Mar 2016 00:00:00 +0200</pubDate>
+      </item>
+    
+      <item>
+        <title>Elm i18n and Type Safety</title>
+        <description>
+          &lt;p&gt;We&amp;#39;ve reached the point we needed to translate one of our Elm apps to multiple languages.&lt;/p&gt;
+
+&lt;div class=&quot;demo-block text-center&quot;&gt;
+  &lt;a class=&quot;demo&quot; target=_blank&quot; href=&quot;https://gizra.github.io/elm-i18n-example/&quot;&gt;View demo&lt;/a&gt;
+  &lt;a class=&quot;code&quot; target=_blank&quot; href=&quot;https://github.com/Gizra/elm-i18n-example&quot;&gt;Get the source code&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;thumbnail&quot;&gt;
+  &lt;div class=&quot;img-wrapper&quot;&gt;
+
+    
+
+    
+      &lt;img src=&quot;http://www.gizra.com/assets/images/posts/elm-i18n/image1.gif&quot;&gt;
+    
+
+  &lt;/div&gt;
+  
+&lt;/div&gt;
+
+&lt;p&gt;We looked for existing solutions and stumbled upon the elm-i18n library. This
+of course made us happy, to see that someone has already solved the problem for us. However, when we looked at the &lt;a href=&quot;https://github.com/lukewestby/elm-i18n/tree/84d7da3a51d52a89d1e3371bfeb4f34eab05341c#example&quot;&gt;example&lt;/a&gt; something felt missing. Type safety.&lt;/p&gt;
+
+&lt;p&gt;In Gizra we deal most hours of our working days with PHP, so you can say we are
+fearless developers. That is, we hope and believe our code is right, and
+worst case we know we will catch our bugs on run time.&lt;/p&gt;
+
+&lt;p&gt;But Elm can make us better developers, and give us some safety!&lt;/p&gt;
+
+          &lt;p&gt;&lt;a href=&quot;http://www.gizra.com/content/elm-i18n-type-safety/&quot;&gt;Continue reading…&lt;/a&gt;&lt;/p&gt;
+        </description>
+        <link>http://www.gizra.com/content/elm-i18n-type-safety</link>
+        <guid>http://www.gizra.com/content/elm-i18n</guid>
+        <pubDate>Wed, 23 Mar 2016 00:00:00 +0200</pubDate>
+      </item>
     
       <item>
         <title>Budget Goggles - creating a common language and setting expectations</title>

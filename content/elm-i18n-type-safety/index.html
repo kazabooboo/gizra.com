@@ -6,7 +6,7 @@
         
     
 
-<title>Budget Goggles - creating a common language and setting expectations</title>
+<title>Elm i18n and Type Safety</title>
 
         <meta name="description" content="">
         <meta name="keywords" content="">
@@ -74,71 +74,71 @@
 
   
     
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
       
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
     
   
 
@@ -193,8 +193,8 @@
 
   <div class="content-container">
     <article class="post">
-      <h1><a href="/content/budget-goggles">Budget Goggles - creating a common language and setting expectations </a></h1>
-      <div class="date">17 Mar 2016, By Rachel Baram</div>
+      <h1><a href="/content/elm-i18n-type-safety">Elm i18n and Type Safety </a></h1>
+      <div class="date">23 Mar 2016, By Amitai Burstein</div>
       <div class="tags">
         <img src="/images/post/tag-icon-small.15a8.png" class="tags-icon"/>
         <ul class="inline">
@@ -203,11 +203,7 @@
 
   
     
-      <li><a href="/tags.html#Drupal-planet-ref">Drupal-planet</a></li>
-    
-      <li><a href="/tags.html#The Gizra Way-ref">The Gizra Way</a></li>
-    
-      <li><a href="/tags.html#Project management-ref">Project management</a></li>
+      <li><a href="/tags.html#Elm-ref">Elm</a></li>
     
   
 
@@ -216,13 +212,12 @@
         </div>
       <div class="post-content">
 
-        <p>By default IT projects will fail. They may still launch but not accomplish any one of the following requirements of a successful project: on time, within budget, with happy users.</p>
+        <p>We&#39;ve reached the point we needed to translate one of our Elm apps to multiple languages.</p>
 
-<p>Gizra addresses this by defining the ambiguous with the simple but powerful principle that the <strong>budget dictates the project</strong>. It all begins (and ends) at the price estimation. Our budget breakdown creates a common language for all stakeholders and sets expectations early on.</p>
-
-<p>After a <strong>discovery phase</strong>, the project is broken down to <strong>timeboxed tasks</strong> - each with a clear deadline and cost to produce the deliverable. We set the maximum time to complete a task at 12 hours because this number is easily grasped by all stakeholders. Every feature and bug has a price tag and we encourage our clients <em>not</em> to try to buy them all (at least not at first).</p>
-
-<p>An example of our budget breakdown:</p>
+<div class="demo-block text-center">
+  <a class="demo" target=_blank" href="https://gizra.github.io/elm-i18n-example/">View demo</a>
+  <a class="code" target=_blank" href="https://github.com/Gizra/elm-i18n-example">Get the source code</a>
+</div>
 
 <div class="thumbnail">
   <div class="img-wrapper">
@@ -230,24 +225,58 @@
     
 
     
-      <img src="http://www.gizra.com/assets/images/posts/budget-goggles/image1.jpg">
+      <img src="http://www.gizra.com/assets/images/posts/elm-i18n/image1.gif">
     
 
   </div>
   
 </div>
 
+<p>We looked for existing solutions and stumbled upon the elm-i18n library. This
+of course made us happy, to see that someone has already solved the problem for us. However, when we looked at the <a href="https://github.com/lukewestby/elm-i18n/tree/84d7da3a51d52a89d1e3371bfeb4f34eab05341c#example">example</a> something felt missing. Type safety.</p>
+
+<p>In Gizra we deal most hours of our working days with PHP, so you can say we are
+fearless developers. That is, we hope and believe our code is right, and
+worst case we know we will catch our bugs on run time.</p>
+
+<p>But Elm can make us better developers, and give us some safety!</p>
+
 <!-- more -->
 
-<p>The awareness of time increases productivity. Deliverables and deadline expectations are clear and the risk of scope creep and over engineering (the enemy of good is perfect) is mitigated. Awareness of cost encourages thinking about value - does it make sense for our clients to pay this much for this task?</p>
+<h2>Type Safety</h2>
 
-<p>In the rare case that a task exceeds the timebox, a <strong>review process</strong> is triggered to identify the cause and is quickly remedied. Identifying an issue - such as a wrong estimate, design problems, lack of understanding of a task, or missing critical information - at the task level,  before it compounds, ensures a <strong>low cost of mistakes</strong>.</p>
+<p>If you look at <code>show (i18nText &quot;I am {0} years old.&quot; [&quot;24&quot;])</code> you might notice that there is no guarantee that the string is even translated to other languages. Further more, are we sure that we are sending the correct number of arguments (in the above case it&#39;s <code>24</code>)?</p>
 
-<p>Determining success at the task level - was the task completed on time and in budget - provides a <strong>real-time measurement of success</strong>. At any stage of the project we have a measurable way to identify where we stand and how aligned we are with the set expectations.</p>
+<p>I jumped into the Elm channel and had a very nice chat with @lukewestby, elm-i18n library author, which pointed out some really good points (like the need for type safety not just for the strings, but for the arguments as-well).</p>
 
-<p>In the case of lean demonstrations of a product idea (<strong>Proof-of-Concept, Prototype, Minimal Viable Product</strong>) the scope is not yet defined so the uncertainty and inherent risk can be immediately addressed by first timeboxing at the project-wide level. Web based product ideas can be successfully demonstrated within 3-4 months of development and with 1-3 developers which is easily translated into a budget range. With this anchor, clients can move forward confidently with the project.</p>
+<p>This was no doubt yet another case for the great power of open source, collaboration, and friendly community: I came to the chat with a half baked solution, and left with a complete one.</p>
 
-<p>The beauty of this budget driven approach is that it works for most type and size projects. Gizra has found this to be an invaluable premise in our efforts to execute successful projects.</p>
+<p>The entire logic of the translation is in <a href="https://github.com/Gizra/elm-i18n-example/blob/master/Translation/Utils.elm">this</a> short file. We define our translation as types.</p>
+<div class="highlight"><pre><code class="haskell language-haskell" data-lang="haskell"><span class="kr">type</span> <span class="kt">TranslationId</span>
+  <span class="ow">=</span> <span class="kt">Login</span>
+  <span class="o">|</span> <span class="kt">WelcomeBack</span> <span class="p">{</span><span class="n">name</span> <span class="kt">:</span> <span class="kt">String</span><span class="p">}</span>
+</code></pre></div>
+<p>All the strings in our app will be represented in this <code>TranslationId</code> type, along with their required arguments. By having this, we can now do things like:</p>
+<div class="highlight"><pre><code class="haskell language-haskell" data-lang="haskell"><span class="nf">div</span> <span class="kt">[]</span> <span class="p">[</span><span class="n">text</span> <span class="o">&lt;|</span> <span class="n">translate</span> <span class="kt">Spanish</span> <span class="kt">Login</span><span class="p">]</span>
+<span class="c1">-- Result: &quot;Por favor haga login&quot;</span>
+
+<span class="nf">div</span> <span class="kt">[]</span> <span class="p">[</span><span class="n">text</span> <span class="o">&lt;|</span> <span class="n">translate</span> <span class="kt">English</span> <span class="o">&lt;|</span> <span class="kt">WelcomeBack</span> <span class="p">{</span><span class="n">name</span> <span class="ow">=</span> <span class="s">&quot;Elm lover&quot;</span><span class="p">}]</span>
+<span class="c1">-- Result: &quot;Welcome back Elm lover&quot;</span>
+</code></pre></div>
+<p>This is one of the great powers of Elm! By having those types, we let the compiler help us with preventing silly mistakes.</p>
+
+<p>We can now never try to translate a non existing string. We also can not try to call a string, without passing all the arguments.
+Or, we can&#39;t ever miss translating an existing string.<br>
+It&#39;s all covered by Elm&#39;s types.</p>
+
+<p>Go ahead, and see the <a href="https://github.com/Gizra/elm-i18n-example/blob/master/App/View.elm#L11">View.elm</a> file or the <a href="https://github.com/Gizra/elm-i18n-example/blob/master/Translation/Test.elm">unit tests</a>.</p>
+
+<h2>Next steps</h2>
+
+<p>Developers don&#39;t necessarily speak all the app&#39;s languages. I mean, we are a smart bunch, but there&#39;s a limit, right? :)</p>
+
+<p>What often happens is that translation is written in different text files (e.g. in PO format). So our next plan is to write a script that will get as input those files, and will auto-generate an Elm file that will contain
+valid code with all the strings.</p>
 
 
       </div>
@@ -257,26 +286,26 @@
         <div class="col-xs-6 previous">
           
           <div class="text-capitalize">
-            <a href="/content/our-shoov-dashboard">
+            <a href="/content/budget-goggles">
               Previous
               <span class="visible-xs"> post</span>
             </a>
           </div>
-          <a href="/content/our-shoov-dashboard" class="prev-text">
-            <span class="hidden-xs">Our Shoov Dashboard</span>
+          <a href="/content/budget-goggles" class="prev-text">
+            <span class="hidden-xs">Budget Goggles - creating a common language and setting expectations</span>
           </a>
           
         </div>
         <div class="col-xs-6 next">
           
           <div class="text-capitalize">
-            <a href="/content/elm-i18n-type-safety">
+            <a href="/content/how-think-elm">
               Next
               <span class="visible-xs"> post</span>
             </a>
           </div>
-          <a href="/content/elm-i18n-type-safety" class="next-text">
-            <span class="hidden-xs">Elm i18n and Type Safety</span>
+          <a href="/content/how-think-elm" class="next-text">
+            <span class="hidden-xs">How To Think Elm</span>
           </a>
           
         </div>
@@ -284,13 +313,15 @@
     </section>
     <section class="author-details">
       <div class="image-wrapper">
-        <img src="/images/team/avatars/RachelBaram.45c5.jpg" class="img-circle img-responsive">
+        <img src="/images/team/avatars/amitaibu.4179.jpg" class="img-circle img-responsive">
       </div>
       <div class="text-wrapper">
-        <span class="name">Rachel Baram</span>
+        <span class="name">Amitai Burstein</span>
         
-        <div class="title">Business Development & Marketing</div>
-        <div class="bio">Loves to make things make sense.</div>
+          <span class="twitter">(@amitaibu)</span>
+        
+        <div class="title">CTO, Co-Owner</div>
+        <div class="bio">Maintainer of Organic groups, the Message stack, and co-maintainer of Drupal 8's Entity reference. <a href="/content/the-about-story/">The about story</a>.</div>
       </div>
     </section>
     <section>
