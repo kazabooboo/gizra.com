@@ -975,15 +975,7 @@
   
   
     <url>
-      <loc>http://www.gizra.com/404.html</loc>
-     </url>
-  
-    <url>
-      <loc>http://www.gizra.com/blog/index.html</loc>
-     </url>
-  
-    <url>
-      <loc>http://www.gizra.com/elm-rss/index.html</loc>
+      <loc>http://www.gizra.com/sitemap.xml</loc>
      </url>
   
     <url>
@@ -991,7 +983,23 @@
      </url>
   
     <url>
-      <loc>http://www.gizra.com/rss.xml</loc>
+      <loc>http://www.gizra.com/tags.html</loc>
+     </url>
+  
+    <url>
+      <loc>http://www.gizra.com/blog/index.html</loc>
+     </url>
+  
+    <url>
+      <loc>http://www.gizra.com/taxonomy/term/1/all/feed/index.html</loc>
+     </url>
+  
+    <url>
+      <loc>http://www.gizra.com/elm-rss/index.html</loc>
+     </url>
+  
+    <url>
+      <loc>http://www.gizra.com/404.html</loc>
      </url>
   
     <url>
@@ -1003,15 +1011,7 @@
      </url>
   
     <url>
-      <loc>http://www.gizra.com/sitemap.xml</loc>
-     </url>
-  
-    <url>
-      <loc>http://www.gizra.com/tags.html</loc>
-     </url>
-  
-    <url>
-      <loc>http://www.gizra.com/taxonomy/term/1/all/feed/index.html</loc>
+      <loc>http://www.gizra.com/rss.xml</loc>
      </url>
   
     <url>
