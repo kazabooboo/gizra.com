@@ -174,15 +174,15 @@ authors:
       github: YaronMiro
       avatar: YaronMiro.jpg
       image: YaronMiro.jpg
-  - nirGilon:
-      name: Nir Gilon
+  - NirGalon:
+      name: Nir Galon
       title: Developer
       is_member: true
-      bio: Something about Nir
-      email: nir.gilon@gizra.com
+      bio: A geek who always want to learn new things.
+      email: nir.galon@gizra.com
       github: nirgn975
-      avatar: male.jpg
-      image: male.jpg
+      avatar: NirGalon.jpg
+      image: NirGalon.jpg
   - RachelBaram:
       name: Rachel Baram
       title: Business Development & Marketing
