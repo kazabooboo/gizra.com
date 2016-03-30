@@ -61,24 +61,49 @@ describe('Visual monitor testing', function() {
   it('should show the home page',function(done) {
     client
       .url(baseUrl)
+      .pause(5000)
       .webdrivercss(testName + '.homepage', {
         name: '1',
         exclude:
           [
             // Blog post.
-            '.post-teaser img',
+            '.post-teaser .article',
           ],
         remove: [],
         hide:
           [
-            // Logo.
+            // Carousel.
             '.carousel-inner img',
+            '.carousel-indicators',
             // Blockquote, Name, Title and Client.
             '.carousel-inner p',
             // Blog.
             '.blog .author-details',
             '.blog .title',
+            // Info.
+            '.element p'
+          ],
+        screenWidth: selectedCaps == 'chrome' ? [320, 1200] : undefined,
+      }, resultsCallback)
+      .call(done);
+  });
 
+  it('should show a blog post list',function(done) {
+    client
+      .url(baseUrl + '/blog')
+      .pause(2000)
+      .webdrivercss(testName + '.blog-post-list', {
+        name: '1',
+        exclude:
+          [
+            // Blog post.
+            '.post-teaser .article',
+          ],
+        hide:
+          [
+            // Blog.
+            '.blog .author-details',
+            '.blog .title',
           ],
         screenWidth: selectedCaps == 'chrome' ? [320, 1200] : undefined,
       }, resultsCallback)
@@ -87,7 +112,7 @@ describe('Visual monitor testing', function() {
 
   it('should show a blog post',function(done) {
     client
-      .url(baseUrl + '/content/shoov-monitor-twitter/')
+      .url(baseUrl + '/content/shoov-monitor-twitter')
       .webdrivercss(testName + '.blog-post', {
         name: '1',
         exclude:
@@ -100,6 +125,16 @@ describe('Visual monitor testing', function() {
             // Disqus plugin.
             '#disqus_thread',
           ],
+        screenWidth: selectedCaps == 'chrome' ? [320, 1200] : undefined,
+      }, resultsCallback)
+      .call(done);
+  });
+
+  it('should show a team post',function(done) {
+    client
+      .url(baseUrl + '/team')
+      .webdrivercss(testName + '.team', {
+        name: '1',
         screenWidth: selectedCaps == 'chrome' ? [320, 1200] : undefined,
       }, resultsCallback)
       .call(done);
