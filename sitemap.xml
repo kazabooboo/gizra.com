@@ -2,6 +2,15 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
     <url>
+      <loc>http://www.gizra.com/content/docker-travis-ci</loc>
+      
+        <lastmod>2016-03-30T00:00:00+03:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
       <loc>http://www.gizra.com/content/how-think-elm</loc>
       
         <lastmod>2016-03-24T00:00:00+02:00</lastmod>
@@ -616,7 +625,7 @@
     <url>
       <loc>http://www.gizra.com/content/drupalcamp-montreal-keynote/</loc>
       
-        <lastmod>2012-10-18T00:00:00+02:00</lastmod>
+        <lastmod>2012-10-18T00:00:00+03:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -796,7 +805,7 @@
     <url>
       <loc>http://www.gizra.com/content/rounded-corners/</loc>
       
-        <lastmod>2010-10-20T00:00:00+02:00</lastmod>
+        <lastmod>2010-10-20T00:00:00+03:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -805,7 +814,7 @@
     <url>
       <loc>http://www.gizra.com/content/message-example-github-news-feed/</loc>
       
-        <lastmod>2010-09-29T00:00:00+02:00</lastmod>
+        <lastmod>2010-09-29T00:00:00+03:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -1060,6 +1069,10 @@
   
     <url>
       <loc>http://www.gizra.com/blog/page12/index.html</loc>
+     </url>
+  
+    <url>
+      <loc>http://www.gizra.com/blog/page13/index.html</loc>
      </url>
   
 </urlset>
