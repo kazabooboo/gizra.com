@@ -156,15 +156,6 @@ authors:
       github: shahardo
       avatar: male.jpg
       image: male.jpg
-  - YuriGizra:
-      name: Yuri Failer
-      title: Developer
-      is_member: true
-      bio: Something about Yuri
-      email: yuri@gizra.com
-      github: YuriGizra
-      avatar: male.jpg
-      image: YuriGizra.jpg
   - YaronMiro:
       name: Yaron Miro
       title: UX/UI Developer
