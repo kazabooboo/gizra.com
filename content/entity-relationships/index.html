@@ -13,27 +13,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
       <!-- Favicon for all platforms -->
-      <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.b3df.png">
+      <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.3a41.png">
       <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-touch-icon-60x60.a84d.png">
       <link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-touch-icon-72x72.664d.png">
-      <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.faf5.png">
+      <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.20fe.png">
       <link rel="apple-touch-icon" sizes="114x114" href=/"images/favicons/apple-touch-icon-114x114.png">
-      <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.d810.png">
-      <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.1807.png">
-      <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.71bf.png">
-      <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.a9f0.png">
+      <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.842b.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.0175.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.f9ac.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.f24a.png">
       <link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.c391.png" sizes="32x32">
-      <link rel="icon" type="image/png" href="/images/favicons/favicon-194x194.e5f8.png" sizes="194x194">
+      <link rel="icon" type="image/png" href="/images/favicons/favicon-194x194.2d07.png" sizes="194x194">
       <link rel="icon" type="image/png" href="/images/favicons/favicon-96x96.8557.png" sizes="96x96">
-      <link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.0b72.png" sizes="192x192">
-      <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.7353.png" sizes="16x16">
+      <link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.6d91.png" sizes="192x192">
+      <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.a93c.png" sizes="16x16">
       <link rel="manifest" href="/images/favicons/manifest.json">
       <meta name="msapplication-TileColor" content="#000000">
       <meta name="msapplication-TileImage" content="/images/favicons/mstile-144x144.png">
       <meta name="theme-color" content="#ffffff">
       <!-- End favicon for all platforms -->
 
-      <link rel="stylesheet" href="/css/main.ee40.css"/>
+      <link rel="stylesheet" href="/css/main.b4dd.css"/>
       <link href='http://fonts.googleapis.com/css?family=Abril+Fatface&text=gizra' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Hind:400,600,300,500' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600,800' rel='stylesheet' type='text/css'>
@@ -212,7 +212,7 @@
 
 <p>One way we like to look at a project before diving into the code is through its data structure. The different entities and their relations can tell us a lot about the business logic of the site and its internal logic. We assumed that if we could <em>easily</em> generate a graph with all the bundles, entities, and their relations this complex task would be easier.</p>
 
-<p>Having done this for a while now, I believe our assumption was right. Taking our open-source <a href="https://github.com/Gizra/productivity#gizra-productivity">Productivity project</a> (Gizra&#39;s internal ERP/Project management system) as an example, it&#39;s much easier to look at the following graph and understand that <code>Work session</code>, <code>Time tracking</code>, <code>Payment</code>, and <code>Github Issue</code> bundles are pointing at a <code>Project</code>, which in turn points to an <code>Account</code> bundle. <code>Github Issue</code> can also reference itself.</p>
+<p>Having done this for a while now, I believe our assumption was right. Taking our open-source <a href="https://github.com/Gizra/productivity#gizra-productivity">Productivity project</a> (Gizra&rsquo;s internal ERP/Project management system) as an example, it&rsquo;s much easier to look at the following graph and understand that <code>Work session</code>, <code>Time tracking</code>, <code>Payment</code>, and <code>Github Issue</code> bundles are pointing at a <code>Project</code>, which in turn points to an <code>Account</code> bundle. <code>Github Issue</code> can also reference itself.</p>
 
 <div class="thumbnail">
   <div class="img-wrapper">
@@ -229,9 +229,9 @@
 
 <!-- more -->
 
-<p>Thanks to <a href="https://www.drupal.org/u/damien-tournoud">Damien Tournoud&#39;s</a> <a href="https://www.drupal.org/project/1438582/git-instructions">previous work</a> getting the graph out wasn&#39;t too complicated. His sanbox module already output the entities and bundles. It was merely missing the relationships between them, and a UI to display the graph.</p>
+<p>Thanks to <a href="https://www.drupal.org/u/damien-tournoud">Damien Tournoud&rsquo;s</a> <a href="https://www.drupal.org/project/1438582/git-instructions">previous work</a> getting the graph out wasn&rsquo;t too complicated. His sanbox module already output the entities and bundles. It was merely missing the relationships between them, and a UI to display the graph.</p>
 
-<p>So, standing on the shoulders of giants, we&#39;ve adapted the code and now have an <a href="https://github.com/Gizra/entityrelationships">Entity Relationships</a> module.</p>
+<p>So, standing on the shoulders of giants, we&rsquo;ve adapted the code and now have an <a href="https://github.com/Gizra/entityrelationships">Entity Relationships</a> module.</p>
 
 <h2>Usage</h2>
 
@@ -251,8 +251,8 @@ since the module only generates text file in the <a href="https://en.wikipedia.o
 
 <ul>
 <li>All the entities at <code>/admin/entity-relations</code></li>
-<li>Only the node&#39;s bundles <code>/admin/entity-relations/node</code></li>
-<li>A simplified graph of the node&#39;s bundles, with no fields at <code>/admin/entity-relations/node/false</code></li>
+<li>Only the node&rsquo;s bundles <code>/admin/entity-relations/node</code></li>
+<li>A simplified graph of the node&rsquo;s bundles, with no fields at <code>/admin/entity-relations/node/false</code></li>
 </ul>
 
 <p>Simple, but powerful.</p>
@@ -292,7 +292,7 @@ since the module only generates text file in the <a href="https://en.wikipedia.o
     </section>
     <section class="author-details">
       <div class="image-wrapper">
-        <img src="/images/team/avatars/bricel.8317.jpg" class="img-circle img-responsive">
+        <img src="/images/team/avatars/bricel.f3f2.jpg" class="img-circle img-responsive">
       </div>
       <div class="text-wrapper">
         <span class="name">Brice Lenfant</span>
@@ -370,7 +370,7 @@ since the module only generates text file in the <a href="https://en.wikipedia.o
 
 
 
-    <script src="/js/plugins.f180.js"></script>
+    <script src="/js/plugins.c51b.js"></script>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
 

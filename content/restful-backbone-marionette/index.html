@@ -13,27 +13,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
       <!-- Favicon for all platforms -->
-      <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.b3df.png">
+      <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.3a41.png">
       <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-touch-icon-60x60.a84d.png">
       <link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-touch-icon-72x72.664d.png">
-      <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.faf5.png">
+      <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.20fe.png">
       <link rel="apple-touch-icon" sizes="114x114" href=/"images/favicons/apple-touch-icon-114x114.png">
-      <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.d810.png">
-      <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.1807.png">
-      <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.71bf.png">
-      <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.a9f0.png">
+      <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.842b.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.0175.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.f9ac.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.f24a.png">
       <link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.c391.png" sizes="32x32">
-      <link rel="icon" type="image/png" href="/images/favicons/favicon-194x194.e5f8.png" sizes="194x194">
+      <link rel="icon" type="image/png" href="/images/favicons/favicon-194x194.2d07.png" sizes="194x194">
       <link rel="icon" type="image/png" href="/images/favicons/favicon-96x96.8557.png" sizes="96x96">
-      <link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.0b72.png" sizes="192x192">
-      <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.7353.png" sizes="16x16">
+      <link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.6d91.png" sizes="192x192">
+      <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.a93c.png" sizes="16x16">
       <link rel="manifest" href="/images/favicons/manifest.json">
       <meta name="msapplication-TileColor" content="#000000">
       <meta name="msapplication-TileImage" content="/images/favicons/mstile-144x144.png">
       <meta name="theme-color" content="#ffffff">
       <!-- End favicon for all platforms -->
 
-      <link rel="stylesheet" href="/css/main.ee40.css"/>
+      <link rel="stylesheet" href="/css/main.b4dd.css"/>
       <link href='http://fonts.googleapis.com/css?family=Abril+Fatface&text=gizra' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Hind:400,600,300,500' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600,800' rel='stylesheet' type='text/css'>
@@ -214,11 +214,11 @@
 
         <p><strong>In this guest post, <a href="https://twitter.com/lukeherrington">Luke Herrington</a> shares his experience with integrating an existing Drupal backend with a Backbone.Marionette Todo app.</strong></p>
 
-<p>If you&#39;re reading this, you probably already know about all of the great work that Gizra has done in the Drupal/REST space. If you haven&#39;t, I highly recommend you check out their <a href="https://github.com/Gizra">github</a> repo. Also see the <a href="https://github.com/RESTful-Drupal">RESTful</a> module.</p>
+<p>If you&rsquo;re reading this, you probably already know about all of the great work that Gizra has done in the Drupal/REST space. If you haven&rsquo;t, I highly recommend you check out their <a href="https://github.com/Gizra">github</a> repo. Also see the <a href="https://github.com/RESTful-Drupal">RESTful</a> module.</p>
 
-<p>One of the projects that Amitai has contributed is <a href="https://github.com/Gizra/todo_restful">Todo Restful</a>. It shows an Angular implementation of the canonical <a href="http://todomvc.com/">TodoMVC</a> Javascript app connecting to a headless Drupal backend. It&#39;s a great demonstration of how easy exposing Drupal content with the RESTful module is. It also shows that when a RESTful API adheres to best practices, connecting it with clients that follow the same best practices is like a nice handshake.</p>
+<p>One of the projects that Amitai has contributed is <a href="https://github.com/Gizra/todo_restful">Todo Restful</a>. It shows an Angular implementation of the canonical <a href="http://todomvc.com/">TodoMVC</a> Javascript app connecting to a headless Drupal backend. It&rsquo;s a great demonstration of how easy exposing Drupal content with the RESTful module is. It also shows that when a RESTful API adheres to best practices, connecting it with clients that follow the same best practices is like a nice handshake.</p>
 
-<p>I saw the Todo Restful project and it got me thinking, &quot;If Amitai did this right (hint: he did), then I should be able to get this working with Backbone pretty easily&quot;. I was pleasantly surprised!</p>
+<p>I saw the Todo Restful project and it got me thinking, &ldquo;If Amitai did this right (hint: he did), then I should be able to get this working with Backbone pretty easily&rdquo;. I was pleasantly surprised!</p>
 
 <div class="demo-block text-center">
   <a class="demo" target=_blank" href="http://infiniteluke.github.io/todo_restful/">View demo</a>
@@ -240,7 +240,7 @@
   
 </div>
 
-<p>Here&#39;s a simplified list of everything I had to do to get it working:</p>
+<p>Here&rsquo;s a simplified list of everything I had to do to get it working:</p>
 
 <!-- more -->
 
@@ -257,7 +257,7 @@ This was necessary because Backbone expects the response for a collection to be 
 
 <p>Note: There are detailed instructions on how to get the app running locally on in the <a href="https://github.com/Gizra/todo_restful/blob/master/README.md">repo readme</a>.</p>
 
-<p>Notice I didn&#39;t have to touch any code on the Drupal side. Amitai&#39;s amazing installation script spun up the Drupal site for me with todo content type created and exposed with RESTful. It just worked. In fact the Backbone.Marionette demo app points to the same backend as the Angular app!</p>
+<p>Notice I didn&rsquo;t have to touch any code on the Drupal side. Amitai&rsquo;s amazing installation script spun up the Drupal site for me with todo content type created and exposed with RESTful. It just worked. In fact the Backbone.Marionette demo app points to the same backend as the Angular app!</p>
 
 <ul>
 <li><a href="http://infiniteluke.github.io/todo_restful/">Backbone.Marionette app</a></li>
@@ -265,17 +265,17 @@ This was necessary because Backbone expects the response for a collection to be 
 <li><a href="http://live-todo-restful.pantheon.io/">Drupal backend</a></li>
 </ul>
 
-<p>Also notice, except for steps 4 and 5 I didn&#39;t have to touch the Backbone code!</p>
+<p>Also notice, except for steps 4 and 5 I didn&rsquo;t have to touch the Backbone code!</p>
 
-<p>Now imagine applying this to your project... If your requirements demand a lot of interactivity and slick UI elements, go for it! You don&#39;t even have to go fully headless if you don&#39;t want to! See the <a href="https://github.com/RESTful-Drupal/restful/blob/7.x-1.x/README.md">RESTful module documentation</a> on how to expose your content and start innovating. The possibilities are endless!</p>
+<p>Now imagine applying this to your project&hellip; If your requirements demand a lot of interactivity and slick UI elements, go for it! You don&rsquo;t even have to go fully headless if you don&rsquo;t want to! See the <a href="https://github.com/RESTful-Drupal/restful/blob/7.x-1.x/README.md">RESTful module documentation</a> on how to expose your content and start innovating. The possibilities are endless!</p>
 
 <h2>Conclusion</h2>
 
-<p>Amitai and Josh Koenig (Pantheon), in their <a href="https://events.drupal.org/losangeles2015/sessions/decoupled-drupal-when-why-and-how">talk at DrupalCon LA</a>, spoke about Headless Drupal and showed how Drupal can still be relevant in an age where client side frameworks (Angular, Ember, React, Backbone…) rule. It made me excited about Drupal again and showed a whole new way that Drupal can further <a href="http://www.garfieldtech.com/blog/off-the-island-2013">&quot;Get off the island&quot;</a> and start to play nicely with other technologies.</p>
+<p>Amitai and Josh Koenig (Pantheon), in their <a href="https://events.drupal.org/losangeles2015/sessions/decoupled-drupal-when-why-and-how">talk at DrupalCon LA</a>, spoke about Headless Drupal and showed how Drupal can still be relevant in an age where client side frameworks (Angular, Ember, React, Backbone…) rule. It made me excited about Drupal again and showed a whole new way that Drupal can further <a href="http://www.garfieldtech.com/blog/off-the-island-2013">&ldquo;Get off the island&rdquo;</a> and start to play nicely with other technologies.</p>
 
-<p>In the end, that&#39;s why I went through this exercise: To show that Drupal is a viable CMS backend for not just Angular, but also Backbone.Marionette or any other front end framework for that matter! There&#39;s a ton of front-end developers out there that don&#39;t know what Drupal is capable of. I hope that by showing how easy this was, front-end devs can see that Drupal is more relevant than ever and that it makes their life really easy. I also did this to show current Drupal devs that with Headless Drupal we can imagine displaying and interacting with our content in ways we never have before.</p>
+<p>In the end, that&rsquo;s why I went through this exercise: To show that Drupal is a viable CMS backend for not just Angular, but also Backbone.Marionette or any other front end framework for that matter! There&rsquo;s a ton of front-end developers out there that don&rsquo;t know what Drupal is capable of. I hope that by showing how easy this was, front-end devs can see that Drupal is more relevant than ever and that it makes their life really easy. I also did this to show current Drupal devs that with Headless Drupal we can imagine displaying and interacting with our content in ways we never have before.</p>
 
-<p>So who&#39;s next? React? Ember?  </p>
+<p>So who&rsquo;s next? React? Ember?  </p>
 
 
       </div>
@@ -312,7 +312,7 @@ This was necessary because Backbone expects the response for a collection to be 
     </section>
     <section class="author-details">
       <div class="image-wrapper">
-        <img src="/images/team/avatars/lukeherrington.921b.jpg" class="img-circle img-responsive">
+        <img src="/images/team/avatars/lukeherrington.a0db.jpg" class="img-circle img-responsive">
       </div>
       <div class="text-wrapper">
         <span class="name">Luke Herrington</span>
@@ -388,7 +388,7 @@ This was necessary because Backbone expects the response for a collection to be 
 
 
 
-    <script src="/js/plugins.f180.js"></script>
+    <script src="/js/plugins.c51b.js"></script>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
 

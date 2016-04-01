@@ -13,27 +13,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
       <!-- Favicon for all platforms -->
-      <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.b3df.png">
+      <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.3a41.png">
       <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-touch-icon-60x60.a84d.png">
       <link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-touch-icon-72x72.664d.png">
-      <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.faf5.png">
+      <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.20fe.png">
       <link rel="apple-touch-icon" sizes="114x114" href=/"images/favicons/apple-touch-icon-114x114.png">
-      <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.d810.png">
-      <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.1807.png">
-      <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.71bf.png">
-      <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.a9f0.png">
+      <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.842b.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.0175.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.f9ac.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.f24a.png">
       <link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.c391.png" sizes="32x32">
-      <link rel="icon" type="image/png" href="/images/favicons/favicon-194x194.e5f8.png" sizes="194x194">
+      <link rel="icon" type="image/png" href="/images/favicons/favicon-194x194.2d07.png" sizes="194x194">
       <link rel="icon" type="image/png" href="/images/favicons/favicon-96x96.8557.png" sizes="96x96">
-      <link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.0b72.png" sizes="192x192">
-      <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.7353.png" sizes="16x16">
+      <link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.6d91.png" sizes="192x192">
+      <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.a93c.png" sizes="16x16">
       <link rel="manifest" href="/images/favicons/manifest.json">
       <meta name="msapplication-TileColor" content="#000000">
       <meta name="msapplication-TileImage" content="/images/favicons/mstile-144x144.png">
       <meta name="theme-color" content="#ffffff">
       <!-- End favicon for all platforms -->
 
-      <link rel="stylesheet" href="/css/main.ee40.css"/>
+      <link rel="stylesheet" href="/css/main.b4dd.css"/>
       <link href='http://fonts.googleapis.com/css?family=Abril+Fatface&text=gizra' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Hind:400,600,300,500' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600,800' rel='stylesheet' type='text/css'>
@@ -212,8 +212,8 @@
         </div>
       <div class="post-content">
 
-        <p>In the previous <a href="/content/drutnet-drupal-net-api">post</a> I&#39;ve introduced DrutNet API with an already compiled example, today I will show some code examples.
-Since last post I&#39;ve added a new method that allow file upload with Services, using the base-64 conversion, I will show you how this method works.</p>
+        <p>In the previous <a href="/content/drutnet-drupal-net-api">post</a> I&rsquo;ve introduced DrutNet API with an already compiled example, today I will show some code examples.
+Since last post I&rsquo;ve added a new method that allow file upload with Services, using the base-64 conversion, I will show you how this method works.</p>
 
 <!-- more -->
 
@@ -230,40 +230,40 @@ Since last post I&#39;ve added a new method that allow file upload with Services
 <li>Node Service</li></ul>
 </li>
 <li>After adding the libraries and enabling the modules we can start working, first we need to create an instance of the ServicesSettings class and then of the Sevices class  :
-```
+&ldquo;`
  DrutNET.ServicesSettings services_settings= new DrutNET.ServicesSettings();
- services_settings.DrupalURL = @"http://localhost/drupal-6.16/";
+ services_settings.DrupalURL = @&quot;http://localhost/drupal-6.16/&rdquo;;
  services_settings.UseSessionID = false;
  services_settings.CleanURL = true;
-```Here we define the connection settings, which include the path to your Drupal site, the type of security you have enabled in the services settings (only session ID is supported at this point) and clean URL settings.
-```
+&ldquo;`Here we define the connection settings, which include the path to your Drupal site, the type of security you have enabled in the services settings (only session ID is supported at this point) and clean URL settings.
+&rdquo;`
 DrutNET.Services service_connection = new DrutNET.Services(service_settings);
-```Here we create an instance of the services class using the settings class instance created before.
+&ldquo;`Here we create an instance of the services class using the settings class instance created before.
 </li><br>
 <li>Now we can login to Drupal :
-```
-If (service_connection.Login("username", "password"))
-  Console.Write("Login successfull");
+&rdquo;`
+If (service_connection.Login(&ldquo;username&rdquo;, &ldquo;password&rdquo;))
+  Console.Write(&ldquo;Login successfull&rdquo;);
 else
-  Console.Write("Login failed");
-```* Make sure that the user has permission for all the services functions that you intend to use.
+  Console.Write(&ldquo;Login failed&rdquo;);
+&ldquo;`* Make sure that the user has permission for all the services functions that you intend to use.
 </li><br>
 <li>Load and save a node :
-```
+&rdquo;`
 int nideID = 1;
 CookComputing.XmlRpc.XmlRpcStruct node = service_connection.NodeGet(nodeID);
-node["body"] = "My new text";
+node[&ldquo;body&rdquo;] = &ldquo;My new text&rdquo;;
 service_connection.NodeSave(node);
-```Here we use NodeGet method to load a node and then NodeSave method to save it back after making a change to the body field.
+&ldquo;`Here we use NodeGet method to load a node and then NodeSave method to save it back after making a change to the body field.
 </li><br>
 <li>Save a file to a node :
-```
- string filePath = @"c:\test.txt";
+&rdquo;`
+ string filePath = @&ldquo;c:\test.txt&rdquo;;
  int fileIndex = 0; // In case of multiple file field the index of the file.
  int nodeID = 1; // The node to attach the file to.
- string fieldName = "field_file" ; // CCK field name as defined in the content.
+ string fieldName = &ldquo;field_file&rdquo; ; // CCK field name as defined in the content.
  service_connection.FileUpload(filePath , fileIndex , nodeID , fieldName);
-```FileUpload method takes care of converting the file to base64 and also used both services FileSave and NodeSave.
+&ldquo;`FileUpload method takes care of converting the file to base64 and also used both services FileSave and NodeSave.
 </li></ol>
 
 
@@ -301,7 +301,7 @@ service_connection.NodeSave(node);
     </section>
     <section class="author-details">
       <div class="image-wrapper">
-        <img src="/images/team/avatars/bricel.8317.jpg" class="img-circle img-responsive">
+        <img src="/images/team/avatars/bricel.f3f2.jpg" class="img-circle img-responsive">
       </div>
       <div class="text-wrapper">
         <span class="name">Brice Lenfant</span>
@@ -379,7 +379,7 @@ service_connection.NodeSave(node);
 
 
 
-    <script src="/js/plugins.f180.js"></script>
+    <script src="/js/plugins.c51b.js"></script>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
 

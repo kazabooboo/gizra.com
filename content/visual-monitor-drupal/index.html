@@ -13,27 +13,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
       <!-- Favicon for all platforms -->
-      <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.b3df.png">
+      <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.3a41.png">
       <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-touch-icon-60x60.a84d.png">
       <link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-touch-icon-72x72.664d.png">
-      <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.faf5.png">
+      <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.20fe.png">
       <link rel="apple-touch-icon" sizes="114x114" href=/"images/favicons/apple-touch-icon-114x114.png">
-      <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.d810.png">
-      <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.1807.png">
-      <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.71bf.png">
-      <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.a9f0.png">
+      <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.842b.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.0175.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.f9ac.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.f24a.png">
       <link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.c391.png" sizes="32x32">
-      <link rel="icon" type="image/png" href="/images/favicons/favicon-194x194.e5f8.png" sizes="194x194">
+      <link rel="icon" type="image/png" href="/images/favicons/favicon-194x194.2d07.png" sizes="194x194">
       <link rel="icon" type="image/png" href="/images/favicons/favicon-96x96.8557.png" sizes="96x96">
-      <link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.0b72.png" sizes="192x192">
-      <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.7353.png" sizes="16x16">
+      <link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.6d91.png" sizes="192x192">
+      <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.a93c.png" sizes="16x16">
       <link rel="manifest" href="/images/favicons/manifest.json">
       <meta name="msapplication-TileColor" content="#000000">
       <meta name="msapplication-TileImage" content="/images/favicons/mstile-144x144.png">
       <meta name="theme-color" content="#ffffff">
       <!-- End favicon for all platforms -->
 
-      <link rel="stylesheet" href="/css/main.ee40.css"/>
+      <link rel="stylesheet" href="/css/main.b4dd.css"/>
       <link href='http://fonts.googleapis.com/css?family=Abril+Fatface&text=gizra' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Hind:400,600,300,500' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600,800' rel='stylesheet' type='text/css'>
@@ -212,9 +212,9 @@
         </div>
       <div class="post-content">
 
-        <p>In recent months I&#39;ve been demoing visual monitoring to many developers. The reaction was always positive, but I&#39;ve realized that not enough people have taken the step from recognizing the need to actually implementing it on their own projects.</p>
+        <p>In recent months I&rsquo;ve been demoing visual monitoring to many developers. The reaction was always positive, but I&rsquo;ve realized that not enough people have taken the step from recognizing the need to actually implementing it on their own projects.</p>
 
-<p>If you have been following my recent blog posts or tweets you&#39;ve probably noticed we are trying to bring visual monitoring along with <a href="http://shoov.io">Shoov</a> to the masses. To do so we&#39;re trying to reduce the complexity and codify our &quot;lessons learned&quot;.</p>
+<p>If you have been following my recent blog posts or tweets you&rsquo;ve probably noticed we are trying to bring visual monitoring along with <a href="http://shoov.io">Shoov</a> to the masses. To do so we&rsquo;re trying to reduce the complexity and codify our &ldquo;lessons learned&rdquo;.</p>
 
 <div class="thumbnail">
   <div class="img-wrapper">
@@ -252,7 +252,7 @@
 
 <!-- more -->
 
-<p>What&#39;s cool about using libraries such as WebdriverCSS in conjunction with 3rd party services such as BrowserStack or Sauce Labs is that you can write once, and execute multiple times in different environments.</p>
+<p>What&rsquo;s cool about using libraries such as WebdriverCSS in conjunction with 3rd party services such as BrowserStack or Sauce Labs is that you can write once, and execute multiple times in different environments.</p>
 <div class="highlight"><pre><code class="bash language-bash" data-lang="bash"><span class="c"># Run on Chrome 43.0 on Mac X 10.10</span>
 <span class="nv">PROVIDER_PREFIX</span><span class="o">=</span>saucelabs <span class="nv">SELECTED_CAPS</span><span class="o">=</span>chrome mocha
 
@@ -272,14 +272,14 @@
 <p>Visual monitoring best practices are beyond lines of code - they are about the mindset needed when approaching this task. Here are the important ones:</p>
 
 <ol>
-<li>Don&#39;t try to achieve 100% test coverage. Assuming that up until now you had 0 test coverage, it&#39;s probably fine to reach 40% - so don&#39;t feel bad when you <code>exclude</code> or <code>remove</code> the dynamic parts. Their <em>functionality</em> can be complimented by functional testing with Behat or CasperJs.</li>
-<li>Don&#39;t compromise by using PhantomJS. Your sites are being consumed by real people on real browsers. Use 3rd party services, or your own Selenium cloud to run tests. It&#39;s well worth the money.</li>
+<li>Don&rsquo;t try to achieve 100% test coverage. Assuming that up until now you had 0 test coverage, it&rsquo;s probably fine to reach 40% - so don&rsquo;t feel bad when you <code>exclude</code> or <code>remove</code> the dynamic parts. Their <em>functionality</em> can be complimented by functional testing with Behat or CasperJs.</li>
+<li>Don&rsquo;t compromise by using PhantomJS. Your sites are being consumed by real people on real browsers. Use 3rd party services, or your own Selenium cloud to run tests. It&rsquo;s well worth the money.</li>
 <li>Given the last point - the time the tests run should be considered as a resource. Having a gazillion tests would eat much of that resource. Try to find the balance: doing as little effort as possible, with as much gain as possible.</li>
-<li>Look (and contribute) to examples. The Drupal.org <a href="https://github.com/Gizra/drupal.org-shoov">monitoring example</a> is there for the community to learn. While the repo has been &quot;Shoovified&quot;, there&#39;s actually zero vendor lock-in - the WebdriverCSS code is valid with or without Shoov.</li>
+<li>Look (and contribute) to examples. The Drupal.org <a href="https://github.com/Gizra/drupal.org-shoov">monitoring example</a> is there for the community to learn. While the repo has been &ldquo;Shoovified&rdquo;, there&rsquo;s actually zero vendor lock-in - the WebdriverCSS code is valid with or without Shoov.</li>
 <li>Start simple. Visual monitoring is very powerful, but requires the time to master it. If you will overdo with lots of baseline images from the beginning you might need to adapt them very often until you will get the hang of it.</li>
 </ol>
 
-<h2>Shoov&#39;s Next Steps</h2>
+<h2>Shoov&rsquo;s Next Steps</h2>
 
 <p>Apart from adding a nicer design to the application, Pusher integration for real time notifications, and lots of smaller features, the Gizra devs are constantly trying to push code to other projects, namely <a href="https://github.com/RESTful-Drupal/restful">RESTful</a> and <a href="https://github.com/Gizra/generator-hedley">yo hedley</a>. We are hoping you could enjoy and use that work on your own Headless Drupal projects, and of course hope the community could contribute back.</p>
 
@@ -294,11 +294,11 @@
 
   </div>
   
-    <div class="caption">Shoov's dashboard.</div>
+    <div class="caption">Shoov&rsquo;s dashboard.</div>
   
 </div>
 
-<p>We&#39;ve also began work on a getting started tutorial, which will help guide developers through example to reach visual monitoring best practices nirvana.</p>
+<p>We&rsquo;ve also began work on a getting started tutorial, which will help guide developers through example to reach visual monitoring best practices nirvana.</p>
 
 
       </div>
@@ -335,7 +335,7 @@
     </section>
     <section class="author-details">
       <div class="image-wrapper">
-        <img src="/images/team/avatars/amitaibu.42a1.jpg" class="img-circle img-responsive">
+        <img src="/images/team/avatars/amitaibu.a340.jpg" class="img-circle img-responsive">
       </div>
       <div class="text-wrapper">
         <span class="name">Amitai Burstein</span>
@@ -413,7 +413,7 @@
 
 
 
-    <script src="/js/plugins.f180.js"></script>
+    <script src="/js/plugins.c51b.js"></script>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
 

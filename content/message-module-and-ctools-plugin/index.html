@@ -13,27 +13,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
       <!-- Favicon for all platforms -->
-      <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.b3df.png">
+      <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.3a41.png">
       <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-touch-icon-60x60.a84d.png">
       <link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-touch-icon-72x72.664d.png">
-      <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.faf5.png">
+      <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.20fe.png">
       <link rel="apple-touch-icon" sizes="114x114" href=/"images/favicons/apple-touch-icon-114x114.png">
-      <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.d810.png">
-      <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.1807.png">
-      <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.71bf.png">
-      <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.a9f0.png">
+      <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.842b.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.0175.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.f9ac.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.f24a.png">
       <link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.c391.png" sizes="32x32">
-      <link rel="icon" type="image/png" href="/images/favicons/favicon-194x194.e5f8.png" sizes="194x194">
+      <link rel="icon" type="image/png" href="/images/favicons/favicon-194x194.2d07.png" sizes="194x194">
       <link rel="icon" type="image/png" href="/images/favicons/favicon-96x96.8557.png" sizes="96x96">
-      <link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.0b72.png" sizes="192x192">
-      <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.7353.png" sizes="16x16">
+      <link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.6d91.png" sizes="192x192">
+      <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.a93c.png" sizes="16x16">
       <link rel="manifest" href="/images/favicons/manifest.json">
       <meta name="msapplication-TileColor" content="#000000">
       <meta name="msapplication-TileImage" content="/images/favicons/mstile-144x144.png">
       <meta name="theme-color" content="#ffffff">
       <!-- End favicon for all platforms -->
 
-      <link rel="stylesheet" href="/css/main.ee40.css"/>
+      <link rel="stylesheet" href="/css/main.b4dd.css"/>
       <link href='http://fonts.googleapis.com/css?family=Abril+Fatface&text=gizra' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Hind:400,600,300,500' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600,800' rel='stylesheet' type='text/css'>
@@ -213,17 +213,17 @@
       <div class="post-content">
 
         <p>If I may quote myself:
- <blockquote>I&#39;m thinking, _which is easier than actually sitting down and writing a patch, that it would be neat if CTools exportables plugin had a uniform UI that modules such as Context, Message and others to come, could use. </blockquote></p>
+ <blockquote>I&rsquo;m thinking, _which is easier than actually sitting down and writing a patch, that it would be neat if CTools exportables plugin had a uniform UI that modules such as Context, Message and others to come, could use. </blockquote></p>
 
-<p>We&#39;re in a scratch your own itch world aren&#39;t we, huh? So I&#39;ve created a CTools repository in github, created a branch called export-ui and it resulted with this <del>getting-close-to-commit</del> committed <a href="http://drupal.org/node/787644">patch</a>.</p>
+<p>We&rsquo;re in a scratch your own itch world aren&rsquo;t we, huh? So I&rsquo;ve created a CTools repository in github, created a branch called export-ui and it resulted with this <del>getting-close-to-commit</del> committed <a href="http://drupal.org/node/787644">patch</a>.</p>
 
-<p>When I started writing <a href="http://drupal.org/project/message">Message</a> I had some understanding of how CTools exportables work but having merlinofchaos review my work, explain some of his thoughts and providing his golden code, really changed the way I look at writing generic and reusable code. In fact, I&#39;ve decided to overhaul much of the Message module for it to be more inline with CTools&#39; standards.</p>
+<p>When I started writing <a href="http://drupal.org/project/message">Message</a> I had some understanding of how CTools exportables work but having merlinofchaos review my work, explain some of his thoughts and providing his golden code, really changed the way I look at writing generic and reusable code. In fact, I&rsquo;ve decided to overhaul much of the Message module for it to be more inline with CTools&#39; standards.</p>
 
-<p>Message was a inspired by Context module. Context uses some object oriented, so I&#39;ve copied that too. That&#39;s where I got it wrong - because my use case was a bit different. OOP is powerful _when it&#39;s needed but sometimes it might be an overkiller. Ok, so no OOP, but I still needed a pluggable system. CTools has the $plugin concept. Its almost the same as having an info hook, only it&#39;s without a hook - you place it directly on an <code>inc</code> file that CTools will include for you when its needed. But the &quot;trick&quot; that I&#39;ve learned - and there shouldn&#39;t be any drum rolls cause it might be obvious - is to use a &quot;process&quot; function that populates the $plugin with defaults. The defaults can be for example the callbacks that will be used, the Views handlers that will be automatically declared, the text strings, the allowed operations, etc&#39;. Basically, when you use the $plugin, you should be thinking how an extending module can alter the module&#39;s behavior by simple changes.</p>
+<p>Message was a inspired by Context module. Context uses some object oriented, so I&rsquo;ve copied that too. That&rsquo;s where I got it wrong - because my use case was a bit different. OOP is powerful _when it&rsquo;s needed but sometimes it might be an overkiller. Ok, so no OOP, but I still needed a pluggable system. CTools has the $plugin concept. Its almost the same as having an info hook, only it&rsquo;s without a hook - you place it directly on an <code>inc</code> file that CTools will include for you when its needed. But the &ldquo;trick&rdquo; that I&rsquo;ve learned - and there shouldn&rsquo;t be any drum rolls cause it might be obvious - is to use a &ldquo;process&rdquo; function that populates the $plugin with defaults. The defaults can be for example the callbacks that will be used, the Views handlers that will be automatically declared, the text strings, the allowed operations, etc&#39;. Basically, when you use the $plugin, you should be thinking how an extending module can alter the module&rsquo;s behavior by simple changes.</p>
 
 <!-- more -->
 
-<p>For example here&#39;s all the code needed to define an Organic groups realm, which means you can make messages accessible only to users that are subscribed to a group:</p>
+<p>For example here&rsquo;s all the code needed to define an Organic groups realm, which means you can make messages accessible only to users that are subscribed to a group:</p>
 <div class="highlight"><pre><code class="php language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="c1">// Message plugin deceleration.</span>
 <span class="nv">$plugin</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
@@ -281,7 +281,7 @@
     </section>
     <section class="author-details">
       <div class="image-wrapper">
-        <img src="/images/team/avatars/amitaibu.42a1.jpg" class="img-circle img-responsive">
+        <img src="/images/team/avatars/amitaibu.a340.jpg" class="img-circle img-responsive">
       </div>
       <div class="text-wrapper">
         <span class="name">Amitai Burstein</span>
@@ -359,7 +359,7 @@
 
 
 
-    <script src="/js/plugins.f180.js"></script>
+    <script src="/js/plugins.c51b.js"></script>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
 

@@ -2,6 +2,15 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
     <url>
+      <loc>http://www.gizra.com/content/migration-best-practices</loc>
+      
+        <lastmod>2016-04-01T00:00:00+03:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
       <loc>http://www.gizra.com/content/docker-travis-ci</loc>
       
         <lastmod>2016-03-30T00:00:00+03:00</lastmod>
@@ -984,15 +993,7 @@
   
   
     <url>
-      <loc>http://www.gizra.com/rss.xml</loc>
-     </url>
-  
-    <url>
-      <loc>http://www.gizra.com/sitemap.xml</loc>
-     </url>
-  
-    <url>
-      <loc>http://www.gizra.com/taxonomy/term/1/all/feed/index.html</loc>
+      <loc>http://www.gizra.com/404.html</loc>
      </url>
   
     <url>
@@ -1000,7 +1001,7 @@
      </url>
   
     <url>
-      <loc>http://www.gizra.com/404.html</loc>
+      <loc>http://www.gizra.com/elm-rss/index.html</loc>
      </url>
   
     <url>
@@ -1008,11 +1009,7 @@
      </url>
   
     <url>
-      <loc>http://www.gizra.com/tags.html</loc>
-     </url>
-  
-    <url>
-      <loc>http://www.gizra.com/services/hr/index.html</loc>
+      <loc>http://www.gizra.com/rss.xml</loc>
      </url>
   
     <url>
@@ -1020,11 +1017,23 @@
      </url>
   
     <url>
-      <loc>http://www.gizra.com/team/index.html</loc>
+      <loc>http://www.gizra.com/services/hr/index.html</loc>
      </url>
   
     <url>
-      <loc>http://www.gizra.com/elm-rss/index.html</loc>
+      <loc>http://www.gizra.com/sitemap.xml</loc>
+     </url>
+  
+    <url>
+      <loc>http://www.gizra.com/tags.html</loc>
+     </url>
+  
+    <url>
+      <loc>http://www.gizra.com/taxonomy/term/1/all/feed/index.html</loc>
+     </url>
+  
+    <url>
+      <loc>http://www.gizra.com/team/index.html</loc>
      </url>
   
     <url>

@@ -13,27 +13,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
       <!-- Favicon for all platforms -->
-      <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.b3df.png">
+      <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.3a41.png">
       <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-touch-icon-60x60.a84d.png">
       <link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-touch-icon-72x72.664d.png">
-      <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.faf5.png">
+      <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.20fe.png">
       <link rel="apple-touch-icon" sizes="114x114" href=/"images/favicons/apple-touch-icon-114x114.png">
-      <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.d810.png">
-      <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.1807.png">
-      <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.71bf.png">
-      <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.a9f0.png">
+      <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.842b.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.0175.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.f9ac.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.f24a.png">
       <link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.c391.png" sizes="32x32">
-      <link rel="icon" type="image/png" href="/images/favicons/favicon-194x194.e5f8.png" sizes="194x194">
+      <link rel="icon" type="image/png" href="/images/favicons/favicon-194x194.2d07.png" sizes="194x194">
       <link rel="icon" type="image/png" href="/images/favicons/favicon-96x96.8557.png" sizes="96x96">
-      <link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.0b72.png" sizes="192x192">
-      <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.7353.png" sizes="16x16">
+      <link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.6d91.png" sizes="192x192">
+      <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.a93c.png" sizes="16x16">
       <link rel="manifest" href="/images/favicons/manifest.json">
       <meta name="msapplication-TileColor" content="#000000">
       <meta name="msapplication-TileImage" content="/images/favicons/mstile-144x144.png">
       <meta name="theme-color" content="#ffffff">
       <!-- End favicon for all platforms -->
 
-      <link rel="stylesheet" href="/css/main.ee40.css"/>
+      <link rel="stylesheet" href="/css/main.b4dd.css"/>
       <link href='http://fonts.googleapis.com/css?family=Abril+Fatface&text=gizra' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Hind:400,600,300,500' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600,800' rel='stylesheet' type='text/css'>
@@ -219,7 +219,7 @@ Drupal 7 has Message-subscribe &amp; Message-notify</p>
 
 <p>If you know Message you already know that some development skills, or knowing Rules really really good are needed. This post will go over the main concepts and flow of the notification process.</p>
 
-<p>Message-subscribe, just like Message module has zero knowledge about your business logic - it is up to you to implement the Message creation. What Message subscribe gives you, though, is one simple function your implementing module will call -- and that’s it. It will take care of it from there.</p>
+<p>Message-subscribe, just like Message module has zero knowledge about your business logic - it is up to you to implement the Message creation. What Message subscribe gives you, though, is one simple function your implementing module will call &ndash; and that’s it. It will take care of it from there.</p>
 
 <!-- more -->
 
@@ -256,7 +256,7 @@ Drupal 7 has Message-subscribe &amp; Message-notify</p>
 
 <h3>Getting “context”</h3>
 
-<p>Drupal abuses the word context with so many meanings. Admittedly Message-subscribe is now also guilty. <code>message_subscribe_get_basic_context()</code> gets the entity type, in our case the comment, and extracts the related context -- the comment author, the node its related to, the taxonomy terms related to the node, the OG groups related to those nodes (you can add our own context as-well).
+<p>Drupal abuses the word context with so many meanings. Admittedly Message-subscribe is now also guilty. <code>message_subscribe_get_basic_context()</code> gets the entity type, in our case the comment, and extracts the related context &ndash; the comment author, the node its related to, the taxonomy terms related to the node, the OG groups related to those nodes (you can add our own context as-well).
 This context will help us in finding all the users that are subscribed directly or _indirectly to our node.</p>
 
 <h3>Getting the subscribers</h3>
@@ -267,7 +267,7 @@ This context will help us in finding all the users that are subscribed directly 
 
 <p>Before we talk about sending notifications, note that I never wrote the word “email”. Message-notify is a pluggable module, that allows you to add “Message-notifiers”. There’s a default implementation for email, but you are also able to add Text-messages, IRC, Fax or Postal-pigeons.</p>
 
-<p>So, Message-subscribe iterates over all the users, and all over the notifiers, as in fact a user can get the same Message as email _and as a Text-message. I say same _Message as in same Message entity, not same message as message text -- In Message-notify you can have different text for different notifiers thanks to the module’s integration with view-modes.</p>
+<p>So, Message-subscribe iterates over all the users, and all over the notifiers, as in fact a user can get the same Message as email _and as a Text-message. I say same _Message as in same Message entity, not same message as message text &ndash; In Message-notify you can have different text for different notifiers thanks to the module’s integration with view-modes.</p>
 
 <h3>Bonus</h3>
 
@@ -312,7 +312,7 @@ This context will help us in finding all the users that are subscribed directly 
     </section>
     <section class="author-details">
       <div class="image-wrapper">
-        <img src="/images/team/avatars/amitaibu.42a1.jpg" class="img-circle img-responsive">
+        <img src="/images/team/avatars/amitaibu.a340.jpg" class="img-circle img-responsive">
       </div>
       <div class="text-wrapper">
         <span class="name">Amitai Burstein</span>
@@ -390,7 +390,7 @@ This context will help us in finding all the users that are subscribed directly 
 
 
 
-    <script src="/js/plugins.f180.js"></script>
+    <script src="/js/plugins.c51b.js"></script>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
 

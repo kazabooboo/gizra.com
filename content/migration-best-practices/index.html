@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        
+    
+
+<title>Migration Best Practices</title>
+
+        <meta name="description" content="">
+        <meta name="keywords" content="Drupal">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+      <!-- Favicon for all platforms -->
+      <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.3a41.png">
+      <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-touch-icon-60x60.a84d.png">
+      <link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-touch-icon-72x72.664d.png">
+      <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.20fe.png">
+      <link rel="apple-touch-icon" sizes="114x114" href=/"images/favicons/apple-touch-icon-114x114.png">
+      <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.842b.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.0175.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.f9ac.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.f24a.png">
+      <link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.c391.png" sizes="32x32">
+      <link rel="icon" type="image/png" href="/images/favicons/favicon-194x194.2d07.png" sizes="194x194">
+      <link rel="icon" type="image/png" href="/images/favicons/favicon-96x96.8557.png" sizes="96x96">
+      <link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.6d91.png" sizes="192x192">
+      <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.a93c.png" sizes="16x16">
+      <link rel="manifest" href="/images/favicons/manifest.json">
+      <meta name="msapplication-TileColor" content="#000000">
+      <meta name="msapplication-TileImage" content="/images/favicons/mstile-144x144.png">
+      <meta name="theme-color" content="#ffffff">
+      <!-- End favicon for all platforms -->
+
+      <link rel="stylesheet" href="/css/main.b4dd.css"/>
+      <link href='http://fonts.googleapis.com/css?family=Abril+Fatface&text=gizra' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Hind:400,600,300,500' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600,800' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+      <!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-6558346-3', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+      <!-- Begin Inspectlet Embed Code -->
+      <script type="text/javascript" id="inspectletjs">
+      window.__insp = window.__insp || [];
+      __insp.push(['wid', 314054580]);
+      (function() {
+      function ldinsp(){if(typeof window.__inspld != "undefined") return; window.__inspld = 1; var insp = document.createElement('script'); insp.type = 'text/javascript'; insp.async = true; insp.id = "inspsync"; insp.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://cdn.inspectlet.com/inspectlet.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(insp, x); };
+      setTimeout(ldinsp, 500); document.readyState != "complete" ? (window.attachEvent ? window.attachEvent('onload', ldinsp) : window.addEventListener('load', ldinsp, false)) : ldinsp();
+      })();
+      </script>
+      <!-- End Inspectlet Embed Code -->
+
+    </head>
+    <body>
+
+    <!-- Main content -->
+    
+  
+
+
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+      
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+
+<div id="post-page">
+  <header id="header-post">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-10 col-sm-offset-1">
+          
+  
+
+<nav id="nav" role="navigation" class="navbar navbar-default">
+  <div class="navbar-header">
+    <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+  </div>
+  <div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav">
+      <li><a href="/#about" class="smooth-scroll-to">About Us</a></li>
+      <li><a href="/team">Meet the Team</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="#contact" class="smooth-scroll-to">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+  <h2 class="gizra-logo"><a href="/">gizra</a></h2>
+
+
+
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="content-container">
+    <article class="post">
+      <h1><a href="/content/migration-best-practices">Migration Best Practices </a></h1>
+      <div class="date">01 Apr 2016, By Helena Eksler</div>
+      <div class="tags">
+        <img src="/images/post/tag-icon-small.15a8.png" class="tags-icon"/>
+        <ul class="inline">
+          
+          
+
+  
+    
+      <li><a href="/tags.html#Drupal-planet-ref">Drupal-planet</a></li>
+    
+      <li><a href="/tags.html#Migrate-ref">Migrate</a></li>
+    
+      <li><a href="/tags.html#QA-ref">QA</a></li>
+    
+      <li><a href="/tags.html#Behat-ref">Behat</a></li>
+    
+  
+
+
+        </ul>
+        </div>
+      <div class="post-content">
+
+        <p>The wonderful Migrate module is used in every one of our projects, whether we have actual legacy
+content, or &ldquo;just&rdquo; want to create dummy and <a href="http://www.gizra.com/content/xss-attack/">XSS content</a>.</p>
+
+<p>So you received from your client a scary looking SQL dump or Excel file with old website data. Where should you start?</p>
+
+<p>Here are some of the best practices we apply in Gizra to ensure a smooth
+migration project,
+with the least possible amount of surprises or bugs.</p>
+
+<!-- more -->
+
+<h2>Discovery phase</h2>
+
+<p>A good discovery phase before doing any actual coding is key
+to the success of the project.
+We believe it&rsquo;s a good idea to do it as part of the <a href="http://www.gizra.com/content/budget-goggles/">price estimation</a>.</p>
+
+<h3>Understand the data</h3>
+
+<p>The first step is to understand how to map the old data into Drupal&rsquo;s entities - which data should be a node and which one a taxonomy term.<br>
+As always, we try to map the &ldquo;real world&rdquo; into Drupal entities.
+An article, for example, is obviously a piece of content, so it needs to be a node,
+and not a taxonomy term. However there are more aspects to consider like the number of fields, semantic
+meaning of the content, and whether hierarchy is needed or not. It&rsquo;s also worth noting that
+this is the exact time to think about improvements to the data structure.</p>
+
+<p>There are some cases where content types were separate in the old website for
+historical reasons that can be merged and vice versa. Our
+rule of thumb is that the content type should try to map as much as possible the reality.
+That is, a &ldquo;case study&rdquo; content type might have very similar fields to an
+&ldquo;article&rdquo; content type but semantically
+they are different, thus they should be two different content types.</p>
+
+<p>After you decide what fields your content type will have, pay careful attention
+to the data itself. If an article &ldquo;topic&rdquo; is a set of values that are constantly
+repeating, then naturally you would prefer to convert the field to a select list or even
+to a proper taxonomy term. Notice variants in the same data (&ldquo;Politics&rdquo; vs &ldquo;politics&rdquo;)
+and make the extra effort to sanitize and clean the data.</p>
+
+<h3>Don&rsquo;t migrate what you don&rsquo;t need</h3>
+
+<p>Not all of the existing data really needs to be migrated. For example, past events
+may not add much or any value to the new site. It&rsquo;s up to you to present to the
+client the possibility to save some money on a low impact migrate and shift resources
+to something more important.</p>
+
+<h3>Don&rsquo;t go fully automatic for nothing</h3>
+
+<p>Doing manual migration is fine. As part of the discovery phase figure out how
+many items per content type need to be migrated. If it is less than 50 offer
+the client to do it manually. Yes, you may &ldquo;lose&rdquo; some billable hours, but you
+gained the client&rsquo;s trust.</p>
+
+<h2>Development phase</h2>
+
+<h3>Convert to SQL</h3>
+
+<p>If you received your data in csv format it is advised to convert it to SQL. Your
+migrate may work fine with a few hundreds lines, but it will choke if you have
+more - there&rsquo;s no primary key column in CSV, so it basically loops over the
+same rows again and again.</p>
+
+<p>SQL also provides another layer of safety, since it won&rsquo;t accept wrong data. For example strings cannot be inserted into <code>Int</code> columns, so if you get
+an SQL error, you can easily find where the data is corrupted.</p>
+
+<p>We got you covered with our <a href="https://github.com/Gizra/csv2sql#csv-to-sql-for-drupal">csv2sql</a>.</p>
+
+<h2>Content during development</h2>
+
+<p>While you are developing the platform and constantly rebuilding the site from scratch,
+of course you don’t want to wait hours for the import of all the data.
+You can add some dummy data, but a better approach would be to take about 50 rows from each table/content type.
+However, don&rsquo;t take 50 consecutive rows, but rather take random rows to increase
+the chances of hitting data corruption or just plain bugs in development instead of in production.</p>
+
+<h2>Migrations testing</h2>
+
+<p>Automatic tests are great, right?<br>
+They catch bugs, and make you feel more confident about your code base, right?  </p>
+
+<p>So write automatic tests for your migration scripts, and wire them to Travis CI!</p>
+
+<p>It’s obvious that when you have a huge amount of content you can’t check
+every single piece of content. But even little of coverage is better than none.</p>
+
+<p>Start writing tests during the development against smaller subset of content
+(e.g. those 50 rows mentioned earlier). There is no need to create complicated
+scenarios for migration of content testing, you should simply check that the fields
+contain the correct data (texts, images), and that references are set correctly.</p>
+
+<p>The crucial part in the tests requires your QA person to <em>visually</em> compare the
+old data with the new data. Once this is done, your automatic tests make sure there is no regression.</p>
+
+<p>And please, don&rsquo;t think writing those tests is a waste of time. On the contrary,
+it <em>saves</em> you so much effort chasing horrible regressions. Here&rsquo;s an example of a <a href="http://www.gizra.com/content/behat-the-right-way/">properly
+written</a> Behat test.</p>
+<div class="highlight"><pre><code class="gherkin language-gherkin" data-lang="gherkin"><span class="nt">@api</span><span class="nf"></span>
+<span class="nf">  </span><span class="k">Scenario Outline:</span><span class="nf"> Login to site, and check a article content.</span>
+<span class="k">    Given </span><span class="nf">I login with user &quot;</span><span class="s">test</span><span class="nf">&quot;</span>
+<span class="nf">    </span><span class="k">When </span><span class="nf"> I visit &quot;</span><span class="nv">&lt;Title&gt;</span><span class="nf">&quot; node of type &quot;</span><span class="s">article</span><span class="nf">&quot;</span>
+<span class="nf">    </span><span class="k">Then </span><span class="nf"> I should see the title &quot;</span><span class="nv">&lt;Title&gt;</span><span class="nf">&quot;</span>
+<span class="nf">    </span><span class="k">And </span><span class="nf">  I should see the &quot;</span><span class="s">description</span><span class="nf">&quot; field &quot;</span><span class="nv">&lt;Description&gt;</span><span class="nf">&quot;</span>
+<span class="nf">    </span><span class="k">And </span><span class="nf">  I should see the &quot;</span><span class="s">tag</span><span class="nf">&quot; field &quot;</span><span class="nv">&lt;Tag&gt;</span><span class="nf">&quot;</span>
+<span class="nf">    </span><span class="k">And </span><span class="nf">  I should see &quot;</span><span class="nv">&lt;Number of pictures&gt;</span><span class="nf">&quot; pictures in &quot;</span><span class="s">images</span><span class="nf">&quot; section</span>
+
+
+<span class="nf">  </span><span class="k">Examples:</span>
+<span class="k">    |</span><span class="nv"> Title</span><span class="k">       |</span><span class="nv">          Description</span><span class="k">     |</span><span class="nv">      Tag</span><span class="k">      |</span><span class="nv"> Number of pictures</span><span class="k"> |</span><span class="nf"></span>
+<span class="k">    |</span><span class="s"> Curabitur</span><span class="k">   |</span><span class="s"> Nam sed ex vitae arcu</span><span class="k">    |</span><span class="s"> Education</span><span class="k">     |</span><span class="s"> 1</span><span class="k">                  |</span><span class="nf"></span>
+<span class="k">    |</span><span class="s"> Quisque</span><span class="k">     |</span><span class="s"> Praesent maximus a mi si</span><span class="k"> |</span><span class="s"> Science</span><span class="k">       |</span><span class="s"> 0</span><span class="k">                  |</span><span class="nf"></span>
+<span class="k">    |</span><span class="s"> Lorem ipsum</span><span class="k"> |</span><span class="s"> Aenean sem lectus, porta</span><span class="k"> |</span><span class="s"> Entertainment</span><span class="k"> |</span><span class="s"> 2</span><span class="k">                  |</span>
+</code></pre></div>
+<p>Of course, don&rsquo;t forget that when the migration is ready, run some final tests
+against the site with all the content.</p>
+
+<div class="thumbnail">
+  <div class="img-wrapper">
+
+    
+
+    
+      <img src="http://www.gizra.com/assets/images/posts/migration-best-practices/image1.jpg">
+    
+
+  </div>
+  
+</div>
+
+<h2>Getting the data for testing</h2>
+
+<p>Since you will migrate data from SQL tables (thanks to csv2sql), it should be easy
+to get data already prepared for tests using MySQL queries in phpMyAdmin.</p>
+
+<p>Here is an example of an SQL query to get data from the sql table which will take
+the <code>_title</code> and <code>_description</code> from each 100th line of the <code>_raw_article</code> table.</p>
+
+<p>The sql query selects the fields you want to check in your automatic test from
+every 100th line, and adds empty placeholders (i.e. <code>leftPipe</code> and <code>rightPipe</code>)
+that will be converted to pipes in the beginning
+and in the end of each line during the export.</p>
+<div class="highlight"><pre><code class="sql language-sql" data-lang="sql"><span class="k">SELECT</span> <span class="s1">&#39;&#39;</span> <span class="k">as</span> <span class="n">leftPipe</span><span class="p">,</span> <span class="o">`</span><span class="n">_title</span><span class="o">`</span><span class="p">,</span><span class="o">`</span><span class="n">_description</span><span class="o">`</span><span class="p">,</span> <span class="s1">&#39;&#39;</span> <span class="k">as</span> <span class="n">rightPipe</span> <span class="k">FROM</span> <span class="o">`</span><span class="n">_raw_article</span><span class="o">`</span> <span class="k">WHERE</span> <span class="p">(</span><span class="o">`</span><span class="n">_raw_video</span><span class="o">`</span><span class="p">.</span><span class="o">`</span><span class="n">__id</span><span class="o">`</span> <span class="o">%</span> <span class="mi">100</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</code></pre></div>
+<p>Now you can use phpMyAdmin to export the result table to CSV format. You can download the data as a CSV file or directly copy it:</p>
+
+<div class="thumbnail">
+  <div class="img-wrapper">
+
+    
+
+    
+      <img src="http://www.gizra.com/assets/images/posts/migration-best-practices/image3.jpg">
+    
+
+  </div>
+  
+    <div class="caption">Export result of the query.</div>
+  
+</div>
+
+<div class="thumbnail">
+  <div class="img-wrapper">
+
+    
+
+    
+      <img src="http://www.gizra.com/assets/images/posts/migration-best-practices/image4.jpg">
+    
+
+  </div>
+  
+    <div class="caption">Use custom settings.</div>
+  
+</div>
+
+<div class="thumbnail">
+  <div class="img-wrapper">
+
+    
+
+    
+      <img src="http://www.gizra.com/assets/images/posts/migration-best-practices/image5.jpg">
+    
+
+  </div>
+  
+    <div class="caption">Use CSV format, separate columns with pipes.</div>
+  
+</div>
+
+<p>Here&rsquo;s the output you will get, ready to be added to your Behat test:</p>
+<div class="highlight"><pre><code class="gherkin language-gherkin" data-lang="gherkin"><span class="k">  |</span><span class="s"> Ludwig Blum</span><span class="k">    |</span><span class="s"> The Israeli Ambassador</span><span class="k"> |</span><span class="nf"></span>
+<span class="k">  |</span><span class="s"> Julia Lagusker</span><span class="k"> |</span><span class="s"> Julia Lagusker</span><span class="k">         |</span><span class="nf"></span>
+<span class="k">  |</span><span class="s"> Noah Heymann</span><span class="k">   |</span><span class="s"> Interview the artist</span><span class="k">   |</span>
+</code></pre></div>
+<h2>Known pitfalls</h2>
+
+<ul>
+<li>Some images may be missing. A <a href="https://gist.github.com/HelenaEksler/e01a3572afc39f189ecc">bash script</a>, for example, can help you identify which.</li>
+<li>The text of content may be polluted with messy HTML. Worse, it may even have broken links. Don&rsquo;t leave it to the end and deal with this early on, as
+it can be a tough one.</li>
+<li>If your data should be translated decide in advance what to do if some
+translated items are missing.</li>
+</ul>
+
+<p>That&rsquo;s it, I&rsquo;d love to hear other best practices devs are applying to their migration projects.</p>
+
+
+      </div>
+    </article>
+    <section class="post-nav">
+      <div class="row">
+        <div class="col-xs-6 previous">
+          
+          <div class="text-capitalize">
+            <a href="/content/docker-travis-ci">
+              Previous
+              <span class="visible-xs"> post</span>
+            </a>
+          </div>
+          <a href="/content/docker-travis-ci" class="prev-text">
+            <span class="hidden-xs">Docker and Travis-CI</span>
+          </a>
+          
+        </div>
+        <div class="col-xs-6 next">
+          
+        </div>
+      </div>
+    </section>
+    <section class="author-details">
+      <div class="image-wrapper">
+        <img src="/images/team/avatars/HelenaEksler.e3c9.jpg" class="img-circle img-responsive">
+      </div>
+      <div class="text-wrapper">
+        <span class="name">Helena Eksler</span>
+        
+        <div class="title">Team Lead</div>
+        <div class="bio">Cooking well, doesn't matter - dinner or code.</div>
+      </div>
+    </section>
+    <section>
+      <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'gizra';
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+    </section>
+  </div>
+</div>
+
+
+    <!--Footer -->
+    
+  <div id="contact">
+    <footer id="footer">
+      <div class="footer-wrapper">
+        <div class="background">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12">
+                <h2 class="title">Talk to us</h2>
+                <div class="clearfix">
+                  <address>
+                    <div class="strong">Israel Headquarters</div>
+                    <span>5 Brenner Street, Tel Aviv</span>
+                      <a class="telephone" href="tel:+97233731222">+972-3-3731222</a>
+                    <a class="email" href="mailto:info@gizra.com">info@gizra.com</a>
+                  </address>
+                  <address class="separator">
+                    <div class="strong">United States Office</div>
+                    <span>157 Columbus Avenue, 4th Floor, New York, NY 10023</span>
+                    <a class="telephone" href="tel:+13476864508">347-686-4508</a>
+                    <a class="email" href="mailto:usoffice@gizra.com">usoffice@gizra.com</a>
+                  </address>
+                  <div class="separator social-links">
+                    <span class="link github">
+                      <a href="https://github.com/Gizra" target="_blank" title="Gizra's Github Account"><i class="fa fa-github-square"></i></a>
+                    </span>
+                    <span class="link twitter">
+                      <a href="https://twitter.com/gizra_drupal" target="_blank" title="Gizra's Twitter Account"><i class="fa fa-twitter-square"></i></a>
+                    </span>
+                    <span class="link linkedin">
+                      <a href="https://www.linkedin.com/company/gizra-ltd" target="_blank" title="Gizra's LinkedIn Page"><i class="fa fa-linkedin-square"></i></a>
+                    </span>
+                    <span class="link facebook">
+                      <a href="https://www.facebook.com/gizraltd/timeline" target="_blank" title="Gizra's Facebook Page"><i class="fa fa-facebook-square"></i></a>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+
+
+    <script src="/js/plugins.c51b.js"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+
+    <script src="/js/scripts.ddd6.js"></script>
+    </body>
+</html>

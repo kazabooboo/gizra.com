@@ -13,27 +13,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
       <!-- Favicon for all platforms -->
-      <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.b3df.png">
+      <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.3a41.png">
       <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-touch-icon-60x60.a84d.png">
       <link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-touch-icon-72x72.664d.png">
-      <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.faf5.png">
+      <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.20fe.png">
       <link rel="apple-touch-icon" sizes="114x114" href=/"images/favicons/apple-touch-icon-114x114.png">
-      <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.d810.png">
-      <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.1807.png">
-      <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.71bf.png">
-      <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.a9f0.png">
+      <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.842b.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.0175.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.f9ac.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.f24a.png">
       <link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.c391.png" sizes="32x32">
-      <link rel="icon" type="image/png" href="/images/favicons/favicon-194x194.e5f8.png" sizes="194x194">
+      <link rel="icon" type="image/png" href="/images/favicons/favicon-194x194.2d07.png" sizes="194x194">
       <link rel="icon" type="image/png" href="/images/favicons/favicon-96x96.8557.png" sizes="96x96">
-      <link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.0b72.png" sizes="192x192">
-      <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.7353.png" sizes="16x16">
+      <link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.6d91.png" sizes="192x192">
+      <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.a93c.png" sizes="16x16">
       <link rel="manifest" href="/images/favicons/manifest.json">
       <meta name="msapplication-TileColor" content="#000000">
       <meta name="msapplication-TileImage" content="/images/favicons/mstile-144x144.png">
       <meta name="theme-color" content="#ffffff">
       <!-- End favicon for all platforms -->
 
-      <link rel="stylesheet" href="/css/main.ee40.css"/>
+      <link rel="stylesheet" href="/css/main.b4dd.css"/>
       <link href='http://fonts.googleapis.com/css?family=Abril+Fatface&text=gizra' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Hind:400,600,300,500' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600,800' rel='stylesheet' type='text/css'>
@@ -214,20 +214,20 @@
 
         <p>As we dive deeper into visual regression testing in our development workflow we realize a sad truth: on average, we break our own CSS every week and a half.</p>
 
-<p>Don&#39;t feel bad for us, as in fact I&#39;d argue that it&#39;s pretty common across all web projects - they just don&#39;t know it.  It seems we all need a system that will tell us when we break our CSS.</p>
+<p>Don&rsquo;t feel bad for us, as in fact I&rsquo;d argue that it&rsquo;s pretty common across all web projects - they just don&rsquo;t know it.  It seems we all need a system that will tell us when we break our CSS.</p>
 
-<p>While we don&#39;t know of a single (good) system that does this, we were able to connect together a few (good) systems to get just that, with the help of:
+<p>While we don&rsquo;t know of a single (good) system that does this, we were able to connect together a few (good) systems to get just that, with the help of:
 Travis-CI, <a href="https://github.com/webdriverio/webdrivercss">webdriverCSS</a>, <a href="http://shoov.io/">Shoov.io</a>, BrowserStack/Sauce Labs, and <a href="https://ngrok.com/">ngrok</a>. Oh my!</p>
 
-<p>Don&#39;t be alarmed by the long list. Each one of these does one thing very well, and combining them together was proven to be not too complicated, nor too costly.</p>
+<p>Don&rsquo;t be alarmed by the long list. Each one of these does one thing very well, and combining them together was proven to be not too complicated, nor too costly.</p>
 
-<p>You can jump right into the <a href="https://github.com/Gizra/Gizra/blob/master/.travis.yml">.travis</a> file of the Gizra repo to see its configuration, or check the <a href="https://github.com/Gizra/Gizra/blob/master/ui-tests/test/tests.js#L36-L37">webdriverCSS</a> test. Here&#39;s the high level overview of what we&#39;re doing:</p>
+<p>You can jump right into the <a href="https://github.com/Gizra/Gizra/blob/master/.travis.yml">.travis</a> file of the Gizra repo to see its configuration, or check the <a href="https://github.com/Gizra/Gizra/blob/master/ui-tests/test/tests.js#L36-L37">webdriverCSS</a> test. Here&rsquo;s the high level overview of what we&rsquo;re doing:</p>
 
 <p><a href="http://gizra.com">Gizra.com</a> is built on Jekyll but visual regression could be executed on every site, regardless of the underlying technology. Travis is there to help us build a local installation. Travis also allows adding encrypted keys, so even though the repo is public, we were able to add our Shoov.io and ngrok access tokens in a secure way.</p>
 
 <p>We want to use services such as <a href="http://www.browserstack.com/">BrowserStack</a> or <a href="https://saucelabs.com/">Sauce-Labs</a> to test our local installation on different browsers (e.g. latest chrome and IE11). For that we need to have an external URL accessible by the outside world, which is where ngrok comes in: <code>ngrok http -log=stdout -subdomain=$TRAVIS_COMMIT 9000</code> from the <code>.travis.yml</code> file exposes our Jekyll site inside the Travis box to a unique temporary URL based on the Git commit (e.g. <code>https://someCommitHash.ngrok.io</code>).</p>
 
-<p>WebdriverCSS tests are responsible for capturing the screenshots, and comparing them against the baseline images. If a regression is found, it will be automatically pushed to Shoov, and a link to the regression would be provided in the Travis log. This means that if a test was broken, we can immediately see where&#39;s the regression and figure out if it is indeed a bug - or, if not, replace the baseline image with the &quot;regression&quot; image.</p>
+<p>WebdriverCSS tests are responsible for capturing the screenshots, and comparing them against the baseline images. If a regression is found, it will be automatically pushed to Shoov, and a link to the regression would be provided in the Travis log. This means that if a test was broken, we can immediately see where&rsquo;s the regression and figure out if it is indeed a bug - or, if not, replace the baseline image with the &ldquo;regression&rdquo; image.</p>
 
 <div class="thumbnail">
   <div class="img-wrapper">
@@ -250,9 +250,9 @@ Travis-CI, <a href="https://github.com/webdriverio/webdrivercss">webdriverCSS</a
 
 <p>Some gotchas to be aware of:</p>
 
-<p>Even though visual regression testing with BrowserStack or Sauce Labs takes more time than running it on PhantomJS, it&#39;s recommended to use such tools, since they test your site against <em>real</em> browsers.  </p>
+<p>Even though visual regression testing with BrowserStack or Sauce Labs takes more time than running it on PhantomJS, it&rsquo;s recommended to use such tools, since they test your site against <em>real</em> browsers.  </p>
 
-<p>Those tools cost money, but we find that it&#39;s well worth it. We are currently using BrowserStack (99$/month), though we&#39;re running into some issues with it not having an internal queue system - so if you reached your limit on virtual hosts concurrency, your tests will simply fail. For that reason we might switch to Sauce Labs (149$/month) which also provides more concurrent VMs.</p>
+<p>Those tools cost money, but we find that it&rsquo;s well worth it. We are currently using BrowserStack (99$/month), though we&rsquo;re running into some issues with it not having an internal queue system - so if you reached your limit on virtual hosts concurrency, your tests will simply fail. For that reason we might switch to Sauce Labs (149$/month) which also provides more concurrent VMs.</p>
 
 <div class="thumbnail">
   <div class="img-wrapper">
@@ -308,7 +308,7 @@ Travis-CI, <a href="https://github.com/webdriverio/webdrivercss">webdriverCSS</a
     </section>
     <section class="author-details">
       <div class="image-wrapper">
-        <img src="/images/team/avatars/amitaibu.42a1.jpg" class="img-circle img-responsive">
+        <img src="/images/team/avatars/amitaibu.a340.jpg" class="img-circle img-responsive">
       </div>
       <div class="text-wrapper">
         <span class="name">Amitai Burstein</span>
@@ -386,7 +386,7 @@ Travis-CI, <a href="https://github.com/webdriverio/webdrivercss">webdriverCSS</a
 
 
 
-    <script src="/js/plugins.f180.js"></script>
+    <script src="/js/plugins.c51b.js"></script>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
 

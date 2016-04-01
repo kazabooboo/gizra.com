@@ -13,27 +13,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
       <!-- Favicon for all platforms -->
-      <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.b3df.png">
+      <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.3a41.png">
       <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-touch-icon-60x60.a84d.png">
       <link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-touch-icon-72x72.664d.png">
-      <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.faf5.png">
+      <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.20fe.png">
       <link rel="apple-touch-icon" sizes="114x114" href=/"images/favicons/apple-touch-icon-114x114.png">
-      <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.d810.png">
-      <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.1807.png">
-      <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.71bf.png">
-      <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.a9f0.png">
+      <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.842b.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.0175.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.f9ac.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.f24a.png">
       <link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.c391.png" sizes="32x32">
-      <link rel="icon" type="image/png" href="/images/favicons/favicon-194x194.e5f8.png" sizes="194x194">
+      <link rel="icon" type="image/png" href="/images/favicons/favicon-194x194.2d07.png" sizes="194x194">
       <link rel="icon" type="image/png" href="/images/favicons/favicon-96x96.8557.png" sizes="96x96">
-      <link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.0b72.png" sizes="192x192">
-      <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.7353.png" sizes="16x16">
+      <link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.6d91.png" sizes="192x192">
+      <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.a93c.png" sizes="16x16">
       <link rel="manifest" href="/images/favicons/manifest.json">
       <meta name="msapplication-TileColor" content="#000000">
       <meta name="msapplication-TileImage" content="/images/favicons/mstile-144x144.png">
       <meta name="theme-color" content="#ffffff">
       <!-- End favicon for all platforms -->
 
-      <link rel="stylesheet" href="/css/main.ee40.css"/>
+      <link rel="stylesheet" href="/css/main.b4dd.css"/>
       <link href='http://fonts.googleapis.com/css?family=Abril+Fatface&text=gizra' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Hind:400,600,300,500' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600,800' rel='stylesheet' type='text/css'>
@@ -211,11 +211,11 @@
         <p><a href="http://www.nicklewis.org/40-essential-drupal-6-modules">Nick Lewis</a> wrote about his 40+ essential modules, and I really missed two modules there - Rules and Flag.
 I commented that
 <blockquote>
-My top 5 are: Views, CCK, Flag, Rules, Panels. I think that the Flag &amp; Rules combo is less known in the community, but there are so many use cases they can cover. Because they are a bit abstracted it&#39;s hard for newbies to realize their potential.
+My top 5 are: Views, CCK, Flag, Rules, Panels. I think that the Flag &amp; Rules combo is less known in the community, but there are so many use cases they can cover. Because they are a bit abstracted it&rsquo;s hard for newbies to realize their potential.
 </blockquote></p>
 
-<p>I think there&#39;s no better way to show my point, than a tutorial. Lazy people can even download the feature from <a href="http://www.gizra.com/sites/default/files/user_points_rules.tar_.gz">here</a>. This tutorial will be about having &quot;User points&quot; functionality without using the user points module. I&#39;m not saying that module is bad, but sometimes I need multiple user points per user. Also, re-using existing modules always feels me with great joy. GREAT joy! Also, thinking about Drupal 7 with fields API, suddenly _user points can become _any-fieldable-entity points...
-The tutorial will cover the &quot;Rule sets&quot; concept in Rules module, which is also considered by many as a great mystery. Let&#39;s define our mission:</p>
+<p>I think there&rsquo;s no better way to show my point, than a tutorial. Lazy people can even download the feature from <a href="http://www.gizra.com/sites/default/files/user_points_rules.tar_.gz">here</a>. This tutorial will be about having &ldquo;User points&rdquo; functionality without using the user points module. I&rsquo;m not saying that module is bad, but sometimes I need multiple user points per user. Also, re-using existing modules always feels me with great joy. GREAT joy! Also, thinking about Drupal 7 with fields API, suddenly _user points can become _any-fieldable-entity points&hellip;
+The tutorial will cover the &ldquo;Rule sets&rdquo; concept in Rules module, which is also considered by many as a great mystery. Let&rsquo;s define our mission:</p>
 
 <!-- more -->
 
@@ -223,12 +223,12 @@ The tutorial will cover the &quot;Rule sets&quot; concept in Rules module, which
 <li>Every time a user creates a story content type, one point is deducted</li>
 <li>When no points are left, user should not be able to create more stories</li>
 <li>Upon content profile creation, the user receives three points</li>
-<li>Site admin should be able to "reset" the points of users back to three points</li>
+<li>Site admin should be able to &ldquo;reset&rdquo; the points of users back to three points</li>
 </ol>
 
 <p>If your eyes no longer see the above list as words, but as Drupal modules, then you probably think CCK, Content profile, Rules and Flag.
-We will add a content profile to each user. That profile will have a CCK field that will hold the user points. When user points reach zero, a &quot;story editor&quot; role will be removed from the user - denying access to creating new story content.
-For &quot;reseting&quot; the user points, we will use a flag on the user, that a site admin can click on.
+We will add a content profile to each user. That profile will have a CCK field that will hold the user points. When user points reach zero, a &ldquo;story editor&rdquo; role will be removed from the user - denying access to creating new story content.
+For &ldquo;reseting&rdquo; the user points, we will use a flag on the user, that a site admin can click on.
 First preparations:
 <ol>
 <li>Download and enable modules (is there still anybody not using Drush?)
@@ -237,51 +237,51 @@ drush dl cck content_profile rules flag-6.x-2.x-dev features ctools strongarm-6.
 drush en -y content number content_permissions content_profile rules rules_admin flag features php ctools strongarm
 </code>
 </li>
-<li>Make the new &quot;Profile&quot; content type a user profile through <em>admin/content/node-type/profile &gt;&gt; Content Profile &gt;&gt; Use this content type as a content profile for users</li>
+<li>Make the new &ldquo;Profile&rdquo; content type a user profile through <em>admin/content/node-type/profile &gt;&gt; Content Profile &gt;&gt; Use this content type as a content profile for users</li>
 <li>Add a new Integer type field called _field</em>user<em>points to the profile content type</li>
-<li>In _admin/user/roles add a new role called &quot;story editor&quot;.</li>
-<li>We should carefully take care of the permissions. In _admin/user/permissions - allow &quot;authenticated user&quot; role to _view  field</em>user_points and _create profile content; and allow &quot;story editor&quot; role to _create story content</li>
+<li>In _admin/user/roles add a new role called &ldquo;story editor&rdquo;.</li>
+<li>We should carefully take care of the permissions. In _admin/user/permissions - allow &ldquo;authenticated user&rdquo; role to _view  field</em>user_points and _create profile content; and allow &ldquo;story editor&rdquo; role to _create story content</li>
 </ol></p>
 
-<p>Before we set up our logic using Rules Let&#39;s go over a bit about the concept of &quot;Rule sets&quot;.
-You should think of a rule sets as an API function. That function gets arguments and processes them. It&#39;s up to an implementing module to use the API function properly. Like API functions rule sets are there in order to prevent duplication and to centralize actions. Let&#39;s make the idea clear by thinking about points 1 and 2 in our mission. We have here two rules - one will deduct points from the user&#39;s profile, and the other should remove the &quot;story editor&quot; role.</p>
+<p>Before we set up our logic using Rules Let&rsquo;s go over a bit about the concept of &ldquo;Rule sets&rdquo;.
+You should think of a rule sets as an API function. That function gets arguments and processes them. It&rsquo;s up to an implementing module to use the API function properly. Like API functions rule sets are there in order to prevent duplication and to centralize actions. Let&rsquo;s make the idea clear by thinking about points 1 and 2 in our mission. We have here two rules - one will deduct points from the user&rsquo;s profile, and the other should remove the &ldquo;story editor&rdquo; role.</p>
 
-<p>We could create two triggered rules both with the event &quot;After saving new content&quot;, and check in both rules that the content type is story. As you can see, there&#39;s a duplication in the event and in the conditions. If our logic will change and be more complex the duplication might increase.</p>
+<p>We could create two triggered rules both with the event &ldquo;After saving new content&rdquo;, and check in both rules that the content type is story. As you can see, there&rsquo;s a duplication in the event and in the conditions. If our logic will change and be more complex the duplication might increase.</p>
 
-<p>So, for such a case we will use the rule sets. We&#39;ll define two arguments that are mandatory one is a node, in which we&#39;ll pass the content profile. The other is the user. If you are a developer then think of it as <em>function user</em>points<em>logic($profile</em>content, $account).</p>
+<p>So, for such a case we will use the rule sets. We&rsquo;ll define two arguments that are mandatory one is a node, in which we&rsquo;ll pass the content profile. The other is the user. If you are a developer then think of it as <em>function user</em>points<em>logic($profile</em>content, $account).</p>
 
-<p>In this rule sets we will add our two rules without even bothering to check if the new created content is indeed &quot;story&quot;. For that we&#39;ll have a third rule, that will not be a rule inside a rule sets, but a triggered rule. This rule will be executed &quot;After saving new content&quot;, will check the condition of the content type is story, and then willload the user&#39;s profile content and invoke our rule sets.</p>
+<p>In this rule sets we will add our two rules without even bothering to check if the new created content is indeed &ldquo;story&rdquo;. For that we&rsquo;ll have a third rule, that will not be a rule inside a rule sets, but a triggered rule. This rule will be executed &ldquo;After saving new content&rdquo;, will check the condition of the content type is story, and then willload the user&rsquo;s profile content and invoke our rule sets.</p>
 
-<p>In terms of code, think of it as calling <em>user</em>points<em>logic() from _hook</em>nodeapi() upon node insert. Now that the concept should be clear, let&#39;s see how we do it:</p>
+<p>In terms of code, think of it as calling <em>user</em>points<em>logic() from _hook</em>nodeapi() upon node insert. Now that the concept should be clear, let&rsquo;s see how we do it:</p>
 
 <ol>
-<li>Make sure you enabled the "PHP filter" core module, as we'll need few lines of PHP</li>
-<li>Add a new rule sets (_admin/rules/rule_sets) labeled "User points" with _content and _user arguments.</li>
-<li>Add a new rule in the "User points" rule sets labeled "Deduct points on story creation" and add the action _Populate a field, select the field _field_user_points and continue</li>
-<li>Under "Advanced: Specify the fields value with PHP code" enter the following code (without the ```<?php ?>``` delimiters):
+<li>Make sure you enabled the &ldquo;PHP filter&rdquo; core module, as we&rsquo;ll need few lines of PHP</li>
+<li>Add a new rule sets (_admin/rules/rule_sets) labeled &ldquo;User points&rdquo; with _content and _user arguments.</li>
+<li>Add a new rule in the &ldquo;User points&rdquo; rule sets labeled &ldquo;Deduct points on story creation&rdquo; and add the action _Populate a field, select the field _field_user_points and continue</li>
+<li>Under &ldquo;Advanced: Specify the fields value with PHP code&rdquo; enter the following code (without the &ldquo;`<?php ?>&rdquo;` delimiters):
 
-```php
+&ldquo;`php
 <?php
 // Current user points.
-$current_points = $profile_node->field_user_points[0]['value'];
+$current_points = $profile_node->field_user_points[0][&lsquo;value&rsquo;];
 
 // Remove one point.
 return array(
   // Rules will make sure the content profile is saved
   // after all rules have finished executing.
-  0 => array('value' => ($current_points - 1)),
+  0 => array(&lsquo;value&rsquo; => ($current_points - 1)),
 );
 ?>
-```
+&rdquo;`
 </li>
-<li>Create the second rule in the rule sets labeled "Remove role when no user points left" with the condition _Field has value, and again select _field_user_points. In the field value enter 0</li>
-<li>Add action _Remove user role and select "story editor" role</li>
-<li>Points 1 and 2 in our mission are almost complete, we only need to call the rule sets when appropriate. Create a triggered rule (_admin/rules/trigger) labeled "Invoke user points" with the event _After saving new content (we don't want to deduct point when user is just updating an existing content). Add condition _Content has type to check it's a story. Add action _Load content profile and make sure the argument _User, whose profile should be loaded is set to _content's author - we do that as the _acting user might be an admin manually creating a new user. Second action is _User points which is our rule sets. Also here make sure you pass the correct arguments (i.e. _content profile for the content argument and _content's author for the user argument).</li>
+<li>Create the second rule in the rule sets labeled &ldquo;Remove role when no user points left&rdquo; with the condition _Field has value, and again select _field_user_points. In the field value enter 0</li>
+<li>Add action _Remove user role and select &ldquo;story editor&rdquo; role</li>
+<li>Points 1 and 2 in our mission are almost complete, we only need to call the rule sets when appropriate. Create a triggered rule (_admin/rules/trigger) labeled &ldquo;Invoke user points&rdquo; with the event _After saving new content (we don&rsquo;t want to deduct point when user is just updating an existing content). Add condition _Content has type to check it&rsquo;s a story. Add action _Load content profile and make sure the argument _User, whose profile should be loaded is set to _content&rsquo;s author - we do that as the _acting user might be an admin manually creating a new user. Second action is _User points which is our rule sets. Also here make sure you pass the correct arguments (i.e. _content profile for the content argument and _content&rsquo;s author for the user argument).</li>
 </ol>
 
-<p>The implementation of &quot;reset&quot; points and grant points on user registration is similar in concept to our previous mission. We create a rule sets labeled &quot;User points grant&quot; which will set the field value to 3 and grant &quot;story editor&quot; role. This rule sets will be called from two different triggered rules - once upon content profile creation, and second when a site admin will &quot;reset&quot; the user points. How will the site admin &quot;reset&quot;? Easily - we&#39;ll create a new user type flag called &quot;Reset user points&quot;, and in Rules create a triggered rule that is invoked on the event _A user has been flagged, under &quot;Reset user points&quot;.</p>
+<p>The implementation of &ldquo;reset&rdquo; points and grant points on user registration is similar in concept to our previous mission. We create a rule sets labeled &ldquo;User points grant&rdquo; which will set the field value to 3 and grant &ldquo;story editor&rdquo; role. This rule sets will be called from two different triggered rules - once upon content profile creation, and second when a site admin will &ldquo;reset&rdquo; the user points. How will the site admin &ldquo;reset&rdquo;? Easily - we&rsquo;ll create a new user type flag called &ldquo;Reset user points&rdquo;, and in Rules create a triggered rule that is invoked on the event _A user has been flagged, under &ldquo;Reset user points&rdquo;.</p>
 
-<p>That&#39;s it. Download the <A href="http://www.gizra.com/sites/default/files/user_points_rules.tar_.gz">feature</a>, and add your own logic.</p>
+<p>That&rsquo;s it. Download the <A href="http://www.gizra.com/sites/default/files/user_points_rules.tar_.gz">feature</a>, and add your own logic.</p>
 
 <h2></h2>
 
@@ -322,7 +322,7 @@ return array(
     </section>
     <section class="author-details">
       <div class="image-wrapper">
-        <img src="/images/team/avatars/amitaibu.42a1.jpg" class="img-circle img-responsive">
+        <img src="/images/team/avatars/amitaibu.a340.jpg" class="img-circle img-responsive">
       </div>
       <div class="text-wrapper">
         <span class="name">Amitai Burstein</span>
@@ -400,7 +400,7 @@ return array(
 
 
 
-    <script src="/js/plugins.f180.js"></script>
+    <script src="/js/plugins.c51b.js"></script>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
 

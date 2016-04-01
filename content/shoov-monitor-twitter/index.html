@@ -13,27 +13,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
       <!-- Favicon for all platforms -->
-      <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.b3df.png">
+      <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.3a41.png">
       <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-touch-icon-60x60.a84d.png">
       <link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-touch-icon-72x72.664d.png">
-      <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.faf5.png">
+      <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.20fe.png">
       <link rel="apple-touch-icon" sizes="114x114" href=/"images/favicons/apple-touch-icon-114x114.png">
-      <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.d810.png">
-      <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.1807.png">
-      <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.71bf.png">
-      <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.a9f0.png">
+      <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.842b.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.0175.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.f9ac.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.f24a.png">
       <link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.c391.png" sizes="32x32">
-      <link rel="icon" type="image/png" href="/images/favicons/favicon-194x194.e5f8.png" sizes="194x194">
+      <link rel="icon" type="image/png" href="/images/favicons/favicon-194x194.2d07.png" sizes="194x194">
       <link rel="icon" type="image/png" href="/images/favicons/favicon-96x96.8557.png" sizes="96x96">
-      <link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.0b72.png" sizes="192x192">
-      <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.7353.png" sizes="16x16">
+      <link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.6d91.png" sizes="192x192">
+      <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.a93c.png" sizes="16x16">
       <link rel="manifest" href="/images/favicons/manifest.json">
       <meta name="msapplication-TileColor" content="#000000">
       <meta name="msapplication-TileImage" content="/images/favicons/mstile-144x144.png">
       <meta name="theme-color" content="#ffffff">
       <!-- End favicon for all platforms -->
 
-      <link rel="stylesheet" href="/css/main.ee40.css"/>
+      <link rel="stylesheet" href="/css/main.b4dd.css"/>
       <link href='http://fonts.googleapis.com/css?family=Abril+Fatface&text=gizra' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Hind:400,600,300,500' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600,800' rel='stylesheet' type='text/css'>
@@ -214,9 +214,9 @@
         </div>
       <div class="post-content">
 
-        <p>Monitoring your live site is a pretty good idea - that&#39;s generally agreed. Same goes for visual regression testing. Doing it, however, is hard. Enough so that very few companies actually do visual regression testing/monitoring, so don&#39;t feel bad if you haven&#39;t either until now. But after reading this post you should seriously consider doing it. Or at least give it a <a href="https://github.com/shoov/test-example">try</a>.</p>
+        <p>Monitoring your live site is a pretty good idea - that&rsquo;s generally agreed. Same goes for visual regression testing. Doing it, however, is hard. Enough so that very few companies actually do visual regression testing/monitoring, so don&rsquo;t feel bad if you haven&rsquo;t either until now. But after reading this post you should seriously consider doing it. Or at least give it a <a href="https://github.com/shoov/test-example">try</a>.</p>
 
-<p>For example, here&#39;s an overview of how we could monitor Twitter, if someone would actually ask us to (as always you can jump right into the <a href="https://github.com/amitaibu/ci-tests-twitter">repository</a>):</p>
+<p>For example, here&rsquo;s an overview of how we could monitor Twitter, if someone would actually ask us to (as always you can jump right into the <a href="https://github.com/amitaibu/ci-tests-twitter">repository</a>):</p>
 
 <div class="thumbnail">
   <div class="img-wrapper">
@@ -237,23 +237,23 @@
 
 <h2>Visual Regression is Hard</h2>
 
-<p>Getting a baseline screenshot of a page requires some thinking, and a bit of trial and error.  Twitter&#39;s main page has lots of dynamic content: the user&#39;s tweets count, followers, trending topics, actual tweets etc. Obviously our screenshot cannot include that info.</p>
+<p>Getting a baseline screenshot of a page requires some thinking, and a bit of trial and error.  Twitter&rsquo;s main page has lots of dynamic content: the user&rsquo;s tweets count, followers, trending topics, actual tweets etc. Obviously our screenshot cannot include that info.</p>
 
 <p>Luckily <a href="https://github.com/webdriverio/webdrivercss#setup">webdriverCSS</a> already comes with some commands that help us to <code>exclude</code> (place a black rectangle) or even <code>remove</code> (completely hide) an element.</p>
 
-<p>In the <a href="https://github.com/amitaibu/ci-tests-twitter/blob/master/ui-tests/test/tests.js">test file</a> you can see we selected only the CSS selectors that need to be excluded or removed, leaving our page with <em>some</em> data, but not all of it. Don&#39;t be discouraged by not covering 100% though. Even with some parts hidden we have already asserted so much functionality - certainly more than having no visual test in place.</p>
+<p>In the <a href="https://github.com/amitaibu/ci-tests-twitter/blob/master/ui-tests/test/tests.js">test file</a> you can see we selected only the CSS selectors that need to be excluded or removed, leaving our page with <em>some</em> data, but not all of it. Don&rsquo;t be discouraged by not covering 100% though. Even with some parts hidden we have already asserted so much functionality - certainly more than having no visual test in place.</p>
 
 <h2>Functional testing for dynamic parts</h2>
 
 <p>A screenshot is a powerful tool, but not the only one. We still have functional testing frameworks in our toolbelt. <a href="http://gizra.com/content/behat-the-right-way/">Behat</a> can easily be used to assert that the number of tweets feature is working.</p>
 
-<p>In the time of writing <a href="https://twitter.com/gizra_drupal">@gizra_drupal</a> has about 340 tweets. So we could write a simple <a href="https://github.com/amitaibu/ci-tests-twitter/blob/master/behat/features/user_page.feature">test</a> that will assert that there&#39;s a minimum of 300 tweets (giving us the flexibility to delete a few without breaking the tests).</p>
+<p>In the time of writing <a href="https://twitter.com/gizra_drupal">@gizra_drupal</a> has about 340 tweets. So we could write a simple <a href="https://github.com/amitaibu/ci-tests-twitter/blob/master/behat/features/user_page.feature">test</a> that will assert that there&rsquo;s a minimum of 300 tweets (giving us the flexibility to delete a few without breaking the tests).</p>
 
 <p>The Behat PHP <a href="https://github.com/amitaibu/ci-tests-twitter/blob/master/behat/features/bootstrap/FeatureContext.php#L18-L38">code</a> to implement this is fairly straight forward. It finds the value in the HTML, converts it into an integer, and asserts it has a minimum value.</p>
 
 <h2>Shoov</h2>
 
-<p>Up until now we didn&#39;t need <a href="http://shoov.io/">Shoov</a>, which is good, since Shoov is agnostic to which tools you use - it&#39;s only there to help you deal with the accumulated images and regressions.</p>
+<p>Up until now we didn&rsquo;t need <a href="http://shoov.io/">Shoov</a>, which is good, since Shoov is agnostic to which tools you use - it&rsquo;s only there to help you deal with the accumulated images and regressions.</p>
 
 <div class="thumbnail">
   <div class="img-wrapper">
@@ -266,11 +266,11 @@
 
   </div>
   
-    <div class="caption">Before we've hidden the spinner, Shoov showed us the regression</div>
+    <div class="caption">Before we&rsquo;ve hidden the spinner, Shoov showed us the regression</div>
   
 </div>
 
-<p>It&#39;s important to realize that once you go down the visual regression road it&#39;s hard to stop. Suddenly PhantomJS isn&#39;t good enough, if you can use BrowserStack or SauceLabs to validate the site on many platforms and browsers. Testing your site on just one screen size isn&#39;t enough either.<br>
+<p>It&rsquo;s important to realize that once you go down the visual regression road it&rsquo;s hard to stop. Suddenly PhantomJS isn&rsquo;t good enough, if you can use BrowserStack or SauceLabs to validate the site on many platforms and browsers. Testing your site on just one screen size isn&rsquo;t enough either.<br>
 webdriverCSS comes with the powerful <code>screenWidth</code> property, which should make it super simple to test multiple view ports soon as this <a href="https://github.com/webdriverio/webdrivercss/issues/73">issue</a> is fixed.</p>
 
 <h2>New stuff</h2>
@@ -278,7 +278,7 @@ webdriverCSS comes with the powerful <code>screenWidth</code> property, which sh
 <ul>
 <li>We now have a <a href="http://shoov.io">Shoov.io</a> page, which is updated from time to time with new info.</li>
 <li><a href="https://app.shoov.io">app.shoov.io</a> is now the app site, sitting on Amazon S3 and CloudFront with SSL certificate, so you should feel safer using it.</li>
-<li>&quot;Dev Tips&quot; is a new concept we&#39;ve introduced. Since the site and all of its sub-components are open sourced, we have added a few tips in each page to help you - the developer - to better understand how the system works, and maybe even encourage you to contribute.</li>
+<li>&ldquo;Dev Tips&rdquo; is a new concept we&rsquo;ve introduced. Since the site and all of its sub-components are open sourced, we have added a few tips in each page to help you - the developer - to better understand how the system works, and maybe even encourage you to contribute.</li>
 </ul>
 
 <div class="thumbnail">
@@ -331,7 +331,7 @@ webdriverCSS comes with the powerful <code>screenWidth</code> property, which sh
     </section>
     <section class="author-details">
       <div class="image-wrapper">
-        <img src="/images/team/avatars/amitaibu.42a1.jpg" class="img-circle img-responsive">
+        <img src="/images/team/avatars/amitaibu.a340.jpg" class="img-circle img-responsive">
       </div>
       <div class="text-wrapper">
         <span class="name">Amitai Burstein</span>
@@ -409,7 +409,7 @@ webdriverCSS comes with the powerful <code>screenWidth</code> property, which sh
 
 
 
-    <script src="/js/plugins.f180.js"></script>
+    <script src="/js/plugins.c51b.js"></script>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
 

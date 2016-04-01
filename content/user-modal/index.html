@@ -13,27 +13,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
       <!-- Favicon for all platforms -->
-      <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.b3df.png">
+      <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.3a41.png">
       <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-touch-icon-60x60.a84d.png">
       <link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-touch-icon-72x72.664d.png">
-      <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.faf5.png">
+      <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.20fe.png">
       <link rel="apple-touch-icon" sizes="114x114" href=/"images/favicons/apple-touch-icon-114x114.png">
-      <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.d810.png">
-      <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.1807.png">
-      <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.71bf.png">
-      <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.a9f0.png">
+      <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.842b.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.0175.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.f9ac.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.f24a.png">
       <link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.c391.png" sizes="32x32">
-      <link rel="icon" type="image/png" href="/images/favicons/favicon-194x194.e5f8.png" sizes="194x194">
+      <link rel="icon" type="image/png" href="/images/favicons/favicon-194x194.2d07.png" sizes="194x194">
       <link rel="icon" type="image/png" href="/images/favicons/favicon-96x96.8557.png" sizes="96x96">
-      <link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.0b72.png" sizes="192x192">
-      <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.7353.png" sizes="16x16">
+      <link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.6d91.png" sizes="192x192">
+      <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.a93c.png" sizes="16x16">
       <link rel="manifest" href="/images/favicons/manifest.json">
       <meta name="msapplication-TileColor" content="#000000">
       <meta name="msapplication-TileImage" content="/images/favicons/mstile-144x144.png">
       <meta name="theme-color" content="#ffffff">
       <!-- End favicon for all platforms -->
 
-      <link rel="stylesheet" href="/css/main.ee40.css"/>
+      <link rel="stylesheet" href="/css/main.b4dd.css"/>
       <link href='http://fonts.googleapis.com/css?family=Abril+Fatface&text=gizra' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Hind:400,600,300,500' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600,800' rel='stylesheet' type='text/css'>
@@ -229,19 +229,19 @@ for example allow a user to submit a node and register in the same time.
 
 <!-- more -->
 
-<p>The idea is that we want to lower the barrier for a new user to participate in the site -- and the barrier is assumed to be too many clicks to just create a node or write a comment.</p>
+<p>The idea is that we want to lower the barrier for a new user to participate in the site &ndash; and the barrier is assumed to be too many clicks to just create a node or write a comment.</p>
 
 <p>The final implementation is different from where we started:
 1) We thought about creating our own custom forms and call the right validate and submit handlers, and suppress errors of non-submitted forms (e.g. the user has decided to login, instead of register so we don’t need to validate the register fields) using D7’s #limit<em>vaidation</em>errors property. The idea was to avoid form API complexity. It’s a no go. There are many advantages to _re-using the current form. So we went on to the next step
 2) Using subform module. Easier said then done, as by the time of writing user-modal subform was pretty broken. With a few patches from our side and a lot of help from the knowledgable casey, Subform maintainer, that provided lots if fix and support, we were able to re-use the forms.
 3) So now it was just a matter of sticking it in the modal. Which modal? At first we used CTools modal (if you’ve been following my blog posts you know I’m a big fan of CTools), however in this case, we’ve replaced CTools modal with the overlay module that comes with core. Why? For several reasons (non of them is CTools modal fault).</p>
 
-<p>CTools modal opens a modal dialog via ajax in the same page as the parent. The overlay opens the dialog in an IFrame, so you have &quot;parent&quot; and &quot;child&quot; pages. Silly things we love to hate, like IE, don’t allow (without hacks) to add new CSS to the page via AJAX. Another case was that Janrain (a module to connect to 3rd party providers like facebook) currently use JS to bind the click event to a link, but only to links it “sees” on page load. Links that are added via ajax are not binded. One final example, and again IE -- in our case we saw (and provided a <a href="http://drupal.org/node/1158928">patch</a>) that when we post the form in the modal, $_POST returns empty. Thanks IE!
+<p>CTools modal opens a modal dialog via ajax in the same page as the parent. The overlay opens the dialog in an IFrame, so you have &ldquo;parent&rdquo; and &ldquo;child&rdquo; pages. Silly things we love to hate, like IE, don’t allow (without hacks) to add new CSS to the page via AJAX. Another case was that Janrain (a module to connect to 3rd party providers like facebook) currently use JS to bind the click event to a link, but only to links it “sees” on page load. Links that are added via ajax are not binded. One final example, and again IE &ndash; in our case we saw (and provided a <a href="http://drupal.org/node/1158928">patch</a>) that when we post the form in the modal, $_POST returns empty. Thanks IE!
 The advantage of using Overlay, is that the new content is in an IFrame, which means it’s actually loading the same way it would have in a separate window. Also, it should be mentioned that Overlay is a great piece of code, and I learned a lot from its JS (and a lot has went over my head).</p>
 
 <p>We found that Overlay was easier to theme. CTools modal seems to have fixed width &amp; height and requires a class to be added to the link that opens the modal with the name of the modal type that is required. With overlay it’s easier, as it’s a full page refresh , only inside the IFrame.</p>
 
-<p>The disadvantage, or maybe better -- challenge is that unlike CTools modal, Overlay’s modal being in an IFrame means one has to do some “tricks” to pass information from the child to the parent window.</p>
+<p>The disadvantage, or maybe better &ndash; challenge is that unlike CTools modal, Overlay’s modal being in an IFrame means one has to do some “tricks” to pass information from the child to the parent window.</p>
 
 <p>Another minor advantage is that overlay is a core module, so it’s considered a better practice to use it. It should be noted, that the Overlay gives an impression it can/ should be used only for admins - we think it’s just a matter of showing it could be used for other stuff as well.</p>
 
@@ -282,7 +282,7 @@ The advantage of using Overlay, is that the new content is in an IFrame, which m
     </section>
     <section class="author-details">
       <div class="image-wrapper">
-        <img src="/images/team/avatars/amitaibu.42a1.jpg" class="img-circle img-responsive">
+        <img src="/images/team/avatars/amitaibu.a340.jpg" class="img-circle img-responsive">
       </div>
       <div class="text-wrapper">
         <span class="name">Amitai Burstein</span>
@@ -360,7 +360,7 @@ The advantage of using Overlay, is that the new content is in an IFrame, which m
 
 
 
-    <script src="/js/plugins.f180.js"></script>
+    <script src="/js/plugins.c51b.js"></script>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
 

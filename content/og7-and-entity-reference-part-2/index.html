@@ -13,27 +13,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
       <!-- Favicon for all platforms -->
-      <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.b3df.png">
+      <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.3a41.png">
       <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-touch-icon-60x60.a84d.png">
       <link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-touch-icon-72x72.664d.png">
-      <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.faf5.png">
+      <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.20fe.png">
       <link rel="apple-touch-icon" sizes="114x114" href=/"images/favicons/apple-touch-icon-114x114.png">
-      <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.d810.png">
-      <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.1807.png">
-      <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.71bf.png">
-      <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.a9f0.png">
+      <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.842b.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.0175.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.f9ac.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.f24a.png">
       <link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.c391.png" sizes="32x32">
-      <link rel="icon" type="image/png" href="/images/favicons/favicon-194x194.e5f8.png" sizes="194x194">
+      <link rel="icon" type="image/png" href="/images/favicons/favicon-194x194.2d07.png" sizes="194x194">
       <link rel="icon" type="image/png" href="/images/favicons/favicon-96x96.8557.png" sizes="96x96">
-      <link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.0b72.png" sizes="192x192">
-      <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.7353.png" sizes="16x16">
+      <link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.6d91.png" sizes="192x192">
+      <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.a93c.png" sizes="16x16">
       <link rel="manifest" href="/images/favicons/manifest.json">
       <meta name="msapplication-TileColor" content="#000000">
       <meta name="msapplication-TileImage" content="/images/favicons/mstile-144x144.png">
       <meta name="theme-color" content="#ffffff">
       <!-- End favicon for all platforms -->
 
-      <link rel="stylesheet" href="/css/main.ee40.css"/>
+      <link rel="stylesheet" href="/css/main.b4dd.css"/>
       <link href='http://fonts.googleapis.com/css?family=Abril+Fatface&text=gizra' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Hind:400,600,300,500' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600,800' rel='stylesheet' type='text/css'>
@@ -220,13 +220,13 @@ I’m equally happy that Planet Drupal isn’t swamped with such requests. It’
 
 <p>Now here’s a quick overview of the planned changes. First the conceptual changes:
 <ul>
-<li>Instead of OG having it&#39;s own field type, we easily hook into Entity reference field, as it allows registering our own handler using a CTools plugin</li>
-<li>Instead of saving the field values <em>and the OG membership as we currently do, we save the OG membership, and use hook</em>field<em>load() to populate the Entity reference with the correct value. Yes, I know, the docs clearly say that we should not load fieldable entities in hook</em>field_load() as it might cause loading recursion, so we&#39;ll just make sure you can&#39;t attach group-audience fields to OG membership (which anyway doesn&#39;t make much sense). The benefit of doing that, after a long talk with the people form the community, notably fago (thanks again fago!), came out as the best solution for a problematic thing</li>
+<li>Instead of OG having it&rsquo;s own field type, we easily hook into Entity reference field, as it allows registering our own handler using a CTools plugin</li>
+<li>Instead of saving the field values <em>and the OG membership as we currently do, we save the OG membership, and use hook</em>field<em>load() to populate the Entity reference with the correct value. Yes, I know, the docs clearly say that we should not load fieldable entities in hook</em>field_load() as it might cause loading recursion, so we&rsquo;ll just make sure you can&rsquo;t attach group-audience fields to OG membership (which anyway doesn&rsquo;t make much sense). The benefit of doing that, after a long talk with the people form the community, notably fago (thanks again fago!), came out as the best solution for a problematic thing</li>
 <li>OG membership is now tightly coupled with the field that it belongs to. This means we can care about the field cardinality (i.e. how many OG membership can be created per field), and since we know the OG membership type we can provide smarter metadata</li>
 <li>We can have multiple fields, to allow subscribing users/ content to group with different membership type. No more hard-coding of the field name as-well</li>
 </ul></p>
 
-<p>Sneak preview time...
+<p>Sneak preview time&hellip;
 As usual we can make a content type (Clubs in this example) a group, through the content type edit.</p>
 
 <!-- more -->
@@ -237,12 +237,12 @@ As usual we can make a content type (Clubs in this example) a group, through the
 
 <p><img src="/assets/images/legacy/2.jpg" /></p>
 
-<p>No more OG&#39;s own field -- this is just another Entity reference field.</p>
+<p>No more OG&rsquo;s own field &ndash; this is just another Entity reference field.</p>
 
 <p><img src="/assets/images/legacy/3.jpg" /></p>
 
-<p>In the field settings, we select OG&#39;s handler for Entity reference, where we can define different OG related settings.
-The &quot;My groups&quot; checkbox indicates the reference should show the user only groups they are member of.</p>
+<p>In the field settings, we select OG&rsquo;s handler for Entity reference, where we can define different OG related settings.
+The &ldquo;My groups&rdquo; checkbox indicates the reference should show the user only groups they are member of.</p>
 
 <p><img src="/assets/images/legacy/4.jpg" /></p>
 
@@ -250,7 +250,7 @@ The &quot;My groups&quot; checkbox indicates the reference should show the user 
 
 <p><img src="/assets/images/legacy/5.jpg" /></p>
 
-<p>Best practice will probably be, show one field set to &quot;My group&quot; as select list, and another field for groups a user doesn&#39;t belong to as autocomplete (finally solving performance issues when there are lots of groups).
+<p>Best practice will probably be, show one field set to &ldquo;My group&rdquo; as select list, and another field for groups a user doesn&rsquo;t belong to as autocomplete (finally solving performance issues when there are lots of groups).
 The primary field option, is better shown by example.</p>
 
 <p><img src="/assets/images/legacy/6.jpg" /></p>
@@ -259,11 +259,11 @@ The primary field option, is better shown by example.</p>
 
 <p><img src="/assets/images/legacy/7_0.jpg" /></p>
 
-<p>After selecting one group from each field and saving, we see that the values have &quot;jumped&quot; from the secondary field to the primary, making sure all our OG memberships are associated with a single field.</p>
+<p>After selecting one group from each field and saving, we see that the values have &ldquo;jumped&rdquo; from the secondary field to the primary, making sure all our OG memberships are associated with a single field.</p>
 
 <p><img src="/assets/images/legacy/8.jpg" /></p>
 
-<p>Looking in Devel&#39;s output we see the field values. Those values are not stored in the field&#39;s storage, they were populated based on the OG membership associated with the field. For those using Entity metadata wrapper, this means you can do (assuming your field is called og_ref) cool things like:</p>
+<p>Looking in Devel&rsquo;s output we see the field values. Those values are not stored in the field&rsquo;s storage, they were populated based on the OG membership associated with the field. For those using Entity metadata wrapper, this means you can do (assuming your field is called og_ref) cool things like:</p>
 
 <p>Getting the groups (i.e. the node that is a group) from a field
 <code>$wrapper-&gt;og_ref-&gt;value();</code></p>
@@ -273,7 +273,7 @@ The primary field option, is better shown by example.</p>
 
 <p><img src="/assets/images/legacy/9.jpg" /></p>
 
-<p>The last image isn&#39;t related to Entity reference, but since we are about the overhaul stuff, well... We now have global roles and permissions per bundle. This means that if you have a content type called Clubs which is a group, it can have different default OG roles and OG permissions from a group called Restaurants. And we can Copy from the &quot;super&quot; global roles and permissions to the per bundle. Handy!</p>
+<p>The last image isn&rsquo;t related to Entity reference, but since we are about the overhaul stuff, well&hellip; We now have global roles and permissions per bundle. This means that if you have a content type called Clubs which is a group, it can have different default OG roles and OG permissions from a group called Restaurants. And we can Copy from the &ldquo;super&rdquo; global roles and permissions to the per bundle. Handy!</p>
 
 <p><img src="/assets/images/legacy/10.jpg" /></p>
 
@@ -312,7 +312,7 @@ The primary field option, is better shown by example.</p>
     </section>
     <section class="author-details">
       <div class="image-wrapper">
-        <img src="/images/team/avatars/amitaibu.42a1.jpg" class="img-circle img-responsive">
+        <img src="/images/team/avatars/amitaibu.a340.jpg" class="img-circle img-responsive">
       </div>
       <div class="text-wrapper">
         <span class="name">Amitai Burstein</span>
@@ -390,7 +390,7 @@ The primary field option, is better shown by example.</p>
 
 
 
-    <script src="/js/plugins.f180.js"></script>
+    <script src="/js/plugins.c51b.js"></script>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
 

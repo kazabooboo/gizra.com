@@ -13,27 +13,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
       <!-- Favicon for all platforms -->
-      <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.b3df.png">
+      <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.3a41.png">
       <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-touch-icon-60x60.a84d.png">
       <link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-touch-icon-72x72.664d.png">
-      <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.faf5.png">
+      <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.20fe.png">
       <link rel="apple-touch-icon" sizes="114x114" href=/"images/favicons/apple-touch-icon-114x114.png">
-      <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.d810.png">
-      <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.1807.png">
-      <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.71bf.png">
-      <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.a9f0.png">
+      <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.842b.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.0175.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.f9ac.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.f24a.png">
       <link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.c391.png" sizes="32x32">
-      <link rel="icon" type="image/png" href="/images/favicons/favicon-194x194.e5f8.png" sizes="194x194">
+      <link rel="icon" type="image/png" href="/images/favicons/favicon-194x194.2d07.png" sizes="194x194">
       <link rel="icon" type="image/png" href="/images/favicons/favicon-96x96.8557.png" sizes="96x96">
-      <link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.0b72.png" sizes="192x192">
-      <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.7353.png" sizes="16x16">
+      <link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.6d91.png" sizes="192x192">
+      <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.a93c.png" sizes="16x16">
       <link rel="manifest" href="/images/favicons/manifest.json">
       <meta name="msapplication-TileColor" content="#000000">
       <meta name="msapplication-TileImage" content="/images/favicons/mstile-144x144.png">
       <meta name="theme-color" content="#ffffff">
       <!-- End favicon for all platforms -->
 
-      <link rel="stylesheet" href="/css/main.ee40.css"/>
+      <link rel="stylesheet" href="/css/main.b4dd.css"/>
       <link href='http://fonts.googleapis.com/css?family=Abril+Fatface&text=gizra' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Hind:400,600,300,500' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600,800' rel='stylesheet' type='text/css'>
@@ -216,16 +216,16 @@
 <li>Update 1: <a href="http://funnymonkey.com/">FunnyMonkey</a> are sponsoring and providing developer help</li>
 </ul>
 
-<p>I was walking back home from work and thinking to myself Drupal thoughts. One of the thought was about OG7 and its use of &quot;group&quot; entity. At the time of writing OG it seemed as a good idea. It allows flexibility of showing all the groups of the site, without worrying what entity type they are (as the group ID isn’t equal to the node ID).
+<p>I was walking back home from work and thinking to myself Drupal thoughts. One of the thought was about OG7 and its use of &ldquo;group&rdquo; entity. At the time of writing OG it seemed as a good idea. It allows flexibility of showing all the groups of the site, without worrying what entity type they are (as the group ID isn’t equal to the node ID).
 It also allows easier internalization of group nodes, as again the group ID isn’t the node ID.
 In a very Drupal like way, in the other side of the world, a day later fago was asking the same question.</p>
 
 <p>After more than a year that OG7 is out, it seems that the flexibility of showing all the groups at once has a price in complexion. It makes Views require one more relationship. It makes Panels require one more relationship. It makes creating Rules and using tokens a non-intuitive task.
-I&#39;ve opened a new <a href="http://drupal.org/node/1342632">issue</a>, with one thing in mind -- deprecating the group entity, and making OG even slimmer and even more robust.
+I&rsquo;ve opened a new <a href="http://drupal.org/node/1342632">issue</a>, with one thing in mind &ndash; deprecating the group entity, and making OG even slimmer and even more robust.
 The idea is to rely on the new kid on the block - Entity Reference, which means your reference field will know how to reference a group of a single entity type. That change will result with changing the signature of a lot of function in OG (i.e. instead of passing the group ID, one will have to pass the entity type of the group, and the entity ID of the group), but it will also result with better UX and DX.</p>
 
 <p>The idea is to create a 2.x branch, to allow people to migrate from 1.x. I honestly don’t think it will be very painful, as I’ll provide automatic migration of data. So it will be just a matter of updating the Views, Panels and custom code.
-In the above issue there are already comments from known community members giving it a big +1, and saying &quot;Let’s see this sooner than later&quot;. I also want to see this happening _fast, but my time resources are not enough.</p>
+In the above issue there are already comments from known community members giving it a big +1, and saying &ldquo;Let’s see this sooner than later&rdquo;. I also want to see this happening _fast, but my time resources are not enough.</p>
 
 <p>I’m looking for someone to sponsor this huge and non-trivial feature, which will cost US$7,500
 Please do <a href="http://www.gizra.com/contact">contact</a> me if you are interested. I will credit you on the OG module page, in the README file, and on this blog. The community will thank you greatly.</p>
@@ -265,7 +265,7 @@ Please do <a href="http://www.gizra.com/contact">contact</a> me if you are inter
     </section>
     <section class="author-details">
       <div class="image-wrapper">
-        <img src="/images/team/avatars/amitaibu.42a1.jpg" class="img-circle img-responsive">
+        <img src="/images/team/avatars/amitaibu.a340.jpg" class="img-circle img-responsive">
       </div>
       <div class="text-wrapper">
         <span class="name">Amitai Burstein</span>
@@ -343,7 +343,7 @@ Please do <a href="http://www.gizra.com/contact">contact</a> me if you are inter
 
 
 
-    <script src="/js/plugins.f180.js"></script>
+    <script src="/js/plugins.c51b.js"></script>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
 

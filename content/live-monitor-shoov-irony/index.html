@@ -13,27 +13,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
       <!-- Favicon for all platforms -->
-      <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.b3df.png">
+      <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.3a41.png">
       <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-touch-icon-60x60.a84d.png">
       <link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-touch-icon-72x72.664d.png">
-      <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.faf5.png">
+      <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.20fe.png">
       <link rel="apple-touch-icon" sizes="114x114" href=/"images/favicons/apple-touch-icon-114x114.png">
-      <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.d810.png">
-      <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.1807.png">
-      <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.71bf.png">
-      <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.a9f0.png">
+      <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.842b.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.0175.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.f9ac.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.f24a.png">
       <link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.c391.png" sizes="32x32">
-      <link rel="icon" type="image/png" href="/images/favicons/favicon-194x194.e5f8.png" sizes="194x194">
+      <link rel="icon" type="image/png" href="/images/favicons/favicon-194x194.2d07.png" sizes="194x194">
       <link rel="icon" type="image/png" href="/images/favicons/favicon-96x96.8557.png" sizes="96x96">
-      <link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.0b72.png" sizes="192x192">
-      <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.7353.png" sizes="16x16">
+      <link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.6d91.png" sizes="192x192">
+      <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.a93c.png" sizes="16x16">
       <link rel="manifest" href="/images/favicons/manifest.json">
       <meta name="msapplication-TileColor" content="#000000">
       <meta name="msapplication-TileImage" content="/images/favicons/mstile-144x144.png">
       <meta name="theme-color" content="#ffffff">
       <!-- End favicon for all platforms -->
 
-      <link rel="stylesheet" href="/css/main.ee40.css"/>
+      <link rel="stylesheet" href="/css/main.b4dd.css"/>
       <link href='http://fonts.googleapis.com/css?family=Abril+Fatface&text=gizra' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Hind:400,600,300,500' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600,800' rel='stylesheet' type='text/css'>
@@ -214,10 +214,10 @@
 
         <p>Irony presents itself in many forms. Not being able to login to a site that is responsible for testing that the login is working properly on other live sites, is one of them.</p>
 
-<p>As much as I&#39;d like to say I was able to enjoy the irony, the six hours I spent tracking the bug were slightly frustrating.</p>
+<p>As much as I&rsquo;d like to say I was able to enjoy the irony, the six hours I spent tracking the bug were slightly frustrating.</p>
 
 <p>One of the things <a href="http://shoov.io/">Shoov</a> is built for is assisting us with a quick configuration of live site monitoring using your preferred functional testing tool (e.g. Behat or CasperJS).<br>
-As awesome as services like Pingdom are, they still provide very little insight to what&#39;s actually going on in the site. In fact, according to Pingdom, Shoov was up and running, even though no user could have logged in.</p>
+As awesome as services like Pingdom are, they still provide very little insight to what&rsquo;s actually going on in the site. In fact, according to Pingdom, Shoov was up and running, even though no user could have logged in.</p>
 
 <div class="thumbnail">
   <div class="img-wrapper">
@@ -230,21 +230,21 @@ As awesome as services like Pingdom are, they still provide very little insight 
 
   </div>
   
-    <div class="caption">Shoov login now working. When it wasn't, the fish were sad</div>
+    <div class="caption">Shoov login now working. When it wasn&rsquo;t, the fish were sad</div>
   
 </div>
 
 <h2>Post Mortem</h2>
 
-<p>At this point of time I think very few people care about the &quot;post mortem&quot; of this incident since Shoov is still a work in progress, however some interesting lessons were learned, and some contributions were made.</p>
+<p>At this point of time I think very few people care about the &ldquo;post mortem&rdquo; of this incident since Shoov is still a work in progress, however some interesting lessons were learned, and some contributions were made.</p>
 
 <!-- more -->
 
-<p>First a quick overview of the problem. Shoov is a fully <a href="https://events.drupal.org/losangeles2015/sessions/decoupled-drupal-when-why-and-how">decoupled Drupal</a>, where the only way to register and login are through the GitHub login. Upon login, after the user is redirected back from GitHub&#39;s own authentication, it sends the one time access code it got from GitHub to our Drupal server to do a final validation and register the user.</p>
+<p>First a quick overview of the problem. Shoov is a fully <a href="https://events.drupal.org/losangeles2015/sessions/decoupled-drupal-when-why-and-how">decoupled Drupal</a>, where the only way to register and login are through the GitHub login. Upon login, after the user is redirected back from GitHub&rsquo;s own authentication, it sends the one time access code it got from GitHub to our Drupal server to do a final validation and register the user.</p>
 
-<p>The login worked perfectly, until suddenly it didn&#39;t. To make things even harder my local installation worked fine.</p>
+<p>The login worked perfectly, until suddenly it didn&rsquo;t. To make things even harder my local installation worked fine.</p>
 
-<p>After more hours that I&#39;m willing to admit and a good pointer from <a href="https://twitter.com/izuzak">@izuzak</a> from GitHub&#39;s support team, we figured that my local was sending the following <code>POST</code>:</p>
+<p>After more hours that I&rsquo;m willing to admit and a good pointer from <a href="https://twitter.com/izuzak">@izuzak</a> from GitHub&rsquo;s support team, we figured that my local was sending the following <code>POST</code>:</p>
 <div class="highlight"><pre><code class="text language-text" data-lang="text">POST /login/oauth/access_token HTTP/1.0
 User-Agent: Drupal (+http://drupal.org/)
 Host: github.com
@@ -260,19 +260,19 @@ Content-Length: 111
 
 client_id=007xxxx007&amp;amp;client_secret=1xxxxxxa2&amp;amp;code=someOneTimeCode
 </code></pre></div>
-<p>As you might have noticed (and I can&#39;t blame you if you didn&#39;t) the <code>&amp;</code> char was escaped, and GitHub decided it doesn&#39;t like that anymore.</p>
+<p>As you might have noticed (and I can&rsquo;t blame you if you didn&rsquo;t) the <code>&amp;</code> char was escaped, and GitHub decided it doesn&rsquo;t like that anymore.</p>
 
 <h2>Solve and Prevent Regressions</h2>
 
-<p>After quickly solving the error by hardcoding the <code>&amp;</code> char I&#39;ve decided to spend some time in figuring how I could prevent this from happening again. (Remember: Shoov means &quot;again&quot; in Hebrew for this very reason...)</p>
+<p>After quickly solving the error by hardcoding the <code>&amp;</code> char I&rsquo;ve decided to spend some time in figuring how I could prevent this from happening again. (Remember: Shoov means &ldquo;again&rdquo; in Hebrew for this very reason&hellip;)</p>
 
-<p>I&#39;ve noticed that even though RESTful has thrown an exception when it got the result from GitHub, and even though the site is piping the logs to <a href="http://www.gizra.com/content/logs-easy-way/">Loggly</a> I wasn&#39;t notified about it.</p>
+<p>I&rsquo;ve noticed that even though RESTful has thrown an exception when it got the result from GitHub, and even though the site is piping the logs to <a href="http://www.gizra.com/content/logs-easy-way/">Loggly</a> I wasn&rsquo;t notified about it.</p>
 
-<p>So, the first thing I&#39;ve done was to write a <a href="https://github.com/RESTful-Drupal/restful/pull/522/files">pull-request</a> to RESTful to make sure that exceptions are registered in the watchdog. This means we now got that part covered not just for Shoov, but for all users of RESTful!</p>
+<p>So, the first thing I&rsquo;ve done was to write a <a href="https://github.com/RESTful-Drupal/restful/pull/522/files">pull-request</a> to RESTful to make sure that exceptions are registered in the watchdog. This means we now got that part covered not just for Shoov, but for all users of RESTful!</p>
 
-<p>Next was writing a <a href="https://github.com/amitaibu/shoov-behat/blob/master/behat/features/github_login.feature">Behat test</a> that will be executed by Shoov every few minutes, and constantly verify that Shoov&#39;s login is working properly. At least this unfortunate bug will not go unnoticed should it return some day (as unfortunate bug tend to do from time to time).</p>
+<p>Next was writing a <a href="https://github.com/amitaibu/shoov-behat/blob/master/behat/features/github_login.feature">Behat test</a> that will be executed by Shoov every few minutes, and constantly verify that Shoov&rsquo;s login is working properly. At least this unfortunate bug will not go unnoticed should it return some day (as unfortunate bug tend to do from time to time).</p>
 
-<p>Having to do all that, along with wanting to have it as a public repository, gave me the push to finally introduce the concept of <a href="https://github.com/amitaibu/shoov-behat/blob/master/.shoov.yml#L1-L6">encrypted keys</a>. Since we don&#39;t want the credentials of the dummy GitHub user we&#39;ve created for the test to be exposed, Shoov will now have a secret private key that can be used for AES encryption. Shoov makes sure those encrypted variables will be available in our <a href="https://github.com/amitaibu/shoov-behat/blob/master/behat/features/bootstrap/FeatureContext.php#L44-L49">tests</a>.</p>
+<p>Having to do all that, along with wanting to have it as a public repository, gave me the push to finally introduce the concept of <a href="https://github.com/amitaibu/shoov-behat/blob/master/.shoov.yml#L1-L6">encrypted keys</a>. Since we don&rsquo;t want the credentials of the dummy GitHub user we&rsquo;ve created for the test to be exposed, Shoov will now have a secret private key that can be used for AES encryption. Shoov makes sure those encrypted variables will be available in our <a href="https://github.com/amitaibu/shoov-behat/blob/master/behat/features/bootstrap/FeatureContext.php#L44-L49">tests</a>.</p>
 
 <div class="thumbnail">
   <div class="img-wrapper">
@@ -326,7 +326,7 @@ client_id=007xxxx007&amp;amp;client_secret=1xxxxxxa2&amp;amp;code=someOneTimeCod
     </section>
     <section class="author-details">
       <div class="image-wrapper">
-        <img src="/images/team/avatars/amitaibu.42a1.jpg" class="img-circle img-responsive">
+        <img src="/images/team/avatars/amitaibu.a340.jpg" class="img-circle img-responsive">
       </div>
       <div class="text-wrapper">
         <span class="name">Amitai Burstein</span>
@@ -404,7 +404,7 @@ client_id=007xxxx007&amp;amp;client_secret=1xxxxxxa2&amp;amp;code=someOneTimeCod
 
 
 
-    <script src="/js/plugins.f180.js"></script>
+    <script src="/js/plugins.c51b.js"></script>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
 

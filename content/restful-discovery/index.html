@@ -13,27 +13,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
       <!-- Favicon for all platforms -->
-      <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.b3df.png">
+      <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.3a41.png">
       <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-touch-icon-60x60.a84d.png">
       <link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-touch-icon-72x72.664d.png">
-      <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.faf5.png">
+      <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.20fe.png">
       <link rel="apple-touch-icon" sizes="114x114" href=/"images/favicons/apple-touch-icon-114x114.png">
-      <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.d810.png">
-      <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.1807.png">
-      <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.71bf.png">
-      <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.a9f0.png">
+      <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.842b.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.0175.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.f9ac.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.f24a.png">
       <link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.c391.png" sizes="32x32">
-      <link rel="icon" type="image/png" href="/images/favicons/favicon-194x194.e5f8.png" sizes="194x194">
+      <link rel="icon" type="image/png" href="/images/favicons/favicon-194x194.2d07.png" sizes="194x194">
       <link rel="icon" type="image/png" href="/images/favicons/favicon-96x96.8557.png" sizes="96x96">
-      <link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.0b72.png" sizes="192x192">
-      <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.7353.png" sizes="16x16">
+      <link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.6d91.png" sizes="192x192">
+      <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.a93c.png" sizes="16x16">
       <link rel="manifest" href="/images/favicons/manifest.json">
       <meta name="msapplication-TileColor" content="#000000">
       <meta name="msapplication-TileImage" content="/images/favicons/mstile-144x144.png">
       <meta name="theme-color" content="#ffffff">
       <!-- End favicon for all platforms -->
 
-      <link rel="stylesheet" href="/css/main.ee40.css"/>
+      <link rel="stylesheet" href="/css/main.b4dd.css"/>
       <link href='http://fonts.googleapis.com/css?family=Abril+Fatface&text=gizra' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Hind:400,600,300,500' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600,800' rel='stylesheet' type='text/css'>
@@ -212,18 +212,18 @@
         </div>
       <div class="post-content">
 
-        <p>As extremely pedantic developers we take documenting our APIs very seriously. It&#39;s not rare to see a good patch rejected in code review just because the PHPdocs weren&#39;t clear enough, or a <code>@param</code> wasn&#39;t declared properly.</p>
+        <p>As extremely pedantic developers we take documenting our APIs very seriously. It&rsquo;s not rare to see a good patch rejected in code review just because the PHPdocs weren&rsquo;t clear enough, or a <code>@param</code> wasn&rsquo;t declared properly.</p>
 
-<p>In fact, I often explain to junior devs that the most important part of a function is its signature, and the PHPdocs. The body of the function is just &quot;implementation details&quot;. How it communicates its meaning to the person reading it is the vital part.</p>
+<p>In fact, I often explain to junior devs that the most important part of a function is its signature, and the PHPdocs. The body of the function is just &ldquo;implementation details&rdquo;. How it communicates its meaning to the person reading it is the vital part.</p>
 
 <p>But where does this whole pedantic mindset got when we open up our web-services?<br>
-I would argue that at least 95% of the developers who expose their web-service simply enable RESTws without any modifications. And here&#39;s what a developer implementing your web-service will see when visiting <code>/node.json</code>:</p>
+I would argue that at least 95% of the developers who expose their web-service simply enable RESTws without any modifications. And here&rsquo;s what a developer implementing your web-service will see when visiting <code>/node.json</code>:</p>
 
 <!-- more -->
 
 <p><img src="/assets/images/posts/restful-discovery/image1.jpg" /></p>
 
-<p>Even if the reader knows that nodes are in <code>node.json</code> (and what &quot;node&quot; means in Drupal-world in general) they are ultimately presented with some resource they have very little knowledge about, nor necessarily know where to learn more.</p>
+<p>Even if the reader knows that nodes are in <code>node.json</code> (and what &ldquo;node&rdquo; means in Drupal-world in general) they are ultimately presented with some resource they have very little knowledge about, nor necessarily know where to learn more.</p>
 
 <p>So all the effort we put into our internal API, trying our best to make it readable to outside developers, is completely missing from the public REST API.</p>
 
@@ -233,11 +233,11 @@ I would argue that at least 95% of the developers who expose their web-service s
 
 <p>Clicking on one of the resources will lead you to the resource itself. To get some insight into the resource you can call it with the <code>OPTIONS</code> HTTP method and get all the allowed HTTP operations along with the schema of the properties.</p>
 
-<p>It&#39;s now possible to start imagining an Angular client that will be able to &quot;crawl&quot; your API and create CRUD pages for you.</p>
+<p>It&rsquo;s now possible to start imagining an Angular client that will be able to &ldquo;crawl&rdquo; your API and create CRUD pages for you.</p>
 
 <p><img src="/assets/images/posts/restful-discovery/image3.jpg" /></p>
 
-<p>The neat part about this discovery functionality is that it&#39;s actually a regular RESTful resource in itself! By creating a CTools plugins data provider, we are now able to list all our plugins (and as a bonus get to do some stuff like query all the RESTful plugins with minor version above 5).</p>
+<p>The neat part about this discovery functionality is that it&rsquo;s actually a regular RESTful resource in itself! By creating a CTools plugins data provider, we are now able to list all our plugins (and as a bonus get to do some stuff like query all the RESTful plugins with minor version above 5).</p>
 
 <p>Another change in RESTful is that you have multiple options to call a <em>versioned</em> resource.</p>
 
@@ -246,18 +246,18 @@ Set version via HTTP headers: <code>curl https://example.com/api/articles/1 -H &
 
 <p>In fact, you can omit the version altogether, use <code>https://example.com/api/articles</code>  and the latest resource would be used. RESTful is kind enough to return the version used in the response header, so you will still know exactly which resource responded.</p>
 
-<p>Next on our agenda is making RESTful truly <a href="http://stateless.co/hal_specification.html">HAL</a>. There&#39;s an interesting conversation in RESTful about whether HAL the right choice. I&#39;d like to highlight two points I find important in the conversation:</p>
+<p>Next on our agenda is making RESTful truly <a href="http://stateless.co/hal_specification.html">HAL</a>. There&rsquo;s an interesting conversation in RESTful about whether HAL the right choice. I&rsquo;d like to highlight two points I find important in the conversation:</p>
 
 <ol>
-<li>Since RESTful is challenging quite a few &quot;this is how its always been done&quot;, it was no surprise we were asking if HAL is the right choice</li>
-<li>A great answer to why HAL <em>is</em> the right choice was given by Michal Minecki (@mirzu). I&#39;d like to quote the part that has sealed the deal for me:</li>
+<li>Since RESTful is challenging quite a few &ldquo;this is how its always been done&rdquo;, it was no surprise we were asking if HAL is the right choice</li>
+<li>A great answer to why HAL <em>is</em> the right choice was given by Michal Minecki (@mirzu). I&rsquo;d like to quote the part that has sealed the deal for me:</li>
 </ol>
 
 <blockquote>
-<p>My biggest reason for pushing for HAL is that it&#39;s somewhat popular and is going to be the basis for D8, not because it&#39;s beautiful. It&#39;s not. It&#39;s just good enough, and popular. If it sucked and was popular I&#39;d say ditch it.</p>
+<p>My biggest reason for pushing for HAL is that it&rsquo;s somewhat popular and is going to be the basis for D8, not because it&rsquo;s beautiful. It&rsquo;s not. It&rsquo;s just good enough, and popular. If it sucked and was popular I&rsquo;d say ditch it.</p>
 </blockquote>
 
-<p>As always, I&#39;d like to encourage you to give <a href="https://github.com/Gizra/restful">RESTful</a> a go, and share your findings with us, so we can all learn from each other&#39;s experience.</p>
+<p>As always, I&rsquo;d like to encourage you to give <a href="https://github.com/Gizra/restful">RESTful</a> a go, and share your findings with us, so we can all learn from each other&rsquo;s experience.</p>
 
 
       </div>
@@ -294,7 +294,7 @@ Set version via HTTP headers: <code>curl https://example.com/api/articles/1 -H &
     </section>
     <section class="author-details">
       <div class="image-wrapper">
-        <img src="/images/team/avatars/amitaibu.42a1.jpg" class="img-circle img-responsive">
+        <img src="/images/team/avatars/amitaibu.a340.jpg" class="img-circle img-responsive">
       </div>
       <div class="text-wrapper">
         <span class="name">Amitai Burstein</span>
@@ -372,7 +372,7 @@ Set version via HTTP headers: <code>curl https://example.com/api/articles/1 -H &
 
 
 
-    <script src="/js/plugins.f180.js"></script>
+    <script src="/js/plugins.c51b.js"></script>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
 

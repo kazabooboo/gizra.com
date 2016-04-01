@@ -13,27 +13,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
       <!-- Favicon for all platforms -->
-      <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.b3df.png">
+      <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.3a41.png">
       <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-touch-icon-60x60.a84d.png">
       <link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-touch-icon-72x72.664d.png">
-      <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.faf5.png">
+      <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.20fe.png">
       <link rel="apple-touch-icon" sizes="114x114" href=/"images/favicons/apple-touch-icon-114x114.png">
-      <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.d810.png">
-      <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.1807.png">
-      <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.71bf.png">
-      <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.a9f0.png">
+      <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.842b.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.0175.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.f9ac.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.f24a.png">
       <link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.c391.png" sizes="32x32">
-      <link rel="icon" type="image/png" href="/images/favicons/favicon-194x194.e5f8.png" sizes="194x194">
+      <link rel="icon" type="image/png" href="/images/favicons/favicon-194x194.2d07.png" sizes="194x194">
       <link rel="icon" type="image/png" href="/images/favicons/favicon-96x96.8557.png" sizes="96x96">
-      <link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.0b72.png" sizes="192x192">
-      <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.7353.png" sizes="16x16">
+      <link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.6d91.png" sizes="192x192">
+      <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.a93c.png" sizes="16x16">
       <link rel="manifest" href="/images/favicons/manifest.json">
       <meta name="msapplication-TileColor" content="#000000">
       <meta name="msapplication-TileImage" content="/images/favicons/mstile-144x144.png">
       <meta name="theme-color" content="#ffffff">
       <!-- End favicon for all platforms -->
 
-      <link rel="stylesheet" href="/css/main.ee40.css"/>
+      <link rel="stylesheet" href="/css/main.b4dd.css"/>
       <link href='http://fonts.googleapis.com/css?family=Abril+Fatface&text=gizra' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Hind:400,600,300,500' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600,800' rel='stylesheet' type='text/css'>
@@ -208,7 +208,7 @@
         </div>
       <div class="post-content">
 
-        <p>In August 2015 I challenged myself (and later the rest of the Gizra devs) to create a typical web-app with all the bells and whistles in Elm. It&#39;s called <a href="https://gizra.github.io/elm-hedley">elm-hedley</a>, and I&#39;m super proud it is now featuring in Elm&#39;s <a href="http://elm-lang.org/">front page</a>.</p>
+        <p>In August 2015 I challenged myself (and later the rest of the Gizra devs) to create a typical web-app with all the bells and whistles in Elm. It&rsquo;s called <a href="https://gizra.github.io/elm-hedley">elm-hedley</a>, and I&rsquo;m super proud it is now featuring in Elm&rsquo;s <a href="http://elm-lang.org/">front page</a>.</p>
 
 <div class="thumbnail">
   <div class="img-wrapper">
@@ -225,7 +225,7 @@
 
 <p>This post is going to give a high level overview and point out some parts that are worth noting. However, before diving into the technical section, it is important to emphasize the virtues of <em>simply doing</em>.</p>
 
-<p>If you would go back in the commits history you would see some nasty stuff that have been completely overhauled and polished. The only way of getting to that &quot;improving&quot; part is of course by starting! Only after that will one become smarter and recognize what needs improving, as well as be more experienced to know how to do it.</p>
+<p>If you would go back in the commits history you would see some nasty stuff that have been completely overhauled and polished. The only way of getting to that &ldquo;improving&rdquo; part is of course by starting! Only after that will one become smarter and recognize what needs improving, as well as be more experienced to know how to do it.</p>
 
 <!-- more -->
 
@@ -252,27 +252,27 @@
 
 <h2>Components Vs Pages</h2>
 
-<p>The way we structure the files is each component resides in its own folder. Pages which are just a container of other components are placed under the <code>Pages</code> directory. In order to keep it simple, if a page is just a wrapper over a single component we won&#39;t create both a component and a page. <a href="https://github.com/Gizra/elm-hedley/tree/v1.0.0/src/elm/Pages/User">The page</a> will be in fact a component. If one day the same page will need to become something more complex like the Event page, we can always move things around easily. The benefit of doing so is that it keeps things simple - no extra wiring needed merely for keeping things consistent (and harder to read).</p>
+<p>The way we structure the files is each component resides in its own folder. Pages which are just a container of other components are placed under the <code>Pages</code> directory. In order to keep it simple, if a page is just a wrapper over a single component we won&rsquo;t create both a component and a page. <a href="https://github.com/Gizra/elm-hedley/tree/v1.0.0/src/elm/Pages/User">The page</a> will be in fact a component. If one day the same page will need to become something more complex like the Event page, we can always move things around easily. The benefit of doing so is that it keeps things simple - no extra wiring needed merely for keeping things consistent (and harder to read).</p>
 
 <h2>Effects</h2>
 
-<p>In line with the &quot;Keep it Simple&quot; approach, we realized that it&#39;s not required for every component to have an <code>effect</code>. So we can just <a href="https://github.com/Gizra/elm-hedley/blob/v1.0.0/src/elm/EventAuthorFilter/Update.elm#L12">remove it</a>. On the other hand if we need the component to return more info to the parent we can do that as-well. The <a href="https://gizra.github.io/elm-hedley/#!/articles">Articles page</a> is a good example: The <a href="https://github.com/Gizra/elm-hedley/blob/v1.0.0/src/elm/ArticleForm/Update.elm#L38">ArticleForm</a> component that is responsible for the form for creating articles doesn&#39;t need to have the newly created article as part of its model - it just needs to create it, and it hands it over back to the parent component. The parent component will make sure to <a href="https://github.com/Gizra/elm-hedley/blob/v1.0.0/src/elm/Pages/Article/Update.elm#L36-L44">append</a> it to the <a href="https://github.com/Gizra/elm-hedley/blob/v1.0.0/src/elm/ArticleList/Update.elm#L38-L41">ArticleList</a>.</p>
+<p>In line with the &ldquo;Keep it Simple&rdquo; approach, we realized that it&rsquo;s not required for every component to have an <code>effect</code>. So we can just <a href="https://github.com/Gizra/elm-hedley/blob/v1.0.0/src/elm/EventAuthorFilter/Update.elm#L12">remove it</a>. On the other hand if we need the component to return more info to the parent we can do that as-well. The <a href="https://gizra.github.io/elm-hedley/#!/articles">Articles page</a> is a good example: The <a href="https://github.com/Gizra/elm-hedley/blob/v1.0.0/src/elm/ArticleForm/Update.elm#L38">ArticleForm</a> component that is responsible for the form for creating articles doesn&rsquo;t need to have the newly created article as part of its model - it just needs to create it, and it hands it over back to the parent component. The parent component will make sure to <a href="https://github.com/Gizra/elm-hedley/blob/v1.0.0/src/elm/Pages/Article/Update.elm#L36-L44">append</a> it to the <a href="https://github.com/Gizra/elm-hedley/blob/v1.0.0/src/elm/ArticleList/Update.elm#L38-L41">ArticleList</a>.</p>
 
 <h2>Router</h2>
 
-<p>When building an SPA (Single Page Application) in Elm, this <a href="https://github.com/rgrempel/elm-route-hash">router</a> package is fun to work with. If you are new to Elm&#39;s syntax it might seem a bit daunting at first, but I can assure you it&#39;s doing exactly what it <a href="(https://github.com/Gizra/elm-hedley/blob/v1.0.0/src/elm/App/Router.elm">should</a>) be doing - and not more. I&#39;ve written in <a href="http://www.gizra.com/content/thinking-choosing-elm/">more detail</a> about how we love the fact that the URL change is in fact just a side-effect.</p>
+<p>When building an SPA (Single Page Application) in Elm, this <a href="https://github.com/rgrempel/elm-route-hash">router</a> package is fun to work with. If you are new to Elm&rsquo;s syntax it might seem a bit daunting at first, but I can assure you it&rsquo;s doing exactly what it <a href="(https://github.com/Gizra/elm-hedley/blob/v1.0.0/src/elm/App/Router.elm">should</a>) be doing - and not more. I&rsquo;ve written in <a href="http://www.gizra.com/content/thinking-choosing-elm/">more detail</a> about how we love the fact that the URL change is in fact just a side-effect.</p>
 
 <h2>Unit test and CI integration</h2>
 
 <p>I confess. In all our ~3 years of Angular we hardly did any unit testing. The setup and mocking was often too annoying, so we opted to do functional testing, which is of course great, but not as great as having both functional and unit tests.</p>
 
-<p>It was super important for us to see that Travis badge telling us, go ahead, your latest PR didn&#39;t break things.</p>
+<p>It was super important for us to see that Travis badge telling us, go ahead, your latest PR didn&rsquo;t break things.</p>
 
-<p>While writing the tests was fun, as Elm&#39;s pure functions make unit testing pretty much hassle free (see <a href="https://github.com/Gizra/elm-hedley/blob/v1.0.0/src/elm/Config/Test.elm">example</a>), the integration with Travis-CI was more challenging. The tests were running fine on the browser, but in a node environment they started failing. Looking at existing examples we saw that we had to start mock the browser inside node for the tests to pass. Yeah, mocking - that thing we really tried to avoid.</p>
+<p>While writing the tests was fun, as Elm&rsquo;s pure functions make unit testing pretty much hassle free (see <a href="https://github.com/Gizra/elm-hedley/blob/v1.0.0/src/elm/Config/Test.elm">example</a>), the integration with Travis-CI was more challenging. The tests were running fine on the browser, but in a node environment they started failing. Looking at existing examples we saw that we had to start mock the browser inside node for the tests to pass. Yeah, mocking - that thing we really tried to avoid.</p>
 
 <p>Looking for a better solution we dusted off our <a href="http://casperjs.org/">CasperJS</a> skills and came with a simple solution. Run the test via terminal using CasperJS (which in turn runs over PhantomJS). It worked!</p>
 
-<p>We were so happy with the solution we&#39;ve added it to our home grown <a href="https://github.com/Gizra/generator-elmlang">Yo generator</a>, so now everybody that uses it gets a fully working <a href="https://github.com/Gizra/elm-hedley/blob/v1.0.0/.travis.yml">Travis integration</a>.</p>
+<p>We were so happy with the solution we&rsquo;ve added it to our home grown <a href="https://github.com/Gizra/generator-elmlang">Yo generator</a>, so now everybody that uses it gets a fully working <a href="https://github.com/Gizra/elm-hedley/blob/v1.0.0/.travis.yml">Travis integration</a>.</p>
 
 <div class="thumbnail">
   <div class="img-wrapper">
@@ -289,25 +289,25 @@
 
 <h2>Ports &amp; Interop</h2>
 
-<p>Any non-trivial web app has to make use of existing libraries. Rewriting Leaflet for maps / CKeditor for WYSIWYG editor / <a href="http://www.dropzonejs.com/">Dropzone</a> for file uploads in Elm doesn&#39;t make much sense - it would be just too much work. So basically we let each JS library do its job and pass the information back to Elm that manages the state of the app.</p>
+<p>Any non-trivial web app has to make use of existing libraries. Rewriting Leaflet for maps / CKeditor for WYSIWYG editor / <a href="http://www.dropzonejs.com/">Dropzone</a> for file uploads in Elm doesn&rsquo;t make much sense - it would be just too much work. So basically we let each JS library do its job and pass the information back to Elm that manages the state of the app.</p>
 
-<p>After getting used to Elm&#39;s compiler saving us from doing mistakes, developing JS &quot;in the wild&quot; suddenly feels scary :)</p>
+<p>After getting used to Elm&rsquo;s compiler saving us from doing mistakes, developing JS &ldquo;in the wild&rdquo; suddenly feels scary :)</p>
 
-<p>Admittedly some parts in the <a href="https://github.com/Gizra/elm-hedley/blob/v1.0.0/src/js/elm-interop.js">interop file</a> (short of <a href="https://en.wikipedia.org/wiki/Interoperability">interoperability</a>) could be improved in terms of interacting with the DOM, but still for us the Elm&#39;s benefits are well worth the small hacks we had to do. I believe that as Elm matures those interactions would be even easier.</p>
+<p>Admittedly some parts in the <a href="https://github.com/Gizra/elm-hedley/blob/v1.0.0/src/js/elm-interop.js">interop file</a> (short of <a href="https://en.wikipedia.org/wiki/Interoperability">interoperability</a>) could be improved in terms of interacting with the DOM, but still for us the Elm&rsquo;s benefits are well worth the small hacks we had to do. I believe that as Elm matures those interactions would be even easier.</p>
 
-<p>Here are for example the integration parts of Leaflet&#39;s map under the <a href="http://gizra.github.io/elm-hedley/#!/events">Events</a> page - the <a href="https://github.com/Gizra/elm-hedley/blob/v1.0.0/src/elm/Main.elm#L51-L75">Elm code</a>, and the <a href="https://github.com/Gizra/elm-hedley/blob/v1.0.0/src/js/elm-interop.js#L64-L194">JS interop</a> one.</p>
+<p>Here are for example the integration parts of Leaflet&rsquo;s map under the <a href="http://gizra.github.io/elm-hedley/#!/events">Events</a> page - the <a href="https://github.com/Gizra/elm-hedley/blob/v1.0.0/src/elm/Main.elm#L51-L75">Elm code</a>, and the <a href="https://github.com/Gizra/elm-hedley/blob/v1.0.0/src/js/elm-interop.js#L64-L194">JS interop</a> one.</p>
 
 <h2>Gulp</h2>
 
-<p>There are <a href="https://medium.com/@ericclemmons/javascript-fatigue-48d4011b6fc4#.4ucjghbz7">too many tools</a> out there, and we have chosen Gulp. We&#39;ve built an opinionated Gulp file that takes care of compiling Elm, building SASS, deploying to gh-pages, etc.</p>
+<p>There are <a href="https://medium.com/@ericclemmons/javascript-fatigue-48d4011b6fc4#.4ucjghbz7">too many tools</a> out there, and we have chosen Gulp. We&rsquo;ve built an opinionated Gulp file that takes care of compiling Elm, building SASS, deploying to gh-pages, etc.</p>
 
 <p>The nicest part of it for development is having the error messages appearing both on the terminal, and on the screen upon live reload.</p>
 
-<p>The good news in case you&#39;d like to use it, is that it&#39;s part of the above mentioned Yo generator.</p>
+<p>The good news in case you&rsquo;d like to use it, is that it&rsquo;s part of the above mentioned Yo generator.</p>
 
-<h2>What&#39;s Next</h2>
+<h2>What&rsquo;s Next</h2>
 
-<p>I have tagged a <code>v1.0.0</code>, but like any other software, it just marks a milestone - we are constantly improving and polishing parts of it. As always, if you spot anything you&#39;d like to change or add your pull requests are most welcome!</p>
+<p>I have tagged a <code>v1.0.0</code>, but like any other software, it just marks a milestone - we are constantly improving and polishing parts of it. As always, if you spot anything you&rsquo;d like to change or add your pull requests are most welcome!</p>
 
 
       </div>
@@ -344,7 +344,7 @@
     </section>
     <section class="author-details">
       <div class="image-wrapper">
-        <img src="/images/team/avatars/amitaibu.42a1.jpg" class="img-circle img-responsive">
+        <img src="/images/team/avatars/amitaibu.a340.jpg" class="img-circle img-responsive">
       </div>
       <div class="text-wrapper">
         <span class="name">Amitai Burstein</span>
@@ -422,7 +422,7 @@
 
 
 
-    <script src="/js/plugins.f180.js"></script>
+    <script src="/js/plugins.c51b.js"></script>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
 

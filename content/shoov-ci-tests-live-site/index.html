@@ -13,27 +13,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
       <!-- Favicon for all platforms -->
-      <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.b3df.png">
+      <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.3a41.png">
       <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-touch-icon-60x60.a84d.png">
       <link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-touch-icon-72x72.664d.png">
-      <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.faf5.png">
+      <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.20fe.png">
       <link rel="apple-touch-icon" sizes="114x114" href=/"images/favicons/apple-touch-icon-114x114.png">
-      <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.d810.png">
-      <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.1807.png">
-      <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.71bf.png">
-      <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.a9f0.png">
+      <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.842b.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.0175.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.f9ac.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.f24a.png">
       <link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.c391.png" sizes="32x32">
-      <link rel="icon" type="image/png" href="/images/favicons/favicon-194x194.e5f8.png" sizes="194x194">
+      <link rel="icon" type="image/png" href="/images/favicons/favicon-194x194.2d07.png" sizes="194x194">
       <link rel="icon" type="image/png" href="/images/favicons/favicon-96x96.8557.png" sizes="96x96">
-      <link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.0b72.png" sizes="192x192">
-      <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.7353.png" sizes="16x16">
+      <link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.6d91.png" sizes="192x192">
+      <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.a93c.png" sizes="16x16">
       <link rel="manifest" href="/images/favicons/manifest.json">
       <meta name="msapplication-TileColor" content="#000000">
       <meta name="msapplication-TileImage" content="/images/favicons/mstile-144x144.png">
       <meta name="theme-color" content="#ffffff">
       <!-- End favicon for all platforms -->
 
-      <link rel="stylesheet" href="/css/main.ee40.css"/>
+      <link rel="stylesheet" href="/css/main.b4dd.css"/>
       <link href='http://fonts.googleapis.com/css?family=Abril+Fatface&text=gizra' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Hind:400,600,300,500' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600,800' rel='stylesheet' type='text/css'>
@@ -210,11 +210,11 @@
         </div>
       <div class="post-content">
 
-        <p><a href="/content/shoov-ui-regression/">Shoov</a> keeps evolving, and now has an <a href="https://github.com/shoov/test-example">example repo</a> that demonstrates how we&#39;re trying to make UI regression simpler, we took some time to implement the second feature we were missing - automatic testing on the <em>live</em> site.</p>
+        <p><a href="/content/shoov-ui-regression/">Shoov</a> keeps evolving, and now has an <a href="https://github.com/shoov/test-example">example repo</a> that demonstrates how we&rsquo;re trying to make UI regression simpler, we took some time to implement the second feature we were missing - automatic testing on the <em>live</em> site.</p>
 
 <p>We saw a very strange situation everywhere we looked: Dev teams were writing amazing test coverage. They were going the extra mile to setup a Travis box with environment as close as possible to the live site. They tested every single feature, and added a regression test for every bug. Heck, every commit triggered a test suite that run for an hour before being carefully reviewed and merged.</p>
 
-<p>And then the site goes live - and at best they might add <a href="https://www.pingdom.com/">Pingdom</a> monitoring to check it&#39;s working. Pingdom at its simplest form sends an http request every minute to your site. If the answer is <code>200</code> - it means that all is good in the world. Which is of course wrong.</p>
+<p>And then the site goes live - and at best they might add <a href="https://www.pingdom.com/">Pingdom</a> monitoring to check it&rsquo;s working. Pingdom at its simplest form sends an http request every minute to your site. If the answer is <code>200</code> - it means that all is good in the world. Which is of course wrong.</p>
 
 <p>Our mission is to change this, and bring functional testing to the live site. One that is easy to setup and that integrates with your existing testing and GitHub flow.</p>
 
@@ -233,29 +233,29 @@
   
 </div>
 
-<p>While Pingdom is wonderful and is alerting us on time whenever a site goes down, its &quot;page is fine, move along&quot; approach doesn&#39;t cut it for us. Here are some examples why testing on the production server is a good idea:</p>
+<p>While Pingdom is wonderful and is alerting us on time whenever a site goes down, its &ldquo;page is fine, move along&rdquo; approach doesn&rsquo;t cut it for us. Here are some examples why testing on the production server is a good idea:</p>
 
 <!-- more -->
 
 <ol>
-<li>Your live site is contains various widgets from different providers - Facebook comments, Stripe.js payment system, Youtube videos etc. You have no control over these providers, and you can&#39;t check their status pages constantly.</li>
-<li>Your clients might have too many permissions power assigned to their admin role, and by accident touched some setting they shouldn&#39;t have. Wouldn&#39;t you like to know if suddenly the &quot;Latest news&quot; in your home page is gone?</li>
+<li>Your live site is contains various widgets from different providers - Facebook comments, Stripe.js payment system, Youtube videos etc. You have no control over these providers, and you can&rsquo;t check their status pages constantly.</li>
+<li>Your clients might have too many permissions power assigned to their admin role, and by accident touched some setting they shouldn&rsquo;t have. Wouldn&rsquo;t you like to know if suddenly the &ldquo;Latest news&rdquo; in your home page is gone?</li>
 <li>Your site got hacked! You really want to get red alerts when that happens.</li>
-<li>Your Solr index got deleted, so your search page is still working, but has 0 indexed items. Wouldn&#39;t it be great if for example you had a simple <a href="/content/automatic-qa/">Behat</a> that ran every few minutes and checked the number of indexed items that appears on the page isn&#39;t below 1000, and alerted you if that&#39;s not the case?</li>
+<li>Your Solr index got deleted, so your search page is still working, but has 0 indexed items. Wouldn&rsquo;t it be great if for example you had a simple <a href="/content/automatic-qa/">Behat</a> that ran every few minutes and checked the number of indexed items that appears on the page isn&rsquo;t below 1000, and alerted you if that&rsquo;s not the case?</li>
 </ol>
 
 <h2>The Plan</h2>
 
-<p>We are currently building a system that simplifies the task of hooking your site to a testing system. We can&#39;t use existing systems like <a href="https://travis-ci.org/">Travis</a> because, as awesome as they are, they are tightly coupled with idea of being triggered by a <code>git commit</code> action.</p>
+<p>We are currently building a system that simplifies the task of hooking your site to a testing system. We can&rsquo;t use existing systems like <a href="https://travis-ci.org/">Travis</a> because, as awesome as they are, they are tightly coupled with idea of being triggered by a <code>git commit</code> action.</p>
 
-<p>There are workarounds for that, and Circle CI does allow triggering a build from a REST api, but triggering it on the right time, notifying the right people (not just the build author), preventing overflow of emails when errors occur - all that isn&#39;t there, or at least isn&#39;t simple enough to setup in a single click.</p>
+<p>There are workarounds for that, and Circle CI does allow triggering a build from a REST api, but triggering it on the right time, notifying the right people (not just the build author), preventing overflow of emails when errors occur - all that isn&rsquo;t there, or at least isn&rsquo;t simple enough to setup in a single click.</p>
 
 <p>There are a few principles we always try to follow, in Shoov and other projects:</p>
 
 <ol>
-<li>Open Source <a href="https://github.com/shoov">all our work</a>, and don&#39;t be afraid to fail.</li>
-<li>Integrate with GitHub, in a similar way to Travis&#39;s. Unlike other services that restrict you to a specific testing tool, or require copying a script into their web UI - Shoov uses your testing tool, in its natural environment - your repo.</li>
-<li>Build it for our needs. Don&#39;t try to make a product out of it - just make it perfect for what we need. If we discover it does give us a signifcant benefit, we can think of a wider scope.</li>
+<li>Open Source <a href="https://github.com/shoov">all our work</a>, and don&rsquo;t be afraid to fail.</li>
+<li>Integrate with GitHub, in a similar way to Travis&rsquo;s. Unlike other services that restrict you to a specific testing tool, or require copying a script into their web UI - Shoov uses your testing tool, in its natural environment - your repo.</li>
+<li>Build it for our needs. Don&rsquo;t try to make a product out of it - just make it perfect for what we need. If we discover it does give us a signifcant benefit, we can think of a wider scope.</li>
 </ol>
 
 <p>The backend part is almost done, so our next task is to have a UI that helps connect GitHub repos to Shoov. We expect something similar to the interface Travis provides - a checkbox to enable or disable the service. From there it will be up to you to add a <a href="https://github.com/amitaibu/gizra-behat/blob/master/.shoov.yml">.shoov.yml</a> file to the repo, and write some actual tests.</p>
@@ -295,7 +295,7 @@
     </section>
     <section class="author-details">
       <div class="image-wrapper">
-        <img src="/images/team/avatars/amitaibu.42a1.jpg" class="img-circle img-responsive">
+        <img src="/images/team/avatars/amitaibu.a340.jpg" class="img-circle img-responsive">
       </div>
       <div class="text-wrapper">
         <span class="name">Amitai Burstein</span>
@@ -373,7 +373,7 @@
 
 
 
-    <script src="/js/plugins.f180.js"></script>
+    <script src="/js/plugins.c51b.js"></script>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
 

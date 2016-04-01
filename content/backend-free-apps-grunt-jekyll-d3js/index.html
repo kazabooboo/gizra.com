@@ -13,27 +13,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
       <!-- Favicon for all platforms -->
-      <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.b3df.png">
+      <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.3a41.png">
       <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-touch-icon-60x60.a84d.png">
       <link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-touch-icon-72x72.664d.png">
-      <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.faf5.png">
+      <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.20fe.png">
       <link rel="apple-touch-icon" sizes="114x114" href=/"images/favicons/apple-touch-icon-114x114.png">
-      <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.d810.png">
-      <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.1807.png">
-      <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.71bf.png">
-      <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.a9f0.png">
+      <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.842b.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.0175.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.f9ac.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.f24a.png">
       <link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.c391.png" sizes="32x32">
-      <link rel="icon" type="image/png" href="/images/favicons/favicon-194x194.e5f8.png" sizes="194x194">
+      <link rel="icon" type="image/png" href="/images/favicons/favicon-194x194.2d07.png" sizes="194x194">
       <link rel="icon" type="image/png" href="/images/favicons/favicon-96x96.8557.png" sizes="96x96">
-      <link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.0b72.png" sizes="192x192">
-      <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.7353.png" sizes="16x16">
+      <link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.6d91.png" sizes="192x192">
+      <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.a93c.png" sizes="16x16">
       <link rel="manifest" href="/images/favicons/manifest.json">
       <meta name="msapplication-TileColor" content="#000000">
       <meta name="msapplication-TileImage" content="/images/favicons/mstile-144x144.png">
       <meta name="theme-color" content="#ffffff">
       <!-- End favicon for all platforms -->
 
-      <link rel="stylesheet" href="/css/main.ee40.css"/>
+      <link rel="stylesheet" href="/css/main.b4dd.css"/>
       <link href='http://fonts.googleapis.com/css?family=Abril+Fatface&text=gizra' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Hind:400,600,300,500' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600,800' rel='stylesheet' type='text/css'>
@@ -212,7 +212,7 @@
         </div>
       <div class="post-content">
 
-        <p>When we started working on a mobile web site for <a href="http://www.gizra.com/content/casa-del-lector/">Casa del Lector</a>&#39;s exhibition, we decided early on it would be a backend-free app, mainly for reasons of stability and performance:</p>
+        <p>When we started working on a mobile web site for <a href="http://www.gizra.com/content/casa-del-lector/">Casa del Lector</a>&rsquo;s exhibition, we decided early on it would be a backend-free app, mainly for reasons of stability and performance:</p>
 
 <div class="thumbnail">
   <div class="img-wrapper">
@@ -250,7 +250,7 @@
 
 <h3>Grunt</h3>
 
-<p>Grunt was an obvious choice for processing the XML data and getting it ready for Jekyll&#39;s consumption. Since we are already working with <a href="https://github.com/robwierzbowski/generator-jekyllrb">generator-jekyllrb</a> we were able to add our own custom tasks.</p>
+<p>Grunt was an obvious choice for processing the XML data and getting it ready for Jekyll&rsquo;s consumption. Since we are already working with <a href="https://github.com/robwierzbowski/generator-jekyllrb">generator-jekyllrb</a> we were able to add our own custom tasks.</p>
 
 <p>Here are some notable Grunt plugins we have used:</p>
 
@@ -266,7 +266,7 @@
 <h3>Jekyll</h3>
 
 <p>Grunt tasks generate JSON files from the XML, properly encode and injected it into Jekyll.<br>
-Jekyll was used to create the actual HTML. Nothing too fancy here, but it served its purpose - generating the HTML that we&#39;ll later <code>grunt deploy</code> into GitHub Pages.</p>
+Jekyll was used to create the actual HTML. Nothing too fancy here, but it served its purpose - generating the HTML that we&rsquo;ll later <code>grunt deploy</code> into GitHub Pages.</p>
 
 <h3>D3js</h3>
 
@@ -274,7 +274,7 @@ Jekyll was used to create the actual HTML. Nothing too fancy here, but it served
 
 <ul>
 <li>Emulators are nice, but in the end the HTML, CSS and JS should be tested on actual devices. Luckily for us the devices in the exhibition were known, so it was easier to target them. We used <a href="https://developer.chrome.com/devtools/docs/remote-debugging">Chrome</a> and <a href="https://developer.apple.com/safari/tools/">Safari</a> remote developer tools to get internal insight of the application</li>
-<li>Removing the <a href="http://updates.html5rocks.com/2013/12/300ms-tap-delay-gone-away">300ms</a> delay of double-tap zoom was a good start but of course not enough. In fact, the most difficult issues were in relation to events handling and animations. Try to apply throttle or <a href="http://drupalmotion.com/article/debounce-and-throttle-visual-explanation">debounce</a> when handling Zoom or Drag, so they animations don&#39;t choke the app and overload the <a href="https://github.com/mbostock/d3/wiki/Behaviors">d3js behaviors</a>.</li>
+<li>Removing the <a href="http://updates.html5rocks.com/2013/12/300ms-tap-delay-gone-away">300ms</a> delay of double-tap zoom was a good start but of course not enough. In fact, the most difficult issues were in relation to events handling and animations. Try to apply throttle or <a href="http://drupalmotion.com/article/debounce-and-throttle-visual-explanation">debounce</a> when handling Zoom or Drag, so they animations don&rsquo;t choke the app and overload the <a href="https://github.com/mbostock/d3/wiki/Behaviors">d3js behaviors</a>.</li>
 <li>I also highly recommend the fabulous talk of <a href="http://www.youtube.com/watch?v=90NsjKvz9Ns&amp;list=PL37ZVnwpeshFXOP2lqCUykYPXYNsK_fgN&amp;feature=share">Mark DiMarco</a> from JSConf 2014, who presented alternatives to handling the user interaction and animation in d3js. This helped us do further optimizations and make pthis project a success</li>
 </ul>
 
@@ -313,7 +313,7 @@ Jekyll was used to create the actual HTML. Nothing too fancy here, but it served
     </section>
     <section class="author-details">
       <div class="image-wrapper">
-        <img src="/images/team/avatars/ceoaliongroo.261b.jpg" class="img-circle img-responsive">
+        <img src="/images/team/avatars/ceoaliongroo.dc93.jpg" class="img-circle img-responsive">
       </div>
       <div class="text-wrapper">
         <span class="name">Carlos Mantilla</span>
@@ -389,7 +389,7 @@ Jekyll was used to create the actual HTML. Nothing too fancy here, but it served
 
 
 
-    <script src="/js/plugins.f180.js"></script>
+    <script src="/js/plugins.c51b.js"></script>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
 

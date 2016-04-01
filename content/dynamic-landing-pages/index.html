@@ -13,27 +13,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
       <!-- Favicon for all platforms -->
-      <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.b3df.png">
+      <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.3a41.png">
       <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-touch-icon-60x60.a84d.png">
       <link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-touch-icon-72x72.664d.png">
-      <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.faf5.png">
+      <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.20fe.png">
       <link rel="apple-touch-icon" sizes="114x114" href=/"images/favicons/apple-touch-icon-114x114.png">
-      <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.d810.png">
-      <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.1807.png">
-      <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.71bf.png">
-      <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.a9f0.png">
+      <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.842b.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.0175.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.f9ac.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.f24a.png">
       <link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.c391.png" sizes="32x32">
-      <link rel="icon" type="image/png" href="/images/favicons/favicon-194x194.e5f8.png" sizes="194x194">
+      <link rel="icon" type="image/png" href="/images/favicons/favicon-194x194.2d07.png" sizes="194x194">
       <link rel="icon" type="image/png" href="/images/favicons/favicon-96x96.8557.png" sizes="96x96">
-      <link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.0b72.png" sizes="192x192">
-      <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.7353.png" sizes="16x16">
+      <link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.6d91.png" sizes="192x192">
+      <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.a93c.png" sizes="16x16">
       <link rel="manifest" href="/images/favicons/manifest.json">
       <meta name="msapplication-TileColor" content="#000000">
       <meta name="msapplication-TileImage" content="/images/favicons/mstile-144x144.png">
       <meta name="theme-color" content="#ffffff">
       <!-- End favicon for all platforms -->
 
-      <link rel="stylesheet" href="/css/main.ee40.css"/>
+      <link rel="stylesheet" href="/css/main.b4dd.css"/>
       <link href='http://fonts.googleapis.com/css?family=Abril+Fatface&text=gizra' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Hind:400,600,300,500' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600,800' rel='stylesheet' type='text/css'>
@@ -220,50 +220,50 @@
 
 <p><img src="/assets/images/legacy/Snap1_0.png"></p>
 
-<p>Before we go too technical, let&#39;s translate the task into plain English in order to solve our task.</p>
+<p>Before we go too technical, let&rsquo;s translate the task into plain English in order to solve our task.</p>
 
 <blockquote>
 The layout should be a header and footer which are always the same
 </blockquote>
 
-<p>Or we can say it differently - don&#39;t show the sidebars. A quick and dirty way of doing it, will be overriding page.tpl and remove the printing of the sidebars.</p>
+<p>Or we can say it differently - don&rsquo;t show the sidebars. A quick and dirty way of doing it, will be overriding page.tpl and remove the printing of the sidebars.</p>
 
 <blockquote>
-...three columns layout...
+&hellip;three columns layout&hellip;
 </blockquote>
 
-<p>That&#39;s easy with Panel&#39;s three column layout (or we can create our own layout using <a href="http://www.gizra.com/content/thinking-grid-960">960</a>).</p>
+<p>That&rsquo;s easy with Panel&rsquo;s three column layout (or we can create our own layout using <a href="http://www.gizra.com/content/thinking-grid-960">960</a>).</p>
 
 <blockquote>
-...with dynamic content.
+&hellip;with dynamic content.
 </blockquote>
 
 <p>Dynamic content - that sounds like a job for Views. We can have a content type, that will have cck fields that describe the location of it (e.g. left, middle), and the page it should appear (e.g. /landing-page/foo). Views will get the right nodes for us.</p>
 
-<p>Ok, now we know how we want to implement it, let&#39;s get our hands dirty (or download the <a href="http://www.gizra.com/sites/default/files/landing_pages_0.zip">example module</a>, and skip to 7).</p>
+<p>Ok, now we know how we want to implement it, let&rsquo;s get our hands dirty (or download the <a href="http://www.gizra.com/sites/default/files/landing_pages_0.zip">example module</a>, and skip to 7).</p>
 
 <ol>
 <li>Download and enable necessary modules:
-```
+&ldquo;`
 drush dl cck views ctools panels
 drush en optionwidgets text views_ui ctools _panels page_manager views_content
-```
+&rdquo;`
 </li>
-<li>Starting from the lowest level, we'll create a new content type called "Landing page element" with CCK fields - select list for the "Location" and a textfield for the "Page ID"</li>
-<li>Create a View that shows the full nodes, filtered by node type, that gets two arguments - the "Location" and the "Page ID"</li>
-<li>Add a new display of "Content pane" type. This display type is what ties Views to Panels in a way that allows us to define how the View is going to get its arguments</li>
-<li>Set the Page ID argument to be taken from the panel argument - or in other words, if the url will be landing-page/foo then foo is our page ID. The Location argument, on the other hand, shouldn't be taken from the URL - it should be set in the Pane configuration
+<li>Starting from the lowest level, we&rsquo;ll create a new content type called &ldquo;Landing page element&rdquo; with CCK fields - select list for the &ldquo;Location&rdquo; and a textfield for the &ldquo;Page ID&rdquo;</li>
+<li>Create a View that shows the full nodes, filtered by node type, that gets two arguments - the &ldquo;Location&rdquo; and the &ldquo;Page ID&rdquo;</li>
+<li>Add a new display of &ldquo;Content pane&rdquo; type. This display type is what ties Views to Panels in a way that allows us to define how the View is going to get its arguments</li>
+<li>Set the Page ID argument to be taken from the panel argument - or in other words, if the url will be landing-page/foo then foo is our page ID. The Location argument, on the other hand, shouldn&rsquo;t be taken from the URL - it should be set in the Pane configuration
 <img src="/assets/images/legacy/Snap3_0.png">
 <img src="/assets/images/legacy/Snap4.png">
 </li>
-<li>Create a panel page in the path ```landing-page``` with a three column layout, and in the content add our view to each of the columns. Every time the "Location" argument will change according to the column the View is added to
+<li>Create a panel page in the path &ldquo;`landing-page&rdquo;` with a three column layout, and in the content add our view to each of the columns. Every time the &ldquo;Location&rdquo; argument will change according to the column the View is added to
 <img src="/assets/images/legacy/Snap5_0.png">
 <img src="/assets/images/legacy/Snap6_0.png">
 <img src="/assets/images/legacy/Snap7_0.png">
 </li>
 <li>Next, in our theme to copy page.tpl.php to page-landing-page.tpl.php, and the printing of the sidebars</li>
 <li>Optional; copy node.tpl.php to node-view-landing_page.tpl.php and delete the printing of the node title</li>
-<li>Optional; In admin/build/themes/settings uncheck "Display post information" from our new content type</li>
+<li>Optional; In admin/build/themes/settings uncheck &ldquo;Display post information&rdquo; from our new content type</li>
 <li>Now, all that is left to do, is to add three Landing page elements content, with the same page ID (e.g. `gizra`), and with different locations</li>
 <li>Navigate to landing-pages/gizra and see your landing page!</li>
 </ol>
@@ -305,7 +305,7 @@ drush en optionwidgets text views_ui ctools _panels page_manager views_content
     </section>
     <section class="author-details">
       <div class="image-wrapper">
-        <img src="/images/team/avatars/amitaibu.42a1.jpg" class="img-circle img-responsive">
+        <img src="/images/team/avatars/amitaibu.a340.jpg" class="img-circle img-responsive">
       </div>
       <div class="text-wrapper">
         <span class="name">Amitai Burstein</span>
@@ -383,7 +383,7 @@ drush en optionwidgets text views_ui ctools _panels page_manager views_content
 
 
 
-    <script src="/js/plugins.f180.js"></script>
+    <script src="/js/plugins.c51b.js"></script>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
 

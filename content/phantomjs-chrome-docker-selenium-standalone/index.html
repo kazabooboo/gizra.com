@@ -13,27 +13,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
       <!-- Favicon for all platforms -->
-      <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.b3df.png">
+      <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.3a41.png">
       <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-touch-icon-60x60.a84d.png">
       <link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-touch-icon-72x72.664d.png">
-      <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.faf5.png">
+      <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.20fe.png">
       <link rel="apple-touch-icon" sizes="114x114" href=/"images/favicons/apple-touch-icon-114x114.png">
-      <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.d810.png">
-      <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.1807.png">
-      <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.71bf.png">
-      <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.a9f0.png">
+      <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.842b.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.0175.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.f9ac.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.f24a.png">
       <link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.c391.png" sizes="32x32">
-      <link rel="icon" type="image/png" href="/images/favicons/favicon-194x194.e5f8.png" sizes="194x194">
+      <link rel="icon" type="image/png" href="/images/favicons/favicon-194x194.2d07.png" sizes="194x194">
       <link rel="icon" type="image/png" href="/images/favicons/favicon-96x96.8557.png" sizes="96x96">
-      <link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.0b72.png" sizes="192x192">
-      <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.7353.png" sizes="16x16">
+      <link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.6d91.png" sizes="192x192">
+      <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.a93c.png" sizes="16x16">
       <link rel="manifest" href="/images/favicons/manifest.json">
       <meta name="msapplication-TileColor" content="#000000">
       <meta name="msapplication-TileImage" content="/images/favicons/mstile-144x144.png">
       <meta name="theme-color" content="#ffffff">
       <!-- End favicon for all platforms -->
 
-      <link rel="stylesheet" href="/css/main.ee40.css"/>
+      <link rel="stylesheet" href="/css/main.b4dd.css"/>
       <link href='http://fonts.googleapis.com/css?family=Abril+Fatface&text=gizra' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Hind:400,600,300,500' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600,800' rel='stylesheet' type='text/css'>
@@ -214,7 +214,7 @@
 
         <p>Following our <a href="http://www.gizra.com/content/live-monitor-shoov-irony/">unfortunate bug</a> in Shoov which caused login to stop working, we decided to write a Behat test that will continuously check the live site and make sure login with GitHub is working properly.</p>
 
-<p>Writing the Behat test was pretty easy, however it had a major problem - it didn&#39;t work.</p>
+<p>Writing the Behat test was pretty easy, however it had a major problem - it didn&rsquo;t work.</p>
 <div class="highlight"><pre><code class="gherkin language-gherkin" data-lang="gherkin"><span class="nt">@javascript</span><span class="nf"></span>
 <span class="k">Scenario:</span><span class="nf"> Login to shoov</span>
 <span class="k">  Given </span><span class="nf">I am an anonymous user</span>
@@ -225,7 +225,7 @@
 <p>When Behat sees the <code>@javascript</code> tag in the begining of the scenario, it launches it (with the help of Mink extension) in PhantomJS, Firefox or Chrome.<br>
 PhantomJS is usually the easiest to configure and hook into the CI workflow later on.</p>
 
-<p>But the test we wrote just failed on all versions of PhantomJS we tried. Which made us switch to Firefox instead. Travis CI is kind enough to have a headless Firefox installed in their machine which we could use. Unfortunately, Firefox didn&#39;t like our test either, but for another reason - it couldn&#39;t parse the xpath we use to find our text elements.</p>
+<p>But the test we wrote just failed on all versions of PhantomJS we tried. Which made us switch to Firefox instead. Travis CI is kind enough to have a headless Firefox installed in their machine which we could use. Unfortunately, Firefox didn&rsquo;t like our test either, but for another reason - it couldn&rsquo;t parse the xpath we use to find our text elements.</p>
 
 <p>So after spending some time trying to figure out a workaround, I suddenly stared at the browser I was using to find the answer - Chrome!</p>
 
@@ -246,21 +246,21 @@ PhantomJS is usually the easiest to configure and hook into the CI workflow late
 
 <!-- more -->
 
-<p>I was too quick to cheer, as I was soon discouraged at the amount of effort needed to install a headless Chrome on my Mac, and that&#39;s before even trying to do it on Travis.</p>
+<p>I was too quick to cheer, as I was soon discouraged at the amount of effort needed to install a headless Chrome on my Mac, and that&rsquo;s before even trying to do it on Travis.</p>
 
-<p>So I soon decided to look at Docker. I wanted to be able to have a single command to provision a headless Chrome, that my tests could use. I was happy to find the well maintained <a href="https://github.com/elgalu/docker-selenium">docker-selenium</a>. This Docker container comes with a bonus feature - we can enable the VNC viewer that&#39;s already installed in the container and actually see our tests running.</p>
+<p>So I soon decided to look at Docker. I wanted to be able to have a single command to provision a headless Chrome, that my tests could use. I was happy to find the well maintained <a href="https://github.com/elgalu/docker-selenium">docker-selenium</a>. This Docker container comes with a bonus feature - we can enable the VNC viewer that&rsquo;s already installed in the container and actually see our tests running.</p>
 
 <h3>Advantages of Headless Chrome over PhantomJS</h3>
 
-<p>PhantomJS is a great tool - a headless browser that can run in the terminal. It has lots of different uses, but when it comes to testing your sites, I&#39;d argue that it makes more sense to run the tests on <em>real</em> browsers.</p>
+<p>PhantomJS is a great tool - a headless browser that can run in the terminal. It has lots of different uses, but when it comes to testing your sites, I&rsquo;d argue that it makes more sense to run the tests on <em>real</em> browsers.</p>
 
-<p>A second problem of PhantomJS is debugging. When a test fails, it&#39;s pretty hard to know why. Developers need to start saving screenshots or worse - print the HTML of the page, in order to &quot;see&quot; what PhantomJS sees. With the Docker solution, a developer can simply login via the provided VNC, see and even interact with the browser, so troubleshooting becomes much easier.</p>
+<p>A second problem of PhantomJS is debugging. When a test fails, it&rsquo;s pretty hard to know why. Developers need to start saving screenshots or worse - print the HTML of the page, in order to &ldquo;see&rdquo; what PhantomJS sees. With the Docker solution, a developer can simply login via the provided VNC, see and even interact with the browser, so troubleshooting becomes much easier.</p>
 
 <h2>Shoov integration</h2>
 
-<p>Going back to the original problem - we wanted to continuously monitor <a href="http://shoov.io/">Shoov</a> itself, to make sure login is working. For that we obviously want Shoov to run our Behat test, so the next step was hooking docker-selenium into Shoov, and while we&#39;re at it, do it in a manner that everybody can use, without having to know too much about the underlying technology.</p>
+<p>Going back to the original problem - we wanted to continuously monitor <a href="http://shoov.io/">Shoov</a> itself, to make sure login is working. For that we obviously want Shoov to run our Behat test, so the next step was hooking docker-selenium into Shoov, and while we&rsquo;re at it, do it in a manner that everybody can use, without having to know too much about the underlying technology.</p>
 
-<p>I&#39;m happy to say the integration requires only very few lines. The first is in <a href="https://github.com/amitaibu/shoov-behat/blob/master/.shoov.yml">.shoov.yml</a> (the equivilent of <code>.travis.yml</code>) enabling the Selenium addon.</p>
+<p>I&rsquo;m happy to say the integration requires only very few lines. The first is in <a href="https://github.com/amitaibu/shoov-behat/blob/master/.shoov.yml">.shoov.yml</a> (the equivilent of <code>.travis.yml</code>) enabling the Selenium addon.</p>
 <div class="highlight"><pre><code class="yaml language-yaml" data-lang="yaml"><span class="l-Scalar-Plain">addons</span><span class="p-Indicator">:</span>
   <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">selenium</span>
 </code></pre></div>
@@ -303,7 +303,7 @@ PhantomJS is usually the easiest to configure and hook into the CI workflow late
     </section>
     <section class="author-details">
       <div class="image-wrapper">
-        <img src="/images/team/avatars/amitaibu.42a1.jpg" class="img-circle img-responsive">
+        <img src="/images/team/avatars/amitaibu.a340.jpg" class="img-circle img-responsive">
       </div>
       <div class="text-wrapper">
         <span class="name">Amitai Burstein</span>
@@ -381,7 +381,7 @@ PhantomJS is usually the easiest to configure and hook into the CI workflow late
 
 
 
-    <script src="/js/plugins.f180.js"></script>
+    <script src="/js/plugins.c51b.js"></script>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
 

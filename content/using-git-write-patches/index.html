@@ -13,27 +13,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
       <!-- Favicon for all platforms -->
-      <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.b3df.png">
+      <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.3a41.png">
       <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-touch-icon-60x60.a84d.png">
       <link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-touch-icon-72x72.664d.png">
-      <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.faf5.png">
+      <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.20fe.png">
       <link rel="apple-touch-icon" sizes="114x114" href=/"images/favicons/apple-touch-icon-114x114.png">
-      <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.d810.png">
-      <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.1807.png">
-      <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.71bf.png">
-      <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.a9f0.png">
+      <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.842b.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.0175.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.f9ac.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.f24a.png">
       <link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.c391.png" sizes="32x32">
-      <link rel="icon" type="image/png" href="/images/favicons/favicon-194x194.e5f8.png" sizes="194x194">
+      <link rel="icon" type="image/png" href="/images/favicons/favicon-194x194.2d07.png" sizes="194x194">
       <link rel="icon" type="image/png" href="/images/favicons/favicon-96x96.8557.png" sizes="96x96">
-      <link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.0b72.png" sizes="192x192">
-      <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.7353.png" sizes="16x16">
+      <link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.6d91.png" sizes="192x192">
+      <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.a93c.png" sizes="16x16">
       <link rel="manifest" href="/images/favicons/manifest.json">
       <meta name="msapplication-TileColor" content="#000000">
       <meta name="msapplication-TileImage" content="/images/favicons/mstile-144x144.png">
       <meta name="theme-color" content="#ffffff">
       <!-- End favicon for all platforms -->
 
-      <link rel="stylesheet" href="/css/main.ee40.css"/>
+      <link rel="stylesheet" href="/css/main.b4dd.css"/>
       <link href='http://fonts.googleapis.com/css?family=Abril+Fatface&text=gizra' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Hind:400,600,300,500' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600,800' rel='stylesheet' type='text/css'>
@@ -208,49 +208,49 @@
         </div>
       <div class="post-content">
 
-        <p>Drupal is using CVS for version controlling core and contrib modules. CVS has diffing options, but it becomes annoying when you try adding or deleting new files. Here&#39;s an example of how to use git to patch a contrib module - Organic groups.</p>
+        <p>Drupal is using CVS for version controlling core and contrib modules. CVS has diffing options, but it becomes annoying when you try adding or deleting new files. Here&rsquo;s an example of how to use git to patch a contrib module - Organic groups.</p>
 
 <!-- more -->
 
 <ol>
-<li>In OG's project page click on the <a href="http://drupal.org/project/og/cvs-instructions">CVS instructions</a> and select the version you want to patch.
-```
-cvs -z6 -d:pserver:anonymous:anonymous@cvs.drupal.org:/cvs/drupal-contrib checkout -d og-DRUPAL-6--2 -r DRUPAL-6--2 contributions/modules/og/
-```</li>
+<li>In OG&rsquo;s project page click on the <a href="http://drupal.org/project/og/cvs-instructions">CVS instructions</a> and select the version you want to patch.
+&ldquo;`
+cvs -z6 -d:pserver:anonymous:anonymous@cvs.drupal.org:/cvs/drupal-contrib checkout -d og-DRUPAL-6&ndash;2 -r DRUPAL-6&ndash;2 contributions/modules/og/
+&rdquo;`</li>
 <li>Go inside the directory you just checked out from CVS.
-```
-cd og-DRUPAL-6--2
-```
+&ldquo;`
+cd og-DRUPAL-6&ndash;2
+&rdquo;`
 </li>
 <li>Make the folder and all sub-folder a git repository, and add all the files.
-```
+&ldquo;`
 git init
 git add .
-git commit -m "Initial commit of the Organic groups module."
-```
+git commit -m &quot;Initial commit of the Organic groups module.&rdquo;
+&ldquo;`
 </li>
 <li>No we have a _master branch with the original module. We can create a new git branch and work on this new branch - edit files, move files around, create new directories, etc'.
-```
+&rdquo;`
 git checkout -b new-branch
-```
+&ldquo;`
 </li>
 <li>
 The _new-branch is now the active branch. Do some changes to code, and commit them.
-```
-git commit -a -m "A meaningful commit description."
-```
+&rdquo;`
+git commit -a -m &ldquo;A meaningful commit description.&rdquo;
+&ldquo;`
 </li>
-<li>In order to create a diff file, we need to switch back to the master branch, and create a diff against our new-branch. Note that we use the ```--no-prefix``` command to follow the patch creation standard of Drupal.
-```
+<li>In order to create a diff file, we need to switch back to the master branch, and create a diff against our new-branch. Note that we use the &rdquo;`&ndash;no-prefix`&ldquo; command to follow the patch creation standard of Drupal.
+&rdquo;`
 git checkout master
-git diff --no-prefix master new-branch > [issue-id]-[patch description]-[comment number].patch
-```
+git diff &ndash;no-prefix master new-branch > [issue-id]-[patch description]-[comment number].patch
+&ldquo;`
 </li>
 <li>
 We can delete the temporary branch.
-```
+&rdquo;`
 git branch -D new-branch
-```
+&ldquo;`
 </li>
 </ol>
 
@@ -291,7 +291,7 @@ git branch -D new-branch
     </section>
     <section class="author-details">
       <div class="image-wrapper">
-        <img src="/images/team/avatars/amitaibu.42a1.jpg" class="img-circle img-responsive">
+        <img src="/images/team/avatars/amitaibu.a340.jpg" class="img-circle img-responsive">
       </div>
       <div class="text-wrapper">
         <span class="name">Amitai Burstein</span>
@@ -369,7 +369,7 @@ git branch -D new-branch
 
 
 
-    <script src="/js/plugins.f180.js"></script>
+    <script src="/js/plugins.c51b.js"></script>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
 

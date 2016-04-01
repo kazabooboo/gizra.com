@@ -13,27 +13,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
       <!-- Favicon for all platforms -->
-      <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.b3df.png">
+      <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.3a41.png">
       <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-touch-icon-60x60.a84d.png">
       <link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-touch-icon-72x72.664d.png">
-      <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.faf5.png">
+      <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.20fe.png">
       <link rel="apple-touch-icon" sizes="114x114" href=/"images/favicons/apple-touch-icon-114x114.png">
-      <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.d810.png">
-      <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.1807.png">
-      <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.71bf.png">
-      <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.a9f0.png">
+      <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.842b.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.0175.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.f9ac.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.f24a.png">
       <link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.c391.png" sizes="32x32">
-      <link rel="icon" type="image/png" href="/images/favicons/favicon-194x194.e5f8.png" sizes="194x194">
+      <link rel="icon" type="image/png" href="/images/favicons/favicon-194x194.2d07.png" sizes="194x194">
       <link rel="icon" type="image/png" href="/images/favicons/favicon-96x96.8557.png" sizes="96x96">
-      <link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.0b72.png" sizes="192x192">
-      <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.7353.png" sizes="16x16">
+      <link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.6d91.png" sizes="192x192">
+      <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.a93c.png" sizes="16x16">
       <link rel="manifest" href="/images/favicons/manifest.json">
       <meta name="msapplication-TileColor" content="#000000">
       <meta name="msapplication-TileImage" content="/images/favicons/mstile-144x144.png">
       <meta name="theme-color" content="#ffffff">
       <!-- End favicon for all platforms -->
 
-      <link rel="stylesheet" href="/css/main.ee40.css"/>
+      <link rel="stylesheet" href="/css/main.b4dd.css"/>
       <link href='http://fonts.googleapis.com/css?family=Abril+Fatface&text=gizra' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Hind:400,600,300,500' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600,800' rel='stylesheet' type='text/css'>
@@ -215,7 +215,7 @@
         <p>DrutNet is a .NET API to create client applications that connects to a Drupal site, and allow file upload, node save/load, view get and more.</p>
 
 <p><strong>Introduction</strong>
-I&#39;ve created this simple API to connect Drupal with .NET applications easily and quickly, this API was based on an API that I wrote for one of our projects, for this project we had to create a few client application to upload files, connect to desktop application and update the content. I used two different interfaces to cover all my needs, cURL - to upload files; and Services module - to create/ update nodes.</p>
+I&rsquo;ve created this simple API to connect Drupal with .NET applications easily and quickly, this API was based on an API that I wrote for one of our projects, for this project we had to create a few client application to upload files, connect to desktop application and update the content. I used two different interfaces to cover all my needs, cURL - to upload files; and Services module - to create/ update nodes.</p>
 
 <p><strong>Features Snapshot</strong>
 DrutNet API has a <code>Services</code> class:
@@ -231,36 +231,36 @@ DrutNet API has a <code>Services</code> class:
 <p>To upload files using the API use the <code>CURL</code> class:
 <ul>
 <li>Curl.Login - Login to Drupal with cURL, which is required in order to uplaod a file. This login is _not the same as the Services login</li>
-<li>Curl.UploadFile - Upload a file to a CCK file/ image field. The &quot;File form&quot; module provided in the <code>/Drupal Module</code> folder must be enabled on the Drupal site</li>
+<li>Curl.UploadFile - Upload a file to a CCK file/ image field. The &ldquo;File form&rdquo; module provided in the <code>/Drupal Module</code> folder must be enabled on the Drupal site</li>
 </ul></p>
 
 <p><strong>Source</strong>
-The source code is stored under <a href="http://github.com/bricel/DrutNet">GitHub</a>  (we didn&#39;t publish it in Drupal as apparently it against some the CVS guidelines).</p>
+The source code is stored under <a href="http://github.com/bricel/DrutNet">GitHub</a>  (we didn&rsquo;t publish it in Drupal as apparently it against some the CVS guidelines).</p>
 
 <p><strong>Example</strong>
 In the source there is a <code>sample</code> project, that demonstrates the use of the API to load/ save a node, and to upload a file.
 To test the API follow the instructions bellow (no programing or compiling required when using the):</p>
 
 <ol>
-<li>Place both Drupal modules under '/Drupal Module' in your Drupal installation (e.g. under ```sites/all/modules```):
-- DrutNet sample module - The module creates a ```DrutNet smaple``` content type to test the system with the DrutNETSample
+<li>Place both Drupal modules under &lsquo;/Drupal Module&rsquo; in your Drupal installation (e.g. under &ldquo;`sites/all/modules&rdquo;`):
+- DrutNet sample module - The module creates a &ldquo;`DrutNet smaple&rdquo;` content type to test the system with the DrutNETSample
 - File form - This module is required for file upload with cURL
 <li>Download and enable the required modules
-```
+&ldquo;`
 drush dl cck views features filefield services
-```
+&rdquo;`
 </li>
-<li>Compile the sample project Or use the already compiled program in ```/Dlls/DrutNETSample.exe```</li>
+<li>Compile the sample project Or use the already compiled program in &ldquo;`/Dlls/DrutNETSample.exe&rdquo;`</li>
 <li>Insert your username password to Drupal and the Drupal site URL
 <img src="/assets/images/legacy/Drutnet1.png" /><br/>
 </li>
-<li>Click on "Login to services", and then click "Login to cURL".
+<li>Click on &ldquo;Login to services&rdquo;, and then click &ldquo;Login to cURL&rdquo;.
 <img src="/assets/images/legacy/Drutnet2.png" /><br/>
 </li>
-<li>Update an existing node by indicating the node ID, loading it, changing the text and "Save" it.
+<li>Update an existing node by indicating the node ID, loading it, changing the text and &ldquo;Save&rdquo; it.
 <img src="/assets/images/legacy/Drutnet3.png" /><br/>
 </li>
-<li>To test file upload, switch to the Upload tab, choose a file and fill the node ID, CCK field name to attach the file to (in our example we use ```field_file```), and hit the Upload Button</li>
+<li>To test file upload, switch to the Upload tab, choose a file and fill the node ID, CCK field name to attach the file to (in our example we use &ldquo;`field_file&rdquo;`), and hit the Upload Button</li>
 </ol>
 
 <p>For features or bug report use GitHub <a href="http://github.com/bricel/DrutNet/issues">project page</a></p>
@@ -300,7 +300,7 @@ drush dl cck views features filefield services
     </section>
     <section class="author-details">
       <div class="image-wrapper">
-        <img src="/images/team/avatars/bricel.8317.jpg" class="img-circle img-responsive">
+        <img src="/images/team/avatars/bricel.f3f2.jpg" class="img-circle img-responsive">
       </div>
       <div class="text-wrapper">
         <span class="name">Brice Lenfant</span>
@@ -378,7 +378,7 @@ drush dl cck views features filefield services
 
 
 
-    <script src="/js/plugins.f180.js"></script>
+    <script src="/js/plugins.c51b.js"></script>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
 

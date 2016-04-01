@@ -13,27 +13,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
       <!-- Favicon for all platforms -->
-      <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.b3df.png">
+      <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.3a41.png">
       <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-touch-icon-60x60.a84d.png">
       <link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-touch-icon-72x72.664d.png">
-      <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.faf5.png">
+      <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.20fe.png">
       <link rel="apple-touch-icon" sizes="114x114" href=/"images/favicons/apple-touch-icon-114x114.png">
-      <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.d810.png">
-      <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.1807.png">
-      <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.71bf.png">
-      <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.a9f0.png">
+      <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.842b.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.0175.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.f9ac.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.f24a.png">
       <link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.c391.png" sizes="32x32">
-      <link rel="icon" type="image/png" href="/images/favicons/favicon-194x194.e5f8.png" sizes="194x194">
+      <link rel="icon" type="image/png" href="/images/favicons/favicon-194x194.2d07.png" sizes="194x194">
       <link rel="icon" type="image/png" href="/images/favicons/favicon-96x96.8557.png" sizes="96x96">
-      <link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.0b72.png" sizes="192x192">
-      <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.7353.png" sizes="16x16">
+      <link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.6d91.png" sizes="192x192">
+      <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.a93c.png" sizes="16x16">
       <link rel="manifest" href="/images/favicons/manifest.json">
       <meta name="msapplication-TileColor" content="#000000">
       <meta name="msapplication-TileImage" content="/images/favicons/mstile-144x144.png">
       <meta name="theme-color" content="#ffffff">
       <!-- End favicon for all platforms -->
 
-      <link rel="stylesheet" href="/css/main.ee40.css"/>
+      <link rel="stylesheet" href="/css/main.b4dd.css"/>
       <link href='http://fonts.googleapis.com/css?family=Abril+Fatface&text=gizra' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Hind:400,600,300,500' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600,800' rel='stylesheet' type='text/css'>
@@ -214,9 +214,9 @@
 
         <p><a href="http://behat.org">Behat</a> is a wonderful tool for automatic testing. It allows you to write your user stories and scenarios in proper English, which is then parsed by Behat and transformed to a set of clicks or other operations that mimic a real user.</p>
 
-<p>If you don&#39;t have automated tests on your project, I would argue that you&#39;re doing it wrong (I explain why on <a href="https://www.getpantheon.com/blog/drupal-development-gizra-way">The Gizra Way</a> presentation). Even having a <em>single</em> test is much better than none.</p>
+<p>If you don&rsquo;t have automated tests on your project, I would argue that you&rsquo;re doing it wrong (I explain why on <a href="https://www.getpantheon.com/blog/drupal-development-gizra-way">The Gizra Way</a> presentation). Even having a <em>single</em> test is much better than none.</p>
 
-<p>With that said, it&#39;s super easy to abuse Behat. We are developers and we think sort of like machines (not really, but you get my point). If you would like to test login to your site you could easily do</p>
+<p>With that said, it&rsquo;s super easy to abuse Behat. We are developers and we think sort of like machines (not really, but you get my point). If you would like to test login to your site you could easily do</p>
 <div class="highlight"><pre><code class="cucumber language-cucumber" data-lang="cucumber"><span class="k">Given </span><span class="nf">I visit &quot;</span><span class="s">/user/login</span><span class="nf">&quot;</span>
 <span class="nf"> </span><span class="c"># fill the username and password input fields, and click submit</span><span class="nf"></span>
 <span class="nf"> </span><span class="k">When </span><span class="nf">I fill &quot;</span><span class="s">username</span><span class="nf">&quot; with &quot;</span><span class="s">foo</span><span class="nf">&quot;</span>
@@ -231,7 +231,7 @@
 <span class="nf"> </span><span class="k">When </span><span class="nf">I go to the homepage</span>
 <span class="nf"> </span><span class="k">Then </span><span class="nf">I should have access</span>
 </code></pre></div>
-<p>As you see we are avoiding writing <em>scripted</em> tests, and try to describe what should happen -- not the clicks that got us there.</p>
+<p>As you see we are avoiding writing <em>scripted</em> tests, and try to describe what should happen &ndash; not the clicks that got us there.</p>
 
 <p>Meta steps are a great way to help you write your step definition (i.e. each line that is translated to code) with reusable code. So for example</p>
 <div class="highlight"><pre><code class="cucumber language-cucumber" data-lang="cucumber"><span class="k">Given </span><span class="nf">a group &quot;</span><span class="s">Public Group 1</span><span class="nf">&quot; with &quot;</span><span class="s">Public</span><span class="nf">&quot; access is created with group manager &quot;</span><span class="s">group1-admin</span><span class="nf">&quot;</span>
@@ -296,13 +296,13 @@ code to find the node by the title and redirect us there.</p>
 
 <p>As we are working on decoupled backend and frontend, we still want to have our code properly tested.</p>
 
-<p>A nice technique we&#39;ve been using is installing the backend (Drupal) and frontend (AngularJS webapp) on the same Travis instance and running Behat tests on the frontend. By having the backend present we don&#39;t need to mock any data just for the frontend, as we already have some dummy migrated data as part of every installation profile. For that we use PhantomsJS (<a href="https://github.com/Gizra/KnowledgeBase/wiki/Behat-phantomJs-install">easy install</a>).</p>
+<p>A nice technique we&rsquo;ve been using is installing the backend (Drupal) and frontend (AngularJS webapp) on the same Travis instance and running Behat tests on the frontend. By having the backend present we don&rsquo;t need to mock any data just for the frontend, as we already have some dummy migrated data as part of every installation profile. For that we use PhantomsJS (<a href="https://github.com/Gizra/KnowledgeBase/wiki/Behat-phantomJs-install">easy install</a>).</p>
 
 <p>For the brave, see our <a href="https://github.com/Gizra/negawatt-server/blob/master/.travis.yml">.travis</a> configuration that runs both API and Javascript tests on our fully decoupled app. Note that the linked project is nowhere near ready, but it can still be valuable if you want to see how we got Travis to run our tests.</p>
 
 <h2>CasperJS Vs Behat</h2>
 
-<p>@juampy from Lullabot has recommended in his <a href="https://www.lullabot.com/blog/article/testing-front-end-casperjs">blog post</a> to use CasperJs to test JS. I believe Behat could be better simply because it&#39;s easier to read. For example take this CasperJs code:</p>
+<p>@juampy from Lullabot has recommended in his <a href="https://www.lullabot.com/blog/article/testing-front-end-casperjs">blog post</a> to use CasperJs to test JS. I believe Behat could be better simply because it&rsquo;s easier to read. For example take this CasperJs code:</p>
 <div class="highlight"><pre><code class="javascript language-javascript" data-lang="javascript"><span class="nx">casper</span><span class="p">.</span><span class="nx">test</span><span class="p">.</span><span class="nx">begin</span><span class="p">(</span><span class="s1">&#39;Tests homepage structure&#39;</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="kd">function</span> <span class="nx">suite</span><span class="p">(</span><span class="nx">test</span><span class="p">)</span> <span class="p">{</span>
 
   <span class="nx">casper</span><span class="p">.</span><span class="nx">start</span><span class="p">(</span><span class="s1">&#39;http://www.msnbc.com&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
@@ -322,7 +322,7 @@ code to find the node by the title and redirect us there.</p>
   <span class="p">});</span>
 <span class="p">});</span>
 </code></pre></div>
-<p>... and imagine how it could have been translated to Behat:</p>
+<p>&hellip; and imagine how it could have been translated to Behat:</p>
 <div class="highlight"><pre><code class="cucumber language-cucumber" data-lang="cucumber"><span class="nt">@javascript</span><span class="nf"></span>
 <span class="k">Scenario:</span><span class="nf"> Validate an anonymous user can see all links, and a list of articles.</span>
 <span class="k">  Given </span><span class="nf">I am an anonymous user</span>
@@ -330,7 +330,7 @@ code to find the node by the title and redirect us there.</p>
 <span class="nf">   </span><span class="k">Then </span><span class="nf">I should see the main menu links for &quot;</span><span class="s">anonymous</span><span class="nf">&quot; user are present</span>
 <span class="nf">    </span><span class="k">And </span><span class="nf">I should see a teaser with &quot;</span><span class="s">10</span><span class="nf">&quot; items of recent articles</span>
 </code></pre></div>
-<p>The underlying code in the end will be very close to the one in CasperJS - however it better defined <em>what</em> is needed, not only how it should appear, and arguably it&#39;s more readable by other developers.</p>
+<p>The underlying code in the end will be very close to the one in CasperJS - however it better defined <em>what</em> is needed, not only how it should appear, and arguably it&rsquo;s more readable by other developers.</p>
 
 
       </div>
@@ -367,7 +367,7 @@ code to find the node by the title and redirect us there.</p>
     </section>
     <section class="author-details">
       <div class="image-wrapper">
-        <img src="/images/team/avatars/amitaibu.42a1.jpg" class="img-circle img-responsive">
+        <img src="/images/team/avatars/amitaibu.a340.jpg" class="img-circle img-responsive">
       </div>
       <div class="text-wrapper">
         <span class="name">Amitai Burstein</span>
@@ -445,7 +445,7 @@ code to find the node by the title and redirect us there.</p>
 
 
 
-    <script src="/js/plugins.f180.js"></script>
+    <script src="/js/plugins.c51b.js"></script>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
 
