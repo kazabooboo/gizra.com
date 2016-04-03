@@ -76,3 +76,13 @@ body {
     padding: 0 80px;
   }
 }
+
+#header-global {
+  background: url('/images/services/background.jpg') no-repeat center top;
+  background-size: cover;
+  text-align: left;
+
+  .gizra-logo {
+    margin-bottom: 30px;
+  }
+}
