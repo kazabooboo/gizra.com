@@ -20,6 +20,8 @@ I just completed updating our marketing plan, specifically the section explainin
 
 Pragmatic Amitai, just being himself, put out a Facebook post from his personal page in the hopes to attract great talent in an unjustifiably overlooked pool of applicants - women and more specifically mothers.  In his own way he essentially says: “Hey - we are a family friendly company. If you are talented, we want you because you make us better.”  Very quickly this post became viral spreading in various women and mother Facebook groups generating discussion around women in tech.
 
+{% include thumbnail.html image_path="assets/images/posts/facebook-post/image1.jpg" caption="Amitai Burstein's Facebook Post" %}
+
 <!-- more -->
 
 This may be a marketing person’s dream but to me it is so much more. What  Amitai has done is argue what many women have been arguing for a long time. The issue isn’t that we need more women in tech, the issue is that tech company work environments are less inviting to women and therefore are ignoring a valuable talent pool.
