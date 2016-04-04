@@ -6,10 +6,10 @@
         
     
 
-<title>OpenScholar and the new Biblio</title>
+<title>A Job Posting Goes Viral</title>
 
         <meta name="description" content="">
-        <meta name="keywords" content="">
+        <meta name="keywords" content="Drupal">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
       <!-- Favicon for all platforms -->
@@ -74,67 +74,67 @@
 
   
     
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
       
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
     
   
 
@@ -189,8 +189,8 @@
 
   <div class="content-container">
     <article class="post">
-      <h1><a href="/content/openscholar-new-bilbio">OpenScholar and the new Biblio </a></h1>
-      <div class="date">20 Jan 2014, By Amitai Burstein</div>
+      <h1><a href="/content/job-post-goes-viral">A Job Posting Goes Viral </a></h1>
+      <div class="date">04 Apr 2016, By Rachel Baram</div>
       <div class="tags">
         <img src="/images/post/tag-icon-small.15a8.png" class="tags-icon"/>
         <ul class="inline">
@@ -199,11 +199,9 @@
 
   
     
-      <li><a href="/tags.html#OpenScholar-ref">OpenScholar</a></li>
+      <li><a href="/tags.html#The Gizra Way-ref">The Gizra Way</a></li>
     
-      <li><a href="/tags.html#Biblio-ref">Biblio</a></li>
-    
-      <li><a href="/tags.html#Drupal-planet-ref">Drupal-planet</a></li>
+      <li><a href="/tags.html#Office culture-ref">Office culture</a></li>
     
   
 
@@ -212,56 +210,43 @@
         </div>
       <div class="post-content">
 
-        <p>OpenScholar is the de facto go to solution for academic sites. Over the past year we saw it being adopted in many Harvard departments and higher ed institutions worldwide.</p>
+        <p>A little job posting has inspired me, as a woman and mother, to write down some of my thoughts.</p>
 
-<p><img src="/assets/images/posts/os-biblio/6.jpg" alt=""></p>
+<p>I only recently joined this vibrant company that does amazing things in amazing ways. As part of my marketing role, I work hard to create content that accurately communicates the genuine nature of Gizra, its owners, and culture. My private worry (not so private now) is that marketing speak will diminish the true nature of the company - that Gizra will sound run of the mill when it is not.  </p>
 
-<p>I&rsquo;m proud that our work is not just based on open source, but also contributes to it - big time. Case in point, the <a href="https://github.com/Gizra/biblio">Biblio</a> module which is responsible for bibliographies and citations since back in Drupal 4.6, and has provided a great solution. It was becoming clear the 4.6 architecture is showing its age, and could use an overhaul.</p>
+<p>I just completed updating our marketing plan, specifically the section explaining &ldquo;The Gizra Way&rdquo; that in my opinion is the essence of this company, and right when my usual marketing concerns started to creep in,  Amitai, owner and CTO, does something so fabulous that perfectly demonstrates everything I have been working hard to communicate.</p>
+
+<p>Pragmatic Amitai, just being himself, put out a Facebook post from his personal page in the hopes to attract great talent in an unjustifiably overlooked pool of applicants - women and more specifically mothers.  In his own way he essentially says: “Hey - we are a family friendly company. If you are talented, we want you because you make us better.”  Very quickly this post became viral spreading in various women and mother Facebook groups generating discussion around women in tech.</p>
 
 <!-- more -->
 
-<p>We approached the task with the entire knowledge and tools we&rsquo;ve used to rewrite Organic groups, and create the Message stack. In short:</p>
+<p>This may be a marketing person’s dream but to me it is so much more. What  Amitai has done is argue what many women have been arguing for a long time. The issue isn’t that we need more women in tech, the issue is that tech company work environments are less inviting to women and therefore are ignoring a valuable talent pool.</p>
 
-<ul>
-<li>Leveraging Drupal&rsquo;s existing tools and modules</li>
-<li>&ldquo;Thinking&rdquo; API and following TDD (test driven development). Only after getting the API right did we add a UI module to consume the API</li>
-<li>Using plugins for extendibility, so each bibliographic style can be easily extended</li>
-</ul>
+<p>To me, Amitai’s job posting is The Gizra Way, and I am so proud.</p>
 
-<p>If you are familiar with the older versions of Biblio, you will appreciate the simplicity of the API:</p>
+<p>The only advice I would have given Amitai is to not publish it on April 1st (some women thought it was too good to be true.)</p>
 
-<p>Importing new data</p>
-<div class="highlight"><pre><code class="php language-php" data-lang="php"><span class="cp">&lt;?php</span>
-<span class="c1">// The data you wish to import.</span>
-<span class="c1">// In this example, a book.</span>
-<span class="nv">$data</span> <span class="o">=</span> <span class="s1">&#39;</span>
-<span class="s1">    @Book{</span>
-<span class="s1">        washington+franklin,</span>
-<span class="s1">        author    = &quot;George {Washington} and Benjamin {Franklin}&quot;,</span>
-<span class="s1">        title     = &quot;Book About the USA&quot;,</span>
-<span class="s1">        publisher = &quot;ABC&quot;,</span>
-<span class="s1">        year      =  1980,</span>
-<span class="s1">        address   = &quot;Los Angeles&quot;,</span>
-<span class="s1">        edition   = &quot;ninth ABC printing, tenth DEF printing&quot;</span>
-<span class="s1">    }&#39;</span><span class="p">;</span>
+<p>Here is the <a href="https://www.facebook.com/amitai.burstein/posts/974158179333075">original post</a> (Hebrew), and here is the translation. (note that the job opportunity is for our Tel-Aviv location):</p>
 
-<span class="c1">// Get the relevant biblio style class to handle the information.</span>
-<span class="nv">$biblio_style</span> <span class="o">=</span> <span class="nx">biblio_get_class_from_style</span><span class="p">(</span><span class="s1">&#39;bibtex&#39;</span><span class="p">)</span>
+<blockquote>
+<p>I don’t have access to Facebook groups like Mamazone and even if I did, I am not sure it&rsquo;s appropriate to post a job opening there. In any case, I am an owner of an internet development company called Gizra. We are 20 plus people. They are all great. However, we are mostly men.</p>
 
-<span class="c1">// Import the Biblios.</span>
-<span class="nv">$biblios</span> <span class="o">=</span> <span class="nv">$biblio_style</span><span class="o">-&gt;</span><span class="na">import</span><span class="p">(</span><span class="nv">$data</span><span class="p">);</span>
-</code></pre></div>
-<p>Showing the imported data using CiteProc is as simple as <code>$biblio-&gt;getText(&#39;citeproc&#39;);</code></p>
+<p>I usually leave work a little before 5:00 pm to get home in time to see my children. A week ago I had a meeting that ran over and I left the office at 5:35 pm.</p>
 
-<p>On the UI level we are leveraging inline entity form, so adding contributors is done in a very concise way and removes the previous guesswork that Biblio did for converting a string (the contributor&rsquo;s name) into structured data (the Biblio Contributor entity).</p>
+<p>I was the last one out.</p>
 
-<p><img src="/assets/images/posts/os-biblio/7.jpg" alt=""></p>
+<p>I thought to myself how nice that we are not like most other tech companies, where it seems natural to leave work after your children are already asleep.</p>
 
-<p><img src="/assets/images/posts/os-biblio/8.jpg" alt=""></p>
+<p>For every ten guys we interview, there is usually only one woman. This seems so strange to me because the way I see it, if you are good, most companies - not just us - should be willing to offer flexible work hours to ensure you work for them.</p>
 
-<p>Extending it and integrating it into OpenScholar requires some work - but the new API makes for a much smoother experience.</p>
+<p>I attended a lecture in the US that spoke about diversity. I dislike that word, especially when Americans use it - they have the ability to overuse a word until you are fed up with it. But it was a good lecture. It spoke to the finding that successful companies were more diverse. You know, like a similar number of men and women.</p>
 
-<p><img src="/assets/images/posts/os-biblio/9.jpg" alt=""></p>
+<p>I want my company to succeed, like those successful companies in America.</p>
+
+<p>And also because, to me, it makes sense that we have more women employees. Mothers too.  </p>
+
+<p>Job Opportunity Details: <a href="http://goo.gl/gvCqMw">http://goo.gl/gvCqMw</a></p>
+</blockquote>
 
 
       </div>
@@ -271,42 +256,30 @@
         <div class="col-xs-6 previous">
           
           <div class="text-capitalize">
-            <a href="/content/zariz-on-tv">
+            <a href="/content/migration-best-practices">
               Previous
               <span class="visible-xs"> post</span>
             </a>
           </div>
-          <a href="/content/zariz-on-tv" class="prev-text">
-            <span class="hidden-xs">Zariz on TV</span>
+          <a href="/content/migration-best-practices" class="prev-text">
+            <span class="hidden-xs">Migration Best Practices</span>
           </a>
           
         </div>
         <div class="col-xs-6 next">
-          
-          <div class="text-capitalize">
-            <a href="/content/zariz-entity-reference">
-              Next
-              <span class="visible-xs"> post</span>
-            </a>
-          </div>
-          <a href="/content/zariz-entity-reference" class="next-text">
-            <span class="hidden-xs">Zariz Loves Entity Reference</span>
-          </a>
           
         </div>
       </div>
     </section>
     <section class="author-details">
       <div class="image-wrapper">
-        <img src="/images/team/avatars/amitaibu.42a1.jpg" class="img-circle img-responsive">
+        <img src="/images/team/avatars/RachelBaram.45c5.jpg" class="img-circle img-responsive">
       </div>
       <div class="text-wrapper">
-        <span class="name">Amitai Burstein</span>
+        <span class="name">Rachel Baram</span>
         
-          <span class="twitter">(@amitaibu)</span>
-        
-        <div class="title">CTO, Co-Owner</div>
-        <div class="bio">Maintainer of Organic groups, the Message stack, and co-maintainer of Drupal 8's Entity reference. <a href="/content/the-about-story/">The about story</a>.</div>
+        <div class="title">Business Development & Marketing</div>
+        <div class="bio">Loves to make things make sense.</div>
       </div>
     </section>
     <section>
