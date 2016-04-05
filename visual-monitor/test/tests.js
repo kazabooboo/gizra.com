@@ -130,14 +130,4 @@ describe('Visual monitor testing', function() {
       .call(done);
   });
 
-  it('should show a team post',function(done) {
-    client
-      .url(baseUrl + '/team')
-      .webdrivercss(testName + '.team', {
-        name: '1',
-        screenWidth: selectedCaps == 'chrome' ? [320, 1200] : undefined,
-      }, resultsCallback)
-      .call(done);
-  });
-
 });
