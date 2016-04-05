@@ -103,7 +103,10 @@ describe('Visual monitor testing', function() {
           [
             // Blog.
             '.blog .author-details',
-            '.blog .title',
+          ],
+        remove:
+          [
+            '.blog .title'
           ],
         screenWidth: selectedCaps == 'chrome' ? [320, 1200] : undefined,
       }, resultsCallback)
