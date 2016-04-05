@@ -13,7 +13,7 @@ Feature: Blog post
   Examples:
     | url                                          | text                    | author          |
     | content/automatic-qa/                        | Here is a known fact    | Amitai Burstein |
-    | content/phantomcss-ui-regression/            | What's fun about having | Amitai Burstein |
+    | content/docker-travis-ci/                    | If you have ever        | Nir Galon       |
     | content/backend-free-apps-grunt-jekyll-d3js/ | When we started working | Carlos Mantilla |
 
 
