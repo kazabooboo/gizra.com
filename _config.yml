@@ -21,7 +21,8 @@ show_drafts: true
 
 # Markdown library
 markdown: redcarpet
-#   extensions: ['fenced_code_blocks', 'smart']
+redcarpet:
+  extensions: ['fenced_code_blocks', 'tables', 'smart']
 
 pygments: true
 
@@ -156,15 +157,6 @@ authors:
       github: shahardo
       avatar: male.jpg
       image: male.jpg
-  - YuriGizra:
-      name: Yuri Failer
-      title: Developer
-      is_member: true
-      bio: Something about Yuri
-      email: yuri@gizra.com
-      github: YuriGizra
-      avatar: male.jpg
-      image: YuriGizra.jpg
   - YaronMiro:
       name: Yaron Miro
       title: UX/UI Developer
@@ -182,7 +174,7 @@ authors:
       email: nir.galon@gizra.com
       github: nirgn975
       avatar: NirGalon.jpg
-      image: NirGalon.jpg
+      image: male.jpg
   - RachelBaram:
       name: Rachel Baram
       title: Business Development & Marketing

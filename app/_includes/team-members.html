@@ -4,7 +4,7 @@
       {% assign member = member_info[1] %}
       {% if member.is_member %}
       <div class="col-xs-6 col-sm-3 member-box" id="{{ member.github }}">
-        <img class="img-responsive" src="/images/team/members/{{ member.image }}" alt="{{ member.name }}">
+        <img class="img-responsive" src="/images/team/members/{{ member.image }}" alt="{{ member.name }} - {{ member.title }}">
         <div class="popup-block">
           <div class="background"></div>
           <div class="info">
@@ -14,19 +14,19 @@
               <!-- E-mail -->
               <li class="hidden-xs">
                 <a href="mailto:{{ member.email }}">
-                  <img src="/images/team/at.png">
+                  <img src="/images/team/at.png" alt="email">
                 </a>
               </li>
               <!-- Github -->
               <li>
                 <a target="_blank" href="https://github.com/{{ member.github }}">
-                  <img src="/images/team/github.png">
+                  <img src="/images/team/github.png" alt="github">
                 </a>
               </li>
               <!-- Twitter -->
               {% if member.twitter %}
                 <li class="hidden-xs">
-                  <a target="_blank" href="https://twitter.com/{{ member.twitter }}"><img src="/images/team/twitter.png"></a>
+                  <a target="_blank" href="https://twitter.com/{{ member.twitter }}"><img src="/images/team/twitter.png" alt="twitter"></a>
                 </li>
               {% endif %}
             </ul>
@@ -38,14 +38,18 @@
   {% endfor %}
   <!--Placeholder cat to fill the row -->
   <div class="col-xs-6 col-sm-3 member-box">
-    <img class="img-responsive" src="/images/team/members/placeholder-cat.jpg" alt="the cat">
+    <img class="img-responsive" src="/images/team/members/placeholder-cat.jpg" alt="">
   </div>
   <!--Placeholder dog to fill the row -->
   <div class="col-xs-6 col-sm-3 member-box hidden-xs">
-    <img class="img-responsive" src="/images/team/members/placeholder-dog.jpg" alt="the dog">
+    <img class="img-responsive" src="/images/team/members/placeholder-dog.jpg" alt="">
   </div>
   <div class="col-xs-6 col-sm-3 member-box hidden-xs">
-    <img class="img-responsive" src="/images/team/members/placeholder-wolf.jpg" alt="the cat">
+    <img class="img-responsive" src="/images/team/members/placeholder-wolf.jpg" alt="">
+  </div>
+  <!--Placeholder cat to fill the row -->
+  <div class="col-xs-6 col-sm-3 member-box">
+    <img class="img-responsive" src="/images/team/members/placeholder-cat.jpg" alt="the cat">
   </div>
 </div>
 

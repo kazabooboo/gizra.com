@@ -6,10 +6,14 @@
   line-height: 1.9em;
   letter-spacing: 0.020em;
 
-  @media (min-width: 1200px) {
-    .container {
-      width: 940px;
-    }
+  .container {
+      width: auto;
+      min-width: auto;
+      margin: 0 auto;
+
+      @media ( min-width: 768px ) {
+        max-width: 720px;
+      }
   }
 
   @media (max-width: 767px) {
@@ -19,6 +23,10 @@
 
   p {
     margin-top: 60px;
+
+    @media ( min-width: 550px ) {
+      padding: 0 40px;
+    }
   }
 
   h1 {
@@ -88,12 +96,6 @@
   }
 }
 
-// Desktop Media query.
-@include desktop {
-
-  #about-page p {
-    padding-left: 100px;
-    padding-right: 100px;
-  }
-
+.section1 p:first-child:first-letter {
+  font-size: 50px;
 }

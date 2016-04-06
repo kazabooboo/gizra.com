@@ -28,26 +28,6 @@ $(document).ready(function(){
   }
 
   /**
-   * Touch handler function for the "clients" logos on the homepage.
-   *
-   */
-  var clientsLogosOnTouch = function() {
-    var selectorsList = '.popup-block, img';
-
-    // Current logo being touch.
-    var $targetLogo = $(this);
-
-    // Hide previous open logo as long as we are not pointing to our self.
-    var $openLogo = $('#work .clients .logo .popup-block:visible').parent('.logo');
-    if ($openLogo.length && $openLogo[0] !== $targetLogo[0]) {
-      $openLogo.find(selectorsList).fadeToggle('fast', 'linear')
-    }
-
-    // Toggle the selected logo.
-    $targetLogo.find(selectorsList).fadeToggle('fast', 'linear');
-  }
-
-  /**
    * No touch handler function for the "clients" logos on the homepage.
    *
    */
@@ -146,9 +126,6 @@ $(document).ready(function(){
 
     // Toggle the member 'info' block to 'fade in'/'fade out' on each touch.
     teamMemberInfoOnTouch();
-
-    // Toggle the client 'info' block to 'fade in'/'fade out' on each touch.
-    $('#work .clients .logo').bind( 'touchstart', clientsLogosOnTouch)
   }
   // In case we have a devices that doesn't support touch.
   else {
