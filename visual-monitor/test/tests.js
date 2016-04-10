@@ -64,12 +64,12 @@ describe('Visual monitor testing', function() {
       .pause(5000)
       .webdrivercss(testName + '.homepage', {
         name: '1',
-        exclude:
+        exclude: [],
+        remove:
           [
             // Blog post.
-            '.post-teaser .article',
+            '.post-teaser',
           ],
-        remove: [],
         hide:
           [
             // Carousel.
