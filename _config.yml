@@ -143,7 +143,7 @@ authors:
       name: David Kochav
       title: QA Engineer
       is_member: true
-      bio: Somthing about David
+      bio: There are no shortcuts in life, Do what is necessary, Everything matters!.
       email: david@gizra.com
       github: DavidKohav
       avatar: male.jpg
@@ -174,7 +174,25 @@ authors:
       email: nir.galon@gizra.com
       github: nirgn975
       avatar: NirGalon.jpg
-      image: male.jpg
+      image: NirGalon.jpg
+  - Pavel:
+        name: Pavel Pirozhenko
+        title: Developer
+        is_member: true
+        bio: A geek who always want to learn new things.
+        email: pavel@gizra.com
+        github: ppavels
+        avatar: PavelPirozhenko.jpg
+        image: Pavel.jpg
+  - GuyTepper:
+      name: Guy Tepper
+      title: Developer
+      is_member: true
+      bio: A geek who always want to learn new things.
+      email: guy.tepper@gizra.com
+      github: guytepper
+      avatar: GuyTepper.jpg
+      image: Guy.jpg
   - RachelBaram:
       name: Rachel Baram
       title: Business Development & Marketing
