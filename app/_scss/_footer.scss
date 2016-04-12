@@ -76,6 +76,10 @@ $google-plus: #d34836;
         color: $linkedin;
       }
 
+      .link-text {
+        display: none;;
+      }
+
       &:not(:first-child) {
         margin-left: 3px;
       }
