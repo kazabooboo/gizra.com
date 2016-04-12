@@ -2,12 +2,6 @@ language: php
 php:
   - '5.6'
 
-env:
-  global:
-    # ngrok.com
-    # travis encrypt NGROK_AUTHTOKEN="<your-token>"
-    - secure: ce8tsUIIqoGMuvatiz/dkU6ZGHhhJJpIvT3NVbpDe0uFSaubHhziJUb4JED41BpLJyfcp/zm2lP090e1pvkX9281XpFaymPE7sw7QFhWT91+FURYyPtxLHxaZgR/YBs3sI3sT6CN8LFHEQA5zHjR6fPpx6N/lKrN96IvRy2lub4=
-
 before_install:
   # Create display.
   - export DISPLAY=:99.0
@@ -17,7 +11,6 @@ install:
   # Install Bower, Grunt.
   - npm install -g bower grunt-cli
 
-
   # Install Sass and Compass for Grunt to work.
   - gem install compass
 
@@ -26,9 +19,17 @@ install:
   - bower install
   - grunt serve > ~/grunt.log 2>&1 &
 
+  # Install Behat
+  - cd behat
+  - cp behat.local.yml.travis behat.local.yml
+  - composer install
+  - cd ..
+
 before_script:
   # Wait for Grunt to finish loading.
   - until $(curl --output /dev/null --silent --head --fail http://localhost:9000); do sleep 1; done
 
 script:
-
+  # Run behat tests.
+  - cd behat
+  - ./bin/behat --tags=~@wip
