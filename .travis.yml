@@ -21,12 +21,6 @@ install:
   # Install Bower, Grunt and CasperJs and ngrok.
   - npm install -g bower grunt-cli mocha
 
-  # WebdriverCSS
-  # - sudo apt-get install graphicsmagick
-
-  # Install Shoov config
-  - curl -o ~/.shoov.json $SHOOV_CURL
-
   # Install Sass and Compass for Grunt to work.
   - gem install compass
 
