@@ -4,7 +4,7 @@ php:
 
 env:
   global:
-    
+
     # ngrok.com
     # travis encrypt NGROK_AUTHTOKEN="<your-token>"
     - secure: ce8tsUIIqoGMuvatiz/dkU6ZGHhhJJpIvT3NVbpDe0uFSaubHhziJUb4JED41BpLJyfcp/zm2lP090e1pvkX9281XpFaymPE7sw7QFhWT91+FURYyPtxLHxaZgR/YBs3sI3sT6CN8LFHEQA5zHjR6fPpx6N/lKrN96IvRy2lub4=
@@ -15,8 +15,8 @@ before_install:
   - sh -e /etc/init.d/xvfb start
 
 install:
-  # Install Bower, Grunt and CasperJs and ngrok.
-  - npm install -g bower grunt-cli mocha
+  # Install Bower, Grunt.
+  - npm install -g bower
 
   # Install Sass and Compass for Grunt to work.
   - gem install compass
