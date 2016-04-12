@@ -16,6 +16,20 @@ class FeatureContext extends MinkContext implements SnippetAcceptingContext {
   }
 
   /**
+   * @When I visit the homepage
+   */
+  public function iVisitTheHomepage() {
+    $this->getSession()->visit($this->locatePath('/'));
+  }
+
+  /**
+   * @Then I should have access to the page
+   */
+  public function iShouldHaveAccessToThePage() {
+    $this->assertSession()->statusCodeEquals('200');
+  }
+
+  /**
    * @Then I should the text :text under the main content
    */
   public function iShouldTheTextUnderTheMainContent($text) {
