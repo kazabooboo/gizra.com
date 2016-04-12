@@ -17,14 +17,6 @@ before_install:
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
 
-  # Install ngrok
-  # - cd ~
-  # - wget https://dl.ngrok.com/ngrok_2.0.17_linux_amd64.zip
-  # - unzip ngrok_2.0.17_linux_amd64.zip
-  # - ./ngrok authtoken $NGROK_AUTHTOKEN
-  # - cd -
-
-
 install:
   # Install Bower, Grunt and CasperJs and ngrok.
   - npm install -g bower grunt-cli mocha
@@ -43,32 +35,6 @@ install:
   - bower install
   - grunt serve > ~/grunt.log 2>&1 &
 
-  # Install Behat
-  - cd behat
-  - cp behat.local.yml.travis behat.local.yml
-  - composer install
-  - cd ..
-
-  # Install webdriverCSS
-  # - cd ui-tests
-  # - npm install
-  # - cd ..
-
 before_script:
   # Wait for Grunt to finish loading.
   - until $(curl --output /dev/null --silent --head --fail http://localhost:9000); do sleep 1; done
-
-  # Run ngrok
-  # - echo $TRAVIS_COMMIT
-  # - ~/ngrok http -log=stdout -subdomain=$TRAVIS_COMMIT 9000 > ~/ngrok.log 2>&1 &
-  # - until $(curl --output /dev/null --silent --head --fail https://$TRAVIS_COMMIT.ngrok.io); do sleep 1; echo '.'; done
-
-script:
-  # Run behat tests.
-  - cd behat
-  - ./bin/behat --tags=~@wip
-  - cd ..
-
-  # - cd ui-tests
-  # - PROVIDER_PREFIX=browserstack SELECTED_CAPS=chrome mocha
-  # - PROVIDER_PREFIX=browserstack SELECTED_CAPS=ie11 mocha
