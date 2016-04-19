@@ -36,34 +36,33 @@ my [colleague‏‏‏‏](https://twitter.com/jsacksick). A frustrated journey 
 with in couple of files and 3 lines of code.
 
 ## Files, Files every where
-For this blog post I create a dummy module which migrate information about super
-heroes. The module [contains some images](https://github.com/RoySegall/comics_migration/tree/master/migration_assets/images)
-of super heroes and small [information relate to the superheroes](https://github.com/RoySegall/comics_migration/tree/master/migration_assets)
-we want to migrate into our Drupal site. If you look closely you can see that I
-attached also the SQL dump with the raw tables. [it's a good practice](http://www.gizra.com/content/migration-best-practices/)
-you should have look.
+For this blog post I created a dummy module which migrate information about
+super heroes. The module [contains some images](https://github.com/RoySegall/comics_migration/tree/master/migration_assets/images)
+of super heroes and some small [information](https://github.com/RoySegall/comics_migration/tree/master/migration_assets)
+which we want to migrate. If you'll look closely you can see that I
+attached an SQL dump with raw tables. This raw table will be the source which
+will be migrated to node. [it's a good practice](http://www.gizra.com/content/migration-best-practices/)
+that you should have look.
 
 ## Basic structure of migration
 In Drupal 7 we used to have a lot of the logic compressed into a single file. In
-Drupal 8 it's got tear down into small files and the migrate module isn't
+Drupal 8 it's got a tear down into small files and the migrate module isn't
 innocent from it as well.
 
-The description on source info goes to which field got into a [configuration yml file](https://github.com/RoySegall/comics_migration/blob/master/config/install/migrate.migration.superheroes.yml)
-and there are two things i'd like you to have a look:
-Simple mapping - In case you don't have a weird logic in the way you migrate
-the source into the fields you can just specify them as a normal [key and value](https://github.com/RoySegall/comics_migration/blob/master/config/install/migrate.migration.superheroes.yml#L17)
-Value plugin - In Drupal 7, when we wanted to prepare the value in the
-source and then populate the entity fields as we want we used to change it in
+The description on the mapping between the source table to the destined nodes
+move into a [configuration yml file](https://github.com/RoySegall/comics_migration/blob/master/config/install/migrate.migration.superheroes.yml).
+I'd like to alaborate on the plugins:
+Simple mapping - a normal [key and value](https://github.com/RoySegall/comics_migration/blob/master/config/install/migrate.migration.superheroes.yml#L12)
+mapping. The idea is to populate the property/field of the entity with a raw
+value like a name of content type or a user ID in case we migrate all the nodes
+for the admin.
+Value plugin - In Drupal 7, when we wanted to prepare the value before
+populating the entity fields as we want, we used to change it in
 the [prepare method](https://github.com/openscholar/openscholar/blob/SCHOLAR-3.x/openscholar/modules/os/modules/os_migrate_demo/handlers/node/project.inc#L33-L38).
-In Drupal 8 we have process plugins:
+In Drupal 8 we have [process plugins](https://github.com/RoySegall/comics_migration/blob/master/config/install/migrate.migration.superheroes.yml#L20).
 
-1. [default value](https://github.com/RoySegall/comics_migration/blob/master/config/install/migrate.migration.superheroes.yml#L12) -
-when the value we placed in `default_value` will populated as is.
-2. [custom plugins](https://github.com/RoySegall/comics_migration/blob/master/config/install/migrate.migration.superheroes.yml#L20) -
-a method called `transform` in the plugin will be invoke and the value it's
-return will populate the field. Any extra proprties in the definition of the
-migration will be passed in the cofingration. In our case source is the property
-we migrating from but we can also pass module name, directory etc. etc.
+In the [transform](https://github.com/RoySegall/comics_migration/blob/master/src/Plugin/migrate/process/FileImport.php#L21) method of the process plugin I can return any value which will eventually populate the
+field/property.
 
 ## TL;DR - copy files from directory into the file system
 
@@ -80,5 +79,9 @@ we migrating from but we can also pass module name, directory etc. etc.
 ```
 
 Seem so simple and elegant and this is what it is. `file_unmanaged_copy` copy
-files a path into a stream wrapper directory(`public://` or example). All I need
-to do is just create a file object in the DB and that's it.
+files from any path into a stream wrapper directory(`public://` or example).
+All I need to do is just create a file object in the DB and that's it.
+
+On the other hand we have a function `system_retrieve_file` which will copy file
+from any given URL and will create an object for me in the file storage. That
+wasn't the case for our need.
