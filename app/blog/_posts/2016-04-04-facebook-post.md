@@ -1,4 +1,5 @@
 ---
+category: blog
 title: A Job Posting Goes Viral
 keywords: Drupal
 tags:
