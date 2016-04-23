@@ -43,17 +43,14 @@ This raw table will be the source which will be migrated to node. [it's a good p
 that you should have look.
 
 ## Basic structure of migration
-In Drupal 7 we used to have a lot of the logic compressed into a single file. In
-Drupal 8 it's got a tear down into small files and the migrate module isn't
-innocent from it as well.
 
 The description on the mapping between the source table to the destined nodes
 move into a [configuration yml file](https://github.com/RoySegall/comics_migration/blob/master/config/install/migrate.migration.superheroes.yml).
-I'd like to elaborate on the plugins:
+But i'd like to elaborate on the plugins:
 [default_value](https://github.com/RoySegall/comics_migration/blob/master/config/install/migrate.migration.superheroes.yml#L12) - The idea is to populate the property/field of the
 entity with a raw value like the name of content type or a user ID in case we
 migrating all the nodes for the admin.
-process plugins - In Drupal 7, when we wanted to prepare the value before
+Process plugins - In Drupal 7, when we wanted to prepare the value before
 populating the entity fields as we want, we used to change it in the [prepare method](https://github.com/openscholar/openscholar/blob/SCHOLAR-3.x/openscholar/modules/os/modules/os_migrate_demo/handlers/node/project.inc#L33-L38).
 In Drupal 8 we have [process plugins](https://github.com/RoySegall/comics_migration/blob/master/config/install/migrate.migration.superheroes.yml#L20).
 
