@@ -14,6 +14,7 @@ title: IBLI
 ##The Problem
 ___________
 
+
 Farmers in arid or semi-arid areas of Africa face unmitigated environmental risk. The lack of rain in any given season - and the resulting high livestock mortality - is an existential crisis against which pastoral farmers traditionally have had no protection. Environmental fate, which is commonly protected against by insurance products in other areas of the developed world, was not readily available to farmers in Kenya (where IBLI proposed to work) due to limited resources and a lacking technological infrastructure to conduct transactions and deliver products.
 
 Embed video: https://youtu.be/1-w7iht20nw?list=PLCLZXIdq9v2RBlzJtuIR4CqRPvDVcaGBX
@@ -25,13 +26,13 @@ The International Livestock Research Institute (ILRI - www.ilri.org) is an organ
 
 They knew these things:
 
-*   The enormous set of satellite-captured data on weather patterns and vegetation conditions needed to accurately assess livestock losses was readily available, as was the algorithms that insurance companies used to crunch that data.
-*   While broadband internet is limited in Sub Saharan Africa, wireless mobile technology is ubiquitous, and literally in the hands of many pastoral farmers.
+* The enormous set of satellite-captured data on weather patterns and vegetation conditions needed to accurately assess livestock losses was readily available, as was the algorithms that insurance companies used to crunch that data.
+* While broadband internet is limited in Sub Saharan Africa, wireless mobile technology is ubiquitous, and literally in the hands of many pastoral farmers. 
 
 From there, they made the following assumptions that they proposed to test: 
 
-*   If provided the data and access to the customer base, insurance companies would jump at the chance to provide affordable insurance to pastoral farmers in Africa.
-*   Farmers, if given the opportunity would pay the cost to mitigate their environmental risk, and be in better position to grow their family business year over year.
+* If provided the data and access to the customer base, insurance companies would jump at the chance to provide affordable insurance to pastoral farmers in Africa.
+* Farmers, if given the opportunity would pay the cost to mitigate their environmental risk, and be in better position to grow their family business year over year.
 
 ILRI needed to create a proof of concept application that demonstrated both the ability to work with a large, highly abstracted set of data to produce an accurate cost of product, and a mechanism to deliver the product directly to the consumer.
 
