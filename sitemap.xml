@@ -355,7 +355,7 @@
     <url>
       <loc>http://www.gizra.com/content/restful-discovery</loc>
       
-        <lastmod>2014-10-30T00:00:00+03:00</lastmod>
+        <lastmod>2014-10-30T00:00:00+02:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -1007,6 +1007,10 @@
   
     <url>
       <loc>http://www.gizra.com/blog/index.html</loc>
+     </url>
+  
+    <url>
+      <loc>http://www.gizra.com/contact/drupalcon2016-nola/index.html</loc>
      </url>
   
     <url>
