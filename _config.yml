@@ -103,6 +103,16 @@ authors:
       github: IshaDakota
       avatar: male.jpg
       image: ishadakota.jpg
+  - kazabooboo:
+      name: Adar Earon
+      title: USA Director
+      is_member: true
+      bio: I don't really need tips on how to fall asleep. I have twins.
+      email: adar@gizra.com
+      twitter: kzbooboo
+      github: kazabooboo
+      avatar: kazabooboo.jpg
+      image: male.jpg
   - NaderSafadi:
       name: Nader Safadi
       title: Team Lead
