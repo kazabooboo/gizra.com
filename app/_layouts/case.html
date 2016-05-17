@@ -16,10 +16,12 @@ post: true
 
 	<article class="case">
 		<div class="content-container">
-		 	<h3>Gizra Case Study:</h3>
+			<div id="case-label">
+		 		<span class="label label-default">Gizra Case Study</span>
+			</div>
 		 	<h1><a href="{{ page.url }}">{{ page.title }} </a></h1>
 		 	<h2><a href="{{ page.url }}">{{ page.subtitle }} </a></h2>
-		 	<h3>{{ page.abstract }} </h3>
+		 	<div id="abstract">{{ page.abstract }} </div>
       <div class="tags">{% unless page.tags == empty %}
         <img src="/images/post/tag-icon-small.png" class="tags-icon"/>
         <ul class="inline">
