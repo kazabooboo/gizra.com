@@ -5,7 +5,9 @@ tags:
   - Structured Data
   - Restful API
 layout: case
-title: OpenScholar
+title: One Database to Rule Them All Massive Multisite Execution with a Single Installation
+abstract: Gizra helped Harvard University get thousands of websites under one set of controls, making life easier for the techs in IT, the brand managers in Communications, and the users managing the sites. Oh, and it saved the university millions of dollars.
+header_url: /assets/images/cases/openscholar/top.jpg
 ---
 
 
@@ -14,6 +16,8 @@ title: OpenScholar
 
 ##The Problem
 Harvard University is not your typical university. But still, they have the same challenges of any academic institution -- of any large organization with semi-independent units, for that matter. Individual faculty, departments, programs, projects, and initiatives all need a web presence, and the culture of a university is much more likely to permit -- even encourage -- those entities to “scratch their own itch” in developing their own solutions.
+
+{% include thumbnail.html image_path="assets/images/posts/migration-best-practices/image1.jpg" %}
 
 Yet as web projects become more complicated, and as even smaller units move away from home-grown solutions to more complex content management systems, several factors do not scale:
 * For one, **cost alone is enough of a motivation** to explore a more unified web presence. Bearing small, but significant costs for similar development tasks, sometimes hundreds of times over, can cost a large university in the millions of dollars.
