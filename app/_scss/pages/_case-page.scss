@@ -1,5 +1,5 @@
-// Post page.
-#header-case, {
+// Case page.
+#header-case {
   background: url('/images/post/background.png') no-repeat center top;
   background-size: cover;
   text-align: left;
@@ -7,10 +7,7 @@
   .gizra-logo {
     margin-bottom: 30px;
   }
-}
 
-
-#header-case {
   h1 {
     margin-left: 15px;
     color: white;
@@ -21,6 +18,7 @@
     }
   }
 }
+
 #case-top {
 	max-height: 450px;
 	overflow: hidden;
@@ -30,43 +28,9 @@
 		width: 100%;
 	}
 }
+
 #case-page {
   margin-top: 45px;
-
-  #pager {
-    list-style: none;
-    margin-top: 14px;
-    margin-bottom: 85px;
-
-    .pager-nav {
-      padding-left: 0;
-      list-style-type: none;
-      font-size: 1.2em;
-      font-weight: 500;
-    }
-
-    .prev,
-    .next {
-      width: 50%;
-
-      a {
-        text-decoration: none;
-      }
-    }
-
-    .prev {
-      float: left;
-    }
-
-    .next {
-      float: right;
-      text-align: right;
-    }
-
-    a {
-      color: $gizra-orange;
-    }
-  }
 }
 
 .case {
@@ -79,8 +43,6 @@
   h1 {
     @extend .h1-styling;
     border-bottom: 1px solid;
-
-    //margin-bottom: 6px;
   }
 
   h2 {
@@ -151,7 +113,7 @@
     }
   }
 
-  .post-content {
+  .case-content {
     margin-bottom: 20px;
     font-size: 18px;
     line-height: 25px;
@@ -159,11 +121,11 @@
     @include desktop {
       font-size: 21px;
     }
-  }
-
-  .post-content p {
-    @include desktop {
-      line-height: 1.7;
+    
+    p {
+    	@include desktop {
+      	line-height: 1.7;
+      }
     }
   }
 
@@ -213,11 +175,10 @@
   }
 }
 
-
 // Mobile Media query.
 @include mobile {
 
-  .post-content {
+  .case-content {
     overflow-x: hidden;
   }
 }
