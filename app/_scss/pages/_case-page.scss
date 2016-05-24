@@ -1,0 +1,184 @@
+// Case page.
+#header-case {
+  background: url('/images/post/background.png') no-repeat center top;
+  background-size: cover;
+  text-align: left;
+
+  .gizra-logo {
+    margin-bottom: 30px;
+  }
+
+  h1 {
+    margin-left: 15px;
+    color: white;
+    
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+}
+
+#case-top {
+	max-height: 450px;
+	overflow: hidden;
+	margin-bottom: 30px;
+	
+	img {
+		width: 100%;
+	}
+}
+
+#case-page {
+  margin-top: 45px;
+}
+
+.case {
+  h1,
+  h2,
+  h3 {
+    @extend .headers-styling;
+  }
+
+  h1 {
+    @extend .h1-styling;
+    border-bottom: 1px solid;
+  }
+
+  h2 {
+    font-size: 22px;
+    text-transform: uppercase;
+
+    a{
+	    text-decoration: none;
+    }
+  }
+
+  h3 {
+    font-size: 20px;
+    a {
+	    text-decoration: none;
+    }
+  }
+
+  .date {
+    font-size: 18px;
+  }
+  
+  #case-label {
+	  padding-top: 20px;
+ 
+	  .label {
+		  font-size: 20px;
+	  }
+	}
+	
+	#abstract {
+		line-height: 1.7;
+		font-size: 21px;
+		font-style: italic;
+	}
+  .tags {
+
+    .tags-icon {
+      float: left;
+      padding: 0 6px 0 0;
+    }
+
+    ul {
+      list-style-type: none;
+      margin-bottom: 15px;
+      padding-left: 0;
+      font-size: 18px;
+    }
+
+    li {
+      padding-left: 0;
+      display: inline;
+
+      &::after {
+        content: ',';
+      }
+
+      &:last-child {
+
+        &::after {
+          content: '';
+        }
+      }
+    }
+
+    a {
+      font-weight: normal;
+    }
+  }
+
+  .case-content {
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 25px;
+
+    @include desktop {
+      font-size: 21px;
+    }
+    
+    p {
+    	@include desktop {
+      	line-height: 1.7;
+      }
+    }
+  }
+
+  ul {
+    font-size: 21px;
+    //line-height: 35px;
+    margin-top: 20px;
+    margin-bottom: 38px;
+    padding-left: 24px;
+
+    li {
+      padding-left: 16px;
+    }
+  }
+
+  .highlight {
+    margin: 35px 0;
+  }
+
+  ol {
+    font-size: 18px;
+    line-height: 36px;
+    margin-top: 35px;
+    margin-bottom: 30px;
+
+    li {
+      margin-bottom: 13px;
+    }
+  }
+
+  em {
+    font-weight: bold;
+  }
+
+
+  a {
+    color: $gizra-blue;
+    text-decoration: underline;
+  }
+
+  blockquote {
+    font-size: 21px;
+    padding-left: 51px;
+    line-height: 32px;
+    border-left: 10px gray solid;
+    margin-left: 10px;
+  }
+}
+
+// Mobile Media query.
+@include mobile {
+
+  .case-content {
+    overflow-x: hidden;
+  }
+}
