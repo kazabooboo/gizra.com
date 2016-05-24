@@ -34,7 +34,7 @@ What would it look like if Harvard – or any university – could consolidate i
 
 Harvard knew that this was a  tough hill to climb in terms of rolling out a unified campus-wide system. Getting buy-in from faculty and departments at a fiercely independent intellectual environment like a college or university required an adoption strategy, and the Harvard Web Publishing team was up for that task. Where they needed assistance, however, was in creating a technologically scalable solution to match these ambitious adoption goals.
 
-{% include thumbnail.html image_path="assets/images/cases/openscholar/sample_site.png" caption="An example of one of many departmental sites running on Harvard's OpenScholar installation."%}
+{% include thumbnail.html image_path="assets/images/cases/openscholar/sample_site.jpg" caption="An example of one of many departmental sites running on Harvard's OpenScholar installation."%}
 
 
 Like many campuses, the team was familiar with Drupal, and many of the sites that they proposed to replace were built on the Drupal platform. And rightfully so: sticking with the most popular CMS in higher education was certainly a good idea, but looking for way to do a massive multi-site installation of Drupal seemed like a daunting task. To achieve it, Harvard put together an internal development team and requested the help of Gizra, ultimately making us part  of the core team.
@@ -47,7 +47,7 @@ Enter [Organic Groups](https://www.drupal.org/project/og) module - Drupal’s *d
 
 The resulting [distribution](http://openscholar.gizra.com/) was “pushbutton” website creation for faculty, departments, programs, and projects with sensible defaults and “one database to rule them all.” Easy to update, and simple to report analytics across all sites, OpenScholar has become a model for multi-site installations with application well beyond higher education.
 
-{% include thumbnail.html image_path="assets/images/cases/openscholar/dashboard.png" caption="A single database allows Harvard to easily run analytics across all university sites on a single dashboard."%}
+{% include thumbnail.html image_path="assets/images/cases/openscholar/dashboard.jpg" caption="A single database allows Harvard to easily run analytics across all university sites on a single dashboard."%}
 
 
 ###Clear and Transparent Communication - Working on and Within a Team
