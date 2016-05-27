@@ -1,0 +1,78 @@
+---
+layout: default
+title: Contact Gizra
+description: Contact form for Gizra
+keywords: Gizra, Drupal, Contact
+---
+<header id="header-global">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 narrow">
+        {% include header.html %}
+      </div>
+    </div>
+  </div>
+</header>
+<section id="contact-page">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="container" id="header">
+              <div class="row">
+                <div class="col-sm-12 narrow">
+                  <h1 class="title">Contact Us</h1>
+                </div>
+              </div>
+            </div>
+            <div class="container">
+              <div class="row">
+                <div class="col-xs-12 narrow">
+                      <h3>Do you want to talk about working together?</h3>
+                      <p>
+                        Let's hop on a call or meet for coffee and talk about
+	                      your project. Maybe we can help - or maybe you just want to share your cool idea.
+	                      In either case, let us know and we'll be in touch about a good time to talk!
+                      </p>
+	                
+
+										 <form action="https://formspree.io/usoffice@gizra.com" method="POST">
+											<div class="form-group">
+												<label for="name">Name:</label>
+										    <input type="text" name="name" class="form-control" required>
+											</div>
+											<div class="form-group">
+												<label for="title">Title:</label>
+										    <input type="text" name="title" class="form-control">
+											</div>
+											<div class="form-group">
+												<label for="company">Company or Organization:</label>
+										    <input type="text" name="company" class="form-control">
+											</div>
+											<div class="form-group">
+												<label for="_replyto">Email:</label>
+												<input type="email" name="_replyto" class="form-control" required>
+											</div>
+											<div class="form-group">
+												<label for="company">Best Phone Number to Reach Me:</label>
+										    <input type="text" name="company" class="form-control">
+											</div>
+											<div class="form-group">
+												<label for="project">Tell us a little about your project:</label>
+												<textarea name="project" class="form-control" rows="3"></textarea>
+											</div>
+										  <button type="submit" class="btn btn-default">Send</button>
+										  <input type="hidden" name="_next" value="//gizra.com/contact/thank-you" />
+										</form>
+										<div class="">
+                      <p><span>Or just email us at </span><a class="email" href="mailto:usoffice@gizra.com">usoffice@gizra.com</a></p>
+                    </div>
+               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

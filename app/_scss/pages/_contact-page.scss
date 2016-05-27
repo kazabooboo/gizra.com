@@ -1,0 +1,33 @@
+#contact-page {
+  #header {
+    @extend .divider-bottom;
+    color: $gizra-blue;
+    margin-top: 45px;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+
+    .title {
+      text-transform: uppercase;
+    }
+  }
+
+  p {
+    line-height: 1.55em;
+    font-size: 1.10em;
+  }
+
+  .contact-us {
+    margin-top: 30px;
+
+    p {
+      margin: 0 auto;
+    }
+  }
+
+  // Desktop Media query.
+  @include desktop {
+    .narrow {
+      padding: 0 160px;
+    }
+  }
+}
