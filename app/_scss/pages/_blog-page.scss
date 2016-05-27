@@ -60,6 +60,13 @@
       color: $gizra-orange;
     }
   }
+
+  @include desktop {
+    .post-teaser {
+      height: 350px;
+      overflow: hidden;
+    }
+  }
 }
 
 // Mobile Media query.
