@@ -3,6 +3,7 @@
 {% else %}
   {% assign about_path = "#about" %}
 {% endif %}
+<span class="gizra-logo"><a href="/">gizra</a></span>
 <nav id="nav" role="navigation" class="navbar navbar-default">
   <div class="navbar-header">
     <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
@@ -21,9 +22,3 @@
     </ul>
   </div>
 </nav>
-{% if page.homepage == nil %}
-  <h2 class="gizra-logo"><a href="/">gizra</a></h2>
-{% else %}
-  <h1 class="gizra-logo"><a href="/">gizra</a></h1>
-{% endif %}
-
