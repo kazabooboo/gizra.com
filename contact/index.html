@@ -6,10 +6,10 @@
         
     
 
-<title>Zariz Loves Entity Reference</title>
+<title>Contact Gizra</title>
 
-        <meta name="description" content="">
-        <meta name="keywords" content="">
+        <meta name="description" content="Contact form for Gizra">
+        <meta name="keywords" content="Gizra, Drupal, Contact">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
       <!-- Favicon for all platforms -->
@@ -59,108 +59,11 @@
     <body>
 
     <!-- Main content -->
-    
-  
-
-
-
-  
-    
-      
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-
-<div id="post-page">
-  <header id="header-post">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-10 col-sm-offset-1">
-          
+    <header id="header-global">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 narrow">
+        
   
 
 <nav id="nav" role="navigation" class="navbar navbar-default">
@@ -186,121 +89,73 @@
 
 
 
+      </div>
+    </div>
+  </div>
+</header>
+<section id="contact-page">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="container" id="header">
+              <div class="row">
+                <div class="col-sm-12 narrow">
+                  <h1 class="title">Contact Us</h1>
+                </div>
+              </div>
+            </div>
+            <div class="container">
+              <div class="row">
+                <div class="col-xs-12 narrow">
+                      <h3>Do you want to talk about working together?</h3>
+                      <p>
+                        Let's hop on a call or meet for coffee and talk about
+	                      your project. Maybe we can help - or maybe you just want to share your cool idea.
+	                      In either case, let us know and we'll be in touch about a good time to talk!
+                      </p>
+
+
+										 <form action="https://formspree.io/info@gizra.com" method="POST">
+											<div class="form-group">
+												<label for="name">Name:</label>
+										    <input type="text" name="name" class="form-control" required>
+											</div>
+											<div class="form-group">
+												<label for="title">Title:</label>
+										    <input type="text" name="title" class="form-control">
+											</div>
+											<div class="form-group">
+												<label for="company">Company or Organization:</label>
+										    <input type="text" name="company" class="form-control">
+											</div>
+											<div class="form-group">
+												<label for="_replyto">Email:</label>
+												<input type="email" name="_replyto" class="form-control" required>
+											</div>
+											<div class="form-group">
+												<label for="company">Best Phone Number to Reach Me:</label>
+										    <input type="text" name="company" class="form-control">
+											</div>
+											<div class="form-group">
+												<label for="project">Tell us a little about your project:</label>
+												<textarea name="project" class="form-control" rows="3"></textarea>
+											</div>
+										  <button type="submit" class="btn btn-default">Send</button>
+										  <input type="hidden" name="_next" value="//gizra.com/contact/thank-you" />
+										</form>
+										<div class="contact-us">
+                      <p><span>Or just email us at </span><a class="email" href="mailto:info@gizra.com">info@gizra.com</a></p>
+                    </div>
+               </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </header>
-
-  <div class="content-container">
-    <article class="post">
-      <h1><a href="/content/zariz-entity-reference">Zariz Loves Entity Reference </a></h1>
-      <div class="date">20 Jan 2014, By Amitai Burstein</div>
-      <div class="tags">
-        <img src="/images/post/tag-icon-small.15a8.png" class="tags-icon"/>
-        <ul class="inline">
-          
-          
-
-  
-    
-      <li><a href="/tags.html#Zariz-ref">Zariz</a></li>
-    
-      <li><a href="/tags.html#Drupal-planet-ref">Drupal-planet</a></li>
-    
-  
-
-
-        </ul>
-        </div>
-      <div class="post-content">
-
-        <p>Zariz is now integrated with entity reference and is &ldquo;branch&rdquo; aware. This means
-that the reference will change on the fly. For example:</p>
-
-<!-- more -->
-
-<p>This node is referencing another node
-<img src="/assets/images/posts/zariz-entity-reference/2.jpg" alt=""></p>
-
-<p>We create a new branch&hellip;
-<img src="/assets/images/posts/zariz-entity-reference/3.jpg" alt=""></p>
-
-<p>&hellip; and edit the referenced node
-<img src="/assets/images/posts/zariz-entity-reference/4.jpg" alt=""></p>
-
-<p>Now, when viewing the referencing node again under the new branch, you can see
-Zariz took care of the reference:
-<img src="/assets/images/posts/zariz-entity-reference/5.jpg" alt=""></p>
-
-<p>And the widget was smart enough to reflect the new changes!
-<img src="/assets/images/posts/zariz-entity-reference/6.jpg" alt=""></p>
-
-<p>Zariz is now becoming a pretty good example of implementing Entity reference behaviors plugins - take a peek at the code to see how we add a UUID value to each entity reference item
-<img src="/assets/images/posts/zariz-entity-reference/7.jpg" alt=""></p>
-
-
-      </div>
-    </article>
-    <section class="post-nav">
-      <div class="row">
-        <div class="col-xs-6 previous">
-          
-          <div class="text-capitalize">
-            <a href="/content/openscholar-new-bilbio">
-              Previous
-              <span class="visible-xs"> post</span>
-            </a>
-          </div>
-          <a href="/content/openscholar-new-bilbio" class="prev-text">
-            <span class="hidden-xs">OpenScholar and the new Biblio</span>
-          </a>
-          
-        </div>
-        <div class="col-xs-6 next">
-          
-          <div class="text-capitalize">
-            <a href="/content/casa-del-lector">
-              Next
-              <span class="visible-xs"> post</span>
-            </a>
-          </div>
-          <a href="/content/casa-del-lector" class="next-text">
-            <span class="hidden-xs">Casa del Lector</span>
-          </a>
-          
-        </div>
-      </div>
-    </section>
-    <section class="author-details">
-      <div class="image-wrapper">
-        <img src="/images/team/avatars/amitaibu.a340.jpg" class="img-circle img-responsive">
-      </div>
-      <div class="text-wrapper">
-        <span class="name">Amitai Burstein</span>
-        
-          <span class="twitter">(@amitaibu)</span>
-        
-        <div class="title">CTO, Co-Owner</div>
-        <div class="bio">Maintainer of Organic groups, the Message stack, and co-maintainer of Drupal 8's Entity reference. <a href="/content/the-about-story/">The about story</a>.</div>
-      </div>
-    </section>
-    <section>
-      <div id="disqus_thread"></div>
-<script type="text/javascript">
-    var disqus_developer = 1;
-    var disqus_shortname = 'gizra';
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-    </section>
   </div>
-</div>
+</section>
 
 
     <!--Footer -->
