@@ -1,16 +1,14 @@
 #contact-page {
   margin-bottom: 20px;
 
-  #header {
+
+  .title {
+    text-transform: uppercase;
     @extend .divider-bottom;
     color: $gizra-blue;
     margin-top: 45px;
     margin-bottom: 30px;
     padding-bottom: 20px;
-
-    .title {
-      text-transform: uppercase;
-    }
   }
 
   p {
