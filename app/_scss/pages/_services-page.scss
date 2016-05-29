@@ -9,9 +9,39 @@
   }
 }
 
+#strengths-page {
+  background: url('/images/team/background.png') no-repeat center top;
+  background-size: cover;
 
-#services-page {
-  margin-top: 45px;
+  .list-group-item {
+    background-color: inherit;
+    color: #fff;
+  }
+
+  .list-group-item:hover {
+    background-color: #5B5C5A;
+  }
+}
+
+#services-page, #cases-page {
+  .list-group-item:hover {
+    background-color: #f5f5f5;
+  }
+}
+
+#services-page, #strengths-page, #cases-page {
+  h1.title, h2.title {
+    text-transform: uppercase;
+    @extend .divider-bottom;
+    color: $gizra-blue;
+    margin-top: 45px;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+  } 
+
+  .list-group-item {
+    border: none;
+  }
 }
 
 .services {
