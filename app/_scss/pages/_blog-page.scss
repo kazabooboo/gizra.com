@@ -12,7 +12,7 @@
 
 #blog-page {
 
-  .title {
+  h1.title {
     text-transform: uppercase;
     @extend .divider-bottom;
     color: $gizra-blue;
