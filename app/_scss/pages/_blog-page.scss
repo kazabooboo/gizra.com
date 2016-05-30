@@ -10,21 +10,16 @@
   }
 }
 
-
-#header-blog {
-  h1 {
-    margin-left: 15px;
-    color: white;
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-  }
-}
-
 #blog-page {
-  margin-top: 45px;
+
+  .title {
+    text-transform: uppercase;
+    @extend .divider-bottom;
+    color: $gizra-blue;
+    margin-top: 45px;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+  } 
 
   #pager {
     list-style: none;
