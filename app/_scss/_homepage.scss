@@ -1,13 +1,13 @@
 @import 'testimonials';
 
 #homepage {
-
   .header-homepage {
     background: #292929;
     background: url('/images/header/background.png') no-repeat left top;
     background-size: cover;
     width: 100%;
     text-align: left;
+    min-height: 100vh;
 
     #slogan {
       position: relative;
@@ -15,24 +15,27 @@
       color: white;
 
       h2 {
-        margin: 50px 0 10px;
+        margin: 70px 0 10px;
         font-weight: bold;
-        font-size: 1.9em;
-        line-height: 1.3em;
-        letter-spacing: 0.025em;
-        text-transform: uppercase;
+        font-size: 2.618em;
+        line-height: 1.2em;
+        //letter-spacing: 0.025em;
+        //text-transform: uppercase;
       }
 
-      p {
-        margin: 7px 0;
-        font-size: 1.23em;
-        max-width: 430px;
-        line-height: 1.45em;
-        letter-spacing: 0.013em;
+      .sub-slogan {
+        margin: 20px 0 0;        
+        p {
+          font-size: 1.618em;
+          max-width: 50%;
+          line-height: 1.2em;
+          //letter-spacing: 0.013em;
+        }
       }
 
       .about-us-story {
-        margin-top: 15px;
+        margin-top: 30px;
+        font-size: 1.618em;
 
         a {
           color: white;
@@ -45,6 +48,17 @@
         text-transform: uppercase;
         font-size: 22px;
         margin: -4px 0 0 420px;
+      }
+    }
+    
+    .page-scroll {
+      text-align: center;
+      position: relative;
+      bottom: 10px;
+      a {
+        color: white;
+        font-size: 1.618em;
+        text-decoration: none;
       }
     }
   }
@@ -75,10 +89,9 @@
 
   #homepage .header-homepage #slogan {
     margin-left: 15px;
-    height: 390px;
 
     h2 {
-      max-width: 474px;
+      max-width: 50%;
     }
   }
 }

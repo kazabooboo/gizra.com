@@ -1,11 +1,11 @@
 #about {
-  position: relative;
-  overflow: hidden;
+  background: url('/images/team/background.png') no-repeat center top;
+  background-size: cover;
+  min-height: 100vh;
   margin-top: 109px;
   margin-bottom: 0;
 
-  #main-wrapper,
-  #gizra-way {
+  #main-wrapper {
     position: relative;
 
     p {
@@ -24,49 +24,62 @@
     @extend .divider-bottom;
     padding-top: 45px;
     padding-bottom: 33px;
+    
+    
+  }
+}
+
+#gizra-way {
+  min-height: 100vh;
+  margin-top: 77px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 82px;
+    bottom: 99px;
+    right: 36px;
+    border-right: 1px solid $softer-border;
+    z-index: -1;
   }
 
-  #gizra-way {
-    margin-top: 77px;
+  .main-title {
+    margin-bottom: 17px;
+  }
+
+  .element {
+    position: relative;
+    margin-bottom: 45px;
+    padding: 7px 20px;
+    border: 1px solid $softer-border;
+    border-radius: 5px;
+    background: white;
+
 
     &::after {
       content: '';
       position: absolute;
-      top: 82px;
-      bottom: 99px;
-      right: 36px;
-      border-right: 1px solid $softer-border;
-      z-index: -1;
+      top: -30px;
+      right: 20px;
+      height: 45px;
+      width: 65px;
+      background: url('/images/homepage/fancy-bullet.png') no-repeat center right;
     }
 
-    .main-title {
-      margin-bottom: 17px;
+    h4 {
+      @extend .h4-styling;
+      margin-bottom: 9px;
     }
+  }
 
-    .element {
-      position: relative;
-      margin-bottom: 45px;
-      padding: 7px 20px;
-      border: 1px solid $softer-border;
-      border-radius: 5px;
-      background: white;
+  p {
+    @extend .p-styling;
+    margin-bottom: 12px;
+  }
 
-
-      &::after {
-        content: '';
-        position: absolute;
-        top: -30px;
-        right: 20px;
-        height: 45px;
-        width: 65px;
-        background: url('/images/homepage/fancy-bullet.png') no-repeat center right;
-      }
-
-      h4 {
-        @extend .h4-styling;
-        margin-bottom: 9px;
-      }
-    }
+  h3 {
+    @extend .h3-styling;
+    margin-top: 35px;
   }
 }
 

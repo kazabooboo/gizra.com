@@ -1,10 +1,12 @@
 #testimonials {
-  margin-top: 90px;
+  background-color: $gizra-black;
+  min-height: 100vh;
 }
 
 #carousel-testimonials {
   @extend .soft-box;
   border-radius: 6px;
+  background-color: #ffffff;
 
   .carousel-indicators {
     @include box-shadow(0 1px 2px 0 rgba(0, 0, 0, 0.22));
