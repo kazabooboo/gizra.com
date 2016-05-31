@@ -16,15 +16,13 @@
   }
 
   .author-details {
-    margin-bottom: 10px;
     position: relative;
 
     .name {
       margin-bottom: 5px;
-      font-family: 'Raleway', sans-serif;
-      font-size: 1em;
+      font-family: 'Hind', sans-serif;
+      font-size: 16px;
       font-weight: bolder;
-      letter-spacing: 0.03em;
 
       a {
         color: $gizra-orange;
@@ -34,7 +32,7 @@
 
     .date {
       margin-bottom: 5px;
-      font-size: 1.1em;
+      font-size: 16px;
 
       i {
         margin-right: 5px;
@@ -77,10 +75,11 @@
 
     .title {
       @extend .h1-styling;
+      font-family: "Raleway", sans-serif;
       margin-bottom: 0;
       text-transform: none;
-      line-height: 1.35em;
-      font-size: 1.4em;
+      line-height: 1.2em;
+      font-size: 18px;
     }
   }
 
