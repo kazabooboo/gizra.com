@@ -13,33 +13,72 @@ post: true
       </div>
     </div>
   </header>
-
-	<article class="case">
-		<div class="content-container">
-			<div id="case-label">
-		 		<span class="label label-default">Gizra Case Study</span>
-			</div>
-		 	<h1><a href="{{ page.url }}">{{ page.title }} </a></h1>
-		 	<h2><a href="{{ page.url }}">{{ page.subtitle }} </a></h2>
-		 	<div id="abstract">{{ page.abstract }} </div>
-      <div class="tags">{% unless page.tags == empty %}
-        <img src="/images/post/tag-icon-small.png" class="tags-icon"/>
-        <ul class="inline">
-          {% assign tags_list = page.tags %}
-          {% include tags_list.html %}
-        </ul>
-        {% endunless %}
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-10 col-sm-offset-1">
+        <section class="case-title">
+          <h1><a href="{{ page.url }}">{{ page.title }} </a></h1>
+          <h2><a href="{{ page.url }}">{{ page.subtitle }} </a></h2>
+        </section>
       </div>
-	 	</div>
-	 	<div id="case-top">
-	 		<img src=" {{ page.header_url }} ">
-	 	</div>
-    <div class="content-container">
-			<div class="case-content">
-
-        {{ content }}
-
+    </div>
+    <div class="row">
+      <div class="col-sm-2 col-sm-offset-1">
+  			<div id="case-label">
+  		 		<a href="/blog"><span class="label label-default">Gizra Case Study</span></a>
+  			</div>
+        <section class="case-data">
+          <div class="date">{{ page.date }}</div>
+          <div class="client">
+            <div class="client-label">Client:</div>
+            <div class="client-text">{{ page.client }}</div>
+          </div>
+          <div class="site">
+            <div class="site-label">Site:</div>
+            <div class="site-text"><a href="http://{{ page.site }}" target="_blank">{{ page.site }}</a></div>
+          </div>
+        </section>
       </div>
-  	</div>
-  </article>
+      <div class="col-sm-6">
+        <article class="case">
+          <div id="abstract"> {{ page.abstract }} </div>
+          <div class="case-content">
+
+            {{ content }}
+
+          </div>
+        </article>
+        <section>
+          {% include disqus.html %}
+        </section>
+      </div>
+      <div class="col-sm-2">
+        <section class="case-glance">
+          <h3>At a Glance</h3>
+          <div class="facts">
+            <div class="title">Key Facts & Figures:</div>
+            {% unless page.facts == empty %}
+              <ul class="inline">
+                {% assign facts_list = page.facts %}
+                {% for fact in facts_list %}
+                  <li>{{ fact }}</li>
+                {% endfor %}
+              </ul>
+            {% endunless %}
+          </div>
+          <div class="techs">
+            <div class="title">Technologies Used:</div>
+            {% unless page.techs == empty %}
+              <ul class="inline">
+                {% assign techs_list = page.techs %}
+                {% for tech in techs_list %}
+                  <li>{{ tech }}</li>
+                {% endfor %}
+              </ul>
+            {% endunless %}
+          </div>
+        </section>              
+      </div>      
+    </div>
+  </div>
 </div>

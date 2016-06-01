@@ -1,5 +1,8 @@
 ---
 keywords: Drupal
+date: 15 May 2016
+client: Harvard University
+site: openscholar.harvard.edu
 tags:
   - POC
   - Structured Data
@@ -8,7 +11,15 @@ layout: case
 title: One Database to Rule Them All
 subtitle: Massive Multisite Execution with a Single Installation
 abstract: Gizra helped Harvard University get thousands of websites under one set of controls, making life easier for the techs in IT, the brand managers in Communications, and the users managing the sites. Oh, and it saved the university millions of dollars.
-header_url: /assets/images/cases/openscholar/top.jpg
+facts:
+  - OpenScholar runs over 7,000 websites at Harvard on a single database
+  - It has an estimated value of $7M and was built at a fraction of the cost
+  - A comprehensive test suite cut release cycles in half
+techs:
+  - Drupal 7
+  - Organic Groups (OG)
+  - Behat
+  - AngularJS 
 ---
 
 

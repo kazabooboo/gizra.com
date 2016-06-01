@@ -19,20 +19,35 @@
   }
 }
 
-#case-top {
-	max-height: 450px;
-	overflow: hidden;
-	margin-bottom: 30px;
-	
-	img {
-		width: 100%;
-	}
+.case-title {
+  @extend .divider-bottom;
+    margin-top: 45px;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    
+  h1 {
+    @extend .headers-styling;
+    @extend .h1-styling;
+    margin-bottom: 6px;
+    font-family: "Raleway", sans-serif;
+    font-size: 41.887px;
+    text-transform: none;
+  }
+  h2 {
+    @extend .headers-styling;
+    margin-top: 0px;
+    margin-bottom: 6px;
+    font-family: "Raleway", sans-serif;
+    font-size: 25.888px;
+    a {
+      text-decoration: none;
+    }
+  }
 }
 
 .case {
   h1,
-  h2,
-  h3 {
+  h2 {
     @extend .headers-styling;
   }
 
@@ -42,7 +57,7 @@
   }
 
   h2 {
-    font-size: 22px;
+    font-size: 25.888px;
     text-transform: uppercase;
 
     a{
@@ -51,10 +66,7 @@
   }
 
   h3 {
-    font-size: 20px;
-    a {
-	    text-decoration: none;
-    }
+    font-size: 16px;
   }
 
   .date {
@@ -70,8 +82,11 @@
 	}
 	
 	#abstract {
-		line-height: 1.7;
-		font-size: 21px;
+  	border: 1px solid rgba(0, 0, 0, 0.08);
+  	background:  rgba(0, 0, 0, 0.08);
+  	padding: 1em 0.8em;
+		line-height: 1.618;
+		font-size: 16px;
 		font-style: italic;
 	}
   .tags {
@@ -111,25 +126,19 @@
 
   .case-content {
     margin-bottom: 20px;
-    font-size: 18px;
-    line-height: 25px;
-
     @include desktop {
-      font-size: 21px;
-    }
-    
-    p {
-    	@include desktop {
-      	line-height: 1.7;
-      }
+      font-size: 16px;
+      line-height: 1.618;
+  }
+
+  p {
+      margin: 0 0 1em;
     }
   }
 
-  ul {
-    font-size: 21px;
-    //line-height: 35px;
-    margin-top: 20px;
-    margin-bottom: 38px;
+  ul, ol {
+    margin-top: 0;
+    margin-bottom: 1em;
     padding-left: 24px;
 
     li {
@@ -163,13 +172,126 @@
   }
 
   blockquote {
-    font-size: 21px;
-    padding-left: 51px;
-    line-height: 32px;
-    border-left: 10px gray solid;
+    font-size: 16px;
+    border-left: 5px gray solid;
     margin-left: 10px;
   }
 }
+
+#case-label {
+  font-size: 25.888px;
+  margin: 0.4em 0 1em;
+
+  a {
+    text-decoration: none;
+  }
+
+  .label {
+    border-radius: 0;
+  }
+}
+
+.case-data {
+  .date {
+    margin-bottom: 1em;
+    font-weight: bold;
+  }
+
+  .site, .client {
+    margin-bottom: 1em;
+    
+    .site-label, .client-label {
+      font-weight: bold;
+    }
+    
+    .site-text a {
+      color: $gizra-blue;
+    }
+  }
+  .tags {
+    ul {
+      list-style-type: none;
+      margin-bottom: 15px;
+      padding-left: 0;
+      font-size: 18px;
+    }
+
+    li {
+      padding-left: 0;
+      display: inline;
+
+      &::after {
+        content: ',';
+      }
+
+      &:last-child {
+
+        &::after {
+          content: '';
+        }
+      }
+    }
+
+    a {
+      font-size: 16px;
+      color: $gizra-blue;
+    }
+  }  
+}
+
+.case-glance {
+  h3 {
+    margin-top: 0;
+  }
+
+  .techs {
+    .title {
+      font-weight: bold;
+    }
+
+    ul {
+      list-style-type: none;
+      margin-bottom: 15px;
+      padding-left: 0;
+      font-size: 16px;
+    }
+
+    li {
+      padding-left: 0;
+      display: inline;
+
+      &::after {
+        content: ' // ';
+      }
+
+      &:last-child {
+
+        &::after {
+          content: '';
+        }
+      }
+    }
+  }
+
+  .facts {
+    margin-bottom: 1em;
+
+    .title {
+      font-weight: bold;
+    }
+
+    ul {
+      padding-left: 20px;
+      font-size: 16px;
+    }
+
+    li {
+      margin: .4em 0;
+      padding-left: 0;
+    }
+  }
+}
+
 
 // Mobile Media query.
 @include mobile {
