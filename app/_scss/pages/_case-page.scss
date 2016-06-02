@@ -30,7 +30,7 @@
     @extend .h1-styling;
     margin-bottom: 6px;
     font-family: "Raleway", sans-serif;
-    font-size: 41.887px;
+    font-size: 47.123px;
     text-transform: none;
   }
   h2 {
@@ -38,7 +38,7 @@
     margin-top: 0px;
     margin-bottom: 6px;
     font-family: "Raleway", sans-serif;
-    font-size: 25.888px;
+    font-size: 29.124px;
     a {
       text-decoration: none;
     }
@@ -46,19 +46,12 @@
 }
 
 .case {
-  h1,
-  h2 {
-    @extend .headers-styling;
-  }
-
-  h1 {
-    @extend .h1-styling;
-    border-bottom: 1px solid;
-  }
 
   h2 {
     font-size: 25.888px;
     text-transform: uppercase;
+    @extend .headers-styling;
+    font-family: "Raleway", sans-serif;
 
     a{
 	    text-decoration: none;
@@ -74,7 +67,6 @@
   }
   
   #case-label {
-	  padding-top: 20px;
  
 	  .label {
 		  font-size: 20px;
@@ -82,12 +74,10 @@
 	}
 	
 	#abstract {
-  	border: 1px solid rgba(0, 0, 0, 0.08);
-  	background:  rgba(0, 0, 0, 0.08);
-  	padding: 1em 0.8em;
+   	padding: 1em 0.15em;
 		line-height: 1.618;
-		font-size: 16px;
-		font-style: italic;
+		font-size: 18px;
+		font-weight: 600;
 	}
   .tags {
 
@@ -126,55 +116,41 @@
 
   .case-content {
     margin-bottom: 20px;
-    @include desktop {
-      font-size: 16px;
-      line-height: 1.618;
-  }
+    font-size: 21px;
+    line-height: 1.618;
 
-  p {
-      margin: 0 0 1em;
+    p {
+        margin: 0 0 1em;
     }
-  }
-
-  ul, ol {
-    margin-top: 0;
-    margin-bottom: 1em;
-    padding-left: 24px;
-
-    li {
-      padding-left: 16px;
+  
+    ul, ol {
+      margin-top: 0;
+      margin-bottom: 1em;
+      padding-left: 24px;
+  
+      li {
+        padding-left: 16px;
+      }
     }
-  }
-
-  .highlight {
-    margin: 35px 0;
-  }
-
-  ol {
-    font-size: 18px;
-    line-height: 36px;
-    margin-top: 35px;
-    margin-bottom: 30px;
-
-    li {
-      margin-bottom: 13px;
+  
+    .highlight {
+      margin: 35px 0;
     }
-  }
-
-  em {
-    font-weight: bold;
-  }
-
-
-  a {
-    color: $gizra-blue;
-    text-decoration: underline;
-  }
-
-  blockquote {
-    font-size: 16px;
-    border-left: 5px gray solid;
-    margin-left: 10px;
+  
+    em {
+      font-weight: bold;
+    }
+  
+    a {
+      color: $gizra-blue;
+      text-decoration: underline;
+    }
+  
+    blockquote {
+      font-size: 18px;
+      border-left: 5px gray solid;
+      margin-left: 10px;
+    }
   }
 }
 

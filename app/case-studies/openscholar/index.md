@@ -11,6 +11,7 @@ layout: case
 title: One Database to Rule Them All
 subtitle: Massive Multisite Execution with a Single Installation
 abstract: Gizra helped Harvard University get thousands of websites under one set of controls, making life easier for the techs in IT, the brand managers in Communications, and the users managing the sites. Oh, and it saved the university millions of dollars.
+header_url: /assets/images/cases/openscholar/top.jpg
 facts:
   - OpenScholar runs over 7,000 websites at Harvard on a single database
   - It has an estimated value of $7M and was built at a fraction of the cost
@@ -32,11 +33,8 @@ Harvard is not your typical university. But still, they have the same challenges
 Yet, as web projects become more complicated, and as even smaller units move away from home-grown solutions to more complex content management systems, several factors do not scale:
 
 -  For one, **cost alone is enough of a motivation** to explore a more unified web presence. Bearing small, but significant costs for similar development tasks, sometimes hundreds of times over, can cost a large university in the millions of dollars.
-
 -  More complex CMS sites come with **more inherent security risks**, and while the number of sites (and codebases) grow, the technical knowledge to apply security patches and other updates does not necessarily grow with it.
-
 -  As the **competition for high-caliber students grows more fierce**, web presence plays a crucial role in attracting applicants. Yet as a highly-distributed web presence grows, the ability of communications and marketing team to leverage content strategy and analytics actually shrinks. Hundreds, or even thousands, of individually maintained websites create an unweilding task for brand managers and analytic tracking relies on human gathering of data.
-
 -  Providing a **solid and universal user experience for content editors** across the entire campus allows for a better adoption rate and a more streamlined education and training.
 
 

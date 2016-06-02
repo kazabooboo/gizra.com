@@ -1,6 +1,7 @@
 ---
 keywords: Drupal
 date: 15 May 2016
+client: International Livestock Research Institute
 tags:
   - POC
   - Structured Data
@@ -10,10 +11,15 @@ title: Gambling on Cow Insurance
 subtitle: How We Helped Make Life Less Risky for Farmers in Africa
 abstract: The need was critical, the data existed, and the idea was solid. One organization needed a way to demonstrate that they could compile existing data, process it with known algorithms, and produce logical, readable maps so that farmers in Africa could be insured on the open market. Gizra found a way to help.
 header_url: /assets/images/cases/ibli/top.jpg
+facts:
+  - A small proof of concept led to a wider product distribution that will impact millions
+  - Massive amounts of external data were processed, structured, and fed into an existing pricing system
+  - The solution bridged the gap between buyers and sellers
 techs:
   - Drupal 7
   - AngularJS
   - Restful API
+  - IDL
 ---
 
 {% include setup %}
