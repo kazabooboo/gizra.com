@@ -14,8 +14,8 @@ published: true
 
 {% include setup %}
 The Drupal-8-manina is at it's best - modules are being ported, blog posts are
-being written and new sites are being written so we decided to join to the
-party.
+being written and new sites are being written so we in Gizra decided to join to
+the party.
 
 We started with a simple site that will replace a wix static site. But we needed
 to migrate node attachments and we just didn't know how. Reverse engineer have
@@ -31,37 +31,40 @@ migration of files/ images out there? (including copy from source into public://
 
 Few minutes after the tweet was published I received an email from Amitai
 with some help but what I was looking for wasn't there - migrate node
-attachments from <b>any</b> directory. All the blog posts I found talked on
-how to migrate an old Drupal 7 site or in this case how to
+attachments from <b>any</b> directory. Any blog post I found talked on how to
+migrate an old Drupal 7 site or in this case how to
 [migrate from an external source](https://evolvingweb.ca/blog/bringing-files-along-for-ride-to-d8).
 
 Still, without any results in the near pixels I asked one of my
-[colleague‏‏‏‏](https://twitter.com/jsacksick); A frustrated journey was done with
+[colleague‏‏‏‏](https://twitter.com/jsacksick); A frustrated journey had ended with
 in couple of files and 3-6 lines of code.
 
 ## Files, Files every where
-For this blog post I created a dummy module with information about super heroes.
-The module [contains some images](https://github.com/RoySegall/comics_migration/tree/master/migration_assets/images)
-of the super heroes we going to migrate and some small [information](https://github.com/RoySegall/comics_migration/tree/master/migration_assets).
+For this blog post I created a dummy [installation profile](https://github.com/RoySegall/comics_migration)
+with a module which contains a module with some information about super heroes.
+The module [contains some images](https://github.com/RoySegall/comics_migration/tree/master/web/modules/custom/comics_migration/migration_assets/images)
+of the super heroes we going to migrate and some small [information](https://github.com/RoySegall/comics_migration/blob/master/web/modules/custom/comics_migration/migration_assets/heroes.csv).
 If you'll look closely you can see that I attached an SQL dump with raw tables.
-This raw table will be the source which will be migrated to node.
+This raw table will be the source that eventually will migrated into nodes.
 [it's a good practice](http://www.gizra.com/content/migration-best-practices/)
 that you should have look.
 
 ## Basic structure of migration
 
 The description on the mapping between the source table to the destined nodes
-move into a [configuration yml file](https://github.com/RoySegall/comics_migration/blob/master/config/install/migrate.migration.superheroes.yml).
+move into a [configuration yml file](https://github.com/RoySegall/comics_migration/blob/master/web/modules/custom/comics_migration/config/install/migrate.migration.superheroes.yml).
 But i'd like to elaborate on the plugins:
-[default_value](https://github.com/RoySegall/comics_migration/blob/master/config/install/migrate.migration.superheroes.yml#L12) - The idea is to populate the property/field of the
-entity with a raw value like the name of content type or a user ID in case we
-migrating all the nodes for the admin.
-Process plugins - In Drupal 7, when we wanted to prepare the value before
-populating the entity fields as we want, we used to change it in the
+
+* [default_value](https://github.com/RoySegall/comics_migration/blob/master/web/modules/custom/comics_migration/config/install/migrate.migration.superheroes.yml#L12) -
+Will populate the property/field of the entity with a raw value like the name of
+a content type or a user ID in case we migrating all the nodes for the admin.
+
+* Process plugins - In Drupal 7, when we wanted to prepare the value before
+populating the entity fields as we want, we changed it in the
 [prepare method](https://github.com/openscholar/openscholar/blob/SCHOLAR-3.x/openscholar/modules/os/modules/os_migrate_demo/handlers/node/project.inc#L33-L38).
 In Drupal 8 we have [process plugins](https://github.com/RoySegall/comics_migration/blob/master/config/install/migrate.migration.superheroes.yml#L20).
 
-In the [transform](https://github.com/RoySegall/comics_migration/blob/master/src/Plugin/migrate/process/FileImport.php#L21)
+In the [transform](https://github.com/RoySegall/comics_migration/blob/master/web/modules/custom/comics_migration/src/Plugin/migrate/process/FileImport.php#L21)
 method of the process plugin I can return any value which will eventually
 populate the field/property.
 
@@ -80,9 +83,9 @@ populate the field/property.
 ```
 
 Seem so simple and elegant and this is what it is. `file_unmanaged_copy` copy
-files from any path into a stream wrapper directory(`public://` or example).
+files from any path into a stream wrapper directory(`public://` for example).
 All I need to do is just create a file object in the DB and that's it.
 
 On the other hand we have a function `system_retrieve_file` which will copy file
 from any given URL and will create an object for me in the file storage. That
-wasn't the case for our need.
+wasn't the case for what we need.
