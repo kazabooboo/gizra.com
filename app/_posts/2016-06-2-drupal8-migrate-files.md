@@ -33,19 +33,19 @@ Few minutes after the tweet was published we received a great hint from the fine
 [Evoloving Web](https://evolvingweb.ca/). They were already migrating files into Drupal 8
 from older Drupal 7, and were kind enough to [blog post](https://evolvingweb.ca/blog/bringing-files-along-for-ride-to-d8) about it.
 
-Still, without any results in the near pixels I asked one of my
-[colleague‏‏‏‏](https://twitter.com/jsacksick); A frustrated journey had ended with
-in couple of files and 3-6 lines of code.
+However, we were still missing another piece of the puzzle, as we wanted to migrate
+files from an outside directory, directly into Drupal. I gave my good friend [@jsacksick](https://twitter.com/jsacksick) a poke (it's easy, as he sits right infront of me), and he gave me the answer in a silver plate. Remember kids, if you feel frustrated, always
+reach out to smart community members (and then give them credit in your post).
 
-## Files, Files every where
-For this blog post I created a dummy [installation profile](https://github.com/RoySegall/comics_migration)
-with a module which contains a module with some information about super heroes.
-The module [contains some images](https://github.com/RoySegall/comics_migration/tree/master/web/modules/custom/comics_migration/migration_assets/images)
-of the super heroes we going to migrate and some small [information](https://github.com/RoySegall/comics_migration/blob/master/web/modules/custom/comics_migration/migration_assets/heroes.csv).
-If you'll look closely you can see that I attached an SQL dump with raw tables.
-This raw table will be the source that eventually will migrated into nodes.
-[it's a good practice](http://www.gizra.com/content/migration-best-practices/)
-that you should have look.
+## An example for super heroes
+
+For this blog post I created a dummy Drupal 8 [installation profile](https://github.com/RoySegall/comics_migration) with way too much information about super heroes.
+The migration module can migrate [some images](https://github.com/RoySegall/comics_migration/tree/master/web/modules/custom/comics_migration/migration_assets/images) along with some [CSV data](https://github.com/RoySegall/comics_migration/blob/master/web/modules/custom/comics_migration/migration_assets/heroes.csv) about them.
+
+If you'll look closely you can see that I've attached an SQL dump with raw tables.
+This raw table will be the source that eventually will migrated into nodes, and you can
+read [here](http://www.gizra.com/content/migration-best-practices/) how it was created
+with [csv2sql](https://www.drupal.org/project/csv2sql).
 
 ## Basic structure of migration
 
