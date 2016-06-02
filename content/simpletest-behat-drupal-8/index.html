@@ -25,7 +25,7 @@
       <meta name="theme-color" content="#ffffff">
       <!-- End favicon for all platforms -->
 
-      <link rel="stylesheet" href="/css/main.667d.css"/>
+      <link rel="stylesheet" href="/css/main.bd23.css"/>
       <link href='http://fonts.googleapis.com/css?family=Abril+Fatface&text=gizra' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Hind:400,600,300,500' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600,800' rel='stylesheet' type='text/css'>
@@ -187,16 +187,37 @@
       </div>
     </div>
   </header>
-
-  <div class="content-container">
-    <article class="post">
-      <h1><a href="/content/simpletest-behat-drupal-8">simpleTest with Behat for Drupal 8 </a></h1>
-      <div class="date">28 Apr 2015, By Roy Segall</div>
-      <div class="tags">
-        <img src="/images/post/tag-icon-small.15a8.png" class="tags-icon"/>
-        <ul class="inline">
-          
-          
+  <article class="post">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-10 col-sm-offset-1 post-title">
+          <h1><a href="/content/simpletest-behat-drupal-8">simpleTest with Behat for Drupal 8 </a></h1>
+          <div class="post-author">By Roy Segall</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-2 col-sm-offset-1 post-data">
+    			<div id="post-label">
+    		 		<a href="/blog"><span class="label label-default">Gizra Blog</span></a>
+    			</div>
+          <div class="date">28 Apr 2015</div>
+          <section class="author-details">
+            <div class="image-wrapper">
+              <img src="/images/team/avatars/RoySegall.c400.jpg" class="img-circle img-responsive">
+            </div>
+            <div class="text-wrapper">
+              <span class="name">Roy Segall</span>
+              
+              <div class="title">Team Lead</div>
+              <div class="bio">Not afraid of patching Organic groups, Entity reference or the Message stack. Knows how to make tasty Pizza.</div>
+            </div>
+          </section>
+          <div class="tags">
+            <div class="title">Tags:</div>
+            
+              <ul class="inline">
+                
+                
 
   
     
@@ -211,11 +232,14 @@
   
 
 
-        </ul>
+              </ul>
+            
+          </div>
         </div>
-      <div class="post-content">
+        <div class="col-sm-8">
+          <div class="post-content">
 
-        <p>The first time I heard about <a href="http://docs.behat.org/en/v2.5/">Behat</a> was at DrupalCon Munich 2012. Since then use of Behat has grown exponentially and the tools it can be integrate with grew as well. With Behat we can test the markup of a page - pretty neat, right?  </p>
+              <p>The first time I heard about <a href="http://docs.behat.org/en/v2.5/">Behat</a> was at DrupalCon Munich 2012. Since then use of Behat has grown exponentially and the tools it can be integrate with grew as well. With Behat we can test the markup of a page - pretty neat, right?  </p>
 
 <p>Well, it&rsquo;s time to take Behat integration with Drupal a little further. I&rsquo;ve decided to try and integrate it with Drupal&rsquo;s simpleTest, as this would open the door for writing simpleTests that are more readable and more &ldquo;behavior driven&rdquo; by nature.</p>
 <div class="highlight"><pre><code class="Gherkin language-Gherkin" data-lang="Gherkin"><span class="k">Scenario:</span><span class="nf"> Testing the login form.</span>
@@ -311,47 +335,35 @@ The second argument is the module. This tells us which module contains the featu
 <p>My plan for the future is to to completely eliminate the need for <code>executeScenario</code>, thus allow having a feature file without a Drupal class, while still being able to use all the step definitions provided by other modules and themes.</p>
 
 
+          </div>
+        </div>
       </div>
-    </article>
-    <section class="post-nav">
+    </div>
+  </article>
+    
+  <section class="post-nav">
+    <div class="container">
       <div class="row">
-        <div class="col-xs-6 previous">
+        <div class="col-xs-4 col-xs-offset-3 previous">
           
-          <div class="text-capitalize">
-            <a href="/content/shoov-ci-tests-live-site">
-              Previous
-              <span class="visible-xs"> post</span>
-            </a>
-          </div>
-          <a href="/content/shoov-ci-tests-live-site" class="prev-text">
-            <span class="hidden-xs">Shoov - CI tests on the live site</span>
+          <a href="/content/shoov-ci-tests-live-site">
+            <div class="previous-label">
+              <i class="fa fa-chevron-circle-left"></i>
+              Previous<span class="visible-xs"> post</span><span class="hidden-xs">: Shoov - CI tests on the live site</span>
+            </div>
           </a>
           
         </div>
-        <div class="col-xs-6 next">
+        <div class="col-xs-4 next">
           
-          <div class="text-capitalize">
-            <a href="/content/cross-browser-visual-regression-with-shoov">
-              Next
-              <span class="visible-xs"> post</span>
-            </a>
-          </div>
-          <a href="/content/cross-browser-visual-regression-with-shoov" class="next-text">
-            <span class="hidden-xs">Cross Browser Visual Regression Tests With Shoov</span>
+          <a href="/content/cross-browser-visual-regression-with-shoov">
+            <div class="next-label">
+              Next<span class="visible-xs"> post</span><span class="hidden-xs">: Cross Browser Visual Regression Tests With Shoov</span>
+              <i class="fa fa-chevron-circle-right"></i>
+            </div>
           </a>
           
         </div>
-      </div>
-    </section>
-    <section class="author-details">
-      <div class="image-wrapper">
-        <img src="/images/team/avatars/RoySegall.c400.jpg" class="img-circle img-responsive">
-      </div>
-      <div class="text-wrapper">
-        <span class="name">Roy Segall</span>
-        
-        <div class="title">Team Lead</div>
-        <div class="bio">Not afraid of patching Organic groups, Entity reference or the Message stack. Knows how to make tasty Pizza.</div>
       </div>
     </section>
     <section>

@@ -25,7 +25,7 @@
       <meta name="theme-color" content="#ffffff">
       <!-- End favicon for all platforms -->
 
-      <link rel="stylesheet" href="/css/main.667d.css"/>
+      <link rel="stylesheet" href="/css/main.bd23.css"/>
       <link href='http://fonts.googleapis.com/css?family=Abril+Fatface&text=gizra' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Hind:400,600,300,500' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600,800' rel='stylesheet' type='text/css'>
@@ -187,16 +187,39 @@
       </div>
     </div>
   </header>
-
-  <div class="content-container">
-    <article class="post">
-      <h1><a href="/content/ctools-context-tutorial/">CTools context tutorial </a></h1>
-      <div class="date">11 May 2011, By Amitai Burstein</div>
-      <div class="tags">
-        <img src="/images/post/tag-icon-small.15a8.png" class="tags-icon"/>
-        <ul class="inline">
-          
-          
+  <article class="post">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-10 col-sm-offset-1 post-title">
+          <h1><a href="/content/ctools-context-tutorial/">CTools context tutorial </a></h1>
+          <div class="post-author">By Amitai Burstein</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-2 col-sm-offset-1 post-data">
+    			<div id="post-label">
+    		 		<a href="/blog"><span class="label label-default">Gizra Blog</span></a>
+    			</div>
+          <div class="date">11 May 2011</div>
+          <section class="author-details">
+            <div class="image-wrapper">
+              <img src="/images/team/avatars/amitaibu.42a1.jpg" class="img-circle img-responsive">
+            </div>
+            <div class="text-wrapper">
+              <span class="name">Amitai Burstein</span>
+              
+                <span class="twitter">(@amitaibu)</span>
+              
+              <div class="title">CTO, Co-Owner</div>
+              <div class="bio">Maintainer of Organic groups, the Message stack, and co-maintainer of Drupal 8's Entity reference. <a href="/content/the-about-story/">The about story</a>.</div>
+            </div>
+          </section>
+          <div class="tags">
+            <div class="title">Tags:</div>
+            
+              <ul class="inline">
+                
+                
 
   
     
@@ -209,11 +232,14 @@
   
 
 
-        </ul>
+              </ul>
+            
+          </div>
         </div>
-      <div class="post-content">
+        <div class="col-sm-8">
+          <div class="post-content">
 
-        <p>Why should you use panels node-preview-example module? You shouldn&rsquo;t, it&rsquo;s just an example ;)</p>
+              <p>Why should you use panels node-preview-example module? You shouldn&rsquo;t, it&rsquo;s just an example ;)</p>
 
 <p>This post covers how to build a CTools content-type plugin that has context. CTools &ldquo;Context&rdquo; should not be mistaken with the context module. Context is CTools way of saying, my plugin (read, block) shouldn&rsquo;t be dumb. If it requires a node or a user to extract data from, then it should let others know about it. &ldquo;Others&rdquo; in our case is Page manager module. It will load the context for the plugins and hand it over. In fact, if the context is not present it will not even bother loading the plugin.</p>
 
@@ -282,49 +308,35 @@ git clone http://git.drupal.org/sandbox/noam.hrz/1148086.git node_preview_exampl
 <p>If you listen to talks about Butler module, and having a plugin and context system in D8 - it will probably very similar or at least learn a lot from CTools plugins and context system, so you know you are on the right path.</p>
 
 
+          </div>
+        </div>
       </div>
-    </article>
-    <section class="post-nav">
+    </div>
+  </article>
+    
+  <section class="post-nav">
+    <div class="container">
       <div class="row">
-        <div class="col-xs-6 previous">
+        <div class="col-xs-4 col-xs-offset-3 previous">
           
-          <div class="text-capitalize">
-            <a href="/content/data-migration-part-2/">
-              Previous
-              <span class="visible-xs"> post</span>
-            </a>
-          </div>
-          <a href="/content/data-migration-part-2/" class="prev-text">
-            <span class="hidden-xs">Data Migration - part 2</span>
+          <a href="/content/data-migration-part-2/">
+            <div class="previous-label">
+              <i class="fa fa-chevron-circle-left"></i>
+              Previous<span class="visible-xs"> post</span><span class="hidden-xs">: Data Migration - part 2</span>
+            </div>
           </a>
           
         </div>
-        <div class="col-xs-6 next">
+        <div class="col-xs-4 next">
           
-          <div class="text-capitalize">
-            <a href="/content/og-7x-11-rc2-out/">
-              Next
-              <span class="visible-xs"> post</span>
-            </a>
-          </div>
-          <a href="/content/og-7x-11-rc2-out/" class="next-text">
-            <span class="hidden-xs">OG 7.x-1.1-RC2 is out! </span>
+          <a href="/content/og-7x-11-rc2-out/">
+            <div class="next-label">
+              Next<span class="visible-xs"> post</span><span class="hidden-xs">: OG 7.x-1.1-RC2 is out! </span>
+              <i class="fa fa-chevron-circle-right"></i>
+            </div>
           </a>
           
         </div>
-      </div>
-    </section>
-    <section class="author-details">
-      <div class="image-wrapper">
-        <img src="/images/team/avatars/amitaibu.42a1.jpg" class="img-circle img-responsive">
-      </div>
-      <div class="text-wrapper">
-        <span class="name">Amitai Burstein</span>
-        
-          <span class="twitter">(@amitaibu)</span>
-        
-        <div class="title">CTO, Co-Owner</div>
-        <div class="bio">Maintainer of Organic groups, the Message stack, and co-maintainer of Drupal 8's Entity reference. <a href="/content/the-about-story/">The about story</a>.</div>
       </div>
     </section>
     <section>

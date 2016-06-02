@@ -25,7 +25,7 @@
       <meta name="theme-color" content="#ffffff">
       <!-- End favicon for all platforms -->
 
-      <link rel="stylesheet" href="/css/main.667d.css"/>
+      <link rel="stylesheet" href="/css/main.bd23.css"/>
       <link href='http://fonts.googleapis.com/css?family=Abril+Fatface&text=gizra' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Hind:400,600,300,500' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600,800' rel='stylesheet' type='text/css'>
@@ -187,16 +187,37 @@
       </div>
     </div>
   </header>
-
-  <div class="content-container">
-    <article class="post">
-      <h1><a href="/content/xss-attack">Cross-Site Scripting attack detection </a></h1>
-      <div class="date">29 Feb 2016, By Helena Eksler</div>
-      <div class="tags">
-        <img src="/images/post/tag-icon-small.15a8.png" class="tags-icon"/>
-        <ul class="inline">
-          
-          
+  <article class="post">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-10 col-sm-offset-1 post-title">
+          <h1><a href="/content/xss-attack">Cross-Site Scripting attack detection </a></h1>
+          <div class="post-author">By Helena Eksler</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-2 col-sm-offset-1 post-data">
+    			<div id="post-label">
+    		 		<a href="/blog"><span class="label label-default">Gizra Blog</span></a>
+    			</div>
+          <div class="date">29 Feb 2016</div>
+          <section class="author-details">
+            <div class="image-wrapper">
+              <img src="/images/team/avatars/HelenaEksler.e3c9.jpg" class="img-circle img-responsive">
+            </div>
+            <div class="text-wrapper">
+              <span class="name">Helena Eksler</span>
+              
+              <div class="title">Team Lead</div>
+              <div class="bio">Cooking well, doesn't matter - dinner or code.</div>
+            </div>
+          </section>
+          <div class="tags">
+            <div class="title">Tags:</div>
+            
+              <ul class="inline">
+                
+                
 
   
     
@@ -209,11 +230,14 @@
   
 
 
-        </ul>
+              </ul>
+            
+          </div>
         </div>
-      <div class="post-content">
+        <div class="col-sm-8">
+          <div class="post-content">
 
-        <p>When we develop a website we should take care of many things like design, responsiveness, speed, QA - and of course, security.</p>
+              <p>When we develop a website we should take care of many things like design, responsiveness, speed, QA - and of course, security.</p>
 
 <p>One of the major security concerns in websites and web applications is Cross Site Scripting (XSS). You definitely don&rsquo;t want somebody to run their own malicious code in your website.
 And to avoid it - you would like to have some kind of &ldquo;vaccine&rdquo; from such &ldquo;disease&rdquo;.</p>
@@ -285,47 +309,35 @@ In fact, we&rsquo;ve found that one of the most widely used contrib modules does
 <p>Give it a try, and notice how a JS alert page pops up in unexpected places from time to time. And then be grateful <em>you</em> found it, before it reached your production.</p>
 
 
+          </div>
+        </div>
       </div>
-    </article>
-    <section class="post-nav">
+    </div>
+  </article>
+    
+  <section class="post-nav">
+    <div class="container">
       <div class="row">
-        <div class="col-xs-6 previous">
+        <div class="col-xs-4 col-xs-offset-3 previous">
           
-          <div class="text-capitalize">
-            <a href="/content/entity-relationships">
-              Previous
-              <span class="visible-xs"> post</span>
-            </a>
-          </div>
-          <a href="/content/entity-relationships" class="prev-text">
-            <span class="hidden-xs">Entity Relationships Graph</span>
+          <a href="/content/entity-relationships">
+            <div class="previous-label">
+              <i class="fa fa-chevron-circle-left"></i>
+              Previous<span class="visible-xs"> post</span><span class="hidden-xs">: Entity Relationships Graph</span>
+            </div>
           </a>
           
         </div>
-        <div class="col-xs-6 next">
+        <div class="col-xs-4 next">
           
-          <div class="text-capitalize">
-            <a href="/content/gizra-alpha/">
-              Next
-              <span class="visible-xs"> post</span>
-            </a>
-          </div>
-          <a href="/content/gizra-alpha/" class="next-text">
-            <span class="hidden-xs">Gizra Alpha</span>
+          <a href="/content/gizra-alpha/">
+            <div class="next-label">
+              Next<span class="visible-xs"> post</span><span class="hidden-xs">: Gizra Alpha</span>
+              <i class="fa fa-chevron-circle-right"></i>
+            </div>
           </a>
           
         </div>
-      </div>
-    </section>
-    <section class="author-details">
-      <div class="image-wrapper">
-        <img src="/images/team/avatars/HelenaEksler.e3c9.jpg" class="img-circle img-responsive">
-      </div>
-      <div class="text-wrapper">
-        <span class="name">Helena Eksler</span>
-        
-        <div class="title">Team Lead</div>
-        <div class="bio">Cooking well, doesn't matter - dinner or code.</div>
       </div>
     </section>
     <section>
