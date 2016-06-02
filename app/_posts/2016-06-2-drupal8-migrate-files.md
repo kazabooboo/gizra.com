@@ -34,8 +34,7 @@ Few minutes after the tweet was published we received a great hint from the fine
 from older Drupal 7, and were kind enough to [blog post](https://evolvingweb.ca/blog/bringing-files-along-for-ride-to-d8) about it.
 
 However, we were still missing another piece of the puzzle, as we wanted to migrate
-files from an outside directory, directly into Drupal. I gave my good friend [@jsacksick](https://twitter.com/jsacksick) a poke (it's easy, as he sits right infront of me), and he gave me the answer in a silver plate. Remember kids, if you feel frustrated, always
-reach out to smart community members (and then give them credit in your post).
+files from an outside directory, directly into Drupal. I gave my good friend [@jsacksick](https://twitter.com/jsacksick) a poke (it's easy, as he sits right in front of me), and he gave me the answer in a silver plate.
 
 ## An example for super heroes
 
@@ -49,42 +48,46 @@ with [csv2sql](https://www.drupal.org/project/csv2sql).
 
 ## Basic structure of migration
 
-The description on the mapping between the source table to the destined nodes
-move into a [configuration yml file](https://github.com/RoySegall/comics_migration/blob/master/web/modules/custom/comics_migration/config/install/migrate.migration.superheroes.yml).
-But i'd like to elaborate on the plugins:
+The description of the mapping between the source table and the destination node type
+is in a [yaml file](https://github.com/RoySegall/comics_migration/blob/master/web/modules/custom/comics_migration/config/install/migrate.migration.superheroes.yml).
 
-* [default_value](https://github.com/RoySegall/comics_migration/blob/master/web/modules/custom/comics_migration/config/install/migrate.migration.superheroes.yml#L12) -
-Will populate the property/field of the entity with a raw value like the name of
-a content type or a user ID in case we migrating all the nodes in the name of
-user 1.
+Let's go over the interesting parts of the `process`:
 
-* Process plugins - In Drupal 7, when we wanted to prepare the value before
-populating the entity fields as we want, we changed it in the
-[prepare method](https://github.com/openscholar/openscholar/blob/SCHOLAR-3.x/openscholar/modules/os/modules/os_migrate_demo/handlers/node/project.inc#L33-L38).
-In Drupal 8 we have [process plugins](https://github.com/RoySegall/comics_migration/blob/master/config/install/migrate.migration.superheroes.yml#L20).
-
-In the [transform](https://github.com/RoySegall/comics_migration/blob/master/web/modules/custom/comics_migration/src/Plugin/migrate/process/FileImport.php#L21)
-method of the process plugin I can return any value which will eventually
-populate the field/property.
-
-## TL;DR - copy files from directory into the file system
-
-```php
-<?php
-
-  $source = drupal_get_path('module', 'comics_migration') . '/migration_assets/images/' . $value;
-  if (!$uri = file_unmanaged_copy($source)) {
-    return [];
-  }
-  $file = \Drupal::entityTypeManager()->getStorage('file')->create(['uri' => $uri]);
-  $file->save();
-  return $file->id();
+```yaml
+process:
+  type:
+    plugin: default_value
+    default_value: super_heroes
+  uid:
+    plugin: default_value
+    default_value: 1
+  title: _title
+  field_image:
+    source: _image
+    plugin: file_import
+  field_alter_ego: _alter_ego
+  'body/value': _description
 ```
 
-Seem so simple and elegant and this is what it is. `file_unmanaged_copy` copy
-files from any path into a stream wrapper directory(`public://` for example).
-All I need to do is just create a file object in the DB and that's it.
+In Drupal 7, when we wanted to prepare the value before
+populating the entity fields as we want, we changed it in a
+[prepare method](https://github.com/openscholar/openscholar/blob/SCHOLAR-3.x/openscholar/modules/os/modules/os_migrate_demo/handlers/node/project.inc#L33-L38).
+In Drupal 8 we have [process plugins](https://github.com/RoySegall/comics_migration/blob/master/web/modules/custom/comics_migration/src/Plugin/migrate/process/FileImport.php).
 
-On the other hand we have a function `system_retrieve_file` which will copy file
-from any given URL and will create an object for me in the file storage. That
-wasn't the case for what we need.
+
+For example, the `default_value` plugin will populate the (configurable) field of the entity with a raw value like the name of
+a content type or a user ID in case we are migrating all the nodes with the same author (e.g. user ID 1).
+
+But we can of course have our own logic. In the [transform](https://github.com/RoySegall/comics_migration/blob/master/web/modules/custom/comics_migration/src/Plugin/migrate/process/FileImport.php#L21)
+method of the process plugin we can massage our data, return any value which will eventually
+populate the field.
+
+In our case, the `transform` method is responsibly for registrating the new file into Drupal
+using `file_unmanaged_copy` and friends.
+
+## Conclusion
+
+Some of the know hows and best practices are still missing from Drupal 8. But they
+can and should be re-learned and re-published. So remember kids, if you ever feel
+frustrated about not finding a solution, always
+reach out to smart community members (and then write a post about it, so everybody ).
