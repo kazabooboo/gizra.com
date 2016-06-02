@@ -7,7 +7,7 @@ tags:
 permalink: "/content/drupal-8-attachment-migration"
 author: RoySegall
 layout: post
-image: "/assets/images/posts/apps-entity-restrictions/burner.jpg"
+image: "/assets/images/posts/drupal-8-migrate/tony.png"
 published: true
 ---
 
