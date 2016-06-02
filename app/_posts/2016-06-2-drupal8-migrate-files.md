@@ -7,7 +7,7 @@ tags:
 permalink: "/content/drupal-8-attachment-migration"
 author: RoySegall
 layout: post
-image: "/assets/images/posts/drupal-8-migrate/tony.png"
+image: "/assets/images/posts/drupal-8-migrate/tony.jpg"
 published: true
 ---
 
@@ -38,6 +38,9 @@ Still, without any results in the near pixels I asked one of my
 in couple of files and 3-6 lines of code.
 
 ## Files, Files every where
+
+{% include thumbnail.html  image_path="assets/images/posts/drupal-8-migrate/files.jpg" caption="It's very easy to migrate files once you know how" %}
+
 For this blog post I created a dummy [installation profile](https://github.com/RoySegall/comics_migration)
 with a module which contains a module with some information about super heroes.
 The module [contains some images](https://github.com/RoySegall/comics_migration/tree/master/web/modules/custom/comics_migration/migration_assets/images)
