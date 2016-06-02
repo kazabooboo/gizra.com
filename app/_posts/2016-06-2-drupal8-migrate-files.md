@@ -14,8 +14,8 @@ published: true
 
 {% include setup %}
 The Drupal-8-manina is at it's best - modules are being ported, blog posts are
-being written and new sites are being written so we in Gizra decided to join to
-the party.
+being written and new sites are being coded so we in Gizra decided to join the
+party.
 
 We started with a simple site that will replace a wix static site. But we needed
 to migrate node attachments and we just didn't know how. Reverse engineer have
@@ -57,7 +57,8 @@ But i'd like to elaborate on the plugins:
 
 * [default_value](https://github.com/RoySegall/comics_migration/blob/master/web/modules/custom/comics_migration/config/install/migrate.migration.superheroes.yml#L12) -
 Will populate the property/field of the entity with a raw value like the name of
-a content type or a user ID in case we migrating all the nodes for the admin.
+a content type or a user ID in case we migrating all the nodes in the name of
+user 1.
 
 * Process plugins - In Drupal 7, when we wanted to prepare the value before
 populating the entity fields as we want, we changed it in the
