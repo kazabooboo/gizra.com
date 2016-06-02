@@ -30,6 +30,7 @@
 }
 
 #services-page, #strengths-page, #cases-page {
+  margin: 40px 0;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -97,7 +98,6 @@
     }
 
     .title {
-      margin-bottom: 0;
       line-height: 1.2em;
       
       a {
