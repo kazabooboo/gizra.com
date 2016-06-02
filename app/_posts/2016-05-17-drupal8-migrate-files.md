@@ -23,23 +23,29 @@ it's limitation and I came to a dead end.
 
 <!-- more -->
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Any example of <a href="https://twitter.com/hashtag/Drupal?src=hash">#Drupal</a> 8 migration of files/ images out there? (including copy from source into public:// )</p>&mdash; Amitai Burstein (@amitaibu) <a href="https://twitter.com/amitaibu/status/718441947325677569">April 8, 2016</a></blockquote>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Any
+example of <a href="https://twitter.com/hashtag/Drupal?src=hash">#Drupal</a> 8
+migration of files/ images out there? (including copy from source into public:// )
+</p>&mdash; Amitai Burstein (@amitaibu) <a href="https://twitter.com/amitaibu/status/718441947325677569">April 8, 2016</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 Few minutes after the tweet was published I received an email from Amitai
 with some help but what I was looking for wasn't there - migrate node
 attachments from <b>any</b> directory. All the blog posts I found talked on
-how to migrate an old Drupal 7 site or in this case how to [migrate from an external source](https://evolvingweb.ca/blog/bringing-files-along-for-ride-to-d8).
+how to migrate an old Drupal 7 site or in this case how to
+[migrate from an external source](https://evolvingweb.ca/blog/bringing-files-along-for-ride-to-d8).
 
-Still, without any results in the near pixels I asked one of my [colleague‏‏‏‏](https://twitter.com/jsacksick); A frustrated journey was done
-with in couple of files and 3-6 lines of code.
+Still, without any results in the near pixels I asked one of my
+[colleague‏‏‏‏](https://twitter.com/jsacksick); A frustrated journey was done with
+in couple of files and 3-6 lines of code.
 
 ## Files, Files every where
 For this blog post I created a dummy module with information about super heroes.
 The module [contains some images](https://github.com/RoySegall/comics_migration/tree/master/migration_assets/images)
 of the super heroes we going to migrate and some small [information](https://github.com/RoySegall/comics_migration/tree/master/migration_assets).
 If you'll look closely you can see that I attached an SQL dump with raw tables.
-This raw table will be the source which will be migrated to node. [it's a good practice](http://www.gizra.com/content/migration-best-practices/)
+This raw table will be the source which will be migrated to node.
+[it's a good practice](http://www.gizra.com/content/migration-best-practices/)
 that you should have look.
 
 ## Basic structure of migration
@@ -51,11 +57,13 @@ But i'd like to elaborate on the plugins:
 entity with a raw value like the name of content type or a user ID in case we
 migrating all the nodes for the admin.
 Process plugins - In Drupal 7, when we wanted to prepare the value before
-populating the entity fields as we want, we used to change it in the [prepare method](https://github.com/openscholar/openscholar/blob/SCHOLAR-3.x/openscholar/modules/os/modules/os_migrate_demo/handlers/node/project.inc#L33-L38).
+populating the entity fields as we want, we used to change it in the
+[prepare method](https://github.com/openscholar/openscholar/blob/SCHOLAR-3.x/openscholar/modules/os/modules/os_migrate_demo/handlers/node/project.inc#L33-L38).
 In Drupal 8 we have [process plugins](https://github.com/RoySegall/comics_migration/blob/master/config/install/migrate.migration.superheroes.yml#L20).
 
-In the [transform](https://github.com/RoySegall/comics_migration/blob/master/src/Plugin/migrate/process/FileImport.php#L21) method of the process plugin I can return any value which will
-eventually populate the field/property.
+In the [transform](https://github.com/RoySegall/comics_migration/blob/master/src/Plugin/migrate/process/FileImport.php#L21)
+method of the process plugin I can return any value which will eventually
+populate the field/property.
 
 ## TL;DR - copy files from directory into the file system
 
