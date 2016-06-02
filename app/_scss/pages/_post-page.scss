@@ -1,19 +1,21 @@
-.content-container {
-  padding: 10px;
-  max-width: 480px;
-  margin: 0 auto;
-
-    @include desktop {
-      max-width: 660px;
-    }
-
-    @media (min-width: 1200px) {
-      max-width: 740px;
-    }
-
-    @media (min-width: 1440px) {
-      max-width: 780px;
-    }
+.post-title {
+  @extend .divider-bottom;
+    margin-top: 45px;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    
+  h1 {
+    @extend .headers-styling;
+    @extend .h1-styling;
+    margin-bottom: 0.5em;
+    font-family: "Raleway", sans-serif;
+    font-size: 47.123px;
+    text-transform: capitalize;
+  }
+  
+  .post-author {
+    font-size: 29.124px;
+  }
 }
 
 .post {
@@ -23,80 +25,115 @@
     @extend .headers-styling;
   }
 
-  h1 {
-    @extend .h1-styling;
-    margin-bottom: 6px;
-  }
-
   h2 {
-    font-size: 22px;
+    font-size: 29.124px;
     text-transform: uppercase;
   }
 
   h3 {
-    font-size: 20px;
+    font-size: 21px;
+    color: $gizra-black;
   }
 
-  .date {
-    font-size: 18px;
-  }
+  .post-data {
+    font-size: 16px;
 
-  .tags {
-
-    .tags-icon {
-      float: left;
-      padding: 0 6px 0 0;
-    }
-
-    ul {
-      list-style-type: none;
-      margin-bottom: 15px;
-      padding-left: 0;
-      font-size: 18px;
-    }
-
-    li {
-      padding-left: 0;
-      display: inline;
-
-      &::after {
-        content: ',';
+    #post-label {
+      font-size: 29.124px;
+      margin: 0.4em 0 1em;
+    
+      a {
+        text-decoration: none;
       }
-
-      &:last-child {
-
-        &::after {
-          content: '';
+    
+      .label {
+        border-radius: 0;
+      }
+    }
+    .author-details {
+      margin-bottom: 1em;
+  
+      img {
+        width: 95px;
+        margin: 6px;
+      }
+  
+      .text-wrapper {
+        padding: 0.5em 0;
+        
+        .title {
+          margin-bottom: 0.5em;
         }
       }
+  
+      .bio {
+  
+        a {
+          color: $gizra-orange;
+        }
+      }
+  
+      .name,
+      .twitter,
+      .title {
+        color: $gizra-blue;
+      }
     }
+ 
+    .date {
+      margin-bottom: 1em;
+      font-weight: 600;
+    }
+  
+    .tags {
+      
+      .title {
+        font-weight: 600;
+      }
 
-    a {
-      font-weight: normal;
+      ul {
+        list-style-type: none;
+        margin-bottom: 1em;
+        padding-left: 0;
+      }
+  
+      li {
+        padding-left: 0;
+        display: inline;
+  
+        &::after {
+          color: $gizra-blue;
+          content: '/';
+        }
+  
+        &:last-child {
+  
+          &::after {
+            content: '';
+          }
+        }
+      }
+  
+      a {
+        font-weight: normal;
+      }
     }
   }
 
   .post-content {
     margin-bottom: 20px;
-    font-size: 18px;
-    line-height: 25px;
-
-    @include desktop {
-      font-size: 21px;
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 1.618em;
+    
+    p {
+      margin: 0 0 1em;
     }
   }
 
-  .post-content p {
-    @include desktop {
-      line-height: 1.7;
-    }
-  }
-
-  ul {
-    font-size: 18px;
-    line-height: 35px;
-    margin-top: 20px;
-    margin-bottom: 38px;
+  ul, ol {
+    margin-top: 0;
+    margin-bottom: 1em;
     padding-left: 24px;
 
     li {
@@ -108,21 +145,9 @@
     margin: 35px 0;
   }
 
-  ol {
-    font-size: 18px;
-    line-height: 36px;
-    margin-top: 35px;
-    margin-bottom: 30px;
-
-    li {
-      margin-bottom: 13px;
-    }
-  }
-
   em {
     font-weight: bold;
   }
-
 
   a {
     color: $gizra-blue;
@@ -130,7 +155,6 @@
   }
 
   blockquote {
-    font-size: 21px;
     padding-left: 51px;
     line-height: 32px;
     border-left: 10px gray solid;
@@ -139,13 +163,9 @@
 }
 
 .post-nav {
+  font-size: 18px;
   color: $gizra-orange;
-  margin-top: 40px;
-
-  .previous,
-  .next {
-    font-size: 18px;
-  }
+  margin: 40px 0;
 
   .next {
     text-align: right;
@@ -155,7 +175,6 @@
   .next-text {
     display: block;
     margin-top: 0;
-    font-size: 15px;
   }
 
   a {
@@ -164,38 +183,6 @@
 }
 
 #post-page {
-  .author-details {
-    margin-top: 35px;
-
-    .image-wrapper {
-      float: left;
-    }
-
-    img {
-      width: 95px;
-      margin: 6px;
-    }
-
-    .text-wrapper {
-      margin-left: 130px;
-      padding-top: 11px;
-      font-size: 18px;
-      line-height: 25px;
-    }
-
-    .bio {
-
-      a {
-        color: $gizra-orange;
-      }
-    }
-
-    .name,
-    .twitter,
-    .title {
-      color: $gizra-blue;
-    }
-  }
 
   table {
     margin-bottom: 20px;

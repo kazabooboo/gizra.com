@@ -2,13 +2,21 @@
 layout: default
 title: Team | Gizra
 ---
-<header id="header-team">
+<header id="header-global">
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
         {% include header.html %}
+      </div>
+    </div>
+  </div>
+</header>
+<section id="team-page">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-10 col-sm-offset-1">
         <div class="introduction">
-          <h1 class="text-capitalize">The Team</h1>
+          <h1 class="title">The Team</h1>
           <p>The faces behind Organic Groups, Entity Reference,
             Message Stack, RESTful, and many other contributions, patches,
             blog posts, and presentations.
@@ -17,9 +25,13 @@ title: Team | Gizra
       </div>
     </div>
   </div>
-</header>
-<section id="team-page">
   <div class="container">
-    {% include team-members.html %}
+    <div class="row">
+      <div class="col-sm-10 col-sm-offset-1">
+        <div class="container-fluid">
+          {% include team-members.html %}
+        </div>
+      </div>
+    </div>
   </div>
 </section>
