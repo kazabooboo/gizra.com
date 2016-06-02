@@ -31,14 +31,18 @@
 
 #services-page, #strengths-page, #cases-page {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   
   h1.title, h2.title {
-    text-transform: uppercase;
+    font-family: "Raleway", sans-serif;
+    font-size: 47.123px;
     @extend .divider-bottom;
     color: $gizra-blue;
-    margin-top: 45px;
     margin-bottom: 30px;
     padding-bottom: 20px;
+    font-weight: bold;
   } 
 
   .list-group-item {
@@ -47,10 +51,24 @@
 }
 
 .services, .strengths, .cases {
-  margin-top: 35px;
-  margin-bottom: 20px;
+  
+  h4 {
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    color: $gizra-orange;
+    font-size: 21px;
+    margin-bottom: 0.4em;
+    padding-bottom: 0.2em;
+    @extend .divider-bottom;
+  }
+
+  h5 {
+    font-size: 21px;
+    margin-bottom: 0.4em;
+  }
   
   p {
+    font-size: 18px;
     line-height: 1.5; //Temporary untill typography review.
   }
 }
@@ -80,13 +98,10 @@
 
     .title {
       margin-bottom: 0;
-      text-transform: none;
-      line-height: 1.35em;
-      font-size: 18px;
+      line-height: 1.2em;
       
       a {
-        color: #717171;
-        font-weight: 400;
+        color: $gizra-orange;
       }
     }
   }
