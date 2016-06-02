@@ -1,5 +1,5 @@
 ---
-title: "Drupal 8: migrate with attachments easily"
+title: "Drupal 8: migrate nodes with attachments easily"
 tags:
   - "Drupal 8"
   - "Drupal-planet"
