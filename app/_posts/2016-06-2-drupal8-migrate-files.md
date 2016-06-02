@@ -11,15 +11,15 @@ image: "/assets/images/posts/drupal-8-migrate/tony.png"
 published: true
 ---
 
-
 {% include setup %}
+
 The Drupal-8-manina is at it's best - modules are being ported, blog posts are
 being written and new sites are being coded so we in Gizra decided to join the
 party.
 
-We started with a simple site that will replace a wix static site. But we needed
-to migrate node attachments and we just didn't know how. Reverse engineer have
-it's limitation and I came to a dead end.
+We started with a simple site that will replace an existing static site. But we needed
+to migrate node attachments and we just didn't find existing solution. Well,
+it was time to reach out to the community
 
 <!-- more -->
 
@@ -29,11 +29,9 @@ migration of files/ images out there? (including copy from source into public://
 </p>&mdash; Amitai Burstein (@amitaibu) <a href="https://twitter.com/amitaibu/status/718441947325677569">April 8, 2016</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-Few minutes after the tweet was published I received an email from Amitai
-with some help but what I was looking for wasn't there - migrate node
-attachments from <b>any</b> directory. Any blog post I found talked on how to
-migrate an old Drupal 7 site or in this case how to
-[migrate from an external source](https://evolvingweb.ca/blog/bringing-files-along-for-ride-to-d8).
+Few minutes after the tweet was published we received a great hint from the fine folks of
+[Evoloving Web](https://evolvingweb.ca/). They were already migrating files into Drupal 8
+from older Drupal 7, and were kind enough to [blog post](https://evolvingweb.ca/blog/bringing-files-along-for-ride-to-d8) about it.
 
 Still, without any results in the near pixels I asked one of my
 [colleague‏‏‏‏](https://twitter.com/jsacksick); A frustrated journey had ended with
