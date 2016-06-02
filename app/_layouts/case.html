@@ -1,0 +1,45 @@
+---
+layout: default
+post: true
+---
+
+<div id="case-page">
+  <header id="header-case">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          {% include header.html %}
+        </div>
+      </div>
+    </div>
+  </header>
+
+	<article class="case">
+		<div class="content-container">
+			<div id="case-label">
+		 		<span class="label label-default">Gizra Case Study</span>
+			</div>
+		 	<h1><a href="{{ page.url }}">{{ page.title }} </a></h1>
+		 	<h2><a href="{{ page.url }}">{{ page.subtitle }} </a></h2>
+		 	<div id="abstract">{{ page.abstract }} </div>
+      <div class="tags">{% unless page.tags == empty %}
+        <img src="/images/post/tag-icon-small.png" class="tags-icon"/>
+        <ul class="inline">
+          {% assign tags_list = page.tags %}
+          {% include tags_list.html %}
+        </ul>
+        {% endunless %}
+      </div>
+	 	</div>
+	 	<div id="case-top">
+	 		<img src=" {{ page.header_url }} ">
+	 	</div>
+    <div class="content-container">
+			<div class="case-content">
+
+        {{ content }}
+
+      </div>
+  	</div>
+  </article>
+</div>
