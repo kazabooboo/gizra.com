@@ -3,39 +3,48 @@
 #homepage {
   .header-homepage {
     background: #292929;
-    background: url('/images/header/background.png') no-repeat left top;
+    background: url('/images/header/background.png') no-repeat center top;
     background-size: cover;
+    background-attachment: fixed;
     width: 100%;
     text-align: left;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 40px;
 
     #slogan {
+      max-width: 650px;
+      margin-top: 70px;
       position: relative;
       overflow: hidden;
       color: white;
-      padding-bottom: 20px;
-
+      padding: 1.5em 2em;;
+      background: rgba(112, 112, 112, 0.54);
+      border-radius: 8px;
+      
       h2 {
-        margin: 70px 0 10px;
+        margin: 0 0 .5em;
         font-weight: bold;
-        font-size: 2.618em;
+        font-size: 47.123px;
         line-height: 1.2em;
-        //letter-spacing: 0.025em;
-        //text-transform: uppercase;
       }
 
       .sub-slogan {
-        margin: 20px 0 0;        
+        margin: 1em 0 0;        
         p {
-          font-size: 1.618em;
+          font-family: "Raleway", sans-serif;
+          font-size: 21px;
           line-height: 1.2em;
-          //letter-spacing: 0.013em;
+          margin: 0 0 .5em;
         }
       }
 
       .about-us-story {
-        margin-top: 30px;
-        font-size: 1.618em;
+        margin-top: 3em;
+        font-size: 18px;
+        font-weight: 500;
 
         a {
           color: white;
@@ -52,16 +61,19 @@
     }
     
     .page-scroll {
-      margin-top: 30px;
+      position: absolute;
+      width: 100%;
+      bottom: 20px;
 
-      a {
-        color: white;
-        font-size: 1.618em;
-        text-decoration: none;
-        opacity: 0.5;
-        
-        i {
-          margin-left: 40%;
+      .scroll-wrapper {
+        display: block;
+        margin: 0 auto;
+
+        a {
+          color: white;
+          font-size: 1.618em;
+          text-decoration: none;
+          opacity: 0.5;
         }
       }
     }
@@ -93,7 +105,7 @@
 
   #homepage .header-homepage #slogan {
     margin-left: 15px;
-    max-width: 50%
+    //max-width: 50%
   }
 }
 

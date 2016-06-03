@@ -1,11 +1,16 @@
 #work {
-  padding-bottom: 37px;
+  padding-bottom: 50px;
   color: white;
 
-  .title {
-    font-size: 1.2em;
-    text-transform: uppercase;
-    margin-bottom: 15px;
+  h2.title {
+    font-family: "Raleway", sans-serif;
+    font-size: 47.123px;
+    @extend .divider-bottom;
+    color: $gizra-orange;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    font-weight: bold;
+    
   }
 
   .clients {
