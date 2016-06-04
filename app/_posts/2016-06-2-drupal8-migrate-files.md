@@ -34,7 +34,7 @@ Few minutes after the tweet was published we received a great hint from the fine
 from older Drupal 7, and were kind enough to [blog post](https://evolvingweb.ca/blog/bringing-files-along-for-ride-to-d8) about it.
 
 However, we were still missing another piece of the puzzle, as we wanted to migrate
-files from an outside directory, directly into Drupal. I gave my good friend [@jsacksick](https://twitter.com/jsacksick) a poke (it's easy, as he sits right in front of me), and he gave me the answer in a silver plate.
+files from an outside directory, directly into Drupal. I gave my good friend [@jsacksick](https://twitter.com/jsacksick) a poke (it's easy, as he sits right in front of me), and he gave me the answer on a silver platter.
 
 ## An example for super heroes
 
@@ -69,8 +69,8 @@ process:
   'body/value': _description
 ```
 
-In Drupal 7, when we wanted to prepare the value before
-populating the entity fields as we want, we changed it in a
+In Drupal 7, as we wanted to prepare the value before
+populating the entity fields, we've changed it in a
 [prepare method](https://github.com/openscholar/openscholar/blob/SCHOLAR-3.x/openscholar/modules/os/modules/os_migrate_demo/handlers/node/project.inc#L33-L38).
 In Drupal 8 we have [process plugins](https://github.com/RoySegall/comics_migration/blob/master/web/modules/custom/comics_migration/src/Plugin/migrate/process/FileImport.php).
 
@@ -82,12 +82,11 @@ But we can of course have our own logic. In the [transform](https://github.com/R
 method of the process plugin we can massage our data, return any value which will eventually
 populate the field.
 
-In our case, the `transform` method is responsibly for registrating the new file into Drupal
-using `file_unmanaged_copy` and friends.
+In our case, the `transform` method is responsible for adding the new file into Drupal using `file_unmanaged_copy` and friends.
 
 ## Conclusion
 
 Some of the know hows and best practices are still missing from Drupal 8. But they
 can and should be re-learned and re-published. So remember kids, if you ever feel
 frustrated about not finding a solution, always
-reach out to smart community members (and then write a post about it, so everybody ).
+reach out to smart community members and then write a post about it, so everybody could profit.
