@@ -11,38 +11,39 @@ homepage: true
       <div class="row">
         <div class="col-sm-12">
           {% include header.html %}
-          <div id="slogan">
+          <div class="row">
+          <div id="slogan" class="col-sm-5">
             <h2>
               Take a leap of faith with us.
               <br class="hidden-xs">
-              It's beautiful here.
+              It&rsquo;s beautiful here.
             </h2>
             <div class="sub-slogan">
-            <p>Build a cutting-edge web solution that you will make you proud. Seriously.</p>
+            <p>Build a cutting-edge web solution that will make you proud. Seriously.</p>
             <p>Do it in a transparent, best-practices driven, honest partnership with passionate people.</p>
             </div>
             <p class="about-us-story">
               <sup>*</sup>Read our <a target="_blank" href="/content/the-about-story/">About Story</a> &mdash; It's different.
             </p>
+            <div class="page-scroll">
+              <div class="scroll-wrapper">
+                <a href="#testimonials" class="smooth-scroll-to">
+                  <i class="fa fa-chevron-circle-down" aria-hidden="true"></i>  
+                </a>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="page-scroll">
-      <div class="scroll-wrapper">
-        <a href="#testimonials" class="smooth-scroll-to">
-          <i class="fa fa-chevron-circle-down" aria-hidden="true"></i>  
-        </a>
       </div>
     </div>
   </header>
   {% include testimonials.html %}
   {% include about.html %}
-  <section class="blog">
+  <section id="from-our-blog" class="blog">
     <div class="container">
       <div class="row">
-        <div class="col-sm-12 narrow">
-          <h2 class="main-title"><a href="/blog">From our blog</a></h2>
+        <div class="col-sm-10 col-sm-offset-1">
+          <h2 class="title"><a href="/blog">From our blog</a></h2>
           <div class="row">
             {% for post in site.posts limit:3 %}
             <div class="col-sm-4">
