@@ -47,7 +47,7 @@ read [here](http://www.gizra.com/content/migration-best-practices/) how it was c
 with [csv2sql](https://www.drupal.org/project/csv2sql).
 
 ## Basic structure of migration
-
+{% include thumbnail.html  image_path="assets/images/posts/drupal-8-migrate/files.jpg" caption="It's very easy to migrate files once you know how" %}
 The description of the mapping between the source table and the destination node type
 is in a [yaml file](https://github.com/RoySegall/comics_migration/blob/master/web/modules/custom/comics_migration/config/install/migrate.migration.superheroes.yml).
 
