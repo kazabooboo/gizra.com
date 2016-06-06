@@ -24,7 +24,7 @@
     margin-bottom: 1em;
     line-height: 1.618;
     color: white;
-    
+
     a {
       color: white;
       text-decoration: underline;
@@ -76,7 +76,7 @@
     padding-bottom: 20px;
     font-weight: bold;
   } 
-  
+
   .list-group-item {
     border: none;
   }
@@ -86,7 +86,7 @@
   }
 
   .way {
-    
+
     h4 {
       font-family: "Raleway", sans-serif;
       font-weight: bold;
@@ -96,12 +96,12 @@
       padding-bottom: 0.2em;
       @extend .divider-bottom;
     }
-  
+
     h5 {
       font-size: 21px;
       margin-bottom: 0.4em;
     }
-    
+
     p {
       font-size: 18px;
       line-height: 1.5; //Temporary untill typography review.
