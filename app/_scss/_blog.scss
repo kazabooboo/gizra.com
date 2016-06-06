@@ -23,7 +23,6 @@
       margin-bottom: 0;
       font-family: 'Hind', sans-serif;
       font-size: 18px;
-      font-weight: bolder;
 
       a {
         color: $gizra-orange;
@@ -72,7 +71,7 @@
     .title {
       @extend .h1-styling;
       font-family: "Raleway", sans-serif;
-      margin-bottom: 0;
+      margin-bottom: .2em;
       text-transform: none;
       line-height: 1.2em;
       font-size: 21px;

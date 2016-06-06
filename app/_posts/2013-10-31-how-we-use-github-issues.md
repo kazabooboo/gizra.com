@@ -4,7 +4,7 @@ tags:
   - "Drupal-planet"
   - "GitHub"
 permalink: "/content/how-we-use-github-issues"
-title: How We Achieve Faster Development and Happier Clients by Opening Our GitHub Issues
+title: An Open Github for Faster Dev and Happier Clients
 layout: post
 author: niryariv
 ---
