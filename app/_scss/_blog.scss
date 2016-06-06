@@ -3,6 +3,7 @@
 
   .post-teaser {
     @extend .soft-box;
+    box-shadow: none;
     position: relative;
     margin-bottom: 28px;
     padding-top: $spacing;
@@ -18,21 +19,16 @@
   .author-details {
     position: relative;
 
-    .name {
-      margin-bottom: 5px;
+    .name, .date {
+      margin-bottom: 0;
       font-family: 'Hind', sans-serif;
-      font-size: 16px;
+      font-size: 18px;
       font-weight: bolder;
 
       a {
         color: $gizra-orange;
         text-decoration: none;
       }
-    }
-
-    .date {
-      margin-bottom: 5px;
-      font-size: 16px;
 
       i {
         margin-right: 5px;
@@ -79,7 +75,8 @@
       margin-bottom: 0;
       text-transform: none;
       line-height: 1.2em;
-      font-size: 18px;
+      font-size: 21px;
+      font-weight: 600;
     }
   }
 
