@@ -6,10 +6,10 @@
         
     
 
-<title>Todo app with RESTful backend</title>
+<title>The Gizra Way Webinar: Budget Goggles and the Time-Boxed Project</title>
 
         <meta name="description" content="">
-        <meta name="keywords" content="">
+        <meta name="keywords" content="The Gizra Way, Budget Goggles, time-boxing, project management, price estimation">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
       <!-- Favicon for all platforms -->
@@ -66,31 +66,31 @@
 
   
     
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
       
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
     
   
 
@@ -191,8 +191,8 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-10 col-sm-offset-1 post-title">
-          <h1><a href="/content/todo-restful-backend">Todo app with RESTful backend </a></h1>
-          <div class="post-author">By Amitai Burstein</div>
+          <h1><a href="/content/gizra-way-webinar-budget-goggles">The Gizra Way Webinar: Budget Goggles and the Time-Boxed Project </a></h1>
+          <div class="post-author">By Adam Stewart</div>
         </div>
       </div>
       <div class="row">
@@ -200,18 +200,18 @@
     			<div id="post-label">
     		 		<a href="/blog"><span class="label label-default">Gizra Blog</span></a>
     			</div>
-          <div class="date">23 Nov 2014</div>
+          <div class="date">07 Jun 2016</div>
           <section class="author-details">
             <div class="image-wrapper">
-              <img src="/images/team/avatars/amitaibu.42a1.jpg" class="img-circle img-responsive">
+              <img src="/images/team/avatars/IshaDakota.bea8.jpg" class="img-circle img-responsive">
             </div>
             <div class="text-wrapper">
-              <span class="name">Amitai Burstein</span>
+              <span class="name">Adam Stewart</span>
               
-                <span class="twitter">(@amitaibu)</span>
+                <span class="twitter">(@adamhstewart)</span>
               
-              <div class="title">CTO, Co-Owner</div>
-              <div class="bio">Maintainer of Organic groups, the Message stack, and co-maintainer of Drupal 8's Entity reference. <a href="/content/the-about-story/">The about story</a>.</div>
+              <div class="title">USA CTO</div>
+              <div class="bio">If I'm not here, I'm at Wrigley Field.</div>
             </div>
           </section>
           <div class="tags">
@@ -223,9 +223,11 @@
 
   
     
-      <li><a href="/tags.html#Headless Drupal-ref">Headless Drupal</a></li>
+      <li><a href="/tags.html#The Gizra Way-ref">The Gizra Way</a></li>
     
-      <li><a href="/tags.html#RESTful-ref">RESTful</a></li>
+      <li><a href="/tags.html#Project Management-ref">Project Management</a></li>
+    
+      <li><a href="/tags.html#Price Estimation-ref">Price Estimation</a></li>
     
       <li><a href="/tags.html#Drupal-planet-ref">Drupal-planet</a></li>
     
@@ -239,31 +241,15 @@
         <div class="col-sm-8">
           <div class="post-content">
 
-              <p>The Drupal community can now proudly claim its own implementation of a <a href="http://gizra.github.io/todo_restful/#/">Todo app</a> with a RESTful backend!</p>
+              <p>Today we held our inaugural <a href="https://twitter.com/hashtag/thegizraway">#thegizraway</a> webinar. The web series is intended to showcase some of &ldquo;The Gizra Way&rdquo; principles - a set of best practices and methodologies, borrowed from the Open Source development world and applied to operations, workflow, and overall company culture.</p>
 
-<p><img src="http://www.gizra.com/assets/images/posts/todo-restful/image1.jpg" /></p>
+<p>For the first in the series, we chose the topic of price estimations because it provides a real - and perhaps radical - example of how transparent communication from the beginning about a project&rsquo;s needs alongside its budget can turn the process on it&rsquo;s head. In the video below Amitai Burstein discusses how a budget-and time-driven discovery process gets a project off on the right foot.</p>
 
-<p><a href="http://todomvc.com/">TodoMVC</a> is a site that helps you select the right JS MVC library. But more then that, it allows you to learn by comparing those libraries, as they all implement the same thing - a simple Todo app.</p>
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/49frCA-WOQk"></iframe>
+</div>
 
-<p>I&rsquo;ve decided to fork the <a href="http://todomvc.com/examples/angularjs/#/">Angular example</a>, and build it on top of <a href="https://github.com/Gizra/restful">RESTful</a>. Looking at the Angular code, I was pleasantly surprised.</p>
-
-<!-- more -->
-
-<p>As it turns out, TodoMVC&rsquo;s good folks have written the Angular app with both an API backend and a local storage one. If no backend is found, it silently falls back to local storage.</p>
-
-<p>This means all I had to do was to write the RESTful resource. You can take a look at the <a href="https://github.com/Gizra/todo_restful/blob/master/todo/modules/custom/todo_restful/plugins/restful/node/todos/1.0/TodosResource.class.php#L8">code</a> needed, to appreciate how very little effort is required to make Drupal a proper RESTful server that Simply Works.</p>
-
-<p>On the client side I did two slight modifications:</p>
-
-<ol>
-<li>Added the ability to inject the <code>ENV</code> with a configurable backend URL (to enable local/production/etc development environments)</li>
-<li>Changed the <a href="https://github.com/Gizra/todo_restful/blob/master/client/app/scripts/services/todoStorage.js#L81">response</a> the app was expecting after create/update, from <code>todo.id = resp.data.id;</code> to <code>todo.id = resp.data.data[0].id;</code></li>
-</ol>
-
-<p>(Note that I could have kept the demo app completely unchanged and do this on the server side by writing a custom RESTful formatter that would wrap the result as expected by the app)</p>
-
-<p>Keeping with &ldquo;The Gizra Way&rdquo; obsession with best practices, the entire package is published as an <a href="https://github.com/Gizra/todo_restful#todomvc-adaptation-to-drupals-restful">installation profile</a>. It even has a Behat test to verify it&rsquo;s installed properly!
-Go ahead and <a href="http://gizra.github.io/todo_restful">try</a> the app.</p>
+<p>The next webinar - to take place in July 2016 - will be announced shortly. If you have any suggestions for topics or an idea that you would like to present in a future session <a href="mailto:adam@gizra.com">let us know</a>.</p>
 
 
           </div>
@@ -277,22 +263,15 @@ Go ahead and <a href="http://gizra.github.io/todo_restful">try</a> the app.</p>
       <div class="row">
         <div class="col-xs-4 col-xs-offset-3 previous">
           
-          <a href="/content/behat-the-right-way">
+          <a href="/content/12-things-learned-first-drupalcon">
             <div class="previous-label">
               <i class="fa fa-chevron-circle-left"></i>
-              Previous<span class="visible-xs"> post</span><span class="hidden-xs">: Behat - The Right Way</span>
+              Previous<span class="visible-xs"> post</span><span class="hidden-xs">: 12 Things I learned at my first DrupalCon</span>
             </div>
           </a>
           
         </div>
         <div class="col-xs-4 next">
-          
-          <a href="/content/behat-vs-casper-for-drupal">
-            <div class="next-label">
-              Next<span class="visible-xs"> post</span><span class="hidden-xs">: Behat vs. Casper (In Drupal Context)</span>
-              <i class="fa fa-chevron-circle-right"></i>
-            </div>
-          </a>
           
         </div>
       </div>
