@@ -5,6 +5,7 @@ tags:
   - The Gizra Way
   - Project Management
   - Price Estimation
+  - "Drupal-planet"
 permalink: "/content/gizra-way-webinar-budget-goggles"
 layout: post
 image: "/assets/images/posts/gizra-way-webinar-budget-goggles/thumb.jpg"
@@ -20,5 +21,5 @@ For the first in the series, we chose the topic of price estimations because it 
 <div class="embed-responsive embed-responsive-16by9">
   <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/49frCA-WOQk"></iframe>
 </div>
- 
+
 The next webinar - to take place in July 2016 - will be announced shortly. If you have any suggestions for topics or an idea that you would like to present in a future session <a href="mailto:adam@gizra.com">let us know</a>.
