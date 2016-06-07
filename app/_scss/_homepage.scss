@@ -1,38 +1,44 @@
 @import 'testimonials';
 
 #homepage {
-
   .header-homepage {
     background: #292929;
-    background: url('/images/header/background.png') no-repeat left top;
+    background: url('/images/header/background.png') no-repeat center top;
     background-size: cover;
+    background-attachment: fixed;
     width: 100%;
     text-align: left;
+    padding-bottom: 40px;
 
     #slogan {
+      margin-top: 70px;
       position: relative;
       overflow: hidden;
       color: white;
-
+      border-radius: 8px;
+      
       h2 {
-        margin: 30px 0 10px;
+        margin: 0 0 .5em;
         font-weight: bold;
-        font-size: 1.9em;
-        line-height: 1.3em;
-        letter-spacing: 0.025em;
-        text-transform: uppercase;
+        font-size: 37.5px;
+        line-height: 1.2em;
       }
 
-      p {
-        margin: 7px 0;
-        font-size: 1.23em;
-        max-width: 430px;
-        line-height: 1.45em;
-        letter-spacing: 0.013em;
+      .sub-slogan {
+        margin: 1em 0 0;
+        p {
+          font-family: "Raleway", sans-serif;
+          font-size: 27px;
+          line-height: 1.2em;
+          margin: 0 0 .5em;
+        }
       }
 
       .about-us-story {
-        margin-top: 15px;
+        font-family: "Raleway", sans-serif;
+        margin-top: 2.5em;
+        font-size: 18px;
+        font-weight: 500;
 
         a {
           color: white;
@@ -45,6 +51,23 @@
         text-transform: uppercase;
         font-size: 22px;
         margin: -4px 0 0 420px;
+      }
+    }
+
+    .page-scroll {
+      margin-top: 40px;
+      width: 100%;
+
+      .scroll-wrapper {
+        display: block;
+        text-align: center;
+
+        a {
+          color: white;
+          font-size: 2em;
+          text-decoration: none;
+          opacity: 0.5;
+        }
       }
     }
   }
@@ -62,24 +85,32 @@
   }
 
   .blog {
-    margin-top: 15px;
-
-    .main-title {
-      margin-bottom: 15px;
+    h2.title {
+      font-family: "Raleway", sans-serif;
+      font-size: 47.123px;
+      @extend .divider-bottom;
+      margin-bottom: 30px;
+      padding-bottom: 20px;
+      font-weight: bold;
+      
+      a {
+        color: $gizra-blue;      
+      }
     }
   }
 }
 
 // Desktop Media query.
 @include desktop {
+  
+  .header-homepage, #gizra-way, #about, #testimonials, #from-our-blog {
+    height: 100vh;
+    max-height: 1000px;
+    min-height: 600px;
+  }
 
   #homepage .header-homepage #slogan {
     margin-left: 15px;
-    height: 414px;
-
-    h2 {
-      max-width: 474px;
-    }
   }
 }
 

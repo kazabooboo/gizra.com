@@ -1,0 +1,78 @@
+---
+layout: default
+post: true
+---
+
+<div id="case-page">
+  <header id="header-case">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          {% include header.html %}
+        </div>
+      </div>
+    </div>
+  </header>
+  <article class="post">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-10 col-sm-offset-1 case-title">
+          <h1><a href="{{ page.url }}">{{ page.title }} </a></h1>
+          <h2><a href="{{ page.url }}">{{ page.subtitle }} </a></h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-2 col-sm-offset-1 case-data">
+    			<div id="case-label">
+    		 		<a href="/services"><span class="label label-default">Gizra Case Study</span></a>
+    			</div>
+          <div class="date">{{ page.date }}</div>
+          <div class="client">
+            <div class="client-label">Client:</div>
+            <div class="client-text">{{ page.client }}</div>
+          </div>
+          {% if page.site != nil %}
+            <div class="site">
+              <div class="site-label">Site:</div>
+              <div class="site-text"><a href="http://{{ page.site }}" target="_blank">{{ page.site }}</a></div>
+            </div>
+          {% endif %}
+          <section class="case-glance">
+            <h3>At a Glance</h3>
+            <div class="facts">
+              <div class="title">Key Facts & Figures:</div>
+              {% unless page.facts == empty %}
+                <ul class="inline">
+                  {% assign facts_list = page.facts %}
+                  {% for fact in facts_list %}
+                    <li>{{ fact }}</li>
+                  {% endfor %}
+                </ul>
+              {% endunless %}
+            </div>
+            <div class="techs">
+              <div class="title">Technologies Used:</div>
+              {% unless page.techs == empty %}
+                <ul class="inline">
+                  {% assign techs_list = page.techs %}
+                  {% for tech in techs_list %}
+                    <li>{{ tech }}</li>
+                  {% endfor %}
+                </ul>
+              {% endunless %}
+            </div>
+          </section>                        
+        </div>
+        <div class="col-sm-8 case">
+          <img class="img-responsive" src=" {{ page.header_url }} ">
+          <div id="abstract"> {{ page.abstract }} </div>
+          <div class="case-content">
+
+            {{ content }}
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+</div>

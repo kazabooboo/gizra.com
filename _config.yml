@@ -97,12 +97,22 @@ authors:
       name: Adam Stewart
       title: USA CTO
       is_member: true
-      bio: Something about Adam
+      bio: If I'm not here, I'm at Wrigley Field.
       email: adam@gizra.com
       twitter: adamhstewart
       github: IshaDakota
-      avatar: male.jpg
+      avatar: IshaDakota.jpg
       image: ishadakota.jpg
+  - kazabooboo:
+      name: Adar Earon
+      title: USA Director
+      is_member: true
+      bio: I don't really need tips on how to fall asleep. I have twins.
+      email: adar@gizra.com
+      twitter: kzbooboo
+      github: kazabooboo
+      avatar: kazabooboo.jpg
+      image: male.jpg
   - NaderSafadi:
       name: Nader Safadi
       title: Team Lead
