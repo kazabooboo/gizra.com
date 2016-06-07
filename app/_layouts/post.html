@@ -26,69 +26,87 @@ post: true
       </div>
     </div>
   </header>
-
-  <div class="content-container">
-    <article class="post">
-      <h1><a href="{{ page.url }}">{{ page.title }} </a></h1>
-      <div class="date">{{ page.date | date_to_string }}, By {{ author.name }}</div>
-      <div class="tags">{% unless page.tags == empty %}
-        <img src="/images/post/tag-icon-small.png" class="tags-icon"/>
-        <ul class="inline">
-          {% assign tags_list = page.tags %}
-          {% include tags_list.html %}
-        </ul>
-        {% endunless %}</div>
-      <div class="post-content">
-
-        {{ content }}
-
-      </div>
-    </article>
-    <section class="post-nav">
+  <article class="post">
+    <div class="container">
       <div class="row">
-        <div class="col-xs-6 previous">
+        <div class="col-sm-10 col-sm-offset-1 post-title">
+          <h1><a href="{{ page.url }}">{{ page.title }} </a></h1>
+          <div class="post-author">By {{ author.name }}</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-2 col-sm-offset-1 post-data">
+    			<div id="post-label">
+    		 		<a href="/blog"><span class="label label-default">Gizra Blog</span></a>
+    			</div>
+          <div class="date">{{ page.date | date_to_string }}</div>
+          <section class="author-details">
+            <div class="image-wrapper">
+              <img src="/images/team/avatars/{{ author.avatar }}" class="img-circle img-responsive">
+            </div>
+            <div class="text-wrapper">
+              <span class="name">{{ author.name }}</span>
+              {% if author.twitter %}
+                <span class="twitter">(@{{ author.twitter }})</span>
+              {% endif %}
+              <div class="title">{{ author.title }}</div>
+              <div class="bio">{{ author.bio }}</div>
+            </div>
+          </section>
+          <div class="tags">
+            <div class="title">Tags:</div>
+            {% unless page.tags == empty %}
+              <ul class="inline">
+                {% assign tags_list = page.tags %}
+                {% include tags_list.html %}
+              </ul>
+            {% endunless %}
+          </div>
+        </div>
+        <div class="col-sm-8">
+          <div class="post-content">
+
+              {{ content }}
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+    
+  <section class="post-nav">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-4 col-xs-offset-3 previous">
           {% if page.previous %}
-          <div class="text-capitalize">
-            <a href="{{ page.previous.url }}">
-              Previous
-              <span class="visible-xs"> post</span>
-            </a>
-          </div>
-          <a href="{{ page.previous.url }}" class="prev-text">
-            <span class="hidden-xs">{{ page.previous.title }}</span>
+          <a href="{{ page.previous.url }}">
+            <div class="previous-label">
+              <i class="fa fa-chevron-circle-left"></i>
+              Previous<span class="visible-xs"> post</span><span class="hidden-xs">: {{ page.previous.title }}</span>
+            </div>
           </a>
           {% endif %}
         </div>
-        <div class="col-xs-6 next">
+        <div class="col-xs-4 next">
           {% if page.next %}
-          <div class="text-capitalize">
-            <a href="{{ page.next.url }}">
-              Next
-              <span class="visible-xs"> post</span>
-            </a>
-          </div>
-          <a href="{{ page.next.url }}" class="next-text">
-            <span class="hidden-xs">{{ page.next.title }}</span>
+          <a href="{{ page.next.url }}">
+            <div class="next-label">
+              Next<span class="visible-xs"> post</span><span class="hidden-xs">: {{ page.next.title }}</span>
+              <i class="fa fa-chevron-circle-right"></i>
+            </div>
           </a>
           {% endif %}
         </div>
-      </div>
-    </section>
-    <section class="author-details">
-      <div class="image-wrapper">
-        <img src="/images/team/avatars/{{ author.avatar }}" class="img-circle img-responsive">
-      </div>
-      <div class="text-wrapper">
-        <span class="name">{{ author.name }}</span>
-        {% if author.twitter %}
-          <span class="twitter">(@{{ author.twitter }})</span>
-        {% endif %}
-        <div class="title">{{ author.title }}</div>
-        <div class="bio">{{ author.bio }}</div>
       </div>
     </section>
     <section>
-      {% include disqus.html %}
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 col-sm-offset-3">
+            {% include disqus.html %}
+          </div>
+        </div>
+      </div>
     </section>
   </div>
 </div>

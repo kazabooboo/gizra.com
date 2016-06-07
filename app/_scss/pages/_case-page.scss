@@ -19,31 +19,39 @@
   }
 }
 
-#case-top {
-	max-height: 450px;
-	overflow: hidden;
-	margin-bottom: 30px;
-	
-	img {
-		width: 100%;
-	}
+.case-title {
+  @extend .divider-bottom;
+    margin-top: 45px;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    
+  h1 {
+    @extend .headers-styling;
+    @extend .h1-styling;
+    margin-bottom: 6px;
+    font-family: "Raleway", sans-serif;
+    font-size: 47.123px;
+    text-transform: none;
+  }
+  h2 {
+    @extend .headers-styling;
+    margin-top: 0px;
+    margin-bottom: 6px;
+    font-family: "Raleway", sans-serif;
+    font-size: 29.124px;
+    a {
+      text-decoration: none;
+    }
+  }
 }
 
 .case {
-  h1,
-  h2,
-  h3 {
-    @extend .headers-styling;
-  }
-
-  h1 {
-    @extend .h1-styling;
-    border-bottom: 1px solid;
-  }
 
   h2 {
-    font-size: 22px;
+    font-size: 25.888px;
     text-transform: uppercase;
+    @extend .headers-styling;
+    font-family: "Raleway", sans-serif;
 
     a{
 	    text-decoration: none;
@@ -51,10 +59,7 @@
   }
 
   h3 {
-    font-size: 20px;
-    a {
-	    text-decoration: none;
-    }
+    font-size: 16px;
   }
 
   .date {
@@ -62,7 +67,6 @@
   }
   
   #case-label {
-	  padding-top: 20px;
  
 	  .label {
 		  font-size: 20px;
@@ -70,9 +74,10 @@
 	}
 	
 	#abstract {
-		line-height: 1.7;
-		font-size: 21px;
-		font-style: italic;
+   	padding: 1em 0.15em;
+		line-height: 1.618;
+		font-size: 18px;
+		font-weight: 600;
 	}
   .tags {
 
@@ -111,65 +116,158 @@
 
   .case-content {
     margin-bottom: 20px;
-    font-size: 18px;
-    line-height: 25px;
+    font-size: 21px;
+    line-height: 1.618;
 
-    @include desktop {
-      font-size: 21px;
+    p {
+        margin: 0 0 1em;
+    }
+  
+    ul, ol {
+      margin-top: 0;
+      margin-bottom: 1em;
+      padding-left: 24px;
+  
+      li {
+        padding-left: 16px;
+      }
+    }
+  
+    .highlight {
+      margin: 35px 0;
+    }
+  
+    em {
+      font-weight: bold;
+    }
+  
+    a {
+      color: $gizra-blue;
+      text-decoration: underline;
+    }
+  
+    blockquote {
+      font-size: 18px;
+      border-left: 5px gray solid;
+      margin-left: 10px;
+    }
+  }
+}
+
+#case-label {
+  font-size: 25.888px;
+  margin: 0.4em 0 1em;
+
+  a {
+    text-decoration: none;
+  }
+
+  .label {
+    border-radius: 0;
+  }
+}
+
+.case-data {
+  .date {
+    margin-bottom: 1em;
+    font-weight: bold;
+  }
+
+  .site, .client {
+    margin-bottom: 1em;
+    
+    .site-label, .client-label {
+      font-weight: bold;
     }
     
-    p {
-    	@include desktop {
-      	line-height: 1.7;
+    .site-text a {
+      color: $gizra-blue;
+    }
+  }
+  .tags {
+    ul {
+      list-style-type: none;
+      margin-bottom: 15px;
+      padding-left: 0;
+      font-size: 18px;
+    }
+
+    li {
+      padding-left: 0;
+      display: inline;
+
+      &::after {
+        content: ',';
+      }
+
+      &:last-child {
+
+        &::after {
+          content: '';
+        }
+      }
+    }
+
+    a {
+      font-size: 16px;
+      color: $gizra-blue;
+    }
+  }  
+}
+
+.case-glance {
+  h3 {
+    margin-top: 0;
+  }
+
+  .techs {
+    .title {
+      font-weight: bold;
+    }
+
+    ul {
+      list-style-type: none;
+      margin-bottom: 15px;
+      padding-left: 0;
+      font-size: 16px;
+    }
+
+    li {
+      padding-left: 0;
+      display: inline;
+
+      &::after {
+        content: ' // ';
+      }
+
+      &:last-child {
+
+        &::after {
+          content: '';
+        }
       }
     }
   }
 
-  ul {
-    font-size: 21px;
-    //line-height: 35px;
-    margin-top: 20px;
-    margin-bottom: 38px;
-    padding-left: 24px;
+  .facts {
+    margin-bottom: 1em;
+
+    .title {
+      font-weight: bold;
+    }
+
+    ul {
+      padding-left: 20px;
+      font-size: 16px;
+    }
 
     li {
-      padding-left: 16px;
+      margin: .4em 0;
+      padding-left: 0;
     }
-  }
-
-  .highlight {
-    margin: 35px 0;
-  }
-
-  ol {
-    font-size: 18px;
-    line-height: 36px;
-    margin-top: 35px;
-    margin-bottom: 30px;
-
-    li {
-      margin-bottom: 13px;
-    }
-  }
-
-  em {
-    font-weight: bold;
-  }
-
-
-  a {
-    color: $gizra-blue;
-    text-decoration: underline;
-  }
-
-  blockquote {
-    font-size: 21px;
-    padding-left: 51px;
-    line-height: 32px;
-    border-left: 10px gray solid;
-    margin-left: 10px;
   }
 }
+
 
 // Mobile Media query.
 @include mobile {
