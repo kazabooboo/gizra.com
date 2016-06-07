@@ -1,71 +1,110 @@
 #about {
-  position: relative;
-  overflow: hidden;
-  margin-top: 109px;
+  background: url('/images/team/background.png') no-repeat center top;
+  background-size: cover;
+  background-attachment: fixed;
   margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 0;
 
-  #main-wrapper,
-  #gizra-way {
-    position: relative;
+  h1.title, h2.title {
+    font-family: "Raleway", sans-serif;
+    font-size: 47.123px;
+    @extend .divider-bottom;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+    color: $gizra-blue;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    font-weight: bold;
+  } 
+
+  p {
+    font-size: 21px;
+    margin-bottom: 1em;
+    line-height: 1.618;
+    color: white;
+
+    a {
+      color: white;
+      text-decoration: underline;
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
+  }
+
+  h3 {
+      font-family: "Raleway", sans-serif;
+      font-weight: bold;
+      color: $gizra-orange;
+      font-size: 21px;
+      margin-bottom: 0.4em;
+  }
+
+  .page-scroll {
+    margin-top: 40px;
+    width: 100%;
+
+    .scroll-wrapper {
+      display: block;
+      text-align: center;
+
+      a {
+        color: white;
+        font-size: 2em;
+        text-decoration: none;
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+#gizra-way {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 0;
+
+  h1.title, h2.title {
+    font-family: "Raleway", sans-serif;
+    font-size: 47.123px;
+    @extend .divider-bottom;
+    color: $gizra-blue;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    font-weight: bold;
+  } 
+
+  .list-group-item {
+    border: none;
+  }
+
+  .list-group-item:hover {
+    background-color: #f5f5f5;
+  }
+
+  .way {
+
+    h4 {
+      font-family: "Raleway", sans-serif;
+      font-weight: bold;
+      color: $gizra-orange;
+      font-size: 21px;
+      margin-bottom: 0.4em;
+      padding-bottom: 0.2em;
+      @extend .divider-bottom;
+    }
+
+    h5 {
+      font-size: 21px;
+      margin-bottom: 0.4em;
+    }
 
     p {
-      @extend .p-styling;
-      margin-bottom: 12px;
-    }
-
-    h3 {
-      @extend .h3-styling;
-      margin-top: 35px;
-    }
-  }
-
-  #main-wrapper {
-    @extend .divider-top;
-    @extend .divider-bottom;
-    padding-top: 45px;
-    padding-bottom: 33px;
-  }
-
-  #gizra-way {
-    margin-top: 77px;
-
-    &::after {
-      content: '';
-      position: absolute;
-      top: 82px;
-      bottom: 99px;
-      right: 36px;
-      border-right: 1px solid $softer-border;
-      z-index: -1;
-    }
-
-    .main-title {
-      margin-bottom: 17px;
-    }
-
-    .element {
-      position: relative;
-      margin-bottom: 45px;
-      padding: 7px 20px;
-      border: 1px solid $softer-border;
-      border-radius: 5px;
-      background: white;
-
-
-      &::after {
-        content: '';
-        position: absolute;
-        top: -30px;
-        right: 20px;
-        height: 45px;
-        width: 65px;
-        background: url('/images/homepage/fancy-bullet.png') no-repeat center right;
-      }
-
-      h4 {
-        @extend .h4-styling;
-        margin-bottom: 9px;
-      }
+      font-size: 18px;
+      line-height: 1.5; //Temporary untill typography review.
     }
   }
 }
@@ -97,9 +136,7 @@
 @include mobile {
 
   #about {
-    margin-top: 35px;
-    margin-bottom: 10px;
-    padding: 20px 0;
+    padding: 40px 0;
 
     .mobile-title {
       margin-bottom: 17px;
