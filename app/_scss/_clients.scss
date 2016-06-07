@@ -47,10 +47,13 @@
           font-size: 14px;
           line-height: 1.2em;
 
-          a {
+          p {
             display: inline-block;
             color: $gizra-black;
-            text-decoration: underline;
+          }
+
+          span {
+            font-weight: bold;
           }
         }
 
