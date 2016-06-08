@@ -7,7 +7,7 @@ tags:
 permalink: "/content/drupal-8-attachment-migration"
 author: RoySegall
 layout: post
-image: "/assets/images/posts/drupal-8-migrate/tony-thumb.jpg"
+image: "/assets/images/posts/drupal-8-migrate/thumb.jpg"
 published: true
 ---
 
