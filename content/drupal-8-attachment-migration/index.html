@@ -6,7 +6,7 @@
         
     
 
-<title>Does every page really need to be a node?</title>
+<title>Drupal 8: Migrate Nodes with Attachments Easily</title>
 
         <meta name="description" content="">
         <meta name="keywords" content="">
@@ -66,43 +66,43 @@
 
   
     
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
       
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
     
   
 
@@ -192,8 +192,8 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-10 col-sm-offset-1 post-title">
-          <h1><a href="/content/does-every-page-really-need-be-node/">Does every page really need to be a node? </a></h1>
-          <div class="post-author">By Amitai Burstein</div>
+          <h1><a href="/content/drupal-8-attachment-migration">Drupal 8: Migrate Nodes with Attachments Easily </a></h1>
+          <div class="post-author">By Roy Segall</div>
         </div>
       </div>
       <div class="row">
@@ -201,18 +201,16 @@
     			<div id="post-label">
     		 		<a href="/blog"><span class="label label-default">Gizra Blog</span></a>
     			</div>
-          <div class="date">07 Dec 2009</div>
+          <div class="date">08 Jun 2016</div>
           <section class="author-details">
             <div class="image-wrapper">
-              <img src="/images/team/avatars/amitaibu.a340.jpg" class="img-circle img-responsive">
+              <img src="/images/team/avatars/RoySegall.a616.jpg" class="img-circle img-responsive">
             </div>
             <div class="text-wrapper">
-              <span class="name">Amitai Burstein</span>
+              <span class="name">Roy Segall</span>
               
-                <span class="twitter">(@amitaibu)</span>
-              
-              <div class="title">CTO, Co-Owner</div>
-              <div class="bio">Maintainer of Organic groups, the Message stack, and co-maintainer of Drupal 8's Entity reference. <a href="/content/the-about-story/">The about story</a>.</div>
+              <div class="title">Team Lead</div>
+              <div class="bio">Not afraid of patching Organic groups, Entity reference or the Message stack. Knows how to make tasty Pizza.</div>
             </div>
           </section>
           <div class="tags">
@@ -224,7 +222,11 @@
 
   
     
+      <li><a href="/tags.html#Drupal 8-ref">Drupal 8</a></li>
+    
       <li><a href="/tags.html#Drupal-planet-ref">Drupal-planet</a></li>
+    
+      <li><a href="/tags.html#Migration-ref">Migration</a></li>
     
   
 
@@ -236,34 +238,94 @@
         <div class="col-sm-8">
           <div class="post-content">
 
-              <p>No.
-Let&rsquo;s take the &ldquo;usual&rdquo; home page as an example:</p>
+              <p>Drupal-8-manina is at its highest. Modules are being ported, blog posts are
+being written, and new sites are being coded, so we in Gizra decided to join the
+party.</p>
 
-<ul>
-<li>It doesn&rsquo;t need to have an author</li>
-<li>It doesn&rsquo;t have comments</li>
-<li>It rarely changes (Maybe it has Views in it that change the content that is shown, but the layout and static text don&rsquo;t change)</li>
-</ul>
+<p>We started with a simple site that will replace an existing static site. But we needed
+to migrate node attachments, and we just couldn&rsquo;t find an existing solution. Well,
+it was time to reach out to the community</p>
 
-<p>So we can use <a href="http://drupal.org/project/panels">Panels</a> for that. It also makes deployment easier:</p>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Any
+example of <a href="https://twitter.com/hashtag/Drupal?src=hash">#Drupal</a> 8
+migration of files/ images out there? (including copy from source into public:// )
+</p>&mdash; Amitai Burstein (@amitaibu) <a href="https://twitter.com/amitaibu/status/718441947325677569">April 8, 2016</a></blockquote>
+
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>A few minutes after the tweet was published, we received a great hint from the fine folks at
+<a href="https://evolvingweb.ca/">Evoloving Web</a>. They were already migrating files into Drupal 8
+from Drupal 7, and were kind enough to <a href="https://evolvingweb.ca/blog/bringing-files-along-for-ride-to-d8">blog post</a> about it.</p>
+
+<p>However, we were still missing another piece of the puzzle, as we also wanted to migrate
+files from an outside directory directly into Drupal. I gave my good friend <a href="https://twitter.com/jsacksick">@jsacksick</a> a poke (it&rsquo;s easy, as he sits right in front of me), and he gave me the answer on a silver platter.</p>
+
+<div class="thumbnail">
+  <div class="img-wrapper">
+
+    
+
+    
+      <img src="http://www.gizra.com/assets/images/posts/drupal-8-migrate/image1.jpg">
+    
+
+  </div>
+  
+    <div class="caption">Post has a happy end - we were able to migrate files and attach to a node!</div>
+  
+</div>
 
 <!-- more -->
 
-<ul>
-<li>since the Panels are in code (same as having exported Views), it means we can prepare the Panels page on a development server and easily deploy it on a production server, without copying/ pasting nodes or do some db merge weirdness</li>
-<li>Different layout and content for different roles or languages - checkout our own home page <a href="http://www.gizra.com/">English</a> Vs. <a href="http://www.gizra.com/he">Hebrew</a>. You can see we flip the image and change the text layout - those are just different Panels variants.</li>
-<li>Reusing our tools. We have many websites that have a standard skeleton (home page, about us, services, etc'). Once we have the Panels in code as a module, we can place it in other websites and quickly do the needed adjustment. Hack, we can even do it directly from within the code</li>
-</ul>
+<h2>An example for super heroes</h2>
 
-<p>Ok, one may argue that the client might need to change the home page - &ldquo;If it was a node my client could easily edit it. What then?&rdquo;
-But we argue back:
-<ol>
-<li>Meh. How often does your client _really change the home page?</li>
-<li>If they do need to change it frequently, you can have the Panels page show an existing node - so the client will be able to change that node without changing the Panels itself</li>
-<li>Like Views, that should live in code - if there&rsquo;s some crisis and they _must change the Panels, they can do it manually, and the next day you can deploy a new fixed version, and revert the Panels so it will be served back from code</li>
-</ol></p>
+<p>For this blog post I created a dummy Drupal 8 <a href="https://github.com/RoySegall/comics_migration">installation profile</a> with way too much information about super heroes. The migration module can migrate <a href="https://github.com/RoySegall/comics_migration/tree/master/web/modules/custom/comics_migration/migration_assets/images">some images</a> along with some <a href="https://github.com/RoySegall/comics_migration/blob/master/web/modules/custom/comics_migration/migration_assets/heroes.csv">CSV data</a> about them.</p>
 
-<p>Thanks <a href="http://drupal.org/user/26979">merlinofchaos</a> for yet another great module!</p>
+<p>If you&rsquo;ll look closely you can see that I&rsquo;ve attached an SQL dump with raw tables.
+This raw table will be the source that eventually will migrated into nodes, and you can
+read <a href="http://www.gizra.com/content/migration-best-practices/">here</a> how it was created
+with <a href="https://www.drupal.org/project/csv2sql">csv2sql</a>.</p>
+
+<h2>Basic structure of migration</h2>
+
+<p>The description of the mapping between the source table and the destination node type
+is in a <a href="https://github.com/RoySegall/comics_migration/blob/master/web/modules/custom/comics_migration/config/install/migrate.migration.superheroes.yml">yaml file</a>.</p>
+
+<p>Let&rsquo;s go over the interesting parts of the <code>process</code>:</p>
+<div class="highlight"><pre><code class="yaml language-yaml" data-lang="yaml"><span class="l-Scalar-Plain">process</span><span class="p-Indicator">:</span>
+  <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">plugin</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">default_value</span>
+    <span class="l-Scalar-Plain">default_value</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">super_heroes</span>
+  <span class="l-Scalar-Plain">uid</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">plugin</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">default_value</span>
+    <span class="l-Scalar-Plain">default_value</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">1</span>
+  <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_title</span>
+  <span class="l-Scalar-Plain">field_image</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">source</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_image</span>
+    <span class="l-Scalar-Plain">plugin</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">file_import</span>
+  <span class="l-Scalar-Plain">field_alter_ego</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_alter_ego</span>
+  <span class="s">&#39;body/value&#39;</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_description</span>
+</code></pre></div>
+<p>In Drupal 7, because we wanted to prepare the value before
+populating the entity fields, we did it in a
+<a href="https://github.com/openscholar/openscholar/blob/SCHOLAR-3.x/openscholar/modules/os/modules/os_migrate_demo/handlers/node/project.inc#L33-L38">prepare method</a>.
+In Drupal 8 we have <a href="https://github.com/RoySegall/comics_migration/blob/master/web/modules/custom/comics_migration/src/Plugin/migrate/process/FileImport.php">process plugins</a>.</p>
+
+<p>For example, the <code>default_value</code> plugin will populate the (configurable) field of the entity with a raw value like the name of
+a content type or a user ID, in case we are migrating all the nodes with the same author (e.g. user ID 1).</p>
+
+<p>But we can, of course, have our own logic. In the <a href="https://github.com/RoySegall/comics_migration/blob/master/web/modules/custom/comics_migration/src/Plugin/migrate/process/FileImport.php#L21">transform</a>
+method of the process plugin we can massage our data and return any value which will eventually
+populate the field.</p>
+
+<p>In our case, the <code>transform</code> method is responsible for adding the new file into Drupal using <code>file_unmanaged_copy</code> and friends.</p>
+
+<h2>Conclusion</h2>
+
+<p>Some of the know hows and best practices are still missing from Drupal 8. But they
+can and should be re-learned and re-published. So remember kids, if you ever feel
+frustrated about not finding a solution, always
+reach out to smart community members and then write a post about it, so everybody can profit.</p>
 
 
           </div>
@@ -277,22 +339,15 @@ But we argue back:
       <div class="row">
         <div class="col-xs-4 col-xs-offset-3 previous">
           
-          <a href="/content/hookwidgetsettingsalter-and-pandora/">
+          <a href="/content/gizra-way-webinar-budget-goggles">
             <div class="previous-label">
               <i class="fa fa-chevron-circle-left"></i>
-              Previous<span class="visible-xs"> post</span><span class="hidden-xs">: hook_widget_settings_alter() and Pandora</span>
+              Previous<span class="visible-xs"> post</span><span class="hidden-xs">: The Gizra Way Webinar: Budget Goggles and the Time-Boxed Project</span>
             </div>
           </a>
           
         </div>
         <div class="col-xs-4 next">
-          
-          <a href="/content/outsourcing-kittens/">
-            <div class="next-label">
-              Next<span class="visible-xs"> post</span><span class="hidden-xs">: Outsourcing and Kittens</span>
-              <i class="fa fa-chevron-circle-right"></i>
-            </div>
-          </a>
           
         </div>
       </div>
