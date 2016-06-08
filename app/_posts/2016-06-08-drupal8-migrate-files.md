@@ -18,10 +18,8 @@ being written and new sites are being coded so we in Gizra decided to join the
 party.
 
 We started with a simple site that will replace an existing static site. But we needed
-to migrate node attachments and we just didn't find existing solution. Well,
+to migrate node attachments and we just didn't find an existing solution. Well,
 it was time to reach out to the community
-
-<!-- more -->
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Any
 example of <a href="https://twitter.com/hashtag/Drupal?src=hash">#Drupal</a> 8
@@ -36,6 +34,10 @@ from older Drupal 7, and were kind enough to [blog post](https://evolvingweb.ca/
 However, we were still missing another piece of the puzzle, as we wanted to migrate
 files from an outside directory, directly into Drupal. I gave my good friend [@jsacksick](https://twitter.com/jsacksick) a poke (it's easy, as he sits right in front of me), and he gave me the answer on a silver platter.
 
+{% include thumbnail.html  image_path="assets/images/posts/drupal-8-migrate/image1.jpg" caption="Post has a happy end - we were able to migrate files and attach to a node!" %}
+
+<!-- more -->
+
 ## An example for super heroes
 
 For this blog post I created a dummy Drupal 8 [installation profile](https://github.com/RoySegall/comics_migration) with way too much information about super heroes.
@@ -47,7 +49,7 @@ read [here](http://www.gizra.com/content/migration-best-practices/) how it was c
 with [csv2sql](https://www.drupal.org/project/csv2sql).
 
 ## Basic structure of migration
-{% include thumbnail.html  image_path="assets/images/posts/drupal-8-migrate/files.jpg" caption="It's very easy to migrate files once you know how" %}
+
 The description of the mapping between the source table and the destination node type
 is in a [yaml file](https://github.com/RoySegall/comics_migration/blob/master/web/modules/custom/comics_migration/config/install/migrate.migration.superheroes.yml).
 
