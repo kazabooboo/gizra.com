@@ -21,7 +21,7 @@ and Drupal 8.
 
 ## Organic Groups
 
-First the heroes:
+First the heroes: @RoySegall, @pfrenssen @damiankloip, @chx et all
 
 For years Organic Groups has been one of the proven solutions for multi-sites functionality,
 in the form of one code base, one database and one dashboard to rule them all.
@@ -51,11 +51,9 @@ for the problem is important. Group is actually solving only a subset of the cha
 a wonderful developer.
 
 
-
 ## Message stack
 
-First the heroes:
-
+First the heroes: @RoySegall, @jhedstrom, @mccrodp et all
 
 
 ## Contribution
