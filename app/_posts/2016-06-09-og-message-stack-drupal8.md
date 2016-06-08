@@ -21,7 +21,7 @@ and Drupal 8.
 
 ## Organic Groups
 
-First the heroes: @RoySegall, @pfrenssen @damiankloip, @chx et all
+First the heroes: [@RoySegall](https://www.drupal.org/u/RoySegall), [@pfrenssen](https://www.drupal.org/u/pfrenssen) [@damiankloip](https://www.drupal.org/u/damiankloip), [@chx](https://www.drupal.org/u/chx) et all
 
 For years Organic Groups has been one of the proven solutions for multi-sites functionality,
 in the form of one code base, one database and one dashboard to rule them all.
