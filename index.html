@@ -25,7 +25,7 @@
       <meta name="theme-color" content="#ffffff">
       <!-- End favicon for all platforms -->
 
-      <link rel="stylesheet" href="/css/main.e76f.css"/>
+      <link rel="stylesheet" href="/css/main.f80f.css"/>
       <link href='http://fonts.googleapis.com/css?family=Abril+Fatface&text=gizra' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Hind:400,600,300,500' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600,800' rel='stylesheet' type='text/css'>
@@ -60,7 +60,7 @@
 
     <!-- Main content -->
     <div id="homepage">
-  <header class="header-homepage">
+  <header class="header-homepage" role="banner">
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
@@ -68,6 +68,7 @@
   
 
 <span class="gizra-logo"><a href="/">gizra</a></span>
+<h1 class="sr-only">Gizra</h1>
 <nav id="nav" role="navigation" class="navbar navbar-default">
   <div class="navbar-header">
     <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
@@ -89,24 +90,26 @@
 </nav>
 
           <div class="row">
-          <div id="slogan" class="col-sm-5">
-            <h2>
-              Take a leap of faith with us.
-              <br class="hidden-xs">
-              It&rsquo;s beautiful here.
-            </h2>
-            <div class="sub-slogan">
-            <p>Build a cutting-edge web solution that will make you proud. Seriously.</p>
-            <p>Do it in a transparent, best-practices driven, honest partnership with passionate people.</p>
-            </div>
-            <p class="about-us-story">
-              <sup>*</sup>Read our <a target="_blank" href="/content/the-about-story/">About Story</a> &mdash; It's different.
-            </p>
-            <div class="page-scroll">
-              <div class="scroll-wrapper">
-                <a href="#testimonials" class="smooth-scroll-to">
-                  <i class="fa fa-chevron-circle-down" aria-hidden="true"></i>  
-                </a>
+            <div id="slogan" class="col-sm-5">
+             <h2>
+               Take a leap of faith with us.
+               <br class="hidden-xs">
+               It&rsquo;s beautiful here.
+              </h2>
+              <div class="sub-slogan">
+              <p>Build a cutting-edge web solution that will make you proud. Seriously.</p>
+              <p>Do it in a transparent, best-practices driven, honest partnership with passionate people.</p>
+              </div>
+              <p class="about-us-story">
+                <sup>*</sup>Read our <a target="_blank" href="/content/the-about-story/">About Story</a> &mdash; It's different.
+              </p>
+              <div class="page-scroll hidden-xs">
+                <div class="scroll-wrapper">
+                  <a href="#testimonials" class="smooth-scroll-to">
+                    <span class="sr-only">Our work</span>
+                    <i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -127,63 +130,78 @@
           <a target="_blank" href="http://openscholar.harvard.edu">
             <img src="/images/homepage/code/harvard.6ec5.png" class="img-responsive" alt="OpenScholar">
             <div class="popup-block">
-              <a target="_blank" href="http://openscholar.harvard.edu">OpenScholar</a>, 
-              a publishing solution powering thousands of academic websites.
+              <p>
+                <span>OpenScholar</span>,
+                a publishing solution powering thousands of academic websites.
+              </p>
             </div>
           </a>
         </li>
         <li class="logo">
           <a target="_blank" href="https://docs.acquia.com/commons">
             <img src="/images/homepage/code/acquia.0199.png" class="img-responsive main-block" alt="acquia">
+            <div class="popup-block">
+              <p>
+                Worked together to develop <span>Drupal Commons</span>,
+                a social-focused Drupal distribution.
+              </p>
+            </div>
           </a>
-          <div class="popup-block">
-            Worked together to develop <a target="_blank" href="https://docs.acquia.com/commons">Drupal Commons</a>, 
-            a social-focused Drupal distribution.
-          </div>
         </li>
         <li class="logo">
           <a target="_blank" href="https://commerceguys.com/product/commerce-kickstart">
             <img src="/images/homepage/code/commerce-guys.9c48.png" class="img-responsive" alt="Commerce Guys">
+            <div class="popup-block">
+              <p>
+                Collaborated to build
+                <span>Commerce Kickstart</span>,
+                an eCommerce Drupal Distribution.
+              </p>
+            </div>
           </a>
-          <div class="popup-block">
-            Collaborated to build
-            <a target="_blank" href="https://commerceguys.com/product/commerce-kickstart">Commerce Kickstart</a>, 
-            an eCommerce Drupal Distribution.
-          </div>
         </li>
         <li class="logo">
           <a target="_blank" href="http://capacity4dev.ec.europa.eu">
             <img src="/images/homepage/code/ec.bc01.png" class="img-responsive" alt="European Commission">
+            <div class="popup-block">
+              <p>
+                Built
+                <span>Capacity4Dev</span>
+                and Projects4Dev, which manage international development projects.
+              </p>
+            </div>
           </a>
-          <div class="popup-block">
-            Built
-            <a target="_blank" href="http://capacity4dev.ec.europa.eu">Capacity4Dev</a> 
-            and Projects4Dev, which manage international development projects.
-          </div>
       </li>
         <li class="logo">
           <a target="_blank" href="https://www.grammypro.com/">
             <img src="/images/homepage/code/grammy.a9c3.png" class="img-responsive" alt="The Grammy Awards">
+            <div class="popup-block">
+              <p>
+                <span>GrammyPro.com</span>
+                is powered by the Gizra-developed Organic Groups and Message Stack modules.
+              </p>
+            </div>
           </a>
-          <div class="popup-block">
-            <a target="_blank" href="https://www.grammypro.com/">GrammyPro.com</a>
-            is powered by the Gizra-developed Organic Groups and Message Stack modules.
-          </div>
         </li>
         <li class="logo">
           <img src="/images/homepage/code/wix.30c0.png" class="img-responsive" alt="WiX">
           <div class="popup-block ">
-            Wix hired Gizra to build feed features for its platform, powering over 70 million websites.
+            <p>
+              <span>Wix hired Gizra</span>
+              to build feed features for its platform, powering over 70 million websites.
+            </p>
           </div>
         </li>
         <li class="logo">
           <a target="_blank" href="http://www.whitehouse.gov">
             <img src="/images/homepage/code/white-house.d081.png" class="img-responsive" alt="The White House">
+            <div class="popup-block">
+              <p>
+                <span>WhiteHouse.gov</span> is
+                powered by the Gizra-developed Organic Groups and Message Stack modules.
+              </p>
+            </div>
           </a>
-          <div class="popup-block">
-            <a target="_blank" href="http://www.whitehouse.gov">WhiteHouse.gov</a> is
-            powered by the Gizra-developed Organic Groups and Message Stack modules.
-          </div>
         </li>
       </ul>
     </div>
@@ -277,9 +295,10 @@
             </div>
           </div>
         </div>
-        <div class="page-scroll">
+        <div class="page-scroll hidden-xs">
           <div class="scroll-wrapper">
             <a href="#about" class="smooth-scroll-to">
+              <span class="sr-only">About us</span>
               <i class="fa fa-chevron-circle-down" aria-hidden="true"></i> 
             </a>
           </div>
@@ -312,9 +331,10 @@
           The satisfaction of our clients is found not only in the excellence
           of their web solution, but in the way we get there.
         </p>      
-        <div class="page-scroll">
+        <div class="page-scroll hidden-xs">
           <div class="scroll-wrapper">
             <a href="#gizra-way" class="smooth-scroll-to">
+              <span class="sr-only">The Gizra Way</span>
               <i class="fa fa-chevron-circle-down" aria-hidden="true"></i> 
             </a>
           </div>
@@ -332,22 +352,26 @@
           <div class="col-sm-6">
             <div class="list-group">
               <div class="list-group-item">
-                <h4 class="list-group-item-heading">True Transparency</h4>
-                <p class="list-group-item-text">Our client has full access to the code repositories 
+                <h3 class="list-group-item-heading">True Transparency</h3>
+                <p class="list-group-item-text">
+                  Our client has full access to the code repositories
                   and task tracking systems. This means that all of our internal
-            communications and actions are in full view to the client. We like it this way
-            because it fosters an environment of collaboration and accountability.</p>
+                  communications and actions are in full view to the client. We like it this way
+                  because it fosters an environment of collaboration and accountability.
+                </p>
               </div>
             </div>
           </div>
            <div class="col-sm-6">
             <div class="list-group">
               <div class="list-group-item">
-                <h4 class="list-group-item-heading">Effective Communication</h4>
-                <p class="list-group-item-text">Our client is a member of the team, 
+                <h3 class="list-group-item-heading">Effective Communication</h3>
+                <p class="list-group-item-text">
+                  Our client is a member of the team,
                   interacting directly with developers of all levels.
-            All stakeholders stay up to date on progress, and decision-making occurs in real
-            time according to the client’s needs and priorities.</p>
+                  All stakeholders stay up to date on progress, and decision-making occurs in real
+                  time according to the client’s needs and priorities.
+                </p>
               </div>
             </div>
           </div>
@@ -356,7 +380,7 @@
           <div class="col-sm-6">
             <div class="list-group">
               <div class="list-group-item">
-                <h4 class="list-group-item-heading">Meticulous Execution</h4>
+                <h3 class="list-group-item-heading">Meticulous Execution</h3>
                 <p class="list-group-item-text">A complete deployment and testing system is built 
                   into our projects from day one, growing as the code does. We use
             <a href="http://shoov.io/" target="_blank">Shoov</a>, a Gizra-developed testing toolkit,
@@ -367,7 +391,7 @@
            <div class="col-sm-6">
             <div class="list-group">
               <div class="list-group-item">
-                <h4 class="list-group-item-heading">Investment in Human Assets & Community</h4>
+                <h3 class="list-group-item-heading">Investment in Human Assets &amp; Community</h3>
                 <p class="list-group-item-text">We invest in our employees and the wider community through
             a diligent mentorship program, in-house mechanisms for continuous improvement, and regular
             contributions to Open Source projects.</p>
@@ -499,11 +523,11 @@
         <p class="name">By <a href="/team?member=RoySegall">Roy Segall</a> </p>
       
       <a href="/content/drupal-8-attachment-migration">
-        <img src="/images/team/avatars/RoySegall.a616.jpg" class="img-responsive img-circle avatar grayscale" alt="">
+        <img src="/images/team/avatars/RoySegall.a616.jpg" class="img-responsive img-circle avatar grayscale" alt="Roy Segall">
       </a>
       <p class="date">Jun 8, 2016</p>
     </div>
-    <p class="title" title="Drupal 8: Migrate Nodes with Attachments Easily"><a href="/content/drupal-8-attachment-migration" >Drupal 8: Migrate Nodes with Attachments Easily</a></p>
+    <h3 class="title"><a href="/content/drupal-8-attachment-migration" >Drupal 8: Migrate Nodes with Attachments Easily</a></h3>
   </div>
 </article>
 
@@ -621,11 +645,11 @@
         <p class="name">By <a href="/team?member=IshaDakota">Adam Stewart</a> </p>
       
       <a href="/content/gizra-way-webinar-budget-goggles">
-        <img src="/images/team/avatars/IshaDakota.965c.jpg" class="img-responsive img-circle avatar grayscale" alt="">
+        <img src="/images/team/avatars/IshaDakota.965c.jpg" class="img-responsive img-circle avatar grayscale" alt="Adam Stewart">
       </a>
       <p class="date">Jun 7, 2016</p>
     </div>
-    <p class="title" title="The Gizra Way Webinar: Budget Goggles and the Time-Boxed Project"><a href="/content/gizra-way-webinar-budget-goggles" >The Gizra Way Webinar: Budget Goggles and the Time-Boxed Project</a></p>
+    <h3 class="title"><a href="/content/gizra-way-webinar-budget-goggles" >The Gizra Way Webinar: Budget Goggles and the Time-Boxed Project</a></h3>
   </div>
 </article>
 
@@ -743,11 +767,11 @@
         <p class="name">By <a href="/team?member=kazabooboo">Adar Earon</a> </p>
       
       <a href="/content/12-things-learned-first-drupalcon">
-        <img src="/images/team/avatars/kazabooboo.367b.jpg" class="img-responsive img-circle avatar grayscale" alt="">
+        <img src="/images/team/avatars/kazabooboo.367b.jpg" class="img-responsive img-circle avatar grayscale" alt="Adar Earon">
       </a>
       <p class="date">May 17, 2016</p>
     </div>
-    <p class="title" title="12 Things I learned at my first DrupalCon"><a href="/content/12-things-learned-first-drupalcon" >12 Things I learned at my first DrupalCon</a></p>
+    <h3 class="title"><a href="/content/12-things-learned-first-drupalcon" >12 Things I learned at my first DrupalCon</a></h3>
   </div>
 </article>
 
@@ -764,7 +788,7 @@
     <!--Footer -->
     
   <div id="contact">
-    <footer id="footer">
+    <footer id="footer" role="contentinfo">
       <div class="footer-wrapper">
         <div class="background">
           <div class="container">
@@ -786,16 +810,16 @@
                   </address>
                   <div class="separator social-links">
                     <span class="link github">
-                      <a href="https://github.com/Gizra" target="_blank" title="Gizra's Github Account"><i class="fa fa-github-square"></i></a>
+                      <a href="https://github.com/Gizra" target="_blank"><i class="fa fa-github-square"></i><span class="link-text">Gizra's Github Account</span></a>
                     </span>
                     <span class="link twitter">
-                      <a href="https://twitter.com/gizra_drupal" target="_blank" title="Gizra's Twitter Account"><i class="fa fa-twitter-square"></i></a>
+                      <a href="https://twitter.com/gizra_drupal" target="_blank"><i class="fa fa-twitter-square"></i><span class="link-text">Gizra's Twitter Account</span></a>
                     </span>
                     <span class="link linkedin">
-                      <a href="https://www.linkedin.com/company/gizra-ltd" target="_blank" title="Gizra's LinkedIn Page"><i class="fa fa-linkedin-square"></i></a>
+                      <a href="https://www.linkedin.com/company/gizra-ltd" target="_blank"><i class="fa fa-linkedin-square"></i><span class="link-text">Gizra's LinkedIn Page</span></a>
                     </span>
                     <span class="link facebook">
-                      <a href="https://www.facebook.com/gizraltd/timeline" target="_blank" title="Gizra's Facebook Page"><i class="fa fa-facebook-square"></i></a>
+                      <a href="https://www.facebook.com/gizraltd/timeline" target="_blank"><i class="fa fa-facebook-square"></i><span class="link-text">Gizra's Facebook Page</span></a>
                     </span>
                   </div>
                 </div>
@@ -809,7 +833,7 @@
 
 
 
-    <script src="/js/plugins.c51b.js"></script>
+    <script src="/js/plugins.f180.js"></script>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
 
