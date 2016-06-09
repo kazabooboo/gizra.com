@@ -13,7 +13,6 @@
 #blog-page {
 
   h1.title {
-    text-transform: uppercase;
     @extend .divider-bottom;
     color: $gizra-blue;
     margin-top: 45px;
@@ -58,7 +57,7 @@
 
   @include desktop {
     .post-teaser {
-      height: 350px;
+      height: 400px;
       overflow: hidden;
     }
   }

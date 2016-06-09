@@ -20,7 +20,7 @@
     position: relative;
 
     .name, .date {
-      margin-bottom: 0;
+      margin-bottom: 0.2em;
       font-family: 'Hind', sans-serif;
       font-size: 18px;
 
@@ -98,12 +98,12 @@
 @include desktop {
 
   .blog {
-    .posts >*:nth-of-type(3n+1) {
-      clear: both;
-    }
+    //.posts >*:nth-of-type(3n+1) {
+    //  clear: both;
+    //}
 
     .article .main-image {
-      height: 203px;
+      height: 275px;
     }
   }
 }
