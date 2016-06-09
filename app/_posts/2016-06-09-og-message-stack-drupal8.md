@@ -68,8 +68,19 @@ The heroes: [@RoySegall](https://www.drupal.org/u/RoySegall), [@jhedstrom](https
 The message stack is mostly ported to D8. It's already reached a good place. I'm still not cutting an alpha release, because it still requires polishing and might have a few data structure changes.
 
 There are no big differences here in terms of concepts, although worth mentioning [@bojanz's](https://www.drupal.org/u/bojanz) suggestion to rename `message type` to `message template`.
-Suddenly it makes it much clearer what the intention of `message template` is. 
+Suddenly it makes it much clearer what the intention of `message template` is.
 
-## Contribution
+## On Contribution and Drupal 8
 
-## Drupal 8
+New major releases can always be hard, as you are expected to port all your modules. At once.
+
+It's a process that takes a lot of time, and skills and I'm grateful for having such great community members helping with it.
+
+I'd like to reach out to some community members I was talking with in DrupalCon which told me they felt
+bad they were not porting their modules fast enough. Don't feel bad about it! "Feeling bad" is the on
+of the main causes for burn outs.
+
+Take your time. Do it out of passion, and reach out to the community to help you. It's your module, but if it's used by other, they can and should help you.
+
+In my case, for example, OG7 was written (and re-written) in the days I had one kid and Gizra had about seven employees and a single office. Now days I have three kids, Gizra has over twenty employees sitting in both the Israeli and US office.
+And do you know how I feel about my (Drupal) contribution rate? (Most days) I feel marvelous about it. Because I do it on my own terms (and work time), I'm not burned out, and I still love what I do.
