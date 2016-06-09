@@ -48,8 +48,8 @@ and satisfy your needs, go ahead and use it. For completeness here's my critique
 
 One of the core concepts of Group is that a group isn't a node. It's a `Group` entity. That's fine, also OG
 can have any entity as a group, but I'd argue that 90% of the time your group should be a content.
-Because groups need to have published/ unpublished. Because groups need to have privacy options, and
-even in Drupal 8 with have only `{node_access}` table, not an `{entity_access}`, etc'.
+For example because groups need to have published/ unpublished. Or because groups need to have privacy options, and
+even in Drupal 8 with have only `{node_access}` table, not an `{entity_access}`'.
 
 Entity reference field is used to maintain the relation between group content to group. For some reason in Group it's being stated as a negative aspect, but I still stand behind it. If you know the full power that is behind Core's entity reference and the selection handlers, you'll realize that by using this field it opens up a lot of possibilities for fine grained control.
 
