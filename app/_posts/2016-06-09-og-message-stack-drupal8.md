@@ -79,7 +79,7 @@ New major releases can  be hard, as you are expected to port all of your modules
 
 I'd like to reach out to some community members I was talking with in DrupalCon which told me they felt
 bad they were not porting their modules fast enough: Don't feel bad about it! "Feeling bad" is one
-of the main causes for burn outs. Take your time. Do it out of passion, and reach out to the community to help you. It's your module, but if it's used by other, they can and should help you.
+of the main causes for burn outs. Take your time. Do it out of passion, and reach out to the community to help you. It's your module, but if it's used by others, they can and should help you.
 
 In my case, for example, OG7 was written (and re-written) in the days I had one kid and Gizra had about seven employees and a single office. Now, I have three kids, Gizra has over twenty employees sitting in both the Israel and US office.
-And do you know how I feel about my (Drupal) contribution rate? (Most days) I feel marvelous about it. Because I do it on my own terms (and work time), I'm not burned out, and I still love what I do.
+And do you know how I feel about my (Drupal) contribution rate? (Most days) I feel marvelous about it. Because I do it on my own terms or work time, I'm not burned out, and I still love what I do.
