@@ -13,9 +13,10 @@ image: "/assets/images/posts/og-message-stack-drupal8/thumb.jpg"
 {% include setup %}
 
 Hi geeks! Did the post title get you excited? Great, because OG and Message stack are
-getting closer to being used. I'd like to give an overview about their state, the amazing
+getting closer to being Drupal 8 ready.  
+I'd like to give an overview about their state, the amazing
 community effort around them, and also share some of my personal thoughts about contribution
-and Drupal 8.
+in Drupal 8 area.
 
 <!-- more -->
 
@@ -25,18 +26,18 @@ The heroes: [@RoySegall](https://www.drupal.org/u/RoySegall), [@pfrenssen](https
 
 For years Organic Groups has been one of the proven solutions for multi-sites functionality,
 in the form of one code base, one database and one dashboard to rule them all.
-After so many years and seeing so many different implementations such as Harvard's OpenScholar, OpenAttrium, and many others I'm even more confident OG is doing something right.
+After so many years and seeing so many different implementations such as Harvard's OpenScholar, OpenAttrium, and many others I'm even more confident OG is doing many things right.
 
-Many Of OG7's concepts are being migrated to OG8, but obviously this is also a good time to fix some
-old mistakes.One of the mistakes was treating users and content (i.e. non-user entities) a like. But, well, you know - they are not.
+Most of OG7's concepts are being migrated to OG8, but obviously this is also a good time to fix some
+old mistakes. One of the mistakes was treating users and content (i.e. non-user entities) a like. But, well, you know - they are not. Because when we came to re-think of it, membership really makes sense for users. For example, if the membership state is `active`, `pending` or `blocked` should indeed be applied only to users. So we've changed it:
 
-A reference between a group content and a group is done via an entity reference field with a regular storage - the link between them is simply registered as a row in the DB.
-A reference between a user and a group is also done via an entity reference field, however the field storage is the `OgMembership` entity you know from OG7.
-
-And when you come to think of it, membership really makes sense for users. If the membership state is `active`, `pending` or `blocked` should indeed be applied only to users.
+* A reference between a group content and a group is done via an entity reference field with a default storage. The link between them is simply registered as a row in the DB.
+* A reference between a user and a group is also done via an entity reference field, however the field storage is custom. It's the `OgMembership` entity you know from OG7.
 
 Having this conceptual shift trickles down to the code, and cleans it up quite a bit. To be sure we are not
-breaking anything, we're adding tests. Lots of tests!
+breaking anything, we're adding tests. Lots of tests, with a nice mix of unit test and kernel tests. Hack, we even check extreme cases like arbitrary yet work-life balanced [permissions](https://github.com/amitaibu/og/blob/c2bf4de582105e8c71f52d48c423c98d18fe75bf/tests/src/Unit/PermissionEventTest.php#L389-L390) :)
+
+If you want to jump in and help, development is happening on a temporary [GitHub repo](https://github.com/amitaibu/og).
 
 ### Group module
 
