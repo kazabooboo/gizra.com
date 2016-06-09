@@ -52,7 +52,7 @@ can have any entity as a group, but I'd argue that 90% of the time your group sh
 Because more often than not groups need to have published/ unpublished. Or because groups need to have privacy options, and
 even in Drupal 8 with have only `{node_access}` table, not an `{entity_access}`'.
 
-Entity reference field is used to maintain the relation between group content to group. For some reason in Group it's being stated as a negative aspect, but I still stand behind it. If you know the full power that is behind Core's entity reference and the selection handlers, you'll realize that by using this field it opens up a lot of possibilities for fine grained control.
+Entity reference field is used to maintain the relation between group content to group. For some reason in Group it's being stated as a negative aspect, but I still stand behind it. If you know the full power that is behind Core's entity reference and its selection handlers, you'll realize that by using this field it opens up a lot of possibilities for fine grained control.
 
 Furthermore, there are quite a few cases where a single group content should be attached to multiple groups. This is where the power of OG kicks in, doing all the heavy lifting of making sure permissions
 are being handled correctly. I can assure you this is not a trivial task.
