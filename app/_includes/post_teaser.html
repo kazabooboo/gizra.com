@@ -32,10 +32,10 @@
       <p class="name">By {{ author.name }} </p>
       {% endif %}
       <a href="{{ post.url }}">
-        <img src="/images/team/avatars/{{ author.avatar }}" class="img-responsive img-circle avatar grayscale" alt="">
+        <img src="/images/team/avatars/{{ author.avatar }}" class="img-responsive img-circle avatar grayscale" alt="{{ author.name }}">
       </a>
       <p class="date">{{ post.date | date: "%b %-d, %Y" }}</p>
     </div>
-    <p class="title" title="{{ post.title }}"><a href="{{ post.url }}" >{{ post.title }}</a></p>
+    <h3 class="title"><a href="{{ post.url }}" >{{ post.title }}</a></h3>
   </div>
 </article>

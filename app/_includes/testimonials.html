@@ -1,9 +1,10 @@
-<section id="testimonials" class="hidden-xs">
+<section id="testimonials">
   <div class="container">
     <div class="row">
-      <div class="col-sm-12 narrow">
+      <div class="col-sm-10 col-sm-offset-1">
+        {% include clients.html %}
         <!-- Testimonials -->
-        <div id="carousel-testimonials" class="carousel slide" data-ride="carousel">
+        <div id="carousel-testimonials" class="carousel slide hidden-xs" data-ride="carousel">
           <!-- Indicators -->
           <ol class="carousel-indicators">
             <li data-target="#carousel-testimonials" data-slide-to="0" class="active"></li>
@@ -40,7 +41,7 @@
                 <img src="/images/homepage/testimonials/national-library.png" alt="The National Library of Israel">
                 <p class="blockquote">
                   Gizra translated our wishes to technical specifications and to a working product and did
-                  so in a timely manner and within budget. Not less important, they remained attentive and captured the
+                  so in a timely manner and within budget... and captured the
                   needs arising from the different partners.
                 </p>
                 <p class="name">Ido Ivri</p>
@@ -50,7 +51,14 @@
             </div>
           </div>
         </div>
-
+        <div class="page-scroll hidden-xs">
+          <div class="scroll-wrapper">
+            <a href="#about" class="smooth-scroll-to">
+              <span class="sr-only">About us</span>
+              <i class="fa fa-chevron-circle-down" aria-hidden="true"></i> 
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
