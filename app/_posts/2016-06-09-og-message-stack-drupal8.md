@@ -7,7 +7,7 @@ tags:
   - "Drupal-planet"
 permalink: "/content/og-message-stack-drupal8"
 layout: post
-image: "/assets/images/posts/og-message-stack-drupal8"/thumb.jpg"
+image: "/assets/images/posts/og-message-stack-drupal8/thumb.jpg"
 ---
 
 {% include setup %}
