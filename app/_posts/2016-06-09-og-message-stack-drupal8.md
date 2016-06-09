@@ -18,8 +18,6 @@ I'd like to give an overview about their state, the amazing
 community effort around them, and also share some of my personal thoughts about contribution
 in Drupal 8 area.
 
-<!-- more -->
-
 ## Organic Groups
 
 The heroes: [@RoySegall](https://www.drupal.org/u/RoySegall), [@pfrenssen](https://www.drupal.org/u/pfrenssen) [@damiankloip](https://www.drupal.org/u/damiankloip), [@chx](https://www.drupal.org/u/chx) et all
@@ -30,6 +28,8 @@ After so many years and seeing so many different implementations such as Harvard
 
 Most of OG7's concepts are being migrated to OG8, but obviously this is also a good time to fix some
 old mistakes. One of the mistakes was treating users and content (i.e. non-user entities) a like. But, well, you know - they are not. Because when we came to re-think of it, membership really makes sense for users. For example, if the membership state is `active`, `pending` or `blocked` should indeed be applied only to users. So we've changed it:
+
+<!-- more -->
 
 * A reference between a group content and a group is done via an entity reference field with a default storage. The link between them is simply registered as a row in the DB.
 * A reference between a user and a group is also done via an entity reference field, however the field storage is custom. It's the `OgMembership` entity you know from OG7.
