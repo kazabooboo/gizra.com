@@ -28,7 +28,7 @@ in the form of one code base, one database, and one dashboard to rule them all.
 After so many years and seeing so many different implementations, such as Harvard's OpenScholar, OpenAtrium, and many others, I'm even more confident OG is doing many things right.
 
 Most of OG7's concepts are being migrated to OG8, but obviously this is also a good time to fix some
-old mistakes. One of the mistakes was treating users and content (i.e. non-user entities) alike. But, well, you know - they are not. Because when we came to re-think of it, membership really makes sense for users. For example, if the membership state is `active`, `pending` or `blocked`, that should indeed be applied only to users. So we've changed it:
+old mistakes. One of the mistakes was treating users and content (i.e. non-user entities) alike. But, well, you know - they are not. Because when we came to re-think of it, membership really makes sense only for users. For example, if the membership state is `active`, `pending` or `blocked`, that should indeed be applied only to users. So we've changed it:
 
 <!-- more -->
 
