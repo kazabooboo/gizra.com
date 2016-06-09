@@ -11,14 +11,17 @@
 }
 
 #blog-page {
+  margin: 40px 0;
 
   h1.title {
+    font-family: "Raleway", sans-serif;
+    font-size: 47.123px;
     @extend .divider-bottom;
     color: $gizra-blue;
-    margin-top: 45px;
     margin-bottom: 30px;
     padding-bottom: 20px;
-  } 
+    font-weight: bold;
+    } 
 
   #pager {
     list-style: none;
