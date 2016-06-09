@@ -1,5 +1,5 @@
 ---
-title: "OG and Message Stack in Drupal 8"
+title: "Organic Groups and Message Stack in Drupal 8"
 keywords: Organic Groups, Drupal 8
 tags:
   - Organic groups
@@ -12,7 +12,7 @@ image: "/assets/images/posts/og-message-stack-drupal8/thumb.jpg"
 
 {% include setup %}
 
-Hi geeks! Did the post title get you excited? Great, because OG and Message stack are
+Hi geeks! Did the post title get you excited? Great, because Organic Groups (OG) and Message stack are
 getting closer to being Drupal 8 ready.  
 
 I'd like to give an overview about their state, the amazing
