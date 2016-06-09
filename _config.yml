@@ -29,7 +29,7 @@ pygments: true
 title : Gizra
 excerpt_separator: "<!-- more -->"
 
-paginate: 9
+paginate: 10
 paginate_path: "blog/page:num"
 
 url: http://www.gizra.com

@@ -3,6 +3,7 @@
 
   .post-teaser {
     @extend .soft-box;
+    box-shadow: none;
     position: relative;
     margin-bottom: 28px;
     padding-top: $spacing;
@@ -16,25 +17,17 @@
   }
 
   .author-details {
-    margin-bottom: 10px;
     position: relative;
 
-    .name {
-      margin-bottom: 5px;
-      font-family: 'Raleway', sans-serif;
-      font-size: 1em;
-      font-weight: bolder;
-      letter-spacing: 0.03em;
+    .name, .date {
+      margin-bottom: 0.2em;
+      font-family: 'Hind', sans-serif;
+      font-size: 18px;
 
       a {
         color: $gizra-orange;
         text-decoration: none;
       }
-    }
-
-    .date {
-      margin-bottom: 5px;
-      font-size: 1.1em;
 
       i {
         margin-right: 5px;
@@ -77,10 +70,14 @@
 
     .title {
       @extend .h1-styling;
-      margin-bottom: 0;
+      font-family: "Raleway", sans-serif;
+      margin-top: 0;
+      margin-bottom: .2em;
       text-transform: none;
-      line-height: 1.35em;
-      font-size: 1.4em;
+      line-height: 1.2em;
+      font-size: 21px;
+      font-weight: 600;
+      color: $gizra-blue;
     }
   }
 
@@ -103,12 +100,12 @@
 @include desktop {
 
   .blog {
-    .posts >*:nth-of-type(3n+1) {
-      clear: both;
-    }
+    //.posts >*:nth-of-type(3n+1) {
+    //  clear: both;
+    //}
 
     .article .main-image {
-      height: 203px;
+      height: 275px;
     }
   }
 }

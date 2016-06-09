@@ -85,6 +85,10 @@
   }
 
   .blog {
+    h3.title a {
+      color: $gizra-blue;
+    }
+
     h2.title {
       font-family: "Raleway", sans-serif;
       font-size: 47.123px;
