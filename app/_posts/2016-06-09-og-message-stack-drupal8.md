@@ -71,6 +71,8 @@ The message stack is mostly ported to D8. It's already reached a good place. I'm
 There are no big differences here in terms of concepts, although worth mentioning [@bojanz's](https://www.drupal.org/u/bojanz) suggestion to rename `message type` to `message template`.
 Suddenly it makes it much clearer what the intention of `message template` is.
 
+If you would like to contribute you are most welcome to the repos: [Message](https://github.com/Gizra/message), [Message notify](https://github.com/Gizra/message_notify) and [Message subscribe](https://github.com/Gizra/message_subscribe)
+
 ## On Contribution and Drupal 8
 
 New major releases can always be hard, as you are expected to port all your modules. At once.
