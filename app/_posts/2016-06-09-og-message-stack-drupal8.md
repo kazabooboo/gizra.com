@@ -35,6 +35,8 @@ old mistakes. One of the mistakes was treating users and content (i.e. non-user 
 * A reference between a group content and a group is done via an entity reference field with a default storage. The link between them is simply registered as a row in the DB.
 * A reference between a user and a group is also done via an entity reference field, however the field storage is custom. It's the `OgMembership` entity you know from OG7.
 
+Both those references are done through core's entity reference. This opens up a lot of possibilities for fine-grained control, thank's to the selection handler concept.
+
 Having this conceptual shift trickles down to the code, and cleans it up quite a bit. To be sure we are not
 breaking anything, we're adding tests. Lots of tests, with a nice mix of unit and kernel tests. Heck, we even check extreme cases like arbitrary, yet work-life balanced [permissions](https://github.com/amitaibu/og/blob/c2bf4de582105e8c71f52d48c423c98d18fe75bf/tests/src/Unit/PermissionEventTest.php#L389-L390) :)
 
@@ -52,8 +54,6 @@ One of the core concepts of Group is that a group isn't a node. It's a `Group` e
 can have any entity as a group, but I'd argue that 90% of the time your group should be content.
 Because more often than not, groups need to have published/unpublished status. Or because groups need to have privacy options, and
 even in Drupal 8 we have only `{node_access}` table, not an `{entity_access}`.
-
-Entity reference field is used to maintain the relation from group content to group. I think some see this as a negative aspect, but I still stand behind it. If you know the full power that is behind Core's entity reference and its selection handlers, you'll realize that by using this field it opens up a lot of possibilities for fine-grained control.
 
 Furthermore, there are quite a few cases where a single group content should be attached to multiple groups. This is where the power of OG kicks in, doing all the heavy lifting of making sure permissions
 are being handled correctly. I can assure you this is not a trivial task.
