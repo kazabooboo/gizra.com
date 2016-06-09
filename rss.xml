@@ -4,10 +4,38 @@
     <description></description>
     <title>Gizra</title>
     <link>http://www.gizra.com</link>
-    <lastBuildDate>Thu, 09 Jun 2016 09:25:42 +0300</lastBuildDate>
-    <pubDate>Thu, 09 Jun 2016 09:25:42 +0300</pubDate>
+    <lastBuildDate>Thu, 09 Jun 2016 16:07:02 +0300</lastBuildDate>
+    <pubDate>Thu, 09 Jun 2016 16:07:02 +0300</pubDate>
     <ttl>1800</ttl>
 
+    
+      <item>
+        <title>OG and Message Stack in Drupal 8</title>
+        <description>
+          &lt;p&gt;Hi geeks! Did the post title get you excited? Great, because OG and Message stack are
+getting closer to being Drupal 8 ready.  &lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;d like to give an overview about their state, the amazing
+community effort around them, and also share some of my personal thoughts about contribution
+to Drupal 8 in general.&lt;/p&gt;
+
+&lt;h2&gt;Organic Groups&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;The heroes:&lt;/strong&gt; &lt;a href=&quot;https://www.drupal.org/u/RoySegall&quot;&gt;@RoySegall&lt;/a&gt;, &lt;a href=&quot;https://www.drupal.org/u/pfrenssen&quot;&gt;@pfrenssen&lt;/a&gt; &lt;a href=&quot;https://www.drupal.org/u/damiankloip&quot;&gt;@damiankloip&lt;/a&gt;, &lt;a href=&quot;https://www.drupal.org/u/chx&quot;&gt;@chx&lt;/a&gt; et al.&lt;/p&gt;
+
+&lt;p&gt;For years Organic Groups has been one of the proven solutions for multi-sites functionality,
+in the form of one code base, one database, and one dashboard to rule them all.
+After so many years and seeing so many different implementations, such as Harvard&amp;rsquo;s OpenScholar, OpenAtrium, and many others, I&amp;rsquo;m even more confident OG is doing many things right.&lt;/p&gt;
+
+&lt;p&gt;Most of OG7&amp;rsquo;s concepts are being migrated to OG8, but obviously this is also a good time to fix some
+old mistakes. One of the mistakes was treating users and content (i.e. non-user entities) alike. But, well, you know - they are not. Because when we came to re-think of it, membership really makes sense only for users. For example, if the membership state is &lt;code&gt;active&lt;/code&gt;, &lt;code&gt;pending&lt;/code&gt; or &lt;code&gt;blocked&lt;/code&gt;, that should indeed be applied only to users. So we&amp;rsquo;ve changed it:&lt;/p&gt;
+
+          &lt;p&gt;&lt;a href=&quot;http://www.gizra.com/content/og-message-stack-drupal8/&quot;&gt;Continue reading…&lt;/a&gt;&lt;/p&gt;
+        </description>
+        <link>http://www.gizra.com/content/og-message-stack-drupal8</link>
+        <guid>http://www.gizra.com/content/og-message-stack-drupal8</guid>
+        <pubDate>Thu, 09 Jun 2016 00:00:00 +0300</pubDate>
+      </item>
     
       <item>
         <title>Drupal 8: Migrate Nodes with Attachments Easily</title>

@@ -6,10 +6,10 @@
         
     
 
-<title>Drupal 8: Migrate Nodes with Attachments Easily</title>
+<title>OG and Message Stack in Drupal 8</title>
 
         <meta name="description" content="">
-        <meta name="keywords" content="">
+        <meta name="keywords" content="Organic Groups, Drupal 8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
       <!-- Favicon for all platforms -->
@@ -66,43 +66,43 @@
 
   
     
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
       
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
     
   
 
@@ -193,8 +193,8 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-10 col-sm-offset-1 post-title">
-          <h1><a href="/content/drupal-8-attachment-migration">Drupal 8: Migrate Nodes with Attachments Easily </a></h1>
-          <div class="post-author">By Roy Segall</div>
+          <h1><a href="/content/og-message-stack-drupal8">OG and Message Stack in Drupal 8 </a></h1>
+          <div class="post-author">By Amitai Burstein</div>
         </div>
       </div>
       <div class="row">
@@ -202,16 +202,18 @@
     			<div id="post-label">
     		 		<a href="/blog"><span class="label label-default">Gizra Blog</span></a>
     			</div>
-          <div class="date">08 Jun 2016</div>
+          <div class="date">09 Jun 2016</div>
           <section class="author-details">
             <div class="image-wrapper">
-              <img src="/images/team/avatars/RoySegall.c400.jpg" class="img-circle img-responsive">
+              <img src="/images/team/avatars/amitaibu.42a1.jpg" class="img-circle img-responsive">
             </div>
             <div class="text-wrapper">
-              <span class="name">Roy Segall</span>
+              <span class="name">Amitai Burstein</span>
               
-              <div class="title">Team Lead</div>
-              <div class="bio">Not afraid of patching Organic groups, Entity reference or the Message stack. Knows how to make tasty Pizza.</div>
+                <span class="twitter">(@amitaibu)</span>
+              
+              <div class="title">CTO, Co-Owner</div>
+              <div class="bio">Maintainer of Organic groups, the Message stack, and co-maintainer of Drupal 8's Entity reference. <a href="/content/the-about-story/">The about story</a>.</div>
             </div>
           </section>
           <div class="tags">
@@ -223,11 +225,11 @@
 
   
     
-      <li><a href="/tags.html#Drupal 8-ref">Drupal 8</a></li>
+      <li><a href="/tags.html#Organic groups-ref">Organic groups</a></li>
+    
+      <li><a href="/tags.html#Message stack-ref">Message stack</a></li>
     
       <li><a href="/tags.html#Drupal-planet-ref">Drupal-planet</a></li>
-    
-      <li><a href="/tags.html#Migration-ref">Migration</a></li>
     
   
 
@@ -239,94 +241,78 @@
         <div class="col-sm-8">
           <div class="post-content">
 
-              <p>Drupal-8-manina is at its highest. Modules are being ported, blog posts are
-being written, and new sites are being coded, so we in Gizra decided to join the
-party.</p>
+              <p>Hi geeks! Did the post title get you excited? Great, because OG and Message stack are
+getting closer to being Drupal 8 ready.  </p>
 
-<p>We started with a simple site that will replace an existing static site. But we needed
-to migrate node attachments, and we just couldn&rsquo;t find an existing solution. Well,
-it was time to reach out to the community</p>
+<p>I&rsquo;d like to give an overview about their state, the amazing
+community effort around them, and also share some of my personal thoughts about contribution
+to Drupal 8 in general.</p>
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Any
-example of <a href="https://twitter.com/hashtag/Drupal?src=hash">#Drupal</a> 8
-migration of files/ images out there? (including copy from source into public:// )
-</p>&mdash; Amitai Burstein (@amitaibu) <a href="https://twitter.com/amitaibu/status/718441947325677569">April 8, 2016</a></blockquote>
+<h2>Organic Groups</h2>
 
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p><strong>The heroes:</strong> <a href="https://www.drupal.org/u/RoySegall">@RoySegall</a>, <a href="https://www.drupal.org/u/pfrenssen">@pfrenssen</a> <a href="https://www.drupal.org/u/damiankloip">@damiankloip</a>, <a href="https://www.drupal.org/u/chx">@chx</a> et al.</p>
 
-<p>A few minutes after the tweet was published, we received a great hint from the fine folks at
-<a href="https://evolvingweb.ca/">Evoloving Web</a>. They were already migrating files into Drupal 8
-from Drupal 7, and were kind enough to <a href="https://evolvingweb.ca/blog/bringing-files-along-for-ride-to-d8">blog post</a> about it.</p>
+<p>For years Organic Groups has been one of the proven solutions for multi-sites functionality,
+in the form of one code base, one database, and one dashboard to rule them all.
+After so many years and seeing so many different implementations, such as Harvard&rsquo;s OpenScholar, OpenAtrium, and many others, I&rsquo;m even more confident OG is doing many things right.</p>
 
-<p>However, we were still missing another piece of the puzzle, as we also wanted to migrate
-files from an outside directory directly into Drupal. I gave my good friend <a href="https://twitter.com/jsacksick">@jsacksick</a> a poke (it&rsquo;s easy, as he sits right in front of me), and he gave me the answer on a silver platter.</p>
-
-<div class="thumbnail">
-  <div class="img-wrapper">
-
-    
-
-    
-      <img src="http://www.gizra.com/assets/images/posts/drupal-8-migrate/image1.jpg">
-    
-
-  </div>
-  
-    <div class="caption">Post has a happy end - we were able to migrate files and attach to a node!</div>
-  
-</div>
+<p>Most of OG7&rsquo;s concepts are being migrated to OG8, but obviously this is also a good time to fix some
+old mistakes. One of the mistakes was treating users and content (i.e. non-user entities) alike. But, well, you know - they are not. Because when we came to re-think of it, membership really makes sense only for users. For example, if the membership state is <code>active</code>, <code>pending</code> or <code>blocked</code>, that should indeed be applied only to users. So we&rsquo;ve changed it:</p>
 
 <!-- more -->
 
-<h2>An example for super heroes</h2>
+<ul>
+<li>A reference between a group content and a group is done via an entity reference field with a default storage. The link between them is simply registered as a row in the DB.</li>
+<li>A reference between a user and a group is also done via an entity reference field, however the field storage is custom. It&rsquo;s the <code>OgMembership</code> entity you know from OG7.</li>
+</ul>
 
-<p>For this blog post I created a dummy Drupal 8 <a href="https://github.com/RoySegall/comics_migration">installation profile</a> with way too much information about super heroes. The migration module can migrate <a href="https://github.com/RoySegall/comics_migration/tree/master/web/modules/custom/comics_migration/migration_assets/images">some images</a> along with some <a href="https://github.com/RoySegall/comics_migration/blob/master/web/modules/custom/comics_migration/migration_assets/heroes.csv">CSV data</a> about them.</p>
+<p>Both those references are done through core&rsquo;s entity reference. This opens up a lot of possibilities for fine-grained control, thank&rsquo;s to the selection handler concept.</p>
 
-<p>If you&rsquo;ll look closely you can see that I&rsquo;ve attached an SQL dump with raw tables.
-This raw table will be the source that eventually will migrated into nodes, and you can
-read <a href="http://www.gizra.com/content/migration-best-practices/">here</a> how it was created
-with <a href="https://www.drupal.org/project/csv2sql">csv2sql</a>.</p>
+<p>Having this conceptual shift trickles down to the code, and cleans it up quite a bit. To be sure we are not
+breaking anything, we&rsquo;re adding tests. Lots of tests, with a nice mix of unit and kernel tests. Heck, we even check extreme cases like arbitrary, yet work-life balanced <a href="https://github.com/amitaibu/og/blob/c2bf4de582105e8c71f52d48c423c98d18fe75bf/tests/src/Unit/PermissionEventTest.php#L389-L390">permissions</a> :)</p>
 
-<h2>Basic structure of migration</h2>
+<p>If you want to jump in and help, development is happening on a temporary <a href="https://github.com/amitaibu/og">GitHub repo</a>.</p>
 
-<p>The description of the mapping between the source table and the destination node type
-is in a <a href="https://github.com/RoySegall/comics_migration/blob/master/web/modules/custom/comics_migration/config/install/migrate.migration.superheroes.yml">yaml file</a>.</p>
+<h3>Group module</h3>
 
-<p>Let&rsquo;s go over the interesting parts of the <code>process</code>:</p>
-<div class="highlight"><pre><code class="yaml language-yaml" data-lang="yaml"><span class="l-Scalar-Plain">process</span><span class="p-Indicator">:</span>
-  <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span>
-    <span class="l-Scalar-Plain">plugin</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">default_value</span>
-    <span class="l-Scalar-Plain">default_value</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">super_heroes</span>
-  <span class="l-Scalar-Plain">uid</span><span class="p-Indicator">:</span>
-    <span class="l-Scalar-Plain">plugin</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">default_value</span>
-    <span class="l-Scalar-Plain">default_value</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">1</span>
-  <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_title</span>
-  <span class="l-Scalar-Plain">field_image</span><span class="p-Indicator">:</span>
-    <span class="l-Scalar-Plain">source</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_image</span>
-    <span class="l-Scalar-Plain">plugin</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">file_import</span>
-  <span class="l-Scalar-Plain">field_alter_ego</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_alter_ego</span>
-  <span class="s">&#39;body/value&#39;</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">_description</span>
-</code></pre></div>
-<p>In Drupal 7, because we wanted to prepare the value before
-populating the entity fields, we did it in a
-<a href="https://github.com/openscholar/openscholar/blob/SCHOLAR-3.x/openscholar/modules/os/modules/os_migrate_demo/handlers/node/project.inc#L33-L38">prepare method</a>.
-In Drupal 8 we have <a href="https://github.com/RoySegall/comics_migration/blob/master/web/modules/custom/comics_migration/src/Plugin/migrate/process/FileImport.php">process plugins</a>.</p>
+<p>At DrupalCon, a few people asked for my opinion on the <a href="https://www.drupal.org/project/group">Group</a> module. I&rsquo;m happy to say that none of them
+were surprised that I was very positive about it - which is probably another great case for open source.</p>
 
-<p>For example, the <code>default_value</code> plugin will populate the (configurable) field of the entity with a raw value like the name of
-a content type or a user ID, in case we are migrating all the nodes with the same author (e.g. user ID 1).</p>
+<p>So to repeat the answer I gave back in New Orleans, if Group is working for you,
+and satisfies your needs, go ahead and use it. For completeness here&rsquo;s my critique on some of it&rsquo;s core concepts:</p>
 
-<p>But we can, of course, have our own logic. In the <a href="https://github.com/RoySegall/comics_migration/blob/master/web/modules/custom/comics_migration/src/Plugin/migrate/process/FileImport.php#L21">transform</a>
-method of the process plugin we can massage our data and return any value which will eventually
-populate the field.</p>
+<p>One of the core concepts of Group is that a group isn&rsquo;t a node. It&rsquo;s a <code>Group</code> entity. That&rsquo;s fine, also OG
+can have any entity as a group, but I&rsquo;d argue that 90% of the time your group should be content.
+Because more often than not, groups need to have published/unpublished status. Or because groups need to have privacy options, and
+even in Drupal 8 we have only <code>{node_access}</code> table, not an <code>{entity_access}</code>.</p>
 
-<p>In our case, the <code>transform</code> method is responsible for adding the new file into Drupal using <code>file_unmanaged_copy</code> and friends.</p>
+<p>Furthermore, there are quite a few cases where a single group content should be attached to multiple groups. This is where the power of OG kicks in, doing all the heavy lifting of making sure permissions
+are being handled correctly. I can assure you this is not a trivial task.</p>
 
-<h2>Conclusion</h2>
+<p>OG alternatives have always been there, and choosing the right tool
+for the problem is important. Group is actually solving a subset of the challenges OG deals with. If it works for you, go ahead and use it. I know you&rsquo;ll be in good hands with it because Group&rsquo;s author <a href="https://www.drupal.org/u/kristiaanvandeneynde">@kristiaanvandeneynde</a> is a great person and a wonderful developer.</p>
 
-<p>Some of the know hows and best practices are still missing from Drupal 8. But they
-can and should be re-learned and re-published. So remember kids, if you ever feel
-frustrated about not finding a solution, always
-reach out to smart community members and then write a post about it, so everybody can profit.</p>
+<h2>Message stack</h2>
+
+<p><strong>The heroes:</strong> <a href="https://www.drupal.org/u/RoySegall">@RoySegall</a>, <a href="https://www.drupal.org/u/jhedstrom">@jhedstrom</a>, <a href="https://www.drupal.org/u/mccrodp">@mccrodp</a> et al.</p>
+
+<p>The message stack is mostly ported to D8, and it has already reached a good place. I&rsquo;m still not cutting an alpha release, because it  requires polishing and might have a few data structure changes.</p>
+
+<p>There are no big differences here in terms of concepts, although worth mentioning <a href="https://www.drupal.org/u/bojanz">@bojanz&rsquo;s</a> suggestion to rename <code>message type</code> to <code>message template</code>.
+Suddenly it makes it much clearer what the intention of <code>message template</code> is.</p>
+
+<p>If you would like to contribute you are most welcome to the repos: <a href="https://github.com/Gizra/message">Message</a>, <a href="https://github.com/Gizra/message_notify">Message notify</a> and <a href="https://github.com/Gizra/message_subscribe">Message subscribe</a></p>
+
+<h2>On Contribution and Drupal 8</h2>
+
+<p>New major releases can  be hard, as you are expected to port all of your modules. At once. It&rsquo;s a process that takes a lot of time, and skills, and I&rsquo;m grateful for having such great community members helping with it.</p>
+
+<p>I&rsquo;d like to reach out to some community members I was talking with in DrupalCon which told me they felt
+bad they were not porting their modules fast enough: Don&rsquo;t feel bad about it! &ldquo;Feeling bad&rdquo; is one
+of the main causes for burn outs. Take your time. Do it out of passion, and reach out to the community to help you. It&rsquo;s your module, but if it&rsquo;s used by others, they can and should help you.</p>
+
+<p>In my case, for example, OG7 was written (and re-written) in the days I had one kid and Gizra had about seven employees and a single office. Now, I have three kids, Gizra has over twenty employees sitting in both the Israel and US office.
+And do you know how I feel about my (Drupal) contribution rate? (Most days) I feel marvelous about it. Because I do it on my own terms or work time, I&rsquo;m not burned out, and I still love what I do.</p>
 
 
           </div>
@@ -340,22 +326,15 @@ reach out to smart community members and then write a post about it, so everybod
       <div class="row">
         <div class="col-xs-4 col-xs-offset-3 previous">
           
-          <a href="/content/gizra-way-webinar-budget-goggles">
+          <a href="/content/drupal-8-attachment-migration">
             <div class="previous-label">
               <i class="fa fa-chevron-circle-left"></i>
-              Previous<span class="visible-xs"> post</span><span class="hidden-xs">: The Gizra Way Webinar: Budget Goggles and the Time-Boxed Project</span>
+              Previous<span class="visible-xs"> post</span><span class="hidden-xs">: Drupal 8: Migrate Nodes with Attachments Easily</span>
             </div>
           </a>
           
         </div>
         <div class="col-xs-4 next">
-          
-          <a href="/content/og-message-stack-drupal8">
-            <div class="next-label">
-              Next<span class="visible-xs"> post</span><span class="hidden-xs">: OG and Message Stack in Drupal 8</span>
-              <i class="fa fa-chevron-circle-right"></i>
-            </div>
-          </a>
           
         </div>
       </div>
