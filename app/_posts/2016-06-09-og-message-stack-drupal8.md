@@ -44,7 +44,7 @@ In DrupalCon a few people asked for my opinion on the [Group](https://www.drupal
 were surprised that I was very positive about it - which is probably another great case for OpenSource.
 
 So to repeat the answer I gave back in New Orleans, if Group is working for you,
-and satisfy your needs, go ahead and use it. I do have my critique on some of it's core concepts:
+and satisfy your needs, go ahead and use it. For completeness here's my critique on some of it's core concepts:
 
 One of the core concepts of Group is that a group isn't a node. It's a `Group` entity. That's fine, also OG
 can have any entity as a group, but I'd argue that 90% of the time your group should be a content.
