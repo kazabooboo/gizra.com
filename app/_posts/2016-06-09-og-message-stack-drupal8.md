@@ -42,7 +42,7 @@ If you want to jump in and help, development is happening on a temporary [GitHub
 ### Group module
 
 In DrupalCon a few people asked for my opinion on the [Group](https://www.drupal.org/project/group) module. I'm happy to say that none of them
-were surprised that I was very positive about it - which is probably another great case for OpenSource.
+were surprised that I was very positive about it - which is probably another great case for open source.
 
 So to repeat the answer I gave back in New Orleans, if Group is working for you,
 and satisfy your needs, go ahead and use it. For completeness here's my critique on some of it's core concepts:
