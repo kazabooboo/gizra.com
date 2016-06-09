@@ -21,7 +21,7 @@ and Drupal 8.
 
 ## Organic Groups
 
-First the heroes: [@RoySegall](https://www.drupal.org/u/RoySegall), [@pfrenssen](https://www.drupal.org/u/pfrenssen) [@damiankloip](https://www.drupal.org/u/damiankloip), [@chx](https://www.drupal.org/u/chx) et all
+The heroes: [@RoySegall](https://www.drupal.org/u/RoySegall), [@pfrenssen](https://www.drupal.org/u/pfrenssen) [@damiankloip](https://www.drupal.org/u/damiankloip), [@chx](https://www.drupal.org/u/chx) et all
 
 For years Organic Groups has been one of the proven solutions for multi-sites functionality,
 in the form of one code base, one database and one dashboard to rule them all.
@@ -63,8 +63,12 @@ a wonderful developer.
 
 ## Message stack
 
-First the heroes: [@RoySegall](https://www.drupal.org/u/RoySegall), [@jhedstrom](https://www.drupal.org/u/jhedstrom), [@mccrodp](https://www.drupal.org/u/mccrodp) et all
+The heroes: [@RoySegall](https://www.drupal.org/u/RoySegall), [@jhedstrom](https://www.drupal.org/u/jhedstrom), [@mccrodp](https://www.drupal.org/u/mccrodp) et all
 
+The message stack is mostly ported to D8. It's already reached a good place. I'm still not cutting an alpha release, because it still requires polishing and might have a few data structure changes.
+
+There are no big differences here in terms of concepts, although worth mentioning [@bojanz's](https://www.drupal.org/u/bojanz) suggestion to rename `message type` to `message template`.
+Suddenly it makes it much clearer what the intention of `message template` is. 
 
 ## Contribution
 
