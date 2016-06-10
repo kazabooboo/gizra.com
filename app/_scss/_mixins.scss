@@ -65,11 +65,64 @@ $negative-spacing: -10px;
   }
 }
 
+//Typography
 @mixin title {
-  margin-bottom: 25px;
-  text-transform: uppercase;
-  font-size: 1.25em;
-  letter-spacing: 0.035em;
+  @extend .divider-bottom;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  color: $gizra-blue;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+}
+
+hi, h2 {
+  color: $gizra-blue;
+
+  a {
+    color: inherit;
+  }
+}
+
+h1 {
+  font-size: 2.244em;
+  font-weight: bold;
+
+  a {
+    font-weight: inherit;
+    text-decoration: none;
+  }
+}
+
+h2 {
+  font-size: 1.618em;
+  font-weight: bold;
+
+  a {
+    font-weight: inherit;
+    text-decoration: none;
+  }
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 1em;
+}
+
+h4 {
+  font-size: 1em;
+}
+
+p {
+  font-size: 1em;
+  line-height: 1.618em;
+}
+
+.text-small {
+  font-size: 0.857em;
+}
+
+.text caption {
+  
 }
 
 .text-capitalize {
@@ -87,6 +140,11 @@ $negative-spacing: -10px;
 .color-orange {
   color: $gizra-orange;
 }
+
+
+
+
+
 
 .gray-box {
   border-top: 1px solid $softer-border;
@@ -118,39 +176,9 @@ $negative-spacing: -10px;
   border: 1px solid $softer-border;
 }
 
-.headers-styling {
-  margin-top: 25px;
-  color: $gizra-blue;
-  font-weight: bold;
-
-  a {
-    color: inherit;
-  }
-}
-
-.h1-styling {
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 1.55em;
-
-  a {
-    font-weight: inherit;
-    text-decoration: none;
-  }
-}
-
-.h3-styling {
-  font-weight: 500;
-  font-size: 1.25em;
-}
-
-.h4-styling {
-  font-size: 1.17em;
-}
-
-.p-styling {
-  font-size: 1.17em;
-  line-height: 1.65em;
+.solid-box {
+  @include box-shadow(0 1px 2px 0 rgba(0, 0, 0, 0.22));
+  border: 1px solid $softer-border;
 }
 
 .grayscale {

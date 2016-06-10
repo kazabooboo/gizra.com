@@ -26,15 +26,12 @@
     padding-bottom: 20px;
     
   h1 {
-    @extend .headers-styling;
-    @extend .h1-styling;
     margin-bottom: 6px;
     font-family: "Raleway", sans-serif;
     font-size: 47.123px;
     text-transform: none;
   }
   h2 {
-    @extend .headers-styling;
     margin-top: 0px;
     margin-bottom: 6px;
     font-family: "Raleway", sans-serif;
@@ -50,7 +47,6 @@
   h2 {
     font-size: 25.888px;
     text-transform: uppercase;
-    @extend .headers-styling;
     font-family: "Raleway", sans-serif;
 
     a{
