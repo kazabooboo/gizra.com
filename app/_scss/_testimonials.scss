@@ -5,6 +5,98 @@
   flex-direction: column;
   justify-content: center;
 
+  #carousel-testimonials {
+    @extend .soft-box;
+    border-radius: 6px;
+    background-color: #ffffff;
+  
+    .carousel-indicators {
+      @include box-shadow(0 1px 2px 0 rgba(0, 0, 0, 0.22));
+      margin: 0 0 0 -41.5px;
+      left: 50%;
+      bottom: -16px;
+      padding: 9px 0 5px;
+      width: auto;
+      text-align: left;
+      background: white;
+      display: inline-block;
+      border-radius: 6px;
+      border: 1px solid rgba(227, 227, 227, 0.51);
+  
+      li {
+        position: relative;
+        margin: 1px 5px;
+        width: 13px;
+        height: 13px;
+        background-color: $gizra-black;
+  
+        &:not(:last-child)::after {
+          content: '';
+          position: absolute;
+          top: -12px;
+          bottom: -15px;
+          width: 1px;
+          background: rgba(81, 81, 81, 0.15);
+          right: -9px;
+        }
+      }
+  
+      .active {
+        background-color: $gizra-blue;
+      }
+    }
+  
+    .item {
+      padding-bottom: 15px;
+  
+      img {
+        margin: 10px 0 15px 20px;
+        height: 50px;
+      }
+  
+      p {
+        margin: 0;
+      }
+  
+      .blockquote {
+        margin-bottom: 1em;
+        padding: 5px 20px;
+        height: 60px;
+        color: $gizra-black;
+        font-weight: 400;
+        line-height: 1.5;
+  
+        &::before,
+        &::after {
+          display: inline-block;
+          font: normal normal normal 14px/1 FontAwesome;
+          font-size: 0.75em;
+          color: $gizra-black;
+        }
+  
+        &::before {
+          content: '\f10d';
+        }
+  
+        &::after {
+          content: '\f10e';
+        }
+      }
+  
+      .name {
+        color: $gizra-blue;
+        font-weight: bolder;
+      }
+  
+      .name,
+      .title,
+      .client {
+        margin-left: 20px;
+        line-height: 1.2;
+      }
+    }
+  }
+
   .page-scroll {
     margin-top: 40px;
     width: 100%;
@@ -15,105 +107,10 @@
 
       a {
         color: $gizra-black;
-        font-size: 2em;
+        font-size: 1.618em;
         text-decoration: none;
         opacity: 0.5;
       }
-    }
-  }
-}
-
-#carousel-testimonials {
-  @extend .soft-box;
-  border-radius: 6px;
-  background-color: #ffffff;
-
-  .carousel-indicators {
-    @include box-shadow(0 1px 2px 0 rgba(0, 0, 0, 0.22));
-    margin: 0 0 0 -41.5px;
-    left: 50%;
-    bottom: -16px;
-    padding: 9px 0 5px;
-    width: auto;
-    text-align: left;
-    background: white;
-    display: inline-block;
-    border-radius: 6px;
-    border: 1px solid rgba(227, 227, 227, 0.51);
-
-    li {
-      position: relative;
-      margin: 1px 5px;
-      width: 13px;
-      height: 13px;
-      background-color: $gizra-black;
-
-      &:not(:last-child)::after {
-        content: '';
-        position: absolute;
-        top: -12px;
-        bottom: -15px;
-        width: 1px;
-        background: rgba(81, 81, 81, 0.15);
-        right: -9px;
-      }
-    }
-
-    .active {
-      background-color: $gizra-blue;
-    }
-  }
-
-  .item {
-    padding-bottom: 15px;
-
-    img {
-      margin: 10px 0 15px 20px;
-      height: 50px;
-    }
-
-    p {
-      margin: 0;
-      font-size: 1.25em;
-      line-height: 25px;
-    }
-
-    .blockquote {
-      margin-bottom: 6px;
-      padding: 5px 20px;
-      height: 60px;
-      color: $gizra-black;
-      font-size: 21px;
-      font-weight: 400;
-      line-height: 1.5em;
-
-      &::before,
-      &::after {
-        display: inline-block;
-        font: normal normal normal 14px/1 FontAwesome;
-        font-size: 0.75em;
-        color: $gizra-black;
-      }
-
-      &::before {
-        content: '\f10d';
-      }
-
-      &::after {
-        content: '\f10e';
-      }
-    }
-
-    .name {
-      color: $gizra-blue;
-      font-weight: bolder;
-    }
-
-    .name,
-    .title,
-    .client {
-      margin-left: 20px;
-      font-size: 18px;
     }
   }
 }

@@ -19,11 +19,6 @@ header {
     background: transparent;
     border: 0;
 
-    .container-fluid {
-      padding-left: 0;
-      padding-right: 0;
-    }
-
     .navbar-toggle {
       margin-top: 40px;
       margin-right: 0;
@@ -46,11 +41,11 @@ header {
 
         a {
           display: inline-block;
-          font-size: 1em;
-          font-weight: 600;
+          font-size: 0.857em;
           color: white;
           padding-top: 0;
           padding-left: 0;
+          text-transform: uppercase;
 
           &:hover,
           &.active {
