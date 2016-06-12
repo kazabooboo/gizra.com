@@ -33,7 +33,7 @@ class FeatureContext extends MinkContext implements SnippetAcceptingContext {
    * @Then I should the text :text under the main content
    */
   public function iShouldTheTextUnderTheMainContent($text) {
-    $this->assertElementContains('.post-content', $text);
+    $this->assertElementContains('#post-content', $text);
   }
 
   /**
