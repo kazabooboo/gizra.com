@@ -117,6 +117,10 @@
       text-transform: uppercase;
     }
 
+    a {
+      color: $gizra-blue;
+    }
+
     ul, ol {
       margin-top: 0;
       margin-bottom: 1em;
@@ -137,6 +141,8 @@
   
     blockquote {
       font-size: 0.857em;
+      border-left: 5px gray solid;
+      margin-left: 10px;
     }
     
     table {
