@@ -3,7 +3,7 @@
 #homepage {
   .header-homepage {
     background: #292929;
-    background: url('/images/header/background.png') no-repeat center top;
+    background: url('/images/header/homepage-background.jpg') no-repeat center top;
     background-size: cover;
     background-attachment: fixed;
     width: 100%;
@@ -15,29 +15,28 @@
       position: relative;
       overflow: hidden;
       color: white;
-      border-radius: 8px;
       
       h2 {
-        margin: 0 0 .5em;
+        margin: 0;
+        color: white;
+        font-family: "Hind", sans-serif;
         font-weight: bold;
         font-size: 37.5px;
-        line-height: 1.2em;
       }
 
-      .sub-slogan {
+      #sub-slogan {
         margin: 1em 0 0;
+
         p {
           font-family: "Raleway", sans-serif;
           font-size: 27px;
           line-height: 1.2em;
-          margin: 0 0 .5em;
         }
       }
 
-      .about-us-story {
+      #about-us-story {
         font-family: "Raleway", sans-serif;
-        margin-top: 2.5em;
-        font-size: 18px;
+        margin-top: 1.5em;
         font-weight: 500;
 
         a {
@@ -46,57 +45,31 @@
         }
       }
 
-      h3 {
-        display: inline-block;
-        text-transform: uppercase;
-        font-size: 22px;
-        margin: -4px 0 0 420px;
-      }
-    }
-
-    .page-scroll {
-      margin-top: 40px;
-      width: 100%;
-
-      .scroll-wrapper {
-        display: block;
-        text-align: center;
-
-        a {
-          color: white;
-          font-size: 2em;
-          text-decoration: none;
-          opacity: 0.5;
+      .page-scroll {
+        margin-top: 30px;
+        width: 100%;
+    
+        .scroll-wrapper {
+          display: block;
+          text-align: center;
+    
+          a {
+            color: white;
+            font-size: 1.618em;
+            text-decoration: none;
+            opacity: 0.5;
+          }
         }
-      }
+      }         
     }
   }
 
-  .main-title {
-    @include title;
-    color: $gizra-orange;
-    margin-top: 0;
-    margin-bottom: 5px;
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-  }
-
-  .blog {
-    h3.title a {
-      color: $gizra-blue;
-    }
+  #from-our-blog {
 
     h2.title {
-      font-family: "Raleway", sans-serif;
-      font-size: 47.123px;
-      @extend .divider-bottom;
-      margin-bottom: 30px;
-      padding-bottom: 20px;
-      font-weight: bold;
-      
+      @include title;
+      font-size: 47.123px;      
+
       a {
         color: $gizra-blue;      
       }
@@ -110,28 +83,10 @@
   .header-homepage, #gizra-way, #about, #testimonials, #from-our-blog {
     height: 100vh;
     max-height: 1000px;
-    min-height: 600px;
+    min-height: 650px;
   }
 
   #homepage .header-homepage #slogan {
     margin-left: 15px;
-  }
-}
-
-// Mobile Media query.
-@include mobile {
-
-  #homepage {
-
-    #about #main-wrapper {
-      border: 1px solid $softer-border;
-      padding: 20px;
-      border-radius: 5px;
-    }
-
-    .blog .main-title {
-      margin-bottom: 15px;
-      text-align: center;
-    }
   }
 }

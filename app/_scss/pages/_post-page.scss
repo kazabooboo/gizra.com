@@ -1,42 +1,18 @@
-.post-title {
-  @extend .divider-bottom;
-    margin-top: 45px;
-    margin-bottom: 30px;
-    padding-bottom: 20px;
+#post-page {
+  margin: 40px 0;
+  
+  #post-title {
+    @include title;
     
-  h1 {
-    @extend .headers-styling;
-    @extend .h1-styling;
-    margin-bottom: 0.5em;
-    font-family: "Raleway", sans-serif;
-    font-size: 47.123px;
-    text-transform: capitalize;
+    .post-author {
+      font-size: 1.387em;
+      font-weight: 100;
+      font-family: "Hind", sans-serif;
+      color: $gizra-black;
+    }
   }
   
-  .post-author {
-    font-size: 29.124px;
-  }
-}
-
-.post {
-  h1,
-  h2,
-  h3 {
-    @extend .headers-styling;
-  }
-
-  h2 {
-    font-size: 29.124px;
-    text-transform: uppercase;
-  }
-
-  h3 {
-    font-size: 21px;
-    color: $gizra-black;
-  }
-
-  .post-data {
-    font-size: 16px;
+  #post-data {
 
     #post-label {
       font-size: 29.124px;
@@ -50,6 +26,13 @@
         border-radius: 0;
       }
     }
+
+    .date {
+      font-size: 0.7619em;
+      line-height: 1.2;
+      font-weight: 600;
+    }
+
     .author-details {
       margin-bottom: 1em;
   
@@ -66,26 +49,29 @@
         }
       }
   
-      .bio {
-  
-        a {
-          color: $gizra-orange;
-        }
+      .name, 
+      .title, 
+      .bio, 
+      .twitter {
+        font-size: 0.7619em;
+        line-height: 1.2;
       }
-  
-      .name,
-      .twitter,
+
+      .name, 
+      .twitter, 
       .title {
         color: $gizra-blue;
       }
+
+      .bio a {
+        color: $gizra-orange;
+      }
     }
  
-    .date {
-      margin-bottom: 1em;
-      font-weight: 600;
-    }
   
     .tags {
+      font-size: 0.7619em;
+      line-height: 1.2;
       
       .title {
         font-weight: 600;
@@ -100,6 +86,10 @@
       li {
         padding-left: 0;
         display: inline;
+
+        a {
+          font-weight: normal;
+        }
   
         &::after {
           color: $gizra-blue;
@@ -112,60 +102,68 @@
             content: '';
           }
         }
-      }
+      }  
+    }
+  }
+
+  #post-content {
+
+    h2 {
+      text-transform: uppercase;
+    }
   
-      a {
-        font-weight: normal;
+    h3 {
+      color: $gizra-black;
+      text-transform: uppercase;
+    }
+
+    a {
+      color: $gizra-blue;
+    }
+
+    ul, ol {
+      margin-top: 0;
+      margin-bottom: 1em;
+      padding-left: 24px;
+  
+      li {
+        padding-left: 16px;
       }
     }
-  }
-
-  .post-content {
-    margin-bottom: 20px;
-    font-size: 21px;
-    font-weight: 400;
-    line-height: 1.618em;
+  
+    .highlight {
+      margin: 35px 0;
+    }
+  
+    em {
+      font-weight: bold;
+    }
+  
+    blockquote {
+      font-size: 0.857em;
+      border-left: 5px gray solid;
+      margin-left: 10px;
+    }
     
-    p {
-      margin: 0 0 1em;
-    }
-  }
-
-  ul, ol {
-    margin-top: 0;
-    margin-bottom: 1em;
-    padding-left: 24px;
-
-    li {
-      padding-left: 16px;
-    }
-  }
-
-  .highlight {
-    margin: 35px 0;
-  }
-
-  em {
-    font-weight: bold;
-  }
-
-  a {
-    color: $gizra-blue;
-    text-decoration: underline;
-  }
-
-  blockquote {
-    padding-left: 51px;
-    line-height: 32px;
-    border-left: 10px gray solid;
-    margin-left: 10px;
-  }
+    table {
+      margin-bottom: 20px;
+  
+      td, th {
+        border: 1px solid #717171;
+        padding: 3px 5px;
+      }
+    }    
+  }  
 }
 
-.post-nav {
-  font-size: 18px;
+#post-nav {
+  line-height: 1.2;
   color: $gizra-orange;
-  margin: 40px 0;
+  margin: 1.618em 0;
+
+  #previous-label, #next-label {
+    font-weight: 600;;
+  }
 
   .next {
     text-align: right;
@@ -179,18 +177,9 @@
 
   a {
     color: $gizra-orange;
-  }
-}
-
-#post-page {
-
-  table {
-    margin-bottom: 20px;
-
-    td, th {
-      border: 1px solid #717171;
-      padding: 3px 5px;
+    
+    &:hover {
+      text-decoration: none;
     }
   }
-
 }

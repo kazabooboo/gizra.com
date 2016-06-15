@@ -1,5 +1,5 @@
 #about {
-  background: url('/images/team/background.png') no-repeat center top;
+  background: url('/images/team/background.jpg') no-repeat center top;
   background-size: cover;
   background-attachment: fixed;
   margin-bottom: 0;
@@ -9,20 +9,11 @@
   padding: 40px 0;
 
   h1.title, h2.title {
-    font-family: "Raleway", sans-serif;
-    font-size: 47.123px;
-    @extend .divider-bottom;
-    border-bottom: 1px solid rgba(255,255,255,0.15);
-    color: $gizra-blue;
-    margin-bottom: 30px;
-    padding-bottom: 20px;
-    font-weight: bold;
+    @include title;
+    font-size: 2.244em;
   } 
 
   p {
-    font-size: 21px;
-    margin-bottom: 1em;
-    line-height: 1.618;
     color: white;
 
     a {
@@ -36,11 +27,7 @@
   }
 
   h3 {
-      font-family: "Raleway", sans-serif;
-      font-weight: bold;
-      color: $gizra-orange;
-      font-size: 21px;
-      margin-bottom: 0.4em;
+    color: $gizra-orange;
   }
 
   .page-scroll {
@@ -53,7 +40,7 @@
 
       a {
         color: white;
-        font-size: 2em;
+        font-size: 1.618em;
         text-decoration: none;
         opacity: 0.5;
       }
@@ -68,95 +55,43 @@
   padding: 40px 0;
 
   h1.title, h2.title {
-    font-family: "Raleway", sans-serif;
-    font-size: 47.123px;
-    @extend .divider-bottom;
-    color: $gizra-blue;
-    margin-bottom: 30px;
-    padding-bottom: 20px;
-    font-weight: bold;
+    @include title;
+    font-size: 2.244em;
   } 
 
   .list-group-item {
     border: none;
+
+    h3 {
+      @extend .divider-bottom;
+      color: $gizra-orange;
+      margin-bottom: 0.4em;
+      padding-bottom: 0.2em;
+    }
+  
+    p {
+      line-height: 1.5;
+    }
   }
 
   .list-group-item:hover {
     background-color: #f5f5f5;
   }
 
-  .way {
+  .page-scroll {
+    margin-top: 25px;
+    width: 100%;
 
-    h3 {
-      font-family: "Raleway", sans-serif;
-      font-weight: bold;
-      color: $gizra-orange;
-      font-size: 21px;
-      margin-bottom: 0.4em;
-      padding-bottom: 0.2em;
-      @extend .divider-bottom;
-    }
+    .scroll-wrapper {
+      display: block;
+      text-align: center;
 
-    h5 {
-      font-size: 21px;
-      margin-bottom: 0.4em;
-    }
-
-    p {
-      font-size: 18px;
-      line-height: 1.5; //Temporary untill typography review.
-    }
-  }
-}
-
-// Desktop Media query.
-@include desktop {
-
-  #about {
-
-    #gizra-way {
-      margin-top: 45px;
-
-      .element {
-        margin-left: -17px;
-        margin-right: -17px;
+      a {
+        color: $gizra-black;
+        font-size: 1.618em;
+        text-decoration: none;
+        opacity: 0.5;
       }
-    }
-
-    #main-wrapper {
-      margin-left: -80px;
-      margin-right: -80px;
-      padding-right: 80px;
-      padding-left: 80px;
-    }
-  }
-}
-
-// Mobile Media query.
-@include mobile {
-
-  #about {
-    padding: 40px 0;
-
-    .mobile-title {
-      margin-bottom: 17px;
-    }
-
-    #gizra-way {
-
-      &::after {
-        right: 53px;
-
-      }
-
-      .element:last-child {
-        margin-bottom: 0;
-      }
-
-    }
-
-    .container {
-      padding-bottom: 50px;
     }
   }
 }

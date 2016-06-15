@@ -19,11 +19,6 @@ header {
     background: transparent;
     border: 0;
 
-    .container-fluid {
-      padding-left: 0;
-      padding-right: 0;
-    }
-
     .navbar-toggle {
       margin-top: 40px;
       margin-right: 0;
@@ -45,11 +40,11 @@ header {
       li {
 
         a {
+          display: inline-block;
+          font-size: 0.857em;
           color: white;
           padding-top: 0;
           padding-left: 0;
-          font-size: 1.13em;
-          display: inline-block;
           text-transform: uppercase;
 
           &:hover,
@@ -90,7 +85,7 @@ header {
             content: '.';
             position: absolute;
             top: -5px;
-            right: -10px;
+            right: -0.5em;
             width: 1px;
             height: 100%;
             color: white;
