@@ -12,7 +12,7 @@ image: "/assets/images/posts/faithful-elm-amazing-router/thumb.jpg"
 
 I'm going to give an Elm session in the next [YGLF conf](http://yougottalovefrontend.com/#page-speakers). This was a great excuse to free up some hours to work on a new v0.17 SPA (Single Page Application). You won't believe what happened next...
 
-Well, actually, you would: it was an awesome experience :)
+Well, actually, you would: it was an awesome experience :)  
 In fact I've reached the point that the backend me is becoming jealous of frontend me.
 
 {% include demo_block.html demo="http://elm-spa-example.gizra.com/" code="https://github.com/Gizra/elm-spa-example" %}
