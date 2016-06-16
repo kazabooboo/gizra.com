@@ -134,6 +134,15 @@
     .highlight {
       margin: 35px 0;
     }
+
+    .demo-block a {
+      margin-top: 20px;
+      display: inline-block;
+      padding: 10px;
+      border-radius: 4px;
+      color: #ffffff;
+      background: $gizra-blue;
+    }
   
     em {
       font-weight: bold;
