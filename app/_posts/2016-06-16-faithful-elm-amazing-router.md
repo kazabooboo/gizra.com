@@ -5,7 +5,6 @@ tags:
   - Elm
 permalink: "/content/faithful-elm-amazing-router"
 layout: post
-image: "/assets/images/posts/faithful-elm-amazing-router/thumb.jpg"
 ---
 
 {% include setup %}
