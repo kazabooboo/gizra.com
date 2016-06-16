@@ -57,15 +57,9 @@ For example, when I've written the demo app, I have started step by step, wiring
 The App.Model has a property called `activePage` which is as the name implies responsible for knowing which page is active.
 In fact, I have written the entire app without having and URL change. Just to emphasize, there were "pages" changes, it was simply not reflected in the URL.
 
-So once I wanted to write Navigation in I've realized I need to change my existing app. For example in my `update` function I should have changed:
+So once I wanted to write Navigation in I've realized I need to change my existing app. For example in my `update` function I should have changed the return value from `(model, Cmd.none)` to `(model, Navigation.newUrl (toUrl newModel))`
 
-`(model, Cmd.none)`
-
-to
-
-`(model, Navigation.newUrl (toUrl newModel))`
-
-same was with my `init` function. I had to change the signature from `init : ( Model, Cmd Msg )` to `init : Result String Int -> (Model, Cmd Msg)`. Nothing to dramatic, but I prefered avoiding it.
+Same was with the `init` function. I had to change the signature from `init : ( Model, Cmd Msg )` to `init : Result String Int -> (Model, Cmd Msg)`. Nothing too dramatic, but I preferred avoiding it.
 
 This is where I believe Elm router URL's approach shines. The `init` and `update` function can remain exactly as they were, while you can add your routing needs via a completely [separate](https://github.com/Gizra/elm-spa-example/blob/1.0.0/src/elm/App/Router.elm) set of functions.
 
