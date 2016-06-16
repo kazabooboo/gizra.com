@@ -38,11 +38,11 @@ With [Elm-format](https://github.com/avh4/elm-format) we don't even need to both
 One of the questions I see people struggle with is how to have different components communicate with each other. I won't get in depth here, but rather give some pointers to the code base. The gist of things is:
 
 1. Main module is just boilerplate, and it cares only about the App module.
-1. The App module is conveniently split into Model, Update, View files. This is the heart of our
-webapp and it is responsible for calling the right components (a.k.a moduels).
-1. A module (such as App) is always communicating downwards to its child modules. It needs to know about te child module, but the child doesn't need to know about it. Not does the module need to know about the grandchildren if they exist.
+1. The App module is conveniently [split](https://github.com/Gizra/elm-spa-example/tree/1.0.0/src/elm/App) into Model, Update, View files. This is the heart of our
+webapp and it is responsible for calling the right modules (a.k.a components) via its `update` function.
+1. A module (such as App) is always communicating [downwards](https://github.com/Gizra/elm-spa-example/blob/1.0.0/src/elm/App/Update.elm#L26) to its child modules. It needs to know about the child module, but the child doesn't need to know about it. Nor does the module need to know about the grandchildren if they exist.
 1. Child modules can pass information back to the parent module. It's done in the update function by simply
-returning more info. While the typical return value of an `update` function is `(Model, Cmd Msg)` nothing stops it from being `(Model, Cmd Msg, Int)` - where Int will be some numeric value you need to parent module to get.
+returning more info. While the typical return value of an `update` function is `(Model, Cmd Msg)` nothing stops the [child's update](https://github.com/Gizra/elm-spa-example/blob/1.0.0/src/elm/Pages/Login/Update.elm#L25) function from being `(Model, Cmd Msg, Int)`, where Int will be some numeric value the [parent](https://github.com/Gizra/elm-spa-example/blob/1.0.0/src/elm/App/Update.elm#L28-L29) can act on.
 
 
 ## Elm Router Url
