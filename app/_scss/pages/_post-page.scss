@@ -190,9 +190,10 @@
 
   a {
     color: $gizra-orange;
+    text-decoration: none;
     
     &:hover {
-      text-decoration: none;
+      text-decoration: underline;
     }
   }
 }
