@@ -17,6 +17,8 @@ becoming jealous of frontend me.
 
 {% include demo_block.html demo="http://elm-spa-example.gizra.com/" code="https://github.com/Gizra/elm-spa-example" %}
 
+{% include thumbnail.html image_path="assets/images/posts/faithful-elm-amazing-router/image1.gif" caption="Fetch GitHub user's info on this fake login." %}
+
 My goal with building this demo app, was to give a small, yet realistic, look into how Elm
 allows us to accomplish daily tasks such as Http request, routing, access.
 It was important for me to structure it in the same way we structure bigger apps we have or are building for production.
