@@ -6,7 +6,7 @@
         
     
 
-<title>Organic Groups and Message Stack in Drupal 8</title>
+<title>Faithful Elm and the Amazing Router</title>
 
         <meta name="description" content="">
         <meta name="keywords" content="Organic Groups, Drupal 8">
@@ -192,7 +192,7 @@
   <div class="container">
     <div class="row">
       <div id="post-title" class="col-sm-10 col-sm-offset-1">
-        <h1><a href="/content/og-message-stack-drupal8">Organic Groups and Message Stack in Drupal 8 </a></h1>
+        <h1><a href="/content/faithful-elm-amazing-router">Faithful Elm and the Amazing Router </a></h1>
         <div class="post-author">By Amitai Burstein</div>
       </div>
     </div>
@@ -201,7 +201,7 @@
   			<div id="post-label">
   		 		<a href="/blog"><span class="label label-default">Gizra Blog</span></a>
   			</div>
-        <div class="date">09 Jun 2016</div>
+        <div class="date">16 Jun 2016</div>
         <section class="author-details">
           <div class="image-wrapper">
             <img src="/images/team/avatars/amitaibu.42a1.jpg" class="img-circle img-responsive">
@@ -224,11 +224,7 @@
 
   
     
-      <li><a href="/tags.html#Organic groups-ref">Organic groups</a></li>
-    
-      <li><a href="/tags.html#Message stack-ref">Message stack</a></li>
-    
-      <li><a href="/tags.html#Drupal-planet-ref">Drupal-planet</a></li>
+      <li><a href="/tags.html#Elm-ref">Elm</a></li>
     
   
 
@@ -239,78 +235,73 @@
       </div>
       <div id="post-content" class="col-sm-8">
 
-        <p>Hi geeks! Did the post title get you excited? Great, because Organic Groups (OG) and Message stack are
-getting closer to being Drupal 8 ready.  </p>
+        <p>I&rsquo;m going to give an Elm session in the next <a href="http://yougottalovefrontend.com/#page-speakers">YGLF conf</a>. This was a great excuse to free up some hours to work on a new v0.17 SPA (Single Page Application). You won&rsquo;t believe what happened next&hellip;</p>
 
-<p>I&rsquo;d like to give an overview about their state, the amazing
-community effort around them, and also share some of my personal thoughts about contribution
-to Drupal 8 in general.</p>
+<p>Well, actually, you would: it was an awesome experience :)<br>
+In fact I&rsquo;ve reached the point that the backend me is becoming jealous of frontend me.</p>
 
-<h2>Organic Groups</h2>
+<div class="demo-block text-center">
+  <a class="demo" target=_blank" href="http://elm-spa-example.gizra.com/">View demo</a>
+  <a class="code" target=_blank" href="https://github.com/Gizra/elm-spa-example">Get the source code</a>
+</div>
 
-<p><strong>The heroes:</strong> <a href="https://www.drupal.org/u/RoySegall">@RoySegall</a>, <a href="https://www.drupal.org/u/pfrenssen">@pfrenssen</a> <a href="https://www.drupal.org/u/damiankloip">@damiankloip</a>, <a href="https://www.drupal.org/u/chx">@chx</a> et al.</p>
+<div class="thumbnail">
+  <div class="img-wrapper">
 
-<p>For years Organic Groups has been one of the proven solutions for multi-sites functionality,
-in the form of one code base, one database, and one dashboard to rule them all.
-After so many years and seeing so many different implementations, such as Harvard&rsquo;s OpenScholar, OpenAtrium, and many others, I&rsquo;m even more confident OG is doing many things right.</p>
+    
 
-<p>Most of OG7&rsquo;s concepts are being migrated to OG8, but obviously this is also a good time to fix some
-old mistakes. One of the mistakes was treating users and content (i.e. non-user entities) alike. But, well, you know - they are not. Because when we came to re-think of it, membership really makes sense only for users. For example, if the membership state is <code>active</code>, <code>pending</code> or <code>blocked</code>, that should indeed be applied only to users. So we&rsquo;ve changed it:</p>
+    
+      <img src="http://www.gizra.com/assets/images/posts/faithful-elm-amazing-router/image1.gif">
+    
+
+  </div>
+  
+    <div class="caption">Fetch GitHub user&rsquo;s info on this fake login.</div>
+  
+</div>
+
+<p>My goal with building this demo app, was to give a small, yet realistic, look into how Elm
+allows us to accomplish daily tasks such as Http requests, routing, access, and more.
+It was important for me to structure it in the same way that we structure larger apps built for production, so that it could demonstrate more effectively how Elm can be used in a project.</p>
+
+<p>If you are interested in Elm, and want to get a feeling of how it could be built for your apps, this might be a good starting point. I&rsquo;ve even wanted to add a single test to show how that could be done. But Elm being such a fun, predictable, opinionated, and fun (no mistake here, it deserves the double fun) to work with, I&rsquo;ve ended up adding more and more tests.<br>
+Isn&rsquo;t that yet another great sign for Elm? I was adding unit tests for a <em>demo</em> app, while we hardly added any unit tests for our Angular apps in production!</p>
+
+<p>I was holding myself from adding too many features, but I couldn&rsquo;t resist polishing the existing ones, and adding <em>lots</em> of comments. With the compiler&rsquo;s tough love and ever growing unit tests, any change was
+so easy it almost felt like cheating (and note that I rarely write &ldquo;easy&rdquo; or &ldquo;trivial&rdquo; on development issues).</p>
 
 <!-- more -->
 
-<ul>
-<li>A reference between a group content and a group is done via an entity reference field with a default storage. The link between them is simply registered as a row in the DB.</li>
-<li>A reference between a user and a group is also done via an entity reference field, however the field storage is custom. It&rsquo;s the <code>OgMembership</code> entity you know from OG7.</li>
-</ul>
+<p>In general, at least for me, the great thing that Elm brings to the table is the reduced cognitive load. We don&rsquo;t need to remember too much about our application every single second. This means we can concentrate on our current component and make sure it&rsquo;s being wired in correctly to the entire application.</p>
 
-<p>Both those references are done through core&rsquo;s entity reference. This opens up a lot of possibilities for fine-grained control, thank&rsquo;s to the selection handler concept.</p>
+<p>With <a href="https://github.com/avh4/elm-format">Elm-format</a> we don&rsquo;t even need to bother ourself with the file format; and along with the Atom integration on every save, we get consistent looking files.</p>
 
-<p>Having this conceptual shift trickles down to the code, and cleans it up quite a bit. To be sure we are not
-breaking anything, we&rsquo;re adding tests. Lots of tests, with a nice mix of unit and kernel tests. Heck, we even check extreme cases like arbitrary, yet work-life balanced <a href="https://github.com/amitaibu/og/blob/c2bf4de582105e8c71f52d48c423c98d18fe75bf/tests/src/Unit/PermissionEventTest.php#L389-L390">permissions</a> :)</p>
+<h2>Wiring Multiple Components</h2>
 
-<p>If you want to jump in and help, development is happening on a temporary <a href="https://github.com/amitaibu/og">GitHub repo</a>.</p>
+<p>One of the questions I see people struggle with is how to have different components communicate with each other. I won&rsquo;t get into depth here, but rather give some pointers to the code base. The gist of things is:</p>
 
-<h3>Group module</h3>
+<ol>
+<li>Main module is mostly boilerplate, and it cares only about the App module.</li>
+<li>The App module is conveniently <a href="https://github.com/Gizra/elm-spa-example/tree/1.0.0/src/elm/App">split</a> into Model, Update, and View files. This is the heart of our
+web app, and it is responsible for calling and delegating the work to the right modules (a.k.a components) via its <code>update</code> function.</li>
+<li>Same for the <a href="https://github.com/Gizra/elm-spa-example/blob/1.0.0/src/elm/App/View.elm#L103-L117">view</a>: it&rsquo;s calling the child modules.</li>
+<li>Any module, like the <code>App</code> for example, is always communicating <a href="https://github.com/Gizra/elm-spa-example/blob/1.0.0/src/elm/App/Update.elm#L26">downwards</a> to its child modules. It needs to know about the child module, but the child doesn&rsquo;t need to know about it. Nor does the parent module need to know about the grandchildren, if they exist.</li>
+<li>Child modules can pass information back to the parent module. Really! It&rsquo;s done in the update function by simply returning more info. While the typical signature of an <code>update</code> function is <code>(Model, Cmd Msg)</code> nothing stops the <a href="https://github.com/Gizra/elm-spa-example/blob/1.0.0/src/elm/Pages/Login/Update.elm#L25">child&rsquo;s update</a> function from being <code>(Model, Cmd Msg, Int)</code>, where <code>Int</code> will be some numeric value the <a href="https://github.com/Gizra/elm-spa-example/blob/1.0.0/src/elm/App/Update.elm#L28-L29">parent</a> can act on.</li>
+</ol>
 
-<p>At DrupalCon, a few people asked for my opinion on the <a href="https://www.drupal.org/project/group">Group</a> module. I&rsquo;m happy to say that none of them
-were surprised that I was very positive about it - which is probably another great case for open source.</p>
+<h2>Elm Route Url</h2>
 
-<p>So to repeat the answer I gave back in New Orleans, if Group is working for you,
-and satisfies your needs, go ahead and use it. For completeness here&rsquo;s my critique on some of it&rsquo;s core concepts:</p>
+<p>With the new official <a href="https://github.com/elm-lang/navigation">Navigation</a> module in place, the need for SPA routers has been met. However, Navigation isn&rsquo;t just a router module, it&rsquo;s providing the building blocks for <em>other</em> routing solutions. It merely has a certain solution as a &ldquo;serving suggestion&rdquo;.</p>
 
-<p>One of the core concepts of Group is that a group isn&rsquo;t a node. It&rsquo;s a <code>Group</code> entity. That&rsquo;s fine, also OG
-can have any entity as a group, but I&rsquo;d argue that 90% of the time your group should be content.
-Because more often than not, groups need to have published/unpublished status. Or because groups need to have privacy options, and
-even in Drupal 8 we have only <code>{node_access}</code> table, not an <code>{entity_access}</code>.</p>
+<p>@rgrempel&rsquo;s <a href="https://github.com/rgrempel/elm-route-hash">elm-route-url</a> module indeed builds on the foundations of Navigation, however it takes a different approach, which I personally prefer. As you might have read in one of my previous posts under the <a href="http://www.gizra.com/content/thinking-choosing-elm/">Url change is not routing</a> paragraph, elm-route-url allows us to add routing (i.e. actually changing the URL) <em>after</em> the fact, with very little change to the existing code base. For example, when I wrote the demo app, I started step by step, wiring different components into my app.</p>
 
-<p>Furthermore, there are quite a few cases where a single group content should be attached to multiple groups. This is where the power of OG kicks in, doing all the heavy lifting of making sure permissions
-are being handled correctly. I can assure you this is not a trivial task.</p>
+<p>The App.Model has a property called <a href="https://github.com/Gizra/elm-spa-example/blob/1.0.0/src/elm/App/Model.elm#L9-L17">activePage</a> which is, as the name implies, responsible for knowing which page is active. In fact, I have written the entire app without having a URL change. Just to emphasize, there were &ldquo;page&rdquo; changes, it was simply not reflected in the URL.</p>
 
-<p>OG alternatives have always been there, and choosing the right tool
-for the problem is important. Group is actually solving a subset of the challenges OG deals with. If it works for you, go ahead and use it. I know you&rsquo;ll be in good hands with it because Group&rsquo;s author <a href="https://www.drupal.org/u/kristiaanvandeneynde">@kristiaanvandeneynde</a> is a great person and a wonderful developer.</p>
+<p>So once I wanted to wire-in the Navigation, I realized I needed to change my existing app. For example, in my <code>update</code> function I should have changed the return value from <code>(model, Cmd.none)</code> to <code>(model, Navigation.newUrl (toUrl newModel))</code></p>
 
-<h2>Message stack</h2>
+<p>Same with the <code>init</code> function: I had to change the signature from <code>init : ( Model, Cmd Msg )</code> to <code>init : Result String Int -&gt; (Model, Cmd Msg)</code>. Nothing too dramatic, but I preferred avoiding it.</p>
 
-<p><strong>The heroes:</strong> <a href="https://www.drupal.org/u/RoySegall">@RoySegall</a>, <a href="https://www.drupal.org/u/jhedstrom">@jhedstrom</a>, <a href="https://www.drupal.org/u/mccrodp">@mccrodp</a> et al.</p>
-
-<p>The message stack is mostly ported to D8, and it has already reached a good place. I&rsquo;m still not cutting an alpha release, because it  requires polishing and might have a few data structure changes.</p>
-
-<p>There are no big differences here in terms of concepts, although worth mentioning <a href="https://www.drupal.org/u/bojanz">@bojanz&rsquo;s</a> suggestion to rename <code>message type</code> to <code>message template</code>.
-Suddenly it makes it much clearer what the intention of <code>message template</code> is.</p>
-
-<p>If you would like to contribute you are most welcome to the repos: <a href="https://github.com/Gizra/message">Message</a>, <a href="https://github.com/Gizra/message_notify">Message notify</a> and <a href="https://github.com/Gizra/message_subscribe">Message subscribe</a></p>
-
-<h2>On Contribution and Drupal 8</h2>
-
-<p>New major releases can  be hard, as you are expected to port all of your modules. At once. It&rsquo;s a process that takes a lot of time, and skills, and I&rsquo;m grateful for having such great community members helping with it.</p>
-
-<p>I&rsquo;d like to reach out to some community members I was talking with in DrupalCon which told me they felt
-bad they were not porting their modules fast enough: Don&rsquo;t feel bad about it! &ldquo;Feeling bad&rdquo; is one
-of the main causes for burn outs. Take your time. Do it out of passion, and reach out to the community to help you. It&rsquo;s your module, but if it&rsquo;s used by others, they can and should help you.</p>
-
-<p>In my case, for example, OG7 was written (and re-written) in the days I had one kid and Gizra had about seven employees and a single office. Now, I have three kids, Gizra has over twenty employees sitting in both the Israel and US office.
-And do you know how I feel about my (Drupal) contribution rate? (Most days) I feel marvelous about it. Because I do it on my own terms or work time, I&rsquo;m not burned out, and I still love what I do.</p>
+<p>This is where I believe Elm route URL&rsquo;s approach shines. The <code>init</code> and <code>update</code> function can remain exactly as they were, while we can add our routing needs via a completely <a href="https://github.com/Gizra/elm-spa-example/blob/1.0.0/src/elm/App/Router.elm">separate</a> set of functions. This makes the addition of routing consistent with my experience of building the app one step at a time, and knowing that what went into it is stable, solid, and most likely not to change if there are no new requirements.</p>
 
 
       </div>
@@ -322,22 +313,15 @@ And do you know how I feel about my (Drupal) contribution rate? (Most days) I fe
     <div class="row">
       <div class="col-sm-3 col-sm-offset-3 col-xs-6 previous">
         
-        <a href="/content/drupal-8-attachment-migration">
+        <a href="/content/og-message-stack-drupal8">
           <div id="previous-label" class="text-small">
-            <span class="hidden-xs"><i class="fa fa-chevron-circle-left"></i>&nbsp;Drupal 8: Migrate Nodes with Attachments Easily</span>
+            <span class="hidden-xs"><i class="fa fa-chevron-circle-left"></i>&nbsp;Organic Groups and Message Stack in Drupal 8</span>
             <span class="visible-xs"><i class="fa fa-chevron-circle-left"></i>&nbsp;Previous post</span>
           </div>
         </a>
         
       </div>
       <div class="col-sm-3 col-sm-offset-2 col-xs-6 next">
-        
-        <a href="/content/faithful-elm-amazing-router">
-          <div id="next-label" class="text-small">
-            <span class="hidden-xs">Faithful Elm and the Amazing Router&nbsp;<i class="fa fa-chevron-circle-right"></i></span>
-            <span class="visible-xs">Next post&nbsp;<i class="fa fa-chevron-circle-right"></i></span>
-          </div>
-        </a>
         
       </div>
     </div>
