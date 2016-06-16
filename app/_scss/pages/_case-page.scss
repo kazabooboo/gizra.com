@@ -44,6 +44,7 @@
       
       .site-text a {
         color: $gizra-blue;
+        text-decoration: none;
       }
     }
 
@@ -112,7 +113,7 @@
   		font-weight: 600;
   	}
   
-    #case-content {    
+    #case-content {
     
       blockquote {
         font-size: 0.857em;
