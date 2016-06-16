@@ -46,7 +46,7 @@ web app, and it is responsible for calling and delegating the work to the right 
 1. Child modules can pass information back to the parent module. Really! It's done in the update function by simply returning more info. While the typical return value of an `update` function is `(Model, Cmd Msg)` nothing stops the [child's update](https://github.com/Gizra/elm-spa-example/blob/1.0.0/src/elm/Pages/Login/Update.elm#L25) function from being `(Model, Cmd Msg, Int)`, where `Int` will be some numeric value the [parent](https://github.com/Gizra/elm-spa-example/blob/1.0.0/src/elm/App/Update.elm#L28-L29) can act on.
 
 
-## Elm Router Url
+## Elm Route Url
 
 With the new official [Navigation](https://github.com/elm-lang/navigation) module in place, the need foor SPA routers has been met. However, Navigation isn't just a router module, it's providing the building blocks
 for _other_ routing solutions. It merely has a certain solution as a "serving suggestion".
@@ -59,4 +59,4 @@ So once I wanted to wire-in the Navigation, I realized I needed to change my exi
 
 Same with the `init` function: I had to change the signature from `init : ( Model, Cmd Msg )` to `init : Result String Int -> (Model, Cmd Msg)`. Nothing too dramatic, but I preferred avoiding it.
 
-This is where I believe Elm router URL's approach shines. The `init` and `update` function can remain exactly as they were, while we can add our routing needs via a completely [separate](https://github.com/Gizra/elm-spa-example/blob/1.0.0/src/elm/App/Router.elm) set of functions. This makes the addition of routing consistent with my experience of building the app one step at a time, and knowing that what went into it is stable, solid, and most likely not to change if there are no new requirements.
+This is where I believe Elm route URL's approach shines. The `init` and `update` function can remain exactly as they were, while we can add our routing needs via a completely [separate](https://github.com/Gizra/elm-spa-example/blob/1.0.0/src/elm/App/Router.elm) set of functions. This makes the addition of routing consistent with my experience of building the app one step at a time, and knowing that what went into it is stable, solid, and most likely not to change if there are no new requirements.
