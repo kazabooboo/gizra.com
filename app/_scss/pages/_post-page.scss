@@ -89,6 +89,7 @@
 
         a {
           font-weight: normal;
+          text-decoration: none;
         }
   
         &::after {
@@ -117,10 +118,6 @@
       text-transform: uppercase;
     }
 
-    a {
-      color: $gizra-blue;
-    }
-
     ul, ol {
       margin-top: 0;
       margin-bottom: 1em;
@@ -135,13 +132,20 @@
       margin: 35px 0;
     }
 
-    .demo-block a {
-      margin-top: 20px;
-      display: inline-block;
-      padding: 10px;
-      border-radius: 4px;
-      color: #ffffff;
-      background: $gizra-blue;
+    .demo-block {
+      a {
+        display: inline-block;
+        padding: 0.5em;
+        border-radius: 4px;
+        border: 2px solid $gizra-blue;
+        font-size: 0.857em;
+        text-decoration: none;
+      }
+      
+      a:hover {
+        background: $gizra-blue;
+        color: #ffffff;
+      }
     }
   
     em {
@@ -186,9 +190,10 @@
 
   a {
     color: $gizra-orange;
+    text-decoration: none;
     
     &:hover {
-      text-decoration: none;
+      text-decoration: underline;
     }
   }
 }
