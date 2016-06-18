@@ -47,10 +47,6 @@ body {
   margin-bottom: 165px;
 }
 
-
-// Desktop Media query.
-@include desktop {
-
 #header-global {
   background: url('/images/header/global-background.jpg') no-repeat center top;
   background-size: cover;
