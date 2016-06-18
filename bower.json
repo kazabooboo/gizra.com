@@ -4,6 +4,7 @@
   "dependencies": {
     "parallax": "~1.0.0",
     "jquery": "~1.10.2",
-    "jquery-hoverIntent": "~1.8.1"
+    "jquery-hoverIntent": "~1.8.1",
+    "normalize-scss": "normalize.scss#^5.0.3"
   }
 }
