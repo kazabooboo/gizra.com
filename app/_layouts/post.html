@@ -17,24 +17,20 @@ post: true
 {% endfor %}
 
 <header id="header-global">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
+  <div class="container"> <!-- col-sm-12 = this container is full width -->
         {% include header.html %}
-      </div>
-    </div>
   </div>
 </header>
 <article id="post-page">
-  <div class="container">
-    <div class="row">
-      <div id="post-title" class="col-sm-10 col-sm-offset-1">
+  <div class="page-container">
+    <div class="flex-row">
+      <div class="post-title"> <!-- col-sm-10 col-sm-offset-1 -->
         <h1><a href="{{ page.url }}">{{ page.title }} </a></h1>
         <div class="post-author">By {{ author.name }}</div>
       </div>
     </div>
-    <div class="row">
-      <div id="post-data" class="col-sm-2 col-sm-offset-1">
+    <div class="flex-row">
+      <div id="" class="post-data sidebar"> <!-- col-sm-2 col-sm-offset-1 -->
   			<div id="post-label">
   		 		<a href="/blog"><span class="label label-default">Gizra Blog</span></a>
   			</div>
@@ -62,7 +58,7 @@ post: true
           {% endunless %}
         </div>
       </div>
-      <div id="post-content" class="col-sm-8">
+      <div id="post-content" class="post-content"> <!-- col-sm-8 -->
 
         {{ content }}
 

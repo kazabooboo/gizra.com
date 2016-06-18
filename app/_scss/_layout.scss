@@ -1,0 +1,51 @@
+/* Uncomment and set these variables to customize the grid. */
+
+.container-fluid {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+
+.page-container {
+  max-width: 1024px;
+  margin-right: auto;
+  margin-left: auto;
+  
+}
+
+.flex-row {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.post-title {
+  flex: 1 0;
+  margin: 0 15px;  
+}
+
+.sidebar {
+  flex: 0 1 200px;
+  margin: 0 15px;
+}
+
+.post-content {
+  flex: 1 0;
+  margin: 0 15px;
+}
+.row.reverse {
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  flex-direction: row-reverse;
+}
+
+.col.reverse {
+  -webkit-flex-direction: column-reverse;
+  -ms-flex-direction: column-reverse;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+  flex-direction: column-reverse;
+}

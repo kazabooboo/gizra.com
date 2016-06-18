@@ -1,7 +1,7 @@
 #post-page {
   margin: 40px 0;
   
-  #post-title {
+  .post-title {
     @include title;
     
     .post-author {
@@ -12,7 +12,7 @@
     }
   }
   
-  #post-data {
+  .post-data {
 
     #post-label {
       font-size: 29.124px;
@@ -107,7 +107,7 @@
     }
   }
 
-  #post-content {
+  .post-content {
 
     h2 {
       text-transform: uppercase;
