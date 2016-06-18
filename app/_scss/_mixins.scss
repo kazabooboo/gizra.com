@@ -20,14 +20,14 @@ $negative-spacing: -10px;
 
 // Desktop.
 @mixin desktop {
-  @media (min-width: $screen-sm) {
+  @media (min-width: 768px) {
     @content;
   }
 }
 
 // Mobile.
 @mixin mobile {
-  @media (max-width: $screen-xs-max) {
+  @media (max-width: 767px) {
     @content;
   }
 }

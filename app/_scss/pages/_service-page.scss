@@ -163,7 +163,7 @@
 }
 
 // Specific media query.
-@media (min-width: 550px) and (max-width: $screen-sm) {
+@media (min-width: 550px) and (max-width: 768px) {
   #elm-page, #hr-page .project .project-image {
     width: 70%;
   }

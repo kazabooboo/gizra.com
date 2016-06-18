@@ -51,32 +51,6 @@ body {
 // Desktop Media query.
 @include desktop {
 
-  // Default.
-  .container {
-    min-width: 1200px;
-  }
-
-  header,
-  header .container,
-  #page-404 .container,
-  #header-blog .container,
-  #header-post .container,
-  #header-team .container,
-  #team-page .container,
-  #header-service .container,
-  #service-page .container,
-  #services-page .container,
-  #about,
-  #footer {
-    min-width: 1200px;
-    
-  }
-
-  .narrow {
-    padding: 0 80px;
-  }
-}
-
 #header-global {
   background: url('/images/header/global-background.jpg') no-repeat center top;
   background-size: cover;
