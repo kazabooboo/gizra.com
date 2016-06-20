@@ -15,15 +15,9 @@ post: true
     {% endif %}
   {% endfor %}
 {% endfor %}
-
-<header id="header-global">
-  <div class="container"> <!-- col-sm-12 = this container is full width -->
-        {% include header.html %}
-  </div>
-</header>
 <article id="post-page">
   <div class="page-container">
-    <div class="flex-row">
+    <div class="no-flex-row">
       <div class="post-title"> <!-- col-sm-10 col-sm-offset-1 -->
         <h1><a href="{{ page.url }}">{{ page.title }} </a></h1>
         <div class="post-author">By {{ author.name }}</div>

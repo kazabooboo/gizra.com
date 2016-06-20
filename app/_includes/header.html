@@ -3,24 +3,17 @@
 {% else %}
   {% assign about_path = "#about" %}
 {% endif %}
-<span class="gizra-logo"><a href="/">gizra</a></span>
-<h1 class="sr-only">Gizra</h1>
-<nav id="nav" role="navigation" class="navbar navbar-default">
-  <div class="navbar-header">
-    <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
+
+<header id="header-global">
+  <div class="header-container">
+    <div class="gizra-logo"><a href="/">gizra</a></div>
+
+    <nav id="nav" role="navigation" class="menu">
+      <div class="menu__item"><a href="{{ about_path }}" class="smooth-scroll-to">About</a></div>
+      <div class="menu__item"><a href="/services">Work</a></div>
+      <div class="menu__item"><a href="/team">Team</a></div>
+      <div class="menu__item"><a href="/blog">Blog</a></div>
+      <div class="menu__item"><a href="/contact">Contact</a></div>
+    </nav>
   </div>
-  <div class="navbar-collapse collapse">
-    <ul class="nav navbar-nav">
-      <li><a href="{{ about_path }}" class="smooth-scroll-to">About</a></li>
-      <li><a href="/services">Work</a></li>
-      <li><a href="/team">Team</a></li>
-      <li><a href="/blog">Blog</a></li>
-      <li><a href="/contact">Contact</a></li>
-    </ul>
-  </div>
-</nav>
+</header>

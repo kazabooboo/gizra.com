@@ -2,120 +2,56 @@ header {
   min-height: 300px;
 
   .gizra-logo {
-    position: relative;
-    float: left;
-    margin-top: 50px;
+    position: relative;    
+    padding-top: 50px;
+    width: 50%;
     z-index: 10;
+    margin-left: 15px;
+
+    @include desktop {
+      float: left;
+    }
 
     a {
       font-family: Abril Fatface;
-      font-size: 105px;
       text-decoration: none;
       color: $gizra-orange;
+
+      @include mobile {
+        font-size: calc(50px + 5vw);
+      }
+
+      @include desktop {
+        font-size: 105px;
+      }
     }
   }
 
-  .navbar {
+  .menu {
+    min-height: 0;
+    border-radius: 0;
     background: transparent;
     border: 0;
+    padding-top: 40px;
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 15px;
+        
+    .menu__item {
+      flex: 1 1 auto;
+      margin-right: 30px;
 
-    .navbar-toggle {
-      margin-top: 40px;
-      margin-right: 0;
-      border: 0;
+      a {
+        font-size: 0.857em;
+        color: white;
+        padding-top: 0;
+        padding-left: 0;
+        text-transform: uppercase;
+        text-decoration: none;
 
-      &:hover,
-      &:focus {
-        border: 0 none;
-        background: none;
-      }
-
-      .icon-bar {
-        background: white;
-        height: 3px;
-      }
-    }
-
-    .navbar-nav {
-      li {
-
-        a {
-          display: inline-block;
-          font-size: 0.857em;
-          color: white;
-          padding-top: 0;
-          padding-left: 0;
-          text-transform: uppercase;
-          text-decoration: none;
-
-          &:hover,
-          &.active {
-            color: $gizra-orange;
-          }
-        }
-      }
-    }
-  }
-}
-
-// Desktop Media query.
-@include desktop {
-
-  .gizra-logo {
-    margin-left: 15px;
-  }
-
-  #nav {
-    min-height: 0;
-    margin: 40px 0 0;
-    border-radius: 0;
-
-    .navbar-nav {
-      float: right;
-
-      li {
-        a {
-          padding: 0 8px 0 0;
-        }
-
-        &:not(:last-child) {
-          position: relative;
-          margin-right: 30px;
-
-          a::after {
-            content: '.';
-            position: absolute;
-            top: -5px;
-            right: -0.5em;
-            width: 1px;
-            height: 100%;
-            color: white;
-          }
-        }
-      }
-    }
-  }
-}
-
-// Mobile Media query.
-@include mobile {
-
-  .navbar-default .navbar-collapse {
-    border-top: 1px solid $soft-white;
-    border-bottom: 1px solid $soft-white;
-  }
-
-  #nav {
-    .navbar-nav {
-      margin: 0 -15px;
-
-      li {
-        &:not(:last-child) {
-          border-bottom: 1px solid $soft-white;
-        }
-
-        a {
-          padding: 20px 0;
+        &:hover,
+        &.active {
+          color: $gizra-orange;
         }
       }
     }
