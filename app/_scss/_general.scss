@@ -12,8 +12,6 @@ body {
 *  Typography
 */
 
-
-
 .thumbnail {
   margin: 1em auto;
   padding: 0;
@@ -85,4 +83,50 @@ body {
   .gizra-logo {
     margin-bottom: 30px;
   }
+}
+
+
+/**
+*  List Boxes
+*/
+
+.list-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+  .list-box {
+    padding: 0 30px;
+    width: 480px;
+
+    .list-box__item__heading {
+      font-weight: bold;
+      color: $gizra-orange;
+      margin-bottom: 0.4em;
+      padding-bottom: 0.2em;
+      @extend .divider-bottom;
+    }
+  }
+  
+  .list-box:hover {
+    background-color: #f5f5f5;
+  }
+}
+
+
+/**
+*  Page Titles
+*/
+
+.page-title {
+  @include title;
+}
+
+
+/**
+*  Strstegy Page
+*/
+
+#strategy-page {
+  padding: 40px 0;
 }
