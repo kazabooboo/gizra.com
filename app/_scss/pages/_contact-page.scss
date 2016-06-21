@@ -1,0 +1,19 @@
+#contact-page {
+  margin: 40px 0;
+
+  .title {
+    @include title;
+  }
+  
+  h3 {
+    color: $gizra-orange;
+  }
+
+  .contact-us {
+    margin-top: 30px;
+
+    p {
+      margin: 0 auto;
+    }
+  }
+}

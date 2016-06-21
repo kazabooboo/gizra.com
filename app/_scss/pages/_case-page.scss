@@ -1,0 +1,133 @@
+// Case page.
+#case-page {
+  margin: 40px 0;
+
+  #case-title {
+    @include title;
+  
+    h2 {
+      font-size: 1.387em;
+      font-weight: 100;
+      font-family: "Hind", sans-serif;
+      color: $gizra-black;
+    }
+  }
+  
+  #case-data {
+    font-size: 0.7619em;
+    line-height: 1.2;
+ 
+    #case-label {
+      font-size: 25.888px;
+      margin: 0 0 1em;
+    
+      a {
+        text-decoration: none;
+      }
+    
+      .label {
+        border-radius: 0;
+      }
+    }
+
+    .date {
+      margin-bottom: 1em;
+      font-weight: bold;
+    }
+  
+    .site, .client {
+      margin-bottom: 1em;
+      
+      .site-label, .client-label {
+        font-weight: bold;
+      }
+      
+      .site-text a {
+        color: $gizra-blue;
+        text-decoration: none;
+      }
+    }
+
+    .case-glance {
+      h3 {
+        margin-top: 0;
+      }
+    
+      .techs {
+        .title {
+          font-weight: bold;
+        }
+    
+        ul {
+          list-style-type: none;
+          margin-bottom: 15px;
+          padding-left: 0;
+        }
+    
+        li {
+          padding-left: 0;
+          display: inline;
+    
+          &::after {
+            content: ' // ';
+          }
+    
+          &:last-child {
+    
+            &::after {
+              content: '';
+            }
+          }
+        }
+      }
+    
+      .facts {
+        margin-bottom: 1em;
+    
+        .title {
+          font-weight: bold;
+        }
+    
+        ul {
+          padding-left: 20px;
+        }
+    
+        li {
+          margin: .4em 0;
+          padding-left: 0;
+        }
+      }
+    }  
+  }
+
+
+  .case {
+  
+    h3 {
+      color: $gizra-black;
+      text-transform: uppercase;
+    }
+  	
+  	#abstract {
+     	padding: 1em 0.15em;
+  		font-weight: 600;
+  	}
+  
+    #case-content {
+    
+      blockquote {
+        font-size: 0.857em;
+        border-left: 5px gray solid;
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+// Mobile Media query.
+@include mobile {
+
+  .case-content {
+    overflow-x: hidden;
+  }
+}

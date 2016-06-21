@@ -1,10 +1,15 @@
 header {
+  min-height: 300px;
 
   .gizra-logo {
+    position: relative;
+    float: left;
+    margin-top: 50px;
+    z-index: 10;
 
     a {
       font-family: Abril Fatface;
-      font-size: 3.5em;
+      font-size: 105px;
       text-decoration: none;
       color: $gizra-orange;
     }
@@ -14,12 +19,8 @@ header {
     background: transparent;
     border: 0;
 
-    .container-fluid {
-      padding-left: 0;
-      padding-right: 0;
-    }
-
     .navbar-toggle {
+      margin-top: 40px;
       margin-right: 0;
       border: 0;
 
@@ -39,11 +40,13 @@ header {
       li {
 
         a {
+          display: inline-block;
+          font-size: 0.857em;
           color: white;
           padding-top: 0;
           padding-left: 0;
-          font-size: 1.13em;
-          display: inline-block;
+          text-transform: uppercase;
+          text-decoration: none;
 
           &:hover,
           &.active {
@@ -67,24 +70,27 @@ header {
     margin: 40px 0 0;
     border-radius: 0;
 
-    .navbar-nav li {
+    .navbar-nav {
+      float: right;
 
-      a {
-        padding: 0 8px 0 0;
-      }
+      li {
+        a {
+          padding: 0 8px 0 0;
+        }
 
-      &:not(:last-child) {
-        position: relative;
-        margin-right: 30px;
+        &:not(:last-child) {
+          position: relative;
+          margin-right: 30px;
 
-        a::after {
-          content: '.';
-          position: absolute;
-          top: 0;
-          right: -10px;
-          width: 1px;
-          height: 100%;
-          color: white;
+          a::after {
+            content: '.';
+            position: absolute;
+            top: -5px;
+            right: -0.5em;
+            width: 1px;
+            height: 100%;
+            color: white;
+          }
         }
       }
     }

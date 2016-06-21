@@ -4,7 +4,7 @@ tags:
   - The Gizra Way
   - Project management
 permalink: /content/budget-goggles
-title: Budget Goggles - creating a common language and setting expectations
+title: "Budget Goggles: A Common Language and Setting Expectations"
 layout: post
 image: /assets/images/posts/budget-goggles/thumb.jpg
 author: RachelBaram

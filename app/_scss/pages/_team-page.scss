@@ -1,35 +1,10 @@
-#header-team {
-  background: url('/images/team/background.png') no-repeat center top;
-  background-size: cover;
-  width: 100%;
-  text-align: left;
-  padding-bottom: 255px;
-
-  .introduction {
-    color: white;
-    margin-top: 27px;
-    margin-left: 10px;
-
-    h1 {
-      margin-bottom: 5px;
-    }
-
-    p {
-      max-width: 600px;
-      font-size: 20.5px;
-      line-height: 1.5em;
-    }
-
-    .arrow-down {
-      display: block;
-      margin-top: 87px;
-      margin-left: 16px;
-    }
-  }
-}
-
 #team-page {
+  margin: 40px 0;
   position: relative;
+
+  .title {
+    @include title;
+  }
 
   .member-box {
     padding-left: 0;
@@ -50,7 +25,7 @@
       }
 
       .info {
-        font-size: 18px;
+        font-size: 0.857em;
         text-align: center;
         position: absolute;
         bottom: 20%;
@@ -100,20 +75,8 @@
   }
 }
 
-// Desktop Media query.
-@include desktop {
-
-  #team-page .member-box {
-    height: 449px;
-  }
-}
-
 // Mobile Media query.
 @include mobile {
-
-  #header-team {
-    padding-bottom: 100px;
-  }
 
   #team-page .member-box .popup-block ul {
     margin-top: 15px;

@@ -3,14 +3,11 @@ layout: default
 title: Blog
 blog: true
 ---
-<header id="header-blog">
+<header id="header-global">
   <div class="container">
     <div class="row">
-      <div class="col-sm-12 narrow">
+      <div class="col-sm-12">
         {% include header.html %}
-        <h1 class="text-capitalize">
-          <a href="/blog">Blog</a>
-        </h1>
       </div>
     </div>
   </div>
@@ -18,10 +15,11 @@ blog: true
 <section id="blog-page">
   <div class="container">
     <div class="row">
-      <div class="col-sm-12 narrow blog">
+      <div class="col-sm-10 col-sm-offset-1 blog">
+        <h1 class="title">The Gizra Blog</h1>
         <div class="row posts">
           {% for post in paginator.posts %}
-            <div class="col-sm-4">
+            <div class="col-sm-6">
               {% include post_teaser.html img_number=forloop.index %}
             </div>
           {% endfor %}
@@ -30,7 +28,7 @@ blog: true
     </div>
     <!--Pager Begin-->
     <div class="row">
-      <div id="pager" class="col-sm-12 narrow">
+      <div id="pager" class="col-sm-10 col-sm-offset-1">
         <ul class="pager-nav">
           <li class="prev text-capitalize">
             {% if paginator.previous_page %}

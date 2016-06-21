@@ -2,15 +2,20 @@ body {
   @include touch;
   color: $gizra-body;
   font-family: 'Hind', sans-serif;
-  font-size: 16px;
-  line-height: 1.2em;
+  font-size: 21px;
+  line-height: 1.618em;
   font-weight: 100;
-  letter-spacing: 0.010em;
 }
 
+
+/**
+*  Typography
+*/
+
+
+
 .thumbnail {
-  @include box-shadow(0 5px 5px 0 rgba(0, 0, 0, 0.082));
-  margin: 30px auto;
+  margin: 1em auto;
   padding: 0;
   display: inline-block;
   text-align: center;
@@ -33,6 +38,8 @@ body {
     border: 1px solid #DEDEDE;
     border-top: 0;
     border-radius: 0 0 4px 4px;
+    font-size: 16px;
+    font-weight: 500;
   }
 }
 
@@ -40,14 +47,6 @@ body {
   margin-bottom: 165px;
 }
 
-.demo-block a {
-  margin-top: 20px;
-  display: inline-block;
-  padding: 10px;
-  border-radius: 4px;
-  color: #ffffff;
-  background: $gizra-blue;
-}
 
 // Desktop Media query.
 @include desktop {
@@ -70,6 +69,7 @@ body {
   #about,
   #footer {
     min-width: 1200px;
+    
   }
 
   .narrow {
@@ -78,7 +78,7 @@ body {
 }
 
 #header-global {
-  background: url('/images/services/background.jpg') no-repeat center top;
+  background: url('/images/header/global-background.jpg') no-repeat center top;
   background-size: cover;
   text-align: left;
 

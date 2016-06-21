@@ -1,30 +1,9 @@
-// Post page.
-#header-post,
-#header-blog {
-  background: url('/images/post/background.png') no-repeat center top;
-  background-size: cover;
-  text-align: left;
-
-  .gizra-logo {
-    margin-bottom: 30px;
-  }
-}
-
-
-#header-blog {
-  h1 {
-    margin-left: 15px;
-    color: white;
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-  }
-}
-
 #blog-page {
-  margin-top: 45px;
+  margin: 40px 0;
+
+  h1.title {
+    @include title;
+    } 
 
   #pager {
     list-style: none;
@@ -62,10 +41,121 @@
   }
 }
 
-// Mobile Media query.
-@include mobile {
+// blog class for homepage and blog page. 
+.blog {
+  margin-bottom: 20px;
 
-  .post-content {
-    overflow-x: hidden;
+  .post-teaser {
+    @extend .soft-box;
+    box-shadow: none;
+    position: relative;
+    margin-bottom: 28px;
+    padding-top: 10px;
+    padding-bottom: 7px;
+    border-radius: 6px;
+
+    > * {
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+  }
+
+  .author-details {
+    position: relative;
+
+    .name, .date {
+      margin-bottom: 0.2em;
+      line-height: 1.2;
+
+      a {
+        color: $gizra-orange;
+        text-decoration: none;
+      }
+
+      i {
+        margin-right: 5px;
+        font-size: 0.9em;
+      }
+    }
+
+    .avatar {
+      @extend .soft-box;
+      padding: 4px;
+      width: 60px;
+      position: absolute;
+      z-index: 4;
+      top: -46px;
+      right: 12px;
+      background: white;
+    }
+  }
+
+  .article {
+    .main-image {
+      position: relative;
+      display: block;
+      border: 1px solid #C5C5C5;
+      margin-bottom: 12px;
+      overflow: hidden;
+      background: black;
+
+      img {
+        @include transition(all 0.5s ease-in-out);
+        position: relative;
+        width: 100%;
+
+        &:hover {
+          @include transform(scale(1.15));
+          opacity: 0.5;
+        }
+      }
+    }
+
+    h3.title {
+      margin-top: 0;
+      margin-bottom: .2em;
+    }
+  }
+
+  .blog-more {
+    text-align: center;
+    margin-bottom: 45px;
+
+    a {
+      @extend .soft-box;
+      color: $gizra-blue;
+      font-weight: 400;
+      text-decoration: none;
+      padding: $spacing;
+      display: inline-block;
+    }
+  }
+}
+
+@include desktop {
+  .blog .article .main-image {
+    height: 275px;
+  }
+
+  .post-teaser {
+    height: 400px;
+    overflow: hidden;
+  }
+}
+
+// Specific media query.
+@media (min-width: 550px) and (max-width: $screen-sm) {
+  .blog .post-teaser {
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+  }
+}
+
+// Specific media query.
+@media (max-width: 450px) {
+  .blog .author-details .avatar {
+    width: 50px;
+    top: -48px;
   }
 }

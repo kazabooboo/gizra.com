@@ -6,42 +6,51 @@ keywords: The Gizra Way, Web development Tel-aviv, Web development New york, Sta
 homepage: true
 ---
 <div id="homepage">
-  <header class="header-homepage">
+  <header class="header-homepage" role="banner">
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
           {% include header.html %}
-          <div id="slogan">
-            <h2 class="text-capitalize">
-              Take a leap of faith with us,
-              <br class="hidden-xs">
-              it's beautiful here.
-            </h2>
-            <p>Build an amazing, cutting-edge web solution that you will be proud of. Seriously.</p>
-            <p>
-              Do it in a truly transparent, best-practices driven,
-              <br/>
-              honest partnership with passionate people.
-            </p>
-            <p class="about-us-story">
-              Read our "<a target="_blank" href="/content/the-about-story/">About Story</a>." It's different.
-            </p>
+          <div class="row">
+            <div id="slogan" class="col-sm-5">
+             <h2>
+               Take a leap of faith with us.
+               <br class="hidden-xs">
+               It&rsquo;s beautiful here.
+              </h2>
+              <div id="sub-slogan">
+                <p>Build a cutting-edge web solution that will make you proud. Seriously.</p>
+                <p>Do it in a transparent, best-practices driven, honest partnership with passionate people.</p>
+              </div>
+              <div id="about-us-story">
+              <p class="text-small">
+                <sup>*</sup>Read our <a target="_blank" href="/content/the-about-story/">About Story</a> &mdash; It's different.
+              </p>
+              </div>
+              <div class="page-scroll hidden-xs">
+                <div class="scroll-wrapper">
+                  <a href="#testimonials" class="smooth-scroll-to">
+                    <span class="sr-only">Our work</span>
+                    <i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
-          {% include clients.html %}
         </div>
       </div>
     </div>
   </header>
   {% include testimonials.html %}
   {% include about.html %}
-  <section class="blog">
+  <section id="from-our-blog" class="blog">
     <div class="container">
       <div class="row">
-        <div class="col-sm-12 narrow">
-          <h2 class="main-title"><a href="/blog">From our blog</a></h2>
+        <div class="col-sm-10 col-sm-offset-1 blog">
+          <h2 class="title"><a href="/blog">From our blog</a></h2>
           <div class="row">
-            {% for post in site.posts limit:3 %}
-            <div class="col-sm-4">
+            {% for post in site.posts limit:2 %}
+            <div class="col-sm-6">
               {% include post_teaser.html img_number=forloop.index %}
             </div>
             {% endfor %}

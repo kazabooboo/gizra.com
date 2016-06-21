@@ -3,6 +3,8 @@
 {% else %}
   {% assign about_path = "#about" %}
 {% endif %}
+<span class="gizra-logo"><a href="/">gizra</a></span>
+<h1 class="sr-only">Gizra</h1>
 <nav id="nav" role="navigation" class="navbar navbar-default">
   <div class="navbar-header">
     <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
@@ -14,16 +16,11 @@
   </div>
   <div class="navbar-collapse collapse">
     <ul class="nav navbar-nav">
-      <li><a href="{{ about_path }}" class="smooth-scroll-to">About Us</a></li>
-      <li><a href="/team">Meet the Team</a></li>
+      <li><a href="{{ about_path }}" class="smooth-scroll-to">About</a></li>
+      <li><a href="/services">Work</a></li>
+      <li><a href="/team">Team</a></li>
       <li><a href="/blog">Blog</a></li>
-      <li><a href="#contact" class="smooth-scroll-to">Contact</a></li>
+      <li><a href="/contact">Contact</a></li>
     </ul>
   </div>
 </nav>
-{% if page.homepage == nil %}
-  <h2 class="gizra-logo"><a href="/">gizra</a></h2>
-{% else %}
-  <h1 class="gizra-logo"><a href="/">gizra</a></h1>
-{% endif %}
-

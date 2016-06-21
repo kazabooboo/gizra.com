@@ -1,102 +1,91 @@
 @import 'testimonials';
 
 #homepage {
-
   .header-homepage {
     background: #292929;
-    background: url('/images/header/background.png') no-repeat left top;
+    background: url('/images/header/homepage-background.jpg') no-repeat center top;
     background-size: cover;
+    background-attachment: fixed;
     width: 100%;
     text-align: left;
+    padding-bottom: 40px;
 
     #slogan {
+      margin-top: 70px;
       position: relative;
       overflow: hidden;
       color: white;
-
+      
       h2 {
-        margin: 30px 0 10px;
+        margin: 0;
+        color: white;
+        font-family: "Hind", sans-serif;
         font-weight: bold;
-        font-size: 1.9em;
-        line-height: 1.3em;
-        letter-spacing: 0.025em;
-        text-transform: uppercase;
+        font-size: 37.5px;
       }
 
-      p {
-        margin: 7px 0;
-        font-size: 1.23em;
-        max-width: 430px;
-        line-height: 1.45em;
-        letter-spacing: 0.013em;
-      }
+      #sub-slogan {
+        margin: 1em 0 0;
 
-      .about-us-story {
-        margin-top: 15px;
-
-        a {
-          color: white;
-          text-decoration: underline;
+        p {
+          font-family: "Raleway", sans-serif;
+          font-size: 27px;
+          line-height: 1.2em;
         }
       }
 
-      h3 {
-        display: inline-block;
-        text-transform: uppercase;
-        font-size: 22px;
-        margin: -4px 0 0 420px;
+      #about-us-story {
+        font-family: "Raleway", sans-serif;
+        margin-top: 1.5em;
+        font-weight: 500;
+
+        a {
+          color: white;
+        }
       }
+
+      .page-scroll {
+        margin-top: 30px;
+        width: 100%;
+    
+        .scroll-wrapper {
+          display: block;
+          text-align: center;
+    
+          a {
+            color: white;
+            font-size: 1.618em;
+            text-decoration: none;
+            opacity: 0.5;
+          }
+        }
+      }         
     }
   }
 
-  .main-title {
-    @include title;
-    color: $gizra-orange;
-    margin-top: 0;
-    margin-bottom: 5px;
+  #from-our-blog {
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-  }
+    h2.title {
+      @include title;
+      font-size: 47.123px;      
 
-  .blog {
-    margin-top: 15px;
-
-    .main-title {
-      margin-bottom: 15px;
+      a {
+        color: $gizra-blue;      
+      }
     }
   }
 }
 
 // Desktop Media query.
 @include desktop {
+  
+  .header-homepage, #gizra-way, #about, #testimonials, #from-our-blog {
+    height: 100vh;
+    max-height: 1000px;
+    min-height: 650px;
+  }
 
   #homepage .header-homepage #slogan {
     margin-left: 15px;
-    height: 414px;
-
-    h2 {
-      max-width: 474px;
-    }
-  }
-}
-
-// Mobile Media query.
-@include mobile {
-
-  #homepage {
-
-    #about #main-wrapper {
-      border: 1px solid $softer-border;
-      padding: 20px;
-      border-radius: 5px;
-    }
-
-    .blog .main-title {
-      margin-bottom: 15px;
-      text-align: center;
-    }
   }
 }

@@ -12,27 +12,30 @@ class FeatureContext extends MinkContext implements SnippetAcceptingContext {
    * @Given I am an anonymous user
    */
   public function iAmAnAnonymousUser() {
-    // Just let this pass-through.
+    // Sine Jekyll doesn't allow login, we just let this pass-through.
   }
-
   /**
    * @When I visit the homepage
    */
   public function iVisitTheHomepage() {
     $this->getSession()->visit($this->locatePath('/'));
   }
-
   /**
    * @Then I should have access to the page
    */
   public function iShouldHaveAccessToThePage() {
     $this->assertSession()->statusCodeEquals('200');
   }
-
   /**
-   * @Then I should not have access to the page
+   * @Then I should the text :text under the main content
    */
-  public function iShouldNotHaveAccessToThePage() {
-    $this->assertSession()->statusCodeEquals('403');
+  public function iShouldTheTextUnderTheMainContent($text) {
+    $this->assertElementContains('#post-content', $text);
+  }
+  /**
+   * @Then I should see the author :author
+   */
+  public function iShouldSeeTheAuthor($author) {
+    $this->assertElementContains('.post-author', $author);
   }
 }
