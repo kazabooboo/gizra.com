@@ -105,6 +105,17 @@ body {
       margin-bottom: 0.4em;
       padding-bottom: 0.2em;
       @extend .divider-bottom;
+      
+      .list-box__item__heading_icon {
+        display: inline-block;
+        height: 1.5em;
+        width: 1.5em;
+        line-height: 1.2em;
+        background: $gizra-orange;
+        color: white;
+        border-radius: 50%;
+        text-align: center;
+      }
     }
   }
   
