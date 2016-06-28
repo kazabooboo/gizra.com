@@ -95,20 +95,28 @@
       height: 350px;
     }
     
-    .carousel-caption {
-      position: relative;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      color: #000;
-      text-align: left;
-      margin-right: 25px;
-      margin-left: 25px;
-      max-height: 300px;
-      overflow: hidden;
-      text-shadow: none;
-      p {
-        line-height: 1.2;
+    .carousel-inner {
+      
+      img {
+        margin-top: 10px;
+      }
+    
+      .carousel-caption {
+        position: relative;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        color: #000;
+        text-align: left;
+        margin-right: 25px;
+        margin-left: 25px;
+        max-height: 300px;
+        overflow: hidden;
+        text-shadow: none;
+
+        p {
+          line-height: 1.2;
+        }
       }
     }
 
@@ -120,7 +128,7 @@
 
     .carousel-indicators {
       @include box-shadow(0 1px 2px 0 rgba(0, 0, 0, 0.22));
-      margin: 0 0 0 -41.5px;
+      margin: 0 0 0 -83.5px;
       left: 50%;
       bottom: -16px;
       padding: 9px 0 5px;
@@ -154,6 +162,20 @@
       }
     }
   }
+
+  .projects-label {
+    margin-top: 60px;
+    text-align: center;
+    font-size: 29.124px;
+  
+    a {
+      text-decoration: none;
+    }
+  
+    .label {
+      border-radius: 0;
+    }
+  }
 }
 
 // Desktop Media query.
@@ -167,7 +189,7 @@
     justify-content: center;
   }
    
-   #services-page {
+   #services-page, #projects-page {
     min-height: 700px;
   }
    #strengths-page, #cases-page {
