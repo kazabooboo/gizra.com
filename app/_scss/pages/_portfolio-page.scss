@@ -1,0 +1,38 @@
+#portfolio-page {
+  margin: 40px 0;
+  
+  #post-title {
+    @include title;
+    
+    .post-author {
+      font-size: 1.387em;
+      font-weight: 100;
+      font-family: "Hind", sans-serif;
+      color: $gizra-black;
+    }
+  }
+  
+  .project {
+    @extend .divider-bottom;
+    margin-top: 30px;
+    .project-title {
+
+      h3 {
+        color: $gizra-orange;
+      }
+    }
+
+    .project-data {
+      font-size: 0.857em;
+      
+      .project-data-client,
+      .project-data-url,
+      .project-data-date {
+        
+        .title {
+          font-weight: bold;
+        }        
+      }
+    }
+  }
+}
