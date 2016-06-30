@@ -34,7 +34,7 @@
   }
 
   // Mobile Media query.
-  @include mobile {
+  @include phone {
 
     .service-features-mobile > * {
       position: relative;
@@ -121,7 +121,7 @@
   }
 
   // Desktop Media query.
-  @include desktop {
+  @include tablet-and-above {
     #project-features .panel:last-child {
       border-bottom: 0;
     }
@@ -141,7 +141,7 @@
   }
 
   // Mobile Media query.
-  @include mobile {
+  @include phone {
 
     .blog-link {
       text-align: center;

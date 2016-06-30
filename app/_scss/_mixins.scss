@@ -18,16 +18,34 @@ $blur: 4px;
 $spacing: 10px;
 $negative-spacing: -10px;
 
-// Desktop.
-@mixin desktop {
-  @media (min-width: 768px) {
+// Set Media Queries
+@mixin phone {
+  @media (max-width: 767px) {
     @content;
   }
 }
 
-// Mobile.
-@mixin mobile {
-  @media (max-width: 767px) {
+@mixin tablet {
+  @media (min-width: 768px) and (max-width: 991px) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (min-width: 992px) and (max-width: 1199px) { 
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1200px) { 
+    @content;
+  }
+}
+
+/* Legacy for tablet and larger */
+@mixin tablet-and-above {
+  @media (min-width: 768px) { 
     @content;
   }
 }

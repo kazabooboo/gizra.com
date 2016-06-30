@@ -86,7 +86,7 @@
 }
 
 // Desktop Media query.
-@include desktop {
+@include tablet-and-above {
 
   #services-page, #strengths-page, #cases-page {
     height: 100vh;

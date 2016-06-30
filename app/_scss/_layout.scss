@@ -1,46 +1,44 @@
-/* Uncomment and set these variables to customize the grid. */
-
-.container-fluid {
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 2rem;
-  padding-left: 2rem;
-}
+/* Containers */
 
 .header-container {
-  max-width: 1200px;
+  max-width: 1170px;
   margin-right: auto;
   margin-left: auto;  
 }
 
 .page-container {
-  max-width: 1024px;
-  margin-right: auto;
-  margin-left: auto;
   
+  @include desktop {
+    max-width: 1020px;
+  }
+  
+  @include laptop {
+    max-width: 950px;
+  }
+  
+  @include tablet {
+    max-width: 750px;
+  }
+
+  @include phone {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+    
+  margin-right: auto;
+  margin-left: auto;  
 }
+
+/* Flexbox rows and columns */
 
 .flex-row {
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
+  @include phone {flex-direction: column;}
 }
 
-.post-title {
-  flex: 1 0;
-  margin: 0 15px;  
-}
-
-.sidebar {
-  flex: 0 1 200px;
-  margin: 0 15px;
-}
-
-.post-content {
-  flex: 1 0;
-  margin: 0 15px;
-}
-.row.reverse {
+.flex-row.reverse {
   -webkit-flex-direction: row-reverse;
   -ms-flex-direction: row-reverse;
   -webkit-box-orient: horizontal;
@@ -48,10 +46,29 @@
   flex-direction: row-reverse;
 }
 
-.col.reverse {
+.flex-col.reverse {
   -webkit-flex-direction: column-reverse;
   -ms-flex-direction: column-reverse;
   -webkit-box-orient: vertical;
   -webkit-box-direction: reverse;
   flex-direction: column-reverse;
+}
+
+/* Page elements */
+
+.page-title {
+  flex: 1 0;
+  margin: 0 15px;  
+}
+
+.sidebar {
+  flex: 1 0 200px;
+  margin: 0 15px;
+  min-width: 200px;
+  @include tablet-and-above { max-width: 200px; } 
+}
+
+.post-content {
+  flex: 1 0;
+  margin: 0 15px;
 }

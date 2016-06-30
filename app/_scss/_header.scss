@@ -8,7 +8,7 @@ header {
     z-index: 10;
     margin-left: 15px;
 
-    @include desktop {
+    @include tablet-and-above {
       float: left;
     }
 
@@ -17,11 +17,11 @@ header {
       text-decoration: none;
       color: $gizra-orange;
 
-      @include mobile {
+      @include phone {
         font-size: calc(50px + 5vw);
       }
 
-      @include desktop {
+      @include tablet-and-above {
         font-size: 105px;
       }
     }

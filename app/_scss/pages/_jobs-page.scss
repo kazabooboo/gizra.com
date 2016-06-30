@@ -34,7 +34,7 @@
   }
 
   // Desktop Media query.
-  @include desktop {
+  @include tablet-and-above {
     .narrow {
       padding: 0 160px;
     }

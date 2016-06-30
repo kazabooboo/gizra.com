@@ -87,7 +87,7 @@ $google-plus: #d34836;
 }
 
 // Desktop Media query.
-@include desktop {
+@include tablet-and-above {
   #footer {
 
     address {
@@ -122,7 +122,7 @@ $google-plus: #d34836;
 
 
 // Mobile Media query.
-@include mobile {
+@include phone {
 
   #footer {
     text-align: center;

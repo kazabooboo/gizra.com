@@ -77,7 +77,7 @@
 }
 
 // Desktop Media query.
-@include desktop {
+@include tablet-and-above {
   
   .header-homepage, #gizra-way, #about, #testimonials, #from-our-blog {
     height: 100vh;

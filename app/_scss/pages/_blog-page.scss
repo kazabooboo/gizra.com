@@ -132,7 +132,7 @@
   }
 }
 
-@include desktop {
+@include tablet-and-above {
   .blog .article .main-image {
     height: 275px;
   }

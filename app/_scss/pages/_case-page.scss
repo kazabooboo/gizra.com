@@ -125,7 +125,7 @@
 }
 
 // Mobile Media query.
-@include mobile {
+@include phone {
 
   .case-content {
     overflow-x: hidden;

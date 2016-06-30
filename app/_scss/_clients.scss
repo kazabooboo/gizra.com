@@ -18,7 +18,7 @@
 }
 
 // Desktop Media query.
-@include desktop {
+@include tablet-and-above {
 
   #work {
 
@@ -63,7 +63,7 @@
 }
 
 // Mobile Media query.
-@include mobile {
+@include phone {
   #work {
     .clients {
       margin-top: 10px;
