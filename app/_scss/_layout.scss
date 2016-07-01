@@ -35,7 +35,6 @@
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
-  @include phone {flex-direction: column;}
 }
 
 .flex-row.reverse {
@@ -55,6 +54,12 @@
 }
 
 /* Page elements */
+.two-col-layout {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  @include phone {flex-direction: column;}
+}
 
 .page-title {
   flex: 1 0;
@@ -71,4 +76,20 @@
 .post-content {
   flex: 1 0;
   margin: 0 15px;
+}
+
+.pager {
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+.pager__previous {
+  padding-right: 15px;
+  flex: 1 0 50%;
+}
+
+.pager__next {
+  padding-left: 15px;
+  text-align: right;
+  flex: 1 0 50%;
 }

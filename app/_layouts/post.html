@@ -21,7 +21,7 @@ post: true
       <h1><a href="{{ page.url }}">{{ page.title }} </a></h1>
       <div class="post-author">By {{ author.name }}</div>
     </div>
-    <div class="flex-row">
+    <div class="two-col-layout">
       <div id="" class="post-data sidebar"> <!-- col-sm-2 col-sm-offset-1 -->
   			<div id="post-label">
   		 		<a href="/blog"><span class="label label-default">Gizra Blog</span></a>
@@ -54,36 +54,36 @@ post: true
 
         {{ content }}
 
+        <section id="post-nav">
+          <div class="page-container">
+            <div class="flex-row pager">
+              <div class="pager__previous">
+                {% if page.previous %}
+                <a href="{{ page.previous.url }}">
+                  <div id="previous-label" class="text-small">
+                    <span class="hidden-xs"><i class="fa fa-chevron-circle-left"></i>&nbsp;{{ page.previous.title }}</span>
+                    <!-- <span class="visible-xs"><i class="fa fa-chevron-circle-left"></i>&nbsp;Previous post</span> -->
+                  </div>
+                </a>
+                {% endif %}
+              </div>
+              <div class="pager__next">
+                {% if page.next %}
+                <a href="{{ page.next.url }}">
+                  <div id="next-label" class="text-small">
+                    <span class="hidden-xs">{{ page.next.title }}&nbsp;<i class="fa fa-chevron-circle-right"></i></span>
+                    <!-- <span class="visible-xs">Next post&nbsp;<i class="fa fa-chevron-circle-right"></i></span> -->
+                  </div>
+                </a>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
   </div>
 </article>
-<section id="post-nav">
-  <div class="page-container">
-    <div class="flex-row">
-      <div class="col-sm-3 col-sm-offset-3 col-xs-6 previous">
-        {% if page.previous %}
-        <a href="{{ page.previous.url }}">
-          <div id="previous-label" class="text-small">
-            <span class="hidden-xs"><i class="fa fa-chevron-circle-left"></i>&nbsp;{{ page.previous.title }}</span>
-            <span class="visible-xs"><i class="fa fa-chevron-circle-left"></i>&nbsp;Previous post</span>
-          </div>
-        </a>
-        {% endif %}
-      </div>
-      <div class="col-sm-3 col-sm-offset-2 col-xs-6 next">
-        {% if page.next %}
-        <a href="{{ page.next.url }}">
-          <div id="next-label" class="text-small">
-            <span class="hidden-xs">{{ page.next.title }}&nbsp;<i class="fa fa-chevron-circle-right"></i></span>
-            <span class="visible-xs">Next post&nbsp;<i class="fa fa-chevron-circle-right"></i></span>
-          </div>
-        </a>
-        {% endif %}
-      </div>
-    </div>
-  </div>
-</section>
 <section>
   <div class="container">
     <div class="row">
