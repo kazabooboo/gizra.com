@@ -120,7 +120,7 @@ body {
   }
   
   .list-box:hover {
-    background-color: rgba(245, 245, 245, 0.8);
+    background-color: rgba(175, 175, 175, 0.3);
   }
 }
 
@@ -143,19 +143,30 @@ body {
   position: relative;
 }
 
+
+/**
+*  Strategy Page
+*/
+
+#strategy-page {
+  padding: 40px 0;
+  position: relative
+}
+
 #strategy-page:before {
-    content: ' ';
-    display: block;
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    opacity: 0.1;
-    background-image: url('/images/services/light-bulb.svg');
-    background-repeat: no-repeat;
-    background-position: 80% 10%;
-    background-size: 400px 400px;
+  content: ' ';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.1;
+  background-image: url('/images/services/light-bulb.svg');
+  background-repeat: no-repeat;
+  background-position: 80% 30%;
+  background-size: 400px 400px;
 }
 
 .img_inline-right {  
