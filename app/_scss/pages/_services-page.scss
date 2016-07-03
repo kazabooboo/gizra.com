@@ -1,5 +1,5 @@
 // Services page.
-#services-page, #strengths-page, #cases-page {
+#services-page, #strengths-page, #cases-page, #projects-page {
   margin: 40px 0;
   
   h1.title, h2.title {
@@ -85,10 +85,103 @@
   }
 }
 
+#projects-page {
+  #carousel-projects {
+    @extend .soft-box;
+    border-radius: 6px;
+    background-color: #ffffff;
+    
+    @include desktop {
+      height: 350px;
+    }
+    
+    .carousel-inner {
+      
+      img {
+        margin-top: 10px;
+      }
+    
+      .carousel-caption {
+        position: relative;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        color: #000;
+        text-align: left;
+        margin-right: 25px;
+        margin-left: 25px;
+        max-height: 300px;
+        overflow: hidden;
+        text-shadow: none;
+
+        p {
+          line-height: 1.2;
+        }
+      }
+    }
+
+    .carousel-control.left, 
+    .carousel-control.right {
+      background-image: none;
+      width: auto;
+    }
+
+    .carousel-indicators {
+      @include box-shadow(0 1px 2px 0 rgba(0, 0, 0, 0.22));
+      margin: 0 0 0 -83.5px;
+      left: 50%;
+      bottom: -16px;
+      padding: 9px 0 5px;
+      width: auto;
+      text-align: left;
+      background: white;
+      display: inline-block;
+      border-radius: 6px;
+      border: 1px solid rgba(227, 227, 227, 0.51);
+  
+      li {
+        position: relative;
+        margin: 1px 5px;
+        width: 13px;
+        height: 13px;
+        background-color: $gizra-black;
+  
+        &:not(:last-child)::after {
+          content: '';
+          position: absolute;
+          top: -12px;
+          bottom: -15px;
+          width: 1px;
+          background: rgba(81, 81, 81, 0.15);
+          right: -9px;
+        }
+      }
+  
+      .active {
+        background-color: $gizra-blue;
+      }
+    }
+  }
+
+  .projects-label {
+    margin-top: 60px;
+    text-align: center;
+    font-size: 29.124px;
+  
+    a {
+      text-decoration: none;
+    }
+  
+    .label {
+      border-radius: 0;
+    }
+  }
+}
+
 // Desktop Media query.
 @include desktop {
 
-  #services-page, #strengths-page, #cases-page {
+  #services-page, #strengths-page, #cases-page, #projects-page {
     height: 100vh;
     max-height: 1000px;
     display: flex;
@@ -96,7 +189,7 @@
     justify-content: center;
   }
    
-   #services-page {
+   #services-page, #projects-page {
     min-height: 700px;
   }
    #strengths-page, #cases-page {
