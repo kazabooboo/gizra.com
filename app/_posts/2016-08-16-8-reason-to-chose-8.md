@@ -24,7 +24,13 @@ I thought about it and came up with 8 reasons why Drupal is the tool we are
 using on the daily base.
 
 <!-- more -->
-1. Content oriented - mean.js and other solutions can't provide the same exprience to create data structure and manage content.
+1. Content oriented - In this period it's awesome to be a JS developer. A
+language that for long time seem to keep a live in the browser realm has moved
+also to the backend. Every couple of days there is a [new JS framework](http://www.isaacchansky.me/days-since-last-new-js-framework/)
+and a lot of stacks that meant to make your web application development faster.
+But how they handle content management? Drupal give us power to create
+data models using fields and widgets, views can display for you content very
+easily and using vbo we can manipulate those items.
 2. Plugins, hooks, events, services - All above have awesome tools for developers which I don't think exists in such large scale on other frameworks
 3. Commerce expreince - Tools as Commerce kickstart and all the libraries they create for symfony are awesome!
 4. OG - You can't find it in any other framework. And I'm willing to put my macbook pro on this one
