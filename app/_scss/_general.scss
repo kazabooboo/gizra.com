@@ -142,3 +142,20 @@ body {
   padding: 40px 0;
   position: relative;
 }
+
+
+/**
+*  Strategy Page
+*/
+
+#strategy-page {
+  padding: 40px 0;
+}
+
+.img_inline-right {  
+  @include desktop {
+    max-width: 450px;
+    float: right;
+    margin: 10px 0 10px 10px;
+  }
+}
