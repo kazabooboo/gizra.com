@@ -3,6 +3,7 @@ title: "Elm - if you can't beat them, join them"
 tags:
   - Elm
   - Electron
+  - Open Source
 permalink: "/content/elm-electron-build"
 layout: post
 author: NirGalon
@@ -14,9 +15,10 @@ published: true
 
 I work at Gizra, so it was only a matter of time before the Elm thing infected me as well, and I think it's growing on me.
 
-I wanted to start playing with it, to build something new, not just the plain old TodoMVC. So, the idea was to build a YouTube playlist app, so everyone can share their YouTube music links. First thing first, I took the TodoMVC in Elm and got it to work in Electron.
 
-[Electron](http://electron.atom.io/) enables you to build cross platform desktop apps with web technologies.
+I wanted to build something a little different, not just the plain old TodoMVC. So, I took the TodoMVC in Elm and got it to work in Electron, and called it `Elmctron` (I know, mind blowing, so creative of me).
+
+[Electron](http://electron.atom.io/) enables you to build cross platform desktop apps with web technologies. So we can take all the goodies from elm and use them in our desktop application, and we get cross platform for free!
 
 In my mind we should get couple of things out of the box:
 
@@ -30,9 +32,9 @@ Just to make things clear, the only things I was willing to do were `git clone .
 
 <!-- more -->
 
-My project is called, wait for it, `YouTube-Playlist` (mind blowing). In Gizra we achieve what we aim for and then open source it, because why not. So, of course, you're more than welcome to fork the [GitHub repo](https://github.com/nirgn975/YouTube-Playlist).
+In Gizra we achieve what we aim for and then open source it, because why not. So, of course, you're more than welcome to fork the [GitHub repo](https://github.com/nirgn975/Elmctron).
 
-After you `git clone git@github.com:nirgn975/YouTube-Playlist.git`, and `npm install`, just run `gulp` and see the magic happen:
+After you `git clone`, and `npm install`, just run `gulp` and see the magic happen:
 
 {% include thumbnail.html image_path="assets/images/posts/elm-electron-build/gulp-electron.jpg" caption="Gulp install Elm packages automagically and start Electron" %}
 
