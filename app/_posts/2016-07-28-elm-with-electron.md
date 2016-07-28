@@ -1,5 +1,5 @@
 ---
-title: "Elmctron - where Elm and Electron meet."
+title: "Elmctron - where Elm and Electron meet"
 tags:
   - Elm
   - Electron
@@ -31,16 +31,14 @@ So, with that in mind, the only commands I want to run are `git clone ..`, `npm 
 
 <!-- more -->
 
-In Gizra, we achieve what we aim for and then open source it, because why not. So, of course, you're more than welcome to fork the [GitHub repo](https://github.com/nirgn975/Elmctron).
+Try it for yourself by forking the [GitHub repo](https://github.com/nirgn975/Elmctron). After `npm install`, just run `gulp` and see your Elmctron app:
 
-After you `git clone` and `npm install`, just run `gulp` and see the magic happen:
+{% include thumbnail.html image_path="assets/images/posts/elm-electron-build/gulp-electron.jpg" caption="Gulp installs the Elm packages" %}
 
-{% include thumbnail.html image_path="assets/images/posts/elm-electron-build/gulp-electron.jpg" caption="Gulp install Elm packages automagically and start Electron" %}
-
-After gulp does its magic, a new window will open:
+After gulp does its thing, your desktop app will open:
 
 {% include thumbnail.html image_path="assets/images/posts/elm-electron-build/TodoMVC.jpg" caption="Elm code run inside Electron" %}
 
 Tada! Your Elm app runs inside Electron. And as I promised, all of the above just happens for you.
 
-Also, to help you guys start develop, I set it up so [the devtools will open](https://github.com/nirgn975/Elmctron/blob/master/main-electron.js#L31-L32) when the app fires up.
+Also, to help devs start, I've set it up so [the devtools will open](https://github.com/nirgn975/Elmctron/blob/master/main-electron.js#L31-L32) when the app fires up.
