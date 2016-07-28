@@ -3,7 +3,6 @@ title: "Elmctron - where Elm and Electron meet"
 tags:
   - Elm
   - Electron
-  - Open Source
 permalink: "/content/elm-electron-build"
 layout: post
 author: NirGalon
