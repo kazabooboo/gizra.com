@@ -11,33 +11,43 @@ published: false
 
 {% include setup %}
 
-Creating an email on drupal is a simple task when you just sends a plain text. But what happens when you want send the users a nicely designed message with a logo, an article, a linked button and any other unique design?
+Creating an email on Drupal is a simple task when you just sends a plain text. But what happens when you want send the users a nicely designed message with a logo, an article, a linked button and any other unique design?
 Also you want to have dynamic content, costumed to each user.
-This post will give you an example of a simple solution to this issues.
+This post will give you an example of a simple solution we use solve this issues.
+First of all, before you start to read this steps, lets explain Gizra's approach to themes.
+We don't use custom CSS on drupal themes. When we start to build our website, we divide our work to a several milestones, the first one creating a clean and static markup, we use jekyll to that. In Gizra we take pixel perfect very seriously, and By doing the markup first, we can concentrate on build our app pages right, test it's responsiveness, show our clients a first draft and fix bugs before getting into the logics. We use gulp to compile the SASS files into one CSS file. After doing that, we copy the CSS file to the themes folder, and we take our static pages, cut them to pieces and use them on drupal themes and plugins. Now can focus on our logics without having to worry on how it might look with different dynamic content. Even if we discover bugs when implementing out dynamic content ,this was makes it is easy to fix them. Focusing on each task separately: Frontend and backend makes it easer and faster to build our clients website.
+If you wanna know more about the way we work with Drupal themes you can read this   
+<a href="http://www.gizra.com/content/custom-css-as-contrib-with-jekyll/">blog post<a>.
+The same approach is implemented when we create an email template. we first build the email markup with a static content, then we use it to create out a dynamic content messages. So lets start:
 
 ## 1) Creating an email template
 
-When we build a website we need to take to consideration that our users use different browsers and adjust our CSS rules so that our website will look pretty much the same in all of them. The same issue is take into consideration when we creating an email. Our users use a different email services and view their emails on different browsers of email softwares. Each email might look a bit different on each browser or a software.
-Some of the email services do not support all HTML tags and CSS designs. We can't use every thing we  want, as we use in our website for example: Gmail and outlook users have poor support for float, margin and padding. Also, Some mail services might overwrite our designs and replace it with it's defaults, for example: links colors, or images that might not be visible for users by its default. Another issue is the screens width, our mobile or tablet users might view our emails very different .
+When we build a website we need to take to consideration that our users use different browsers and adjust our CSS rules so that our website will look pretty much the same in all of them. The same issue is take into consideration when we creating an email template. Our users use a different email services and view their emails on different browsers of email softwares. Each email might look a bit different on each browser or a software. Some of the email services do not support all HTML tags and CSS designs. We can't use every thing we  want, as we use in our website for example: Gmail and outlook users have poor support for float, margin and padding. Also, Some mail services might overwrite our designs and replace it with it's defaults, for example: links colors, or images that might not be visible for users by its default. Another issue is the screens width, our mobile or tablet users might view our emails very differently.
 The way to overcome this problems is to design our emails with nested tables. Tables are supported in most email services. But even when we're using tables, our email still might not look the same for each user. To make sure that our email will look the way we want, we need to set a specific width for each table cell and that's a lot of work. After creating our email template we need to find a way to test it and make sure that it looks the way we meant on every media or mail service.
+For our website we have all kinds of browsers testing tools, for emails use a nice tool which is called <a href="https://mailchimp.com/">Mailchimp</a>. In Mailchimp you can build any email template you want, with a nice wysiwyg editor. you can add and design almost anything you want : linked buttons, social networks linked icons, images and videos.
 
-For our website we have all kinds of browsers testing tools, for an email their is a nice tool which is called <a href="https://mailchimp.com/">Mailchimp</a>. In Mailchimp you can build any email template you want, with a nice wysiwyg editor. you can add and design almost anything you want : linked buttons, social networks linked icons, images and videos.
+{% include thumbnail.html  image_path="assets/images/posts/email-template/Mailchimpwysiwyg.jpg" caption="Mailchimp wysiwyg editor" %}
+
+{% include thumbnail.html  image_path="assets/images/posts/email-template/mailchimp_email_compomemts.jpg" caption="Mailchimp design compomemts" %}
+
+{% include thumbnail.html  image_path="assets/images/posts/email-template/mailchimp_email_compomemts2.jpg" caption="Mailchimp content items" %}
+
 Here is an example for an email template I created with the Mailchimp editor, without writing even one single line of HTML or CSS at all:
 
-{% include thumbnail.html  image_path="assets/images/posts/email-template/.jpg" caption="Post has a happy end - we were able to migrate files and attach to a node!" %}
+{% include thumbnail.html  image_path="assets/images/posts/email-template/email_example.jpg" caption="The Gizra way email template" %}
 
-Behind the scenes, Mailchimp have converted my design into nested tables with the mostly mail supported CSS rules. There is also an option to see the source on the Mailchimp editor, and i can change anything i want.
+Behind the scenes, Mailchimp have converted my design into nested tables with the mostly mail supported CSS rules. There is also an option to see the source on the Mailchimp editor, and do my own adjustments.
 I uploaded my images to Mailchimp's cloud, so i won't have to worry about my users email softwares blocking images attached to the email.
 Mailchimp also gives me the opportunity to test my email template on desktop, mobile or inbox softwares such as different versions of outlook and  Gmail or Yahoo on different browsers an so.
-After finishing my email template, i can export the html file which in combined with the inline CSS,
-Now all i have to to is put it in my message template.
+
+{% include thumbnail.html  image_path="assets/images/posts/email-template/testing_tool.jpg" caption="Mailchimp Testing tool" %}
+
+After finishing my email template, i can go to my templates list and export it as an html file, which is  combined with the inline CSS. Now all i have to to is put it in my message template.
 
 ## 2) Creating an email template on Drupal
-This step is very similar to creating a dynamic website page. After creating the email template, i'm going to use it in my dynamic content message.
+This step is very similar to creating a dynamic web page. After creating the email template, we're going to use it in our dynamic content message.
 In my module folder which this template will be used, i create a templates folder where
-i save my template as tpl file.
-in my_module.module file i create a theme which will be my template. In this example I took my  
-my email template file and split it to 2 templates: the header and a footer with the CSS will be on the email wrapper and the content will be in a different theme. My email template is build from tables, so i just cut the tables and use them to put a repeating content type, for example: an articles.
+i save my template as tpl file. in my_module.module file i create a theme which will be my template. In this example I took this email template file and split it to 2 templates: the header and a footer, including the CSS will be on the email wrapper and the content will be in a different theme. My email template is build from tables, so i just cut the tables and use them to put a repeating content type, for example: an articles.
 
 ```php
 function my_module_theme($existing, $type, $theme, $path) {
@@ -75,30 +85,39 @@ function my_module_send_messages_immediate() {
 $account = $wrapper_message->user;
 $user_name = !empty($account->name->value()) ? $account->name->value() : '';
 
-$variables = array(
-   'user_name' => $user_name,
-   );
+$variables['user_name'] = $user_name;
 
-   // Wrapping my content in the content template.
-   foreach ($wrapper_message->field_articles as $wrapper) {
+// Wrapping my content in the content template.
+foreach ($wrapper_message->field_articles as $wrapper) {
 
-     $variables['article'] = array(
-       'title' => $wrapper->title,
-       'summary' => $wrapper->summary,
-     );
+ $variables['article'] = array(
+   'title' => $wrapper->title,
+   'summary' => $wrapper->summary,
+ );
 
-   // Push my content to the wrapper variable.
-       $variables['content'][] = theme('my_module_email_template_content', $variables['article']);
-
-   }
+// Push my content to a wrapper variable.
+   $variables['content'][] = theme('my_module_email_template_content', $variables['article']);
+}
 
 $message->content['message__message_text__1']['#markup'] = theme('my_module_email_template_wrapper', $variables)
 ```
 
 ## 3) testing an email template with dynamic content on Drupal
-Great! we've got an email. now all we need check how my email looks with different articles or any type of content.the most simple way is to create on our module a hook menu, we can define the path to be "my-hook-menu/% and this menu will get one argument, the message id. On our website themes folder we will create a new template.
-but there is one more thing to do before we view our emails. we need to disable our site CSS, because it might change the way we see it. On the template php file we use the hook function css_alter, its argument will be the CSS variable, by reference (&). The function will get the menu item and check if the path is our hook menu, then we set the css variable to be an empty array so we can only see the email inline CSS, this is how users will see the emails. after we did that we can create a new template.
-the template name must be "page--my_hook_menu".tpl.php ,replacing all dashes with underscores so that drupal will recognize it .now all we have to do is to print our content:
+Great! we've got an email. now it's the time to test the email template with different articles or any type of content. the most simple way is to create on our module a hook menu, we can define the path to be "my-hook-menu/% and this menu will get one argument, the message id. On our website themes folder we will create a new template.
+but there is one more thing to do before we view our emails. we need to disable our site CSS, because it might change the way we see it. On the template file we use the hook function css_alter to disable our website CSS on our hook menu. Here's an example:
+
+```php
+function my_theme_css_alter(&$css) {
+  $item = menu_get_item();
+  if ($item['path'] != 'my-hook-menu/%') {
+    return;
+  }
+
+  $css = array();
+}
+```
+
+Now we can see only the email inline CSS, this is how users will see the emails. after we did that we can create a new template. the template name must be "page--my_hook_menu".tpl.php ,replacing all dashes with underscores so that drupal will recognize it .now all we have to do is to print our content:
 
 ```php
  <?php print render($page['content']); ?>
