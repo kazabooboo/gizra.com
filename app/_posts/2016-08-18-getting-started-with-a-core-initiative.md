@@ -41,7 +41,7 @@ Mateu, maintainer of the JSON API project has also prepared a very useful [set o
 
 On the other hand, you can also get the most updated news on the meetings that are happening related with the core initiatives. There is a [public Google Calendar](https://calendar.google.com/calendar/embed?src=happypunch.com_eq0e09s0kvcs7v5scdi8f8cm70%40group.calendar.google.com) with all the meetings. Some initiatives meet weekly, others are every two weeks or even monthly. My first contact to the initiative was this meeting. I wasn’t able to participate a lot, but at the end of the meeting, I could get some helpful hints on where to start and I had the idea of what could be my first contribution: this post!
 
-I also learn that this initiative hangs on the [#drupal-wscci IRC channel](https://webchat.freenode.net/?channels=drupal-wscci), where you can ask for help or get the meeting hangout link. Just ping the people involved in the initiative, like Mateu Aguilo (e0ipso) from the Json API initiative, Daniel Wehner (dawehner) and Wim Leers (WimLeers) maintainers of the REST module on core or Sebastian Siemssen (fubhy), from the GraphQL Initiative.
+I also learn that this initiative hangs on the [#drupal-wscci IRC channel](https://webchat.freenode.net/?channels=drupal-wscci), where you can ask for help or get the meeting hangout link. Just ping the people involved in the initiative, like Mateu Aguilo ([e0ipso](https://www.drupal.org/u/e0ipso)) from the Json API initiative, Daniel Wehner ([dawehner](https://www.drupal.org/u/dawehner)) and Wim Leers ([WimLeers](https://www.drupal.org/u/wim-leers)) maintainers of the REST module on core or Sebastian Siemssen ([fubhy](https://www.drupal.org/u/fubhy)), from the GraphQL Initiative.
 
 ## Next steps
 
