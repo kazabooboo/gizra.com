@@ -212,6 +212,15 @@ authors:
       github: RachelBaram
       avatar: RachelBaram.jpg
       image: RachelBaram.jpg
+  - DavidHernandez:
+      name: David Hernandez
+      title: Developer
+      is_member: true
+      bio: Community Driven Developer and Free (as in freedom) Software enthusiast.
+      email: david.hernandez@gizra.com
+      github: DavidHernandez
+      avatar: DavidHernandez.jpg
+      image: DavidHernandez.jpg
   - itamarbu:
       name: Itamar Burstein
       title: Industrial Designer
