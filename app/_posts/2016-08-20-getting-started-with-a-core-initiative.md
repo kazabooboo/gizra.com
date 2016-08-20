@@ -1,12 +1,11 @@
 ---
 title: "Getting started with a Core Initiative"
 tags:
-  - Drupal
-  - Contribution
+  - "Drupal-planet"
   - JSON API
-permalink: "/content/getting-started-with-a-core-initiative"
+permalink: "/content/getting-started-with-drupal-core-initiative"
 layout: post
-image: "/assets/images/posts/getting-started-with-a-core-initiative/json-api.png"
+image: "/assets/images/posts/getting-started-with-a-core-initiative/thumb.jpg"
 author: DavidHernandez
 published: true
 ---
