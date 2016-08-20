@@ -13,9 +13,11 @@ published: true
 
 {% include setup %}
 
-{% include thumbnail.html image_path="/assets/images/posts/getting-started-with-a-core-initiative/driesnote.jpg" caption="Driesnote where GraphQL was featured. Picture from [Josef Jerabek](https://www.flickr.com/photos/pepej/21647813349/)"}
+{% include thumbnail.html image_path="/assets/images/posts/getting-started-with-a-core-initiative/driesnote.jpg" caption="Driesnote where GraphQL was featured. Picture from [Josef Jerabek](https://www.flickr.com/photos/pepej/21647813349/)" %}
 
 After some time contributing to the Drupal project in different ways, I finally decided to step up and get involved in one of the [Core Initiatives](https://www.drupal.org/about/strategic-initiatives). I was on IRC when I saw an announcement about the JSON API / GraphQL initiative weekly meeting and it seemed like a great chance to join. So, this blog post is about how you can get involved in a Core Initiative and more specifically, how can you get involved in the JSON API / GraphQL Initiative.
+
+<!-- more -->
 
 ## The JSON API / GraphQL Initiative
 
