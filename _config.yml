@@ -78,7 +78,7 @@ authors:
   - HelenaEksler:
       name: Helena Eksler
       title: Team Lead
-      is_member: true
+      is_member: false
       bio: Cooking well, doesn't matter - dinner or code.
       email: helena@gizra.com
       github: HelenaEksler
@@ -158,19 +158,10 @@ authors:
       github: DavidKohav
       avatar: male.jpg
       image: DavidKohav.jpg
-  - shahardo:
-      name: Shahar Dolev
-      title: Developer
-      is_member: true
-      bio: Something about Shahar
-      email: shahar@gizra.com
-      github: shahardo
-      avatar: male.jpg
-      image: male.jpg
   - YaronMiro:
       name: Yaron Miro
       title: UX/UI Developer
-      is_member: true
+      is_member: false
       bio: There are no shortcuts in life, Do what is necessary, Everything matters!.
       email: yaron@gizra.com
       github: YaronMiro
@@ -185,15 +176,15 @@ authors:
       github: nirgn975
       avatar: NirGalon.jpg
       image: NirGalon.jpg
-  - Pavel:
-      name: Pavel Pirozhenko
+  - shahardo:
+      name: Shahar Dolev
       title: Developer
       is_member: true
-      bio: A geek who always want to learn new things.
-      email: pavel@gizra.com
-      github: ppavels
-      avatar: PavelPirozhenko.jpg
-      image: Pavel.jpg
+      bio: Something about Shahar
+      email: shahar@gizra.com
+      github: shahardo
+      avatar: male.jpg
+      image: male.jpg
   - GuyTepper:
       name: Guy Tepper
       title: Developer
@@ -219,8 +210,26 @@ authors:
       bio: Community Driven Developer and Free (as in freedom) Software enthusiast.
       email: david.hernandez@gizra.com
       github: DavidHernandez
-      avatar: DavidHernandez.jpg
-      image: DavidHernandez.jpg
+      avatar: male.jpg
+      image: male.jpg
+  - Pavel:
+      name: Pavel Pirozhenko
+      title: Developer
+      is_member: true
+      bio: A geek who always want to learn new things.
+      email: pavel@gizra.com
+      github: ppavels
+      avatar: PavelPirozhenko.jpg
+      image: Pavel.jpg
+  - ItamarGronich:
+      name: Itamar gronich
+      title: Developer
+      is_member: true
+      bio: Enthusiast and autodedact FED.
+      email: itamar.gronich@gizra.com
+      github: ItamarGroncich
+      avatar: male.jpg
+      image: male.jpg
   - itamarbu:
       name: Itamar Burstein
       title: Industrial Designer
