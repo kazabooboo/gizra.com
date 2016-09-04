@@ -24,6 +24,25 @@ In fact, although we have to write a lot of code, as the way we write modules fo
 
 ## Myths Debunked
 
-It's not too rare to hear rents about OG. Often they are not backed by actual data, or even refer to older versions. You won't be too surprised to hear there was even a module (now seems to be without any commit activity for the past year) that used to bash OG pretty badly, only to find the author never bothered to check OG 7.x-2.x. They knew OG6 and kind of knew OG 7.x-1.x.   Here they by DESC popularity:
+It's not too rare to hear rents about OG. Often they are not backed by actual data, or even refer to older versions. I was even quite surprised to find out in one of DrupalCon bofs that an "OG alternative" module (that now seems to be without any commit activity for the past year) and that used to bash OG pretty badly, was created by an author that never bothered to check OG 7.x-2.x. They knew OG6 and kind of knew OG 7.x-1.x. No lack of comedy in the Drupal world.
 
-> OG
+Now, don't get me wrong, there's nothing wrong with alternatives. In fact Message and RESTful modules have grown as alternatives to existing solutions. But they all grew after a deep understanding of all the existing solutions.
+
+So, just for the fun, here are the rents `ORDER BY popularity DESC`:
+
+> OG is complicated.
+
+It is. Just like many other important contrib modules, it does the heavy lifting, so implementing modules won't have to. OG is dealing with access - so no shortcuts can be taken there.
+
+But the concept itself, along with the implementation is quite easy to explain. In fact, in OG8 we've simplified it even more. That is, we've reduced the flexibilty in order to reduce the complexity, but while doing so, made sure edge cases can still hook into the process.
+
+I always find that doing sketches by hand, can convey simple ideas. So, here's OG in free hand:
+
+
+Seriously, I can't think about a simpler solution that will still allow a flexible group site:
+
+1. The reference between a group content to a group is done by core's Entity reference.
+1. The reference between a user and a group is done by the `OgMembership` entity, that can hold apart of the association also meta data (e.g. created time)
+1. An `OgMembership` references also an `OgRole`, which is a role that applies inside the group.
+
+> OG adds a lot of overhead
