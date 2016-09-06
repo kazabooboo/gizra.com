@@ -34,7 +34,7 @@ It is. Just like many other important contrib modules, it does the heavy lifting
 
 But the concept itself, along with the implementation is quite easy to explain. In fact, in OG8 we've simplified it even more. That is, we've reduced the flexibilty in order to reduce the complexity, but while doing so, made sure edge cases can still hook into the process.
 
-I always find that doing sketches by hand, can convey simple ideas. So, here's OG in free hand:
+I always find that doing sketches by hand, can show that ideas are actually easier then what they might seem. Here's all of OG in free hand format:
 
 
 Seriously, I can't think about a simpler solution that will still allow a flexible group site:
