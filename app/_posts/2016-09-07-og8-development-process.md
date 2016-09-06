@@ -125,6 +125,7 @@ But these are all advanced use cases. When thinking about how to port them to OG
 Obviously, the more advanced features (such as teh above mentioned multiple OG audience fields) remain in the code, so advanced developers can use them when needed via code:
 
 ```php
+<?php
 // Make an bundle a "group"
 \Drupal\og\Og::addGroup('node', 'page');
 
