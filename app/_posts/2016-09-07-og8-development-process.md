@@ -122,6 +122,14 @@ But these are all advanced use cases. When thinking about how to port them to OG
 
 {% include thumbnail.html image_path="assets/images/posts/og8-development-mindset/image4.jpg" caption="Adding any OG related field will be done via a simple UI" %}
 
-Obviously, the more advanced features (such as multiple OG audience fields) remain in the code, so advanced developers can use them when needed.
+Obviously, the more advanced features (such as teh above mentioned multiple OG audience fields) remain in the code, so advanced developers can use them when needed via code:
+
+```php
+// Make an bundle a "group"
+\Drupal\og\Og::addGroup('node', 'page');
+
+// Add OG audience field to a "group content"
+\Drupal\og\Og::createField(\Drupal\og\OgGroupAudienceHelper::DEFAULT_FIELD, 'node', 'article');
+```
 
 Excited? So are we! Come and [join us](https://github.com/Gizra/og), we have low hanging fruits issues you can start with, and you'll find yourself writing features and tests in no time!
