@@ -89,6 +89,8 @@ One of the mistakes I feel I have done in OG7 was exposing a lot of the advanced
 
 This notorius administration page allowed you to add OG related fields to different entities. It also allowed you to add same field but different instances to the same entity, as for example you can have multiple OG audience fields on the same bundle.
 
+{% include thumbnail.html image_path="assets/images/posts/og8-development-mindset/image3.jpg" caption="Don't worry kids, the beast is gone." %}
+
 But these are all advanced use cases. When thinking about how to port them to OG8 I found the perfect solution. I won't port it. It's funny, but I think there are important advantages:
 
 1. Less code to write and maintain.
