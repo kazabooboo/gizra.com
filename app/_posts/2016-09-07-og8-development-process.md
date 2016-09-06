@@ -53,7 +53,7 @@ Profiling was done on an out of the box `Basic page` node view.
 When OG was enabled, it was tested with a user that has 15 groups.
 
 |          | Clean Drupal | Drupal with OG | Difference        |
-----------------------------------------------------------------
+|----------|--------------|----------------|-------------------|
 | Time     | 440 ms       | 468 ms         | +28.3 ms (+6.43%) |
 | I/O Wait | 21.1 ms      | 21.1 ms        | +44.2 µs (+0.21%) |
 | CPU Time | 419 ms       | 447 ms         | +28.2 ms (+6.74%) |
