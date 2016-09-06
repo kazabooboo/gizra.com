@@ -49,11 +49,24 @@ I've used to Blackfire.io to check the performance of a clean Drupal 8 installat
 
 Here's the same test, with the node being also a "group" (i.e. OG uses it as the "container" of otehr "group content").
 
-it's a *% difference, which is *ms difference.
+Profiling was done on an out of the box `Basic page` node view.
+When OG was enabled, it was tested with a user that has 15 groups.
 
-> Module * is much simpler
+|          | Clean Drupal | Drupal with OG | Difference        |
+----------------------------------------------------------------
+| Time     | 440 ms       | 468 ms         | +28.3 ms (+6.43%) |
+| I/O Wait | 21.1 ms      | 21.1 ms        | +44.2 µs (+0.21%) |
+| CPU Time | 419 ms       | 447 ms         | +28.2 ms (+6.74%) |
+| Memory   | 36.5 MB      | 39.5 MB        | +2.98 MB (+8.16%) |
 
-Does it do the work for you, and you are happy for with it? Is it well tested and the maintainer does a good job? Awesome, stay with that. OG is just a tool, not a life style :)
+The gist of it - OG added merely 28 ms to the request, and 3 MB more in memory. And for the record, we have not started doing optimizations yet.
+
+
+> Module X is much simpler
+
+Does that module work for you, and you are happy with it? Is it well tested and the maintainer does a good job?
+
+Awesome, stay with that module. OG is just a tool - not a life choice :)
 
 ## Correctness
 
