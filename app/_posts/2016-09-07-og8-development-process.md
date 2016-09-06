@@ -74,3 +74,25 @@ Are you trying to save an OG membership for an anonymous user. We will throw an 
 ### Automatic Testing
 
 As good as exceptions are, they are just safe guards. Tests what will make you and me sleep better at night. As we'll know that on every single line change, all the scenarios will be tested. But of course, this really depends on the quality (and quantity) of your tests.
+
+If I would tell you that OG8 has about 50 files, you might refer me to the "OG is complicated" section and wave your hands. Sorry, I lied, as in fact OG8 has currently 120 files. 50 files out of those are the tests.
+
+You see, OG, like any other good module out there has the life above the source - the ones you interact with as a site builder or a dev, and the life below. The one that the module developer see on their localhost or Travis.
+
+As you can imagine, this is very time consuming. In fact, it's not rare that developing the tests can take more time than the actual code. Just Look at this example. The [unsubscribe](https://github.com/Gizra/og/blob/6bc7a861cdc5ded1b77c717a5397af0dabdd6345/src/Controller/SubscriptionController.php#L146-L177)  controller, i.e. the code that is responsible for checking if a user can unsubscribe from a group is about 15 loc (lines of code). The [unit test](https://github.com/Gizra/og/blob/6bc7a861cdc5ded1b77c717a5397af0dabdd6345/tests/src/Unit/SubscriptionControllerTest.php), that covers this method has 230 loc. And in fact it's not the only test. There are also a [Functional](https://github.com/Gizra/og/blob/6bc7a861cdc5ded1b77c717a5397af0dabdd6345/tests/src/Functional/GroupSubscribeTest.php) one to assert it.
+
+That's a lot of test! And even though it's time consuming, it actually allows us to move fast. Because when you have the confidence that the system is well tested, you are not afraid to continuously iterate, rewrite and polish existing work.
+
+## Simplifying and hiding advanced features
+
+One of the mistakes I feel I have done in OG7 was exposing a lot of the advanced functionality in the UI. It's not a terrible mistake (ponder on the amount of complex stuff Views UI allows you to do), but I think that it contributed to feeling people had things are complex.
+
+This notorius administration page allowed you to add OG related fields to different entities. It also allowed you to add same field but different instances to the same entity, as for example you can have multiple OG audience fields on the same bundle.
+
+But these are all advanced use cases. When thinking about how to port them to OG8 I found the perfect solution. I won't port it. It's funny, but I think there are important advantages:
+
+1. Less code to write and maintain.
+1. Less complexity in the system.
+1. Lower the barrier for site developers. They will have just a single page to see a bundle as related to OG
+
+Obviously, the more advanced features (such as multiple OG audience fields) remain in the code, so advanced developers can use them when needed.
