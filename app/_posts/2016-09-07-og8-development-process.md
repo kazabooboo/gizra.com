@@ -2,6 +2,7 @@
 title: "OG8 development mindset"
 tags:
   - "Drupal-planet"
+  - "Organic Groups"
 permalink: "/content/og8-development-mindset"
 layout: post
 image: "/assets/images/posts/og8-development-mindset/thumb.jpg"
