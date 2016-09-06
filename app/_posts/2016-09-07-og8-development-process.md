@@ -10,8 +10,6 @@ published: true
 
 {% include setup %}
 
-{% include thumbnail.html image_path="assets/images/posts/getting-started-with-a-core-initiative/driesnote.jpg" caption="Driesnote where GraphQL was featured. Picture from <a href='https://www.flickr.com/photos/pepej/21647813349/'>Josef Jerabek</a>" %}
-
 As OG8 is steadily being built I have noticed a certain pattern, or a mindset we've been following which I think it worth sharing.
 
 OG8 is the third time I'm writing OG for Drupal. The first OG7 version was a head jump into the Entity goodness that Drupal 7 along with Entity API brought. The second version was taking a small step back in Entity fiesta, but took two steps a head on the field API.
@@ -98,3 +96,5 @@ But these are all advanced use cases. When thinking about how to port them to OG
 1. Lower the barrier for site developers. They will have just a single page to see a bundle as related to OG
 
 Obviously, the more advanced features (such as multiple OG audience fields) remain in the code, so advanced developers can use them when needed.
+
+Excited? So are we! Come and [join us](https://github.com/Gizra/og), we have low hanging fruits issues you can start with, and you'll find yourself writing features and tests in no time!
