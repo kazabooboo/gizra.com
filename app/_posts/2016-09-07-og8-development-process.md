@@ -30,7 +30,7 @@ Now, don't get me wrong, there's nothing wrong with alternatives. In fact Messag
 
 So, just for the fun, here are the rents `ORDER BY popularity DESC`:
 
-> OG is complicated.
+> OG is complicated
 
 It is. Just like many other important contrib modules, it does the heavy lifting, so implementing modules won't have to. OG is dealing with access - so no shortcuts can be taken there.
 
@@ -46,3 +46,31 @@ Seriously, I can't think about a simpler solution that will still allow a flexib
 1. An `OgMembership` references also an `OgRole`, which is a role that applies inside the group.
 
 > OG adds a lot of overhead
+
+I've used to Blackfire.io to check the performance of a clean Drupal 8 installation with 1000 users and 5000 nodes.
+
+Here's the same test, with the node being also a "group" (i.e. OG uses it as the "container" of otehr "group content").
+
+it's a *% difference, which is *ms difference.
+
+> Module * is much simpler
+
+Does it do the work for you, and you are happy for with it? Is it well tested and the maintainer does a good job? Awesome, stay with that. OG is just a tool, not a life style :)
+
+## Correctness
+
+I have a slight obsession over quality and the idea of "correctness". How can you move forward quickly with your software, but have enough guarantees you are not breaking existing code. PHP lacking a compiler, leaves us with a few other options.
+
+### Data integrity
+
+Here's one of my favorite images, a Drupal 8 developer sees on a daily basis.
+
+It's an exception throw by code that was not satisfied with data it got. It's not a notice, appearing in a red box on top of your page, which your brain learned how to ignore. It's a "in your face" error message, that makes sure you stop being lazy, and fix your code.
+
+OG8 is applying this same approach. Are you trying to create an OG permission with illegal value? Sorry, this won't work, and we make sure to let you know. Silent errors are risky and can be easily overlooked and pushed to production.
+
+Are you trying to save an OG membership for an anonymous user. We will throw an exception. This will make sure you won't have a security issue, where suddenly anonymous users might get too much access on your site.
+
+### Automatic Testing
+
+As good as exceptions are, they are just safe guards. Tests what will make you and me sleep better at night. As we'll know that on every single line change, all the scenarios will be tested. But of course, this really depends on the quality (and quantity) of your tests.
