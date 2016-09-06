@@ -10,34 +10,41 @@ published: true
 
 {% include setup %}
 
-As OG8 is steadily being built I have noticed a certain pattern, or a mindset we've been following which I think it worth sharing.
+As OG8 is steadily being built I have noticed a certain pattern, or a mindset we've been following which I think is worth sharing.
 
-OG8 is the third time I'm writing OG for Drupal. The first OG7 version was a head jump into the Entity goodness that Drupal 7 along with Entity API brought. The second version was taking a small step back in Entity fiesta, but took two steps a head on the field API.
+OG8 is the third time I'm writing OG for Drupal. The first OG7 version was a head jump into the Entity goodness that Drupal 7 along with Entity API brought. The second version was taking a small step back away from the Entity fiesta, but took two steps a forward into the field API.
 
-I think that as a developer I have matured since than. Edge cases are no longer my concern. I mean, I'm making an effort to see that edge cases can be done and the API will cater for it, but I won't go too far and implement them. I think that also in OG7 we didn't try to tackle all the edge cases, but in OG8 it's even less.
+I think that as a developer I have matured since than. Edge cases are no longer my concern. I mean, I'm making sure that edge cases can be done and the API will cater for it, but I won't go too far and implement them. It's not that in OG7 we tried to tackle all the edge cases, but in OG8 it's even less.
 
-In fact, although we have to write a lot of code, as the way we write modules for Drupal 8 has changed considerably, writing OG8 feels like. Well. It feels like I'm deleting files.
-
-<!-- more -->
+In fact, although we write a lot of new code as part of the porting, as the way we write modules for Drupal 8 has changed considerably, writing OG8 feels like.. Well, it feels like I'm mostly _deleting_ files.
 
 ## Myths Debunked
 
-It's not too rare to hear rents about OG. Often they are not backed by actual data, or even refer to older versions. I was even quite surprised to find out in one of DrupalCon bofs that an "OG alternative" module (that now seems to be without any commit activity for the past year) and that used to bash OG pretty badly, was created by an author that never bothered to check OG 7.x-2.x. They knew OG6 and kind of knew OG 7.x-1.x. No lack of comedy in the Drupal world.
 
-Now, don't get me wrong, there's nothing wrong with alternatives. In fact Message and RESTful modules have grown as alternatives to existing solutions. But they all grew after a deep understanding of all the existing solutions.
 
-So, just for the fun, here are the rents `ORDER BY popularity DESC`:
+
+
+It's not too rare to hear rents about OG. Often they are not backed by actual data, or even refer to older versions.  
+<!-- more -->
+I was even quite surprised to find out in one of DrupalCon bofs that an "OG alternative" module (that now seems to be without any much activity for the past year) was created by an author that never bothered to check OG 7.x-2.x. They knew OG 6 and kind of knew OG 7.x-1.x, and yet they used to bash OG pretty badly.
+
+Being in that Bof - It was both funny and a little sad at the same time.
+
+Now, don't get me wrong, there's nothing wrong with alternatives. In fact Message and RESTful modules have grown as alternatives to existing solutions, but they all grew after a deep understanding of all the existing solutions.
+
+So, just for the fun, here are the rents ordered by popularity:
 
 > OG is complicated
 
-It is. Just like many other important contrib modules, it does the heavy lifting, so implementing modules won't have to. OG is dealing with access - so no shortcuts can be taken there.
+It is. After all, it's dealing with a complicated problem. Just like many other important contrib modules, it does the heavy lifting, so you and me won't have to when we build our sites. OG is dealing a lot with access - so no easy shortcuts can be taken there.
 
-But the concept itself, along with the implementation is quite easy to explain. In fact, in OG8 we've simplified it even more. That is, we've reduced the flexibilty in order to reduce the complexity, but while doing so, made sure edge cases can still hook into the process.
+But the concept itself, along with the implementation is quite easy to explain. In fact, in OG8 we've simplified it even more. That is, we've somewhat reduced the flexibility in order to reduce the complexity, but while doing so, made sure edge cases can still hook into the process.
 
 I always find that doing sketches by hand, can show that ideas are actually easier then what they might seem. Here's all of OG in free hand format:
 
+** Add image **
 
-Seriously, I can't think about a simpler solution that will still allow a flexible group site:
+Seriously, I can't think about a simpler solution that will still allow a robust group site:
 
 1. The reference between a group content to a group is done by core's Entity reference.
 1. The reference between a user and a group is done by the `OgMembership` entity, that can hold apart of the association also meta data (e.g. created time)
@@ -47,7 +54,7 @@ Seriously, I can't think about a simpler solution that will still allow a flexib
 
 I've used to Blackfire.io to check the performance of a clean Drupal 8 installation with 1000 users and 5000 nodes.
 
-Here's the same test, with the node being also a "group" (i.e. OG uses it as the "container" of otehr "group content").
+Here's the same test, with the node being also a "group" (i.e. OG uses it as the "container" of other "group content").
 
 Profiling was done on an out of the box `Basic page` node view.
 When OG was enabled, it was tested with a user that has 15 groups.
@@ -62,7 +69,7 @@ When OG was enabled, it was tested with a user that has 15 groups.
 The gist of it - OG added merely 28 ms to the request, and 3 MB more in memory. And for the record, we have not started doing optimizations yet.
 
 
-> Module X is much simpler
+> Module X is much [ simpler | faster | betterer | awesomer ]
 
 Does that module work for you, and you are happy with it? Is it well tested and the maintainer does a good job?
 
