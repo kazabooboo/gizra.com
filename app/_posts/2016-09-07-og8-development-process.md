@@ -107,11 +107,13 @@ As you can imagine, this is very time consuming. In fact, it's not rare that dev
 
 That's a lot of test! And even though it's time consuming, it actually allows us to move fast and save time on the long run. Because when you have the confidence that the system is well tested, you are not afraid to continuously iterate, rewrite and polish existing work.
 
+I think there is another hidden merit in tests. By taking the time for going over so carefully over your own code, and using it, you give yourself some pause to think about the necessity of your recently added code. Do you _really_ need it? If you are not afraid of writing code and then throwing it out of the window, and you are true to yourself, you can create a better, less complex, and polished module.
+
 ## Simplifying and hiding advanced features
 
 One of the mistakes I feel I have done in OG7 was exposing a lot of the advanced functionality in the UI. It's not a terrible mistake (ponder on the amount of complex stuff Views UI allows you to do), but I think that it contributed to feeling people had that things are complex.
 
-This notorius administration page allowed you to add OG related fields to different entities. It also allowed you to add different field instances of the same type, as for example you can have multiple OG audience fields on the same bundle.
+This notorious administration page allowed you to add OG related fields to different entities. It also allowed you to add different field instances of the same type, as for example you can have multiple OG audience fields on the same bundle.
 
 {% include thumbnail.html image_path="assets/images/posts/og8-development-mindset/image3.jpg" caption="Don't worry kids, the beast is gone." %}
 
