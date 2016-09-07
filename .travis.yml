@@ -10,7 +10,7 @@ before_install:
 
 install:
   # Install node packages.
-  - npm install -g bower grunt-cli mocha
+  - npm install -g bower grunt-cli
 
   # Install Sass and Compass for Grunt to work.
   - gem install compass
@@ -34,4 +34,4 @@ script:
   # Run behat tests.
   - cd behat
   - ./bin/behat --tags=~@wip
-  - cd ..
+  - cat ~/grunt.log
