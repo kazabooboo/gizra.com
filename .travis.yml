@@ -17,7 +17,7 @@ install:
   - bundler install
   - npm install
   - bower install
-  - grunt serve > ~/grunt.log 2>&1 &
+  - grunt serve > ~/grunt.log
 
   # Install Behat
   - cd behat
