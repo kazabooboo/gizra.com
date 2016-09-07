@@ -2,38 +2,14 @@ language: php
 php:
   - '5.6'
 
-env:
-  global:
-    # Shoov.io
-    # travis encrypt SHOOV_CURL="https://live-shoov.pantheon.io/api/v1.0/config?access_token=<ACCESS-TOKEN>"
-    - secure: QBsfLL1ERaZM5OID7Z7x+YWydsGfD80C/vzNKgQGdzQQcvNueGM1YDQLddyPye4brGfynzMzKUc0pKC+l/nvHcO1D463BbDahM3u1tPMiqI6diySGP8Da0gzqsiGRjUs2xgZj5XHwfZlsCkDRh6aDp3NCBTDB7slPAoG8civ9R8=
-
-    # ngrok.com
-    # travis encrypt NGROK_AUTHTOKEN="<your-token>"
-    - secure: ce8tsUIIqoGMuvatiz/dkU6ZGHhhJJpIvT3NVbpDe0uFSaubHhziJUb4JED41BpLJyfcp/zm2lP090e1pvkX9281XpFaymPE7sw7QFhWT91+FURYyPtxLHxaZgR/YBs3sI3sT6CN8LFHEQA5zHjR6fPpx6N/lKrN96IvRy2lub4=
-
 before_install:
   # Create display.
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
 
-  # Install ngrok
-  # - cd ~
-  # - wget https://dl.ngrok.com/ngrok_2.0.17_linux_amd64.zip
-  # - unzip ngrok_2.0.17_linux_amd64.zip
-  # - ./ngrok authtoken $NGROK_AUTHTOKEN
-  # - cd -
-
-
 install:
-  # Install Bower, Grunt and CasperJs and ngrok.
-  - npm install -g bower grunt-cli mocha
-
-  # WebdriverCSS
-  # - sudo apt-get install graphicsmagick
-
-  # Install Shoov config
-  - curl -o ~/.shoov.json $SHOOV_CURL
+  # Install Bower, Grunt.
+  - npm install -g bower grunt-cli
 
   # Install Sass and Compass for Grunt to work.
   - gem install compass
@@ -49,26 +25,11 @@ install:
   - composer install
   - cd ..
 
-  # Install webdriverCSS
-  # - cd ui-tests
-  # - npm install
-  # - cd ..
-
 before_script:
   # Wait for Grunt to finish loading.
   - until $(curl --output /dev/null --silent --head --fail http://localhost:9000); do sleep 1; done
-
-  # Run ngrok
-  # - echo $TRAVIS_COMMIT
-  # - ~/ngrok http -log=stdout -subdomain=$TRAVIS_COMMIT 9000 > ~/ngrok.log 2>&1 &
-  # - until $(curl --output /dev/null --silent --head --fail https://$TRAVIS_COMMIT.ngrok.io); do sleep 1; echo '.'; done
 
 script:
   # Run behat tests.
   - cd behat
   - ./bin/behat --tags=~@wip
-  - cd ..
-
-  # - cd ui-tests
-  # - PROVIDER_PREFIX=browserstack SELECTED_CAPS=chrome mocha
-  # - PROVIDER_PREFIX=browserstack SELECTED_CAPS=ie11 mocha
