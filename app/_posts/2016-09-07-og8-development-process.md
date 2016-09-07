@@ -19,14 +19,14 @@ I think that as a developer I have matured since than. Edge cases are no longer 
 
 In fact, although we write a lot of new code as part of the porting, as the way we write modules for Drupal 8 has changed considerably, writing OG8 feels like.. Well, it feels like I'm mostly _deleting_ files.
 
+{% include thumbnail.html image_path="assets/images/posts/og8-development-mindset/image1.jpg" caption="Removing lines of code is so much better than adding" %}
+
 ## Myths Debunked
 
-
-
-
-
 It's not too rare to hear rents about OG. Often they are not backed by actual data, or even refer to older versions.  
+
 <!-- more -->
+
 I was even quite surprised to find out in one of DrupalCon bofs that an "OG alternative" module (that now seems to be without any much activity for the past year) was created by an author that never bothered to check OG 7.x-2.x. They knew OG 6 and kind of knew OG 7.x-1.x, and yet they used to bash OG pretty badly.
 
 Being in that Bof - It was both funny and a little sad at the same time.
