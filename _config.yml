@@ -230,3 +230,12 @@ authors:
       is_member: false
       bio: Luke is just another web nerd that loves to learn new technologies. He works at Qualcomm by day as a software application engineer and hangs at home by night as a dad and husband.
       avatar: lukeherrington.jpg
+  - SavyonCohen:
+      name: Savyon Cohen
+      title: Developer
+      is_member: true
+      bio: Whatever.
+      email: savyon@gizra.com
+      github: savyoncohen
+      avatar: SavyonCohen.jpg
+      image: SavyonCohen.jpg
