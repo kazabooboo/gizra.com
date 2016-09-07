@@ -10,10 +10,8 @@ Feature: Blog post
     Then  I should the text "<text>" under the main content
     And   I should see the author "<author>"
 
-  Examples:
-    | url                                          | text                    | author          |
-    | content/automatic-qa/                        | Here is a known fact    | Amitai Burstein |
-    | content/docker-travis-ci/                    | If you have ever        | Nir Galon       |
-    | content/backend-free-apps-grunt-jekyll-d3js/ | When we started working | Carlos Mantilla |
-
-
+    Examples:
+      | url                                          | text                    | author          |
+      | content/automatic-qa/                        | Here is a known fact    | Amitai Burstein |
+      | content/docker-travis-ci/                    | If you have ever        | Nir Galon       |
+      | content/backend-free-apps-grunt-jekyll-d3js/ | When we started working | Carlos Mantilla |
