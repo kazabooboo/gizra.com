@@ -43,7 +43,7 @@ But the concept itself, along with the implementation is quite easy to explain. 
 
 I always find that doing sketches by hand, can show that ideas are actually easier then what they might seem. Here's all of OG in free hand format:
 
-** Add image **
+{% include thumbnail.html image_path="assets/images/posts/og8-development-mindset/image2.jpg" caption="Concepts should be expressed as easily as possible" %}
 
 Seriously, I can't think about a simpler solution that will still allow a robust group site:
 
